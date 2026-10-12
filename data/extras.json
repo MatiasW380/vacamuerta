@@ -2356,11 +2356,11 @@
    }
   ]
  },
- "generated_at": "2026-10-12T18:48Z",
+ "generated_at": "2026-10-12T18:50Z",
  "status": {
   "fracking": {
    "ok": true,
-   "at": "2026-10-12T18:37Z",
+   "at": "2026-10-12T18:50Z",
    "diag": {
     "resources": [
      "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
@@ -2421,7 +2421,7 @@
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-12T18:37Z",
+   "at": "2026-10-12T18:50Z",
    "diag": {
     "pages": 1
    }
@@ -2430,23 +2430,23 @@
    "ok": false,
    "error": "RuntimeError: Falta EIA_API_KEY (secreto del repositorio)",
    "diag": {},
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 444, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 434, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 213, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 445, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 435, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 213, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
   },
   "regulations": {
    "ok": true,
-   "at": "2026-10-12T18:48Z",
+   "at": "2026-10-12T18:50Z",
    "diag": {
-    "pages": 43,
+    "pages": 6,
     "page_errors": 0,
-    "links": 3783,
-    "candidates": 374,
-    "kept": 23,
+    "links": 628,
+    "candidates": 0,
+    "kept": 0,
     "details_failed": 0
    }
   },
   "news": {
    "ok": true,
-   "at": "2026-10-12T18:48Z",
+   "at": "2026-10-12T18:50Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
