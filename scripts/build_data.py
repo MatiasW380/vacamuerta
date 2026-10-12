@@ -40,12 +40,15 @@ M3_TO_BBL = 6.28981077
 START_YEAR = 2015
 
 OUT = Path(__file__).resolve().parent.parent / "data" / "vm.json"
+HISTORY_FROM = 2019   # inicio de la serie por operadora
+WELLS_MONTHS = 48     # meses de la serie de pozos
 
 # Nombre canónico -> posibles nombres de columna en los distintos archivos.
 COLUMNAS = {
     "empresa": ["empresa", "operadora"],
     "pozo": ["idpozo", "id_pozo", "pozoid"],
     "cuenca": ["cuenca"],
+    "area": ["areapermisoconcesion", "area_permiso_concesion", "areayacimiento", "yacimiento"],
     "formacion": ["formacion", "formprod"],
     "tipo_recurso": ["tipo_de_recurso", "tiporecurso", "tipo_recurso", "sub_tipo_recurso", "subtipoderecurso"],
     "anio": ["anio", "ano", "year"],
@@ -92,6 +95,14 @@ def nombre_corto(empresa: str) -> str:
     return limpio.title() or "Otras"
 
 
+def nombre_area(area: str) -> str:
+    if not str(area).strip():
+        return "Sin dato"
+    palabras = norm(area).title().split()
+    menores = {"De", "Del", "La", "Las", "Los", "El", "Y"}
+    return " ".join(w.lower() if i and w in menores else w for i, w in enumerate(palabras))
+
+
 def leer_csv(fuente: str | Path) -> pd.DataFrame:
     if isinstance(fuente, Path):
         crudo = fuente.read_bytes()
@@ -119,10 +130,10 @@ def leer_csv(fuente: str | Path) -> pd.DataFrame:
     faltan = [c for c in ("empresa", "cuenca", "anio", "mes", "petroleo_m3", "gas_mm3") if c not in df.columns]
     if faltan:
         raise ValueError(f"Faltan columnas {faltan} en {fuente}. Columnas: {list(df.columns)}")
-    for c in ("formacion", "tipo_recurso"):
+    for c in ("formacion", "tipo_recurso", "pozo", "area"):
         if c not in df.columns:
             df[c] = ""
-    df = df[["empresa", "cuenca", "formacion", "tipo_recurso", "anio", "mes", "petroleo_m3", "gas_mm3"]].copy()
+    df = df[["empresa", "pozo", "area", "cuenca", "formacion", "tipo_recurso", "anio", "mes", "petroleo_m3", "gas_mm3"]].copy()
     for c in ("petroleo_m3", "gas_mm3"):
         df[c] = pd.to_numeric(df[c].str.replace(",", ".", regex=False), errors="coerce").fillna(0.0)
     df["anio"] = pd.to_numeric(df["anio"], errors="coerce")
@@ -163,8 +174,16 @@ def construir(historico: pd.DataFrame, anuales: list[pd.DataFrame]) -> dict:
         if len(nuevos):
             partes.append(nuevos)
     vm = pd.concat(partes, ignore_index=True)
+    vm["periodo"] = vm["anio"] * 100 + vm["mes"]
+    produce = (vm["petroleo_m3"] > 0) | (vm["gas_mm3"] > 0)
+    con_id = vm["pozo"].fillna("").str.strip().ne("")
+    # Mes de primera producción de cada pozo (sobre toda la historia disponible).
+    primeros = vm[produce & con_id].groupby("pozo")["periodo"].min()
+    nuevos_por_mes = primeros.value_counts()
+    activos_por_mes = vm[produce & con_id].groupby("periodo")["pozo"].nunique()
     vm = vm[vm["anio"] >= START_YEAR]
     vm["operadora"] = vm["empresa"].map(nombre_corto)
+    vm["area_n"] = vm["area"].fillna("").map(nombre_area)
 
     mensual = (
         vm.groupby(["anio", "mes"], as_index=False)[["petroleo_m3", "gas_mm3"]].sum()
@@ -232,6 +251,53 @@ def construir(historico: pd.DataFrame, anuales: list[pd.DataFrame]) -> dict:
             "oil_yoy_pct": None,
         })
 
+    # Pozos: nuevos y en producción, últimos WELLS_MONTHS meses hasta el último mes.
+    periodos = [int(f"{r.anio}{r.mes:02d}") for r in mensual.itertuples()]
+    wells = []
+    for per in periodos[-WELLS_MONTHS:]:
+        act = int(activos_por_mes.get(per, 0))
+        fila_m = mensual[(mensual["anio"] == per // 100) & (mensual["mes"] == per % 100)].iloc[0]
+        wells.append({
+            "period": f"{per // 100:04d}-{per % 100:02d}",
+            "new": int(nuevos_por_mes.get(per, 0)),
+            "active": act,
+            "oil_per_well_bbl_d": round(float(fila_m["oil_bbl_d"]) / act, 1) if act else None,
+        })
+
+    # Áreas (permisos o concesiones): último mes, operadora principal y variación anual.
+    ar = vm.groupby(["area_n", "anio", "mes"], as_index=False)[["petroleo_m3", "gas_mm3"]].sum()
+    ar = por_dia(ar)
+    ar_act = ar[(ar["anio"] == ult_a) & (ar["mes"] == ult_m)].set_index("area_n")
+    ar_prev = ar[(ar["anio"] == ult_a - 1) & (ar["mes"] == ult_m)].set_index("area_n")
+    ult_vm = vm[(vm["anio"] == ult_a) & (vm["mes"] == ult_m)]
+    op_area = ult_vm.groupby(["area_n", "operadora"])["petroleo_m3"].sum().reset_index()
+    op_area = op_area.sort_values("petroleo_m3", ascending=False).drop_duplicates("area_n").set_index("area_n")["operadora"]
+    areas = []
+    for nombre, f in ar_act.sort_values("oil_bbl_d", ascending=False).head(15).iterrows():
+        prev = ar_prev["oil_bbl_d"].get(nombre) if nombre in ar_prev.index else None
+        areas.append({
+            "name": nombre,
+            "operator": op_area.get(nombre, ""),
+            "oil_bbl_d": round(float(f["oil_bbl_d"])),
+            "gas_mmm3_d": round(float(f["gas_mmm3_d"]), 2),
+            "share_pct": round(float(f["oil_bbl_d"]) / total_oil * 100, 1) if total_oil else None,
+            "oil_yoy_pct": variacion(float(f["oil_bbl_d"]), prev),
+        })
+
+    # Serie mensual de las cinco operadoras principales del último mes.
+    top5 = [r["name"] for r in filas[:5]]
+    hist = ops[(ops["operadora"].isin(top5)) & (ops["anio"] >= HISTORY_FROM)]
+    operators_history = {
+        "names": top5,
+        "periods": [f"{r.anio:04d}-{r.mes:02d}" for r in mensual[mensual["anio"] >= HISTORY_FROM].itertuples()],
+    }
+    series = {}
+    for nombre in top5:
+        h = hist[hist["operadora"] == nombre].set_index(["anio", "mes"])["oil_bbl_d"]
+        series[nombre] = [round(float(h.get((int(p[:4]), int(p[5:])), 0.0))) for p in operators_history["periods"]]
+    operators_history["oil_bbl_d"] = series
+
+    activos_ult = wells[-1]["active"] if wells else None
     return {
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
         "latest_period": f"{ult_a:04d}-{ult_m:02d}",
@@ -247,7 +313,13 @@ def construir(historico: pd.DataFrame, anuales: list[pd.DataFrame]) -> dict:
             "gas_yoy_pct": variacion(gas, gas_ya),
             "national_oil_share_pct": share,
             "operators": int(len(actual)),
+            "active_wells": activos_ult,
+            "new_wells_12m": sum(w["new"] for w in wells[-12:]) if wells else None,
+            "oil_per_well_bbl_d": wells[-1]["oil_per_well_bbl_d"] if wells else None,
         },
+        "wells": wells,
+        "areas": areas,
+        "operators_history": operators_history,
         "monthly": [
             {
                 "period": f"{int(r.anio):04d}-{int(r.mes):02d}",
@@ -284,6 +356,12 @@ def main() -> None:
     datos = construir(historico, anuales)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(datos, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    pozos = {w["period"]: w for w in datos["wells"]}
+    lineas = ["period,oil_bbl_d,gas_mmm3_d,new_wells,active_wells"]
+    for r in datos["monthly"]:
+        w = pozos.get(r["period"], {})
+        lineas.append(f'{r["period"]},{r["oil_bbl_d"]},{r["gas_mmm3_d"]},{w.get("new", "")},{w.get("active", "")}')
+    (args.out.parent / "vm_monthly.csv").write_text("\n".join(lineas) + "\n", encoding="utf-8")
     k = datos["kpis"]
     print(f"OK {datos['latest_period']}: {k['oil_bbl_d']:,} bbl/d, {k['gas_mmm3_d']} MMm3/d, "
           f"{len(datos['monthly'])} meses, {k['operators']} operadoras")

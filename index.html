@@ -23,6 +23,7 @@
   --brand-ink: #ffffff;
   --oil: #2a78d6;
   --gas: #eb6834;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4;
   --up: #0a7a0a;
   --down: #c03333;
   --focus: #2a78d6;
@@ -33,6 +34,7 @@
     --bg: #12181d; --surface: #1a2127; --ink: #eef1f2; --ink-2: #b8c1c7; --ink-3: #8d979e;
     --rule: #2f3940; --grid: #252e34; --brand: #5fb3c4; --brand-ink: #0b1a1f;
     --oil: #3987e5; --gas: #d95926; --up: #3fbf3f; --down: #ec6b6b; --focus: #6da7ec;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181;
   }
 }
 :root[data-theme="dark"] {
@@ -40,6 +42,7 @@
   --bg: #12181d; --surface: #1a2127; --ink: #eef1f2; --ink-2: #b8c1c7; --ink-3: #8d979e;
   --rule: #2f3940; --grid: #252e34; --brand: #5fb3c4; --brand-ink: #0b1a1f;
   --oil: #3987e5; --gas: #d95926; --up: #3fbf3f; --down: #ec6b6b; --focus: #6da7ec;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181;
 }
 
 * { box-sizing: border-box; }
@@ -128,6 +131,16 @@ footer { margin: 64px 0 0; padding: 28px 0 40px; border-top: 1px solid var(--rul
 footer p { margin: 0 0 8px; max-width: 75ch; }
 
 .empty { padding: 32px 0; color: var(--ink-2); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 10px 0 0; padding: 0; list-style: none; font-size: 14px; color: var(--ink-2); }
+.legend li { display: flex; align-items: center; gap: 7px; }
+.legend i { width: 16px; height: 3px; border-radius: 2px; display: inline-block; }
+.section-lede { color: var(--ink-2); margin: 6px 0 0; max-width: 68ch; }
+.download { display: inline-block; margin-top: 12px; font-size: 15px; }
+.context { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 18px; }
+.context h3 { font-stretch: 108%; font-weight: 650; font-size: 18px; margin: 0 0 6px; }
+.context p { margin: 0; color: var(--ink-2); font-size: 15.5px; }
+.context .src { display: block; margin-top: 8px; font-size: 13px; color: var(--ink-3); }
+@media (max-width: 860px) { .context { grid-template-columns: 1fr; gap: 24px; } }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
@@ -177,6 +190,30 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
     </section>
 
     <section class="section">
+      <h2 data-i18n="wellsTitle">Drilling activity</h2>
+      <p class="section-lede" id="wellsLede"></p>
+      <div class="two" style="margin-top:18px">
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="newWellsTitle">New wells starting production, per month</h2></div>
+          <div class="chart" id="wellsChart"></div>
+        </div>
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="perWellTitle">Average oil per producing well, bbl/d</h2></div>
+          <div class="chart" id="perWellChart"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="chart-head">
+        <h2 data-i18n="histTitle">The five largest operators since 2019</h2>
+        <p data-i18n="histUnit">Oil, barrels per day</p>
+      </div>
+      <ul class="legend" id="histLegend"></ul>
+      <div class="chart" id="histChart"></div>
+    </section>
+
+    <section class="section">
       <h2 data-i18n="tableTitle">Operators, latest month</h2>
       <div class="table-wrap">
         <table id="opsTable">
@@ -186,6 +223,20 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
             <th scope="col" data-i18n="thShare">Share</th>
             <th scope="col" data-i18n="thYoy">Oil vs a year ago</th>
             <th scope="col" data-i18n="thGas">Gas, MMm³/d</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h2 style="margin-top:44px" data-i18n="areasTitle">Largest blocks, latest month</h2>
+      <p class="section-lede" data-i18n="areasLede">Concessions and exploration permits ranked by oil output. The operator shown is the company with the most production in each block.</p>
+      <div class="table-wrap">
+        <table id="areasTable">
+          <thead><tr>
+            <th scope="col" data-i18n="thArea">Block</th>
+            <th scope="col" style="text-align:left" data-i18n="thMainOp">Main operator</th>
+            <th scope="col" data-i18n="thOil">Oil, bbl/d</th>
+            <th scope="col" data-i18n="thShare">Share</th>
+            <th scope="col" data-i18n="thYoy">Oil vs a year ago</th>
           </tr></thead>
           <tbody></tbody>
         </table>
@@ -203,7 +254,29 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
           </table>
         </div>
       </details>
+      <a class="download" href="data/vm_monthly.csv" download data-i18n="downloadCsv">Download the monthly series (CSV)</a>
       <p class="note" data-i18n="method">Vaca Muerta here means wells in the Neuquén basin reporting the Vaca Muerta formation. Daily rates divide each month's declared volume by its number of days. The latest month can still be revised as operators correct their filings.</p>
+    </section>
+
+    <section class="section" aria-labelledby="contextTitle">
+      <h2 id="contextTitle" data-i18n="contextTitle">Context for investors</h2>
+      <div class="context">
+        <div>
+          <h3 data-i18n="c1t">A world-scale resource</h3>
+          <p data-i18n="c1p">Argentina holds the world's second-largest technically recoverable shale gas resources and the fourth-largest shale oil resources, most of them in Vaca Muerta.</p>
+          <a class="src" href="https://www.trade.gov/market-intelligence/argentina-energy-mining-sectors" rel="noopener" data-i18n="c1s">US International Trade Administration</a>
+        </div>
+        <div>
+          <h3 data-i18n="c2t">Incentives for large projects</h3>
+          <p data-i18n="c2p">The RIGI regime gives large investments tax, customs and FX stability for 30 years. By August 2026 the government listed 22 approved projects worth USD 47 billion, six of them in oil and gas.</p>
+          <a class="src" href="https://www.argentina.gob.ar/economia/rigi" rel="noopener" data-i18n="c2s">Official RIGI portal, Ministry of Economy</a>
+        </div>
+        <div>
+          <h3 data-i18n="c3t">Export pipelines under way</h3>
+          <p data-i18n="c3p">The Vaca Muerta Oil Sur pipeline, a USD 2.5 billion RIGI project, will run 437 km from Allen to an export terminal at Punta Colorada on the Atlantic coast.</p>
+          <a class="src" href="https://diariotiempo.com.ar/argentina/el-mapa-de-las-inversiones-todos-los-proyectos-aprobados-por-el-rigi-hasta-junio-2026/" rel="noopener" data-i18n="c3s">Diario Tiempo, RIGI projects</a>
+        </div>
+      </div>
     </section>
 
     <section class="signup" aria-labelledby="signupTitle">
@@ -249,6 +322,19 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
       source: (s, d) => `Source: <a href="${s.url}" rel="noopener">${s.name}</a>, ${s.license}. Data through ${d}.`,
       empty: "Production data is being loaded for the first time. Check back in a few minutes.",
       disclaimer: "For information only. Not investment advice.",
+      fWells: "wells producing",
+      wellsTitle: "Drilling activity",
+      wellsLede: (n, p) => `${n} new wells started producing in the last 12 months. Each one now delivers ${p} barrels a day on average.`,
+      newWellsTitle: "New wells starting production, per month", perWellTitle: "Average oil per producing well, bbl/d",
+      wellsUnit: "new wells", perWellUnit: "bbl/d per well",
+      histTitle: "The five largest operators since 2019", histUnit: "Oil, barrels per day",
+      areasTitle: "Largest blocks, latest month",
+      areasLede: "Concessions and exploration permits ranked by oil output. The operator shown is the company with the most production in each block.",
+      thArea: "Block", thMainOp: "Main operator", downloadCsv: "Download the monthly series (CSV)",
+      contextTitle: "Context for investors",
+      c1t: "A world-scale resource", c1p: "Argentina holds the world's second-largest technically recoverable shale gas resources and the fourth-largest shale oil resources, most of them in Vaca Muerta.", c1s: "US International Trade Administration",
+      c2t: "Incentives for large projects", c2p: "The RIGI regime gives large investments tax, customs and FX stability for 30 years. By August 2026 the government listed 22 approved projects worth USD 47 billion, six of them in oil and gas.", c2s: "Official RIGI portal, Ministry of Economy",
+      c3t: "Export pipelines under way", c3p: "The Vaca Muerta Oil Sur pipeline, a USD 2.5 billion RIGI project, will run 437 km from Allen to an export terminal at Punta Colorada on the Atlantic coast.", c3s: "Diario Tiempo, RIGI projects",
       oilUnit: "bbl/d", gasUnit: "MMm³/d", others: "Others", range: (a, b) => `${a} to ${b}`, period: m => m,
     },
     es: {
@@ -271,6 +357,19 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
       source: (s, d) => `Fuente: <a href="${s.url}" rel="noopener">${s.name}</a>, ${s.license}. Datos hasta ${d}.`,
       empty: "Los datos de producción se están cargando por primera vez. Volvé en unos minutos.",
       disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.",
+      fWells: "pozos en producción",
+      wellsTitle: "Actividad de perforación",
+      wellsLede: (n, p) => `${n} pozos nuevos empezaron a producir en los últimos 12 meses. Cada pozo rinde hoy ${p} barriles por día en promedio.`,
+      newWellsTitle: "Pozos nuevos que empiezan a producir, por mes", perWellTitle: "Petróleo promedio por pozo en producción, bbl/d",
+      wellsUnit: "pozos nuevos", perWellUnit: "bbl/d por pozo",
+      histTitle: "Las cinco operadoras principales desde 2019", histUnit: "Petróleo, barriles por día",
+      areasTitle: "Principales bloques, último mes",
+      areasLede: "Concesiones y permisos de exploración ordenados por producción de petróleo. La operadora es la empresa con más producción en cada bloque.",
+      thArea: "Bloque", thMainOp: "Operadora principal", downloadCsv: "Descargar la serie mensual (CSV)",
+      contextTitle: "Contexto para inversores",
+      c1t: "Un recurso de escala mundial", c1p: "Argentina tiene el segundo mayor recurso técnicamente recuperable de shale gas del mundo y el cuarto de shale oil, la mayor parte en Vaca Muerta.", c1s: "Administración de Comercio Internacional de EE. UU.",
+      c2t: "Incentivos para grandes proyectos", c2p: "El RIGI da a las grandes inversiones estabilidad fiscal, aduanera y cambiaria por 30 años. A agosto de 2026 el Gobierno informaba 22 proyectos aprobados por USD 47.000 millones, seis de ellos de petróleo y gas.", c2s: "Portal oficial del RIGI, Ministerio de Economía",
+      c3t: "Oleoductos de exportación en marcha", c3p: "El oleoducto Vaca Muerta Oil Sur, un proyecto RIGI de USD 2.500 millones, recorrerá 437 km desde Allen hasta una terminal de exportación en Punta Colorada, sobre el Atlántico.", c3s: "Diario Tiempo, proyectos RIGI",
       oilUnit: "bbl/d", gasUnit: "MMm³/d", others: "Otras", range: (a, b) => `${a} a ${b}`, period: m => m,
     },
   };
@@ -412,6 +511,107 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
     host.append(svg, tip);
   }
 
+  // Monthly columns (new wells) with per-bar tooltip.
+  function columnChart(host, rows, key, unit) {
+    host.innerHTML = "";
+    const W = host.clientWidth || 500, H = 260, m = { t: 8, r: 8, b: 28, l: 40 };
+    const iw = W - m.l - m.r, ih = H - m.t - m.b;
+    const ticks = niceTicks(Math.max(1, ...rows.map(r => r[key])));
+    const yMax = ticks[ticks.length - 1];
+    const step = iw / rows.length, bw = Math.max(2, step - 2);
+    const y = v => m.t + ih - (v / yMax) * ih;
+    const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": T[lang].newWellsTitle });
+    for (const t of ticks) {
+      svg.append(svgEl("line", { x1: m.l, x2: W - m.r, y1: y(t), y2: y(t), stroke: "var(--grid)" }));
+      const lab = svgEl("text", { x: m.l - 8, y: y(t) + 4, "text-anchor": "end" }); lab.textContent = fmt(t); svg.append(lab);
+    }
+    const tip = document.createElement("div"); tip.className = "tip";
+    rows.forEach((r, i) => {
+      const x0 = m.l + i * step + 1, v = r[key], top = y(v), h = y(0) - top;
+      if (r.period.endsWith("-01")) {
+        const lab = svgEl("text", { x: x0, y: H - 8 }); lab.textContent = r.period.slice(0, 4); svg.append(lab);
+      }
+      const g = svgEl("g", { tabindex: 0 });
+      const rad = Math.min(3, bw / 2, h);
+      g.append(svgEl("rect", { x: x0 - 1, y: m.t, width: step, height: ih, fill: "transparent" }));
+      if (h > 0) g.append(svgEl("path", { d: `M${x0},${y(0)}V${top + rad}a${rad},${rad} 0 0 1 ${rad},${-rad}h${bw - 2 * rad}a${rad},${rad} 0 0 1 ${rad},${rad}V${y(0)}z`, fill: "var(--oil)" }));
+      const show = () => {
+        tip.innerHTML = "";
+        const s1 = document.createElement("strong"); s1.textContent = `${fmt(v)} ${unit}`;
+        const d = document.createElement("div"); d.textContent = monthName(r.period);
+        tip.append(s1, d);
+        const sc = host.clientWidth / W;
+        tip.style.left = Math.min(Math.max(0, x0 * sc - tip.offsetWidth / 2), host.clientWidth - tip.offsetWidth) + "px";
+        tip.style.top = Math.max(0, top * sc - tip.offsetHeight - 10) + "px";
+        tip.style.opacity = 1;
+      };
+      const hide = () => { tip.style.opacity = 0; };
+      g.addEventListener("pointerenter", show); g.addEventListener("pointerleave", hide);
+      g.addEventListener("focus", show); g.addEventListener("blur", hide);
+      svg.append(g);
+    });
+    host.append(svg, tip);
+  }
+
+  // Several series on one axis, crosshair tooltip listing all of them, end labels.
+  function multiLine(host, periods, names, series, colors) {
+    host.innerHTML = "";
+    const W = host.clientWidth || 900, H = window.innerWidth > 700 ? 340 : 280;
+    const m = { t: 10, r: window.innerWidth > 700 ? 150 : 12, b: 28, l: 56 };
+    const iw = W - m.l - m.r, ih = H - m.t - m.b;
+    const ticks = niceTicks(Math.max(...names.flatMap(n => series[n])));
+    const yMax = ticks[ticks.length - 1], last = periods.length - 1;
+    const x = i => m.l + (i / last) * iw, y = v => m.t + ih - (v / yMax) * ih;
+    const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": T[lang].histTitle });
+    for (const t of ticks) {
+      svg.append(svgEl("line", { x1: m.l, x2: m.l + iw, y1: y(t), y2: y(t), stroke: "var(--grid)" }));
+      const lab = svgEl("text", { x: m.l - 8, y: y(t) + 4, "text-anchor": "end" });
+      lab.textContent = t >= 1000 ? fmt(t / 1000) + "k" : fmt(t); svg.append(lab);
+    }
+    periods.forEach((p, i) => {
+      if (!p.endsWith("-01")) return;
+      const lab = svgEl("text", { x: x(i), y: H - 8, "text-anchor": i === 0 ? "start" : "middle" }); lab.textContent = p.slice(0, 4); svg.append(lab);
+    });
+    // End labels, nudged apart so they never overlap.
+    const ends = names.map((n, k) => ({ n, k, y: y(series[n][last]) })).sort((a, b) => a.y - b.y);
+    for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 15) ends[i].y = ends[i - 1].y + 15;
+    names.forEach((n, k) => {
+      const d = series[n].map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("");
+      svg.append(svgEl("path", { d, fill: "none", stroke: colors[k], "stroke-width": 2, "stroke-linejoin": "round" }));
+      svg.append(svgEl("circle", { cx: x(last), cy: y(series[n][last]), r: 4, fill: colors[k], stroke: "var(--bg)", "stroke-width": 2 }));
+    });
+    if (m.r > 100) ends.forEach(e => {
+      const lab = svgEl("text", { x: x(last) + 10, y: e.y + 4, style: "fill:var(--ink-2);font-size:13px" });
+      lab.textContent = e.n; svg.append(lab);
+    });
+    const hair = svgEl("line", { y1: m.t, y2: m.t + ih, stroke: "var(--ink-3)", opacity: 0 });
+    svg.append(hair);
+    const hit = svgEl("rect", { x: m.l, y: 0, width: iw, height: H, fill: "transparent", tabindex: 0 });
+    svg.append(hit); host.append(svg);
+    const tip = document.createElement("div"); tip.className = "tip"; host.append(tip);
+    let cur = last;
+    const show = i => {
+      cur = Math.max(0, Math.min(last, i));
+      hair.setAttribute("x1", x(cur)); hair.setAttribute("x2", x(cur)); hair.setAttribute("opacity", 0.6);
+      tip.innerHTML = "";
+      const head = document.createElement("div"); head.textContent = monthName(periods[cur]); head.style.marginBottom = "4px"; tip.append(head);
+      names.map((n, k) => ({ n, k, v: series[n][cur] })).sort((a, b) => b.v - a.v).forEach(r => {
+        const row = document.createElement("div");
+        const key = document.createElement("span"); key.className = "key"; key.style.background = colors[r.k];
+        const v = document.createElement("strong"); v.textContent = fmt(r.v) + " ";
+        row.append(key, v, document.createTextNode(r.n)); tip.append(row);
+      });
+      const sc = host.clientWidth / W, left = x(cur) * sc;
+      tip.style.left = (left + tip.offsetWidth + 16 > host.clientWidth ? left - tip.offsetWidth - 12 : left + 12) + "px";
+      tip.style.top = "8px"; tip.style.opacity = 1;
+    };
+    const hide = () => { hair.setAttribute("opacity", 0); tip.style.opacity = 0; };
+    hit.addEventListener("pointermove", e => { const b = svg.getBoundingClientRect(); show(Math.round((((e.clientX - b.left) * (W / b.width)) - m.l) / iw * last)); });
+    hit.addEventListener("pointerleave", hide);
+    hit.addEventListener("focus", () => show(cur)); hit.addEventListener("blur", hide);
+    hit.addEventListener("keydown", e => { if (e.key === "ArrowLeft") { show(cur - 1); e.preventDefault(); } if (e.key === "ArrowRight") { show(cur + 1); e.preventDefault(); } });
+  }
+
   function render() {
     const t = T[lang];
     document.documentElement.lang = lang;
@@ -428,6 +628,7 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
       [pct(k.oil_yoy_pct), t.fOilYoy, k.oil_yoy_pct],
       [fmt(k.gas_mmm3_d, 1), t.fGas],
       k.national_oil_share_pct != null ? [fmt(k.national_oil_share_pct, 0) + "%", t.fShare] : null,
+      k.active_wells ? [fmt(k.active_wells), t.fWells] : null,
       [fmt(k.operators), t.fOps],
     ].filter(Boolean);
     $("#facts").innerHTML = facts.map(([v, l, d]) =>
@@ -442,6 +643,23 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
     lineChart($("#oilChart"), rows, "oil_bbl_d", "var(--oil)", t.oilUnit, 0, wide ? 340 : 260);
     lineChart($("#gasChart"), rows, "gas_mmm3_d", "var(--gas)", t.gasUnit, 1, 280);
     barChart($("#opsChart"), DATA.operators);
+
+    if (DATA.wells && DATA.wells.length) {
+      $("#wellsLede").textContent = t.wellsLede(fmt(k.new_wells_12m), fmt(k.oil_per_well_bbl_d, 0));
+      columnChart($("#wellsChart"), DATA.wells, "new", t.wellsUnit);
+      lineChart($("#perWellChart"), DATA.wells.filter(w => w.oil_per_well_bbl_d != null), "oil_per_well_bbl_d", "var(--oil)", t.perWellUnit, 0, 260);
+    }
+    if (DATA.operators_history && DATA.operators_history.names.length) {
+      const h = DATA.operators_history, colors = ["var(--s1)", "var(--s2)", "var(--s3)", "var(--s4)", "var(--s5)"];
+      $("#histLegend").innerHTML = h.names.map((n, k) => `<li><i style="background:${colors[k]}"></i>${esc(n)}</li>`).join("");
+      multiLine($("#histChart"), h.periods, h.names, h.oil_bbl_d, colors);
+    }
+    if (DATA.areas) {
+      $("#areasTable tbody").innerHTML = DATA.areas.map(a => `<tr>
+        <td>${esc(a.name)}</td><td style="text-align:left">${esc(a.operator)}</td><td>${fmt(a.oil_bbl_d)}</td>
+        <td>${a.share_pct == null ? "–" : fmt(a.share_pct, 1) + "%"}</td>
+        <td class="${a.oil_yoy_pct > 0 ? "delta-up" : a.oil_yoy_pct < 0 ? "delta-down" : ""}">${pct(a.oil_yoy_pct)}</td></tr>`).join("");
+    }
 
     $("#opsTable tbody").innerHTML = DATA.operators.map(o => `<tr>
       <td>${esc(o.name === "Otras" ? t.others : o.name)}</td><td>${fmt(o.oil_bbl_d)}</td>
