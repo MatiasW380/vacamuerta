@@ -143,6 +143,25 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
 @media (max-width: 860px) { .context { grid-template-columns: 1fr; gap: 24px; } }
 .quotes { margin-top: 18px; min-height: 420px; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; background: var(--surface); }
 .tickers td:nth-child(2), .tickers th:nth-child(2) { text-align: left; }
+.map-wrap { position: relative; margin-top: 16px; border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; background: var(--surface); }
+#map { height: 560px; }
+@media (max-width: 700px) { #map { height: 440px; } }
+.map-tools { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; margin-top: 14px; font-size: 14px; color: var(--ink-2); }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 999px; padding: 2px; }
+.seg button { font: inherit; font-size: 14px; border: 0; background: none; color: var(--ink-2); padding: 5px 14px; border-radius: 999px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.map-tools label { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+.map-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 12px; font-size: 13px; color: var(--ink-2); align-items: center; }
+.map-legend .ramp { display: inline-flex; align-items: center; gap: 0; }
+.map-legend .ramp span { display: inline-block; width: 30px; height: 10px; }
+.map-legend .ramp em { font-style: normal; margin: 0 6px; }
+.map-legend i { display: inline-block; width: 18px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
+.map-legend b { display: inline-block; width: 14px; height: 10px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
+.maplibregl-popup-content { font-family: "Archivo", system-ui, sans-serif; color: #17212b; font-size: 13px; line-height: 1.45; padding: 12px 14px; border-radius: 8px; max-width: 280px; }
+.maplibregl-popup-content h4 { margin: 0 0 4px; font-size: 15px; }
+.maplibregl-popup-content .muted { color: #5b6670; }
+.map-empty[hidden] { display: none; }
+.map-empty { position: absolute; inset: 0; display: grid; place-items: center; color: var(--ink-2); padding: 24px; text-align: center; }
 .feed { list-style: none; margin: 16px 0 0; padding: 0; }
 .feed li { padding: 14px 0; border-bottom: 1px solid var(--rule); }
 .feed li:first-child { border-top: 1px solid var(--rule); }
@@ -201,6 +220,22 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
         </div>
         <div class="chart" id="opsChart"></div>
       </div>
+    </section>
+
+    <section class="section" id="mapSection" aria-labelledby="mapTitle">
+      <h2 id="mapTitle" data-i18n="mapTitle">Map of Vaca Muerta blocks</h2>
+      <p class="section-lede" data-i18n="mapLede">Each block in Neuquén shaded by its output in the latest month. Tap a block for its operator, partners and when its concession expires.</p>
+      <div class="map-tools">
+        <div class="seg" role="group" aria-label="Measure">
+          <button type="button" data-measure="oil" aria-pressed="true" data-i18n="mOil">Oil</button>
+          <button type="button" data-measure="gas" aria-pressed="false" data-i18n="mGas">Gas</button>
+        </div>
+        <label><input type="checkbox" id="tDucts" checked> <span data-i18n="tDucts">Main pipelines</span></label>
+        <label><input type="checkbox" id="tFluids"> <span data-i18n="tFluids">Oil and gas windows</span></label>
+      </div>
+      <div class="map-wrap"><div id="map" role="region" aria-label="Map"></div><div class="map-empty" id="mapEmpty" data-i18n="mapLoading">Loading map…</div></div>
+      <div class="map-legend" id="mapLegend"></div>
+      <p class="note" id="mapNote"></p>
     </section>
 
     <section class="section">
@@ -403,7 +438,14 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
       empty: "Production data is being loaded for the first time. Check back in a few minutes.",
       disclaimer: "For information only. Not investment advice.",
       fWells: "wells producing",
-      fracTitle: "Fracking stages",
+      mapTitle: "Map of Vaca Muerta blocks",
+      mapLede: "Each block in Neuquén shaded by its output in the latest month. Tap a block for its operator, partners and when its concession expires.",
+      mOil: "Oil", mGas: "Gas", tDucts: "Main pipelines", tFluids: "Oil and gas windows", mapLoading: "Loading map…",
+      mapFail: "The map could not be loaded. The block table below has the same figures.",
+      lgNoProd: "No Vaca Muerta output", lgOilDuct: "Oil pipeline", lgGasDuct: "Gas pipeline",
+      lgOilW: "Oil window", lgWetW: "Wet gas window", lgDryW: "Dry gas window",
+      pOperator: "Operator", pPartners: "Partners", pType: "Type", pExpires: "Concession expires", pNorm: "Granted by", pNoProd: "No Vaca Muerta production reported last month.",
+      mapNote: (src, p) => `Block outlines, pipelines and fluid windows: ${src}. Production: Energy Secretariat, ${p}. Only blocks in Neuquén are shown; a few Vaca Muerta blocks in Mendoza and Río Negro are not on the map. Basemap © OpenFreeMap, OpenStreetMap contributors.`,
       fracLede: (n, y, w, s) => `${n} fracking stages were pumped in Vaca Muerta in the last 12 months${y}, across ${w} wells and ${s} tonnes of sand.`,
       fracYoy: v => `, ${v} on the previous year`,
       fracChartTitle: "Stages fractured per month", fracOpsTitle: "Stages by operator, last 12 months", thStages: "Stages", stagesUnit: "stages",
@@ -458,7 +500,14 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
       empty: "Los datos de producción se están cargando por primera vez. Volvé en unos minutos.",
       disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.",
       fWells: "pozos en producción",
-      fracTitle: "Etapas de fractura",
+      mapTitle: "Mapa de bloques de Vaca Muerta",
+      mapLede: "Cada bloque de Neuquén coloreado según su producción del último mes. Tocá un bloque para ver su operadora, los socios y cuándo vence la concesión.",
+      mOil: "Petróleo", mGas: "Gas", tDucts: "Ductos principales", tFluids: "Ventanas de petróleo y gas", mapLoading: "Cargando mapa…",
+      mapFail: "No se pudo cargar el mapa. La tabla de bloques de abajo tiene las mismas cifras.",
+      lgNoProd: "Sin producción en Vaca Muerta", lgOilDuct: "Oleoducto", lgGasDuct: "Gasoducto",
+      lgOilW: "Ventana de petróleo", lgWetW: "Ventana de gas húmedo", lgDryW: "Ventana de gas seco",
+      pOperator: "Operadora", pPartners: "Socios", pType: "Tipo", pExpires: "Vence la concesión", pNorm: "Otorgada por", pNoProd: "Sin producción de Vaca Muerta declarada el último mes.",
+      mapNote: (src, p) => `Límites de bloques, ductos y ventanas de fluidos: ${src}. Producción: Secretaría de Energía, ${p}. Solo se muestran los bloques de Neuquén; algunos bloques de Vaca Muerta en Mendoza y Río Negro no figuran en el mapa. Mapa base © OpenFreeMap, colaboradores de OpenStreetMap.`,
       fracLede: (n, y, w, s) => `Se bombearon ${n} etapas de fractura en Vaca Muerta en los últimos 12 meses${y}, en ${w} pozos y con ${s} toneladas de arena.`,
       fracYoy: v => `, ${v} contra el año anterior`,
       fracChartTitle: "Etapas de fractura por mes", fracOpsTitle: "Etapas por operadora, últimos 12 meses", thStages: "Etapas", stagesUnit: "etapas",
@@ -875,6 +924,118 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
     }
   }
 
+  // ---------- Map ----------
+  const RAMP = ["#cde2fb", "#86b6ef", "#3987e5", "#1c5cab", "#0d366b"];
+  const BINS = { oil: [1, 2000, 10000, 30000, 60000], gas: [0.05, 0.5, 2, 5, 10] };
+  const FLUID = { oil: "#1baf7a", wet_gas: "#eda100", dry_gas: "#eb6834", other: "#9aa5ad" };
+  let map = null, mapMeasure = "oil", mapState = "idle", mapMeta = null;
+
+  function fillExpr(m) {
+    const key = m === "oil" ? "oil_bbl_d" : "gas_mmm3_d", b = BINS[m];
+    return ["case", ["!", ["has", key]], "rgba(0,0,0,0)", ["<", ["get", key], b[0]], "rgba(0,0,0,0)",
+      ["step", ["get", key], RAMP[0], b[1], RAMP[1], b[2], RAMP[2], b[3], RAMP[3], b[4], RAMP[4]]];
+  }
+  function mapLegend() {
+    const t = T[lang], b = BINS[mapMeasure];
+    const lab = v => mapMeasure === "oil" ? axisLabel(v) : fmt(v, v < 1 ? 1 : 0);
+    const unit = mapMeasure === "oil" ? "bbl/d" : "MMm³/d";
+    let h = `<span class="ramp"><em>0</em>${RAMP.map(c => `<span style="background:${c}"></span>`).join("")}<em>${lab(b[4])}+ ${unit}</em></span>`;
+    h += `<span><b style="background:transparent;border:1px solid #9aa5ad"></b>${esc(t.lgNoProd)}</span>`;
+    if ($("#tDucts").checked) h += `<span><i style="background:#17212b"></i>${esc(t.lgOilDuct)}</span><span><i style="background:#eb6834"></i>${esc(t.lgGasDuct)}</span>`;
+    if ($("#tFluids").checked) h += `<span><b style="background:${FLUID.oil};opacity:.5"></b>${esc(t.lgOilW)}</span><span><b style="background:${FLUID.wet_gas};opacity:.5"></b>${esc(t.lgWetW)}</span><span><b style="background:${FLUID.dry_gas};opacity:.5"></b>${esc(t.lgDryW)}</span>`;
+    $("#mapLegend").innerHTML = h;
+    if (mapMeta) $("#mapNote").innerHTML = t.mapNote(`<a href="${esc(mapMeta.source.url)}" rel="noopener">${esc(mapMeta.source.name)}</a>`, esc(monthName(mapMeta.period || DATA.latest_period)));
+  }
+  function popupHTML(p) {
+    const t = T[lang], row = (k, v) => v ? `<div><span class="muted">${esc(k)}:</span> ${esc(v)}</div>` : "";
+    let h = `<h4>${esc(p.name)}</h4>`;
+    if (p.oil_bbl_d != null || p.gas_mmm3_d != null) {
+      h += `<div><strong>${fmt(p.oil_bbl_d)}</strong> bbl/d ${t.mOil.toLowerCase()} <span class="muted">(${pct(p.oil_yoy_pct)})</span></div>`;
+      h += `<div><strong>${fmt(p.gas_mmm3_d, 2)}</strong> MMm³/d gas <span class="muted">(${pct(p.gas_yoy_pct)})</span></div>`;
+    } else h += `<div class="muted">${esc(t.pNoProd)}</div>`;
+    h += `<div style="margin-top:6px"></div>` + row(t.pOperator, p.operator || p.official_operator) + row(t.pPartners, p.holders) +
+      row(t.pType, p.type ? p.type.charAt(0) + p.type.slice(1).toLowerCase() : "") +
+      row(t.pExpires, p.expires ? shortDate(p.expires) : "") + row(t.pNorm, p.norm);
+    return h;
+  }
+  function loadScript(src) { return new Promise((ok, ko) => { const s = document.createElement("script"); s.src = src; s.onload = ok; s.onerror = ko; document.head.append(s); }); }
+  function loadCss(href) { const l = document.createElement("link"); l.rel = "stylesheet"; l.href = href; document.head.append(l); }
+
+  async function initMap() {
+    if (mapState !== "idle") return;
+    mapState = "loading";
+    try {
+      loadCss("https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css");
+      const [areas, ducts, fluids] = await Promise.all([
+        fetch("data/map_areas.geojson").then(r => r.ok ? r.json() : Promise.reject(r.status)),
+        fetch("data/map_ducts.geojson").then(r => r.ok ? r.json() : null).catch(() => null),
+        fetch("data/map_fluids.geojson").then(r => r.ok ? r.json() : null).catch(() => null),
+        loadScript("https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"),
+      ]);
+      mapMeta = areas;
+      map = new maplibregl.Map({
+        container: "map", style: "https://tiles.openfreemap.org/styles/positron",
+        bounds: [[-71.2, -40.3], [-67.8, -36.1]], fitBoundsOptions: { padding: 20 },
+        attributionControl: { compact: true }, cooperativeGestures: true,
+      });
+      map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+      map.on("load", () => {
+        $("#mapEmpty").hidden = true;
+        if (fluids) {
+          map.addSource("fluids", { type: "geojson", data: fluids });
+          map.addLayer({ id: "fluids", type: "fill", source: "fluids", layout: { visibility: "none" },
+            paint: { "fill-color": ["match", ["get", "kind"], "oil", FLUID.oil, "wet_gas", FLUID.wet_gas, "dry_gas", FLUID.dry_gas, FLUID.other], "fill-opacity": 0.28 } });
+        }
+        map.addSource("areas", { type: "geojson", data: areas, generateId: true });
+        map.addLayer({ id: "areas-fill", type: "fill", source: "areas", paint: { "fill-color": fillExpr(mapMeasure), "fill-opacity": 0.85 } });
+        map.addLayer({ id: "areas-line", type: "line", source: "areas",
+          paint: { "line-color": ["case", ["boolean", ["feature-state", "hover"], false], "#17212b", "#7d8a93"],
+                   "line-width": ["case", ["boolean", ["feature-state", "hover"], false], 2, 0.6] } });
+        if (ducts) {
+          map.addSource("ducts", { type: "geojson", data: ducts });
+          map.addLayer({ id: "ducts", type: "line", source: "ducts",
+            paint: { "line-color": ["match", ["get", "kind"], "gas", "#eb6834", "#17212b"], "line-width": 1.6 } });
+        }
+        let hov = null;
+        map.on("mousemove", "areas-fill", e => {
+          map.getCanvas().style.cursor = "pointer";
+          if (hov !== null) map.setFeatureState({ source: "areas", id: hov }, { hover: false });
+          hov = e.features[0].id; map.setFeatureState({ source: "areas", id: hov }, { hover: true });
+        });
+        map.on("mouseleave", "areas-fill", () => {
+          map.getCanvas().style.cursor = "";
+          if (hov !== null) map.setFeatureState({ source: "areas", id: hov }, { hover: false }); hov = null;
+        });
+        map.on("click", "areas-fill", e => {
+          new maplibregl.Popup({ maxWidth: "300px" }).setLngLat(e.lngLat).setHTML(popupHTML(e.features[0].properties)).addTo(map);
+        });
+        // Encuadre inicial: los bloques que producen en Vaca Muerta.
+        let w = 180, so = 90, e2 = -180, n = -90;
+        areas.features.filter(f => f.properties.oil_bbl_d > 0 || f.properties.gas_mmm3_d > 0).forEach(f => {
+          const walk = c => typeof c[0] === "number" ? (w = Math.min(w, c[0]), e2 = Math.max(e2, c[0]), so = Math.min(so, c[1]), n = Math.max(n, c[1])) : c.forEach(walk);
+          walk(f.geometry.coordinates);
+        });
+        if (w < e2) map.fitBounds([[w, so], [e2, n]], { padding: 30, duration: 0 });
+        mapState = "ready";
+        mapLegend();
+      });
+    } catch (err) {
+      mapState = "failed";
+      $("#mapEmpty").textContent = T[lang].mapFail;
+    }
+  }
+  document.querySelectorAll("[data-measure]").forEach(b => b.addEventListener("click", () => {
+    mapMeasure = b.dataset.measure;
+    document.querySelectorAll("[data-measure]").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    if (mapState === "ready") map.setPaintProperty("areas-fill", "fill-color", fillExpr(mapMeasure));
+    mapLegend();
+  }));
+  $("#tDucts").addEventListener("change", e => { if (mapState === "ready" && map.getLayer("ducts")) map.setLayoutProperty("ducts", "visibility", e.target.checked ? "visible" : "none"); mapLegend(); });
+  $("#tFluids").addEventListener("change", e => { if (mapState === "ready" && map.getLayer("fluids")) map.setLayoutProperty("fluids", "visibility", e.target.checked ? "visible" : "none"); mapLegend(); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver((ents, obs) => { if (ents.some(x => x.isIntersecting)) { obs.disconnect(); initMap(); } }, { rootMargin: "400px" }).observe($("#mapSection"));
+  } else initMap();
+
   function render() {
     const t = T[lang];
     document.documentElement.lang = lang;
@@ -926,6 +1087,7 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
     }).join("");
     mountQuotes();
     renderExtras();
+    if (mapState === "ready" || mapState === "idle") mapLegend();
 
     if (DATA.areas) {
       $("#areasTable tbody").innerHTML = DATA.areas.map(a => `<tr>
