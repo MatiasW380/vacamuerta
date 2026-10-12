@@ -8459,6 +8459,7 @@
     }
    ]
   },
+  "unit_raw": "Suma de USD/m3",
   "last_period": "2026-08",
   "neuquen_12m": {
    "from": "2025-09",
@@ -10207,11 +10208,2141 @@
    }
   ]
  },
- "generated_at": "2026-10-12T21:07Z",
+ "royalties_gas": {
+  "source": {
+   "name": "Secretaría de Energía, regalías de gas natural",
+   "url": "http://datos.energia.gob.ar/dataset/regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
+   "license": "CC BY 4.0"
+  },
+  "price_usd_mmbtu": {
+   "Neuquén": [
+    {
+     "period": "2019-09",
+     "usd_mmbtu": 178.69
+    },
+    {
+     "period": "2019-10",
+     "usd_mmbtu": 152.96
+    },
+    {
+     "period": "2019-11",
+     "usd_mmbtu": 152.42
+    },
+    {
+     "period": "2019-12",
+     "usd_mmbtu": 145.65
+    },
+    {
+     "period": "2020-01",
+     "usd_mmbtu": 142.98
+    },
+    {
+     "period": "2020-02",
+     "usd_mmbtu": 163.45
+    },
+    {
+     "period": "2020-03",
+     "usd_mmbtu": 162.7
+    },
+    {
+     "period": "2020-04",
+     "usd_mmbtu": 133.53
+    },
+    {
+     "period": "2020-05",
+     "usd_mmbtu": 144.16
+    },
+    {
+     "period": "2020-06",
+     "usd_mmbtu": 179.54
+    },
+    {
+     "period": "2020-07",
+     "usd_mmbtu": 184.86
+    },
+    {
+     "period": "2020-08",
+     "usd_mmbtu": 187.44
+    },
+    {
+     "period": "2020-09",
+     "usd_mmbtu": 184.1
+    },
+    {
+     "period": "2020-10",
+     "usd_mmbtu": 156.55
+    },
+    {
+     "period": "2020-11",
+     "usd_mmbtu": 155.28
+    },
+    {
+     "period": "2020-12",
+     "usd_mmbtu": 183.66
+    },
+    {
+     "period": "2021-01",
+     "usd_mmbtu": 212.48
+    },
+    {
+     "period": "2021-02",
+     "usd_mmbtu": 221.42
+    },
+    {
+     "period": "2021-03",
+     "usd_mmbtu": 227.15
+    },
+    {
+     "period": "2021-04",
+     "usd_mmbtu": 231.66
+    },
+    {
+     "period": "2021-05",
+     "usd_mmbtu": 332.86
+    },
+    {
+     "period": "2021-06",
+     "usd_mmbtu": 320.2
+    },
+    {
+     "period": "2021-07",
+     "usd_mmbtu": 326.78
+    },
+    {
+     "period": "2021-08",
+     "usd_mmbtu": 333.23
+    },
+    {
+     "period": "2021-09",
+     "usd_mmbtu": 350.66
+    },
+    {
+     "period": "2021-10",
+     "usd_mmbtu": 264.28
+    },
+    {
+     "period": "2021-11",
+     "usd_mmbtu": 276.85
+    },
+    {
+     "period": "2021-12",
+     "usd_mmbtu": 283.47
+    },
+    {
+     "period": "2022-01",
+     "usd_mmbtu": 297.57
+    },
+    {
+     "period": "2022-02",
+     "usd_mmbtu": 302.88
+    },
+    {
+     "period": "2022-03",
+     "usd_mmbtu": 315.11
+    },
+    {
+     "period": "2022-04",
+     "usd_mmbtu": 328.81
+    },
+    {
+     "period": "2022-05",
+     "usd_mmbtu": 458.02
+    },
+    {
+     "period": "2022-06",
+     "usd_mmbtu": 469.73
+    },
+    {
+     "period": "2022-07",
+     "usd_mmbtu": 492.96
+    },
+    {
+     "period": "2022-08",
+     "usd_mmbtu": 535.76
+    },
+    {
+     "period": "2022-09",
+     "usd_mmbtu": 585.35
+    },
+    {
+     "period": "2022-10",
+     "usd_mmbtu": 523.69
+    },
+    {
+     "period": "2022-11",
+     "usd_mmbtu": 568.63
+    },
+    {
+     "period": "2022-12",
+     "usd_mmbtu": 593.55
+    },
+    {
+     "period": "2023-01",
+     "usd_mmbtu": 636.05
+    },
+    {
+     "period": "2023-02",
+     "usd_mmbtu": 676.01
+    },
+    {
+     "period": "2023-03",
+     "usd_mmbtu": 711.64
+    },
+    {
+     "period": "2023-04",
+     "usd_mmbtu": 748.86
+    },
+    {
+     "period": "2023-05",
+     "usd_mmbtu": 953.0
+    },
+    {
+     "period": "2023-06",
+     "usd_mmbtu": 945.12
+    },
+    {
+     "period": "2023-07",
+     "usd_mmbtu": 1048.44
+    },
+    {
+     "period": "2023-08",
+     "usd_mmbtu": 1178.24
+    },
+    {
+     "period": "2023-09",
+     "usd_mmbtu": 1258.91
+    },
+    {
+     "period": "2023-10",
+     "usd_mmbtu": 949.68
+    },
+    {
+     "period": "2023-11",
+     "usd_mmbtu": 1556.61
+    },
+    {
+     "period": "2023-12",
+     "usd_mmbtu": 1820.66
+    },
+    {
+     "period": "2024-01",
+     "usd_mmbtu": 2190.74
+    },
+    {
+     "period": "2024-02",
+     "usd_mmbtu": 2350.32
+    },
+    {
+     "period": "2024-03",
+     "usd_mmbtu": 2379.18
+    },
+    {
+     "period": "2024-04",
+     "usd_mmbtu": 2521.25
+    },
+    {
+     "period": "2024-05",
+     "usd_mmbtu": 3304.95
+    },
+    {
+     "period": "2024-06",
+     "usd_mmbtu": 3376.95
+    },
+    {
+     "period": "2024-07",
+     "usd_mmbtu": 3195.41
+    },
+    {
+     "period": "2024-08",
+     "usd_mmbtu": 3672.53
+    },
+    {
+     "period": "2024-09",
+     "usd_mmbtu": 3867.39
+    },
+    {
+     "period": "2024-10",
+     "usd_mmbtu": 2549.49
+    },
+    {
+     "period": "2024-11",
+     "usd_mmbtu": 2485.01
+    },
+    {
+     "period": "2024-12",
+     "usd_mmbtu": 2680.29
+    },
+    {
+     "period": "2025-01",
+     "usd_mmbtu": 2797.24
+    },
+    {
+     "period": "2025-02",
+     "usd_mmbtu": 2892.23
+    },
+    {
+     "period": "2025-03",
+     "usd_mmbtu": 3016.27
+    },
+    {
+     "period": "2025-04",
+     "usd_mmbtu": 2969.63
+    },
+    {
+     "period": "2025-05",
+     "usd_mmbtu": 4419.28
+    },
+    {
+     "period": "2025-06",
+     "usd_mmbtu": 4588.67
+    },
+    {
+     "period": "2025-07",
+     "usd_mmbtu": 4914.59
+    },
+    {
+     "period": "2025-08",
+     "usd_mmbtu": 5011.61
+    },
+    {
+     "period": "2025-09",
+     "usd_mmbtu": 4095.57
+    },
+    {
+     "period": "2025-10",
+     "usd_mmbtu": 3417.92
+    },
+    {
+     "period": "2025-11",
+     "usd_mmbtu": 3515.74
+    },
+    {
+     "period": "2025-12",
+     "usd_mmbtu": 3643.14
+    },
+    {
+     "period": "2026-01",
+     "usd_mmbtu": 3587.06
+    },
+    {
+     "period": "2026-02",
+     "usd_mmbtu": 3738.12
+    },
+    {
+     "period": "2026-03",
+     "usd_mmbtu": 3757.75
+    },
+    {
+     "period": "2026-04",
+     "usd_mmbtu": 3714.35
+    },
+    {
+     "period": "2026-05",
+     "usd_mmbtu": 5499.95
+    },
+    {
+     "period": "2026-06",
+     "usd_mmbtu": 6170.49
+    },
+    {
+     "period": "2026-07",
+     "usd_mmbtu": 6058.57
+    },
+    {
+     "period": "2026-08",
+     "usd_mmbtu": 6168.01
+    }
+   ],
+   "Chubut": [
+    {
+     "period": "2019-09",
+     "usd_mmbtu": 206.74
+    },
+    {
+     "period": "2019-10",
+     "usd_mmbtu": 181.79
+    },
+    {
+     "period": "2019-11",
+     "usd_mmbtu": 170.37
+    },
+    {
+     "period": "2019-12",
+     "usd_mmbtu": 180.83
+    },
+    {
+     "period": "2020-01",
+     "usd_mmbtu": 167.26
+    },
+    {
+     "period": "2020-02",
+     "usd_mmbtu": 177.46
+    },
+    {
+     "period": "2020-03",
+     "usd_mmbtu": 187.24
+    },
+    {
+     "period": "2020-04",
+     "usd_mmbtu": 151.83
+    },
+    {
+     "period": "2020-05",
+     "usd_mmbtu": 178.7
+    },
+    {
+     "period": "2020-06",
+     "usd_mmbtu": 182.5
+    },
+    {
+     "period": "2020-07",
+     "usd_mmbtu": 201.49
+    },
+    {
+     "period": "2020-08",
+     "usd_mmbtu": 203.2
+    },
+    {
+     "period": "2020-09",
+     "usd_mmbtu": 182.3
+    },
+    {
+     "period": "2020-10",
+     "usd_mmbtu": 158.04
+    },
+    {
+     "period": "2020-11",
+     "usd_mmbtu": 164.83
+    },
+    {
+     "period": "2020-12",
+     "usd_mmbtu": 183.85
+    },
+    {
+     "period": "2021-01",
+     "usd_mmbtu": 227.45
+    },
+    {
+     "period": "2021-02",
+     "usd_mmbtu": 231.25
+    },
+    {
+     "period": "2021-03",
+     "usd_mmbtu": 234.95
+    },
+    {
+     "period": "2021-04",
+     "usd_mmbtu": 249.7
+    },
+    {
+     "period": "2021-05",
+     "usd_mmbtu": 388.13
+    },
+    {
+     "period": "2021-06",
+     "usd_mmbtu": 383.35
+    },
+    {
+     "period": "2021-07",
+     "usd_mmbtu": 404.44
+    },
+    {
+     "period": "2021-08",
+     "usd_mmbtu": 409.29
+    },
+    {
+     "period": "2021-09",
+     "usd_mmbtu": 414.64
+    },
+    {
+     "period": "2021-10",
+     "usd_mmbtu": 278.27
+    },
+    {
+     "period": "2021-11",
+     "usd_mmbtu": 283.08
+    },
+    {
+     "period": "2021-12",
+     "usd_mmbtu": 286.25
+    },
+    {
+     "period": "2022-01",
+     "usd_mmbtu": 299.48
+    },
+    {
+     "period": "2022-02",
+     "usd_mmbtu": 304.37
+    },
+    {
+     "period": "2022-03",
+     "usd_mmbtu": 337.95
+    },
+    {
+     "period": "2022-04",
+     "usd_mmbtu": 354.01
+    },
+    {
+     "period": "2022-05",
+     "usd_mmbtu": 535.94
+    },
+    {
+     "period": "2022-06",
+     "usd_mmbtu": 561.91
+    },
+    {
+     "period": "2022-07",
+     "usd_mmbtu": 590.1
+    },
+    {
+     "period": "2022-08",
+     "usd_mmbtu": 615.73
+    },
+    {
+     "period": "2022-09",
+     "usd_mmbtu": 646.22
+    },
+    {
+     "period": "2022-10",
+     "usd_mmbtu": 466.08
+    },
+    {
+     "period": "2022-11",
+     "usd_mmbtu": 491.41
+    },
+    {
+     "period": "2022-12",
+     "usd_mmbtu": 513.93
+    },
+    {
+     "period": "2023-01",
+     "usd_mmbtu": 551.7
+    },
+    {
+     "period": "2023-02",
+     "usd_mmbtu": 575.9
+    },
+    {
+     "period": "2023-03",
+     "usd_mmbtu": 609.89
+    },
+    {
+     "period": "2023-04",
+     "usd_mmbtu": 671.09
+    },
+    {
+     "period": "2023-05",
+     "usd_mmbtu": 1081.45
+    },
+    {
+     "period": "2023-06",
+     "usd_mmbtu": 1180.58
+    },
+    {
+     "period": "2023-07",
+     "usd_mmbtu": 1457.93
+    },
+    {
+     "period": "2023-08",
+     "usd_mmbtu": 1540.86
+    },
+    {
+     "period": "2023-09",
+     "usd_mmbtu": 1539.99
+    },
+    {
+     "period": "2023-10",
+     "usd_mmbtu": 1085.34
+    },
+    {
+     "period": "2023-11",
+     "usd_mmbtu": 1712.95
+    },
+    {
+     "period": "2023-12",
+     "usd_mmbtu": 2323.3
+    },
+    {
+     "period": "2024-01",
+     "usd_mmbtu": 2423.87
+    },
+    {
+     "period": "2024-02",
+     "usd_mmbtu": 2702.81
+    },
+    {
+     "period": "2024-03",
+     "usd_mmbtu": 2753.0
+    },
+    {
+     "period": "2024-04",
+     "usd_mmbtu": 2700.19
+    },
+    {
+     "period": "2024-05",
+     "usd_mmbtu": 4132.4
+    },
+    {
+     "period": "2024-06",
+     "usd_mmbtu": 4059.6
+    },
+    {
+     "period": "2024-07",
+     "usd_mmbtu": 4056.02
+    },
+    {
+     "period": "2024-08",
+     "usd_mmbtu": 4282.31
+    },
+    {
+     "period": "2024-09",
+     "usd_mmbtu": 4366.05
+    },
+    {
+     "period": "2024-10",
+     "usd_mmbtu": 3023.52
+    },
+    {
+     "period": "2024-11",
+     "usd_mmbtu": 2998.01
+    },
+    {
+     "period": "2024-12",
+     "usd_mmbtu": 3285.09
+    },
+    {
+     "period": "2025-01",
+     "usd_mmbtu": 3226.54
+    },
+    {
+     "period": "2025-02",
+     "usd_mmbtu": 3305.04
+    },
+    {
+     "period": "2025-03",
+     "usd_mmbtu": 3464.87
+    },
+    {
+     "period": "2025-04",
+     "usd_mmbtu": 3392.92
+    },
+    {
+     "period": "2025-05",
+     "usd_mmbtu": 6222.11
+    },
+    {
+     "period": "2025-06",
+     "usd_mmbtu": 5370.17
+    },
+    {
+     "period": "2025-07",
+     "usd_mmbtu": 5760.56
+    },
+    {
+     "period": "2025-08",
+     "usd_mmbtu": 6178.8
+    },
+    {
+     "period": "2025-09",
+     "usd_mmbtu": 5929.52
+    },
+    {
+     "period": "2025-10",
+     "usd_mmbtu": 4268.22
+    },
+    {
+     "period": "2025-11",
+     "usd_mmbtu": 4288.17
+    },
+    {
+     "period": "2025-12",
+     "usd_mmbtu": 4370.54
+    },
+    {
+     "period": "2026-01",
+     "usd_mmbtu": 4600.56
+    },
+    {
+     "period": "2026-02",
+     "usd_mmbtu": 4524.09
+    },
+    {
+     "period": "2026-03",
+     "usd_mmbtu": 4374.99
+    },
+    {
+     "period": "2026-04",
+     "usd_mmbtu": 4483.81
+    },
+    {
+     "period": "2026-05",
+     "usd_mmbtu": 7026.49
+    },
+    {
+     "period": "2026-06",
+     "usd_mmbtu": 7211.88
+    },
+    {
+     "period": "2026-07",
+     "usd_mmbtu": 7267.84
+    },
+    {
+     "period": "2026-08",
+     "usd_mmbtu": 6942.74
+    }
+   ],
+   "Santa Cruz": [
+    {
+     "period": "2019-09",
+     "usd_mmbtu": 173.76
+    },
+    {
+     "period": "2019-10",
+     "usd_mmbtu": 148.83
+    },
+    {
+     "period": "2019-11",
+     "usd_mmbtu": 138.39
+    },
+    {
+     "period": "2019-12",
+     "usd_mmbtu": 142.03
+    },
+    {
+     "period": "2020-01",
+     "usd_mmbtu": 139.13
+    },
+    {
+     "period": "2020-02",
+     "usd_mmbtu": 135.5
+    },
+    {
+     "period": "2020-03",
+     "usd_mmbtu": 134.35
+    },
+    {
+     "period": "2020-04",
+     "usd_mmbtu": 128.33
+    },
+    {
+     "period": "2020-05",
+     "usd_mmbtu": 146.49
+    },
+    {
+     "period": "2020-06",
+     "usd_mmbtu": 170.97
+    },
+    {
+     "period": "2020-07",
+     "usd_mmbtu": 184.78
+    },
+    {
+     "period": "2020-08",
+     "usd_mmbtu": 182.45
+    },
+    {
+     "period": "2020-09",
+     "usd_mmbtu": 172.11
+    },
+    {
+     "period": "2020-10",
+     "usd_mmbtu": 150.54
+    },
+    {
+     "period": "2020-11",
+     "usd_mmbtu": 150.14
+    },
+    {
+     "period": "2020-12",
+     "usd_mmbtu": 152.65
+    },
+    {
+     "period": "2021-01",
+     "usd_mmbtu": 186.82
+    },
+    {
+     "period": "2021-02",
+     "usd_mmbtu": 200.39
+    },
+    {
+     "period": "2021-03",
+     "usd_mmbtu": 207.38
+    },
+    {
+     "period": "2021-04",
+     "usd_mmbtu": 238.47
+    },
+    {
+     "period": "2021-05",
+     "usd_mmbtu": 364.49
+    },
+    {
+     "period": "2021-06",
+     "usd_mmbtu": 367.69
+    },
+    {
+     "period": "2021-07",
+     "usd_mmbtu": 385.88
+    },
+    {
+     "period": "2021-08",
+     "usd_mmbtu": 381.06
+    },
+    {
+     "period": "2021-09",
+     "usd_mmbtu": 421.72
+    },
+    {
+     "period": "2021-10",
+     "usd_mmbtu": 265.08
+    },
+    {
+     "period": "2021-11",
+     "usd_mmbtu": 276.5
+    },
+    {
+     "period": "2021-12",
+     "usd_mmbtu": 283.2
+    },
+    {
+     "period": "2022-01",
+     "usd_mmbtu": 295.34
+    },
+    {
+     "period": "2022-02",
+     "usd_mmbtu": 308.09
+    },
+    {
+     "period": "2022-03",
+     "usd_mmbtu": 314.39
+    },
+    {
+     "period": "2022-04",
+     "usd_mmbtu": 328.88
+    },
+    {
+     "period": "2022-05",
+     "usd_mmbtu": 504.51
+    },
+    {
+     "period": "2022-06",
+     "usd_mmbtu": 535.31
+    },
+    {
+     "period": "2022-07",
+     "usd_mmbtu": 578.86
+    },
+    {
+     "period": "2022-08",
+     "usd_mmbtu": 637.75
+    },
+    {
+     "period": "2022-09",
+     "usd_mmbtu": 618.54
+    },
+    {
+     "period": "2022-10",
+     "usd_mmbtu": 496.35
+    },
+    {
+     "period": "2022-11",
+     "usd_mmbtu": 538.84
+    },
+    {
+     "period": "2022-12",
+     "usd_mmbtu": 570.23
+    },
+    {
+     "period": "2023-01",
+     "usd_mmbtu": 726.31
+    },
+    {
+     "period": "2023-02",
+     "usd_mmbtu": 778.6
+    },
+    {
+     "period": "2023-03",
+     "usd_mmbtu": 889.0
+    },
+    {
+     "period": "2023-04",
+     "usd_mmbtu": 912.12
+    },
+    {
+     "period": "2023-05",
+     "usd_mmbtu": 1462.73
+    },
+    {
+     "period": "2023-06",
+     "usd_mmbtu": 1528.64
+    },
+    {
+     "period": "2023-07",
+     "usd_mmbtu": 1723.84
+    },
+    {
+     "period": "2023-08",
+     "usd_mmbtu": 1847.8
+    },
+    {
+     "period": "2023-09",
+     "usd_mmbtu": 2054.32
+    },
+    {
+     "period": "2023-10",
+     "usd_mmbtu": 1331.08
+    },
+    {
+     "period": "2023-11",
+     "usd_mmbtu": 1989.36
+    },
+    {
+     "period": "2023-12",
+     "usd_mmbtu": 2429.91
+    },
+    {
+     "period": "2024-01",
+     "usd_mmbtu": 3146.25
+    },
+    {
+     "period": "2024-02",
+     "usd_mmbtu": 3266.46
+    },
+    {
+     "period": "2024-03",
+     "usd_mmbtu": 3266.38
+    },
+    {
+     "period": "2024-04",
+     "usd_mmbtu": 3285.7
+    },
+    {
+     "period": "2024-05",
+     "usd_mmbtu": 5103.03
+    },
+    {
+     "period": "2024-06",
+     "usd_mmbtu": 5055.21
+    },
+    {
+     "period": "2024-07",
+     "usd_mmbtu": 5154.02
+    },
+    {
+     "period": "2024-08",
+     "usd_mmbtu": 5475.45
+    },
+    {
+     "period": "2024-09",
+     "usd_mmbtu": 5173.56
+    },
+    {
+     "period": "2024-10",
+     "usd_mmbtu": 3884.42
+    },
+    {
+     "period": "2024-11",
+     "usd_mmbtu": 3859.55
+    },
+    {
+     "period": "2024-12",
+     "usd_mmbtu": 3633.75
+    },
+    {
+     "period": "2025-01",
+     "usd_mmbtu": 4054.35
+    },
+    {
+     "period": "2025-02",
+     "usd_mmbtu": 3978.96
+    },
+    {
+     "period": "2025-03",
+     "usd_mmbtu": 4764.01
+    },
+    {
+     "period": "2025-04",
+     "usd_mmbtu": 4419.87
+    },
+    {
+     "period": "2025-05",
+     "usd_mmbtu": 5774.82
+    },
+    {
+     "period": "2025-06",
+     "usd_mmbtu": 7093.47
+    },
+    {
+     "period": "2025-07",
+     "usd_mmbtu": 7101.98
+    },
+    {
+     "period": "2025-08",
+     "usd_mmbtu": 7805.29
+    },
+    {
+     "period": "2025-09",
+     "usd_mmbtu": 7328.2
+    },
+    {
+     "period": "2025-10",
+     "usd_mmbtu": 5445.33
+    },
+    {
+     "period": "2025-11",
+     "usd_mmbtu": 5223.02
+    },
+    {
+     "period": "2025-12",
+     "usd_mmbtu": 4971.11
+    },
+    {
+     "period": "2026-01",
+     "usd_mmbtu": 5452.24
+    },
+    {
+     "period": "2026-02",
+     "usd_mmbtu": 4943.37
+    },
+    {
+     "period": "2026-03",
+     "usd_mmbtu": 5352.02
+    },
+    {
+     "period": "2026-04",
+     "usd_mmbtu": 5533.21
+    },
+    {
+     "period": "2026-05",
+     "usd_mmbtu": 8207.91
+    },
+    {
+     "period": "2026-06",
+     "usd_mmbtu": 9353.22
+    },
+    {
+     "period": "2026-07",
+     "usd_mmbtu": 8934.25
+    },
+    {
+     "period": "2026-08",
+     "usd_mmbtu": 8819.24
+    }
+   ],
+   "Mendoza": [
+    {
+     "period": "2019-09",
+     "usd_mmbtu": 178.83
+    },
+    {
+     "period": "2019-10",
+     "usd_mmbtu": 160.39
+    },
+    {
+     "period": "2019-11",
+     "usd_mmbtu": 166.85
+    },
+    {
+     "period": "2019-12",
+     "usd_mmbtu": 149.1
+    },
+    {
+     "period": "2020-01",
+     "usd_mmbtu": 187.54
+    },
+    {
+     "period": "2020-02",
+     "usd_mmbtu": 181.42
+    },
+    {
+     "period": "2020-03",
+     "usd_mmbtu": 176.04
+    },
+    {
+     "period": "2020-04",
+     "usd_mmbtu": 146.15
+    },
+    {
+     "period": "2020-05",
+     "usd_mmbtu": 144.33
+    },
+    {
+     "period": "2020-06",
+     "usd_mmbtu": 171.76
+    },
+    {
+     "period": "2020-07",
+     "usd_mmbtu": 182.85
+    },
+    {
+     "period": "2020-08",
+     "usd_mmbtu": 187.03
+    },
+    {
+     "period": "2020-09",
+     "usd_mmbtu": 190.52
+    },
+    {
+     "period": "2020-10",
+     "usd_mmbtu": 168.25
+    },
+    {
+     "period": "2020-11",
+     "usd_mmbtu": 168.89
+    },
+    {
+     "period": "2020-12",
+     "usd_mmbtu": 200.39
+    },
+    {
+     "period": "2021-01",
+     "usd_mmbtu": 234.08
+    },
+    {
+     "period": "2021-02",
+     "usd_mmbtu": 250.6
+    },
+    {
+     "period": "2021-03",
+     "usd_mmbtu": 257.93
+    },
+    {
+     "period": "2021-04",
+     "usd_mmbtu": 249.56
+    },
+    {
+     "period": "2021-05",
+     "usd_mmbtu": 324.64
+    },
+    {
+     "period": "2021-06",
+     "usd_mmbtu": 309.74
+    },
+    {
+     "period": "2021-07",
+     "usd_mmbtu": 318.67
+    },
+    {
+     "period": "2021-08",
+     "usd_mmbtu": 341.98
+    },
+    {
+     "period": "2021-09",
+     "usd_mmbtu": 350.91
+    },
+    {
+     "period": "2021-10",
+     "usd_mmbtu": 290.65
+    },
+    {
+     "period": "2021-11",
+     "usd_mmbtu": 300.99
+    },
+    {
+     "period": "2021-12",
+     "usd_mmbtu": 309.27
+    },
+    {
+     "period": "2022-01",
+     "usd_mmbtu": 327.13
+    },
+    {
+     "period": "2022-02",
+     "usd_mmbtu": 316.14
+    },
+    {
+     "period": "2022-03",
+     "usd_mmbtu": 310.46
+    },
+    {
+     "period": "2022-04",
+     "usd_mmbtu": 329.2
+    },
+    {
+     "period": "2022-05",
+     "usd_mmbtu": 562.7
+    },
+    {
+     "period": "2022-06",
+     "usd_mmbtu": 609.82
+    },
+    {
+     "period": "2022-07",
+     "usd_mmbtu": 657.07
+    },
+    {
+     "period": "2022-08",
+     "usd_mmbtu": 686.59
+    },
+    {
+     "period": "2022-09",
+     "usd_mmbtu": 736.08
+    },
+    {
+     "period": "2022-10",
+     "usd_mmbtu": 651.16
+    },
+    {
+     "period": "2022-11",
+     "usd_mmbtu": 733.65
+    },
+    {
+     "period": "2022-12",
+     "usd_mmbtu": 708.32
+    },
+    {
+     "period": "2023-01",
+     "usd_mmbtu": 796.35
+    },
+    {
+     "period": "2023-02",
+     "usd_mmbtu": 931.53
+    },
+    {
+     "period": "2023-03",
+     "usd_mmbtu": 1025.81
+    },
+    {
+     "period": "2023-04",
+     "usd_mmbtu": 1199.0
+    },
+    {
+     "period": "2023-05",
+     "usd_mmbtu": 1441.08
+    },
+    {
+     "period": "2023-06",
+     "usd_mmbtu": 1384.68
+    },
+    {
+     "period": "2023-07",
+     "usd_mmbtu": 1604.56
+    },
+    {
+     "period": "2023-08",
+     "usd_mmbtu": 1828.77
+    },
+    {
+     "period": "2023-09",
+     "usd_mmbtu": 1882.71
+    },
+    {
+     "period": "2023-10",
+     "usd_mmbtu": 1405.24
+    },
+    {
+     "period": "2023-11",
+     "usd_mmbtu": 2826.97
+    },
+    {
+     "period": "2023-12",
+     "usd_mmbtu": 2906.72
+    },
+    {
+     "period": "2024-01",
+     "usd_mmbtu": 3258.42
+    },
+    {
+     "period": "2024-02",
+     "usd_mmbtu": 3483.39
+    },
+    {
+     "period": "2024-03",
+     "usd_mmbtu": 3714.13
+    },
+    {
+     "period": "2024-04",
+     "usd_mmbtu": 4210.72
+    },
+    {
+     "period": "2024-05",
+     "usd_mmbtu": 5464.52
+    },
+    {
+     "period": "2024-06",
+     "usd_mmbtu": 4711.94
+    },
+    {
+     "period": "2024-07",
+     "usd_mmbtu": 5068.62
+    },
+    {
+     "period": "2024-08",
+     "usd_mmbtu": 5051.87
+    },
+    {
+     "period": "2024-09",
+     "usd_mmbtu": 4667.95
+    },
+    {
+     "period": "2024-10",
+     "usd_mmbtu": 3763.15
+    },
+    {
+     "period": "2024-11",
+     "usd_mmbtu": 4076.03
+    },
+    {
+     "period": "2024-12",
+     "usd_mmbtu": 3784.19
+    },
+    {
+     "period": "2025-01",
+     "usd_mmbtu": 3316.22
+    },
+    {
+     "period": "2025-02",
+     "usd_mmbtu": 3803.3
+    },
+    {
+     "period": "2025-03",
+     "usd_mmbtu": 4118.21
+    },
+    {
+     "period": "2025-04",
+     "usd_mmbtu": 4192.0
+    },
+    {
+     "period": "2025-05",
+     "usd_mmbtu": 5104.73
+    },
+    {
+     "period": "2025-06",
+     "usd_mmbtu": 5360.71
+    },
+    {
+     "period": "2025-07",
+     "usd_mmbtu": 7827.19
+    },
+    {
+     "period": "2025-08",
+     "usd_mmbtu": 6158.98
+    },
+    {
+     "period": "2025-09",
+     "usd_mmbtu": 3944.98
+    },
+    {
+     "period": "2025-10",
+     "usd_mmbtu": 994.55
+    },
+    {
+     "period": "2025-11",
+     "usd_mmbtu": 790.64
+    },
+    {
+     "period": "2025-12",
+     "usd_mmbtu": 3845.55
+    },
+    {
+     "period": "2026-01",
+     "usd_mmbtu": 2388.65
+    },
+    {
+     "period": "2026-02",
+     "usd_mmbtu": 2850.1
+    },
+    {
+     "period": "2026-03",
+     "usd_mmbtu": 2804.96
+    },
+    {
+     "period": "2026-04",
+     "usd_mmbtu": 2903.46
+    },
+    {
+     "period": "2026-05",
+     "usd_mmbtu": 3526.76
+    },
+    {
+     "period": "2026-06",
+     "usd_mmbtu": 5940.92
+    },
+    {
+     "period": "2026-07",
+     "usd_mmbtu": 6437.75
+    },
+    {
+     "period": "2026-08",
+     "usd_mmbtu": 6701.97
+    }
+   ],
+   "Río Negro": [
+    {
+     "period": "2019-09",
+     "usd_mmbtu": 176.66
+    },
+    {
+     "period": "2019-10",
+     "usd_mmbtu": 144.63
+    },
+    {
+     "period": "2019-11",
+     "usd_mmbtu": 150.48
+    },
+    {
+     "period": "2019-12",
+     "usd_mmbtu": 133.39
+    },
+    {
+     "period": "2020-01",
+     "usd_mmbtu": 129.3
+    },
+    {
+     "period": "2020-02",
+     "usd_mmbtu": 152.94
+    },
+    {
+     "period": "2020-03",
+     "usd_mmbtu": 153.32
+    },
+    {
+     "period": "2020-04",
+     "usd_mmbtu": 132.99
+    },
+    {
+     "period": "2020-05",
+     "usd_mmbtu": 146.7
+    },
+    {
+     "period": "2020-06",
+     "usd_mmbtu": 177.91
+    },
+    {
+     "period": "2020-07",
+     "usd_mmbtu": 181.5
+    },
+    {
+     "period": "2020-08",
+     "usd_mmbtu": 190.13
+    },
+    {
+     "period": "2020-09",
+     "usd_mmbtu": 184.52
+    },
+    {
+     "period": "2020-10",
+     "usd_mmbtu": 153.53
+    },
+    {
+     "period": "2020-11",
+     "usd_mmbtu": 147.95
+    },
+    {
+     "period": "2020-12",
+     "usd_mmbtu": 179.05
+    },
+    {
+     "period": "2021-01",
+     "usd_mmbtu": 206.86
+    },
+    {
+     "period": "2021-02",
+     "usd_mmbtu": 213.88
+    },
+    {
+     "period": "2021-03",
+     "usd_mmbtu": 211.94
+    },
+    {
+     "period": "2021-04",
+     "usd_mmbtu": 221.56
+    },
+    {
+     "period": "2021-05",
+     "usd_mmbtu": 323.31
+    },
+    {
+     "period": "2021-06",
+     "usd_mmbtu": 318.4
+    },
+    {
+     "period": "2021-07",
+     "usd_mmbtu": 332.28
+    },
+    {
+     "period": "2021-08",
+     "usd_mmbtu": 335.77
+    },
+    {
+     "period": "2021-09",
+     "usd_mmbtu": 342.24
+    },
+    {
+     "period": "2021-10",
+     "usd_mmbtu": 255.12
+    },
+    {
+     "period": "2021-11",
+     "usd_mmbtu": 263.75
+    },
+    {
+     "period": "2021-12",
+     "usd_mmbtu": 269.63
+    },
+    {
+     "period": "2022-01",
+     "usd_mmbtu": 275.73
+    },
+    {
+     "period": "2022-02",
+     "usd_mmbtu": 277.91
+    },
+    {
+     "period": "2022-03",
+     "usd_mmbtu": 288.14
+    },
+    {
+     "period": "2022-04",
+     "usd_mmbtu": 296.34
+    },
+    {
+     "period": "2022-05",
+     "usd_mmbtu": 431.2
+    },
+    {
+     "period": "2022-06",
+     "usd_mmbtu": 444.68
+    },
+    {
+     "period": "2022-07",
+     "usd_mmbtu": 459.41
+    },
+    {
+     "period": "2022-08",
+     "usd_mmbtu": 490.19
+    },
+    {
+     "period": "2022-09",
+     "usd_mmbtu": 533.03
+    },
+    {
+     "period": "2022-10",
+     "usd_mmbtu": 442.97
+    },
+    {
+     "period": "2022-11",
+     "usd_mmbtu": 481.77
+    },
+    {
+     "period": "2022-12",
+     "usd_mmbtu": 501.78
+    },
+    {
+     "period": "2023-01",
+     "usd_mmbtu": 531.14
+    },
+    {
+     "period": "2023-02",
+     "usd_mmbtu": 550.8
+    },
+    {
+     "period": "2023-03",
+     "usd_mmbtu": 588.76
+    },
+    {
+     "period": "2023-04",
+     "usd_mmbtu": 619.75
+    },
+    {
+     "period": "2023-05",
+     "usd_mmbtu": 846.59
+    },
+    {
+     "period": "2023-06",
+     "usd_mmbtu": 847.7
+    },
+    {
+     "period": "2023-07",
+     "usd_mmbtu": 1008.47
+    },
+    {
+     "period": "2023-08",
+     "usd_mmbtu": 1044.54
+    },
+    {
+     "period": "2023-09",
+     "usd_mmbtu": 1122.62
+    },
+    {
+     "period": "2023-10",
+     "usd_mmbtu": 809.3
+    },
+    {
+     "period": "2023-11",
+     "usd_mmbtu": 1362.8
+    },
+    {
+     "period": "2023-12",
+     "usd_mmbtu": 1574.46
+    },
+    {
+     "period": "2024-01",
+     "usd_mmbtu": 1794.14
+    },
+    {
+     "period": "2024-02",
+     "usd_mmbtu": 2028.39
+    },
+    {
+     "period": "2024-03",
+     "usd_mmbtu": 1997.82
+    },
+    {
+     "period": "2024-04",
+     "usd_mmbtu": 2188.25
+    },
+    {
+     "period": "2024-05",
+     "usd_mmbtu": 3081.23
+    },
+    {
+     "period": "2024-06",
+     "usd_mmbtu": 3156.48
+    },
+    {
+     "period": "2024-07",
+     "usd_mmbtu": 3239.76
+    },
+    {
+     "period": "2024-08",
+     "usd_mmbtu": 3577.08
+    },
+    {
+     "period": "2024-09",
+     "usd_mmbtu": 3594.0
+    },
+    {
+     "period": "2024-10",
+     "usd_mmbtu": 2467.71
+    },
+    {
+     "period": "2024-11",
+     "usd_mmbtu": 2572.57
+    },
+    {
+     "period": "2024-12",
+     "usd_mmbtu": 2628.44
+    },
+    {
+     "period": "2025-01",
+     "usd_mmbtu": 2418.97
+    },
+    {
+     "period": "2025-02",
+     "usd_mmbtu": 2006.25
+    },
+    {
+     "period": "2025-03",
+     "usd_mmbtu": 2178.22
+    },
+    {
+     "period": "2025-04",
+     "usd_mmbtu": 2022.67
+    },
+    {
+     "period": "2025-05",
+     "usd_mmbtu": 3739.68
+    },
+    {
+     "period": "2025-06",
+     "usd_mmbtu": 5216.64
+    },
+    {
+     "period": "2025-07",
+     "usd_mmbtu": 5335.15
+    },
+    {
+     "period": "2025-08",
+     "usd_mmbtu": 5298.34
+    },
+    {
+     "period": "2025-09",
+     "usd_mmbtu": 3263.05
+    },
+    {
+     "period": "2025-10",
+     "usd_mmbtu": 1759.55
+    },
+    {
+     "period": "2025-11",
+     "usd_mmbtu": 2031.82
+    },
+    {
+     "period": "2025-12",
+     "usd_mmbtu": 2203.2
+    },
+    {
+     "period": "2026-01",
+     "usd_mmbtu": 1877.46
+    },
+    {
+     "period": "2026-02",
+     "usd_mmbtu": 2343.54
+    },
+    {
+     "period": "2026-03",
+     "usd_mmbtu": 2769.32
+    },
+    {
+     "period": "2026-04",
+     "usd_mmbtu": 3123.4
+    },
+    {
+     "period": "2026-05",
+     "usd_mmbtu": 5251.75
+    },
+    {
+     "period": "2026-06",
+     "usd_mmbtu": 6264.38
+    },
+    {
+     "period": "2026-07",
+     "usd_mmbtu": 6022.12
+    },
+    {
+     "period": "2026-08",
+     "usd_mmbtu": 5338.32
+    }
+   ]
+  },
+  "unit_raw": "Suma de ARS/Mm3",
+  "last_period": "2026-08",
+  "neuquen_12m": {
+   "from": "2025-09",
+   "to": "2026-08",
+   "royalties_usd_m": 658620.1,
+   "volume_m3": 31796171,
+   "national_royalties_usd_m": 924545.5
+  },
+  "royalties_monthly": [
+   {
+    "period": "2019-09",
+    "neuquen_usd_m": 1678.5,
+    "total_usd_m": 2804.09
+   },
+   {
+    "period": "2019-10",
+    "neuquen_usd_m": 1565.25,
+    "total_usd_m": 2580.91
+   },
+   {
+    "period": "2019-11",
+    "neuquen_usd_m": 1312.46,
+    "total_usd_m": 2221.49
+   },
+   {
+    "period": "2019-12",
+    "neuquen_usd_m": 1310.89,
+    "total_usd_m": 2214.81
+   },
+   {
+    "period": "2020-01",
+    "neuquen_usd_m": 1323.57,
+    "total_usd_m": 2240.99
+   },
+   {
+    "period": "2020-02",
+    "neuquen_usd_m": 1420.29,
+    "total_usd_m": 2275.05
+   },
+   {
+    "period": "2020-03",
+    "neuquen_usd_m": 1468.15,
+    "total_usd_m": 2395.7
+   },
+   {
+    "period": "2020-04",
+    "neuquen_usd_m": 1049.66,
+    "total_usd_m": 1832.21
+   },
+   {
+    "period": "2020-05",
+    "neuquen_usd_m": 1348.67,
+    "total_usd_m": 2244.43
+   },
+   {
+    "period": "2020-06",
+    "neuquen_usd_m": 1679.85,
+    "total_usd_m": 2679.74
+   },
+   {
+    "period": "2020-07",
+    "neuquen_usd_m": 1825.59,
+    "total_usd_m": 2881.44
+   },
+   {
+    "period": "2020-08",
+    "neuquen_usd_m": 1816.33,
+    "total_usd_m": 2851.36
+   },
+   {
+    "period": "2020-09",
+    "neuquen_usd_m": 1644.07,
+    "total_usd_m": 2629.28
+   },
+   {
+    "period": "2020-10",
+    "neuquen_usd_m": 1411.78,
+    "total_usd_m": 2281.43
+   },
+   {
+    "period": "2020-11",
+    "neuquen_usd_m": 1250.88,
+    "total_usd_m": 2075.74
+   },
+   {
+    "period": "2020-12",
+    "neuquen_usd_m": 1525.33,
+    "total_usd_m": 2493.91
+   },
+   {
+    "period": "2021-01",
+    "neuquen_usd_m": 1815.62,
+    "total_usd_m": 2920.6
+   },
+   {
+    "period": "2021-02",
+    "neuquen_usd_m": 1674.94,
+    "total_usd_m": 2693.17
+   },
+   {
+    "period": "2021-03",
+    "neuquen_usd_m": 1949.21,
+    "total_usd_m": 3087.12
+   },
+   {
+    "period": "2021-04",
+    "neuquen_usd_m": 1841.91,
+    "total_usd_m": 3012.39
+   },
+   {
+    "period": "2021-05",
+    "neuquen_usd_m": 3154.98,
+    "total_usd_m": 5164.86
+   },
+   {
+    "period": "2021-06",
+    "neuquen_usd_m": 3186.5,
+    "total_usd_m": 5175.79
+   },
+   {
+    "period": "2021-07",
+    "neuquen_usd_m": 3536.5,
+    "total_usd_m": 5603.2
+   },
+   {
+    "period": "2021-08",
+    "neuquen_usd_m": 3814.17,
+    "total_usd_m": 5922.83
+   },
+   {
+    "period": "2021-09",
+    "neuquen_usd_m": 3859.49,
+    "total_usd_m": 5910.79
+   },
+   {
+    "period": "2021-10",
+    "neuquen_usd_m": 2810.33,
+    "total_usd_m": 4240.43
+   },
+   {
+    "period": "2021-11",
+    "neuquen_usd_m": 2866.72,
+    "total_usd_m": 4289.91
+   },
+   {
+    "period": "2021-12",
+    "neuquen_usd_m": 3078.52,
+    "total_usd_m": 4576.1
+   },
+   {
+    "period": "2022-01",
+    "neuquen_usd_m": 3325.81,
+    "total_usd_m": 4879.15
+   },
+   {
+    "period": "2022-02",
+    "neuquen_usd_m": 2903.12,
+    "total_usd_m": 4308.32
+   },
+   {
+    "period": "2022-03",
+    "neuquen_usd_m": 3495.34,
+    "total_usd_m": 4905.57
+   },
+   {
+    "period": "2022-04",
+    "neuquen_usd_m": 3395.48,
+    "total_usd_m": 5023.14
+   },
+   {
+    "period": "2022-05",
+    "neuquen_usd_m": 5609.68,
+    "total_usd_m": 8231.1
+   },
+   {
+    "period": "2022-06",
+    "neuquen_usd_m": 5739.35,
+    "total_usd_m": 8443.31
+   },
+   {
+    "period": "2022-07",
+    "neuquen_usd_m": 6226.64,
+    "total_usd_m": 9125.21
+   },
+   {
+    "period": "2022-08",
+    "neuquen_usd_m": 6777.16,
+    "total_usd_m": 9938.57
+   },
+   {
+    "period": "2022-09",
+    "neuquen_usd_m": 6859.47,
+    "total_usd_m": 10038.71
+   },
+   {
+    "period": "2022-10",
+    "neuquen_usd_m": 6072.47,
+    "total_usd_m": 8575.98
+   },
+   {
+    "period": "2022-11",
+    "neuquen_usd_m": 5952.09,
+    "total_usd_m": 8579.93
+   },
+   {
+    "period": "2022-12",
+    "neuquen_usd_m": 6651.17,
+    "total_usd_m": 9441.72
+   },
+   {
+    "period": "2023-01",
+    "neuquen_usd_m": 7264.61,
+    "total_usd_m": 10326.2
+   },
+   {
+    "period": "2023-02",
+    "neuquen_usd_m": 6752.53,
+    "total_usd_m": 9672.54
+   },
+   {
+    "period": "2023-03",
+    "neuquen_usd_m": 8353.52,
+    "total_usd_m": 11774.03
+   },
+   {
+    "period": "2023-04",
+    "neuquen_usd_m": 8582.37,
+    "total_usd_m": 11966.14
+   },
+   {
+    "period": "2023-05",
+    "neuquen_usd_m": 11834.49,
+    "total_usd_m": 17258.45
+   },
+   {
+    "period": "2023-06",
+    "neuquen_usd_m": 11805.17,
+    "total_usd_m": 17404.12
+   },
+   {
+    "period": "2023-07",
+    "neuquen_usd_m": 13270.83,
+    "total_usd_m": 19998.04
+   },
+   {
+    "period": "2023-08",
+    "neuquen_usd_m": 16204.09,
+    "total_usd_m": 23349.78
+   },
+   {
+    "period": "2023-09",
+    "neuquen_usd_m": 16664.21,
+    "total_usd_m": 24081.03
+   },
+   {
+    "period": "2023-10",
+    "neuquen_usd_m": 10524.08,
+    "total_usd_m": 15959.41
+   },
+   {
+    "period": "2023-11",
+    "neuquen_usd_m": 16699.66,
+    "total_usd_m": 24011.83
+   },
+   {
+    "period": "2023-12",
+    "neuquen_usd_m": 18426.67,
+    "total_usd_m": 27475.82
+   },
+   {
+    "period": "2024-01",
+    "neuquen_usd_m": 25494.43,
+    "total_usd_m": 36443.3
+   },
+   {
+    "period": "2024-02",
+    "neuquen_usd_m": 28471.71,
+    "total_usd_m": 40321.02
+   },
+   {
+    "period": "2024-03",
+    "neuquen_usd_m": 30768.53,
+    "total_usd_m": 43067.45
+   },
+   {
+    "period": "2024-04",
+    "neuquen_usd_m": 25611.99,
+    "total_usd_m": 38022.89
+   },
+   {
+    "period": "2024-05",
+    "neuquen_usd_m": 44037.52,
+    "total_usd_m": 62813.64
+   },
+   {
+    "period": "2024-06",
+    "neuquen_usd_m": 41873.56,
+    "total_usd_m": 59724.52
+   },
+   {
+    "period": "2024-07",
+    "neuquen_usd_m": 45665.56,
+    "total_usd_m": 64124.5
+   },
+   {
+    "period": "2024-08",
+    "neuquen_usd_m": 56085.59,
+    "total_usd_m": 76255.23
+   },
+   {
+    "period": "2024-09",
+    "neuquen_usd_m": 45753.36,
+    "total_usd_m": 63637.82
+   },
+   {
+    "period": "2024-10",
+    "neuquen_usd_m": 32305.28,
+    "total_usd_m": 46588.31
+   },
+   {
+    "period": "2024-11",
+    "neuquen_usd_m": 27781.48,
+    "total_usd_m": 42262.11
+   },
+   {
+    "period": "2024-12",
+    "neuquen_usd_m": 28332.51,
+    "total_usd_m": 42181.38
+   },
+   {
+    "period": "2025-01",
+    "neuquen_usd_m": 35760.72,
+    "total_usd_m": 53062.89
+   },
+   {
+    "period": "2025-02",
+    "neuquen_usd_m": 31199.52,
+    "total_usd_m": 46133.29
+   },
+   {
+    "period": "2025-03",
+    "neuquen_usd_m": 37703.04,
+    "total_usd_m": 54503.96
+   },
+   {
+    "period": "2025-04",
+    "neuquen_usd_m": 32436.82,
+    "total_usd_m": 49615.04
+   },
+   {
+    "period": "2025-05",
+    "neuquen_usd_m": 54857.14,
+    "total_usd_m": 78040.8
+   },
+   {
+    "period": "2025-06",
+    "neuquen_usd_m": 69504.99,
+    "total_usd_m": 97092.46
+   },
+   {
+    "period": "2025-07",
+    "neuquen_usd_m": 66813.27,
+    "total_usd_m": 94358.13
+   },
+   {
+    "period": "2025-08",
+    "neuquen_usd_m": 66707.39,
+    "total_usd_m": 95100.44
+   },
+   {
+    "period": "2025-09",
+    "neuquen_usd_m": 42170.49,
+    "total_usd_m": 65817.48
+   },
+   {
+    "period": "2025-10",
+    "neuquen_usd_m": 32724.95,
+    "total_usd_m": 53612.01
+   },
+   {
+    "period": "2025-11",
+    "neuquen_usd_m": 36929.36,
+    "total_usd_m": 54274.75
+   },
+   {
+    "period": "2025-12",
+    "neuquen_usd_m": 39460.12,
+    "total_usd_m": 55927.95
+   },
+   {
+    "period": "2026-01",
+    "neuquen_usd_m": 39308.77,
+    "total_usd_m": 55109.19
+   },
+   {
+    "period": "2026-02",
+    "neuquen_usd_m": 33841.87,
+    "total_usd_m": 49917.77
+   },
+   {
+    "period": "2026-03",
+    "neuquen_usd_m": 44324.46,
+    "total_usd_m": 61566.91
+   },
+   {
+    "period": "2026-04",
+    "neuquen_usd_m": 41853.03,
+    "total_usd_m": 58569.42
+   },
+   {
+    "period": "2026-05",
+    "neuquen_usd_m": 95423.51,
+    "total_usd_m": 126039.58
+   },
+   {
+    "period": "2026-06",
+    "neuquen_usd_m": 83656.02,
+    "total_usd_m": 113102.86
+   },
+   {
+    "period": "2026-07",
+    "neuquen_usd_m": 83276.25,
+    "total_usd_m": 114831.92
+   },
+   {
+    "period": "2026-08",
+    "neuquen_usd_m": 85651.3,
+    "total_usd_m": 115775.65
+   }
+  ]
+ },
+ "generated_at": "2026-10-12T21:34Z",
  "status": {
   "fracking": {
    "ok": true,
-   "at": "2026-10-12T21:06Z",
+   "at": "2026-10-12T21:33Z",
    "diag": {
     "resources": [
      "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
@@ -10272,19 +12403,19 @@
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-12T21:06Z",
+   "at": "2026-10-12T21:33Z",
    "diag": {
     "pages": 1
    }
   },
   "oil_price": {
    "ok": true,
-   "at": "2026-10-12T21:06Z",
+   "at": "2026-10-12T21:33Z",
    "diag": {}
   },
   "regulations": {
    "ok": true,
-   "at": "2026-10-12T21:07Z",
+   "at": "2026-10-12T21:34Z",
    "diag": {
     "pages": 6,
     "page_errors": 0,
@@ -10296,7 +12427,7 @@
   },
   "news": {
    "ok": true,
-   "at": "2026-10-12T21:07Z",
+   "at": "2026-10-12T21:34Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
@@ -10307,7 +12438,7 @@
   },
   "reserves": {
    "ok": true,
-   "at": "2026-10-12T21:07Z",
+   "at": "2026-10-12T21:34Z",
    "diag": {
     "package": "http://datos.energia.gob.ar reservas-de-petroleo-y-gas",
     "zip_files": [
@@ -10514,7 +12645,7 @@
   },
   "export_price": {
    "ok": true,
-   "at": "2026-10-12T21:07Z",
+   "at": "2026-10-12T21:34Z",
    "diag": {
     "package": "https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo",
     "resources": [
@@ -10845,7 +12976,7 @@
   },
   "fuel_prices": {
    "ok": true,
-   "at": "2026-10-12T21:07Z",
+   "at": "2026-10-12T21:34Z",
    "diag": {
     "package": "http://datos.energia.gob.ar precios-en-surtidor",
     "resources": [
@@ -10888,12 +13019,12 @@
   },
   "rigi_portal": {
    "ok": true,
-   "at": "2026-10-12T21:07Z",
+   "at": "2026-10-12T21:34Z",
    "diag": {
     "html_len": 76399,
     "context": "-thin\">&nbsp;</span><span class=\"fw-semibold fs-1\">M</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Empleos <span class=\"fw-medium br-sm br-xs\">(directos e indirectos)</span></dt><dd class=\"fs-1 fw-bold text-arg-verdin js-total-puestos-trabajo\">0</dd></div></dl></div><div class=\"col-md-12 m-y-2\"><h3 class=\"h4 font-sans-serif p-b-1 border-bottom\">Sectores</h3><dl class=\"dl-proyectos-sector\"><div class=\"d-grid\"><dt class=\"last\">Energía eléctrica</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-torre-electrica m-r-05\"></i> <span class=\"m-t-1 js-total-energia-electrica\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Petróleo y gas</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-petroleo-y-gas m-r-05\"></i> <span class=\"m-t-1 js-total-petroleo-y-gas\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Minería</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-mineria m-r-05\"></i> <span class=\"m-t-1 js-total-mineria\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Siderurgia</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-siderurgia m-r-05\"></i> <span class=\"m-t-1 js-total-siderurgia\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Infraestructura</dt><",
     "inline_scripts": [
-     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"IxmNGwNAd6YHJ9Eq78txvNPmsA1TIviYVkI1akkH47Y\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
+     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"5F4iXaKkvvjQV4smhd4bxcR3JeM4rYuJMCvPcwqXsWY\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
      "const jsonContainer = document.getElementById('raw-data-json');\n  const jsonText = (jsonContainer.textContent || jsonContainer.innerText).trim();\n  const rawData = JSON.parse(jsonText);\n\n  const extractVal = (val) => (typeof val === 'object' && val !== null) ? (val.total || 0) : (val || 0);\n  const formatNum = (num) => Number(num || 0).toLocaleString('es-AR');\n\n  const getSeriesData = (key) => rawData.map(d => ({ \n    x: new Date(d.year).getTime(), \n    y: extractVal(d[key]) \n  }));\n\n  const seriesData = [\n    { key: 'energia', name: 'Energía Eléctrica', data: getSeriesData('energia') },\n    { key: 'petroleo', name: 'Petróleo y Gas', data: getSeriesData('petroleo') },\n    { key: 'mineria', name: 'Minería', data: getSeriesData('mineria') },\n    { key: 'siderurgia', name: 'Siderurgia', data: getSeriesData('siderurgia') },\n    { key: 'infra', name: 'Infraestructura', data: getSeriesData('infra') }\n  ];\n\n  var optionsMain = {\n    series: seriesData,\n    colors: ['#C2185B', '#B9CE39', '#6A1B99', '#4FBB73', '#F79D00'],\n    chart: {\n      id: 'chartBarMain',\n      type: 'bar',\n      height: 450,\n      stacked: true,\n      toolbar: { show: false }\n    },\n    grid: {\n      padding: {\n        right: 35,\n        left: 15\n      }\n    },\n    dataLabels: { enabled: false },\n    plotOptions: {\n      bar: {\n        dataLabels: {\n          total: {\n            enabled: true,\n            style: {\n              fontSize: '13px',\n              fontWeight: 900\n            },\n            formatter: function (val, opts) {\n              if (!val) return '';\n\n              // Validar si la columna está dentro del rango visible actual del zoom/brush\n              if (opts && opts.w && opts.w.globals) {\n                const timestamp = opts.w.globals.seriesX[0][opts.dataPointIndex];\n            ",
      "headStyle(\"rigi-cms-fix\", `.container:has(#mapa-portal){padding-left:0 !important;padding-right:0 !important;width:100% !important;}`);\nheadStyle('rigi__999d6df5647d2df27fe7', `.poncho-map{--pm-color-primary: var(--arg-escarapela);--pm-color-base: #eaeaea;--pm-slider-background: var(--arg-azul);--pm-slider-border-color: color-mix(in srgb, #626161 40%, white);--pm-slider-border-width: 2px;--pm-scrollbar-handle: #eaeaea;--pm-scrollbar-background: rgb(0, 0, 0, 0.15);--pm-hover-background: var(--arg-secundario);--pm-hover-color: white;--pm-active-color: #343232;--pm-active-visited-color: violet;--pm-active-background: var(--pm-color-primary);--color: var(--arg-escarapela);--pm-loader-spinner-background: var(--arg-amarillo);--pm-loader-background: var(--arg-azul);--pm-loader-spinner-color: var(--arg-primary-700)}details{--details-border-color: var(--arg-primary-300)}.details-container{--container-border-color: var(--arg-primary-500)}.poncho-map .marker--active:focus,.poncho-map .marker--active{fill:#000 !important;fill-opacity:0 !important}.color-primary{color:var(--color)}.poncho-map .pm-content a{color:var(--arg-escarapela)}.totals-overview{display:grid;gap:15px 15px;grid-template-areas:\"area-a area-b area-c\";grid-template-columns:27% 1fr 27%}.a,.b,.c{display:flex;flex-direction:column-reverse;align-self:self-start}.a{grid-area:area-a}.b{grid-area:area-b}.c{grid-area:area-c}.a .key,.b .key,.c .key,.a .value,.b .value,.c .value{margin:0}.a .key,.b .key,.c .key{font-size:.95rem}.value{grid-area:value}.a .value,.b .value,.c .value{font-size:1.35rem;line-height:2rem;display:flex;align-items:baseline}.c .value .small,.b .value .small,.c .value .small{font-size:1rem}.details-data dt{float:left;margin-right:.25rem}.details-data dt::after{content:\":\";font-weight:400}.details-data "
     ],
@@ -10943,7 +13074,7 @@
   },
   "royalties": {
    "ok": true,
-   "at": "2026-10-12T21:07Z",
+   "at": "2026-10-12T21:34Z",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
@@ -11295,6 +13426,7 @@
     },
     "tables": {
      "price": [
+      "Suma de USD/m3",
       [
        "chubut",
        "estado nacional",
@@ -11312,6 +13444,7 @@
       "2026-12"
      ],
      "volume": [
+      "Suma de m3",
       [
        "chubut",
        "estado nacional",
@@ -11329,6 +13462,7 @@
       "2026-12"
      ],
      "royalties": [
+      "Suma de USD",
       [
        "chubut",
        "estado nacional",
@@ -11347,6 +13481,652 @@
      ]
     }
    }
+  },
+  "royalties_gas": {
+   "ok": true,
+   "at": "2026-10-12T21:34Z",
+   "diag": {
+    "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
+    "resources": [
+     [
+      "Regalías de Petróleo Crudo ",
+      "zip",
+      "ercado/mercado_hidrocarburos/informacion_estadistica/regalias/Regalias_CRUDO.zip"
+     ],
+     [
+      "Regalías de Gas Natural",
+      "zip",
+      "_mercado/mercado_hidrocarburos/informacion_estadistica/regalias/Regalias_GAS.zip"
+     ],
+     [
+      "Regalías de GLP ",
+      "zip",
+      "_mercado/mercado_hidrocarburos/informacion_estadistica/regalias/Regalias_GLP.zip"
+     ],
+     [
+      "Regalías de Gasolina y Condensado",
+      "zip",
+      "ado/mercado_hidrocarburos/informacion_estadistica/regalias/Regalias_GASOLINA.zip"
+     ]
+    ],
+    "zip_files": [
+     [
+      "Informe Regalias GAS.xlsx",
+      1467943
+     ]
+    ],
+    "sheets": {
+     "Tabla precios": [
+      421,
+      13
+     ],
+     "Tabla producción": [
+      419,
+      13
+     ],
+     "Tabla regalías": [
+      420,
+      13
+     ]
+    },
+    "sheet_heads": {
+     "Tabla precios": [
+      [
+       "GAS NATURAL",
+       "Fecha de realización:",
+       "2026-10-06 00:00:00"
+      ],
+      [
+       "  Nota: Se utiliza el ti",
+       "Fecha próxima actualizac",
+       "2026-11-06 00:00:00"
+      ],
+      [
+       "           La informació"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+       "Suma de ARS/Mm3",
+       "CUENCA/PROVINCIA"
+      ],
+      [
+       "AÑO",
+       "MES",
+       "CHUBUT",
+       "ESTADO NACIONAL",
+       "JUJUY",
+       "LA PAMPA",
+       "MENDOZA",
+       "NEUQUEN",
+       "RIO NEGRO",
+       "SALTA",
+       "SANTA CRUZ",
+       "TIERRA DEL FUEGO",
+       "TOTAL PROVINCIA"
+      ],
+      [
+       "1993",
+       "1",
+       "35.8",
+       "0",
+       "0",
+       "0",
+       "30.18",
+       "35.71",
+       "32.91",
+       "35.8",
+       "35.54",
+       "35.74",
+       "35.42503650052226"
+      ]
+     ],
+     "Tabla producción": [
+      [
+       "GAS NATURAL",
+       "Fecha de realización:",
+       "2026-10-06 00:00:00"
+      ],
+      [
+       "  Nota: La información c",
+       "Fecha próxima actualizac",
+       "2026-11-06 00:00:00"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+       "Suma de Mm3",
+       "CUENCA/PROVINCIA"
+      ],
+      [
+       "AÑO",
+       "MES",
+       "CHUBUT",
+       "ESTADO NACIONAL",
+       "JUJUY",
+       "LA PAMPA",
+       "MENDOZA",
+       "NEUQUEN",
+       "RIO NEGRO",
+       "SALTA",
+       "SANTA CRUZ",
+       "TIERRA DEL FUEGO",
+       "TOTAL PROVINCIA"
+      ],
+      [
+       "1993",
+       "1",
+       "176.703",
+       "0",
+       "0",
+       "5823.26",
+       "926.629",
+       "965037.119",
+       "79739.825",
+       "102256.827",
+       "256315.728",
+       "218507.316",
+       "1628783.407"
+      ],
+      [
+       "2",
+       "164.462",
+       "0",
+       "0",
+       "5054.51",
+       "845.161",
+       "934499.697",
+       "68753.631",
+       "82536.473",
+       "261540.872",
+       "204826.283",
+       "1558221.0890000002"
+      ],
+      [
+       "3",
+       "163.144",
+       "0",
+       "0",
+       "5424.275",
+       "891.906",
+       "1015623",
+       "74453",
+       "130150.451",
+       "283818.963",
+       "231509.507",
+       "1742034.246"
+      ]
+     ],
+     "Tabla regalías": [
+      [
+       "GAS NATURAL",
+       "Fecha de realización:",
+       "2026-10-06 00:00:00"
+      ],
+      [
+       "  Nota: Se utiliza el ti",
+       "Fecha próxima actualizac",
+       "2026-11-06 00:00:00"
+      ],
+      [
+       "           La informació"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+       "Suma de ARS",
+       "CUENCA/PROVINCIA"
+      ],
+      [
+       "AÑO",
+       "MES",
+       "CHUBUT",
+       "ESTADO NACIONAL",
+       "JUJUY",
+       "LA PAMPA",
+       "MENDOZA",
+       "NEUQUEN",
+       "RIO NEGRO",
+       "SALTA",
+       "SANTA CRUZ",
+       "TIERRA DEL FUEGO",
+       "TOTAL PROVINCIA"
+      ],
+      [
+       "1993",
+       "1",
+       "725",
+       "0",
+       "0",
+       "500",
+       "3112",
+       "4071612",
+       "281350",
+       "438887",
+       "1017310",
+       "913210",
+       "6726706"
+      ],
+      [
+       "2",
+       "674",
+       "0",
+       "0",
+       "434",
+       "2903",
+       "3950971",
+       "247476",
+       "354219",
+       "1038058",
+       "856750",
+       "6451485"
+      ]
+     ]
+    },
+    "tables": {
+     "price": [
+      "Suma de ARS/Mm3",
+      [
+       "chubut",
+       "estado nacional",
+       "jujuy",
+       "la pampa",
+       "mendoza",
+       "neuquen",
+       "rio negro",
+       "salta",
+       "santa cruz",
+       "tierra del fuego",
+       "total provincia"
+      ],
+      "2026-12"
+     ],
+     "volume": [
+      "Suma de Mm3",
+      [
+       "chubut",
+       "estado nacional",
+       "jujuy",
+       "la pampa",
+       "mendoza",
+       "neuquen",
+       "rio negro",
+       "salta",
+       "santa cruz",
+       "tierra del fuego",
+       "total provincia"
+      ],
+      "2026-12"
+     ],
+     "royalties": [
+      "Suma de ARS",
+      [
+       "chubut",
+       "estado nacional",
+       "jujuy",
+       "la pampa",
+       "mendoza",
+       "neuquen",
+       "rio negro",
+       "salta",
+       "santa cruz",
+       "tierra del fuego",
+       "total provincia"
+      ],
+      "2026-12"
+     ]
+    },
+    "gas_unit": "suma de ars/mm3"
+   }
+  },
+  "trade_balance": {
+   "ok": false,
+   "error": "RuntimeError: Serie demasiado corta: 0 meses",
+   "diag": {
+    "candidates_exp": [
+     {
+      "id": "75.1_TCE_0_A_26",
+      "title": "total_combustibles_energia",
+      "desc": "Exportaciones de total combustibles y energía. En millones de dólares FOB",
+      "freq": "R/P1Y",
+      "end": "2025-01-01",
+      "units": "Millones de dólares",
+      "dataset": "Exportaciones FOB por rubro",
+      "ok": true
+     },
+     {
+      "id": "75.2_TCE_0_T_26",
+      "title": "total_combustibles_energia",
+      "desc": "Exportaciones de total combustibles y energía. En millones de dólares FOB",
+      "freq": "R/P3M",
+      "end": "2026-04-01",
+      "units": "Millones de dólares",
+      "dataset": "Exportaciones FOB por rubro",
+      "ok": true
+     },
+     {
+      "id": "74.3_IECE_0_M_35",
+      "title": "ica_exportacion_combustible_energia",
+      "desc": "Exportación de combustibles y energía. En millones de dólares.",
+      "freq": "R/P1M",
+      "end": "2026-08-01",
+      "units": "Millones de dólares",
+      "dataset": "Intercambio Comercial Argentino",
+      "ok": true
+     },
+     {
+      "id": "80.2_IICENC_0_T_52",
+      "title": "ica_indice_cantidad_exportaciones_nivel_combustibles",
+      "desc": "Índice de cantidad de exportaciones. Combustibles",
+      "freq": "R/P3M",
+      "end": "2026-04-01",
+      "units": "Índice 2004=100",
+      "dataset": "Índices de valor, precio y cantidad de las exportaciones de bienes",
+      "ok": false
+     },
+     {
+      "id": "80.2_IIPENC_0_T_50",
+      "title": "ica_indice_precio_exportaciones_nivel_combustibles",
+      "desc": "Índice de precio de exportaciones. Combustibles",
+      "freq": "R/P3M",
+      "end": "2026-04-01",
+      "units": "Índice 2004=100",
+      "dataset": "Índices de valor, precio y cantidad de las exportaciones de bienes",
+      "ok": false
+     },
+     {
+      "id": "80.2_IIVENC_0_T_49",
+      "title": "ica_indice_valor_exportaciones_nivel_combustibles",
+      "desc": "Índice de valor de exportaciones. Combustibles",
+      "freq": "R/P3M",
+      "end": "2026-04-01",
+      "units": "Índice 2004=100",
+      "dataset": "Índices de valor, precio y cantidad de las exportaciones de bienes",
+      "ok": false
+     },
+     {
+      "id": "80.1_IIVNC_0_A_35",
+      "title": "ica_indice_valor_nivel_combustibles",
+      "desc": "Índice de valor de exportaciones. Combustibles",
+      "freq": "R/P1Y",
+      "end": "2025-01-01",
+      "units": "Índice 2004=100",
+      "dataset": "Índices de valor, precio y cantidad de las exportaciones de bienes",
+      "ok": false
+     },
+     {
+      "id": "80.1_IICNC_0_A_38",
+      "title": "ica_indice_cantidad_nivel_combustibles",
+      "desc": "Índice de cantidad de exportaciones. Combustibles",
+      "freq": "R/P1Y",
+      "end": "2025-01-01",
+      "units": "Índice 2004=100",
+      "dataset": "Índices de valor, precio y cantidad de las exportaciones de bienes",
+      "ok": false
+     },
+     {
+      "id": "176.1_CUSTIBLTES_1988_0_24",
+      "title": "combustibles_lubricantes",
+      "desc": "Combustibles y lubricantes",
+      "freq": "R/P1M",
+      "end": "2000-10-01",
+      "units": "Índice base 100",
+      "dataset": "Índice de Precios al Consumidor GBA - Base 1988. SERIE DISCONTINUADA",
+      "ok": false
+     },
+     {
+      "id": "75.3_IEE_0_M_21",
+      "title": "ica_energia_electrica",
+      "desc": "Exportaciones de energía eléctrica. En millones de dólares FOB",
+      "freq": "R/P1M",
+      "end": "2026-08-01",
+      "units": "Millones de dólares",
+      "dataset": "Exportaciones FOB por rubro",
+      "ok": false
+     },
+     {
+      "id": "75.1_RC_0_A_18",
+      "title": "resto_combustibles",
+      "desc": "Exportaciones de resto de combustibles. En millones de dólares FOB",
+      "freq": "R/P1Y",
+      "end": "2025-01-01",
+      "units": "Millones de dólares",
+      "dataset": "Exportaciones FOB por rubro",
+      "ok": false
+     },
+     {
+      "id": "75.3_IRC_0_M_22",
+      "title": "ica_resto_combustibles",
+      "desc": "Exportaciones de resto de combustibles. En millones de dólares FOB",
+      "freq": "R/P1M",
+      "end": "2026-08-01",
+      "units": "Millones de dólares",
+      "dataset": "Exportaciones FOB por rubro",
+      "ok": false
+     },
+     {
+      "id": "75.2_RC_0_T_18",
+      "title": "resto_combustibles",
+      "desc": "Exportaciones de resto de combustibles. En millones de dólares FOB",
+      "freq": "R/P3M",
+      "end": "2026-04-01",
+      "units": "Millones de dólares",
+      "dataset": "Exportaciones FOB por rubro",
+      "ok": false
+     },
+     {
+      "id": "75.2_EE_0_T_17",
+      "title": "energia_electrica",
+      "desc": "Exportaciones de energía eléctrica. En millones de dólares FOB",
+      "freq": "R/P3M",
+      "end": "2026-04-01",
+      "units": "Millones de dólares",
+      "dataset": "Exportaciones FOB por rubro",
+      "ok": false
+     },
+     {
+      "id": "75.1_EE_0_A_17",
+      "title": "energia_electrica",
+      "desc": "Exportaciones de energía eléctrica. En millones de dólares FOB",
+      "freq": "R/P1Y",
+      "end": "2025-01-01",
+      "units": "Millones de dólares",
+      "dataset": "Exportaciones FOB por rubro",
+      "ok": false
+     }
+    ],
+    "candidates_imp": [
+     {
+      "id": "242.1_VFIS_IMTES_0_0_37",
+      "title": "vol_fis_impo_combustibles_lubricantes",
+      "desc": "Volumen Físico de Importaciones. Combustibles y Lubricantes",
+      "freq": "R/P1Y",
+      "end": "1954-01-01",
+      "units": "Índice",
+      "dataset": "Volumen Físico de Exportaciones e Importaciones 1935-1954",
+      "ok": true
+     },
+     {
+      "id": "176.1_CUSTIBLTES_1988_0_24",
+      "title": "combustibles_lubricantes",
+      "desc": "Combustibles y lubricantes",
+      "freq": "R/P1M",
+      "end": "2000-10-01",
+      "units": "Índice base 100",
+      "dataset": "Índice de Precios al Consumidor GBA - Base 1988. SERIE DISCONTINUADA",
+      "ok": false
+     },
+     {
+      "id": "81.1_IICICL_0_A_58",
+      "title": "ica_indice_cantidad_importaciones_combustibles_lubricantes",
+      "desc": "Índice de cantidad de importaciones. Combustibles y lubricantes",
+      "freq": "R/P1Y",
+      "end": "2025-01-01",
+      "units": "Índice 2004=100",
+      "dataset": "Índices de valor, precio y cantidad de las importaciones de bienes",
+      "ok": true
+     },
+     {
+      "id": "81.1_IIPICL_0_A_56",
+      "title": "ica_indice_precio_importaciones_combustibles_lubricantes",
+      "desc": "Índice de precio de importaciones. Combustibles y lubricantes",
+      "freq": "R/P1Y",
+      "end": "2025-01-01",
+      "units": "Índice 2004=100",
+      "dataset": "Índices de valor, precio y cantidad de las importaciones de bienes",
+      "ok": true
+     },
+     {
+      "id": "81.2_IIVNICL_0_T_51",
+      "title": "ica_indice_valor_nivel_imp_combustibles_lubricantes",
+      "desc": "Índice de valor de importaciones. Combustibles y lubricantes",
+      "freq": "R/P3M",
+      "end": "2026-04-01",
+      "units": "Índice 2004=100",
+      "dataset": "Índices de valor, precio y cantidad de las importaciones de bienes",
+      "ok": true
+     },
+     {
+      "id": "74.2_IICL_0_T_42",
+      "title": "ica_importaciones_combustibles_lubricantes",
+      "desc": "Importaciones de combustibles y lubricantes. En millones de dólares.",
+      "freq": "R/P3M",
+      "end": "2026-04-01",
+      "units": "Millones de dólares",
+      "dataset": "Intercambio Comercial Argentino",
+      "ok": true
+     },
+     {
+      "id": "74.3_IICL_0_M_42",
+      "title": "ica_importaciones_combustibles_lubricantes",
+      "desc": "Importaciones de combustibles y lubricantes. En millones de dólares.",
+      "freq": "R/P1M",
+      "end": "2026-08-01",
+      "units": "Millones de dólares",
+      "dataset": "Intercambio Comercial Argentino",
+      "ok": true
+     },
+     {
+      "id": "81.1_IIVNICL_0_A_51",
+      "title": "ica_indice_valor_nivel_imp_combustibles_lubricantes",
+      "desc": "Índice de valor de importaciones. Combustibles y lubricantes",
+      "freq": "R/P1Y",
+      "end": "2025-01-01",
+      "units": "Índice 2004=100",
+      "dataset": "Índices de valor, precio y cantidad de las importaciones de bienes",
+      "ok": true
+     },
+     {
+      "id": "74.1_IICL_0_A_42",
+      "title": "ica_importaciones_combustibles_lubricantes",
+      "desc": "Importaciones de combustibles y lubricantes. En millones de dólares.",
+      "freq": "R/P1Y",
+      "end": "2025-01-01",
+      "units": "Millones de dólares",
+      "dataset": "Intercambio Comercial Argentino",
+      "ok": true
+     },
+     {
+      "id": "81.2_IICICL_0_T_58",
+      "title": "ica_indice_cantidad_importaciones_combustibles_lubricantes",
+      "desc": "Índice de cantidad de importaciones. Combustibles y lubricantes",
+      "freq": "R/P3M",
+      "end": "2026-04-01",
+      "units": "Índice 2004=100",
+      "dataset": "Índices de valor, precio y cantidad de las importaciones de bienes",
+      "ok": true
+     },
+     {
+      "id": "81.2_IIPICL_0_T_56",
+      "title": "ica_indice_precio_importaciones_combustibles_lubricantes",
+      "desc": "Índice de precio de importaciones. Combustibles y lubricantes",
+      "freq": "R/P3M",
+      "end": "2026-04-01",
+      "units": "Índice 2004=100",
+      "dataset": "Índices de valor, precio y cantidad de las importaciones de bienes",
+      "ok": true
+     },
+     {
+      "id": "74.2_IBICL_0_T_47",
+      "title": "ica_bienes_intermedios_combustibles_lubricantes",
+      "desc": "Importaciones de bienes de intermedios + importaciones de combustibles y lubricantes. En millones de dólares.",
+      "freq": "R/P3M",
+      "end": "2026-04-01",
+      "units": "Millones de dólares",
+      "dataset": "Intercambio Comercial Argentino",
+      "ok": true
+     },
+     {
+      "id": "74.3_IBICL_0_M_47",
+      "title": "ica_bienes_intermedios_combustibles_lubricantes",
+      "desc": "Importaciones de bienes de intermedios + importaciones de combustibles y lubricantes. En millones de dólares.",
+      "freq": "R/P1M",
+      "end": "2026-08-01",
+      "units": "Millones de dólares",
+      "dataset": "Intercambio Comercial Argentino",
+      "ok": true
+     },
+     {
+      "id": "74.1_IBICL_0_A_47",
+      "title": "ica_bienes_intermedios_combustibles_lubricantes",
+      "desc": "Importaciones de bienes de intermedios + importaciones de combustibles y lubricantes. En millones de dólares.",
+      "freq": "R/P1Y",
+      "end": "2025-01-01",
+      "units": "Millones de dólares",
+      "dataset": "Intercambio Comercial Argentino",
+      "ok": true
+     },
+     {
+      "id": "41.1_L_0_M_11",
+      "title": "lubricantes",
+      "desc": "Lubricantes en Miles de M3",
+      "freq": "R/P1Y",
+      "end": "2025-01-01",
+      "units": "Miles de M3",
+      "dataset": "Indicadores de producción de la Industria manufacturera",
+      "ok": false
+     }
+    ],
+    "chosen": {
+     "exp": {
+      "id": "74.3_IECE_0_M_35",
+      "title": "ica_exportacion_combustible_energia",
+      "desc": "Exportación de combustibles y energía. En millones de dólares.",
+      "freq": "R/P1M",
+      "end": "2026-08-01",
+      "units": "Millones de dólares",
+      "dataset": "Intercambio Comercial Argentino",
+      "ok": true
+     },
+     "imp": {
+      "id": "74.3_IICL_0_M_42",
+      "title": "ica_importaciones_combustibles_lubricantes",
+      "desc": "Importaciones de combustibles y lubricantes. En millones de dólares.",
+      "freq": "R/P1M",
+      "end": "2026-08-01",
+      "units": "Millones de dólares",
+      "dataset": "Intercambio Comercial Argentino",
+      "ok": true
+     }
+    }
+   },
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1066, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1058, in <lambda>\n    (\"trade_balance\", lambda d: trade_balance(d)),\n                                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 965, in trade_balance\n    raise RuntimeError(f\"Serie demasiado corta: {len(filas)} meses\")\nRuntimeError: Serie demasiado corta: 0 meses\n"
   }
  }
 }
