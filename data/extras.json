@@ -11,336 +11,480 @@
     "stages": 1340,
     "wells": 31,
     "sand_t": 293278,
-    "lateral_m": 2564
+    "lateral_m": 2564,
+    "stages_per_well": 43.2,
+    "sand_per_stage_t": 218.9,
+    "water_per_stage_m3": 1522
    },
    {
     "period": "2022-08",
     "stages": 1007,
     "wells": 24,
     "sand_t": 242469,
-    "lateral_m": 2689
+    "lateral_m": 2689,
+    "stages_per_well": 42.0,
+    "sand_per_stage_t": 240.8,
+    "water_per_stage_m3": 1428
    },
    {
     "period": "2022-09",
     "stages": 1214,
     "wells": 28,
     "sand_t": 282650,
-    "lateral_m": 2772
+    "lateral_m": 2772,
+    "stages_per_well": 43.4,
+    "sand_per_stage_t": 232.8,
+    "water_per_stage_m3": 1271
    },
    {
     "period": "2022-10",
     "stages": 1101,
     "wells": 28,
     "sand_t": 247906,
-    "lateral_m": 2472
+    "lateral_m": 2472,
+    "stages_per_well": 39.3,
+    "sand_per_stage_t": 225.2,
+    "water_per_stage_m3": 1307
    },
    {
     "period": "2022-11",
     "stages": 1164,
     "wells": 27,
     "sand_t": 428071,
-    "lateral_m": 2639
+    "lateral_m": 2639,
+    "stages_per_well": 43.1,
+    "sand_per_stage_t": 367.8,
+    "water_per_stage_m3": 1377
    },
    {
     "period": "2022-12",
     "stages": 928,
     "wells": 24,
     "sand_t": 204096,
-    "lateral_m": 2429
+    "lateral_m": 2429,
+    "stages_per_well": 38.7,
+    "sand_per_stage_t": 219.9,
+    "water_per_stage_m3": 1450
    },
    {
     "period": "2023-01",
     "stages": 1534,
     "wells": 37,
     "sand_t": 342710,
-    "lateral_m": 2481
+    "lateral_m": 2481,
+    "stages_per_well": 41.5,
+    "sand_per_stage_t": 223.4,
+    "water_per_stage_m3": 1526
    },
    {
     "period": "2023-02",
     "stages": 718,
     "wells": 15,
     "sand_t": 168151,
-    "lateral_m": 2867
+    "lateral_m": 2867,
+    "stages_per_well": 47.9,
+    "sand_per_stage_t": 234.2,
+    "water_per_stage_m3": 1529
    },
    {
     "period": "2023-03",
     "stages": 1327,
     "wells": 29,
     "sand_t": 278756,
-    "lateral_m": 2835
+    "lateral_m": 2835,
+    "stages_per_well": 45.8,
+    "sand_per_stage_t": 210.1,
+    "water_per_stage_m3": 1658
    },
    {
     "period": "2023-04",
     "stages": 1420,
     "wells": 30,
     "sand_t": 309917,
-    "lateral_m": 2737
+    "lateral_m": 2737,
+    "stages_per_well": 47.3,
+    "sand_per_stage_t": 218.3,
+    "water_per_stage_m3": 1529
    },
    {
     "period": "2023-05",
     "stages": 1164,
     "wells": 27,
     "sand_t": 269944,
-    "lateral_m": 2673
+    "lateral_m": 2673,
+    "stages_per_well": 43.1,
+    "sand_per_stage_t": 231.9,
+    "water_per_stage_m3": 1601
    },
    {
     "period": "2023-06",
     "stages": 1302,
     "wells": 30,
     "sand_t": 305553,
-    "lateral_m": 2758
+    "lateral_m": 2758,
+    "stages_per_well": 43.4,
+    "sand_per_stage_t": 234.7,
+    "water_per_stage_m3": 1459
    },
    {
     "period": "2023-07",
     "stages": 1321,
     "wells": 27,
     "sand_t": 306584,
-    "lateral_m": 3078
+    "lateral_m": 3078,
+    "stages_per_well": 48.9,
+    "sand_per_stage_t": 232.1,
+    "water_per_stage_m3": 1431
    },
    {
     "period": "2023-08",
     "stages": 1086,
     "wells": 23,
     "sand_t": 252515,
-    "lateral_m": 2925
+    "lateral_m": 2925,
+    "stages_per_well": 47.2,
+    "sand_per_stage_t": 232.5,
+    "water_per_stage_m3": 1499
    },
    {
     "period": "2023-09",
     "stages": 1023,
     "wells": 28,
     "sand_t": 236383,
-    "lateral_m": 2290
+    "lateral_m": 2290,
+    "stages_per_well": 36.5,
+    "sand_per_stage_t": 231.1,
+    "water_per_stage_m3": 1379
    },
    {
     "period": "2023-10",
     "stages": 1537,
     "wells": 40,
     "sand_t": 358941,
-    "lateral_m": 2448
+    "lateral_m": 2448,
+    "stages_per_well": 38.4,
+    "sand_per_stage_t": 233.5,
+    "water_per_stage_m3": 1482
    },
    {
     "period": "2023-11",
     "stages": 512,
     "wells": 13,
     "sand_t": 134756,
-    "lateral_m": 2875
+    "lateral_m": 2875,
+    "stages_per_well": 39.4,
+    "sand_per_stage_t": 263.2,
+    "water_per_stage_m3": 1384
    },
    {
     "period": "2023-12",
     "stages": 940,
     "wells": 21,
     "sand_t": 205292,
-    "lateral_m": 2704
+    "lateral_m": 2704,
+    "stages_per_well": 44.8,
+    "sand_per_stage_t": 218.4,
+    "water_per_stage_m3": 1375
    },
    {
     "period": "2024-01",
     "stages": 1424,
     "wells": 30,
     "sand_t": 329739,
-    "lateral_m": 2727
+    "lateral_m": 2727,
+    "stages_per_well": 47.5,
+    "sand_per_stage_t": 231.6,
+    "water_per_stage_m3": 1621
    },
    {
     "period": "2024-02",
     "stages": 1457,
     "wells": 34,
     "sand_t": 324441,
-    "lateral_m": 2624
+    "lateral_m": 2624,
+    "stages_per_well": 42.9,
+    "sand_per_stage_t": 222.7,
+    "water_per_stage_m3": 1571
    },
    {
     "period": "2024-03",
     "stages": 1687,
     "wells": 34,
     "sand_t": 380852,
-    "lateral_m": 2901
+    "lateral_m": 2901,
+    "stages_per_well": 49.6,
+    "sand_per_stage_t": 225.8,
+    "water_per_stage_m3": 1367
    },
    {
     "period": "2024-04",
     "stages": 2102,
     "wells": 43,
     "sand_t": 491820,
-    "lateral_m": 2898
+    "lateral_m": 2898,
+    "stages_per_well": 48.9,
+    "sand_per_stage_t": 234.0,
+    "water_per_stage_m3": 1479
    },
    {
     "period": "2024-05",
     "stages": 972,
     "wells": 28,
     "sand_t": 232754,
-    "lateral_m": 2411
+    "lateral_m": 2411,
+    "stages_per_well": 34.7,
+    "sand_per_stage_t": 239.5,
+    "water_per_stage_m3": 1540
    },
    {
     "period": "2024-06",
     "stages": 1077,
     "wells": 21,
     "sand_t": 255847,
-    "lateral_m": 3202
+    "lateral_m": 3202,
+    "stages_per_well": 51.3,
+    "sand_per_stage_t": 237.6,
+    "water_per_stage_m3": 1527
    },
    {
     "period": "2024-07",
     "stages": 1116,
     "wells": 23,
     "sand_t": 269527,
-    "lateral_m": 2924
+    "lateral_m": 2924,
+    "stages_per_well": 48.5,
+    "sand_per_stage_t": 241.5,
+    "water_per_stage_m3": 1507
    },
    {
     "period": "2024-08",
     "stages": 1384,
     "wells": 32,
     "sand_t": 331077,
-    "lateral_m": 2775
+    "lateral_m": 2775,
+    "stages_per_well": 43.2,
+    "sand_per_stage_t": 239.2,
+    "water_per_stage_m3": 1535
    },
    {
     "period": "2024-09",
     "stages": 1722,
     "wells": 35,
     "sand_t": 400657,
-    "lateral_m": 2992
+    "lateral_m": 2992,
+    "stages_per_well": 49.2,
+    "sand_per_stage_t": 232.7,
+    "water_per_stage_m3": 1385
    },
    {
     "period": "2024-10",
     "stages": 1454,
     "wells": 28,
     "sand_t": 342370,
-    "lateral_m": 3187
+    "lateral_m": 3187,
+    "stages_per_well": 51.9,
+    "sand_per_stage_t": 235.5,
+    "water_per_stage_m3": 1452
    },
    {
     "period": "2024-11",
     "stages": 1156,
     "wells": 26,
     "sand_t": 279939,
-    "lateral_m": 2857
+    "lateral_m": 2857,
+    "stages_per_well": 44.5,
+    "sand_per_stage_t": 242.2,
+    "water_per_stage_m3": 1621
    },
    {
     "period": "2024-12",
     "stages": 1048,
     "wells": 22,
     "sand_t": 236538,
-    "lateral_m": 2820
+    "lateral_m": 2820,
+    "stages_per_well": 47.6,
+    "sand_per_stage_t": 225.7,
+    "water_per_stage_m3": 1550
    },
    {
     "period": "2025-01",
     "stages": 2252,
     "wells": 46,
     "sand_t": 521665,
-    "lateral_m": 3016
+    "lateral_m": 3016,
+    "stages_per_well": 49.0,
+    "sand_per_stage_t": 231.6,
+    "water_per_stage_m3": 1515
    },
    {
     "period": "2025-02",
     "stages": 1572,
     "wells": 29,
     "sand_t": 366721,
-    "lateral_m": 2919
+    "lateral_m": 2919,
+    "stages_per_well": 54.2,
+    "sand_per_stage_t": 233.3,
+    "water_per_stage_m3": 1423
    },
    {
     "period": "2025-03",
     "stages": 1892,
     "wells": 39,
     "sand_t": 417572,
-    "lateral_m": 2867
+    "lateral_m": 2867,
+    "stages_per_well": 48.5,
+    "sand_per_stage_t": 220.7,
+    "water_per_stage_m3": 1545
    },
    {
     "period": "2025-04",
     "stages": 2289,
     "wells": 49,
     "sand_t": 545338,
-    "lateral_m": 2870
+    "lateral_m": 2870,
+    "stages_per_well": 46.7,
+    "sand_per_stage_t": 238.2,
+    "water_per_stage_m3": 1547
    },
    {
     "period": "2025-05",
     "stages": 3089,
     "wells": 55,
     "sand_t": 676595,
-    "lateral_m": 3296
+    "lateral_m": 3296,
+    "stages_per_well": 56.2,
+    "sand_per_stage_t": 219.0,
+    "water_per_stage_m3": 1381
    },
    {
     "period": "2025-06",
     "stages": 951,
     "wells": 18,
     "sand_t": 223476,
-    "lateral_m": 3309
+    "lateral_m": 3309,
+    "stages_per_well": 52.8,
+    "sand_per_stage_t": 235.0,
+    "water_per_stage_m3": 1604
    },
    {
     "period": "2025-07",
     "stages": 2273,
     "wells": 45,
     "sand_t": 545897,
-    "lateral_m": 3192
+    "lateral_m": 3192,
+    "stages_per_well": 50.5,
+    "sand_per_stage_t": 240.2,
+    "water_per_stage_m3": 1559
    },
    {
     "period": "2025-08",
     "stages": 1833,
     "wells": 35,
     "sand_t": 414819,
-    "lateral_m": 3097
+    "lateral_m": 3097,
+    "stages_per_well": 52.4,
+    "sand_per_stage_t": 226.3,
+    "water_per_stage_m3": 1484
    },
    {
     "period": "2025-09",
     "stages": 1815,
     "wells": 35,
     "sand_t": 421235,
-    "lateral_m": 3149
+    "lateral_m": 3149,
+    "stages_per_well": 51.9,
+    "sand_per_stage_t": 232.1,
+    "water_per_stage_m3": 1626
    },
    {
     "period": "2025-10",
     "stages": 1855,
     "wells": 34,
     "sand_t": 417564,
-    "lateral_m": 3333
+    "lateral_m": 3333,
+    "stages_per_well": 54.6,
+    "sand_per_stage_t": 225.1,
+    "water_per_stage_m3": 1507
    },
    {
     "period": "2025-11",
     "stages": 1562,
     "wells": 32,
     "sand_t": 368494,
-    "lateral_m": 2994
+    "lateral_m": 2994,
+    "stages_per_well": 48.8,
+    "sand_per_stage_t": 235.9,
+    "water_per_stage_m3": 1506
    },
    {
     "period": "2025-12",
     "stages": 2181,
     "wells": 40,
     "sand_t": 479514,
-    "lateral_m": 3092
+    "lateral_m": 3092,
+    "stages_per_well": 54.5,
+    "sand_per_stage_t": 219.9,
+    "water_per_stage_m3": 1549
    },
    {
     "period": "2026-01",
     "stages": 2474,
     "wells": 46,
     "sand_t": 538461,
-    "lateral_m": 3087
+    "lateral_m": 3087,
+    "stages_per_well": 53.8,
+    "sand_per_stage_t": 217.6,
+    "water_per_stage_m3": 1506
    },
    {
     "period": "2026-02",
     "stages": 2592,
     "wells": 51,
     "sand_t": 595395,
-    "lateral_m": 3050
+    "lateral_m": 3050,
+    "stages_per_well": 50.8,
+    "sand_per_stage_t": 229.7,
+    "water_per_stage_m3": 1554
    },
    {
     "period": "2026-03",
     "stages": 1656,
     "wells": 32,
     "sand_t": 376197,
-    "lateral_m": 3038
+    "lateral_m": 3038,
+    "stages_per_well": 51.8,
+    "sand_per_stage_t": 227.2,
+    "water_per_stage_m3": 1596
    },
    {
     "period": "2026-04",
     "stages": 1821,
     "wells": 34,
     "sand_t": 417378,
-    "lateral_m": 3194
+    "lateral_m": 3194,
+    "stages_per_well": 53.6,
+    "sand_per_stage_t": 229.2,
+    "water_per_stage_m3": 1519
    },
    {
     "period": "2026-05",
     "stages": 1583,
     "wells": 32,
     "sand_t": 361212,
-    "lateral_m": 3044
+    "lateral_m": 3044,
+    "stages_per_well": 49.5,
+    "sand_per_stage_t": 228.2,
+    "water_per_stage_m3": 1541
    },
    {
     "period": "2026-06",
     "stages": 1589,
     "wells": 33,
     "sand_t": 359877,
-    "lateral_m": 2954
+    "lateral_m": 2954,
+    "stages_per_well": 48.2,
+    "sand_per_stage_t": 226.5,
+    "water_per_stage_m3": 1482
    }
   ],
   "stages_12m": 23234,
@@ -389,7 +533,113 @@
     "share_pct": 1.9
    }
   ],
-  "last_period": "2026-06"
+  "last_period": "2026-06",
+  "design": [
+   {
+    "year": 2014,
+    "wells": 167,
+    "lateral_m": 99,
+    "stages_per_well": 5.5,
+    "sand_per_well_t": 1152,
+    "water_per_well_m3": 6124
+   },
+   {
+    "year": 2015,
+    "wells": 173,
+    "lateral_m": 322,
+    "stages_per_well": 7.2,
+    "sand_per_well_t": 1561,
+    "water_per_well_m3": 7486
+   },
+   {
+    "year": 2016,
+    "wells": 116,
+    "lateral_m": 1205,
+    "stages_per_well": 15.7,
+    "sand_per_well_t": 3404,
+    "water_per_well_m3": 18936
+   },
+   {
+    "year": 2017,
+    "wells": 140,
+    "lateral_m": 1681,
+    "stages_per_well": 23.2,
+    "sand_per_well_t": 4749,
+    "water_per_well_m3": 29759
+   },
+   {
+    "year": 2018,
+    "wells": 176,
+    "lateral_m": 1995,
+    "stages_per_well": 25.4,
+    "sand_per_well_t": 5947,
+    "water_per_well_m3": 45324
+   },
+   {
+    "year": 2019,
+    "wells": 191,
+    "lateral_m": 2158,
+    "stages_per_well": 32.6,
+    "sand_per_well_t": 7818,
+    "water_per_well_m3": 48675
+   },
+   {
+    "year": 2020,
+    "wells": 88,
+    "lateral_m": 2121,
+    "stages_per_well": 35.4,
+    "sand_per_well_t": 8406,
+    "water_per_well_m3": 52138
+   },
+   {
+    "year": 2021,
+    "wells": 254,
+    "lateral_m": 2327,
+    "stages_per_well": 38.5,
+    "sand_per_well_t": 8899,
+    "water_per_well_m3": 57067
+   },
+   {
+    "year": 2022,
+    "wells": 294,
+    "lateral_m": 2499,
+    "stages_per_well": 42.1,
+    "sand_per_well_t": 10139,
+    "water_per_well_m3": 61592
+   },
+   {
+    "year": 2023,
+    "wells": 320,
+    "lateral_m": 2689,
+    "stages_per_well": 43.4,
+    "sand_per_well_t": 9905,
+    "water_per_well_m3": 64940
+   },
+   {
+    "year": 2024,
+    "wells": 356,
+    "lateral_m": 2852,
+    "stages_per_well": 46.6,
+    "sand_per_well_t": 10886,
+    "water_per_well_m3": 70096
+   },
+   {
+    "year": 2025,
+    "wells": 457,
+    "lateral_m": 3089,
+    "stages_per_well": 51.6,
+    "sand_per_well_t": 11814,
+    "water_per_well_m3": 77991
+   },
+   {
+    "year": 2026,
+    "wells": 232,
+    "lateral_m": 3065,
+    "stages_per_well": 51.2,
+    "sand_per_well_t": 11592,
+    "water_per_well_m3": 78659
+   }
+  ]
  },
  "fx": {
   "source": {
@@ -1369,7 +1619,7 @@
   ]
  },
  "regulations": {
-  "version": 3,
+  "version": 4,
   "source": {
    "name": "Boletín Oficial de la República Argentina, primera sección",
    "url": "https://www.boletinoficial.gob.ar"
@@ -1387,7 +1637,13 @@
      "Gas natural",
      "Petróleo"
     ],
-    "summary": "Apruébase la solicitud de adhesión al Régimen de Incentivo para Grandes Inversiones (RIGI), como Proyecto de Exportación Estratégica de Largo Plazo (PEELP), enmarcado en el Sector “Petróleo y Gas”, Subsector “explotación y producción de nuevos desarrollos de hidrocarburos líquidos y gaseosos costa adentro”, y el plan d…"
+    "summary": "Apruébase la solicitud de adhesión al Régimen de Incentivo para Grandes Inversiones (RIGI), como Proyecto de Exportación Estratégica de Largo Plazo (PEELP), enmarcado en el Sector “Petróleo y Gas”, Subsector “explotación y producción de nuevos desarrollos de hidrocarburos líquidos y gaseosos costa adentro”, y el plan d…",
+    "rigi": {
+     "project": "UT RIGI LOS TOLDOS",
+     "company": null,
+     "usd_million": 3529.0,
+     "sector": "Petróleo y gas"
+    }
    },
    {
     "id": "348614",
@@ -1398,7 +1654,7 @@
     "topics": [
      "Gas natural"
     ],
-    "summary": "°: Ampliar el plazo de la consulta pública dispuesta por la Resolución N.º RESFC-2026-552-APN-DIRECTORIO#ENREGE, por el término de DIEZ (10) días hábiles administrativos contados a partir de la fecha de publicación en el BOLETÍN OFICIAL DE LA REPÚBLICA ARGENTINA de la presente resolución, a fin de que los interesados e…"
+    "summary": "Ampliar el plazo de la consulta pública dispuesta por la Resolución N.º RESFC-2026-552-APN-DIRECTORIO#ENREGE, por el término de DIEZ (10) días hábiles administrativos contados a partir de la fecha de publicación en el BOLETÍN OFICIAL DE LA REPÚBLICA ARGENTINA de la presente resolución, a fin de que los interesados efec…"
    },
    {
     "id": "348360",
@@ -1476,7 +1732,7 @@
     "topics": [
      "Gas natural"
     ],
-    "summary": "- Disponer la baja de Et Managing Company Sociedad Anónima como Comercializador de gas natural en el Registro de Comercializadores, en el ámbito de la Unidad de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N.º RESFC-2020-94-APN-DIRECTORIO#ENARGAS."
+    "summary": "Disponer la baja de Et Managing Company Sociedad Anónima como Comercializador de gas natural en el Registro de Comercializadores, en el ámbito de la Unidad de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N.º RESFC-2020-94-APN-DIRECTORIO#ENARGAS."
    },
    {
     "id": "347571",
@@ -1523,7 +1779,13 @@
      "Hidrocarburos",
      "Vaca Muerta"
     ],
-    "summary": "Apruébase la solicitud de adhesión al Régimen de Incentivo para Grandes Inversiones (RIGI), como Proyecto de Exportación Estratégica de Largo Plazo (PEELP), enmarcado en el sector “Petróleo y Gas”, subsector “Petroquímica y Fertilizantes”, y el plan de inversión presentados por Fértil Pampa SAU (CUIT N° 30-71875855-2),…"
+    "summary": "Apruébase la solicitud de adhesión al Régimen de Incentivo para Grandes Inversiones (RIGI), como Proyecto de Exportación Estratégica de Largo Plazo (PEELP), enmarcado en el sector “Petróleo y Gas”, subsector “Petroquímica y Fertilizantes”, y el plan de inversión presentados por Fértil Pampa SAU (CUIT N° 30-71875855-2),…",
+    "rigi": {
+     "project": "Fertilizantes",
+     "company": null,
+     "usd_million": 2693.0,
+     "sector": "Petróleo y gas"
+    }
    },
    {
     "id": "346856",
@@ -1534,7 +1796,7 @@
     "topics": [
      "Gas natural"
     ],
-    "summary": "°: Disponer la consulta pública del proyecto “COMPENDIO DE INSTRUCCIONES PARA LA SUBDISTRIBUCIÓN DE GAS POR REDES” que como Anexo N.° IF-2026-82102474-APN-UDG#ENREGE forma parte integrante de la presente, que tiene por objeto implementar una nueva reglamentación de los requerimientos para la tramitación de las solicitu…"
+    "summary": "Disponer la consulta pública del proyecto “COMPENDIO DE INSTRUCCIONES PARA LA SUBDISTRIBUCIÓN DE GAS POR REDES” que como Anexo N.° IF-2026-82102474-APN-UDG#ENREGE forma parte integrante de la presente, que tiene por objeto implementar una nueva reglamentación de los requerimientos para la tramitación de las solicitudes…"
    },
    {
     "id": "346785",
@@ -1593,7 +1855,13 @@
      "Gas natural",
      "Petróleo"
     ],
-    "summary": "Apruébase la solicitud de adhesión al Régimen de Incentivo para Grandes Inversiones (RIGI), enmarcado en el Sector “petróleo y gas”, Subsector “construcción de plantas de tratamiento, plantas de separación de líquidos de gas natural, oleoductos, gasoductos y poliductos e instalaciones de almacenamiento”, y el plan de i…"
+    "summary": "Apruébase la solicitud de adhesión al Régimen de Incentivo para Grandes Inversiones (RIGI), enmarcado en el Sector “petróleo y gas”, Subsector “construcción de plantas de tratamiento, plantas de separación de líquidos de gas natural, oleoductos, gasoductos y poliductos e instalaciones de almacenamiento”, y el plan de i…",
+    "rigi": {
+     "project": "Ampliación Mega",
+     "company": null,
+     "usd_million": 365.4,
+     "sector": "Petróleo y gas"
+    }
    }
   ],
   "raw_items": [
@@ -1609,7 +1877,13 @@
      "Gas natural",
      "Petróleo"
     ],
-    "summary": "Apruébase la solicitud de adhesión al Régimen de Incentivo para Grandes Inversiones (RIGI), como Proyecto de Exportación Estratégica de Largo Plazo (PEELP), enmarcado en el Sector “Petróleo y Gas”, Subsector “explotación y producción de nuevos desarrollos de hidrocarburos líquidos y gaseosos costa adentro”, y el plan d…"
+    "summary": "Apruébase la solicitud de adhesión al Régimen de Incentivo para Grandes Inversiones (RIGI), como Proyecto de Exportación Estratégica de Largo Plazo (PEELP), enmarcado en el Sector “Petróleo y Gas”, Subsector “explotación y producción de nuevos desarrollos de hidrocarburos líquidos y gaseosos costa adentro”, y el plan d…",
+    "rigi": {
+     "project": "UT RIGI LOS TOLDOS",
+     "company": null,
+     "usd_million": 3529.0,
+     "sector": "Petróleo y gas"
+    }
    },
    {
     "id": "348614",
@@ -1620,7 +1894,7 @@
     "topics": [
      "Gas natural"
     ],
-    "summary": "°: Ampliar el plazo de la consulta pública dispuesta por la Resolución N.º RESFC-2026-552-APN-DIRECTORIO#ENREGE, por el término de DIEZ (10) días hábiles administrativos contados a partir de la fecha de publicación en el BOLETÍN OFICIAL DE LA REPÚBLICA ARGENTINA de la presente resolución, a fin de que los interesados e…"
+    "summary": "Ampliar el plazo de la consulta pública dispuesta por la Resolución N.º RESFC-2026-552-APN-DIRECTORIO#ENREGE, por el término de DIEZ (10) días hábiles administrativos contados a partir de la fecha de publicación en el BOLETÍN OFICIAL DE LA REPÚBLICA ARGENTINA de la presente resolución, a fin de que los interesados efec…"
    },
    {
     "id": "348360",
@@ -1719,7 +1993,7 @@
     "topics": [
      "Gas natural"
     ],
-    "summary": "- Disponer la baja de Et Managing Company Sociedad Anónima como Comercializador de gas natural en el Registro de Comercializadores, en el ámbito de la Unidad de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N.º RESFC-2020-94-APN-DIRECTORIO#ENARGAS."
+    "summary": "Disponer la baja de Et Managing Company Sociedad Anónima como Comercializador de gas natural en el Registro de Comercializadores, en el ámbito de la Unidad de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N.º RESFC-2020-94-APN-DIRECTORIO#ENARGAS."
    },
    {
     "id": "347571",
@@ -1766,7 +2040,13 @@
      "Hidrocarburos",
      "Vaca Muerta"
     ],
-    "summary": "Apruébase la solicitud de adhesión al Régimen de Incentivo para Grandes Inversiones (RIGI), como Proyecto de Exportación Estratégica de Largo Plazo (PEELP), enmarcado en el sector “Petróleo y Gas”, subsector “Petroquímica y Fertilizantes”, y el plan de inversión presentados por Fértil Pampa SAU (CUIT N° 30-71875855-2),…"
+    "summary": "Apruébase la solicitud de adhesión al Régimen de Incentivo para Grandes Inversiones (RIGI), como Proyecto de Exportación Estratégica de Largo Plazo (PEELP), enmarcado en el sector “Petróleo y Gas”, subsector “Petroquímica y Fertilizantes”, y el plan de inversión presentados por Fértil Pampa SAU (CUIT N° 30-71875855-2),…",
+    "rigi": {
+     "project": "Fertilizantes",
+     "company": null,
+     "usd_million": 2693.0,
+     "sector": "Petróleo y gas"
+    }
    },
    {
     "id": "346856",
@@ -1777,7 +2057,7 @@
     "topics": [
      "Gas natural"
     ],
-    "summary": "°: Disponer la consulta pública del proyecto “COMPENDIO DE INSTRUCCIONES PARA LA SUBDISTRIBUCIÓN DE GAS POR REDES” que como Anexo N.° IF-2026-82102474-APN-UDG#ENREGE forma parte integrante de la presente, que tiene por objeto implementar una nueva reglamentación de los requerimientos para la tramitación de las solicitu…"
+    "summary": "Disponer la consulta pública del proyecto “COMPENDIO DE INSTRUCCIONES PARA LA SUBDISTRIBUCIÓN DE GAS POR REDES” que como Anexo N.° IF-2026-82102474-APN-UDG#ENREGE forma parte integrante de la presente, que tiene por objeto implementar una nueva reglamentación de los requerimientos para la tramitación de las solicitudes…"
    },
    {
     "id": "346785",
@@ -1857,7 +2137,13 @@
      "Gas natural",
      "Petróleo"
     ],
-    "summary": "Apruébase la solicitud de adhesión al Régimen de Incentivo para Grandes Inversiones (RIGI), enmarcado en el Sector “petróleo y gas”, Subsector “construcción de plantas de tratamiento, plantas de separación de líquidos de gas natural, oleoductos, gasoductos y poliductos e instalaciones de almacenamiento”, y el plan de i…"
+    "summary": "Apruébase la solicitud de adhesión al Régimen de Incentivo para Grandes Inversiones (RIGI), enmarcado en el Sector “petróleo y gas”, Subsector “construcción de plantas de tratamiento, plantas de separación de líquidos de gas natural, oleoductos, gasoductos y poliductos e instalaciones de almacenamiento”, y el plan de i…",
+    "rigi": {
+     "project": "Ampliación Mega",
+     "company": null,
+     "usd_million": 365.4,
+     "sector": "Petróleo y gas"
+    }
    }
   ],
   "rejected_ids": [
@@ -2356,11 +2642,55 @@
    }
   ]
  },
- "generated_at": "2026-10-12T18:50Z",
+ "fuel_prices": {
+  "source": {
+   "name": "Secretaría de Energía, precios en surtidor (Res. 314/2016)",
+   "url": "http://datos.energia.gob.ar/dataset/precios-en-surtidor",
+   "license": "CC BY 4.0"
+  },
+  "as_of": null,
+  "by_province": [],
+  "by_brand": [],
+  "stations_by_brand": {},
+  "national_median": {}
+ },
+ "rigi_approvals": [
+  {
+   "id": "348768",
+   "date": "2026-10-09",
+   "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348768/20261009",
+   "title": "Resolución 1771/2026 RESOL-2026-1771-APN-MEC",
+   "project": "UT RIGI LOS TOLDOS",
+   "company": null,
+   "usd_million": 3529.0,
+   "sector": "Petróleo y gas"
+  },
+  {
+   "id": "346966",
+   "date": "2026-09-07",
+   "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346966/20260907",
+   "title": "Resolución 1468/2026 RESOL-2026-1468-APN-MEC",
+   "project": "Fertilizantes",
+   "company": null,
+   "usd_million": 2693.0,
+   "sector": "Petróleo y gas"
+  },
+  {
+   "id": "346397",
+   "date": "2026-08-26",
+   "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346397/20260826",
+   "title": "Resolución 1381/2026 RESOL-2026-1381-APN-MEC",
+   "project": "Ampliación Mega",
+   "company": null,
+   "usd_million": 365.4,
+   "sector": "Petróleo y gas"
+  }
+ ],
+ "generated_at": "2026-10-12T19:48Z",
  "status": {
   "fracking": {
    "ok": true,
-   "at": "2026-10-12T18:50Z",
+   "at": "2026-10-12T19:33Z",
    "diag": {
     "resources": [
      "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
@@ -2421,7 +2751,7 @@
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-12T18:50Z",
+   "at": "2026-10-12T19:33Z",
    "diag": {
     "pages": 1
    }
@@ -2430,23 +2760,23 @@
    "ok": false,
    "error": "RuntimeError: Falta EIA_API_KEY (secreto del repositorio)",
    "diag": {},
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 445, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 435, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 213, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 709, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 695, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 227, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
   },
   "regulations": {
    "ok": true,
-   "at": "2026-10-12T18:50Z",
+   "at": "2026-10-12T19:48Z",
    "diag": {
-    "pages": 6,
+    "pages": 43,
     "page_errors": 0,
-    "links": 628,
-    "candidates": 0,
-    "kept": 0,
+    "links": 3783,
+    "candidates": 374,
+    "kept": 23,
     "details_failed": 0
    }
   },
   "news": {
    "ok": true,
-   "at": "2026-10-12T18:50Z",
+   "at": "2026-10-12T19:48Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
@@ -2454,6 +2784,80 @@
      "Ámbito": "ok 11 de https://www.ambito.com/rss/pages/energia.xml"
     }
    }
+  },
+  "reserves": {
+   "ok": false,
+   "error": "RuntimeError: Sin recursos tabulares",
+   "diag": {
+    "package": "http://datos.energia.gob.ar reservas-de-petroleo-y-gas",
+    "resources": []
+   },
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 709, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 698, in <lambda>\n    (\"reserves\", lambda d: reserves(d)),\n                           ^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 450, in reserves\n    raise RuntimeError(\"Sin recursos tabulares\")\nRuntimeError: Sin recursos tabulares\n"
+  },
+  "export_price": {
+   "ok": false,
+   "error": "ImportError: `Import openpyxl` failed.  Use pip or conda to install the openpyxl package.",
+   "diag": {
+    "package": "https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo",
+    "resources": [
+     "Precio de exportación de petróleo crudo"
+    ]
+   },
+   "trace": "^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 499, in export_price\n    df = leer_tabla(rs[0][\"url\"])\n         ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 416, in leer_tabla\n    df = pd.read_excel(io.BytesIO(crudo), dtype=str)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/pandas/io/excel/_base.py\", line 481, in read_excel\n    io = ExcelFile(\n         ^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/pandas/io/excel/_base.py\", line 1621, in __init__\n    self._reader = self._engines[engine](\n                   ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py\", line 559, in __init__\n    import_optional_dependency(\"openpyxl\")\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/pandas/compat/_optional.py\", line 161, in import_optional_dependency\n    raise ImportError(msg) from err\nImportError: `Import openpyxl` failed.  Use pip or conda to install the openpyxl package.\n"
+  },
+  "fuel_prices": {
+   "ok": true,
+   "at": "2026-10-12T19:48Z",
+   "diag": {
+    "package": "http://datos.energia.gob.ar precios-en-surtidor",
+    "resources": [
+     "Precios vigentes en surtidor - Resolución 314/2016",
+     "Precios históricos"
+    ],
+    "resource_used": "Precios vigentes en surtidor - Resolución 314/2016",
+    "columns": [
+     "indice_tiempo",
+     "idempresa",
+     "cuit",
+     "empresa",
+     "direccion",
+     "localidad",
+     "provincia",
+     "region",
+     "idproducto",
+     "producto",
+     "idtipohorario",
+     "tipohorario",
+     "precio",
+     "fecha_vigencia",
+     "idempresabandera",
+     "empresabandera",
+     "latitud",
+     "longitud",
+     "geojson"
+    ],
+    "rows": 36649,
+    "mapped": {
+     "producto": "idproducto",
+     "precio": "precio",
+     "provincia": "provincia",
+     "bandera": "idempresabandera",
+     "horario": "idtipohorario",
+     "fecha": "fecha_vigencia"
+    },
+    "rows_used": 0
+   }
+  },
+  "rigi_portal": {
+   "ok": false,
+   "error": "RuntimeError: No se encontró el plan de inversiones incrustado",
+   "diag": {
+    "html_len": 76399,
+    "candidate_urls": [
+     "https://www.argentina.gob.ar/manifest.json"
+    ]
+   },
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 709, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 701, in <lambda>\n    (\"rigi_portal\", lambda d: rigi_portal(d)),\n                              ^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 602, in rigi_portal\n    raise RuntimeError(\"No se encontró el plan de inversiones incrustado\")\nRuntimeError: No se encontró el plan de inversiones incrustado\n"
   }
  }
 }
