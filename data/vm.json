@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-12T17:43Z",
+ "generated_at": "2026-10-12T17:47Z",
  "latest_period": "2026-08",
  "source": {
   "name": "Secretaría de Energía de la Nación, Capítulo IV (Res. 319/93)",
@@ -341,7 +341,7 @@
    "oil_yoy_pct": 15.3
   },
   {
-   "name": "Bajo del Choique - la Invernada",
+   "name": "Bajo del Choique - La Invernada",
    "operator": "Pluspetrol",
    "oil_bbl_d": 46594,
    "gas_mmm3_d": 2.55,
@@ -405,7 +405,7 @@
    "oil_yoy_pct": -1.5
   },
   {
-   "name": "Aguada del Chanar",
+   "name": "Aguada del Chañar",
    "operator": "YPF",
    "oil_bbl_d": 16478,
    "gas_mmm3_d": 0.21,
