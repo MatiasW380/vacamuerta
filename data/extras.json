@@ -12446,11 +12446,11 @@
   },
   "period_kind": "quarter"
  },
- "generated_at": "2026-10-12T21:57Z",
+ "generated_at": "2026-10-12T22:07Z",
  "status": {
   "fracking": {
    "ok": true,
-   "at": "2026-10-12T21:57Z",
+   "at": "2026-10-12T21:58Z",
    "diag": {
     "resources": [
      "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
@@ -12511,31 +12511,29 @@
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-12T21:57Z",
+   "at": "2026-10-12T21:58Z",
    "diag": {
     "pages": 1
    }
   },
   "oil_price": {
    "ok": true,
-   "at": "2026-10-12T21:57Z",
+   "at": "2026-10-12T21:58Z",
    "diag": {}
   },
   "regulations": {
-   "ok": true,
-   "at": "2026-10-12T21:57Z",
+   "ok": false,
+   "error": "RuntimeError: No se encontraron avisos en la primera sección",
    "diag": {
     "pages": 6,
-    "page_errors": 0,
-    "links": 628,
-    "candidates": 0,
-    "kept": 0,
-    "details_failed": 0
-   }
+    "page_errors": 6,
+    "links": 0
+   },
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1171, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1155, in <lambda>\n    (\"regulations\", lambda d: regulations(d, previo.get(\"regulations\"))),\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 355, in regulations\n    raise RuntimeError(\"No se encontraron avisos en la primera sección\")\nRuntimeError: No se encontraron avisos en la primera sección\n"
   },
   "news": {
    "ok": true,
-   "at": "2026-10-12T21:57Z",
+   "at": "2026-10-12T22:06Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
@@ -12546,7 +12544,7 @@
   },
   "reserves": {
    "ok": true,
-   "at": "2026-10-12T21:57Z",
+   "at": "2026-10-12T22:06Z",
    "diag": {
     "package": "http://datos.energia.gob.ar reservas-de-petroleo-y-gas",
     "zip_files": [
@@ -12753,7 +12751,7 @@
   },
   "export_price": {
    "ok": true,
-   "at": "2026-10-12T21:57Z",
+   "at": "2026-10-12T22:06Z",
    "diag": {
     "package": "https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo",
     "resources": [
@@ -13084,7 +13082,7 @@
   },
   "fuel_prices": {
    "ok": true,
-   "at": "2026-10-12T21:57Z",
+   "at": "2026-10-12T22:07Z",
    "diag": {
     "package": "http://datos.energia.gob.ar precios-en-surtidor",
     "resources": [
@@ -13127,12 +13125,12 @@
   },
   "rigi_portal": {
    "ok": true,
-   "at": "2026-10-12T21:57Z",
+   "at": "2026-10-12T22:07Z",
    "diag": {
     "html_len": 76399,
     "context": "-thin\">&nbsp;</span><span class=\"fw-semibold fs-1\">M</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Empleos <span class=\"fw-medium br-sm br-xs\">(directos e indirectos)</span></dt><dd class=\"fs-1 fw-bold text-arg-verdin js-total-puestos-trabajo\">0</dd></div></dl></div><div class=\"col-md-12 m-y-2\"><h3 class=\"h4 font-sans-serif p-b-1 border-bottom\">Sectores</h3><dl class=\"dl-proyectos-sector\"><div class=\"d-grid\"><dt class=\"last\">Energía eléctrica</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-torre-electrica m-r-05\"></i> <span class=\"m-t-1 js-total-energia-electrica\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Petróleo y gas</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-petroleo-y-gas m-r-05\"></i> <span class=\"m-t-1 js-total-petroleo-y-gas\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Minería</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-mineria m-r-05\"></i> <span class=\"m-t-1 js-total-mineria\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Siderurgia</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-siderurgia m-r-05\"></i> <span class=\"m-t-1 js-total-siderurgia\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Infraestructura</dt><",
     "inline_scripts": [
-     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"8bq5Nb4uGb0xP7YnoUWMCXYV4TknLZXuNMtPdOUbJsE\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
+     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"hZmQzlAA-uQvaqoSrjLO1Atz8yi7jxzuqfud3URtjZM\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
      "const jsonContainer = document.getElementById('raw-data-json');\n  const jsonText = (jsonContainer.textContent || jsonContainer.innerText).trim();\n  const rawData = JSON.parse(jsonText);\n\n  const extractVal = (val) => (typeof val === 'object' && val !== null) ? (val.total || 0) : (val || 0);\n  const formatNum = (num) => Number(num || 0).toLocaleString('es-AR');\n\n  const getSeriesData = (key) => rawData.map(d => ({ \n    x: new Date(d.year).getTime(), \n    y: extractVal(d[key]) \n  }));\n\n  const seriesData = [\n    { key: 'energia', name: 'Energía Eléctrica', data: getSeriesData('energia') },\n    { key: 'petroleo', name: 'Petróleo y Gas', data: getSeriesData('petroleo') },\n    { key: 'mineria', name: 'Minería', data: getSeriesData('mineria') },\n    { key: 'siderurgia', name: 'Siderurgia', data: getSeriesData('siderurgia') },\n    { key: 'infra', name: 'Infraestructura', data: getSeriesData('infra') }\n  ];\n\n  var optionsMain = {\n    series: seriesData,\n    colors: ['#C2185B', '#B9CE39', '#6A1B99', '#4FBB73', '#F79D00'],\n    chart: {\n      id: 'chartBarMain',\n      type: 'bar',\n      height: 450,\n      stacked: true,\n      toolbar: { show: false }\n    },\n    grid: {\n      padding: {\n        right: 35,\n        left: 15\n      }\n    },\n    dataLabels: { enabled: false },\n    plotOptions: {\n      bar: {\n        dataLabels: {\n          total: {\n            enabled: true,\n            style: {\n              fontSize: '13px',\n              fontWeight: 900\n            },\n            formatter: function (val, opts) {\n              if (!val) return '';\n\n              // Validar si la columna está dentro del rango visible actual del zoom/brush\n              if (opts && opts.w && opts.w.globals) {\n                const timestamp = opts.w.globals.seriesX[0][opts.dataPointIndex];\n            ",
      "headStyle(\"rigi-cms-fix\", `.container:has(#mapa-portal){padding-left:0 !important;padding-right:0 !important;width:100% !important;}`);\nheadStyle('rigi__999d6df5647d2df27fe7', `.poncho-map{--pm-color-primary: var(--arg-escarapela);--pm-color-base: #eaeaea;--pm-slider-background: var(--arg-azul);--pm-slider-border-color: color-mix(in srgb, #626161 40%, white);--pm-slider-border-width: 2px;--pm-scrollbar-handle: #eaeaea;--pm-scrollbar-background: rgb(0, 0, 0, 0.15);--pm-hover-background: var(--arg-secundario);--pm-hover-color: white;--pm-active-color: #343232;--pm-active-visited-color: violet;--pm-active-background: var(--pm-color-primary);--color: var(--arg-escarapela);--pm-loader-spinner-background: var(--arg-amarillo);--pm-loader-background: var(--arg-azul);--pm-loader-spinner-color: var(--arg-primary-700)}details{--details-border-color: var(--arg-primary-300)}.details-container{--container-border-color: var(--arg-primary-500)}.poncho-map .marker--active:focus,.poncho-map .marker--active{fill:#000 !important;fill-opacity:0 !important}.color-primary{color:var(--color)}.poncho-map .pm-content a{color:var(--arg-escarapela)}.totals-overview{display:grid;gap:15px 15px;grid-template-areas:\"area-a area-b area-c\";grid-template-columns:27% 1fr 27%}.a,.b,.c{display:flex;flex-direction:column-reverse;align-self:self-start}.a{grid-area:area-a}.b{grid-area:area-b}.c{grid-area:area-c}.a .key,.b .key,.c .key,.a .value,.b .value,.c .value{margin:0}.a .key,.b .key,.c .key{font-size:.95rem}.value{grid-area:value}.a .value,.b .value,.c .value{font-size:1.35rem;line-height:2rem;display:flex;align-items:baseline}.c .value .small,.b .value .small,.c .value .small{font-size:1rem}.details-data dt{float:left;margin-right:.25rem}.details-data dt::after{content:\":\";font-weight:400}.details-data "
     ],
@@ -13182,7 +13180,7 @@
   },
   "royalties": {
    "ok": true,
-   "at": "2026-10-12T21:57Z",
+   "at": "2026-10-12T22:07Z",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
@@ -13592,7 +13590,7 @@
   },
   "royalties_gas": {
    "ok": true,
-   "at": "2026-10-12T21:57Z",
+   "at": "2026-10-12T22:07Z",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
@@ -14098,7 +14096,7 @@
   },
   "trade_balance": {
    "ok": true,
-   "at": "2026-10-12T21:57Z",
+   "at": "2026-10-12T22:07Z",
    "diag": {
     "tried_exp": [
      {
@@ -14206,7 +14204,410 @@
       ],
       "meta": "[{'frequency': 'year', 'start_date': '2006-01-01', 'end_date': '2025-01-01'}, {'catalog': {'title': 'Datos Programación Macroeconómica'}, 'dataset': {'title': 'Intercambio Comercial Argentino', 'description': 'Intercambio Comercial Argentino en millones de dólares', 'issued': '2017-09-28', 'source':"
      }
-    }
+    },
+    "export_annual_raw": [
+     [
+      "2005-01-01",
+      7150.056321999999
+     ],
+     [
+      "2006-01-01",
+      7812.990769
+     ],
+     [
+      "2007-01-01",
+      6948.878045469999
+     ],
+     [
+      "2008-01-01",
+      7847.75705697
+     ],
+     [
+      "2009-01-01",
+      6456.604585540001
+     ],
+     [
+      "2010-01-01",
+      6525.16189795
+     ],
+     [
+      "2011-01-01",
+      6681.679813549999
+     ],
+     [
+      "2012-01-01",
+      6978.016447779999
+     ],
+     [
+      "2013-01-01",
+      5561.5744833300005
+     ],
+     [
+      "2014-01-01",
+      4950.43133279
+     ],
+     [
+      "2015-01-01",
+      2251.65607518
+     ],
+     [
+      "2016-01-01",
+      2014.6373242501293
+     ],
+     [
+      "2017-01-01",
+      2477.0
+     ],
+     [
+      "2018-01-01",
+      4200.0
+     ],
+     [
+      "2019-01-01",
+      4421.0
+     ],
+     [
+      "2020-01-01",
+      3593.0
+     ],
+     [
+      "2021-01-01",
+      5284.0
+     ],
+     [
+      "2022-01-01",
+      8509.0
+     ],
+     [
+      "2023-01-01",
+      7910.657621920001
+     ],
+     [
+      "2024-01-01",
+      9717.08312146
+     ],
+     [
+      "2025-01-01",
+      11100.16311483
+     ]
+    ],
+    "alternatives": [
+     [
+      "AGRO_0411",
+      "Cantidad de dólares en la balanza comercial de queso fundido.",
+      "R/P1Y",
+      "2009-01-01",
+      "Lácteos - Balanza comercial"
+     ],
+     [
+      "AGRO_0423",
+      "Cantidad de dólares en la balanza comercial de helados.",
+      "R/P1Y",
+      "2009-01-01",
+      "Lácteos - Balanza comercial"
+     ],
+     [
+      "AGRO_0422",
+      "Cantidad de dólares en la balanza comercial de lactosa.",
+      "R/P1Y",
+      "2009-01-01",
+      "Lácteos - Balanza comercial"
+     ],
+     [
+      "AGRO_0424",
+      "Cantidad de dólares en la balanza comercial de otros lácteos.",
+      "R/P1Y",
+      "2009-01-01",
+      "Lácteos - Balanza comercial"
+     ],
+     [
+      "AGRO_0412",
+      "Cantidad de dólares en la balanza comercial de otros quesos.",
+      "R/P1Y",
+      "2009-01-01",
+      "Lácteos - Balanza comercial"
+     ],
+     [
+      "AGRO_0405",
+      "Cantidad de dólares en la balanza comercial de leche condensada.",
+      "R/P1Y",
+      "2009-01-01",
+      "Lácteos - Balanza comercial"
+     ],
+     [
+      "AGRO_0415",
+      "Cantidad de dólares en la balanza comercial de crema.",
+      "R/P1Y",
+      "2009-01-01",
+      "Lácteos - Balanza comercial"
+     ],
+     [
+      "AGRO_0418",
+      "Cantidad de dólares en la balanza comercial de caseina.",
+      "R/P1Y",
+      "2009-01-01",
+      "Lácteos - Balanza comercial"
+     ],
+     [
+      "AGRO_0419",
+      "Cantidad de dólares en la balanza comercial de caseinatos.",
+      "R/P1Y",
+      "2009-01-01",
+      "Lácteos - Balanza comercial"
+     ],
+     [
+      "AGRO_0420",
+      "Cantidad de dólares en la balanza comercial de suero.",
+      "R/P1Y",
+      "2009-01-01",
+      "Lácteos - Balanza comercial"
+     ],
+     [
+      "AGRO_0414",
+      "Cantidad de dólares en la balanza comercial de aceite butírico.",
+      "R/P1Y",
+      "2009-01-01",
+      "Lácteos - Balanza comercial"
+     ],
+     [
+      "AGRO_0413",
+      "Cantidad de dólares en la balanza comercial de manteca.",
+      "R/P1Y",
+      "2009-01-01",
+      "Lácteos - Balanza comercial"
+     ],
+     [
+      "AGRO_0410",
+      "Cantidad de dólares en la balanza comercial de queso rallado.",
+      "R/P1Y",
+      "2009-01-01",
+      "Lácteos - Balanza comercial"
+     ],
+     [
+      "AGRO_0416",
+      "Cantidad de dólares en la balanza comercial de yogur.",
+      "R/P1Y",
+      "2009-01-01",
+      "Lácteos - Balanza comercial"
+     ],
+     [
+      "AGRO_0401",
+      "Cantidad de dólares en la balanza comercial de leche fluida.",
+      "R/P1Y",
+      "2009-01-01",
+      "Lácteos - Balanza comercial"
+     ],
+     [
+      "164.2_SLGODONDON_0_0_10",
+      "Saldo comercial. Algodón. Millones de USD. Trimestral.",
+      "R/P3M",
+      "2024-10-01",
+      "Saldo comercial clasificado el Nomenclador Común d"
+     ],
+     [
+      "164.2_SBONOSNOS_0_0_9",
+      "Saldo comercial. Abonos. Millones de USD. Trimestral.",
+      "R/P3M",
+      "2024-10-01",
+      "Saldo comercial clasificado el Nomenclador Común d"
+     ],
+     [
+      "164.1_SEDAEDA_0_0_7",
+      "Saldo comercial. Seda. Millones de USD. Anual.",
+      "R/P1Y",
+      "2024-01-01",
+      "Saldo comercial clasificado el Nomenclador Común d"
+     ],
+     [
+      "164.1_SESTOSTO_0_0_8",
+      "Saldo comercial. Resto. Millones de USD. Anual.",
+      "R/P1Y",
+      "2024-01-01",
+      "Saldo comercial clasificado el Nomenclador Común d"
+     ],
+     [
+      "74.3_ISC_0_M_19",
+      "Saldo comercial. En millones de dólares.",
+      "R/P1M",
+      "2026-08-01",
+      "Intercambio Comercial Argentino"
+     ],
+     [
+      "164.1_SEREALELES_0_0_11",
+      "Saldo comercial. Cereales. Millones de USD. Anual.",
+      "R/P1Y",
+      "2024-01-01",
+      "Saldo comercial clasificado el Nomenclador Común d"
+     ],
+     [
+      "164.3_SEDAEDA_0_0_7",
+      "Saldo comercial. Seda. Millones de USD. Mensual.",
+      "R/P1M",
+      "2025-02-01",
+      "Saldo comercial clasificado el Nomenclador Común d"
+     ],
+     [
+      "164.3_SEREALELES_0_0_11",
+      "Saldo comercial. Cereales. Millones de USD. Mensual.",
+      "R/P1M",
+      "2025-02-01",
+      "Saldo comercial clasificado el Nomenclador Común d"
+     ],
+     [
+      "164.3_SOTALTAL_0_0_8",
+      "Saldo comercial. Total. Millones de USD. Mensual.",
+      "R/P1M",
+      "2025-02-01",
+      "Saldo comercial clasificado el Nomenclador Común d"
+     ],
+     [
+      "164.3_SLGODONDON_0_0_10",
+      "Saldo comercial. Algodón. Millones de USD. Mensual.",
+      "R/P1M",
+      "2025-02-01",
+      "Saldo comercial clasificado el Nomenclador Común d"
+     ],
+     [
+      "164.2_SESTOSTO_0_0_8",
+      "Saldo comercial. Resto. Millones de USD. Trimestral.",
+      "R/P3M",
+      "2024-10-01",
+      "Saldo comercial clasificado el Nomenclador Común d"
+     ],
+     [
+      "164.1_SOTALTAL_0_0_8",
+      "Saldo comercial. Total. Millones de USD. Anual.",
+      "R/P1Y",
+      "2024-01-01",
+      "Saldo comercial clasificado el Nomenclador Común d"
+     ],
+     [
+      "74.1_SC_0_A_15",
+      "Saldo comercial. En millones de dólares.",
+      "R/P1Y",
+      "2025-01-01",
+      "Intercambio Comercial Argentino"
+     ],
+     [
+      "164.2_SOTALTAL_0_0_8",
+      "Saldo comercial. Total. Millones de USD. Trimestral.",
+      "R/P3M",
+      "2024-10-01",
+      "Saldo comercial clasificado el Nomenclador Común d"
+     ],
+     [
+      "74.2_SC_0_T_15",
+      "Saldo comercial. En millones de dólares.",
+      "R/P3M",
+      "2026-04-01",
+      "Intercambio Comercial Argentino"
+     ],
+     [
+      "75.3_IEE_0_M_21",
+      "Exportaciones de energía eléctrica. En millones de dólares FOB",
+      "R/P1M",
+      "2026-08-01",
+      "Exportaciones FOB por rubro"
+     ],
+     [
+      "75.2_EE_0_T_17",
+      "Exportaciones de energía eléctrica. En millones de dólares FOB",
+      "R/P3M",
+      "2026-04-01",
+      "Exportaciones FOB por rubro"
+     ],
+     [
+      "75.1_EE_0_A_17",
+      "Exportaciones de energía eléctrica. En millones de dólares FOB",
+      "R/P1Y",
+      "2025-01-01",
+      "Exportaciones FOB por rubro"
+     ],
+     [
+      "75.3_ITCE_0_M_30",
+      "Exportaciones de total combustibles y energía. En millones de dólares FOB",
+      "R/P1M",
+      "2026-08-01",
+      "Exportaciones FOB por rubro"
+     ],
+     [
+      "75.1_TCE_0_A_26",
+      "Exportaciones de total combustibles y energía. En millones de dólares FOB",
+      "R/P1Y",
+      "2025-01-01",
+      "Exportaciones FOB por rubro"
+     ],
+     [
+      "75.2_TCE_0_T_26",
+      "Exportaciones de total combustibles y energía. En millones de dólares FOB",
+      "R/P3M",
+      "2026-04-01",
+      "Exportaciones FOB por rubro"
+     ],
+     [
+      "74.1_IECE_0_A_35",
+      "Exportación de combustibles y energía. En millones de dólares.",
+      "R/P1Y",
+      "2025-01-01",
+      "Intercambio Comercial Argentino"
+     ],
+     [
+      "74.2_IECE_0_T_35",
+      "Exportación de combustibles y energía. En millones de dólares.",
+      "R/P3M",
+      "2026-04-01",
+      "Intercambio Comercial Argentino"
+     ],
+     [
+      "74.3_IECE_0_M_35",
+      "Exportación de combustibles y energía. En millones de dólares.",
+      "R/P1M",
+      "2026-08-01",
+      "Intercambio Comercial Argentino"
+     ],
+     [
+      "83.1_EMD_2004_A_30",
+      "Exportaciones en millones de dolares",
+      "R/P1Y",
+      "2025-01-01",
+      "Poder de compra de las exportaciones de bienes y g"
+     ],
+     [
+      "74.3_IET_0_M_16",
+      "Exportaciones totales. En millones de dólares.",
+      "R/P1M",
+      "2026-08-01",
+      "Intercambio Comercial Argentino"
+     ],
+     [
+      "126.2_EE_1993_0_19",
+      "Energía eléctrica índice mensual IPIM",
+      "R/P1M",
+      "2015-10-01",
+      "Índice de Precios Internos al por Mayor (IPIM). SE"
+     ],
+     [
+      "121.3_EN_0_0_7",
+      "Índice de Commodities. Energía. Mensual",
+      "R/P1M",
+      "2017-04-01",
+      "Índices de precios internacionales de productos bá"
+     ],
+     [
+      "74.1_IET_0_A_16",
+      "Exportaciones totales. En millones de dólares.",
+      "R/P1Y",
+      "2025-01-01",
+      "Intercambio Comercial Argentino"
+     ],
+     [
+      "74.2_IET_0_T_16",
+      "Exportaciones totales. En millones de dólares.",
+      "R/P3M",
+      "2026-04-01",
+      "Intercambio Comercial Argentino"
+     ]
+    ]
    }
   }
  }
