@@ -98,9 +98,10 @@ def nombre_corto(empresa: str) -> str:
 def nombre_area(area: str) -> str:
     if not str(area).strip():
         return "Sin dato"
-    palabras = norm(area).title().split()
-    menores = {"De", "Del", "La", "Las", "Los", "El", "Y"}
-    return " ".join(w.lower() if i and w in menores else w for i, w in enumerate(palabras))
+    # Conserva acentos y eñes del original; solo se normaliza para comparar.
+    palabras = re.sub(r"\s+", " ", str(area)).strip().title().split()
+    menores = {"DE", "DEL", "LA", "LAS", "LOS", "EL", "Y"}
+    return " ".join(w.lower() if i and norm(w) in menores and palabras[i - 1] != "-" else w for i, w in enumerate(palabras))
 
 
 def leer_csv(fuente: str | Path) -> pd.DataFrame:

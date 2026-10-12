@@ -400,6 +400,19 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
     return out;
   }
 
+  // Year labels on a time axis: only at January (or the first point), at least 46px apart.
+  function yearTicks(svg, periods, x, yPos) {
+    let lastX = -Infinity;
+    periods.forEach((p, i) => {
+      if (!(p.endsWith("-01") || i === 0)) return;
+      const px = x(i), nextJan = periods.findIndex((q, j) => j > i && q.endsWith("-01"));
+      if (i === 0 && !p.endsWith("-01") && nextJan > 0 && x(nextJan) - px < 46) return;
+      if (px - lastX < 46) return;
+      const lab = svgEl("text", { x: px, y: yPos, "text-anchor": i === 0 ? "start" : "middle" });
+      lab.textContent = p.slice(0, 4); svg.append(lab); lastX = px;
+    });
+  }
+
   // Line chart with crosshair tooltip.
   function lineChart(host, rows, key, color, unit, digits, height) {
     host.innerHTML = "";
@@ -417,14 +430,7 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
       lab.textContent = t >= 1000 ? fmt(t / 1000) + "k" : fmt(t, t % 1 ? 1 : 0);
       svg.append(lab);
     }
-    const years = [...new Set(rows.map(r => r.period.slice(0, 4)))];
-    const every = Math.ceil(years.length / Math.max(2, Math.floor(iw / 70)));
-    years.forEach((yr, k) => {
-      if (k % every) return;
-      const i = rows.findIndex(r => r.period.startsWith(yr));
-      const lab = svgEl("text", { x: x(i), y: H - 8, "text-anchor": k === 0 ? "start" : "middle" });
-      lab.textContent = yr; svg.append(lab);
-    });
+    yearTicks(svg, rows.map(r => r.period), x, H - 8);
 
     const d = rows.map((r, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(r[key]).toFixed(1)}`).join("");
     svg.append(svgEl("path", { d: d + `L${x(rows.length - 1)},${y(0)}L${x(0)},${y(0)}Z`, fill: color, "fill-opacity": 0.08 }));
@@ -568,10 +574,7 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
       const lab = svgEl("text", { x: m.l - 8, y: y(t) + 4, "text-anchor": "end" });
       lab.textContent = t >= 1000 ? fmt(t / 1000) + "k" : fmt(t); svg.append(lab);
     }
-    periods.forEach((p, i) => {
-      if (!p.endsWith("-01")) return;
-      const lab = svgEl("text", { x: x(i), y: H - 8, "text-anchor": i === 0 ? "start" : "middle" }); lab.textContent = p.slice(0, 4); svg.append(lab);
-    });
+    yearTicks(svg, periods, x, H - 8);
     // End labels, nudged apart so they never overlap.
     const ends = names.map((n, k) => ({ n, k, y: y(series[n][last]) })).sort((a, b) => a.y - b.y);
     for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 15) ends[i].y = ends[i - 1].y + 15;
