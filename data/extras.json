@@ -1373,85 +1373,20 @@
    "name": "Boletín Oficial de la República Argentina, primera sección",
    "url": "https://www.boletinoficial.gob.ar"
   },
-  "keywords": [
-   "rigi",
-   "regimen de incentivo para grandes inversiones",
-   "hidrocarburo",
-   "petroleo",
-   "gas natural",
-   "gnl",
-   "gas natural licuado",
-   "oleoducto",
-   "gasoducto",
-   "vaca muerta",
-   "neuquen",
-   "secretaria de energia",
-   "ente nacional regulador del gas",
-   "enargas",
-   "cammesa",
-   "upstream",
-   "refinacion",
-   "combustible",
-   "concesion de explotacion",
-   "no convencional",
-   "exportacion de crudo",
-   "biocombustible"
-  ],
   "items": [
    {
-    "id": "348708",
-    "date": "2026-10-08",
-    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-    "title": "Resolución 281/2026 RESOL-2026-281-APN-SE#MEC",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348708/20261008",
-    "tags": [
-     "secretaria de energia"
+    "id": "348768",
+    "date": "2026-10-09",
+    "agency": "MINISTERIO DE ECONOMÍA",
+    "title": "Resolución 1771/2026 RESOL-2026-1771-APN-MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348768/20261009",
+    "topics": [
+     "RIGI",
+     "Hidrocarburos",
+     "Gas natural",
+     "Petróleo"
     ],
-    "summary": "del Decreto N° 55 de fecha 16 de diciembre de 2023 declaró la emergencia del Sector Energético Nacional en lo que respecta a los segmentos de generación, transporte y distribución de energía eléctrica bajo jurisdicción federal, la que fue prorrogada por los Decretos Nros. 1.023 de fecha 19 de noviembre de 2024, 370 de"
-   },
-   {
-    "id": "348656",
-    "date": "2026-10-07",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución Sintetizada 737/2026",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348656/20261007",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "de este acto se realizará mediante un AVISO en la página web del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD (ENReGE), requiriendo a la COMPAÑÍA ADMINISTRADORA DEL MERCADO MAYORISTA ELÉCTRICO SOCIEDAD ANÓNIMA (CAMMESA) que haga lo propio en la suya, ambas publicaciones por un plazo de CINCO (5) días hábiles admin…"
-   },
-   {
-    "id": "348655",
-    "date": "2026-10-07",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución Sintetizada 736/2026",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348655/20261007",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "de este Acto se realizará mediante un AVISO en la página web del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD (ENReGE), requiriendo a la COMPAÑÍA ADMINISTRADORA DEL MERCADO MAYORISTA ELÉCTRICO SOCIEDAD ANÓNIMA (CAMMESA) que haga lo propio en su portal de internet por un plazo de CINCO (5) días hábiles administrati…"
-   },
-   {
-    "id": "348642",
-    "date": "2026-10-07",
-    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-    "title": "Resolución 278/2026 RESOL-2026-278-APN-SE#MEC",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348642/20261007",
-    "tags": [
-     "secretaria de energia"
-    ],
-    "summary": "Autorízase a la empresa INDUSTRIAS JUAN F. SECCO S.A. el cambio de punto de conexión al Sistema Argentino de Interconexión (SADI) de la Central Térmica a Biogás SAN MARTÍN NORTE III D10 estableciendo como nuevo punto de conexión la S.E.T. Rotonda ubicado en el Partido de Tres de Febrero, tensión de conexión en barras d…"
-   },
-   {
-    "id": "348641",
-    "date": "2026-10-07",
-    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-    "title": "Resolución 277/2026 RESOL-2026-277-APN-SE#MEC",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348641/20261007",
-    "tags": [
-     "secretaria de energia"
-    ],
-    "summary": "Autorízase la continuidad para actuar en calidad de Agente Generador del MERCADO ELÉCTRICO MAYORISTA (MEM) a la firma DQD ENERGY II SOCIEDAD ANÓNIMA (en adelante DQD ENERGY II S.A.) como nuevo titular del “Parque Solar 360 Energy Colón”, de potencia instalada VEINTE MEGAVATIOS (20 MW), ubicado en el Partido de Colón, P…"
+    "summary": "Apruébase la solicitud de adhesión al Régimen de Incentivo para Grandes Inversiones (RIGI), como Proyecto de Exportación Estratégica de Largo Plazo (PEELP), enmarcado en el Sector “Petróleo y Gas”, Subsector “explotación y producción de nuevos desarrollos de hidrocarburos líquidos y gaseosos costa adentro”, y el plan d…"
    },
    {
     "id": "348614",
@@ -1459,21 +1394,10 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 738/2026 RESFC-2026-738-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348614/20261007",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Gas natural"
     ],
-    "summary": "), y se estableció un plazo de QUINCE (15) días hábiles administrativos contados a partir de su publicación en el Boletín Oficial de la República Argentina, a fin de que los interesados efectuaran formalmente sus comentarios y observaciones, los que, sin perjuicio de ser analizados, no tendrán carácter vinculante para"
-   },
-   {
-    "id": "348580",
-    "date": "2026-10-06",
-    "agency": "AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA NEUQUÉN",
-    "title": "Aviso Oficial",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348580/20261006",
-    "tags": [
-     "neuquen"
-    ],
-    "summary": "Desestimar la presente denuncia contra el Sr. OLIVERA Mauro Andrés, DNI N.º 40.984.978, con domicilio en (...), por la infracción prevista y penada en el art. 987 del Código Aduanero, en los términos del art. 1090 inc b) de la Ley 22.415."
+    "summary": "°: Ampliar el plazo de la consulta pública dispuesta por la Resolución N.º RESFC-2026-552-APN-DIRECTORIO#ENREGE, por el término de DIEZ (10) días hábiles administrativos contados a partir de la fecha de publicación en el BOLETÍN OFICIAL DE LA REPÚBLICA ARGENTINA de la presente resolución, a fin de que los interesados e…"
    },
    {
     "id": "348571",
@@ -1481,54 +1405,22 @@
     "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
     "title": "Resolución 275/2026 RESOL-2026-275-APN-SE#MEC",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348571/20261006",
-    "tags": [
-     "secretaria de energia"
+    "topics": [
+     "Petróleo"
     ],
-    "summary": "3 de la Ley Nacional de Procedimientos Administrativos N° 19.549. Que la Dirección Nacional de Regulación y Desarrollo del Sector Eléctrico de la SUBSECRETARÍA DE ENERGÍA ELÉCTRICA ha tomado la intervención de su competencia. Que el servicio jurídico permanente del MINISTERIO DE ECONOMÍA ha tomado la intervención que l…"
+    "summary": "Autorízase, con efectos a partir del 1° de septiembre de 2026, la desafectación de la Central Térmica Loma Campana I (CTLCAMPG) como nodo de generación del Autogenerador Distribuido de titularidad de YPF ENERGÍA ELÉCTRICA SOCIEDAD ANÓNIMA (YPF ENERGÍA ELÉCTRICA S.A.), actualmente identificado por el ORGANISMO ENCARGADO…"
    },
    {
-    "id": "348570",
-    "date": "2026-10-06",
-    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-    "title": "Resolución 274/2026 RESOL-2026-274-APN-SE#MEC",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348570/20261006",
-    "tags": [
-     "secretaria de energia"
-    ],
-    "summary": "Autorízase el ingreso de la firma GENERAR LR SOCIEDAD POR ACCIONES SIMPLIFICADA (GENERAR LR S.A.S.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente."
-   },
-   {
-    "id": "348492",
-    "date": "2026-10-05",
-    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-    "title": "Resolución 273/2026 RESOL-2026-273-APN-SE#MEC",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348492/20261005",
-    "tags": [
-     "secretaria de energia"
-    ],
-    "summary": "Préstase la conformidad solicitada por las Cooperativas de la Provincia de CÓRDOBA listadas en el Anexo (IF-2026-92393264-APN-DNRYDSE#MEC) que forma parte integrante de la presente medida, para que apliquen a la PRESTACIÓN ADICIONAL DE LA FUNCIÓN TÉCNICA DE TRANSPORTE FIRME (PAFTT FIRME) de su jurisdicción, lo dispuest…"
-   },
-   {
-    "id": "348428",
-    "date": "2026-10-02",
-    "agency": "MINISTERIO DE ECONOMÍA - SUBSECRETARÍA DE ENERGÍA ELÉCTRICA",
-    "title": "Aviso Oficial",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348428/20261002",
-    "tags": [
-     "secretaria de energia"
-    ],
-    "summary": "Se comunica a todos los agentes del MERCADO ELÉCTRICO MAYORISTA (MEM) que la empresa RENÉ ENERGY S.A solicita su ingreso al MEM como Agente Generador para su Parque Solar Fotovoltaico ARISTÓBULO DEL VALLE con una potencia de 10 MW, ubicado en la localidad de Salto Encantado del Departamento de Cainguás, Provincia de MI…"
-   },
-   {
-    "id": "348385",
+    "id": "348369",
     "date": "2026-10-01",
-    "agency": "MINISTERIO DE ECONOMÍA - SUBSECRETARÍA DE ENERGÍA ELÉCTRICA",
-    "title": "Aviso Oficial",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348385/20261001",
-    "tags": [
-     "secretaria de energia"
+    "agency": "MINISTERIO DE ECONOMÍA - DIRECCIÓN NACIONAL DE COORDINACIÓN Y FISCALIZACIÓN PESQUERA",
+    "title": "Disposición 3/2026 DI-2026-3-APN-DNCYFP#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348369/20261001",
+    "topics": [
+     "Hidrocarburos",
+     "Petróleo"
     ],
-    "summary": "Se comunica a todos los agentes del MERCADO ELÉCTRICO MAYORISTA (MEM), de acuerdo a lo establecido en el Anexo 17 de la Resolución ex-SE Nº 137/92, sus modificatorias y complementarias, que las empresas citadas a continuación han informado a esta Subsecretaría que han asumido la titularidad de los establecimientos que"
+    "summary": "Establécese en la suma de PESOS DOS MIL CUATROCIENTOS CUARENTA Y CINCO ($ 2.445.-) el valor en moneda de curso legal de las Unidades Pesca (UP) en cumplimiento de lo dispuesto por el Artículo 51 bis de la Ley N° 24.922 incorporado por el"
    },
    {
     "id": "348360",
@@ -1536,21 +1428,10 @@
     "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
     "title": "Resolución 272/2026 RESOL-2026-272-APN-SE#MEC",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348360/20261001",
-    "tags": [
-     "secretaria de energia"
+    "topics": [
+     "Gas natural"
     ],
-    "summary": "del Decreto N° 943 de fecha 31 de diciembre de 2025, se unificaron los subsidios energéticos de jurisdicción nacional y se creó el régimen de SUBSIDIOS ENERGÉTICOS FOCALIZADOS (SEF). Que por el Artículo 4° del citado decreto se fijaron los bloques de consumo base de energía eléctrica de TRESCIENTOS (300) kWh para los m…"
-   },
-   {
-    "id": "348359",
-    "date": "2026-10-01",
-    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-    "title": "Resolución 271/2026 RESOL-2026-271-APN-SE#MEC",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348359/20261001",
-    "tags": [
-     "secretaria de energia"
-    ],
-    "summary": "Autorízase los cambios de titularidad de los agentes del MERCADO ELÉCTRICO MAYORISTA (MEM), en su condición de Grandes Usuarios Mayores (GUMAs) y Grandes Usuarios Menores (GUMEs), solicitados por las firmas indicadas en el Anexo (IF-2026-91739554-APN-DNRYDSE#MEC) que forma parte integrante de la presente medida, ajustá…"
+    "summary": "Sustitúyese el Anexo I (IF-2026-86739703-APN-SSEEIE#MEC) de la Resolución N° 13 de fecha 15 de enero de 2026 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA, en el cual se establecieron los consumos base diferenciales de energía eléctrica, por el Anexo I (IF-2026-94364059-APN-SSEEIE#MEC) que forma parte integran…"
    },
    {
     "id": "348358",
@@ -1558,10 +1439,10 @@
     "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
     "title": "Resolución 270/2026 RESOL-2026-270-APN-SE#MEC",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348358/20261001",
-    "tags": [
-     "secretaria de energia"
+    "topics": [
+     "Biocombustibles"
     ],
-    "summary": "Fíjase en PESOS UN MIL OCHENTA Y TRES CON DOSCIENTAS VEINTIDÓS MILÉSIMAS ($1.083,222) por litro el precio mínimo de adquisición del bioetanol elaborado a base de caña de azúcar destinado a su mezcla obligatoria con nafta en el marco de lo dispuesto por la Ley N° 27.640, el cual regirá para las operaciones a llevarse a"
+    "summary": "Fíjase en PESOS UN MIL OCHENTA Y TRES CON DOSCIENTAS VEINTIDÓS MILÉSIMAS ($1.083,222) por litro el precio mínimo de adquisición del bioetanol elaborado a base de caña de azúcar destinado a su mezcla obligatoria con nafta en el marco de lo dispuesto por la Ley N° 27.640, el cual regirá para las operaciones a llevarse a…"
    },
    {
     "id": "348357",
@@ -1569,10 +1450,10 @@
     "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
     "title": "Resolución 269/2026 RESOL-2026-269-APN-SE#MEC",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348357/20261001",
-    "tags": [
-     "secretaria de energia"
+    "topics": [
+     "Biocombustibles"
     ],
-    "summary": "Fíjase en PESOS DOS MILLONES TREINTA Y DOS MIL TRECIENTOS DIEZ ($2.032.310) por tonelada el precio de adquisición del biodiesel destinado a su mezcla obligatoria con gasoil en el marco de lo dispuesto por la Ley Nº 27.640, para las operaciones a llevarse a cabo durante el mes de octubre de 2026, y hasta la publicación"
+    "summary": "Fíjase en PESOS DOS MILLONES TREINTA Y DOS MIL TRECIENTOS DIEZ ($2.032.310) por tonelada el precio de adquisición del biodiesel destinado a su mezcla obligatoria con gasoil en el marco de lo dispuesto por la Ley Nº 27.640, para las operaciones a llevarse a cabo durante el mes de octubre de 2026, y hasta la publicación…"
    },
    {
     "id": "348342",
@@ -1580,10 +1461,10 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 729/2026 RESFC-2026-729-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348342/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Gas natural"
     ],
-    "summary": "). Que, asimismo, la precitada resolución estableció que “…el valor del recargo para el cálculo del monto a ingresar en el caso de autoconsumo será el producto de: a) el volumen en metros cúbicos (m³) consumidos como autoconsumo; b) el precio promedio ponderado de las ventas de la empresa que autoconsume; y c) la alícu…"
+    "summary": "Instruir a las prestadoras del servicio público de distribución de gas a aplicar, por cada metro cúbico (M3) de nueve mil trescientas kilocalorías (9.300 kc) facturado a sus usuarios de servicio completo, un recargo que se determinará aplicando, al precio del gas natural en el Punto de Ingreso al Sistema de Transporte…"
    },
    {
     "id": "348341",
@@ -1591,10 +1472,11 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 728/2026 RESFC-2026-728-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348341/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
     ],
-    "summary": "del Decreto de Necesidad y Urgencia N.° 55/23 se declaró la emergencia del Sector Energético Nacional, en particular, en lo que respecta a los segmentos de transporte y distribución de gas natural; y que dicha declaración de emergencia fue posteriormente prorrogada por los Decretos de Necesidad y Urgencia Nros. 1023/24…"
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Camuzzi Gas del Sur Sociedad Anónima incluidos en el Anexo N.° IF-2026-95416241-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348340",
@@ -1602,10 +1484,11 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 727/2026 RESFC-2026-727-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348340/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
     ],
-    "summary": "del Decreto de Necesidad y Urgencia N.° 55/23 se declaró la emergencia del Sector Energético Nacional, en particular, en lo que respecta a los segmentos de transporte y distribución de gas natural; y que dicha declaración de emergencia fue posteriormente prorrogada por los Decretos de Necesidad y Urgencia Nros. 1023/24…"
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Camuzzi Gas Pampeana Sociedad Anónima incluidos en el Anexo N.° IF-2026-95416358-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348339",
@@ -1613,10 +1496,11 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 726/2026 RESFC-2026-726-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348339/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
     ],
-    "summary": "del Decreto de Necesidad y Urgencia N.° 55/23 se declaró la emergencia del Sector Energético Nacional, en particular, en lo que respecta a los segmentos de transporte y distribución de gas natural; y que dicha declaración de emergencia fue posteriormente prorrogada por los Decretos de Necesidad y Urgencia Nros. 1023/24…"
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Gas NEA Sociedad Anónima incluidos en el Anexo N.° IF-2026-95418009-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348338",
@@ -1624,10 +1508,11 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 725/2026 RESFC-2026-725-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348338/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
     ],
-    "summary": "del Decreto de Necesidad y Urgencia N.° 55/23 se declaró la emergencia del Sector Energético Nacional, en particular, en lo que respecta a los segmentos de transporte y distribución de gas natural; y que dicha declaración de emergencia fue posteriormente prorrogada por los Decretos de Necesidad y Urgencia Nros. 1023/24…"
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Naturgy NOA Sociedad Anónima incluidos en el Anexo N.° IF-2026-95419697-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348337",
@@ -1635,10 +1520,11 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 724/2026 RESFC-2026-724-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348337/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
     ],
-    "summary": "del Decreto de Necesidad y Urgencia N.° 55/23 se declaró la emergencia del Sector Energético Nacional, en particular, en lo que respecta a los segmentos de transporte y distribución de gas natural; y que dicha declaración de emergencia fue posteriormente prorrogada por los Decretos de Necesidad y Urgencia Nros. 1023/24…"
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Naturgy BAN Sociedad Anónima incluidos en el Anexo N.° IF-2026-95419588-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348336",
@@ -1646,10 +1532,11 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 723/2026 RESFC-2026-723-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348336/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
     ],
-    "summary": "del Decreto de Necesidad y Urgencia N.° 55/23 se declaró la emergencia del Sector Energético Nacional, en particular, en lo que respecta a los segmentos de transporte y distribución de gas natural; y que dicha declaración de emergencia fue posteriormente prorrogada por los Decretos de Necesidad y Urgencia Nros. 1023/24…"
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas Cuyana Sociedad Anónima incluidos en el Anexo N.° IF-2026-95416762-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348335",
@@ -1657,10 +1544,11 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 722/2026 RESFC-2026-722-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348335/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
     ],
-    "summary": "del Decreto de Necesidad y Urgencia N.° 55/23 se declaró la emergencia del Sector Energético Nacional, en particular, en lo que respecta a los segmentos de transporte y distribución de gas natural; y que dicha declaración de emergencia fue posteriormente prorrogada por los Decretos de Necesidad y Urgencia Nros. 1023/24…"
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas del Centro Sociedad Anónima incluidos en el Anexo N.° IF-2026-95417265-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348334",
@@ -1668,10 +1556,11 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 721/2026 RESFC-2026-721-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348334/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
     ],
-    "summary": "del Decreto de Necesidad y Urgencia N.° 55/23 se declaró la emergencia del Sector Energético Nacional, en particular, en lo que respecta a los segmentos de transporte y distribución de gas natural; y que dicha declaración de emergencia fue posteriormente prorrogada por los Decretos de Necesidad y Urgencia Nros. 1023/24…"
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Litoral Gas Sociedad Anónima incluidos en el Anexo N.° IF-2026-95418168-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348333",
@@ -1679,10 +1568,11 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 720/2026 RESFC-2026-720-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348333/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
     ],
-    "summary": "del Decreto de Necesidad y Urgencia N.° 55/23 se declaró la emergencia del Sector Energético Nacional, en particular, en lo que respecta a los segmentos de transporte y distribución de gas natural; y que dicha declaración de emergencia fue posteriormente prorrogada por los Decretos de Necesidad y Urgencia Nros. 1023/24…"
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Metrogas Sociedad Anónima incluidos en el Anexo N.° IF-2026-95418525-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348332",
@@ -1690,10 +1580,10 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 719/2026 RESFC-2026-719-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348332/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Gas natural"
     ],
-    "summary": "del Decreto de Necesidad y Urgencia N.° 55/23 se declaró la emergencia del Sector Energético Nacional en lo que respecta a los segmentos de generación, transporte y distribución de gas natural; y que dicha declaración de emergencia fue posteriormente prorrogada por los Decretos DNU N.° 1023/24, DNU N.° 370/25 y DNU N.°…"
+    "summary": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gasoducto Gasandes Argentina Sociedad Anónima incluidos en el Anexo N.° IF-2026-94810638-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348331",
@@ -1701,10 +1591,10 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 718/2026 RESFC-2026-718-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348331/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Gas natural"
     ],
-    "summary": "del Decreto de Necesidad y Urgencia N.° 55/23 se declaró la emergencia del Sector Energético Nacional en lo que respecta a los segmentos de generación, transporte y distribución de gas natural; y que dicha declaración de emergencia fue posteriormente prorrogada por los Decretos DNU N.° 1023/24, DNU N.° 370/25 y DNU N.°…"
+    "summary": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Enel Generación Chile Sociedad Anónima incluidos en el Anexo N.° IF-2026-94810825-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348330",
@@ -1712,10 +1602,10 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 717/2026 RESFC-2026-717-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348330/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Gas natural"
     ],
-    "summary": "del Decreto de Necesidad y Urgencia N.° 55/23 se declaró la emergencia del Sector Energético Nacional en lo que respecta a los segmentos de generación, transporte y distribución de gas natural; y que dicha declaración de emergencia fue posteriormente prorrogada por los Decretos DNU N.° 1023/24, DNU N.° 370/25 y DNU N.°…"
+    "summary": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Compañía Entrerriana de Gas Sociedad Anónima incluidos en el Anexo N.° IF-2026-94809589-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348329",
@@ -1723,10 +1613,10 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 716/2026 RESFC-2026-716-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348329/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Gas natural"
     ],
-    "summary": "del Decreto de Necesidad y Urgencia N.° 55/23 se declaró la emergencia del Sector Energético Nacional en lo que respecta a los segmentos de generación, transporte y distribución de gas natural; y que dicha declaración de emergencia fue posteriormente prorrogada por los Decretos DNU N.° 1023/24, DNU N.° 370/25 y DNU N.°…"
+    "summary": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gasoducto Norandino Argentina Sociedad Anónima incluidos en el Anexo N.° IF-2026-94810170-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348328",
@@ -1734,10 +1624,10 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 715/2026 RESFC-2026-715-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348328/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Gas natural"
     ],
-    "summary": "del Decreto de Necesidad y Urgencia N.° 55/23 se declaró la emergencia del Sector Energético Nacional en lo que respecta a los segmentos de generación, transporte y distribución de gas natural; y que dicha declaración de emergencia fue posteriormente prorrogada por los Decretos DNU N.° 1023/24, DNU N.° 370/25 y DNU N.°…"
+    "summary": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Transportadora de Gas del Mercosur Sociedad Anónima incluidos en el Anexo N.° IF-2026-94809775-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348327",
@@ -1745,10 +1635,11 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 714/2026 RESFC-2026-714-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348327/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Gas natural",
+     "Petróleo"
     ],
-    "summary": "del Decreto de Necesidad y Urgencia N.° 55/23 se declaró la emergencia del Sector Energético Nacional en lo que respecta a los segmentos de generación, transporte y distribución de gas natural; y que dicha declaración de emergencia fue posteriormente prorrogada por los Decretos DNU N.° 1023/24, DNU N.° 370/25 y DNU N.°…"
+    "summary": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Refinería del Norte Sociedad Anónima incluidos en el Anexo N.° IF-2026-94809954-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348326",
@@ -1756,10 +1647,10 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 713/2026 RESFC-2026-713-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348326/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Gas natural"
     ],
-    "summary": "del Decreto de Necesidad y Urgencia N.° 55/23 se declaró la emergencia del Sector Energético Nacional en lo que respecta a los segmentos de generación, transporte y distribución de gas natural; y que dicha declaración de emergencia fue posteriormente prorrogada por los Decretos DNU N.° 1023/24, DNU N.° 370/25 y DNU N.°…"
+    "summary": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gas Link Sociedad Anónima incluidos en el Anexo N.° IF-2026-94810489-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348325",
@@ -1767,10 +1658,10 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 712/2026 RESFC-2026-712-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348325/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Gas natural"
     ],
-    "summary": "del Decreto de Necesidad y Urgencia N.° 55/23 se declaró la emergencia del Sector Energético Nacional en lo que respecta a los segmentos de generación, transporte y distribución de gas natural; y que dicha declaración de emergencia fue posteriormente prorrogada por los Decretos DNU N.° 1023/24, DNU N.° 370/25 y DNU N.°…"
+    "summary": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Energía Argentina Sociedad Anónima incluidos en el Anexo N.° IF-2026-94810347-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348324",
@@ -1778,10 +1669,10 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 711/2026 RESFC-2026-711-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348324/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Gas natural"
     ],
-    "summary": "del Decreto N.° 452/25 (B.O. 7-7-25) se constituyó el Ente Nacional Regulador del gas y la Electricidad, creado por el artículo 161 de la Ley N.° 27.742 (B.O. 8-7-24), el que “…llevará a cabo todas las medidas necesarias para cumplir las misiones y funciones asignadas por las Leyes Nros. 24.076 y 24.065 al ENTE NACIONA…"
+    "summary": "Aprobar los Cuadros Tarifarios a aplicar por Transportadora de Gas del Sur Sociedad Anónima, incluidos en el Anexo N.° IF-2026-94781211-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348323",
@@ -1789,219 +1680,10 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 710/2026 RESFC-2026-710-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348323/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Gas natural"
     ],
-    "summary": "del Decreto N.° 452/25 (B.O. 7-7-25) se constituyó el Ente Nacional Regulador del gas y la Electricidad, creado por el artículo 161 de la Ley N.° 27.742 (B.O. 8-7-24), el que “…llevará a cabo todas las medidas necesarias para cumplir las misiones y funciones asignadas por las Leyes Nros. 24.076 y 24.065 al ENTE NACIONA…"
-   },
-   {
-    "id": "348322",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 709/2026 RESFC-2026-709-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348322/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": ", unifica los subsidios energéticos de jurisdicción nacional y, a tal fin, crea el régimen de SUBSIDIOS ENERGÉTICOS FOCALIZADOS (SEF), que incluirá al conjunto de los hogares beneficiarios de subsidios a la energía eléctrica, para asegurar que los usuarios residenciales vulnerables accedan al consumo energético indispe…"
-   },
-   {
-    "id": "348321",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 708/2026 RESFC-2026-708-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348321/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": ", unifica los subsidios energéticos de jurisdicción nacional y, a tal fin, crea el régimen de SUBSIDIOS ENERGÉTICOS FOCALIZADOS (SEF), que incluirá al conjunto de los hogares beneficiarios de subsidios a la energía eléctrica, para asegurar que los usuarios residenciales vulnerables accedan al consumo energético indispe…"
-   },
-   {
-    "id": "348320",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 707/2026 RESFC-2026-707-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348320/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "de la Resolución ENRE N° 320 de fecha 30 de mayo de 2024, estableció para YACYLEC S.A. un Canon Mensual Fijo de PESOS VEINTIÚN MILLONES SETECIENTOS VEINTISÉIS MIL SEISCIENTOS CUARENTA Y SEIS CON VEINTIÚN CENTAVOS ($ 21.726.646,21) por el plazo de SESENTA (60) meses, a partir del 1 de mayo del 2024, destinado cubrir los…"
-   },
-   {
-    "id": "348319",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 706/2026 RESFC-2026-706-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348319/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "61 de la Ley N° 27.742, el artículo 55 -incisos a), d) y s)- de la Ley N° 24.065 T.O. 2025, los artículos 1 y 11 -incisos a) y h)- del Decreto N° 452 de fecha 4 de julio de 2025 y el Decreto N° 318 de fecha 4 de mayo de 2026. Por ello, EL DIRECTORIO DEL ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD RESUELVE: ARTÍCU…"
-   },
-   {
-    "id": "348318",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 705/2026 RESFC-2026-705-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348318/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "61 de la Ley N° 27.742, el artículo 55, incisos a), d) y s) de la Ley N° 24.065 T.O. 2025, los artículos 1 y 11, incisos a) y h) del Decreto N° 452 de fecha 4 de julio de 2025 y el Decreto N° 318 de fecha 4 de mayo de 2026. Por ello, EL DIRECTORIO DEL ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD RESUELVE: ARTÍCULO…"
-   },
-   {
-    "id": "348317",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 704/2026 RESFC-2026-704-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348317/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "61 de la Ley N° 27.742, el artículo 55, incisos a), d) y s) de la Ley N° 24.065 T.O. 2025, los artículos 1 y 11, incisos a) y h) del Decreto N° 452 de fecha 4 de julio de 2025 y el Decreto N° 318 de fecha 4 de mayo de 2026. Por ello, EL DIRECTORIO DEL ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD RESUELVE ARTÍCULO"
-   },
-   {
-    "id": "348316",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 703/2026 RESFC-2026-703-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348316/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "61 de la Ley N° 27.742, el artículo 55 incisos a), d) y s) de la Ley N° 24.065 T.O. 2025, los artículos 1 y 11 incisos a) y h) del Decreto N° 452 de fecha 4 de julio de 2025 y el Decreto N° 318 de fecha 4 de mayo de 2026. Por ello, EL DIRECTORIO DEL ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD RESUELVE ARTÍCULO 1.…"
-   },
-   {
-    "id": "348315",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 702/2026 RESFC-2026-702-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348315/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "61 de la Ley N° 27.742, el artículo 55 -incisos a), d) y s)- de la Ley N° 24.065 T.O. 2025, los artículos 1 y 11 -incisos a) y h)- del Decreto N° 452 de fecha 4 de julio de 2025 y el Decreto N° 318 de fecha 4 de mayo de 2026. Por ello, EL DIRECTORIO DEL ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD RESUELVE: ARTÍCU…"
-   },
-   {
-    "id": "348314",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 701/2026 RESFC-2026-701-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348314/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "61 de la Ley N° 27.742, el artículo 55 -incisos a), d) y s)- de la Ley N° 24.065 T.O. 2025, los artículos 1 y 11 -incisos a) y h)- del Decreto N° 452 de fecha 4 de julio de 2025 y el Decreto N° 318 de fecha 4 de mayo de 2026. Por ello, EL DIRECTORIO DEL ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD RESUELVE: ARTÍCU…"
-   },
-   {
-    "id": "348313",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 700/2026 RESFC-2026-700-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348313/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "61 de la Ley N° 27.742, el artículo 55 -incisos a), d) y s)- de la Ley N° 24.065 T.O. 2025, los artículos 1 y 11 -incisos a) y h)- del Decreto N° 452 de fecha 4 de julio de 2025 y el Decreto N° 318 de fecha 4 de mayo de 2026. Por ello, EL DIRECTORIO DEL ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD RESUELVE: ARTÍCU…"
-   },
-   {
-    "id": "348312",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 699/2026 RESFC-2026-699-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348312/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "61 de la Ley N° 27.742, el artículo 55 -incisos a), d) y s)- de la Ley N° 24.065 T.O. 2025, los artículos 1 y 11 -incisos a) y h)- del Decreto N° 452 de fecha 4 de julio de 2025 y el Decreto N° 318 de fecha 4 de mayo de 2026. Por ello, EL DIRECTORIO DEL ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD RESUELVE: ARTÍCU…"
-   },
-   {
-    "id": "348311",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 698/2026 RESFC-2026-698-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348311/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "61 de la Ley N° 27.742, el artículo 55, incisos a), d) y s) de la Ley N° 24.065 T.O. 2025, los artículos 1 y 11, incisos a) y h) del Decreto N° 452 de fecha 4 de julio de 2025 y el Decreto N° 318 de fecha 4 de mayo de 2026. Por ello, EL DIRECTORIO DEL ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD RESUELVE: ARTÍCULO…"
-   },
-   {
-    "id": "348310",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 697/2026 RESFC-2026-697-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348310/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "61 de la Ley N° 27.742, el artículo 55, incisos a), d) y s) de la Ley N° 24.065 T.O. 2025, los artículos 1 y 11, incisos a) y h) del Decreto N° 452 de fecha 4 de julio de 2025 y el Decreto N° 318 de fecha 4 de mayo de 2026. Por ello, EL DIRECTORIO DEL ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD RESUELVE: ARTÍCULO…"
-   },
-   {
-    "id": "348309",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 696/2026 RESFC-2026-696-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348309/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "61 de la Ley N° 27.742, el artículo 55, incisos a), d) y s) de la Ley N° 24.065 T.O. 2025, los artículos 1 y 11, incisos a) y h) del Decreto N° 452 de fecha 4 de julio de 2025 y el Decreto N° 318 de fecha 4 de mayo de 2026. Por ello, EL DIRECTORIO DEL ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD RESUELVE: ARTÍCULO…"
-   },
-   {
-    "id": "348308",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 695/2026 RESFC-2026-695-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348308/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "61 de la Ley N° 27.742, el artículo 55, incisos a), d) y s) de la Ley N° 24.065 T.O. 2025, los artículos 1 y 11, incisos a) y h) del Decreto N° 452 de fecha 4 de julio de 2025 y el Decreto N° 318 de fecha 4 de mayo de 2026. Por ello, EL DIRECTORIO DEL ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD RESUELVE: ARTÍCULO…"
-   },
-   {
-    "id": "348307",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 694/2026 RESFC-2026-694-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348307/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "61 de la Ley N° 27.742, el artículo 55, incisos a), d) y s) de la Ley N° 24.065 T.O. 2025, los artículos 1 y 11, incisos a) y h) del Decreto N° 452 de fecha 4 de julio de 2025 y el Decreto N° 318 de fecha 4 de mayo de 2026. Por ello, EL DIRECTORIO DEL ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD RESUELVE: ARTÍCULO…"
-   },
-   {
-    "id": "348306",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 693/2026 RESFC-2026-693-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348306/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "61 de la Ley N° 27.742, el artículo 55, incisos a), d) y s) de la Ley N° 24.065 T.O. 2025, los artículos 1 y 11, incisos a) y h) del Decreto N° 452 de fecha 4 de julio de 2025 y el Decreto N° 318 de fecha 4 de mayo de 2026. Por ello, EL DIRECTORIO DEL ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD RESUELVE: ARTÍCULO…"
-   },
-   {
-    "id": "348305",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 692/2026 RESFC-2026-692-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348305/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "61 de la Ley N° 27.742, el artículo 55, incisos a), d) y s) de la Ley N° 24.065 T.O. 2025, los artículos 1 y 11, incisos a) y h) del Decreto N° 452 de fecha 4 de julio de 2025 y el Decreto N° 318 de fecha 4 de mayo de 2026. Por ello, EL DIRECTORIO DEL ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD RESUELVE: ARTÍCULO…"
-   },
-   {
-    "id": "348304",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 691/2026 RESFC-2026-691-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348304/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "61 de la Ley N° 27.742, el artículo 55, incisos a), d) y s) de la Ley N° 24.065 T.O. 2025, los artículos 1 y 11, incisos a) y h) del Decreto N° 452 de fecha 4 de julio de 2025 y el Decreto N° 318 de fecha 4 de mayo de 2026. Por ello, EL DIRECTORIO DEL ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD RESUELVE: ARTÍCULO…"
+    "summary": "Aprobar los Cuadros Tarifarios a aplicar por Transportadora de Gas del Norte Sociedad Anónima, incluidos en el Anexo N.° IF-2026-94781802-APN-UDYE#ENREGE que forma parte de la presente."
    },
    {
     "id": "348303",
@@ -2009,32 +1691,11 @@
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
     "title": "Resolución 689/2026 RESFC-2026-689-APN-DIRECTORIO#ENREGE",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348303/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
     ],
-    "summary": "del Decreto N.° 452 del 4 de julio de 2025, se constituyó el Ente Nacional Regulador del Gas y la Electricidad (ENReGE), creado por el artículo 161 — Capítulo IV “Unificación de los Entes Reguladores” de la Ley N.° 27.742 (B.O. 27-07-24), el que debe llevar adelante “...todas las medidas necesarias para cumplir las mis…"
-   },
-   {
-    "id": "348302",
-    "date": "2026-10-01",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución 673/2026 RESFC-2026-673-APN-DIRECTORIO#ENREGE",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348302/20261001",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "01 del Reglamento de Procedimientos Administrativos - Decreto N° 1759/72 T.O. 2017, reglamentario de la Ley Nacional de Procedimiento Administrativo N° 19.549, los errores materiales pueden rectificarse en cualquier momento, siempre que no se altere lo sustancial del acto. Que, en consecuencia, corresponde en autos sal…"
-   },
-   {
-    "id": "348250",
-    "date": "2026-09-30",
-    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución Sintetizada 669/2026",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348250/20260930",
-    "tags": [
-     "ente nacional regulador del gas"
-    ],
-    "summary": "Resolución RESFC-2026-669-APN-DIRECTORIO#ENREGE Expediente EX-2025-137115529-APN-SD#ENRE Buenos Aires, 29 de SEPTIEMBRE de 2026 El Directorio del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD ha resuelto ha resuelto: 1.- Establecer que los Agentes Generadores, Transportistas y Distribuidores del Mercado Eléctrico M…"
+    "summary": "Aprobar la actualización del “Régimen para Estaciones de Carga de GNC Vehicular - Actualización 2026” y las “Pautas Mínimas del Seguro de Caución Obligatorio para las Estaciones de Carga de GNC Vehicular – Actualización 2026”, que como Anexos N.° IF-2026-68394601-APN-UIYN#ENREGE y N.° IF-2026-68394434-APN-UIYN#ENREGE r…"
    },
    {
     "id": "348227",
@@ -2042,22 +1703,672 @@
     "agency": "COMBUSTIBLES",
     "title": "Decreto 1126/2026 DECTO-2026-1126-APN-PTE - Decreto Nº 617/2025. Modificación.",
     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348227/20260930",
-    "tags": [
-     "combustible"
+    "topics": [
+     "Petróleo"
     ],
-    "summary": "1 del Capítulo II, ambos del Título III de la Ley N° 23.966, texto ordenado en 1998 y sus modificaciones, se establecieron montos fijos en pesos por unidades de medida para determinar el impuesto sobre los combustibles líquidos y el impuesto al dióxido de carbono, respectivamente. Que, asimismo, en el artículo 7°, inci…"
+    "summary": "Sustitúyese en el inciso i. del primer párrafo del artículo 1° del Decreto N° 617 del 28 de agosto de 2025 y sus modificatorios la expresión “entre el 1° de agosto y el 30 de septiembre de 2026” por “entre el 1° de agosto y el 31 de octubre de 2026”."
    },
    {
-    "id": "348141",
-    "date": "2026-09-29",
+    "id": "348066",
+    "date": "2026-09-28",
     "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-    "title": "Resolución Sintetizada 666/2026",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348141/20260929",
-    "tags": [
-     "ente nacional regulador del gas"
+    "title": "Resolución 663/2026 RESFC-2026-663-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348066/20260928",
+    "topics": [
+     "Gas natural"
     ],
-    "summary": "Resolución RESFC-2026-666-APN-DIRECTORIO#ENREGE Expediente EX-2026- 87270612-APN-USDE#ENREGE Buenos Aires, 28 de SEPTIEMBRE de 2026 El Directorio del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD ha resuelto ha resuelto: 1.- Modificar el Presupuesto de la Administración Nacional para el Ejercicio 2026, en la parte"
+    "summary": "Inscribir a Secco Energy Sociedad Anónima Unipersonal como Comercializador de Gas Natural en el Registro de Comercializadores, en el ámbito de la Unidad Desempeño y Economía del Ente Nacional Regulador del Gas y la Electricidad, de conformidad con lo establecido en la Resolución N.° RESFC-2020-94-APN-DIRECTORIO#ENARGAS…"
+   },
+   {
+    "id": "347966",
+    "date": "2026-09-25",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE MINERÍA",
+    "title": "Resolución 81/2026 RESOL-2026-81-APN-SM#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347966/20260925",
+    "topics": [
+     "RIGI"
+    ],
+    "summary": "Autorízase la solicitud de la empresa Vicuña Argentina SA (CUIT N° 33-61913055-9), titular del Proyecto Único denominado “Vicuña”, a fin de sustituir el listado de mercaderías identificado como RE-2026-46522185-APN-SCEYM#MEC, aprobado mediante la resolución 1154 del 28 de julio de 2026 del Ministerio de Economía (RESOL…"
+   },
+   {
+    "id": "347965",
+    "date": "2026-09-25",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+    "title": "Resolución 264/2026 RESOL-2026-264-APN-SE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347965/20260925",
+    "topics": [
+     "Gas natural"
+    ],
+    "summary": "Sustitúyese el Artículo 13 de la Resolución N° 400 de fecha 20 de octubre de 2025 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA, el que quedará redactado de la siguiente manera: “ARTÍCULO 13.- Toda nueva demanda o ampliación de demanda que solicite su incorporación al MERCADO ELÉCTRICO MAYORISTA (MEM) y repres…"
+   },
+   {
+    "id": "347889",
+    "date": "2026-09-24",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+    "title": "Resolución 254/2026 RESOL-2026-254-APN-SE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347889/20260924",
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural",
+     "Petróleo"
+    ],
+    "summary": "Apruébase la tarifa máxima aplicable a los usuarios por el servicio de uso de muelle para la carga y descarga de hidrocarburos a buques tanque en la Terminal Marítima Puerto Rosales situada en la Provincia de BUENOS AIRES, en el valor de DÓLARES ESTADOUNIDENSES TRES CON SETENTA CENTAVOS (USD 3,70) por METRO CÚBICO (m3)…"
+   },
+   {
+    "id": "347833",
+    "date": "2026-09-23",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 654/2026 RESFC-2026-654-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347833/20260923",
+    "topics": [
+     "Gas natural"
+    ],
+    "summary": "- Disponer la baja de Et Managing Company Sociedad Anónima como Comercializador de gas natural en el Registro de Comercializadores, en el ámbito de la Unidad de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N.º RESFC-2020-94-APN-DIRECTORIO#ENARGAS."
+   },
+   {
+    "id": "347571",
+    "date": "2026-09-17",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 635/2026 RESFC-2026-635-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347571/20260917",
+    "topics": [
+     "Gas natural"
+    ],
+    "summary": "Disponer la baja de Refi Pampa Sociedad Anónima como Comercializador de gas natural en el Registro de Comercializadores, en el ámbito de la Unidad de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N.º RESFC-2020-94-APN-DIRECTORIO#ENARGAS."
+   },
+   {
+    "id": "347370",
+    "date": "2026-09-14",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE AGRICULTURA, GANADERÍA Y PESCA",
+    "title": "Resolución 171/2026 RESOL-2026-171-APN-SAGYP#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347370/20260914",
+    "topics": [
+     "Biocombustibles"
+    ],
+    "summary": "Autorízase la comercialización para la levadura genéticamente modificada Saccharomyces cerevisiae Evolve Evergreen, cuyo uso está diseñado para optimizar la capacidad de producción de bioetanol a partir de la fermentación de biomasa basada en almidones a la firma SAF ARGENTINA S.A. (CUIT N° 30-67988839-7)."
+   },
+   {
+    "id": "347211",
+    "date": "2026-09-10",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+    "title": "Resolución 235/2026 RESOL-2026-235-APN-SE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347211/20260910",
+    "topics": [
+     "RIGI"
+    ],
+    "summary": "Autorízase la solicitud de la empresa GEAR I S.A. (CUIT N° 30-71592816-3) para su Sucursal Dedicada o Especial “Generación Eléctrica Argentina Renovable I S.A. Sucursal Dedicada PEO” (GEAR I SDE) (CUIT N° 30-71909804-1), titular del Proyecto Único denominado “P.E. Olavarría”, a los fines de sustituir el listado de merc…"
+   },
+   {
+    "id": "347097",
+    "date": "2026-09-08",
+    "agency": "MINISTERIO DE ECONOMÍA",
+    "title": "Resolución 1469/2026 RESOL-2026-1469-APN-MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347097/20260908",
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural",
+     "Petróleo"
+    ],
+    "summary": "Hácese lugar parcialmente al recurso de alzada interpuesto por YPF Sociedad Anónima con relación a la suspensión de los efectos de la Nota ENGR GAL/GDyE/I 12.260 del 27 de diciembre de 2016 y de la resolución 313 del 5 de abril de 2018, ambas del ex Ente Nacional Regulador del Gas (ENARGAS)."
+   },
+   {
+    "id": "347093",
+    "date": "2026-09-08",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 575/2026 RESFC-2026-575-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347093/20260908",
+    "topics": [
+     "Gas natural"
+    ],
+    "summary": "Disponer la puesta en consulta pública del análisis realizado por esta autoridad regulatoria y que como Anexo IF-2026-86125962-APN-UDYE#ENREGE forma parte integrante de la presente, para determinar un cargo específico a incluirse en las facturas que emita Camuzzi Gas del Sur S.A. en las localidades abastecidas por el s…"
+   },
+   {
+    "id": "346966",
+    "date": "2026-09-07",
+    "agency": "MINISTERIO DE ECONOMÍA",
+    "title": "Resolución 1468/2026 RESOL-2026-1468-APN-MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346966/20260907",
+    "topics": [
+     "RIGI",
+     "Hidrocarburos",
+     "Vaca Muerta",
+     "Gas natural"
+    ],
+    "summary": "Apruébase la solicitud de adhesión al Régimen de Incentivo para Grandes Inversiones (RIGI), como Proyecto de Exportación Estratégica de Largo Plazo (PEELP), enmarcado en el sector “Petróleo y Gas”, subsector “Petroquímica y Fertilizantes”, y el plan de inversión presentados por Fértil Pampa SAU (CUIT N° 30-71875855-2),…"
+   },
+   {
+    "id": "346936",
+    "date": "2026-09-04",
+    "agency": "MINISTERIO DE ECONOMÍA - SUBSECRETARÍA DE EFICIENCIA E INFORMACIÓN ENERGÉTICA",
+    "title": "Disposición 12/2026 DI-2026-12-APN-SSEEIE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346936/20260904",
+    "topics": [
+     "Gas natural"
+    ],
+    "summary": "Apruébase el Anexo “Metodología para la identificación de suministros energéticos” (DI-2026-82404621-APN-SSEEIE#MEC), correspondiente a la Provincia del NEUQUÉN, que forma parte integrante de la presente medida."
+   },
+   {
+    "id": "346935",
+    "date": "2026-09-04",
+    "agency": "MINISTERIO DE ECONOMÍA - SUBSECRETARÍA DE EFICIENCIA E INFORMACIÓN ENERGÉTICA",
+    "title": "Disposición 11/2026 DI-2026-11-APN-SSEEIE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346935/20260904",
+    "topics": [
+     "Gas natural"
+    ],
+    "summary": "Dispónese la revisión de aquellas solicitudes de incorporación al Régimen de Subsidios Energéticos Focalizados (SEF) que, transcurrido UN (1) año desde su fecha de alta, no hayan podido ser vinculadas con los suministros informados a esta dependencia por las prestadoras de los servicios de energía eléctrica y de gas po…"
+   },
+   {
+    "id": "346856",
+    "date": "2026-09-03",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 552/2026 RESFC-2026-552-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346856/20260903",
+    "topics": [
+     "Gas natural"
+    ],
+    "summary": "°: Disponer la consulta pública del proyecto “COMPENDIO DE INSTRUCCIONES PARA LA SUBDISTRIBUCIÓN DE GAS POR REDES” que como Anexo N.° IF-2026-82102474-APN-UDG#ENREGE forma parte integrante de la presente, que tiene por objeto implementar una nueva reglamentación de los requerimientos para la tramitación de las solicitu…"
+   },
+   {
+    "id": "346785",
+    "date": "2026-09-02",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+    "title": "Resolución 224/2026 RESOL-2026-224-APN-SE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346785/20260902",
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
+    ],
+    "summary": "Amplíase el plazo previsto en el Artículo 1° de la Resolución N° 54 de fecha 3 de marzo de 2026 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA hasta el 31 de diciembre de 2026."
+   },
+   {
+    "id": "346716",
+    "date": "2026-09-01",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE MINERÍA",
+    "title": "Resolución 74/2026 RESOL-2026-74-APN-SM#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346716/20260901",
+    "topics": [
+     "RIGI"
+    ],
+    "summary": "Autorízase la solicitud de la empresa Rincón Mining PTY LTD Sucursal Argentina (CUIT Nº 30-70708643-9), titular del Proyecto Único denominado “Proyecto Rincón”, a fin de sustituir el listado de mercaderías identificado como IF-2026-62457997-APN-DTD#JGM, aprobado mediante la resolución 60 del 28 de julio de 2026 de esta…"
+   },
+   {
+    "id": "346709",
+    "date": "2026-09-01",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+    "title": "Resolución 220/2026 RESOL-2026-220-APN-SE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346709/20260901",
+    "topics": [
+     "Biocombustibles"
+    ],
+    "summary": "Fíjase en PESOS DOS MILLONES DOCE MIL QUINIENTOS NOVENTA Y OCHO ($2.012.598) por tonelada el precio de adquisición del biodiesel destinado a su mezcla obligatoria con gasoil en el marco de lo dispuesto por la Ley Nº 27.640, para las operaciones a llevarse a cabo durante el mes de septiembre de 2026, y hasta la publicac…"
+   },
+   {
+    "id": "346708",
+    "date": "2026-09-01",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+    "title": "Resolución 219/2026 RESOL-2026-219-APN-SE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346708/20260901",
+    "topics": [
+     "Biocombustibles"
+    ],
+    "summary": "Fíjase en PESOS UN MIL SETENTA Y DOS CON CUATROCIENTAS NOVENTA Y SIETE MILÉSIMAS ($1.072,497) por litro el precio mínimo de adquisición del bioetanol elaborado a base de caña de azúcar destinado a su mezcla obligatoria con nafta en el marco de lo dispuesto por la Ley N° 27.640, el cual regirá para las operaciones a lle…"
+   },
+   {
+    "id": "346682",
+    "date": "2026-09-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 544/2026 RESFC-2026-544-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346682/20260901",
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
+    ],
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Naturgy Noa Sociedad Anónima incluidos en el Anexo N.° IF-2026-84164278-APN-UDYE#ENREGE que forma parte de la presente."
+   },
+   {
+    "id": "346681",
+    "date": "2026-09-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 543/2026 RESFC-2026-543-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346681/20260901",
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
+    ],
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Camuzzi Gas Pampeana Sociedad Anónima incluidos en el Anexo N.° IF-2026-84163843-APN-UDYE#ENREGE que forma parte de la presente."
+   },
+   {
+    "id": "346680",
+    "date": "2026-09-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 542/2026 RESFC-2026-542-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346680/20260901",
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
+    ],
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Camuzzi Gas del Sur Sociedad Anónima incluidos en el Anexo N.° IF-2026-84163729-APN-UDYE#ENREGE que forma parte de la presente."
+   },
+   {
+    "id": "346679",
+    "date": "2026-09-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 541/2026 RESFC-2026-541-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346679/20260901",
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
+    ],
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Gas NEA Sociedad Anónima incluidos en el Anexo N.° IF-2026-84164047-APN-UDYE#ENREGE que forma parte de la presente."
+   },
+   {
+    "id": "346678",
+    "date": "2026-09-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 540/2026 RESFC-2026-540-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346678/20260901",
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
+    ],
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas Cuyana Sociedad Anónima incluidos en el Anexo N.° IF-2026-84163949-APN-UDYE#ENREGE que forma parte de la presente."
+   },
+   {
+    "id": "346677",
+    "date": "2026-09-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 539/2026 RESFC-2026-539-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346677/20260901",
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
+    ],
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Naturgy Ban Sociedad Anónima incluidos en el Anexo N.° IF-2026-84164206-APN-UDYE#ENREGE que forma parte de la presente."
+   },
+   {
+    "id": "346676",
+    "date": "2026-09-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 538/2026 RESFC-2026-538-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346676/20260901",
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
+    ],
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas del Centro Sociedad Anónima incluidos en el Anexo N.° IF-2026-84164137-APN-UDYE#ENREGE que forma parte de la presente."
+   },
+   {
+    "id": "346675",
+    "date": "2026-09-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 537/2026 RESFC-2026-537-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346675/20260901",
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
+    ],
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Litoral Gas Sociedad Anónima incluidos en el Anexo N.° IF-2026-84164434-APN-UDYE#ENREGE que forma parte de la presente."
+   },
+   {
+    "id": "346674",
+    "date": "2026-09-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 536/2026 RESFC-2026-536-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346674/20260901",
+    "topics": [
+     "Hidrocarburos",
+     "Gas natural"
+    ],
+    "summary": "Aprobar los cuadros tarifarios a aplicar por Metrogas Sociedad Anónima incluidos en el Anexo N.° IF-2026-84164384-APN-UDYE#ENREGE que forma parte de la presente."
+   },
+   {
+    "id": "346671",
+    "date": "2026-09-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 533/2026 RESFC-2026-533-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346671/20260901",
+    "topics": [
+     "Gas natural"
+    ],
+    "summary": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gasoducto Gasandes Argentina Sociedad Anónima incluidos en el Anexo N.° IF-2026-83733502-APN-UDYE#ENREGE que forma parte de la presente."
+   },
+   {
+    "id": "346670",
+    "date": "2026-09-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 532/2026 RESFC-2026-532-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346670/20260901",
+    "topics": [
+     "Gas natural"
+    ],
+    "summary": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Enel Generación Chile Sociedad Anónima incluidos en el Anexo N.° IF-2026-83733378-APN-UDYE#ENREGE que forma parte de la presente."
+   },
+   {
+    "id": "346669",
+    "date": "2026-09-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 531/2026 RESFC-2026-531-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346669/20260901",
+    "topics": [
+     "Gas natural"
+    ],
+    "summary": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Compañía Entrerriana de Gas Sociedad Anónima incluidos en el Anexo N.° IF-2026-83733271-APN-UDYE#ENREGE que forma parte de la presente."
+   },
+   {
+    "id": "346668",
+    "date": "2026-09-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 530/2026 RESFC-2026-530-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346668/20260901",
+    "topics": [
+     "Gas natural"
+    ],
+    "summary": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gasoducto Norandino Argentina Sociedad Anónima incluidos en el Anexo N.° IF-2026-83733558-APN-UDYE#ENREGE que forma parte de la presente."
    }
+  ],
+  "rejected_ids": [
+   "345884",
+   "345885",
+   "345886",
+   "345887",
+   "345901",
+   "345949",
+   "345967",
+   "345968",
+   "345987",
+   "346035",
+   "346036",
+   "346037",
+   "346038",
+   "346039",
+   "346040",
+   "346041",
+   "346042",
+   "346043",
+   "346044",
+   "346045",
+   "346046",
+   "346047",
+   "346048",
+   "346049",
+   "346054",
+   "346062",
+   "346113",
+   "346145",
+   "346155",
+   "346156",
+   "346157",
+   "346160",
+   "346179",
+   "346180",
+   "346225",
+   "346226",
+   "346267",
+   "346268",
+   "346269",
+   "346270",
+   "346271",
+   "346332",
+   "346333",
+   "346340",
+   "346398",
+   "346399",
+   "346458",
+   "346459",
+   "346460",
+   "346461",
+   "346462",
+   "346463",
+   "346464",
+   "346478",
+   "346534",
+   "346538",
+   "346609",
+   "346610",
+   "346625",
+   "346645",
+   "346646",
+   "346647",
+   "346648",
+   "346649",
+   "346650",
+   "346651",
+   "346652",
+   "346653",
+   "346654",
+   "346655",
+   "346656",
+   "346657",
+   "346658",
+   "346659",
+   "346660",
+   "346661",
+   "346672",
+   "346673",
+   "346694",
+   "346695",
+   "346696",
+   "346697",
+   "346698",
+   "346699",
+   "346700",
+   "346701",
+   "346702",
+   "346703",
+   "346704",
+   "346705",
+   "346706",
+   "346707",
+   "346710",
+   "346711",
+   "346712",
+   "346713",
+   "346714",
+   "346715",
+   "346726",
+   "346784",
+   "346786",
+   "346800",
+   "346806",
+   "346807",
+   "346808",
+   "346809",
+   "346815",
+   "346872",
+   "346873",
+   "346882",
+   "346914",
+   "346917",
+   "346918",
+   "346919",
+   "346920",
+   "346921",
+   "346967",
+   "346977",
+   "347098",
+   "347105",
+   "347109",
+   "347163",
+   "347205",
+   "347206",
+   "347207",
+   "347208",
+   "347209",
+   "347210",
+   "347212",
+   "347213",
+   "347251",
+   "347252",
+   "347283",
+   "347284",
+   "347285",
+   "347286",
+   "347287",
+   "347288",
+   "347289",
+   "347290",
+   "347291",
+   "347292",
+   "347293",
+   "347294",
+   "347295",
+   "347296",
+   "347297",
+   "347298",
+   "347299",
+   "347300",
+   "347301",
+   "347302",
+   "347303",
+   "347304",
+   "347337",
+   "347338",
+   "347339",
+   "347369",
+   "347399",
+   "347418",
+   "347454",
+   "347461",
+   "347463",
+   "347508",
+   "347509",
+   "347530",
+   "347539",
+   "347575",
+   "347576",
+   "347577",
+   "347578",
+   "347579",
+   "347580",
+   "347581",
+   "347582",
+   "347583",
+   "347584",
+   "347597",
+   "347619",
+   "347653",
+   "347682",
+   "347735",
+   "347736",
+   "347737",
+   "347738",
+   "347739",
+   "347740",
+   "347741",
+   "347763",
+   "347793",
+   "347794",
+   "347835",
+   "347840",
+   "347841",
+   "347887",
+   "347888",
+   "347890",
+   "347963",
+   "347964",
+   "347979",
+   "347985",
+   "347993",
+   "347994",
+   "347995",
+   "348073",
+   "348120",
+   "348121",
+   "348122",
+   "348123",
+   "348124",
+   "348125",
+   "348126",
+   "348127",
+   "348128",
+   "348141",
+   "348144",
+   "348236",
+   "348237",
+   "348238",
+   "348239",
+   "348240",
+   "348247",
+   "348250",
+   "348256",
+   "348302",
+   "348304",
+   "348305",
+   "348306",
+   "348307",
+   "348308",
+   "348309",
+   "348310",
+   "348311",
+   "348312",
+   "348313",
+   "348314",
+   "348315",
+   "348316",
+   "348317",
+   "348318",
+   "348319",
+   "348320",
+   "348321",
+   "348322",
+   "348347",
+   "348348",
+   "348349",
+   "348350",
+   "348351",
+   "348352",
+   "348353",
+   "348354",
+   "348355",
+   "348356",
+   "348359",
+   "348361",
+   "348384",
+   "348385",
+   "348407",
+   "348428",
+   "348491",
+   "348492",
+   "348569",
+   "348570",
+   "348574",
+   "348580",
+   "348622",
+   "348623",
+   "348624",
+   "348625",
+   "348626",
+   "348627",
+   "348628",
+   "348629",
+   "348630",
+   "348631",
+   "348632",
+   "348633",
+   "348634",
+   "348635",
+   "348636",
+   "348637",
+   "348638",
+   "348639",
+   "348640",
+   "348641",
+   "348642",
+   "348643",
+   "348644",
+   "348655",
+   "348656",
+   "348708",
+   "348723",
+   "348769",
+   "348770",
+   "348771",
+   "348772",
+   "348773",
+   "348774",
+   "348775",
+   "348811"
   ]
  },
  "news": {
@@ -2202,11 +2513,11 @@
    }
   ]
  },
- "generated_at": "2026-10-12T18:13Z",
+ "generated_at": "2026-10-12T18:34Z",
  "status": {
   "fracking": {
    "ok": true,
-   "at": "2026-10-12T18:10Z",
+   "at": "2026-10-12T18:14Z",
    "diag": {
     "resources": [
      "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
@@ -2267,7 +2578,7 @@
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-12T18:10Z",
+   "at": "2026-10-12T18:14Z",
    "diag": {
     "pages": 1
    }
@@ -2276,28 +2587,23 @@
    "ok": false,
    "error": "RuntimeError: Falta EIA_API_KEY (secreto del repositorio)",
    "diag": {},
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 398, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 388, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 206, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 426, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 416, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 213, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
   },
   "regulations": {
    "ok": true,
-   "at": "2026-10-12T18:13Z",
+   "at": "2026-10-12T18:34Z",
    "diag": {
-    "pages": 6,
+    "pages": 43,
     "page_errors": 0,
-    "links": 628,
-    "sample": [
-     "RÉGIMEN PENAL TRIBUTARIO - LEY DE PROCEDIMIENTO TRIBUTARIO | Ley 27826 | Modificación.",
-     "Decreto 1160/2026 | DECTO-2026-1160-APN-PTE - Promúlgase la Ley N° 27.826.",
-     "DECLARACIONES OFICIALES | Ley 27827 | Declárese Héroe Nacional al Brigadier Estanislao López “Patriarca del Federalismo Argentino”."
-    ],
-    "matched": 10,
-    "details_fetched": 60,
+    "links": 3783,
+    "candidates": 374,
+    "kept": 73,
     "details_failed": 0
    }
   },
   "news": {
    "ok": true,
-   "at": "2026-10-12T18:13Z",
+   "at": "2026-10-12T18:34Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
