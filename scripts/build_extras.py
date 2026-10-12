@@ -40,6 +40,13 @@ def norm(t: str) -> str:
     return re.sub(r"\s+", " ", t).strip().lower()
 
 
+def tiene(texto: str, clave: str) -> bool:
+    """Coincidencia de clave en texto normalizado; las claves cortas solo como palabra completa."""
+    if len(clave) <= 5:
+        return re.search(rf"\b{re.escape(clave)}\b", texto) is not None
+    return clave in texto
+
+
 def get(url: str, **kw) -> requests.Response:
     r = requests.get(url, headers={**UA, **kw.pop("headers", {})}, timeout=kw.pop("timeout", TIMEOUT), **kw)
     r.raise_for_status()
@@ -232,20 +239,41 @@ def oil_price(diag: dict) -> dict:
 # ---------------------------------------------------------------------------
 BO_BASE = "https://www.boletinoficial.gob.ar"
 BO_SECCION = f"{BO_BASE}/seccion/primera"
-KEYWORDS = [
+# Preselección por organismo o título (barata, sobre el listado del día).
+PRESELECT = [
     "rigi", "regimen de incentivo para grandes inversiones", "hidrocarburo", "petroleo", "gas natural", "gnl",
-    "gas natural licuado", "oleoducto", "gasoducto", "vaca muerta", "neuquen", "secretaria de energia",
-    "ente nacional regulador del gas", "enargas", "cammesa", "upstream", "refinacion", "combustible",
-    "concesion de explotacion", "no convencional", "exportacion de crudo", "biocombustible",
+    "oleoducto", "gasoducto", "vaca muerta", "neuquen", "secretaria de energia", "subsecretaria de combustibles",
+    "subsecretaria de energia", "ente nacional regulador del gas", "enargas", "enrege", "upstream", "refinacion",
+    "combustible", "concesion de explotacion", "no convencional", "biocombustible", "ministerio de economia",
 ]
-NOISE = ["licitacion privada", "designase", "designacion", "dase por designad", "prorrogase la designacion"]
+# Confirmación sobre el texto completo: el aviso tiene que tratar de hidrocarburos, gas o RIGI.
+TEMAS = {
+    "RIGI": ["regimen de incentivo para grandes inversiones", "rigi"],
+    "Hidrocarburos": ["hidrocarburo", "petroleo crudo", "petroleo y gas", "explotacion no convencional",
+                      "concesion de explotacion", "permiso de exploracion", "ley 17.319", "ley n° 17.319", "upstream"],
+    "Vaca Muerta": ["vaca muerta"],
+    "Gas natural": ["gas natural licuado", "gnl", "gasoducto", "transporte de gas", "distribucion de gas", "plan gas"],
+    "Petróleo": ["oleoducto", "refineria", "refinacion", "exportacion de crudo", "combustibles liquidos", "precio del crudo"],
+    "Biocombustibles": ["biocombustible", "bioetanol", "biodiesel"],
+}
+NOISE = ["designase", "dase por designad", "prorrogase la designacion", "denuncia", "codigo aduanero",
+         "sumario", "licitacion privada"]
+
+
+def resumen_aviso(texto: str) -> str:
+    """Parte dispositiva del aviso: lo que sigue a RESUELVE/DECRETA/DISPONE, o el inicio del texto."""
+    m = re.search(r"\b(RESUELVE|DECRETA|DISPONE|RESUELVEN|DISPONEN)\s*:\s*(.+)", texto)
+    cuerpo = m.group(2) if m else texto
+    cuerpo = re.sub(r"^ART[IÍ]CULO\s*1\s*[°º]?\s*[.\-–:]*\s*", "", cuerpo.strip(), flags=re.I)
+    cuerpo = re.split(r"\s+ART[IÍ]CULO\s*2", cuerpo, maxsplit=1, flags=re.I)[0]
+    return cuerpo[:320].strip() + ("…" if len(cuerpo) > 320 else "")
 
 
 def regulations(diag: dict, previo: dict | None) -> dict:
     from bs4 import BeautifulSoup
 
-    viejos = (previo or {}).get("items", [])
-    # Sin historial, se recorren los últimos 60 días; después alcanza con la última semana.
+    viejos = [i for i in (previo or {}).get("items", []) if i.get("topics")]
+    descartados = set((previo or {}).get("rejected_ids", []))
     dias = 60 if len(viejos) < 5 else 7
     paginas = [BO_SECCION] + [f"{BO_SECCION}/{(date.today() - timedelta(days=d)).strftime('%Y%m%d')}"
                               for d in range(1, dias + 1) if (date.today() - timedelta(days=d)).weekday() < 5]
@@ -259,54 +287,54 @@ def regulations(diag: dict, previo: dict | None) -> dict:
     diag.update({"pages": len(paginas), "page_errors": errores, "links": len(links)})
     if not links:
         raise RuntimeError("No se encontraron avisos en la primera sección")
-    diag["sample"] = [" | ".join(p.strip() for p in a.get_text("\n").split("\n") if p.strip())[:200] for a in links[:3]]
 
-    nuevos = []
+    conocidos = {i["id"] for i in viejos} | descartados
+    candidatos = {}
     for a in links:
         href = a.get("href", "")
         m = re.search(r"/detalleAviso/primera/(\d+)/(\d{8})", href)
-        if not m:
+        if not m or m.group(1) in conocidos or m.group(1) in candidatos:
             continue
         partes = [p.strip() for p in a.get_text("\n").split("\n") if p.strip()]
-        texto = " ".join(partes)
-        t = norm(texto)
-        if not any(k in t for k in KEYWORDS) or any(n in t for n in NOISE):
+        t = norm(" ".join(partes))
+        if not any(tiene(t, k) for k in PRESELECT) or any(n in t for n in NOISE):
             continue
-        fecha = f"{m.group(2)[:4]}-{m.group(2)[4:6]}-{m.group(2)[6:]}"
-        nuevos.append({
+        candidatos[m.group(1)] = {
             "id": m.group(1),
-            "date": fecha,
+            "date": f"{m.group(2)[:4]}-{m.group(2)[4:6]}-{m.group(2)[6:]}",
             "agency": partes[0][:160] if partes else "",
-            "title": " ".join(partes[1:3])[:280] if len(partes) > 1 else texto[:280],
+            "title": " ".join(partes[1:3])[:200] if len(partes) > 1 else " ".join(partes)[:200],
             "url": BO_BASE + href if href.startswith("/") else href,
-            "tags": sorted({k for k in KEYWORDS if k in t})[:5],
-        })
-    diag["matched"] = len(nuevos)
+        }
+    diag["candidates"] = len(candidatos)
+
+    nuevos, fallas = [], 0
+    for c in candidatos.values():
+        try:
+            det = BeautifulSoup(get(c["url"], timeout=40).text, "html.parser")
+            cuerpo = det.select_one("#cuerpoDetalleAviso") or det.select_one(".cuerpo-aviso") or det.body
+            texto = re.sub(r"\s+", " ", cuerpo.get_text(" ")).strip() if cuerpo else ""
+        except Exception:
+            fallas += 1
+            continue
+        t = norm(texto)
+        temas = [tema for tema, claves in TEMAS.items() if any(tiene(t, k) for k in claves)]
+        if not temas or any(n in norm(c["title"]) for n in NOISE):
+            descartados.add(c["id"])
+            continue
+        c["topics"] = temas
+        c["summary"] = resumen_aviso(texto)
+        nuevos.append(c)
+    diag.update({"kept": len(nuevos), "details_failed": fallas})
+
     por_id = {i["id"]: i for i in viejos}
     por_id.update({i["id"]: i for i in nuevos})
     limite = (date.today() - timedelta(days=120)).isoformat()
     items = sorted((i for i in por_id.values() if i["date"] >= limite), key=lambda i: (i["date"], i["id"]), reverse=True)[:60]
-    # Resumen: primer artículo resolutivo del aviso (solo para los que todavía no lo tienen).
-    pedidos = fallas = 0
-    for i in items:
-        if i.get("summary") is not None:
-            continue
-        pedidos += 1
-        try:
-            det = BeautifulSoup(get(i["url"], timeout=40).text, "html.parser")
-            cuerpo = det.select_one("#cuerpoDetalleAviso") or det.select_one(".cuerpo-aviso") or det.body
-            texto = re.sub(r"\s+", " ", cuerpo.get_text(" ")).strip() if cuerpo else ""
-            m = re.search(r"ART[IÍ]CULO\s*1\s*[°º]?\s*[.\-–:]*\s*(.+?)(?=ART[IÍ]CULO\s*2|$)", texto, re.I)
-            resumen = (m.group(1) if m else texto)[:320].strip()
-            i["summary"] = resumen + ("…" if len(resumen) == 320 else "")
-        except Exception:
-            fallas += 1
-            i["summary"] = None
-    diag.update({"details_fetched": pedidos, "details_failed": fallas})
     return {
         "source": {"name": "Boletín Oficial de la República Argentina, primera sección", "url": BO_BASE},
-        "keywords": KEYWORDS,
         "items": items,
+        "rejected_ids": sorted(descartados)[-3000:],
     }
 
 
@@ -344,7 +372,7 @@ def news(diag: dict) -> dict:
                     if not titulo or not link.startswith("http"):
                         continue
                     t = norm(titulo)
-                    if medio not in SECTORIALES and not any(k in t for k in NEWS_KW):
+                    if medio not in SECTORIALES and not any(tiene(t, k) for k in NEWS_KW):
                         continue
                     cuando = None
                     for campo in ("published", "updated"):
