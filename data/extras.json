@@ -7,6 +7,13 @@
   },
   "monthly": [
    {
+    "period": "2022-07",
+    "stages": 1340,
+    "wells": 31,
+    "sand_t": 293278,
+    "lateral_m": 2564
+   },
+   {
     "period": "2022-08",
     "stages": 1007,
     "wells": 24,
@@ -334,62 +341,55 @@
     "wells": 33,
     "sand_t": 359877,
     "lateral_m": 2954
-   },
-   {
-    "period": "2026-07",
-    "stages": 174,
-    "wells": 4,
-    "sand_t": 40821,
-    "lateral_m": 3200
    }
   ],
-  "stages_12m": 21135,
-  "stages_12m_yoy_pct": 0.3,
-  "wells_12m": 408,
-  "sand_12m_t": 4790967,
+  "stages_12m": 23234,
+  "stages_12m_yoy_pct": 16.6,
+  "wells_12m": 449,
+  "sand_12m_t": 5296043,
   "operators": [
    {
     "name": "YPF",
-    "stages_12m": 10842,
-    "share_pct": 51.3
+    "stages_12m": 12033,
+    "share_pct": 51.8
    },
    {
     "name": "Pluspetrol",
-    "stages_12m": 2781,
-    "share_pct": 13.2
+    "stages_12m": 3014,
+    "share_pct": 13.0
    },
    {
     "name": "Vista",
-    "stages_12m": 2200,
-    "share_pct": 10.4
+    "stages_12m": 2398,
+    "share_pct": 10.3
    },
    {
     "name": "Pampa Energía",
     "stages_12m": 1738,
-    "share_pct": 8.2
+    "share_pct": 7.5
    },
    {
     "name": "Pan American Energy",
-    "stages_12m": 1226,
-    "share_pct": 5.8
+    "stages_12m": 1283,
+    "share_pct": 5.5
    },
    {
     "name": "Shell",
-    "stages_12m": 725,
-    "share_pct": 3.4
+    "stages_12m": 948,
+    "share_pct": 4.1
    },
    {
     "name": "Chevron",
-    "stages_12m": 588,
-    "share_pct": 2.8
+    "stages_12m": 785,
+    "share_pct": 3.4
    },
    {
     "name": "TotalEnergies",
     "stages_12m": 444,
-    "share_pct": 2.1
+    "share_pct": 1.9
    }
   ],
-  "last_period": "2026-07"
+  "last_period": "2026-06"
  },
  "fx": {
   "source": {
@@ -1397,16 +1397,611 @@
    "exportacion de crudo",
    "biocombustible"
   ],
-  "items": []
+  "items": [
+   {
+    "id": "348708",
+    "date": "2026-10-08",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+    "title": "Resolución 281/2026 RESOL-2026-281-APN-SE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348708/20261008",
+    "tags": [
+     "secretaria de energia"
+    ]
+   },
+   {
+    "id": "348656",
+    "date": "2026-10-07",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución Sintetizada 737/2026",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348656/20261007",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348655",
+    "date": "2026-10-07",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución Sintetizada 736/2026",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348655/20261007",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348642",
+    "date": "2026-10-07",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+    "title": "Resolución 278/2026 RESOL-2026-278-APN-SE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348642/20261007",
+    "tags": [
+     "secretaria de energia"
+    ]
+   },
+   {
+    "id": "348641",
+    "date": "2026-10-07",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+    "title": "Resolución 277/2026 RESOL-2026-277-APN-SE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348641/20261007",
+    "tags": [
+     "secretaria de energia"
+    ]
+   },
+   {
+    "id": "348614",
+    "date": "2026-10-07",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 738/2026 RESFC-2026-738-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348614/20261007",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348580",
+    "date": "2026-10-06",
+    "agency": "AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA NEUQUÉN",
+    "title": "Aviso Oficial",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348580/20261006",
+    "tags": [
+     "neuquen"
+    ]
+   },
+   {
+    "id": "348571",
+    "date": "2026-10-06",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+    "title": "Resolución 275/2026 RESOL-2026-275-APN-SE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348571/20261006",
+    "tags": [
+     "secretaria de energia"
+    ]
+   },
+   {
+    "id": "348570",
+    "date": "2026-10-06",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+    "title": "Resolución 274/2026 RESOL-2026-274-APN-SE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348570/20261006",
+    "tags": [
+     "secretaria de energia"
+    ]
+   },
+   {
+    "id": "348492",
+    "date": "2026-10-05",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+    "title": "Resolución 273/2026 RESOL-2026-273-APN-SE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348492/20261005",
+    "tags": [
+     "secretaria de energia"
+    ]
+   },
+   {
+    "id": "348428",
+    "date": "2026-10-02",
+    "agency": "MINISTERIO DE ECONOMÍA - SUBSECRETARÍA DE ENERGÍA ELÉCTRICA",
+    "title": "Aviso Oficial",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348428/20261002",
+    "tags": [
+     "secretaria de energia"
+    ]
+   },
+   {
+    "id": "348385",
+    "date": "2026-10-01",
+    "agency": "MINISTERIO DE ECONOMÍA - SUBSECRETARÍA DE ENERGÍA ELÉCTRICA",
+    "title": "Aviso Oficial",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348385/20261001",
+    "tags": [
+     "secretaria de energia"
+    ]
+   },
+   {
+    "id": "348360",
+    "date": "2026-10-01",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+    "title": "Resolución 272/2026 RESOL-2026-272-APN-SE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348360/20261001",
+    "tags": [
+     "secretaria de energia"
+    ]
+   },
+   {
+    "id": "348359",
+    "date": "2026-10-01",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+    "title": "Resolución 271/2026 RESOL-2026-271-APN-SE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348359/20261001",
+    "tags": [
+     "secretaria de energia"
+    ]
+   },
+   {
+    "id": "348358",
+    "date": "2026-10-01",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+    "title": "Resolución 270/2026 RESOL-2026-270-APN-SE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348358/20261001",
+    "tags": [
+     "secretaria de energia"
+    ]
+   },
+   {
+    "id": "348357",
+    "date": "2026-10-01",
+    "agency": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+    "title": "Resolución 269/2026 RESOL-2026-269-APN-SE#MEC",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348357/20261001",
+    "tags": [
+     "secretaria de energia"
+    ]
+   },
+   {
+    "id": "348342",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 729/2026 RESFC-2026-729-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348342/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348341",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 728/2026 RESFC-2026-728-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348341/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348340",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 727/2026 RESFC-2026-727-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348340/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348339",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 726/2026 RESFC-2026-726-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348339/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348338",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 725/2026 RESFC-2026-725-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348338/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348337",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 724/2026 RESFC-2026-724-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348337/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348336",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 723/2026 RESFC-2026-723-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348336/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348335",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 722/2026 RESFC-2026-722-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348335/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348334",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 721/2026 RESFC-2026-721-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348334/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348333",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 720/2026 RESFC-2026-720-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348333/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348332",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 719/2026 RESFC-2026-719-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348332/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348331",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 718/2026 RESFC-2026-718-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348331/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348330",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 717/2026 RESFC-2026-717-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348330/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348329",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 716/2026 RESFC-2026-716-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348329/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348328",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 715/2026 RESFC-2026-715-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348328/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348327",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 714/2026 RESFC-2026-714-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348327/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348326",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 713/2026 RESFC-2026-713-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348326/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348325",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 712/2026 RESFC-2026-712-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348325/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348324",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 711/2026 RESFC-2026-711-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348324/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348323",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 710/2026 RESFC-2026-710-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348323/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348322",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 709/2026 RESFC-2026-709-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348322/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348321",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 708/2026 RESFC-2026-708-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348321/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348320",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 707/2026 RESFC-2026-707-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348320/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348319",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 706/2026 RESFC-2026-706-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348319/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348318",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 705/2026 RESFC-2026-705-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348318/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348317",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 704/2026 RESFC-2026-704-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348317/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348316",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 703/2026 RESFC-2026-703-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348316/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348315",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 702/2026 RESFC-2026-702-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348315/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348314",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 701/2026 RESFC-2026-701-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348314/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348313",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 700/2026 RESFC-2026-700-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348313/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348312",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 699/2026 RESFC-2026-699-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348312/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348311",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 698/2026 RESFC-2026-698-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348311/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348310",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 697/2026 RESFC-2026-697-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348310/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348309",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 696/2026 RESFC-2026-696-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348309/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348308",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 695/2026 RESFC-2026-695-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348308/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348307",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 694/2026 RESFC-2026-694-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348307/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348306",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 693/2026 RESFC-2026-693-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348306/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348305",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 692/2026 RESFC-2026-692-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348305/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348304",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 691/2026 RESFC-2026-691-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348304/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348303",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 689/2026 RESFC-2026-689-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348303/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348302",
+    "date": "2026-10-01",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución 673/2026 RESFC-2026-673-APN-DIRECTORIO#ENREGE",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348302/20261001",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348250",
+    "date": "2026-09-30",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución Sintetizada 669/2026",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348250/20260930",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   },
+   {
+    "id": "348227",
+    "date": "2026-09-30",
+    "agency": "COMBUSTIBLES",
+    "title": "Decreto 1126/2026 DECTO-2026-1126-APN-PTE - Decreto Nº 617/2025. Modificación.",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348227/20260930",
+    "tags": [
+     "combustible"
+    ]
+   },
+   {
+    "id": "348141",
+    "date": "2026-09-29",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución Sintetizada 666/2026",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348141/20260929",
+    "tags": [
+     "ente nacional regulador del gas"
+    ]
+   }
+  ]
  },
  "news": {
   "items": [
-   {
-    "source": "Infobae",
-    "title": "Vuelve el auto del abuelo: la nueva versión del 2CV será eléctrica, de precio accesible y llegará en 2028",
-    "url": "https://www.infobae.com/economia/2026/10/12/vuelve-el-auto-del-abuelo-la-nueva-version-del-2cv-sera-electrica-de-precio-accesible-y-llegara-en-2028/",
-    "published": "2026-10-12T17:31Z"
-   },
    {
     "source": "Infobae",
     "title": "Crece la volatilidad del petróleo: revirtió sus pérdidas y superó los USD 107 en medio de ataques de Irán, los rebeldes hutíes y Rusia",
@@ -1432,12 +2027,6 @@
     "published": "2026-10-11T23:00Z"
    },
    {
-    "source": "Infobae",
-    "title": "Una provincia vive el mes más grande de su historia minera: se estrenan cuatro plantas de litio por USD 2.000 millones",
-    "url": "https://www.infobae.com/economia/2026/10/11/una-provincia-vive-el-mes-mas-grande-de-su-historia-minera-se-estrenan-cuatro-plantas-de-litio-por-usd-2000-millones/",
-    "published": "2026-10-11T14:21Z"
-   },
-   {
     "source": "EconoJournal",
     "title": "El idilio de Milei y una nueva visita en Vaca Muerta",
     "url": "https://econojournal.com.ar/enclave/el-idilio-de-milei-y-una-nueva-visita-en-vaca-muerta/",
@@ -1453,12 +2042,6 @@
     "source": "EconoJournal",
     "title": "Galuccio: “A través del gas de Vaca Muerta, la Argentina puede contribuir a la resiliencia global de la infraestructura digital”",
     "url": "https://econojournal.com.ar/destacada/galuccio-gas-vaca-muerta-ia/",
-    "published": "2026-10-10T19:59Z"
-   },
-   {
-    "source": "Infobae",
-    "title": "En Silicon Valley, Miguel Galuccio destacó el potencial aporte de la Argentina a “la resiliencia global de la infraestructura digital”",
-    "url": "https://www.infobae.com/economia/2026/10/10/en-silicon-valley-miguel-galuccio-destaco-el-potencial-aporte-de-la-argentina-a-la-resiliencia-global-de-la-infraestructura-digital/",
     "published": "2026-10-10T19:59Z"
    },
    {
@@ -1511,6 +2094,18 @@
    },
    {
     "source": "Ámbito",
+    "title": "La energía nuclear se abre paso con un perfil exportador",
+    "url": "https://www.ambito.com/ambito-debate/la-energia-nuclear-se-abre-paso-un-perfil-exportador-n6330602",
+    "published": "2026-10-06T16:30Z"
+   },
+   {
+    "source": "Ámbito",
+    "title": "Energía en auge y minería en consolidación: ¿qué se viene para Argentina?",
+    "url": "https://www.ambito.com/ambito-debate/energia-auge-y-mineria-consolidacion-que-se-viene-argentina-n6330662",
+    "published": "2026-10-06T16:30Z"
+   },
+   {
+    "source": "Ámbito",
     "title": "Nuevo RIGI: Pluspetrol invertirá u$s12.400 millones en Vaca Muerta",
     "url": "https://www.ambito.com/economia/pluspetrol-anuncia-la-inversion-us-12400-millones-vaca-muerta-traves-del-rigi-n6329233",
     "published": "2026-10-02T10:31Z"
@@ -1547,11 +2142,11 @@
    }
   ]
  },
- "generated_at": "2026-10-12T18:03Z",
+ "generated_at": "2026-10-12T18:08Z",
  "status": {
   "fracking": {
    "ok": true,
-   "at": "2026-10-12T18:03Z",
+   "at": "2026-10-12T18:04Z",
    "diag": {
     "resources": [
      "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
@@ -1604,12 +2199,15 @@
      "cuenca": "cuenca",
      "pozo": "idpozo",
      "rama": "longitud_rama_horizontal_m"
-    }
+    },
+    "dropped_incomplete": [
+     202607
+    ]
    }
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-12T18:03Z",
+   "at": "2026-10-12T18:04Z",
    "diag": {
     "pages": 1
    }
@@ -1618,28 +2216,31 @@
    "ok": false,
    "error": "RuntimeError: Falta EIA_API_KEY (secreto del repositorio)",
    "diag": {},
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 372, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 362, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 201, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 381, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 371, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 206, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
   },
   "regulations": {
    "ok": true,
-   "at": "2026-10-12T18:03Z",
+   "at": "2026-10-12T18:08Z",
    "diag": {
-    "html_len": 196497,
-    "links": 111,
-    "matched_today": 0
+    "pages": 43,
+    "page_errors": 0,
+    "links": 3783,
+    "sample": [
+     "RÉGIMEN PENAL TRIBUTARIO - LEY DE PROCEDIMIENTO TRIBUTARIO | Ley 27826 | Modificación.",
+     "Decreto 1160/2026 | DECTO-2026-1160-APN-PTE - Promúlgase la Ley N° 27.826.",
+     "DECLARACIONES OFICIALES | Ley 27827 | Declárese Héroe Nacional al Brigadier Estanislao López “Patriarca del Federalismo Argentino”."
+    ],
+    "matched": 165
    }
   },
   "news": {
    "ok": true,
-   "at": "2026-10-12T18:03Z",
+   "at": "2026-10-12T18:08Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
-     "Shale24": "HTTPError: 404 Client Error: Not Found for url: https://www.shale24.com/rss/pages/home.xml (https://www.shale24.com/rss/pages/home.xml)",
-     "Río Negro": "sin entradas en https://www.rionegro.com.ar/energia/feed/",
-     "Mejor Energía": "HTTPError: 404 Client Error: Not Found for url: https://www.mejorenergia.com.ar/feed (https://www.mejorenergia.com.ar/feed)",
-     "Infobae": "ok 5 de https://www.infobae.com/arc/outboundfeeds/rss/category/economia/",
-     "Ámbito": "ok 9 de https://www.ambito.com/rss/pages/energia.xml"
+     "Infobae": "ok 2 de https://www.infobae.com/arc/outboundfeeds/rss/category/economia/",
+     "Ámbito": "ok 11 de https://www.ambito.com/rss/pages/energia.xml"
     }
    }
   }
