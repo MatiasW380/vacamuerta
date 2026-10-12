@@ -141,6 +141,8 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
 .context p { margin: 0; color: var(--ink-2); font-size: 15.5px; }
 .context .src { display: block; margin-top: 8px; font-size: 13px; color: var(--ink-3); }
 @media (max-width: 860px) { .context { grid-template-columns: 1fr; gap: 24px; } }
+.quotes { margin-top: 18px; min-height: 420px; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.tickers td:nth-child(2), .tickers th:nth-child(2) { text-align: left; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
@@ -211,6 +213,25 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
       </div>
       <ul class="legend" id="histLegend"></ul>
       <div class="chart" id="histChart"></div>
+    </section>
+
+    <section class="section" aria-labelledby="listedTitle">
+      <h2 id="listedTitle" data-i18n="listedTitle">Listed companies</h2>
+      <p class="section-lede" data-i18n="listedLede">Three Vaca Muerta operators trade on the stock market. Their share price next to what they actually produce in the formation.</p>
+      <div class="table-wrap">
+        <table class="tickers" id="listedTable">
+          <thead><tr>
+            <th scope="col" data-i18n="thCompany">Company</th>
+            <th scope="col" data-i18n="thTickers">Tickers</th>
+            <th scope="col" data-i18n="thOil">Oil, bbl/d</th>
+            <th scope="col" data-i18n="thShare">Share</th>
+            <th scope="col" data-i18n="thYoy">Oil vs a year ago</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="quotes" id="quotes"></div>
+      <p class="note" data-i18n="quotesNote">Share prices and charts by TradingView, with the delay set by each exchange. Shell, Chevron and TotalEnergies also operate in Vaca Muerta and are listed, but the formation is a small part of their global business. Pluspetrol, Pan American Energy and Tecpetrol are private.</p>
     </section>
 
     <section class="section">
@@ -323,6 +344,10 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
       empty: "Production data is being loaded for the first time. Check back in a few minutes.",
       disclaimer: "For information only. Not investment advice.",
       fWells: "wells producing",
+      listedTitle: "Listed companies",
+      listedLede: "Three Vaca Muerta operators trade on the stock market. Their share price next to what they actually produce in the formation.",
+      thCompany: "Company", thTickers: "Tickers",
+      quotesNote: "Share prices and charts by TradingView, with the delay set by each exchange. Shell, Chevron and TotalEnergies also operate in Vaca Muerta and are listed, but the formation is a small part of their global business. Pluspetrol, Pan American Energy and Tecpetrol are private.",
       wellsTitle: "Drilling activity",
       wellsLede: (n, p) => `${n} new wells started producing in the last 12 months. Each one now delivers ${p} barrels a day on average.`,
       newWellsTitle: "New wells starting production, per month", perWellTitle: "Average oil per producing well, bbl/d",
@@ -358,6 +383,10 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
       empty: "Los datos de producción se están cargando por primera vez. Volvé en unos minutos.",
       disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.",
       fWells: "pozos en producción",
+      listedTitle: "Empresas que cotizan",
+      listedLede: "Tres operadoras de Vaca Muerta cotizan en bolsa. Su acción al lado de lo que efectivamente producen en la formación.",
+      thCompany: "Empresa", thTickers: "Tickers",
+      quotesNote: "Cotizaciones y gráficos de TradingView, con la demora que fija cada bolsa. Shell, Chevron y TotalEnergies también operan en Vaca Muerta y cotizan, pero la formación es una parte chica de su negocio global. Pluspetrol, Pan American Energy y Tecpetrol son privadas.",
       wellsTitle: "Actividad de perforación",
       wellsLede: (n, p) => `${n} pozos nuevos empezaron a producir en los últimos 12 meses. Cada pozo rinde hoy ${p} barriles por día en promedio.`,
       newWellsTitle: "Pozos nuevos que empiezan a producir, por mes", perWellTitle: "Petróleo promedio por pozo en producción, bbl/d",
@@ -615,6 +644,42 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
     hit.addEventListener("keydown", e => { if (e.key === "ArrowLeft") { show(cur - 1); e.preventDefault(); } if (e.key === "ArrowRight") { show(cur + 1); e.preventDefault(); } });
   }
 
+  // Listed operators: our production data + TradingView quotes widget.
+  const LISTED = [
+    { name: "YPF", tickers: "NYSE: YPF, BYMA: YPFD", tv: [["YPF", "NYSE:YPF|12M"], ["YPFD", "BCBA:YPFD|12M"]] },
+    { name: "Vista", tickers: "NYSE: VIST, BMV: VISTA", tv: [["VIST", "NYSE:VIST|12M"]] },
+    { name: "Pampa Energía", tickers: "NYSE: PAM, BYMA: PAMP", tv: [["PAM", "NYSE:PAM|12M"], ["PAMP", "BCBA:PAMP|12M"]] },
+  ];
+  let quotesKey = "";
+  function mountQuotes() {
+    const host = $("#quotes");
+    const dark = document.documentElement.dataset.theme === "dark" ||
+      (document.documentElement.dataset.theme !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+    const key = lang + (dark ? "d" : "l");
+    if (key === quotesKey) return;
+    quotesKey = key;
+    host.innerHTML = "";
+    const box = document.createElement("div"); box.className = "tradingview-widget-container";
+    const inner = document.createElement("div"); inner.className = "tradingview-widget-container__widget";
+    const s = document.createElement("script");
+    s.src = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js";
+    s.async = true; s.type = "text/javascript";
+    s.text = JSON.stringify({
+      symbols: LISTED.flatMap(c => c.tv),
+      chartOnly: false, width: "100%", height: 420, locale: lang === "es" ? "es" : "en",
+      colorTheme: dark ? "dark" : "light", autosize: false, showVolume: false, showMA: false,
+      hideDateRanges: false, hideMarketStatus: false, hideSymbolLogo: false,
+      scalePosition: "right", scaleMode: "Normal", fontFamily: "Archivo, system-ui, sans-serif", fontSize: "11",
+      noTimeScale: false, valuesTracking: "1", changeMode: "price-and-percent", chartType: "area",
+      lineWidth: 2, lineType: 0, dateRanges: ["1m|30", "3m|60", "12m|1D", "60m|1W", "all|1M"],
+      lineColor: dark ? "#3987e5" : "#2a78d6", topColor: dark ? "rgba(57,135,229,.18)" : "rgba(42,120,214,.12)",
+      bottomColor: "rgba(42,120,214,0)", backgroundColor: dark ? "#1a2127" : "#ffffff",
+      gridLineColor: dark ? "rgba(255,255,255,.06)" : "rgba(23,33,43,.06)",
+    });
+    box.append(inner, s);
+    host.append(box);
+  }
+
   function render() {
     const t = T[lang];
     document.documentElement.lang = lang;
@@ -657,6 +722,15 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
       $("#histLegend").innerHTML = h.names.map((n, k) => `<li><i style="background:${colors[k]}"></i>${esc(n)}</li>`).join("");
       multiLine($("#histChart"), h.periods, h.names, h.oil_bbl_d, colors);
     }
+    const byName = Object.fromEntries(DATA.operators.map(o => [o.name, o]));
+    $("#listedTable tbody").innerHTML = LISTED.map(c => {
+      const o = byName[c.name] || {};
+      return `<tr><td>${esc(c.name)}</td><td>${esc(c.tickers)}</td><td>${fmt(o.oil_bbl_d)}</td>
+        <td>${o.share_pct == null ? "–" : fmt(o.share_pct, 1) + "%"}</td>
+        <td class="${o.oil_yoy_pct > 0 ? "delta-up" : o.oil_yoy_pct < 0 ? "delta-down" : ""}">${pct(o.oil_yoy_pct)}</td></tr>`;
+    }).join("");
+    mountQuotes();
+
     if (DATA.areas) {
       $("#areasTable tbody").innerHTML = DATA.areas.map(a => `<tr>
         <td>${esc(a.name)}</td><td style="text-align:left">${esc(a.operator)}</td><td>${fmt(a.oil_bbl_d)}</td>
