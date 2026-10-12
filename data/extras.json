@@ -12339,11 +12339,11 @@
    }
   ]
  },
- "generated_at": "2026-10-12T21:49Z",
+ "generated_at": "2026-10-12T21:51Z",
  "status": {
   "fracking": {
    "ok": true,
-   "at": "2026-10-12T21:48Z",
+   "at": "2026-10-12T21:50Z",
    "diag": {
     "resources": [
      "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
@@ -12404,19 +12404,19 @@
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-12T21:48Z",
+   "at": "2026-10-12T21:50Z",
    "diag": {
     "pages": 1
    }
   },
   "oil_price": {
    "ok": true,
-   "at": "2026-10-12T21:48Z",
+   "at": "2026-10-12T21:50Z",
    "diag": {}
   },
   "regulations": {
    "ok": true,
-   "at": "2026-10-12T21:48Z",
+   "at": "2026-10-12T21:51Z",
    "diag": {
     "pages": 6,
     "page_errors": 0,
@@ -12428,7 +12428,7 @@
   },
   "news": {
    "ok": true,
-   "at": "2026-10-12T21:48Z",
+   "at": "2026-10-12T21:51Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
@@ -12439,7 +12439,7 @@
   },
   "reserves": {
    "ok": true,
-   "at": "2026-10-12T21:48Z",
+   "at": "2026-10-12T21:51Z",
    "diag": {
     "package": "http://datos.energia.gob.ar reservas-de-petroleo-y-gas",
     "zip_files": [
@@ -12646,7 +12646,7 @@
   },
   "export_price": {
    "ok": true,
-   "at": "2026-10-12T21:48Z",
+   "at": "2026-10-12T21:51Z",
    "diag": {
     "package": "https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo",
     "resources": [
@@ -12977,7 +12977,7 @@
   },
   "fuel_prices": {
    "ok": true,
-   "at": "2026-10-12T21:48Z",
+   "at": "2026-10-12T21:51Z",
    "diag": {
     "package": "http://datos.energia.gob.ar precios-en-surtidor",
     "resources": [
@@ -13020,12 +13020,12 @@
   },
   "rigi_portal": {
    "ok": true,
-   "at": "2026-10-12T21:48Z",
+   "at": "2026-10-12T21:51Z",
    "diag": {
     "html_len": 76399,
     "context": "-thin\">&nbsp;</span><span class=\"fw-semibold fs-1\">M</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Empleos <span class=\"fw-medium br-sm br-xs\">(directos e indirectos)</span></dt><dd class=\"fs-1 fw-bold text-arg-verdin js-total-puestos-trabajo\">0</dd></div></dl></div><div class=\"col-md-12 m-y-2\"><h3 class=\"h4 font-sans-serif p-b-1 border-bottom\">Sectores</h3><dl class=\"dl-proyectos-sector\"><div class=\"d-grid\"><dt class=\"last\">Energía eléctrica</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-torre-electrica m-r-05\"></i> <span class=\"m-t-1 js-total-energia-electrica\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Petróleo y gas</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-petroleo-y-gas m-r-05\"></i> <span class=\"m-t-1 js-total-petroleo-y-gas\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Minería</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-mineria m-r-05\"></i> <span class=\"m-t-1 js-total-mineria\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Siderurgia</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-siderurgia m-r-05\"></i> <span class=\"m-t-1 js-total-siderurgia\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Infraestructura</dt><",
     "inline_scripts": [
-     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"NZV7DjOr8uxGql3HzPgF7ZzlzibBToNH2j8qTiHFTvc\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
+     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"8bq5Nb4uGb0xP7YnoUWMCXYV4TknLZXuNMtPdOUbJsE\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
      "const jsonContainer = document.getElementById('raw-data-json');\n  const jsonText = (jsonContainer.textContent || jsonContainer.innerText).trim();\n  const rawData = JSON.parse(jsonText);\n\n  const extractVal = (val) => (typeof val === 'object' && val !== null) ? (val.total || 0) : (val || 0);\n  const formatNum = (num) => Number(num || 0).toLocaleString('es-AR');\n\n  const getSeriesData = (key) => rawData.map(d => ({ \n    x: new Date(d.year).getTime(), \n    y: extractVal(d[key]) \n  }));\n\n  const seriesData = [\n    { key: 'energia', name: 'Energía Eléctrica', data: getSeriesData('energia') },\n    { key: 'petroleo', name: 'Petróleo y Gas', data: getSeriesData('petroleo') },\n    { key: 'mineria', name: 'Minería', data: getSeriesData('mineria') },\n    { key: 'siderurgia', name: 'Siderurgia', data: getSeriesData('siderurgia') },\n    { key: 'infra', name: 'Infraestructura', data: getSeriesData('infra') }\n  ];\n\n  var optionsMain = {\n    series: seriesData,\n    colors: ['#C2185B', '#B9CE39', '#6A1B99', '#4FBB73', '#F79D00'],\n    chart: {\n      id: 'chartBarMain',\n      type: 'bar',\n      height: 450,\n      stacked: true,\n      toolbar: { show: false }\n    },\n    grid: {\n      padding: {\n        right: 35,\n        left: 15\n      }\n    },\n    dataLabels: { enabled: false },\n    plotOptions: {\n      bar: {\n        dataLabels: {\n          total: {\n            enabled: true,\n            style: {\n              fontSize: '13px',\n              fontWeight: 900\n            },\n            formatter: function (val, opts) {\n              if (!val) return '';\n\n              // Validar si la columna está dentro del rango visible actual del zoom/brush\n              if (opts && opts.w && opts.w.globals) {\n                const timestamp = opts.w.globals.seriesX[0][opts.dataPointIndex];\n            ",
      "headStyle(\"rigi-cms-fix\", `.container:has(#mapa-portal){padding-left:0 !important;padding-right:0 !important;width:100% !important;}`);\nheadStyle('rigi__999d6df5647d2df27fe7', `.poncho-map{--pm-color-primary: var(--arg-escarapela);--pm-color-base: #eaeaea;--pm-slider-background: var(--arg-azul);--pm-slider-border-color: color-mix(in srgb, #626161 40%, white);--pm-slider-border-width: 2px;--pm-scrollbar-handle: #eaeaea;--pm-scrollbar-background: rgb(0, 0, 0, 0.15);--pm-hover-background: var(--arg-secundario);--pm-hover-color: white;--pm-active-color: #343232;--pm-active-visited-color: violet;--pm-active-background: var(--pm-color-primary);--color: var(--arg-escarapela);--pm-loader-spinner-background: var(--arg-amarillo);--pm-loader-background: var(--arg-azul);--pm-loader-spinner-color: var(--arg-primary-700)}details{--details-border-color: var(--arg-primary-300)}.details-container{--container-border-color: var(--arg-primary-500)}.poncho-map .marker--active:focus,.poncho-map .marker--active{fill:#000 !important;fill-opacity:0 !important}.color-primary{color:var(--color)}.poncho-map .pm-content a{color:var(--arg-escarapela)}.totals-overview{display:grid;gap:15px 15px;grid-template-areas:\"area-a area-b area-c\";grid-template-columns:27% 1fr 27%}.a,.b,.c{display:flex;flex-direction:column-reverse;align-self:self-start}.a{grid-area:area-a}.b{grid-area:area-b}.c{grid-area:area-c}.a .key,.b .key,.c .key,.a .value,.b .value,.c .value{margin:0}.a .key,.b .key,.c .key{font-size:.95rem}.value{grid-area:value}.a .value,.b .value,.c .value{font-size:1.35rem;line-height:2rem;display:flex;align-items:baseline}.c .value .small,.b .value .small,.c .value .small{font-size:1rem}.details-data dt{float:left;margin-right:.25rem}.details-data dt::after{content:\":\";font-weight:400}.details-data "
     ],
@@ -13075,7 +13075,7 @@
   },
   "royalties": {
    "ok": true,
-   "at": "2026-10-12T21:49Z",
+   "at": "2026-10-12T21:51Z",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
@@ -13485,7 +13485,7 @@
   },
   "royalties_gas": {
    "ok": true,
-   "at": "2026-10-12T21:49Z",
+   "at": "2026-10-12T21:51Z",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
@@ -13959,12 +13959,20 @@
     "series_status": 200,
     "series_head": {
      "92.1_TCV_0_0_21": {
-      "keys": [
-       "data",
-       "count",
-       "meta",
-       "params"
-      ],
+      "count": 260,
+      "params": {
+       "ids": "92.1_TCV_0_0_21",
+       "format": "json",
+       "limit": "1000",
+       "start_date": "2005-01-01",
+       "identifiers": [
+        {
+         "id": "92.1_TCV_0_0_21",
+         "distribution": "92.1",
+         "dataset": "92"
+        }
+       ]
+      },
       "n": 260,
       "first": [
        [
@@ -13976,16 +13984,7 @@
         2.915917857142857
        ]
       ],
-      "last": [
-       [
-        "2026-07-01",
-        1487.6404709677415
-       ],
-       [
-        "2026-08-01",
-        1498.7131322580642
-       ]
-      ]
+      "meta": "[{'frequency': 'month', 'start_date': '2005-01-01', 'end_date': '2026-08-01'}, {'catalog': {'title': 'Datos Programación Macroeconómica'}, 'dataset': {'title': 'Reservas internacionales y pasivos del BCRA', 'description': 'Reservas internacionales y pasivos del BCRA. En millones de pesos (excepto la"
      }
     }
    }
@@ -14322,20 +14321,54 @@
     },
     "series_status": 200,
     "series_head": {
-     "74.3_IECE_0_M_35,74.3_IICL_0_M_42": {
-      "keys": [
-       "data",
-       "count",
-       "meta",
-       "params"
-      ],
+     "74.3_IECE_0_M_35": {
+      "count": 0,
+      "params": {
+       "ids": "74.3_IECE_0_M_35",
+       "format": "json",
+       "limit": "1000",
+       "identifiers": [
+        {
+         "id": "74.3_IECE_0_M_35",
+         "distribution": "74.3",
+         "dataset": "74"
+        }
+       ]
+      },
       "n": 0,
       "first": [],
-      "last": []
+      "meta": "[{'frequency': 'month'}, {'catalog': {'title': 'Datos Programación Macroeconómica'}, 'dataset': {'title': 'Intercambio Comercial Argentino', 'description': 'Intercambio Comercial Argentino en millones de dólares', 'issued': '2017-09-28', 'source': 'Instituto Nacional de Estadística y Censos (INDEC)'"
+     },
+     "74.3_IICL_0_M_42": {
+      "count": 138,
+      "params": {
+       "ids": "74.3_IICL_0_M_42",
+       "format": "json",
+       "limit": "1000",
+       "identifiers": [
+        {
+         "id": "74.3_IICL_0_M_42",
+         "distribution": "74.3",
+         "dataset": "74"
+        }
+       ]
+      },
+      "n": 138,
+      "first": [
+       [
+        "1992-01-01",
+        18.947876
+       ],
+       [
+        "1992-02-01",
+        17.434611
+       ]
+      ],
+      "meta": "[{'frequency': 'month', 'start_date': '1992-01-01', 'end_date': '2003-06-01'}, {'catalog': {'title': 'Datos Programación Macroeconómica'}, 'dataset': {'title': 'Intercambio Comercial Argentino', 'description': 'Intercambio Comercial Argentino en millones de dólares', 'issued': '2017-09-28', 'source'"
      }
     }
    },
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1110, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1102, in <lambda>\n    (\"trade_balance\", lambda d: trade_balance(d)),\n                                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1009, in trade_balance\n    raise RuntimeError(f\"Serie demasiado corta: {len(filas)} meses\")\nRuntimeError: Serie demasiado corta: 0 meses\n"
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1117, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1109, in <lambda>\n    (\"trade_balance\", lambda d: trade_balance(d)),\n                                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1016, in trade_balance\n    raise RuntimeError(f\"Serie demasiado corta: {len(filas)} meses\")\nRuntimeError: Serie demasiado corta: 0 meses\n"
   }
  }
 }
