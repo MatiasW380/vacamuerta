@@ -574,6 +574,7 @@ def reserves(diag: dict) -> dict:
     for k, c in claves.items():
         d[k] = pd.to_numeric(d[c], errors="coerce").fillna(0)
     c_yac = next((c for c in df.columns if "yacimiento" in c.split(" | ")[-1]), None)
+    vals = list(claves)
     clave_dup = [c for c in (c_area, c_yac) if c] + vals
     antes = len(d)
     if c_area:   # el mismo yacimiento cargado dos veces bajo dos razones sociales del mismo grupo
@@ -781,6 +782,51 @@ def rigi_portal(diag: dict) -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Regalías de petróleo crudo: precio declarado en boca de pozo, mensual
+# ---------------------------------------------------------------------------
+def royalties(diag: dict) -> dict:
+    paq, base = ckan_paquete(["http://datos.energia.gob.ar", "https://datos.gob.ar"],
+                             ["regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado"], diag)
+    rs = [r for r in recursos(paq) if "petr" in norm(r["name"]) and (r["format"] in ("csv", "xlsx", "xls") or r["url"].lower().split("?")[0].endswith((".csv", ".xlsx", ".xls")))]
+    diag["resources"] = [(r["name"], r["format"], r["url"][-80:]) for r in recursos(paq)][:12]
+    if not rs:
+        raise RuntimeError("Sin recurso tabular de regalías de petróleo")
+    df = leer_tabla(rs[0]["url"])
+    diag.update({"resource_used": rs[0]["name"], "columns": list(df.columns)[:40], "rows": int(len(df)),
+                 "sample": df.tail(3).to_dict(orient="records")})
+    c_anio = col(df, "anio", "ano", "año")
+    c_mes = col(df, "mes")
+    c_fecha = col(df, "indice_tiempo", "fecha", "periodo")
+    c_prov = col(df, "provincia", "jurisdiccion")
+    c_emp = col(df, "empresa", "operador")
+    c_vol = col(df, "volumen", "cantidad", "produccion")
+    c_pre = next((c for c in df.columns if "precio" in c and ("usd" in c or "dolar" in c or "u$s" in c)), None) or col(df, "precio")
+    c_tc = col(df, "tipo_de_cambio", "tc")
+    diag["mapped"] = {"anio": c_anio, "mes": c_mes, "fecha": c_fecha, "provincia": c_prov, "empresa": c_emp,
+                      "volumen": c_vol, "precio": c_pre, "tc": c_tc}
+    if not c_pre or not (c_fecha or (c_anio and c_mes)):
+        raise RuntimeError("No se identificaron columnas de precio o período (ver diag)")
+    d = df.copy()
+    if c_fecha:
+        d["period"] = d[c_fecha].astype(str).str[:7]
+    else:
+        d["period"] = numero(d[c_anio]).astype("Int64").astype(str) + "-" + numero(d[c_mes]).astype("Int64").astype(str).str.zfill(2)
+    d["precio"] = numero(d[c_pre])
+    d["vol"] = numero(d[c_vol]).fillna(0) if c_vol else 1.0
+    d = d[d["precio"].notna() & (d["precio"] > 0) & d["period"].str.match(r"^\d{4}-\d{2}$")]
+    diag["price_unit_hint"] = c_pre
+    def serie(x):
+        g = x.groupby("period").apply(lambda t: (t["precio"] * t["vol"]).sum() / t["vol"].sum() if t["vol"].sum() > 0 else t["precio"].median())
+        return [{"period": p, "price": round(float(v), 2)} for p, v in g.sort_index().items() if pd.notna(v)][-72:]
+    out = {"source": {"name": "Secretaría de Energía, regalías de petróleo crudo", "url": f"{base}/dataset/regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado", "license": "CC BY 4.0"},
+           "price_column": c_pre, "national": serie(d)}
+    if c_prov:
+        neu = d[d[c_prov].fillna("").map(norm).str.contains("neuqu")]
+        out["neuquen"] = serie(neu)
+    return out
+
+
+# ---------------------------------------------------------------------------
 # 5. Noticias por RSS
 # ---------------------------------------------------------------------------
 FEEDS = [
@@ -862,6 +908,7 @@ def main() -> None:
         ("export_price", lambda d: export_price(d)),
         ("fuel_prices", lambda d: fuel_prices(d)),
         ("rigi_portal", lambda d: rigi_portal(d)),
+        ("royalties", lambda d: royalties(d)),
     ]
     solo = set(sys.argv[1:])
     for nombre, fn in tareas:
