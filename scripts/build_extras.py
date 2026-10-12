@@ -291,7 +291,7 @@ def resumen_aviso(texto: str) -> str:
     return cuerpo[:320].strip() + ("…" if len(cuerpo) > 320 else "")
 
 
-RIGI_V = 2
+RIGI_V = 3
 
 
 def datos_rigi(texto: str) -> dict | None:
@@ -301,19 +301,23 @@ def datos_rigi(texto: str) -> dict | None:
     disp = parte_dispositiva(texto)
     proyecto = re.search(r"(?:proyecto|denominado)\s*[“\"«]([^”\"»]{3,140})[”\"»]", disp, re.I) or \
                re.search(r"(?:proyecto|denominado)\s*[“\"«]([^”\"»]{3,140})[”\"»]", texto, re.I)
-    empresa = re.search(r"(?:presentada|solicitada|formulada) por (?:la (?:empresa|firma|sociedad)\s+)?([A-ZÁÉÍÓÚÑ0-9][A-ZÁÉÍÓÚÑ0-9 .,&\-]{2,90}?(?:S\.?A\.?U?\.?|S\.?R\.?L\.?|SOCIEDAD AN[OÓ]NIMA(?: UNIPERSONAL)?|S\.?A\.?S\.?))", texto)
+    empresa = re.search(r"presentad[oa]s?\s+por\s+(?:la\s+(?:empresa|firma|sociedad)\s+)?(.+?)\s*,?\s*\(\s*CUIT", disp, re.I) or \
+              re.search(r"(?:presentada|solicitada|formulada) por (?:la (?:empresa|firma|sociedad)\s+)?([A-ZÁÉÍÓÚÑ0-9][A-ZÁÉÍÓÚÑ0-9 .,&\-]{2,90}?(?:S\.?A\.?U?\.?|S\.?R\.?L\.?|SOCIEDAD AN[OÓ]NIMA(?: UNIPERSONAL)?|S\.?A\.?S\.?))", texto)
     montos = [float(m.replace(".", "").replace(",", "."))
               for m in re.findall(r"(?:USD|U\$S|US\$|D[OÓ]LARES ESTADOUNIDENSES[^()]{0,200}\(\s*(?:USD|U\$S|US\$)?)\s*([\d]{1,3}(?:\.\d{3})+(?:,\d+)?)", texto)]
     monto = max(montos) if montos else None
     sector = next((s for s, k in [("Petróleo y gas", "hidrocarbur"), ("Petróleo y gas", "petr"), ("Gas natural licuado", "licuado"),
                                   ("Minería", "miner"), ("Energía eléctrica", "energ[ií]a el[eé]ctrica"), ("Siderurgia", "sider"),
                                   ("Infraestructura", "infraestructura|puerto")] if re.search(k, disp, re.I)), None)
+    sub = re.search(r"[Ss]ubsector\s*[“\"«]([^”\"»]{3,200})[”\"»]", disp)
+    area = re.search(r"[áa]rea(?: de hidrocarburos)?\s+([A-ZÁÉÍÓÚÑ][\wÁÉÍÓÚÑáéíóúñ .\-]{2,60}?)\s*\(", disp)
     i = disp.find("Apru")
     return {"excerpt": disp[max(0, i): max(0, i) + 700],
             "project": proyecto.group(1).strip() if proyecto else None,
             "company": empresa.group(1).strip(" ,.") if empresa else None,
             "usd_million": round(monto / 1e6, 1) if monto and monto > 1e6 else None,
-            "sector": sector, "v": RIGI_V}
+            "sector": sector, "subsector": sub.group(1).strip() if sub else None,
+            "area": area.group(1).strip() if area else None, "v": RIGI_V}
 
 
 def regulations(diag: dict, previo: dict | None) -> dict:
@@ -465,15 +469,34 @@ def reserves(diag: dict) -> dict:
     diag["all_resources"] = [{"name": r["name"], "format": r["format"], "url": r["url"][-90:]} for r in todos][:25]
     rs = [r for r in todos if r["format"] in ("csv", "xlsx", "xls") or r["url"].lower().split("?")[0].endswith((".csv", ".xlsx", ".xls"))]
     diag["resources"] = [r["name"] for r in rs][:20]
-    if not rs:
-        raise RuntimeError("Sin recursos tabulares")
-    # El recurso más reciente que no sea "fin de concesión" ni histórico agregado.
     def anio(r):
         m = re.findall(r"(20\d\d)", r["name"] + r["url"])
         return int(m[-1]) if m else 0
-    rs.sort(key=lambda r: (anio(r), "fin" not in norm(r["name"])), reverse=True)
-    r = rs[0]
-    df = leer_tabla(r["url"])
+    rs.sort(key=lambda r: anio(r), reverse=True)
+    zips = sorted([r for r in todos if r["format"] == "zip" or r["url"].lower().endswith(".zip")], key=anio, reverse=True)
+    if zips and (not rs or anio(zips[0]) >= anio(rs[0])):
+        import zipfile
+        r = zips[0]
+        z = zipfile.ZipFile(io.BytesIO(get(r["url"], timeout=300).content))
+        diag["zip_files"] = [(n.filename, n.file_size) for n in z.infolist()][:20]
+        cand = sorted([n for n in z.infolist() if n.filename.lower().endswith((".csv", ".xlsx", ".xls"))], key=lambda n: n.file_size, reverse=True)
+        if not cand:
+            raise RuntimeError("El ZIP no trae CSV ni Excel")
+        datos = z.read(cand[0].filename)
+        if cand[0].filename.lower().endswith(".csv"):
+            texto = datos.decode("utf-8-sig", errors="replace")
+            sep = ";" if texto[:3000].count(";") > texto[:3000].count(",") else ","
+            df = pd.read_csv(io.StringIO(texto), sep=sep, dtype=str, low_memory=False)
+        else:
+            hojas = pd.read_excel(io.BytesIO(datos), sheet_name=None, dtype=str)
+            diag["sheets"] = {k: list(v.columns)[:15] for k, v in hojas.items()}
+            df = max(hojas.values(), key=len)
+        df.columns = [norm(c).replace(" ", "_") for c in df.columns]
+    elif rs:
+        r = rs[0]
+        df = leer_tabla(r["url"])
+    else:
+        raise RuntimeError("Sin recursos tabulares ni ZIP")
     diag.update({"resource_used": r["name"], "columns": list(df.columns)[:50], "rows": int(len(df)),
                  "sample": df.head(2).to_dict(orient="records")})
     c_cuenca = col(df, "cuenca")
@@ -515,9 +538,37 @@ def export_price(diag: dict) -> dict:
     diag["resources"] = [r["name"] for r in rs][:10]
     if not rs:
         raise RuntimeError("Sin recursos tabulares")
+    crudo = get(rs[0]["url"], timeout=120).content
+    raw = pd.read_excel(io.BytesIO(crudo), header=None, dtype=object)
+    fila = next((i for i in range(min(15, len(raw))) if any(norm(v).startswith("mes/tipo") for v in raw.iloc[i].tolist() if isinstance(v, str))), None)
+    if fila is not None:
+        grupos = raw.iloc[fila - 1].ffill().tolist() if fila > 0 else [""] * raw.shape[1]
+        tipos = raw.iloc[fila].tolist()
+        series = {}
+        for j in range(1, raw.shape[1]):
+            if not isinstance(tipos[j], str):
+                continue
+            g = norm(grupos[j] if isinstance(grupos[j], str) else "")
+            grupo = ("brent" if "bloomberg" in g or "futures" in g else "fob" if "fob" in g and "brent" not in g else
+                     "domestic" if "interno" in g and "brent" not in g else "fob_vs_brent" if "fob" in g else "domestic_vs_brent")
+            puntos = []
+            for i in range(fila + 1, len(raw)):
+                f, v = raw.iat[i, 0], raw.iat[i, j]
+                try:
+                    per = pd.to_datetime(f).strftime("%Y-%m")
+                    val = float(v)
+                except Exception:
+                    continue
+                puntos.append({"period": per, "usd_bbl": round(val, 2)})
+            if puntos:
+                series[f"{grupo}|{str(tipos[j]).strip().title()}"] = puntos[-60:]
+        diag["series"] = list(series)
+        if series:
+            return {"source": {"name": "Secretaría de Energía, precios de petróleo crudo por tipo",
+                               "url": "https://datos.gob.ar/dataset/energia-precio-exportacion-petroleo-crudo", "license": "CC BY 4.0"},
+                    "series": series, "main": "fob|Medanito" if "fob|Medanito" in series else next(iter(series))}
     df = leer_tabla(rs[0]["url"])
-    diag.update({"resource_used": rs[0]["name"], "columns": list(df.columns)[:40], "rows": int(len(df)),
-                 "sample": df.head(3).to_dict(orient="records")})
+    diag.update({"resource_used": rs[0]["name"], "columns": list(df.columns)[:40], "rows": int(len(df))})
     c_fecha = col(df, "indice_tiempo", "fecha", "periodo", "mes")
     c_anio, c_mes = col(df, "anio", "ano"), col(df, "mes")
     nums = [c for c in df.columns if c not in (c_fecha, c_anio, c_mes) and numero(df[c]).notna().mean() > 0.6]
@@ -605,6 +656,8 @@ def rigi_portal(diag: dict) -> dict:
     diag["html_len"] = len(html)
     i = html.lower().find("petroleo")
     diag["context"] = html[max(0, i - 700): i + 500] if i >= 0 else None
+    inline = [b for b in re.findall(r"<script(?![^>]*src=)[^>]*>(.*?)</script>", html, re.S) if "petroleo" in b.lower() or "rigi" in b.lower()]
+    diag["inline_scripts"] = [b.strip()[:1800] for b in inline][:3]
     scripts = re.findall(r"<script[^>]*src=[\"']([^\"']+)[\"']", html)
     diag["scripts"] = [x for x in scripts if "rigi" in x.lower() or "mapa" in x.lower() or "economia" in x.lower()][:15]
     # Recursos que el portal podría cargar con JavaScript (para seguirlos en futuras corridas).

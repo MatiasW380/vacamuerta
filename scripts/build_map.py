@@ -166,7 +166,10 @@ def main() -> None:
                 continue
             conc.append({k: pr.get(k) for k in ("name", "type", "holders", "official_operator", "operator",
                                                  "expires", "norm", "oil_bbl_d", "gas_mmm3_d")})
-        conc.sort(key=lambda c: c["expires"])
+        unicas = {}
+        for c in conc:   # un área puede venir partida en varios polígonos
+            unicas.setdefault((norm(c["name"]), c["expires"]), c)
+        conc = sorted(unicas.values(), key=lambda c: c["expires"])
         diag["concessions"] = len(conc)
         (DATA / "concessions.json").write_text(json.dumps({
             "source": SOURCE, "period": vm.get("latest_period"), "items": conc},

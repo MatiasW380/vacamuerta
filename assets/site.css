@@ -170,3 +170,6 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
 .crumb-sep { color: var(--ink-3); }
 .crumb-here { color: var(--ink-2); font-size: 15px; }
 @media (max-width: 600px) { .crumb-here, .crumb-sep { display: none; } }
+
+.scroll-table { max-height: 560px; overflow: auto; border-bottom: 1px solid var(--rule); }
+.scroll-table thead th { position: sticky; top: 0; background: var(--bg); z-index: 1; }

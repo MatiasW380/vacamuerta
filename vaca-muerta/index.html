@@ -209,12 +209,12 @@
         <p class="section-lede" data-i18n="concLede">Every hydrocarbon area in Neuquén with a contract end date, its holders and the decree that granted it. Expiry dates shape how long an operator can recover its investment.</p>
         <div class="map-tools">
           <div class="seg" role="group" aria-label="Filter">
-            <button type="button" data-conc="soon" aria-pressed="true" data-i18n="concSoon">Expiring within 15 years</button>
-            <button type="button" data-conc="prod" aria-pressed="false" data-i18n="concProd">Producing in Vaca Muerta</button>
+            <button type="button" data-conc="prod" aria-pressed="true" data-i18n="concProd">Producing in Vaca Muerta</button>
+            <button type="button" data-conc="soon" aria-pressed="false" data-i18n="concSoon">Expiring within 15 years</button>
             <button type="button" data-conc="all" aria-pressed="false" data-i18n="concAll">All</button>
           </div>
         </div>
-        <div class="table-wrap">
+        <div class="table-wrap scroll-table">
           <table id="concTable">
             <thead><tr>
               <th scope="col" data-i18n="thArea">Block</th>
@@ -343,7 +343,7 @@
       concTitle: "Concessions and when they expire",
       concLede: "Every hydrocarbon area in Neuquén with a contract end date, its holders and the decree that granted it. Expiry dates shape how long an operator can recover its investment.",
       concSoon: "Expiring within 15 years", concProd: "Producing in Vaca Muerta", concAll: "All",
-      thExpires: "Expires", thYearsLeft: "Years left", thHolders: "Holders", thNorm: "Granted by",
+      thExpires: "Expires", thYearsLeft: "Years left", expired: "Expired", thHolders: "Holders", thNorm: "Granted by",
       concNote: (src, n) => `Source: ${src}. ${n} areas with a contract end date. Holders and shares as registered by the province.`,
       fracTitle: "Fracking stages",
       fracLede: (n, y, w, s) => `${n} fracking stages were pumped in Vaca Muerta in the last 12 months${y}, across ${w} wells and ${s} tonnes of sand.`,
@@ -419,7 +419,7 @@
       concTitle: "Concesiones y sus vencimientos",
       concLede: "Cada área hidrocarburífera de Neuquén con fecha de fin de contrato, sus titulares y la norma que la otorgó. El vencimiento define cuánto tiempo tiene una operadora para recuperar su inversión.",
       concSoon: "Vencen en 15 años o menos", concProd: "Producen en Vaca Muerta", concAll: "Todas",
-      thExpires: "Vence", thYearsLeft: "Años restantes", thHolders: "Titulares", thNorm: "Otorgada por",
+      thExpires: "Vence", thYearsLeft: "Años restantes", expired: "Vencida", thHolders: "Titulares", thNorm: "Otorgada por",
       concNote: (src, n) => `Fuente: ${src}. ${n} áreas con fecha de fin de contrato. Titulares y participaciones según el registro provincial.`,
       fracTitle: "Etapas de fractura",
       fracLede: (n, y, w, s) => `Se bombearon ${n} etapas de fractura en Vaca Muerta en los últimos 12 meses${y}, en ${w} pozos y con ${s} toneladas de arena.`,
@@ -950,7 +950,7 @@
     new IntersectionObserver((ents, obs) => { if (ents.some(x => x.isIntersecting)) { obs.disconnect(); initMap(); } }, { rootMargin: "400px" }).observe($("#mapSection"));
   } else initMap();
 
-  let CONC = null, concFilter = "soon";
+  let CONC = null, concFilter = "prod";
   function renderConc() {
     if (!CONC || !CONC.items || !CONC.items.length) return;
     const t = T[lang], hoy = Date.now();
@@ -962,7 +962,7 @@
     $("#concTable tbody").innerHTML = rows.map(c => {
       const y = yearsLeft(c.expires);
       return `<tr><td>${esc(c.name)}</td><td>${esc(shortDate(c.expires))}</td>
-        <td class="${y < 5 ? "delta-down" : ""}">${fmt(Math.max(0, y), 1)}</td>
+        <td class="${y < 5 ? "delta-down" : ""}">${y < 0 ? esc(t.expired) : fmt(y, 1)}</td>
         <td style="text-align:left;max-width:260px">${esc(c.holders || c.official_operator || "–")}</td>
         <td>${c.oil_bbl_d ? fmt(c.oil_bbl_d) : "–"}</td><td style="text-align:left">${esc(c.norm || "–")}</td></tr>`;
     }).join("");
