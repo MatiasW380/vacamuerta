@@ -1,0 +1,48 @@
+name: Actualizar datos de Vaca Muerta
+
+on:
+  schedule:
+    - cron: "17 11 * * 1"   # lunes 08:17 hora argentina
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - ".github/workflows/update-data.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scripts/requirements.txt
+
+      - run: pip install -r scripts/requirements.txt
+
+      - name: Descargar y procesar Capítulo IV
+        run: python scripts/build_data.py
+
+      - name: Guardar cambios
+        run: |
+          if git diff --quiet -- data/; then
+            echo "Sin cambios en los datos."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "Actualiza datos de Vaca Muerta ($(jq -r .latest_period data/vm.json))"
+          git push
