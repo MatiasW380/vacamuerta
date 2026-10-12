@@ -1051,15 +1051,18 @@ def trade_balance(diag: dict) -> dict:
     for f in filas:
         f["balance"] = round(f["exports"] - f["imports"], 1)
         f["exports"], f["imports"] = round(f["exports"], 1), round(f["imports"], 1)
-    per_anio = 4 if exp["freq"] == "quarter" else 12
-    if len(filas) < 2 * per_anio:
-        raise RuntimeError(f"Serie demasiado corta: {len(filas)} períodos")
-    ult = filas[-per_anio:]; prev = filas[-2 * per_anio:-per_anio]
+    # Serie anual (completa) para el gráfico; el último trimestre con datos como dato reciente.
+    anual = lambda i: re.sub(r"^(\d+)\.\d_", r"\1.1_", i).replace("_T_", "_A_").replace("_M_", "_A_")
+    ea = {d[0][:4]: d[1] for d in serie_api([anual(exp["id"])], diag, "2005-01-01") if d[1] is not None}
+    ia = {d[0][:4]: d[1] for d in serie_api([anual(imp["id"])], diag, "2005-01-01") if d[1] is not None}
+    anios = [{"year": int(y), "exports": round(ea[y], 1), "imports": round(ia[y], 1), "balance": round(ea[y] - ia[y], 1)} for y in sorted(set(ea) & set(ia))]
+    if len(anios) < 5:
+        raise RuntimeError(f"Serie anual demasiado corta: {len(anios)} años")
+    ultimo = filas[-1] if filas else None
+    hace_un_anio = next((f for f in filas if ultimo and f["period"] == f"{int(ultimo['period'][:4]) - 1}{ultimo['period'][4:]}"), None)
     return {"source": {"name": "INDEC, intercambio comercial argentino (API de Series de Tiempo)", "url": "https://datos.gob.ar/series", "license": "CC BY 4.0"},
-            "units": exp.get("units"), "freq": exp["freq"], "ids": [exp["id"], imp["id"]], "monthly": filas,
-            "last_12m": {"from": ult[0]["period"], "to": ult[-1]["period"], "exports": round(sum(f["exports"] for f in ult), 1),
-                         "imports": round(sum(f["imports"] for f in ult), 1), "balance": round(sum(f["balance"] for f in ult), 1),
-                         "balance_prev": round(sum(f["balance"] for f in prev), 1)}}
+            "units": exp.get("units"), "ids": [anual(exp["id"]), anual(imp["id"]), exp["id"], imp["id"]],
+            "yearly": anios, "latest_period": ultimo, "latest_period_prev_year": hace_un_anio, "period_kind": exp["freq"]}
 
 
 # ---------------------------------------------------------------------------
