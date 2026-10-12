@@ -791,6 +791,59 @@ def _decodifica(b: bytes, enc: str) -> bool:
         return False
 
 
+def tabla_pivote(raw: pd.DataFrame) -> pd.DataFrame | None:
+    """Tabla dinámica AÑO / MES x provincia → filas por período con una columna por provincia."""
+    fila = next((i for i in range(min(40, len(raw))) if [_plano(v) for v in raw.iloc[i].tolist()[:2]] == ["ano", "mes"]), None)
+    if fila is None:
+        return None
+    cols = [_plano(v) for v in raw.iloc[fila].tolist()]
+    d = raw.iloc[fila + 1:].copy()
+    d.columns = [c or f"c{j}" for j, c in enumerate(cols)]
+    d["ano"] = pd.to_numeric(d["ano"], errors="coerce").ffill()
+    d["mes"] = pd.to_numeric(d["mes"], errors="coerce")
+    d = d[d["ano"].notna() & d["mes"].between(1, 12)]
+    d["period"] = d["ano"].astype(int).astype(str) + "-" + d["mes"].astype(int).astype(str).str.zfill(2)
+    for c in d.columns:
+        if c not in ("ano", "mes", "period"):
+            d[c] = pd.to_numeric(d[c], errors="coerce")
+    return d.set_index("period").drop(columns=["ano", "mes"])
+
+
+def regalias_excel(hojas: dict, diag: dict, base: str) -> dict:
+    t = {}
+    for k, v in hojas.items():
+        n = _plano(k)
+        clave = "price" if "precio" in n else "volume" if "produc" in n else "royalties" if "regal" in n else None
+        if clave:
+            piv = tabla_pivote(v)
+            if piv is not None:
+                t[clave] = piv
+    diag["tables"] = {k: [list(v.columns)[:14], v.index[-1] if len(v) else None] for k, v in t.items()}
+    if "price" not in t:
+        raise RuntimeError("No se encontró la tabla de precios")
+    provs = {"neuquen": "Neuquén", "chubut": "Chubut", "santa cruz": "Santa Cruz", "mendoza": "Mendoza", "rio negro": "Río Negro"}
+    precio = t["price"]
+    precio = precio[(precio.get("neuquen", 0) > 0)]
+    m3_bbl = 6.2898
+    series = {}
+    for c, nombre in provs.items():
+        if c in precio.columns:
+            series[nombre] = [{"period": p, "usd_bbl": round(float(v) / m3_bbl, 2)} for p, v in precio[c].items() if pd.notna(v) and v > 0][-84:]
+    out = {"source": {"name": "Secretaría de Energía, regalías de petróleo crudo", "url": f"{base}/dataset/regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado", "license": "CC BY 4.0"},
+           "price_usd_bbl": series, "last_period": precio.index[-1] if len(precio) else None}
+    if "royalties" in t and "volume" in t:
+        r, vol = t["royalties"], t["volume"]
+        ult = [p for p in r.index if r.loc[p].get("neuquen", 0) > 0][-12:]
+        if ult:
+            out["neuquen_12m"] = {"from": ult[0], "to": ult[-1],
+                                  "royalties_usd_m": round(float(r.loc[ult, "neuquen"].sum()) / 1e6, 1),
+                                  "volume_m3": round(float(vol.loc[[p for p in ult if p in vol.index], "neuquen"].sum())),
+                                  "national_royalties_usd_m": round(float(r.loc[ult, "total provincia"].sum()) / 1e6, 1) if "total provincia" in r.columns else None}
+            out["royalties_monthly"] = [{"period": p, "neuquen_usd_m": round(float(r.loc[p, "neuquen"]) / 1e6, 2),
+                                         "total_usd_m": round(float(r.loc[p].get("total provincia", 0)) / 1e6, 2)} for p in r.index if r.loc[p].get("neuquen", 0) > 0][-84:]
+    return out
+
+
 def royalties(diag: dict) -> dict:
     paq, base = ckan_paquete(["http://datos.energia.gob.ar", "https://datos.gob.ar"],
                              ["regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado"], diag)
@@ -811,7 +864,7 @@ def royalties(diag: dict) -> dict:
             diag["sheets"] = {k: [len(v), v.shape[1]] for k, v in hojas.items()}
             diag["sheet_heads"] = {k: [[str(x)[:24] for x in v.iloc[i].tolist() if pd.notna(x)][:16] for i in range(min(14, len(v)))]
                                    for k, v in list(hojas.items())[:8]}
-            return {"_pending": True} if False else (_ for _ in ()).throw(RuntimeError("Excel de regalías: estructura en diagnóstico"))
+            return regalias_excel(hojas, diag, base)
         else:
             enc = "utf-8-sig" if _decodifica(datos[:200000], "utf-8-sig") else "latin-1"
             cab = datos[:5000].decode(enc, errors="replace")
