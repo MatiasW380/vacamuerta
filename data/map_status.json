@@ -1,5 +1,5 @@
 {
- "at": "2026-10-12T19:54Z",
+ "at": "2026-10-12T20:23Z",
  "layers": [
   {
    "name": "Hidrocarburos:Areas",
@@ -106,8 +106,8 @@
   "TIPO_CONTRATO": " ",
   "DCHO_OTORGADO": null,
   "NORMA_LEGAL": "Dec.Adm.435/1997",
-  "INI_CONTRATO": "2017-08-11T03:00:00.395Z",
-  "FIN_CONTRATO": "2052-08-10T03:00:00.395Z",
+  "INI_CONTRATO": "2017-08-11T03:00:00.640Z",
+  "FIN_CONTRATO": "2052-08-10T03:00:00.640Z",
   "ID_BLOQUE": "A155128"
  },
  "areas_matched": 57,
@@ -122,7 +122,7 @@
   "Paso de las Bardas Norte"
  ],
  "oil_share_on_map_pct": 99.1,
- "concessions": 145,
+ "concessions": 123,
  "ducts_features": 115,
  "ducts_sample_props": {
   "OBSERVACIO": " ",

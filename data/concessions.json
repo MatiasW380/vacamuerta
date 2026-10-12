@@ -105,17 +105,6 @@
 "gas_mmm3_d": 0.094
 },
 {
-"name": "Pampa de las Yeguas I",
-"type": "PERMISO DE EXPLORACION NO CONVENCIONAL",
-"holders": "Total Austral S.A.Sucursal Argentina (100%)",
-"official_operator": "TOTAL AUSTRAL S.A. Suc. Argentina",
-"operator": "Pluspetrol",
-"expires": "2024-12-06",
-"norm": "Dec.Prov.1431/2016",
-"oil_bbl_d": 0,
-"gas_mmm3_d": 0.094
-},
-{
 "name": "Loma Del Molle",
 "type": "PERMISO DE EXPLORACION NO CONVENCIONAL",
 "holders": "Pluspetrol Cuenca Neuquina S.R.L.(50%) - YPF S.A.(50%)",
@@ -211,17 +200,6 @@
 "operator": null,
 "expires": "2026-01-20",
 "norm": "Dec.Nac.91/91 - Dec.Prov.2100/2006",
-"oil_bbl_d": null,
-"gas_mmm3_d": null
-},
-{
-"name": "Centenario",
-"type": "CONCESION DE EXPLOTACION",
-"holders": "FLXS OGE S.A.(100%)",
-"official_operator": "FLXS OGE S.A.",
-"operator": null,
-"expires": "2026-01-20",
-"norm": "Dec.Nac.91/91 - Dec.Prov.2100/2006 - Dec.Prov. 1281/2022",
 "oil_bbl_d": null,
 "gas_mmm3_d": null
 },
@@ -325,72 +303,6 @@
 "gas_mmm3_d": null
 },
 {
-"name": "Al Sur De La Dorsal",
-"type": "CONCESION DE EXPLOTACION",
-"holders": "Oilstone Energía S.A.(100%)",
-"official_operator": "OILSTONE ENERGIA S.A.",
-"operator": null,
-"expires": "2026-10-25",
-"norm": "Dec.Nac.2166/1991 - Dec.Prov.606/2009",
-"oil_bbl_d": null,
-"gas_mmm3_d": null
-},
-{
-"name": "Al Sur De La Dorsal",
-"type": "CONCESION DE EXPLOTACION",
-"holders": "Oilstone Energía S.A.(100%)",
-"official_operator": "OILSTONE ENERGIA S.A.",
-"operator": null,
-"expires": "2026-10-25",
-"norm": "Dec.Nac.2166/1991 - Dec.Prov.606/2009",
-"oil_bbl_d": null,
-"gas_mmm3_d": null
-},
-{
-"name": "Al Sur De La Dorsal",
-"type": "CONCESION DE EXPLOTACION",
-"holders": "Oilstone Energía S.A.(100%)",
-"official_operator": "OILSTONE ENERGIA S.A.",
-"operator": null,
-"expires": "2026-10-25",
-"norm": "Dec.Nac.2166/1991 - Dec.Prov.606/2009",
-"oil_bbl_d": null,
-"gas_mmm3_d": null
-},
-{
-"name": "Al Sur De La Dorsal",
-"type": "CONCESION DE EXPLOTACION",
-"holders": "Oilstone Energía S.A.(100%)",
-"official_operator": "OILSTONE ENERGIA S.A.",
-"operator": null,
-"expires": "2026-10-25",
-"norm": "Dec.Nac.2166/1991 - Dec.Prov.606/2009",
-"oil_bbl_d": null,
-"gas_mmm3_d": null
-},
-{
-"name": "Al Sur De La Dorsal",
-"type": "CONCESION DE EXPLOTACION",
-"holders": "Oilstone Energía S.A.(100%)",
-"official_operator": "OILSTONE ENERGIA S.A.",
-"operator": null,
-"expires": "2026-10-25",
-"norm": "Dec.Nac.2166/1991 - Dec.Prov.606/2009",
-"oil_bbl_d": null,
-"gas_mmm3_d": null
-},
-{
-"name": "Al Sur De La Dorsal",
-"type": "CONCESION DE EXPLOTACION",
-"holders": "Oilstone Energía S.A.(100%)",
-"official_operator": "OILSTONE ENERGIA S.A.",
-"operator": null,
-"expires": "2026-10-25",
-"norm": "Dec.Nac.2166/1991 - Dec.Prov.606/2009",
-"oil_bbl_d": null,
-"gas_mmm3_d": null
-},
-{
 "name": "Cutral Co Norte",
 "type": "CONCESION DE EXPLOTACION",
 "holders": "Petrolsur Energia S.A.(100%)",
@@ -466,17 +378,6 @@
 "norm": "Dec.Prov.727/2017 - Dec.425/18 - NO-2021-01512371-NEU-SEMH#MERN",
 "oil_bbl_d": 8023,
 "gas_mmm3_d": 0.21
-},
-{
-"name": "Aguada De Castro Oeste Bloque I Y Ii",
-"type": "PERMISO DE EXPLORACION NO CONVENCIONAL",
-"holders": "Pan American Energy S.L. (Suc.Argentina) (90%) - Gas y Petroleo del Neuquen S.A.(10%)",
-"official_operator": "PAN AMERICAN ENERGY SL SUC. ARG.",
-"operator": null,
-"expires": "2027-10-11",
-"norm": "Dec.Prov.727/2017 - Dec.517/18 - NO-2022-00996680-NEU-SEMH#MERN",
-"oil_bbl_d": null,
-"gas_mmm3_d": null
 },
 {
 "name": "Aguada De Castro Oeste Bloque I Y Ii",
@@ -578,17 +479,6 @@
 "gas_mmm3_d": 0.016
 },
 {
-"name": "Chihuido de la Sierra Negra",
-"type": "CONCESION DE EXPLOTACION",
-"holders": "YPF S.A.(93%) - Compañia de Desarrollo No Convencional S.R.L.(7%)",
-"official_operator": "YPF S.A.",
-"operator": "YPF",
-"expires": "2027-11-14",
-"norm": "Ley Prov.2615 - Dec.Prov.2124/2008",
-"oil_bbl_d": 67,
-"gas_mmm3_d": 0.016
-},
-{
 "name": "Loma la Lata - Sierra Barrosa",
 "type": "CONCESION DE EXPLOTACION",
 "holders": "YPF S.A.(100%)",
@@ -598,17 +488,6 @@
 "norm": "Ley nac.24145 - Dec.Nac.1552/2000",
 "oil_bbl_d": 1063,
 "gas_mmm3_d": 0.029
-},
-{
-"name": "Chihuido de la Sierra Negra",
-"type": "CONCESION DE EXPLOTACION",
-"holders": "YPF S.A.(93%) - Compañia de Desarrollo No Convencional S.R.L.(7%)",
-"official_operator": "YPF S.A.",
-"operator": "YPF",
-"expires": "2027-11-14",
-"norm": "Ley Prov.2615 - Dec.Prov.2124/2008",
-"oil_bbl_d": 67,
-"gas_mmm3_d": 0.016
 },
 {
 "name": "Señal Picada - Punta Barda",
@@ -622,17 +501,6 @@
 "gas_mmm3_d": null
 },
 {
-"name": "Loma la Lata - Sierra Barrosa",
-"type": "CONCESION DE EXPLOTACION",
-"holders": "YPF S.A.(100%)",
-"official_operator": "YPF S.A.",
-"operator": "YPF",
-"expires": "2027-11-14",
-"norm": "Ley nac.24145 - Dec.Nac.1552/2000",
-"oil_bbl_d": 1063,
-"gas_mmm3_d": 0.029
-},
-{
 "name": "Las Tacanas Norte",
 "type": "PERMISO DE EXPLORACION NO CONVENCIONAL",
 "holders": "Pampa Energía S.A.(90%) - Gas y Petroleo del Neuquen S.A.(100%)",
@@ -640,17 +508,6 @@
 "operator": null,
 "expires": "2027-11-30",
 "norm": "Dec.Prov.727/2017 - Dec.Prov.2315/2018 - NO-2023-00556175-NEU-SEMH#MERN",
-"oil_bbl_d": null,
-"gas_mmm3_d": null
-},
-{
-"name": "Dos Hermanas",
-"type": "CONCESION DE EXPLOTACION",
-"holders": "Oilstone Energía S.A.(100%)",
-"official_operator": "OILSTONE ENERGIA S.A.",
-"operator": null,
-"expires": "2028-12-31",
-"norm": "Dec.Prov.149/03",
 "oil_bbl_d": null,
 "gas_mmm3_d": null
 },
@@ -695,17 +552,6 @@
 "operator": null,
 "expires": "2031-08-17",
 "norm": "Dec.Prov.1509/2006 - Dec.372/2025",
-"oil_bbl_d": null,
-"gas_mmm3_d": null
-},
-{
-"name": "Fondo De La Legua",
-"type": "CONCESION DE EXPLOTACION",
-"holders": "San Jorge Petroleum S.A.(100%)",
-"official_operator": "SAN JORGE PETROLEUM S.A.",
-"operator": null,
-"expires": "2031-12-05",
-"norm": "Dec.Prov.2225/2006",
 "oil_bbl_d": null,
 "gas_mmm3_d": null
 },
@@ -831,17 +677,6 @@
 "gas_mmm3_d": null
 },
 {
-"name": "Loma Negra Ni",
-"type": "CONCESION DE EXPLOTACION",
-"holders": "Oilstone Energía S.A.(100%)",
-"official_operator": "OILSTONE ENERGIA S.A.",
-"operator": null,
-"expires": "2039-12-31",
-"norm": "Dec.Prov.1826/2015",
-"oil_bbl_d": null,
-"gas_mmm3_d": null
-},
-{
 "name": "Bajo Baguales",
 "type": "CONCESION DE EXPLOTACION",
 "holders": "Oilstone Energía S.A.(100%)",
@@ -860,17 +695,6 @@
 "operator": null,
 "expires": "2039-12-31",
 "norm": "Dec.Nac.2173/1991 - Dec.Prov.1826/2015",
-"oil_bbl_d": null,
-"gas_mmm3_d": null
-},
-{
-"name": "Loma Negra Ni",
-"type": "CONCESION DE EXPLOTACION",
-"holders": "Oilstone Energía S.A.(100%)",
-"official_operator": "OILSTONE ENERGIA S.A.",
-"operator": null,
-"expires": "2039-12-31",
-"norm": "Dec.Prov.1826/2015",
 "oil_bbl_d": null,
 "gas_mmm3_d": null
 },
@@ -1095,17 +919,6 @@
 "gas_mmm3_d": null
 },
 {
-"name": "Fortin de Piedra",
-"type": "CONCESION DE EXPLOTACION NO CONVENCIONAL",
-"holders": "Tecpetrol S.A.(100%)",
-"official_operator": "TECPETROL S.A.",
-"operator": "Tecpetrol",
-"expires": "2051-07-28",
-"norm": "Dec.Prov.1055/2016",
-"oil_bbl_d": 10975,
-"gas_mmm3_d": 20.532
-},
-{
 "name": "Bajo del Choique - La Invernada",
 "type": "CONCESION DE EXPLOTACION NO CONVENCIONAL",
 "holders": "Gas y Petroleo del Neuquen S.A.(10%) - Pluspetrol Cuenca Neuquina SRL.(90%)",
@@ -1137,17 +950,6 @@
 "norm": "Dec.Prov.1732/2016",
 "oil_bbl_d": 0,
 "gas_mmm3_d": 0.094
-},
-{
-"name": "La Ribera I Y Ii",
-"type": "CONCESION DE EXPLOTACION NO CONVENCIONAL",
-"holders": "YPF S.A.(100%)",
-"official_operator": "YPF S.A.",
-"operator": null,
-"expires": "2051-11-24",
-"norm": "Dec.Prov.1732/2016",
-"oil_bbl_d": null,
-"gas_mmm3_d": null
 },
 {
 "name": "Agua del Cajon",
@@ -1524,28 +1326,6 @@
 "gas_mmm3_d": 0.553
 },
 {
-"name": "Meseta Buena Esperanza I",
-"type": "CONCESION DE EXPLOTACION NO CONVENCIONAL",
-"holders": "YPF S.A.(100%)",
-"official_operator": "YPF S.A.",
-"operator": "YPF",
-"expires": "2061-03-31",
-"norm": "Dec.Prov.606/2009 - Dec.777/2026",
-"oil_bbl_d": 799,
-"gas_mmm3_d": 0.553
-},
-{
-"name": "Meseta Buena Esperanza I",
-"type": "CONCESION DE EXPLOTACION NO CONVENCIONAL",
-"holders": "YPF S.A.(100%)",
-"official_operator": "YPF S.A.",
-"operator": "YPF",
-"expires": "2061-03-31",
-"norm": "Dec.Prov.606/2009 - Dec.777/2026",
-"oil_bbl_d": 799,
-"gas_mmm3_d": 0.553
-},
-{
 "name": "Las Tacanas Ii",
 "type": "CONCESION DE EXPLOTACION NO CONVENCIONAL",
 "holders": "YPF S.A.(100%)",
@@ -1566,28 +1346,6 @@
 "norm": "Dec.Prov.1733/2016 - Dec.1535/2020 - Dec.778/2026",
 "oil_bbl_d": 174,
 "gas_mmm3_d": 0.146
-},
-{
-"name": "Dadin",
-"type": "CONCESION DE EXPLOTACION MINERA",
-"holders": "YPF S.A.(100%)",
-"official_operator": "BENTIA ENERGY S.A.",
-"operator": null,
-"expires": "2099-11-01",
-"norm": null,
-"oil_bbl_d": null,
-"gas_mmm3_d": null
-},
-{
-"name": "Dadin",
-"type": "CONCESION DE EXPLOTACION MINERA",
-"holders": "YPF S.A.(100%)",
-"official_operator": "BENTIA ENERGY S.A.",
-"operator": null,
-"expires": "2099-11-01",
-"norm": null,
-"oil_bbl_d": null,
-"gas_mmm3_d": null
 },
 {
 "name": "Dadin",
