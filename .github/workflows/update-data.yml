@@ -33,11 +33,14 @@ jobs:
       - run: pip install -r scripts/requirements.txt
 
       - name: Descargar y procesar Capítulo IV
-        run: python scripts/build_data.py
+        run: |
+          python scripts/build_data.py
+          echo "### Datos generados" >> "$GITHUB_STEP_SUMMARY"
+          jq -c "{latest_period, kpis, meses: (.monthly|length)}" data/vm.json >> "$GITHUB_STEP_SUMMARY"
 
       - name: Guardar cambios
         run: |
-          if git diff --quiet -- data/; then
+          if [ -z "$(git status --porcelain -- data/)" ]; then
             echo "Sin cambios en los datos."
             exit 0
           fi
