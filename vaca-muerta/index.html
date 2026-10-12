@@ -176,6 +176,7 @@
         <div class="chart-head">
           <h2 style="font-size:17px" data-i18n="crudeTitle">What Argentine crude actually sells for, USD per barrel</h2>
         </div>
+        <ul class="facts" id="crudeFacts" style="margin:4px 0 18px"></ul>
         <ul class="legend" id="crudeLegend"></ul>
         <div class="chart" id="crudeChart"></div>
         <p class="note" id="crudeNote"></p>
@@ -412,6 +413,9 @@
       mapNote: (src, p) => `Block outlines, pipelines and fluid windows: ${src}. Production: Energy Secretariat, ${p}. Only blocks in Neuquén are shown; a few Vaca Muerta blocks in Mendoza and Río Negro are not on the map. Basemap © OpenFreeMap, OpenStreetMap contributors.`,
       crumbHere: "Energy: Vaca Muerta",
       crudeTitle: "What Argentine crude actually sells for, USD per barrel",
+      crudeTitle2: "What Argentine crude sells for at the wellhead, USD per barrel, by province",
+      crudeF1: (m) => `per barrel in Neuquén, ${m}`, crudeF2: "in oil royalties paid to Neuquén over the last 12 months", crudeF3: "of all oil royalties in the country go to Neuquén",
+      crudeNote2: (src) => `Source: ${src}. Average price declared by producers to pay royalties; converted from USD per m³. Neuquén sells Medanito, Chubut sells Escalante and Santa Cruz sells Cañadón Seco.`,
       cFob: "Medanito, export (FOB)", cDom: "Medanito, domestic market", cBrent: "Brent",
       crudeNote: (src, d) => `Source: ${src}. Medanito is the reference crude of the Neuquén basin. Latest month: ${d}.`,
       fuelTitle: "Fuel prices at the pump",
@@ -513,6 +517,9 @@
       mapNote: (src, p) => `Límites de bloques, ductos y ventanas de fluidos: ${src}. Producción: Secretaría de Energía, ${p}. Solo se muestran los bloques de Neuquén; algunos bloques de Vaca Muerta en Mendoza y Río Negro no figuran en el mapa. Mapa base © OpenFreeMap, colaboradores de OpenStreetMap.`,
       crumbHere: "Energía: Vaca Muerta",
       crudeTitle: "A cuánto se vende de verdad el crudo argentino, USD por barril",
+      crudeTitle2: "A cuánto se vende el crudo argentino en boca de pozo, USD por barril, por provincia",
+      crudeF1: (m) => `por barril en Neuquén, ${m}`, crudeF2: "de regalías petroleras cobradas por Neuquén en los últimos 12 meses", crudeF3: "de todas las regalías petroleras del país van a Neuquén",
+      crudeNote2: (src) => `Fuente: ${src}. Precio promedio que declaran las productoras para pagar regalías; convertido desde USD por m³. Neuquén vende crudo Medanito, Chubut Escalante y Santa Cruz Cañadón Seco.`,
       cFob: "Medanito, exportación (FOB)", cDom: "Medanito, mercado interno", cBrent: "Brent",
       crudeNote: (src, d) => `Fuente: ${src}. Medanito es el crudo de referencia de la cuenca Neuquina. Último mes: ${d}.`,
       fuelTitle: "Precios de combustibles en surtidor",
@@ -986,22 +993,26 @@
       }
     }
 
-    const ep = E.export_price;
-    if (ep && ep.series && ep.series["fob|Medanito"]) {
-      const keys = [["fob|Medanito", t.cFob], ["domestic|Medanito", t.cDom], ["brent|Ice Brent", t.cBrent]].filter(([k]) => ep.series[k]);
-      const maps = keys.map(([k]) => Object.fromEntries(ep.series[k].map(p => [p.period, p.usd_bbl])));
-      const periods = Object.keys(maps[0]).filter(p => maps.every(m => m[p] != null)).sort();
-      const stale = periods.length && (Date.now() - new Date(periods[periods.length - 1] + "-15")) / 864e5 > 540;
-      if (periods.length > 3 && !stale) {
-        $("#crudeBlock").hidden = false;
-        const names = keys.map(k => k[1]), series = {};
-        names.forEach((n, i) => { series[n] = periods.map(p => maps[i][p]); });
-        const colors = ["var(--s1)", "var(--s3)", "var(--s2)"];
-        $("#crudeLegend").innerHTML = names.map((n, k) => `<li><i style="background:${colors[k]}"></i>${esc(n)}</li>`).join("");
-        multiLine($("#crudeChart"), periods, names, series, colors);
-        $("#crudeNote").innerHTML = t.crudeNote(`<a href="${esc(ep.source.url)}" rel="noopener">${esc(ep.source.name)}</a>`, esc(monthName(periods[periods.length - 1])));
+    const ry = E.royalties;
+    if (ry && ry.price_usd_bbl && ry.price_usd_bbl["Neuquén"] && ry.price_usd_bbl["Neuquén"].length > 12) {
+      $("#crudeBlock").hidden = false;
+      $("#crudeBlock h2").textContent = t.crudeTitle2;
+      const provs = ["Neuquén", "Chubut", "Santa Cruz"].filter(n => ry.price_usd_bbl[n]);
+      const maps = provs.map(n => Object.fromEntries(ry.price_usd_bbl[n].map(p => [p.period, p.usd_bbl])));
+      const periods = Object.keys(maps[0]).filter(p => p >= "2019-01" && maps.every(m => m[p] != null)).sort();
+      const series = {}; provs.forEach((n, i) => { series[n] = periods.map(p => maps[i][p]); });
+      const colors = ["var(--s1)", "var(--s3)", "var(--s2)"];
+      $("#crudeLegend").innerHTML = provs.map((n, k) => `<li><i style="background:${colors[k]}"></i>${esc(n)}</li>`).join("");
+      multiLine($("#crudeChart"), periods, provs, series, colors);
+      const r12 = ry.neuquen_12m, f = [[`USD ${fmt(maps[0][periods[periods.length - 1]], 1)}`, t.crudeF1(monthName(periods[periods.length - 1]))]];
+      if (r12) {
+        f.push([`USD ${fmt(r12.royalties_usd_m, 0)} M`, t.crudeF2]);
+        if (r12.national_royalties_usd_m) f.push([fmt(r12.royalties_usd_m / r12.national_royalties_usd_m * 100, 0) + "%", t.crudeF3]);
       }
+      $("#crudeFacts").innerHTML = f.map(([a, b]) => `<li><strong>${esc(a)}</strong>${esc(b)}</li>`).join("");
+      $("#crudeNote").innerHTML = t.crudeNote2(`<a href="${esc(ry.source.url)}" rel="noopener">${esc(ry.source.name)}</a>, ${esc(ry.source.license)}`);
     }
+
 
     const fp = E.fuel_prices;
     if (fp && fp.national_median && fp.by_brand) {
