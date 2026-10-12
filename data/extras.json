@@ -8890,11 +8890,1328 @@
    }
   ]
  },
- "generated_at": "2026-10-12T21:02Z",
+ "oil_price": {
+  "source": {
+   "name": "U.S. Energy Information Administration (EIA)",
+   "url": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
+   "license": "Dominio público"
+  },
+  "brent": {
+   "date": "2026-10-06",
+   "usd_bbl": 125.44
+  },
+  "wti": {
+   "date": "2026-10-06",
+   "usd_bbl": 96.24
+  },
+  "daily": [
+   {
+    "date": "2025-10-02",
+    "brent": 65.44,
+    "wti": 61.28
+   },
+   {
+    "date": "2025-10-03",
+    "brent": 66.13,
+    "wti": 61.65
+   },
+   {
+    "date": "2025-10-06",
+    "brent": 67.09,
+    "wti": 62.49
+   },
+   {
+    "date": "2025-10-07",
+    "brent": 67.1,
+    "wti": 62.52
+   },
+   {
+    "date": "2025-10-08",
+    "brent": 67.42,
+    "wti": 63.37
+   },
+   {
+    "date": "2025-10-09",
+    "brent": 67.23,
+    "wti": 62.36
+   },
+   {
+    "date": "2025-10-10",
+    "brent": 64.41,
+    "wti": 59.75
+   },
+   {
+    "date": "2025-10-13",
+    "brent": 64.15,
+    "wti": null
+   },
+   {
+    "date": "2025-10-14",
+    "brent": 63.0,
+    "wti": 59.52
+   },
+   {
+    "date": "2025-10-15",
+    "brent": 62.33,
+    "wti": 59.08
+   },
+   {
+    "date": "2025-10-16",
+    "brent": 61.08,
+    "wti": 58.29
+   },
+   {
+    "date": "2025-10-17",
+    "brent": 61.23,
+    "wti": 58.3
+   },
+   {
+    "date": "2025-10-20",
+    "brent": 60.71,
+    "wti": 58.34
+   },
+   {
+    "date": "2025-10-21",
+    "brent": 61.0,
+    "wti": 58.66
+   },
+   {
+    "date": "2025-10-22",
+    "brent": 62.28,
+    "wti": 59.3
+   },
+   {
+    "date": "2025-10-23",
+    "brent": 66.32,
+    "wti": 62.44
+   },
+   {
+    "date": "2025-10-24",
+    "brent": 65.8,
+    "wti": 62.27
+   },
+   {
+    "date": "2025-10-27",
+    "brent": 65.52,
+    "wti": 62.13
+   },
+   {
+    "date": "2025-10-28",
+    "brent": 64.03,
+    "wti": 60.97
+   },
+   {
+    "date": "2025-10-29",
+    "brent": 65.01,
+    "wti": 61.26
+   },
+   {
+    "date": "2025-10-30",
+    "brent": 65.11,
+    "wti": 61.36
+   },
+   {
+    "date": "2025-10-31",
+    "brent": 65.44,
+    "wti": 61.75
+   },
+   {
+    "date": "2025-11-03",
+    "brent": 65.79,
+    "wti": 61.79
+   },
+   {
+    "date": "2025-11-04",
+    "brent": 65.04,
+    "wti": 61.38
+   },
+   {
+    "date": "2025-11-05",
+    "brent": 63.54,
+    "wti": 60.4
+   },
+   {
+    "date": "2025-11-06",
+    "brent": 63.41,
+    "wti": 60.24
+   },
+   {
+    "date": "2025-11-07",
+    "brent": 63.72,
+    "wti": 60.54
+   },
+   {
+    "date": "2025-11-10",
+    "brent": 63.01,
+    "wti": 60.94
+   },
+   {
+    "date": "2025-11-11",
+    "brent": 63.86,
+    "wti": null
+   },
+   {
+    "date": "2025-11-12",
+    "brent": 61.88,
+    "wti": 59.3
+   },
+   {
+    "date": "2025-11-13",
+    "brent": 62.14,
+    "wti": 59.54
+   },
+   {
+    "date": "2025-11-14",
+    "brent": 63.45,
+    "wti": 60.87
+   },
+   {
+    "date": "2025-11-17",
+    "brent": 63.16,
+    "wti": 60.66
+   },
+   {
+    "date": "2025-11-18",
+    "brent": 64.86,
+    "wti": 61.51
+   },
+   {
+    "date": "2025-11-19",
+    "brent": 63.78,
+    "wti": 60.27
+   },
+   {
+    "date": "2025-11-20",
+    "brent": 63.64,
+    "wti": 60.07
+   },
+   {
+    "date": "2025-11-21",
+    "brent": 62.78,
+    "wti": 58.86
+   },
+   {
+    "date": "2025-11-24",
+    "brent": 64.83,
+    "wti": 59.11
+   },
+   {
+    "date": "2025-11-25",
+    "brent": 63.99,
+    "wti": 58.25
+   },
+   {
+    "date": "2025-11-26",
+    "brent": 64.81,
+    "wti": 58.81
+   },
+   {
+    "date": "2025-11-27",
+    "brent": 64.18,
+    "wti": null
+   },
+   {
+    "date": "2025-11-28",
+    "brent": 64.07,
+    "wti": 58.58
+   },
+   {
+    "date": "2025-12-01",
+    "brent": 64.22,
+    "wti": 59.47
+   },
+   {
+    "date": "2025-12-02",
+    "brent": 63.37,
+    "wti": 58.81
+   },
+   {
+    "date": "2025-12-03",
+    "brent": 63.75,
+    "wti": 59.09
+   },
+   {
+    "date": "2025-12-04",
+    "brent": 64.15,
+    "wti": 59.82
+   },
+   {
+    "date": "2025-12-05",
+    "brent": 64.42,
+    "wti": 60.23
+   },
+   {
+    "date": "2025-12-08",
+    "brent": 63.3,
+    "wti": 59.04
+   },
+   {
+    "date": "2025-12-09",
+    "brent": 62.62,
+    "wti": 58.4
+   },
+   {
+    "date": "2025-12-10",
+    "brent": 63.12,
+    "wti": 58.67
+   },
+   {
+    "date": "2025-12-11",
+    "brent": 61.87,
+    "wti": 57.76
+   },
+   {
+    "date": "2025-12-12",
+    "brent": 62.11,
+    "wti": 57.61
+   },
+   {
+    "date": "2025-12-15",
+    "brent": 61.55,
+    "wti": 56.97
+   },
+   {
+    "date": "2025-12-16",
+    "brent": 59.93,
+    "wti": 55.44
+   },
+   {
+    "date": "2025-12-17",
+    "brent": 60.61,
+    "wti": 56.07
+   },
+   {
+    "date": "2025-12-18",
+    "brent": 60.69,
+    "wti": 56.22
+   },
+   {
+    "date": "2025-12-19",
+    "brent": 61.35,
+    "wti": 56.8
+   },
+   {
+    "date": "2025-12-22",
+    "brent": 62.22,
+    "wti": 58.18
+   },
+   {
+    "date": "2025-12-23",
+    "brent": 63.7,
+    "wti": 58.55
+   },
+   {
+    "date": "2025-12-24",
+    "brent": 63.7,
+    "wti": 58.72
+   },
+   {
+    "date": "2025-12-26",
+    "brent": null,
+    "wti": 56.6
+   },
+   {
+    "date": "2025-12-29",
+    "brent": 63.1,
+    "wti": 57.89
+   },
+   {
+    "date": "2025-12-30",
+    "brent": 62.3,
+    "wti": 57.79
+   },
+   {
+    "date": "2025-12-31",
+    "brent": 61.35,
+    "wti": 57.26
+   },
+   {
+    "date": "2026-01-02",
+    "brent": 61.98,
+    "wti": 57.21
+   },
+   {
+    "date": "2026-01-05",
+    "brent": 63.0,
+    "wti": 58.1
+   },
+   {
+    "date": "2026-01-06",
+    "brent": 62.1,
+    "wti": 56.97
+   },
+   {
+    "date": "2026-01-07",
+    "brent": 61.08,
+    "wti": 56.01
+   },
+   {
+    "date": "2026-01-08",
+    "brent": 63.34,
+    "wti": 57.74
+   },
+   {
+    "date": "2026-01-09",
+    "brent": 65.11,
+    "wti": 58.96
+   },
+   {
+    "date": "2026-01-12",
+    "brent": 65.4,
+    "wti": 59.39
+   },
+   {
+    "date": "2026-01-13",
+    "brent": 67.58,
+    "wti": 60.85
+   },
+   {
+    "date": "2026-01-14",
+    "brent": 68.87,
+    "wti": 61.84
+   },
+   {
+    "date": "2026-01-15",
+    "brent": 66.16,
+    "wti": 59.13
+   },
+   {
+    "date": "2026-01-16",
+    "brent": 66.97,
+    "wti": 59.4
+   },
+   {
+    "date": "2026-01-19",
+    "brent": 66.91,
+    "wti": null
+   },
+   {
+    "date": "2026-01-20",
+    "brent": 67.68,
+    "wti": 60.3
+   },
+   {
+    "date": "2026-01-21",
+    "brent": 66.72,
+    "wti": 60.38
+   },
+   {
+    "date": "2026-01-22",
+    "brent": 65.46,
+    "wti": 59.24
+   },
+   {
+    "date": "2026-01-23",
+    "brent": 68.16,
+    "wti": 60.7
+   },
+   {
+    "date": "2026-01-26",
+    "brent": 67.7,
+    "wti": 60.46
+   },
+   {
+    "date": "2026-01-27",
+    "brent": 70.28,
+    "wti": 62.04
+   },
+   {
+    "date": "2026-01-28",
+    "brent": 70.9,
+    "wti": 62.75
+   },
+   {
+    "date": "2026-01-29",
+    "brent": 71.0,
+    "wti": 64.77
+   },
+   {
+    "date": "2026-01-30",
+    "brent": 72.25,
+    "wti": 64.5
+   },
+   {
+    "date": "2026-02-02",
+    "brent": 67.72,
+    "wti": 61.6
+   },
+   {
+    "date": "2026-02-03",
+    "brent": 70.01,
+    "wti": 62.62
+   },
+   {
+    "date": "2026-02-04",
+    "brent": 71.15,
+    "wti": 64.56
+   },
+   {
+    "date": "2026-02-05",
+    "brent": 69.87,
+    "wti": 62.9
+   },
+   {
+    "date": "2026-02-06",
+    "brent": 70.45,
+    "wti": 63.77
+   },
+   {
+    "date": "2026-02-09",
+    "brent": 71.19,
+    "wti": 64.53
+   },
+   {
+    "date": "2026-02-10",
+    "brent": 71.01,
+    "wti": 64.2
+   },
+   {
+    "date": "2026-02-11",
+    "brent": 71.52,
+    "wti": 64.8
+   },
+   {
+    "date": "2026-02-12",
+    "brent": 69.8,
+    "wti": 63.08
+   },
+   {
+    "date": "2026-02-13",
+    "brent": 69.96,
+    "wti": 63.05
+   },
+   {
+    "date": "2026-02-16",
+    "brent": 70.81,
+    "wti": null
+   },
+   {
+    "date": "2026-02-17",
+    "brent": 69.77,
+    "wti": 62.53
+   },
+   {
+    "date": "2026-02-18",
+    "brent": 71.78,
+    "wti": 65.33
+   },
+   {
+    "date": "2026-02-19",
+    "brent": 73.17,
+    "wti": 66.66
+   },
+   {
+    "date": "2026-02-20",
+    "brent": 72.75,
+    "wti": 66.69
+   },
+   {
+    "date": "2026-02-23",
+    "brent": 71.9,
+    "wti": 66.36
+   },
+   {
+    "date": "2026-02-24",
+    "brent": 71.21,
+    "wti": 65.62
+   },
+   {
+    "date": "2026-02-25",
+    "brent": 70.69,
+    "wti": 65.3
+   },
+   {
+    "date": "2026-02-26",
+    "brent": 71.66,
+    "wti": 65.1
+   },
+   {
+    "date": "2026-02-27",
+    "brent": 71.32,
+    "wti": 66.96
+   },
+   {
+    "date": "2026-03-02",
+    "brent": 77.24,
+    "wti": 71.13
+   },
+   {
+    "date": "2026-03-03",
+    "brent": 83.28,
+    "wti": 74.48
+   },
+   {
+    "date": "2026-03-04",
+    "brent": 81.56,
+    "wti": 74.58
+   },
+   {
+    "date": "2026-03-05",
+    "brent": 88.59,
+    "wti": 80.88
+   },
+   {
+    "date": "2026-03-06",
+    "brent": 95.74,
+    "wti": 90.77
+   },
+   {
+    "date": "2026-03-09",
+    "brent": 94.35,
+    "wti": 94.65
+   },
+   {
+    "date": "2026-03-10",
+    "brent": 89.84,
+    "wti": 83.71
+   },
+   {
+    "date": "2026-03-11",
+    "brent": 90.98,
+    "wti": 86.8
+   },
+   {
+    "date": "2026-03-12",
+    "brent": 102.38,
+    "wti": 95.61
+   },
+   {
+    "date": "2026-03-13",
+    "brent": 103.23,
+    "wti": 98.48
+   },
+   {
+    "date": "2026-03-16",
+    "brent": 101.04,
+    "wti": 93.39
+   },
+   {
+    "date": "2026-03-17",
+    "brent": 108.39,
+    "wti": 96.01
+   },
+   {
+    "date": "2026-03-18",
+    "brent": 118.09,
+    "wti": 96.12
+   },
+   {
+    "date": "2026-03-19",
+    "brent": 111.05,
+    "wti": 96.11
+   },
+   {
+    "date": "2026-03-20",
+    "brent": 118.42,
+    "wti": 98.71
+   },
+   {
+    "date": "2026-03-23",
+    "brent": 103.79,
+    "wti": 89.33
+   },
+   {
+    "date": "2026-03-24",
+    "brent": 108.42,
+    "wti": 93.18
+   },
+   {
+    "date": "2026-03-25",
+    "brent": 109.14,
+    "wti": 91.51
+   },
+   {
+    "date": "2026-03-26",
+    "brent": 113.39,
+    "wti": 96.18
+   },
+   {
+    "date": "2026-03-27",
+    "brent": 121.47,
+    "wti": 101.26
+   },
+   {
+    "date": "2026-03-30",
+    "brent": 121.88,
+    "wti": 104.69
+   },
+   {
+    "date": "2026-03-31",
+    "brent": 126.69,
+    "wti": 102.86
+   },
+   {
+    "date": "2026-04-01",
+    "brent": 119.56,
+    "wti": 101.9
+   },
+   {
+    "date": "2026-04-02",
+    "brent": 127.61,
+    "wti": 113.23
+   },
+   {
+    "date": "2026-04-06",
+    "brent": null,
+    "wti": 114.01
+   },
+   {
+    "date": "2026-04-07",
+    "brent": 138.21,
+    "wti": 114.58
+   },
+   {
+    "date": "2026-04-08",
+    "brent": 122.11,
+    "wti": 96.17
+   },
+   {
+    "date": "2026-04-09",
+    "brent": 119.03,
+    "wti": 99.62
+   },
+   {
+    "date": "2026-04-10",
+    "brent": 119.07,
+    "wti": 98.34
+   },
+   {
+    "date": "2026-04-13",
+    "brent": 123.28,
+    "wti": 100.72
+   },
+   {
+    "date": "2026-04-14",
+    "brent": 118.69,
+    "wti": 93.07
+   },
+   {
+    "date": "2026-04-15",
+    "brent": 114.93,
+    "wti": 93.04
+   },
+   {
+    "date": "2026-04-16",
+    "brent": 116.63,
+    "wti": 96.46
+   },
+   {
+    "date": "2026-04-17",
+    "brent": 98.63,
+    "wti": 85.91
+   },
+   {
+    "date": "2026-04-20",
+    "brent": 103.4,
+    "wti": 91.06
+   },
+   {
+    "date": "2026-04-21",
+    "brent": 106.14,
+    "wti": 93.64
+   },
+   {
+    "date": "2026-04-22",
+    "brent": 113.44,
+    "wti": 94.76
+   },
+   {
+    "date": "2026-04-23",
+    "brent": 113.25,
+    "wti": 99.27
+   },
+   {
+    "date": "2026-04-24",
+    "brent": 111.86,
+    "wti": 98.42
+   },
+   {
+    "date": "2026-04-27",
+    "brent": 113.89,
+    "wti": 99.89
+   },
+   {
+    "date": "2026-04-28",
+    "brent": 117.62,
+    "wti": 103.45
+   },
+   {
+    "date": "2026-04-29",
+    "brent": 124.16,
+    "wti": 110.47
+   },
+   {
+    "date": "2026-04-30",
+    "brent": 124.24,
+    "wti": 108.64
+   },
+   {
+    "date": "2026-05-01",
+    "brent": 118.26,
+    "wti": 105.38
+   },
+   {
+    "date": "2026-05-04",
+    "brent": null,
+    "wti": 109.76
+   },
+   {
+    "date": "2026-05-05",
+    "brent": 114.51,
+    "wti": 105.66
+   },
+   {
+    "date": "2026-05-06",
+    "brent": 103.7,
+    "wti": 98.75
+   },
+   {
+    "date": "2026-05-07",
+    "brent": 101.82,
+    "wti": 98.38
+   },
+   {
+    "date": "2026-05-08",
+    "brent": 103.48,
+    "wti": 98.87
+   },
+   {
+    "date": "2026-05-11",
+    "brent": 106.11,
+    "wti": 101.56
+   },
+   {
+    "date": "2026-05-12",
+    "brent": 111.37,
+    "wti": 105.78
+   },
+   {
+    "date": "2026-05-13",
+    "brent": 110.28,
+    "wti": 104.52
+   },
+   {
+    "date": "2026-05-14",
+    "brent": 110.91,
+    "wti": 104.66
+   },
+   {
+    "date": "2026-05-15",
+    "brent": 113.96,
+    "wti": 108.99
+   },
+   {
+    "date": "2026-05-18",
+    "brent": 116.73,
+    "wti": 112.25
+   },
+   {
+    "date": "2026-05-19",
+    "brent": 114.64,
+    "wti": 112.09
+   },
+   {
+    "date": "2026-05-20",
+    "brent": 108.93,
+    "wti": 101.69
+   },
+   {
+    "date": "2026-05-21",
+    "brent": 105.84,
+    "wti": 100.2
+   },
+   {
+    "date": "2026-05-22",
+    "brent": 106.9,
+    "wti": 100.35
+   },
+   {
+    "date": "2026-05-26",
+    "brent": 102.75,
+    "wti": 97.63
+   },
+   {
+    "date": "2026-05-27",
+    "brent": 97.11,
+    "wti": 92.35
+   },
+   {
+    "date": "2026-05-28",
+    "brent": 95.47,
+    "wti": 92.65
+   },
+   {
+    "date": "2026-05-29",
+    "brent": 92.88,
+    "wti": 91.16
+   },
+   {
+    "date": "2026-06-01",
+    "brent": 98.29,
+    "wti": 95.96
+   },
+   {
+    "date": "2026-06-02",
+    "brent": 98.49,
+    "wti": 97.47
+   },
+   {
+    "date": "2026-06-03",
+    "brent": 101.69,
+    "wti": 99.76
+   },
+   {
+    "date": "2026-06-04",
+    "brent": 98.98,
+    "wti": 96.83
+   },
+   {
+    "date": "2026-06-05",
+    "brent": 97.29,
+    "wti": 94.32
+   },
+   {
+    "date": "2026-06-08",
+    "brent": 97.46,
+    "wti": 95.0
+   },
+   {
+    "date": "2026-06-09",
+    "brent": 94.15,
+    "wti": 91.9
+   },
+   {
+    "date": "2026-06-10",
+    "brent": 95.73,
+    "wti": 93.68
+   },
+   {
+    "date": "2026-06-11",
+    "brent": 92.84,
+    "wti": 91.58
+   },
+   {
+    "date": "2026-06-12",
+    "brent": 88.64,
+    "wti": 88.62
+   },
+   {
+    "date": "2026-06-15",
+    "brent": 84.36,
+    "wti": 84.65
+   },
+   {
+    "date": "2026-06-16",
+    "brent": 80.5,
+    "wti": 79.8
+   },
+   {
+    "date": "2026-06-17",
+    "brent": 80.33,
+    "wti": 80.65
+   },
+   {
+    "date": "2026-06-18",
+    "brent": 79.35,
+    "wti": 80.35
+   },
+   {
+    "date": "2026-06-19",
+    "brent": 80.46,
+    "wti": null
+   },
+   {
+    "date": "2026-06-22",
+    "brent": 76.49,
+    "wti": 78.94
+   },
+   {
+    "date": "2026-06-23",
+    "brent": 75.69,
+    "wti": 74.62
+   },
+   {
+    "date": "2026-06-24",
+    "brent": 72.09,
+    "wti": 71.42
+   },
+   {
+    "date": "2026-06-25",
+    "brent": 73.74,
+    "wti": 72.67
+   },
+   {
+    "date": "2026-06-26",
+    "brent": 70.16,
+    "wti": 70.3
+   },
+   {
+    "date": "2026-06-29",
+    "brent": 71.59,
+    "wti": 71.87
+   },
+   {
+    "date": "2026-06-30",
+    "brent": 70.46,
+    "wti": 70.56
+   },
+   {
+    "date": "2026-07-01",
+    "brent": 69.24,
+    "wti": 69.74
+   },
+   {
+    "date": "2026-07-02",
+    "brent": 68.53,
+    "wti": 69.73
+   },
+   {
+    "date": "2026-07-03",
+    "brent": 68.68,
+    "wti": null
+   },
+   {
+    "date": "2026-07-06",
+    "brent": 69.56,
+    "wti": 69.6
+   },
+   {
+    "date": "2026-07-07",
+    "brent": 71.78,
+    "wti": 71.53
+   },
+   {
+    "date": "2026-07-08",
+    "brent": 76.5,
+    "wti": 74.56
+   },
+   {
+    "date": "2026-07-09",
+    "brent": 74.46,
+    "wti": 73.15
+   },
+   {
+    "date": "2026-07-10",
+    "brent": 74.34,
+    "wti": 72.45
+   },
+   {
+    "date": "2026-07-13",
+    "brent": 81.62,
+    "wti": 79.2
+   },
+   {
+    "date": "2026-07-14",
+    "brent": 83.69,
+    "wti": 80.44
+   },
+   {
+    "date": "2026-07-15",
+    "brent": 83.08,
+    "wti": 80.73
+   },
+   {
+    "date": "2026-07-16",
+    "brent": 81.23,
+    "wti": 80.03
+   },
+   {
+    "date": "2026-07-17",
+    "brent": 85.01,
+    "wti": 83.43
+   },
+   {
+    "date": "2026-07-20",
+    "brent": 86.99,
+    "wti": 84.38
+   },
+   {
+    "date": "2026-07-21",
+    "brent": 93.85,
+    "wti": 86.04
+   },
+   {
+    "date": "2026-07-22",
+    "brent": 94.12,
+    "wti": 87.66
+   },
+   {
+    "date": "2026-07-23",
+    "brent": 105.32,
+    "wti": 93.08
+   },
+   {
+    "date": "2026-07-24",
+    "brent": 100.31,
+    "wti": 91.74
+   },
+   {
+    "date": "2026-07-27",
+    "brent": 91.82,
+    "wti": 84.25
+   },
+   {
+    "date": "2026-07-28",
+    "brent": 85.51,
+    "wti": 80.91
+   },
+   {
+    "date": "2026-07-29",
+    "brent": 91.95,
+    "wti": 86.08
+   },
+   {
+    "date": "2026-07-30",
+    "brent": 91.91,
+    "wti": 85.15
+   },
+   {
+    "date": "2026-07-31",
+    "brent": 96.95,
+    "wti": 86.16
+   },
+   {
+    "date": "2026-08-03",
+    "brent": 88.9,
+    "wti": 81.96
+   },
+   {
+    "date": "2026-08-04",
+    "brent": 86.47,
+    "wti": 77.33
+   },
+   {
+    "date": "2026-08-05",
+    "brent": 86.65,
+    "wti": 76.78
+   },
+   {
+    "date": "2026-08-06",
+    "brent": 89.65,
+    "wti": 78.88
+   },
+   {
+    "date": "2026-08-07",
+    "brent": 87.62,
+    "wti": 79.77
+   },
+   {
+    "date": "2026-08-10",
+    "brent": 92.74,
+    "wti": 83.76
+   },
+   {
+    "date": "2026-08-11",
+    "brent": 93.26,
+    "wti": 84.77
+   },
+   {
+    "date": "2026-08-12",
+    "brent": 92.52,
+    "wti": 84.97
+   },
+   {
+    "date": "2026-08-13",
+    "brent": 92.03,
+    "wti": 82.77
+   },
+   {
+    "date": "2026-08-14",
+    "brent": 92.02,
+    "wti": 83.99
+   },
+   {
+    "date": "2026-08-17",
+    "brent": 92.43,
+    "wti": 86.04
+   },
+   {
+    "date": "2026-08-18",
+    "brent": 95.29,
+    "wti": 86.48
+   },
+   {
+    "date": "2026-08-19",
+    "brent": 92.37,
+    "wti": 87.28
+   },
+   {
+    "date": "2026-08-20",
+    "brent": 94.0,
+    "wti": 89.75
+   },
+   {
+    "date": "2026-08-21",
+    "brent": 96.92,
+    "wti": 87.21
+   },
+   {
+    "date": "2026-08-24",
+    "brent": 92.71,
+    "wti": 86.34
+   },
+   {
+    "date": "2026-08-25",
+    "brent": 88.24,
+    "wti": 83.9
+   },
+   {
+    "date": "2026-08-26",
+    "brent": 87.77,
+    "wti": 83.46
+   },
+   {
+    "date": "2026-08-27",
+    "brent": 90.18,
+    "wti": 84.81
+   },
+   {
+    "date": "2026-08-28",
+    "brent": 89.75,
+    "wti": 84.57
+   },
+   {
+    "date": "2026-08-31",
+    "brent": null,
+    "wti": 87.03
+   },
+   {
+    "date": "2026-09-01",
+    "brent": 96.02,
+    "wti": 91.48
+   },
+   {
+    "date": "2026-09-02",
+    "brent": 97.59,
+    "wti": 92.15
+   },
+   {
+    "date": "2026-09-03",
+    "brent": 100.52,
+    "wti": 92.55
+   },
+   {
+    "date": "2026-09-04",
+    "brent": 102.24,
+    "wti": 92.69
+   },
+   {
+    "date": "2026-09-07",
+    "brent": 104.47,
+    "wti": null
+   },
+   {
+    "date": "2026-09-08",
+    "brent": 106.12,
+    "wti": 94.21
+   },
+   {
+    "date": "2026-09-09",
+    "brent": 109.51,
+    "wti": 97.26
+   },
+   {
+    "date": "2026-09-10",
+    "brent": 120.98,
+    "wti": 103.57
+   },
+   {
+    "date": "2026-09-11",
+    "brent": 118.06,
+    "wti": 101.27
+   },
+   {
+    "date": "2026-09-14",
+    "brent": 121.25,
+    "wti": 102.42
+   },
+   {
+    "date": "2026-09-15",
+    "brent": 130.8,
+    "wti": 107.02
+   },
+   {
+    "date": "2026-09-16",
+    "brent": 127.84,
+    "wti": 103.62
+   },
+   {
+    "date": "2026-09-17",
+    "brent": 121.18,
+    "wti": 103.21
+   },
+   {
+    "date": "2026-09-18",
+    "brent": 119.66,
+    "wti": 101.44
+   },
+   {
+    "date": "2026-09-21",
+    "brent": 116.15,
+    "wti": 96.97
+   },
+   {
+    "date": "2026-09-22",
+    "brent": 114.89,
+    "wti": 96.41
+   },
+   {
+    "date": "2026-09-23",
+    "brent": 117.45,
+    "wti": 93.38
+   },
+   {
+    "date": "2026-09-24",
+    "brent": 120.92,
+    "wti": 95.88
+   },
+   {
+    "date": "2026-09-25",
+    "brent": 116.01,
+    "wti": 85.23
+   },
+   {
+    "date": "2026-09-28",
+    "brent": 119.97,
+    "wti": 99.37
+   },
+   {
+    "date": "2026-09-29",
+    "brent": 113.96,
+    "wti": 96.16
+   },
+   {
+    "date": "2026-09-30",
+    "brent": 115.91,
+    "wti": 97.18
+   },
+   {
+    "date": "2026-10-01",
+    "brent": 114.82,
+    "wti": 99.77
+   },
+   {
+    "date": "2026-10-02",
+    "brent": 135.51,
+    "wti": 97.89
+   },
+   {
+    "date": "2026-10-05",
+    "brent": 125.51,
+    "wti": 96.13
+   },
+   {
+    "date": "2026-10-06",
+    "brent": 125.44,
+    "wti": 96.24
+   }
+  ]
+ },
+ "generated_at": "2026-10-12T21:07Z",
  "status": {
   "fracking": {
    "ok": true,
-   "at": "2026-10-12T21:02Z",
+   "at": "2026-10-12T21:06Z",
    "diag": {
     "resources": [
      "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
@@ -8955,20 +10272,19 @@
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-12T21:02Z",
+   "at": "2026-10-12T21:06Z",
    "diag": {
     "pages": 1
    }
   },
   "oil_price": {
-   "ok": false,
-   "error": "RuntimeError: Falta EIA_API_KEY (secreto del repositorio)",
-   "diag": {},
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1004, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 989, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 243, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
+   "ok": true,
+   "at": "2026-10-12T21:06Z",
+   "diag": {}
   },
   "regulations": {
    "ok": true,
-   "at": "2026-10-12T21:02Z",
+   "at": "2026-10-12T21:07Z",
    "diag": {
     "pages": 6,
     "page_errors": 0,
@@ -8980,7 +10296,7 @@
   },
   "news": {
    "ok": true,
-   "at": "2026-10-12T21:02Z",
+   "at": "2026-10-12T21:07Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
@@ -8991,7 +10307,7 @@
   },
   "reserves": {
    "ok": true,
-   "at": "2026-10-12T21:02Z",
+   "at": "2026-10-12T21:07Z",
    "diag": {
     "package": "http://datos.energia.gob.ar reservas-de-petroleo-y-gas",
     "zip_files": [
@@ -9198,7 +10514,7 @@
   },
   "export_price": {
    "ok": true,
-   "at": "2026-10-12T21:02Z",
+   "at": "2026-10-12T21:07Z",
    "diag": {
     "package": "https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo",
     "resources": [
@@ -9529,7 +10845,7 @@
   },
   "fuel_prices": {
    "ok": true,
-   "at": "2026-10-12T21:02Z",
+   "at": "2026-10-12T21:07Z",
    "diag": {
     "package": "http://datos.energia.gob.ar precios-en-surtidor",
     "resources": [
@@ -9572,12 +10888,12 @@
   },
   "rigi_portal": {
    "ok": true,
-   "at": "2026-10-12T21:02Z",
+   "at": "2026-10-12T21:07Z",
    "diag": {
     "html_len": 76399,
     "context": "-thin\">&nbsp;</span><span class=\"fw-semibold fs-1\">M</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Empleos <span class=\"fw-medium br-sm br-xs\">(directos e indirectos)</span></dt><dd class=\"fs-1 fw-bold text-arg-verdin js-total-puestos-trabajo\">0</dd></div></dl></div><div class=\"col-md-12 m-y-2\"><h3 class=\"h4 font-sans-serif p-b-1 border-bottom\">Sectores</h3><dl class=\"dl-proyectos-sector\"><div class=\"d-grid\"><dt class=\"last\">Energía eléctrica</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-torre-electrica m-r-05\"></i> <span class=\"m-t-1 js-total-energia-electrica\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Petróleo y gas</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-petroleo-y-gas m-r-05\"></i> <span class=\"m-t-1 js-total-petroleo-y-gas\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Minería</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-mineria m-r-05\"></i> <span class=\"m-t-1 js-total-mineria\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Siderurgia</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-siderurgia m-r-05\"></i> <span class=\"m-t-1 js-total-siderurgia\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Infraestructura</dt><",
     "inline_scripts": [
-     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"8bq5Nb4uGb0xP7YnoUWMCXYV4TknLZXuNMtPdOUbJsE\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
+     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"IxmNGwNAd6YHJ9Eq78txvNPmsA1TIviYVkI1akkH47Y\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
      "const jsonContainer = document.getElementById('raw-data-json');\n  const jsonText = (jsonContainer.textContent || jsonContainer.innerText).trim();\n  const rawData = JSON.parse(jsonText);\n\n  const extractVal = (val) => (typeof val === 'object' && val !== null) ? (val.total || 0) : (val || 0);\n  const formatNum = (num) => Number(num || 0).toLocaleString('es-AR');\n\n  const getSeriesData = (key) => rawData.map(d => ({ \n    x: new Date(d.year).getTime(), \n    y: extractVal(d[key]) \n  }));\n\n  const seriesData = [\n    { key: 'energia', name: 'Energía Eléctrica', data: getSeriesData('energia') },\n    { key: 'petroleo', name: 'Petróleo y Gas', data: getSeriesData('petroleo') },\n    { key: 'mineria', name: 'Minería', data: getSeriesData('mineria') },\n    { key: 'siderurgia', name: 'Siderurgia', data: getSeriesData('siderurgia') },\n    { key: 'infra', name: 'Infraestructura', data: getSeriesData('infra') }\n  ];\n\n  var optionsMain = {\n    series: seriesData,\n    colors: ['#C2185B', '#B9CE39', '#6A1B99', '#4FBB73', '#F79D00'],\n    chart: {\n      id: 'chartBarMain',\n      type: 'bar',\n      height: 450,\n      stacked: true,\n      toolbar: { show: false }\n    },\n    grid: {\n      padding: {\n        right: 35,\n        left: 15\n      }\n    },\n    dataLabels: { enabled: false },\n    plotOptions: {\n      bar: {\n        dataLabels: {\n          total: {\n            enabled: true,\n            style: {\n              fontSize: '13px',\n              fontWeight: 900\n            },\n            formatter: function (val, opts) {\n              if (!val) return '';\n\n              // Validar si la columna está dentro del rango visible actual del zoom/brush\n              if (opts && opts.w && opts.w.globals) {\n                const timestamp = opts.w.globals.seriesX[0][opts.dataPointIndex];\n            ",
      "headStyle(\"rigi-cms-fix\", `.container:has(#mapa-portal){padding-left:0 !important;padding-right:0 !important;width:100% !important;}`);\nheadStyle('rigi__999d6df5647d2df27fe7', `.poncho-map{--pm-color-primary: var(--arg-escarapela);--pm-color-base: #eaeaea;--pm-slider-background: var(--arg-azul);--pm-slider-border-color: color-mix(in srgb, #626161 40%, white);--pm-slider-border-width: 2px;--pm-scrollbar-handle: #eaeaea;--pm-scrollbar-background: rgb(0, 0, 0, 0.15);--pm-hover-background: var(--arg-secundario);--pm-hover-color: white;--pm-active-color: #343232;--pm-active-visited-color: violet;--pm-active-background: var(--pm-color-primary);--color: var(--arg-escarapela);--pm-loader-spinner-background: var(--arg-amarillo);--pm-loader-background: var(--arg-azul);--pm-loader-spinner-color: var(--arg-primary-700)}details{--details-border-color: var(--arg-primary-300)}.details-container{--container-border-color: var(--arg-primary-500)}.poncho-map .marker--active:focus,.poncho-map .marker--active{fill:#000 !important;fill-opacity:0 !important}.color-primary{color:var(--color)}.poncho-map .pm-content a{color:var(--arg-escarapela)}.totals-overview{display:grid;gap:15px 15px;grid-template-areas:\"area-a area-b area-c\";grid-template-columns:27% 1fr 27%}.a,.b,.c{display:flex;flex-direction:column-reverse;align-self:self-start}.a{grid-area:area-a}.b{grid-area:area-b}.c{grid-area:area-c}.a .key,.b .key,.c .key,.a .value,.b .value,.c .value{margin:0}.a .key,.b .key,.c .key{font-size:.95rem}.value{grid-area:value}.a .value,.b .value,.c .value{font-size:1.35rem;line-height:2rem;display:flex;align-items:baseline}.c .value .small,.b .value .small,.c .value .small{font-size:1rem}.details-data dt{float:left;margin-right:.25rem}.details-data dt::after{content:\":\";font-weight:400}.details-data "
     ],
@@ -9627,7 +10943,7 @@
   },
   "royalties": {
    "ok": true,
-   "at": "2026-10-12T21:02Z",
+   "at": "2026-10-12T21:07Z",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
