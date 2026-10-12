@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vaca Muerta · Argentina Invest Monitor</title>
 <meta name="description" content="Monthly shale oil and gas production in Vaca Muerta, Argentina, by operator. Official data from Argentina's Energy Secretariat, cleaned and explained for investors.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230e4d5c'/%3E%3Cpath d='M5 24 L12 18 L18 20 L27 8' stroke='%23fff' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d4a57'/%3E%3Cpath d='M5 10.5h22M5 25.5h22' stroke='%23fff' stroke-opacity='.4' stroke-width='1.6' stroke-linecap='round'/%3E%3Crect x='5' y='15.5' width='22' height='5.4' rx='1.4' fill='%23d9a441'/%3E%3Cpath d='M10 5.5v10.2q0 2.5 2.5 2.5H25' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Literata:opsz,wght@7..72,400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
   <header class="top">
     <nav class="crumbs" aria-label="Breadcrumb">
       <a class="mark" href="/">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="var(--brand)"/><path d="M5 24 L12 18 L18 20 L27 8" stroke="var(--brand-ink)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         Argentina Invest Monitor
       </a>
       <span class="crumb-sep" aria-hidden="true">/</span>
@@ -27,9 +27,22 @@
       <button type="button" data-lang="es" aria-pressed="false">ES</button>
     </div>
   </header>
+  <nav class="secnav" aria-label="Sections">
+    <ol>
+      <li><a href="#top" data-i18n="navProd">Production</a></li>
+      <li><a href="#mapSection" data-i18n="navMap">Map</a></li>
+      <li><a href="#drillSection" data-i18n="navWells">Wells</a></li>
+      <li><a href="#resSection" data-i18n="navRes">Reserves</a></li>
+      <li><a href="#priceSection" data-i18n="navPrices">Prices</a></li>
+      <li><a href="#rigiSection" data-i18n="navRigi">RIGI</a></li>
+      <li><a href="#histSection" data-i18n="navCos">Companies</a></li>
+      <li><a href="#tablesSection" data-i18n="navData">Data tables</a></li>
+      <li><a href="#regSection" data-i18n="navReg">Regulation and news</a></li>
+    </ol>
+  </nav>
 
   <main id="main">
-    <section class="hero">
+    <section class="hero" id="top">
       <h1 id="headline" data-i18n="loading">Loading production data…</h1>
       <p class="lede" data-i18n="lede">Monthly shale output from Argentina's Vaca Muerta formation, taken from the Energy Secretariat's well-by-well filings, cleaned and updated every week.</p>
       <ul class="facts" id="facts"></ul>
@@ -59,7 +72,7 @@
       </div>
     </section>
 
-    <section class="section" id="mapSection" aria-labelledby="mapTitle">
+    <section class="section chapter" id="mapSection" aria-labelledby="mapTitle">
       <h2 id="mapTitle" data-i18n="mapTitle">Map of Vaca Muerta blocks</h2>
       <p class="section-lede" data-i18n="mapLede">Each block in Neuquén shaded by its output in the latest month. Tap a block for its operator, partners and when its concession expires.</p>
       <div class="map-tools">
@@ -75,7 +88,7 @@
       <p class="note" id="mapNote"></p>
     </section>
 
-    <section class="section">
+    <section class="section chapter" id="drillSection">
       <h2 data-i18n="wellsTitle">Drilling activity</h2>
       <p class="section-lede" id="wellsLede"></p>
       <div class="two" style="margin-top:18px">
@@ -137,7 +150,7 @@
       <p class="note" id="fracNote"></p>
     </section>
 
-    <section class="section" id="resSection" hidden aria-labelledby="resTitle">
+    <section class="section chapter" id="resSection" hidden aria-labelledby="resTitle">
       <h2 id="resTitle" data-i18n="resTitle">Reserves: how much oil and gas is booked</h2>
       <p class="section-lede" id="resLede"></p>
       <ul class="facts" id="resFacts"></ul>
@@ -158,7 +171,7 @@
       <p class="note" id="resNote"></p>
     </section>
 
-    <section class="section" id="priceSection" hidden>
+    <section class="section chapter" id="priceSection" hidden>
       <h2 data-i18n="priceTitle">Prices and exchange rate</h2>
       <ul class="facts" id="priceFacts"></ul>
       <div class="two" style="margin-top:18px">
@@ -203,7 +216,7 @@
       <p class="note" id="fuelNote"></p>
     </section>
 
-    <section class="section" id="rigiSection" hidden aria-labelledby="rigiTitle">
+    <section class="section chapter" id="rigiSection" hidden aria-labelledby="rigiTitle">
       <h2 id="rigiTitle" data-i18n="rigiTitle">RIGI projects approved</h2>
       <div id="rigiPlan" hidden style="margin:6px 0 26px">
         <div class="chart-head"><h2 style="font-size:17px" data-i18n="rigiPlanTitle">Committed RIGI investment by year, USD million</h2></div>
@@ -227,7 +240,7 @@
       <p class="note" id="rigiNote"></p>
     </section>
 
-    <section class="section">
+    <section class="section chapter" id="histSection">
       <div class="chart-head">
         <h2 data-i18n="histTitle">The five largest operators since 2019</h2>
         <p data-i18n="histUnit">Oil, barrels per day</p>
@@ -255,7 +268,7 @@
       <p class="note" data-i18n="quotesNote">Share prices and charts by TradingView, with the delay set by each exchange. Shell, Chevron and TotalEnergies also operate in Vaca Muerta and are listed, but the formation is a small part of their global business. Pluspetrol, Pan American Energy and Tecpetrol are private.</p>
     </section>
 
-    <section class="section">
+    <section class="section chapter" id="tablesSection">
       <h2 data-i18n="tableTitle">Operators, latest month</h2>
       <div class="table-wrap">
         <table id="opsTable">
@@ -269,6 +282,7 @@
           <tbody></tbody>
         </table>
       </div>
+      <p class="note" id="opsFlag" hidden></p>
       <h2 style="margin-top:44px" data-i18n="areasTitle">Largest blocks, latest month</h2>
       <p class="section-lede" data-i18n="areasLede">Concessions and exploration permits ranked by oil output. The operator shown is the company with the most production in each block.</p>
       <div class="table-wrap">
@@ -283,6 +297,7 @@
           <tbody></tbody>
         </table>
       </div>
+      <p class="note" id="areasFlag" hidden></p>
       <div id="concWrap" hidden>
         <h2 style="margin-top:44px" id="concTitle" data-i18n="concTitle">Concessions and when they expire</h2>
         <p class="section-lede" data-i18n="concLede">Every hydrocarbon area in Neuquén with a contract end date, its holders and the decree that granted it. Expiry dates shape how long an operator can recover its investment.</p>
@@ -325,7 +340,7 @@
       <p class="note" data-i18n="method">Vaca Muerta here means wells in the Neuquén basin reporting the Vaca Muerta formation. Daily rates divide each month's declared volume by its number of days. The latest month can still be revised as operators correct their filings.</p>
     </section>
 
-    <section class="section" id="regSection" hidden aria-labelledby="regTitle">
+    <section class="section chapter" id="regSection" hidden aria-labelledby="regTitle">
       <h2 id="regTitle" data-i18n="regTitle">Recent regulations</h2>
       <p class="section-lede" data-i18n="regLede">Notices from the Official Gazette that deal with oil, gas, RIGI or Vaca Muerta, checked every morning. Each one links to the full text.</p>
       <ul class="feed" id="regList"></ul>
@@ -373,9 +388,37 @@
     </section>
   </main>
 
-  <footer>
-    <p id="sourceLine"></p>
-    <p data-i18n="disclaimer">For information only. Not investment advice.</p>
+  <footer class="site-foot">
+    <div class="cols">
+      <div class="about">
+        <a class="mark" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Argentina Invest Monitor
+        </a>
+        <p data-i18n="fAbout">Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.</p>
+      </div>
+      <div>
+        <h2 data-i18n="fSectors">Sectors</h2>
+        <ul>
+          <li><a href="/vaca-muerta/" data-i18n="fEnergy">Energy: Vaca Muerta</a></li>
+          <li class="soon" data-i18n="fMining">Mining (in development)</li>
+          <li class="soon" data-i18n="fAgro">Agriculture (in development)</li>
+          <li class="soon" data-i18n="fFinance">Finance and banking (in development)</li>
+          <li class="soon" data-i18n="fIndustry">Industry (in development)</li>
+        </ul>
+      </div>
+      <div>
+        <h2 data-i18n="fResources">Resources</h2>
+        <ul>
+          <li><a href="/metodologia/" data-i18n="fMethod">Methodology and sources</a></li>
+          <li><a href="/data/vm_monthly.csv" download data-i18n="fCsv">Download Vaca Muerta data (CSV)</a></li>
+          <li><a href="#signupTitle" data-i18n="fNewsletter">Weekly newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p id="sourceLine"></p>
+      <p data-i18n="disclaimer">For information only. Not investment advice.</p>
+    </div>
   </footer>
 </div>
 
@@ -401,6 +444,9 @@
       fail: "The subscription didn't go through. Try again in a minute.",
       source: (s, d) => `Source: <a href="${s.url}" rel="noopener">${s.name}</a>, ${s.license}. Data through ${d}.`,
       empty: "Production data is being loaded for the first time. Check back in a few minutes.",
+      fAbout: "Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.",
+      fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining (in development)", fAgro: "Agriculture (in development)", fFinance: "Finance and banking (in development)", fIndustry: "Industry (in development)",
+      fResources: "Resources", fMethod: "Methodology and sources", fCsv: "Download Vaca Muerta data (CSV)", fNewsletter: "Weekly newsletter",
       disclaimer: "For information only. Not investment advice.",
       fWells: "wells producing",
       mapTitle: "Map of Vaca Muerta blocks",
@@ -428,6 +474,8 @@
       thDate: "Date", thProject: "Project", thSubsector: "Sub-sector", thUsdM: "USD million",
       rigiNote: (n, d, portal) => `${n} approvals detected since ${d}; the list grows as new resolutions are published. For every project approved before that date, see the ${portal}.`,
       rigiPortal: "official RIGI portal",
+      lowBase: "Growth from a small base: the operator or block produced little a year ago.", lowBaseNote: "* Change of more than 200%, from a small base a year ago.",
+      navProd: "Production", navMap: "Map", navWells: "Wells", navRes: "Reserves", navPrices: "Prices", navRigi: "RIGI", navCos: "Companies", navData: "Data tables", navReg: "Regulation and news",
       rigiPlanTitle: "Committed RIGI investment by year, USD million",
       rigiPlanNote: (src, tot, oil) => `All approved projects, every sector: USD ${tot} million in total, of which USD ${oil} million in oil and gas. Source: ${src}.`,
       rpOther: "Other sectors", rpUp: "Oil & gas upstream", rpMid: "Oil & gas midstream", rpFert: "Fertilisers",
@@ -505,6 +553,9 @@
       fail: "No se pudo completar la suscripción. Probá de nuevo en un minuto.",
       source: (s, d) => `Fuente: <a href="${s.url}" rel="noopener">${s.name}</a>, ${s.license}. Datos hasta ${d}.`,
       empty: "Los datos de producción se están cargando por primera vez. Volvé en unos minutos.",
+      fAbout: "Los datos públicos oficiales de la Argentina sobre energía, minería, agro, finanzas e industria, organizados para inversores y actualizados en forma automática.",
+      fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería (en desarrollo)", fAgro: "Agro (en desarrollo)", fFinance: "Finanzas y bancos (en desarrollo)", fIndustry: "Industria (en desarrollo)",
+      fResources: "Recursos", fMethod: "Metodología y fuentes", fCsv: "Descargar datos de Vaca Muerta (CSV)", fNewsletter: "Newsletter semanal",
       disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.",
       fWells: "pozos en producción",
       mapTitle: "Mapa de bloques de Vaca Muerta",
@@ -532,6 +583,8 @@
       thDate: "Fecha", thProject: "Proyecto", thSubsector: "Subsector", thUsdM: "Millones de USD",
       rigiNote: (n, d, portal) => `${n} aprobaciones detectadas desde el ${d}; la lista crece con cada nueva resolución. Para todos los proyectos aprobados antes de esa fecha, ver el ${portal}.`,
       rigiPortal: "portal oficial del RIGI",
+      lowBase: "Crecimiento desde una base chica: la operadora o el bloque producía poco hace un año.", lowBaseNote: "* Variación de más del 200%, desde una base chica hace un año.",
+      navProd: "Producción", navMap: "Mapa", navWells: "Pozos", navRes: "Reservas", navPrices: "Precios", navRigi: "RIGI", navCos: "Empresas", navData: "Tablas", navReg: "Normativa y noticias",
       rigiPlanTitle: "Inversión comprometida en el RIGI por año, millones de USD",
       rigiPlanNote: (src, tot, oil) => `Todos los proyectos aprobados, de todos los sectores: USD ${tot} millones en total, de los cuales USD ${oil} millones en petróleo y gas. Fuente: ${src}.`,
       rpOther: "Otros sectores", rpUp: "Petróleo y gas, upstream", rpMid: "Petróleo y gas, midstream", rpFert: "Fertilizantes",
@@ -600,8 +653,12 @@
   let DATA = null, EXTRAS = null;
 
   const $ = s => document.querySelector(s);
+  const $$ = s => [...document.querySelectorAll(s)];
   const locale = () => (lang === "es" ? "es-AR" : "en-US");
   const fmt = (n, d = 0) => n == null ? "–" : new Intl.NumberFormat(locale(), { minimumFractionDigits: d, maximumFractionDigits: d }).format(n);
+  // Variaciones interanuales extremas: casi siempre parten de una base chica; se marcan con una nota.
+  const OUTLIER = 200;
+  const yoyCell = v => `<td class="${v > 0 ? "delta-up" : v < 0 ? "delta-down" : ""}">${pct(v)}${v != null && Math.abs(v) > OUTLIER ? `<sup class="flag" title="${esc(T[lang].lowBase)}">*</sup>` : ""}</td>`;
   const pct = n => n == null ? "–" : (n > 0 ? "+" : n < 0 ? "−" : "") + fmt(Math.abs(n), 1) + "%";
   const monthName = (p, long = true) => {
     const [y, m] = p.split("-").map(Number);
@@ -923,8 +980,8 @@
       scalePosition: "right", scaleMode: "Normal", fontFamily: "Archivo, system-ui, sans-serif", fontSize: "11",
       noTimeScale: false, valuesTracking: "1", changeMode: "price-and-percent", chartType: "area",
       lineWidth: 2, lineType: 0, dateRanges: ["1m|30", "3m|60", "12m|1D", "60m|1W", "all|1M"],
-      lineColor: dark ? "#3987e5" : "#2a78d6", topColor: dark ? "rgba(57,135,229,.18)" : "rgba(42,120,214,.12)",
-      bottomColor: "rgba(42,120,214,0)", backgroundColor: dark ? "#1a2127" : "#ffffff",
+      lineColor: dark ? "#74a0f2" : "#2b5fc2", topColor: dark ? "rgba(116,160,242,.18)" : "rgba(43,95,194,.12)",
+      bottomColor: "rgba(43,95,194,0)", backgroundColor: dark ? "#172026" : "#ffffff",
       gridLineColor: dark ? "rgba(255,255,255,.06)" : "rgba(23,33,43,.06)",
     });
     box.append(inner, s);
@@ -954,6 +1011,10 @@
   }
 
   function renderExtras() {
+    renderExtrasInner();
+    syncNav(); spy();
+  }
+  function renderExtrasInner() {
     const t = T[lang], E = EXTRAS;
     if (!E || E === "empty") return;
 
@@ -980,12 +1041,12 @@
       facts.push([fmt(fx.latest.ars_per_usd, 2), t.pFx]);
       $("#priceFacts").innerHTML = facts.map(([v, l]) => `<li><strong>${esc(v)}</strong>${esc(l)}</li>`).join("");
       const fxRows = fx.daily.map(d => ({ period: d.date, v: d.ars_per_usd }));
-      lineChart($("#fxChart"), fxRows, "v", "var(--oil)", "ARS/USD", 2, 240);
+      lineChart($("#fxChart"), fxRows, "v", "var(--ink-2)", "ARS/USD", 2, 240);
       const fxSrc = `<a href="${esc(fx.source.url)}" rel="noopener">${esc(fx.source.name)}</a>, ${esc(shortDate(fx.latest.date))}`;
       if (oil && oil.daily && oil.daily.length) {
         $("#brentBlock").hidden = false;
         const bRows = oil.daily.filter(d => d.brent != null).map(d => ({ period: d.date, v: d.brent }));
-        lineChart($("#brentChart"), bRows, "v", "var(--gas)", "USD/bbl", 2, 240);
+        lineChart($("#brentChart"), bRows, "v", "var(--price)", "USD/bbl", 2, 240);
         $("#priceNote").innerHTML = t.priceNote(`<a href="${esc(oil.source.url)}" rel="noopener">${esc(oil.source.name)}</a>, ${esc(shortDate(oil.brent.date))}`, fxSrc);
       } else {
         $("#brentBlock").hidden = true;
@@ -1032,9 +1093,9 @@
       $("#rigiSection").hidden = false; $("#rigiPlan").hidden = false;
       const v = (r, k) => +(r[k] || 0);
       const ser = [
-        { name: t.rpUp, color: "var(--s1)", get: r => v(r, "petroleo:Upstream") },
-        { name: t.rpMid, color: "var(--s2)", get: r => v(r, "petroleo:Midstream") },
-        { name: t.rpFert, color: "var(--s3)", get: r => v(r, "petroleo:Fertilizantes") },
+        { name: t.rpUp, color: "var(--oil)", get: r => v(r, "petroleo:Upstream") },
+        { name: t.rpMid, color: "var(--brand)", get: r => v(r, "petroleo:Midstream") },
+        { name: t.rpFert, color: "var(--accent)", get: r => v(r, "petroleo:Fertilizantes") },
         { name: t.rpOther, color: "var(--ink-3)", get: r => v(r, "energia") + v(r, "mineria") + v(r, "siderurgia") + v(r, "infra") + Math.max(0, v(r, "petroleo") - v(r, "petroleo:Upstream") - v(r, "petroleo:Midstream") - v(r, "petroleo:Fertilizantes")) },
       ];
       $("#rigiPlanLegend").innerHTML = ser.map(x => `<li><i style="background:${x.color}"></i>${esc(x.name)}</li>`).join("");
@@ -1111,23 +1172,23 @@
   }
 
   // ---------- Map ----------
-  const RAMP = ["#cde2fb", "#86b6ef", "#3987e5", "#1c5cab", "#0d366b"];
+  const RAMPS = { oil: ["#d3eee1", "#8fd3b3", "#3fa77b", "#17805a", "#0b4d35"], gas: ["#fbdcd5", "#f2a493", "#e0654c", "#c8412b", "#7f2214"] };
   const BINS = { oil: [1, 2000, 10000, 30000, 60000], gas: [0.05, 0.5, 2, 5, 10] };
-  const FLUID = { oil: "#1baf7a", wet_gas: "#eda100", dry_gas: "#eb6834", other: "#9aa5ad" };
+  const FLUID = { oil: "#8fae2e", wet_gas: "#d9a441", dry_gas: "#c8412b", other: "#9aa5ad" };
   let map = null, mapMeasure = "oil", mapState = "idle", mapMeta = null;
 
   function fillExpr(m) {
     const key = m === "oil" ? "oil_bbl_d" : "gas_mmm3_d", b = BINS[m];
     return ["case", ["!", ["has", key]], "rgba(0,0,0,0)", ["<", ["get", key], b[0]], "rgba(0,0,0,0)",
-      ["step", ["get", key], RAMP[0], b[1], RAMP[1], b[2], RAMP[2], b[3], RAMP[3], b[4], RAMP[4]]];
+      ((R) => ["step", ["get", key], R[0], b[1], R[1], b[2], R[2], b[3], R[3], b[4], R[4]])(RAMPS[m])];
   }
   function mapLegend() {
     const t = T[lang], b = BINS[mapMeasure];
     const lab = v => mapMeasure === "oil" ? axisLabel(v) : fmt(v, v < 1 ? 1 : 0);
     const unit = mapMeasure === "oil" ? "bbl/d" : "MMm³/d";
-    let h = `<span class="ramp"><em>0</em>${RAMP.map(c => `<span style="background:${c}"></span>`).join("")}<em>${lab(b[4])}+ ${unit}</em></span>`;
+    let h = `<span class="ramp"><em>0</em>${RAMPS[mapMeasure].map(c => `<span style="background:${c}"></span>`).join("")}<em>${lab(b[4])}+ ${unit}</em></span>`;
     h += `<span><b style="background:transparent;border:1px solid #9aa5ad"></b>${esc(t.lgNoProd)}</span>`;
-    if ($("#tDucts").checked) h += `<span><i style="background:#17212b"></i>${esc(t.lgOilDuct)}</span><span><i style="background:#eb6834"></i>${esc(t.lgGasDuct)}</span>`;
+    if ($("#tDucts").checked) h += `<span><i style="background:#142029"></i>${esc(t.lgOilDuct)}</span><span><i style="background:#c8412b"></i>${esc(t.lgGasDuct)}</span>`;
     if ($("#tFluids").checked) h += `<span><b style="background:${FLUID.oil};opacity:.5"></b>${esc(t.lgOilW)}</span><span><b style="background:${FLUID.wet_gas};opacity:.5"></b>${esc(t.lgWetW)}</span><span><b style="background:${FLUID.dry_gas};opacity:.5"></b>${esc(t.lgDryW)}</span>`;
     $("#mapLegend").innerHTML = h;
     if (mapMeta) $("#mapNote").innerHTML = t.mapNote(`<a href="${esc(mapMeta.source.url)}" rel="noopener">${esc(mapMeta.source.name)}</a>`, esc(monthName(mapMeta.period || DATA.latest_period)));
@@ -1180,7 +1241,7 @@
         if (ducts) {
           map.addSource("ducts", { type: "geojson", data: ducts });
           map.addLayer({ id: "ducts", type: "line", source: "ducts",
-            paint: { "line-color": ["match", ["get", "kind"], "gas", "#eb6834", "#17212b"], "line-width": 1.6 } });
+            paint: { "line-color": ["match", ["get", "kind"], "gas", "#c8412b", "#142029"], "line-width": 1.6 } });
         }
         let hov = null;
         map.on("mousemove", "areas-fill", e => {
@@ -1302,7 +1363,7 @@
     const wc = rows.filter(r => r.water_cut_pct != null && r.period >= "2016-01");
     if (wc.length > 12) {
       $("#wcutBlock").hidden = false;
-      lineChart($("#wcutChart"), wc, "water_cut_pct", "var(--s3)", t.wcutUnit, 1, 220);
+      lineChart($("#wcutChart"), wc, "water_cut_pct", "var(--water)", t.wcutUnit, 1, 220);
     }
     if (DATA.operators_history && DATA.operators_history.names.length) {
       const h = DATA.operators_history, colors = ["var(--s1)", "var(--s2)", "var(--s3)", "var(--s4)", "var(--s5)"];
@@ -1314,7 +1375,7 @@
       const o = byName[c.name] || {};
       return `<tr><td>${esc(c.name)}</td><td>${esc(c.tickers)}</td><td>${fmt(o.oil_bbl_d)}</td>
         <td>${o.share_pct == null ? "–" : fmt(o.share_pct, 1) + "%"}</td>
-        <td class="${o.oil_yoy_pct > 0 ? "delta-up" : o.oil_yoy_pct < 0 ? "delta-down" : ""}">${pct(o.oil_yoy_pct)}</td></tr>`;
+        ${yoyCell(o.oil_yoy_pct)}</tr>`;
     }).join("");
     mountQuotes();
     renderExtras();
@@ -1326,13 +1387,17 @@
       $("#areasTable tbody").innerHTML = DATA.areas.map(a => `<tr>
         <td>${esc(a.name)}</td><td style="text-align:left">${esc(a.operator)}</td><td>${fmt(a.oil_bbl_d)}</td>
         <td>${a.share_pct == null ? "–" : fmt(a.share_pct, 1) + "%"}</td>
-        <td class="${a.oil_yoy_pct > 0 ? "delta-up" : a.oil_yoy_pct < 0 ? "delta-down" : ""}">${pct(a.oil_yoy_pct)}</td></tr>`).join("");
+        ${yoyCell(a.oil_yoy_pct)}</tr>`).join("");
+      $("#areasFlag").hidden = !DATA.areas.some(a => Math.abs(a.oil_yoy_pct || 0) > OUTLIER);
+      $("#areasFlag").textContent = t.lowBaseNote;
     }
+    $("#opsFlag").hidden = !DATA.operators.some(o => Math.abs(o.oil_yoy_pct || 0) > OUTLIER);
+    $("#opsFlag").textContent = t.lowBaseNote;
 
     $("#opsTable tbody").innerHTML = DATA.operators.map(o => `<tr>
       <td>${esc(o.name === "Otras" ? t.others : o.name)}</td><td>${fmt(o.oil_bbl_d)}</td>
       <td>${o.share_pct == null ? "–" : fmt(o.share_pct, 1) + "%"}</td>
-      <td class="${o.oil_yoy_pct > 0 ? "delta-up" : o.oil_yoy_pct < 0 ? "delta-down" : ""}">${pct(o.oil_yoy_pct)}</td>
+      ${yoyCell(o.oil_yoy_pct)}
       <td>${fmt(o.gas_mmm3_d, 2)}</td></tr>`).join("");
     $("#monthlyTable tbody").innerHTML = rows.slice().reverse().map(r =>
       `<tr><td>${esc(monthName(r.period))}</td><td>${fmt(r.oil_bbl_d)}</td><td>${fmt(r.gas_mmm3_d, 2)}</td></tr>`).join("");
@@ -1360,6 +1425,33 @@
     } catch (err) { msg.textContent = t.fail; }
     btn.disabled = false;
   });
+
+  // Barra de secciones: oculta capítulos sin datos y marca el capítulo visible.
+  function syncNav() {
+    $$(".secnav a").forEach(a => {
+      const el = document.getElementById(a.getAttribute("href").slice(1));
+      const alt = a.getAttribute("href") === "#regSection" && $("#newsSection") && !$("#newsSection").hidden;
+      a.parentElement.hidden = !el || (el.hidden && !alt);
+      if (el && el.hidden && alt) a.setAttribute("href", "#newsSection");
+    });
+  }
+  let spyTick = false;
+  function spy() {
+    spyTick = false;
+    const links = $$(".secnav a").filter(a => !a.parentElement.hidden);
+    const off = 120;
+    let cur = links[0];
+    for (const a of links) {
+      const el = document.getElementById(a.getAttribute("href").slice(1));
+      if (el && el.getBoundingClientRect().top - off <= 0) cur = a;
+    }
+    links.forEach(a => a.setAttribute("aria-current", a === cur ? "true" : "false"));
+    if (cur && window.innerWidth < 900) {
+      const bar = $(".secnav ol"), r = cur.getBoundingClientRect(), br = bar.getBoundingClientRect();
+      if (r.left < br.left || r.right > br.right) bar.scrollTo({ left: cur.offsetLeft - 16, behavior: "auto" });
+    }
+  }
+  addEventListener("scroll", () => { if (!spyTick) { spyTick = true; requestAnimationFrame(spy); } }, { passive: true });
 
   render();
   fetch("/data/concessions.json", { cache: "no-cache" })

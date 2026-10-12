@@ -5,43 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Argentina Invest Monitor</title>
 <meta name="description" content="Argentina's public economic data, organized for investors: energy, mining, agriculture, finance and industry, with maps, charts and the regulations that matter.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230e4d5c'/%3E%3Cpath d='M5 24 L12 18 L18 20 L27 8' stroke='%23fff' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d4a57'/%3E%3Cpath d='M5 10.5h22M5 25.5h22' stroke='%23fff' stroke-opacity='.4' stroke-width='1.6' stroke-linecap='round'/%3E%3Crect x='5' y='15.5' width='22' height='5.4' rx='1.4' fill='%23d9a441'/%3E%3Cpath d='M10 5.5v10.2q0 2.5 2.5 2.5H25' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Literata:opsz,wght@7..72,400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <style>
-.home-hero { padding: 56px 0 8px; }
-.home-hero h1 { font-stretch: 120%; font-weight: 700; font-size: clamp(34px, 6vw, 68px); line-height: 1.02; letter-spacing: -0.03em; margin: 0; max-width: 16ch; }
-.home-hero .lede { font-size: 20px; max-width: 58ch; }
-.pulse { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 40px 0 0; padding: 0; list-style: none; border-top: 2px solid var(--ink); }
-.pulse li { padding: 16px 20px 18px 0; border-right: 1px solid var(--rule); }
-.pulse li + li { padding-left: 20px; }
-.pulse li:last-child { border-right: 0; }
-.pulse .k { font-size: 14px; color: var(--ink-2); display: block; }
-.pulse strong { display: block; font-size: 30px; font-stretch: 112%; font-weight: 700; margin: 4px 0 2px; letter-spacing: -0.01em; }
-.pulse .s { font-size: 13px; color: var(--ink-3); }
-.pulse a { color: inherit; text-decoration: none; }
-.pulse a:hover strong { color: var(--brand); }
-@media (max-width: 860px) { .pulse { grid-template-columns: 1fr 1fr; } .pulse li:nth-child(2) { border-right: 0; } .pulse li:nth-child(3) { padding-left: 0; } .pulse li:nth-child(n+3) { border-top: 1px solid var(--rule); } }
-@media (max-width: 480px) { .pulse { grid-template-columns: 1fr; } .pulse li, .pulse li + li { padding-left: 0; border-right: 0; } .pulse li + li { border-top: 1px solid var(--rule); } }
+.home-hero { padding: 52px 0 8px; }
+.home-hero h1 { font-family: var(--serif); font-optical-sizing: auto; font-weight: 500; font-size: clamp(36px, 6vw, 68px); line-height: 1.04; letter-spacing: -0.022em; margin: 0; max-width: 15ch; text-wrap: balance; }
+.home-hero .lede { font-size: 20px; max-width: 56ch; }
 
-.sectors { margin: 18px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--rule); }
-.sectors > li { display: grid; grid-template-columns: 220px 1fr 220px; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--rule); align-items: start; }
-.sectors h3 { font-stretch: 112%; font-weight: 700; font-size: 22px; margin: 0; letter-spacing: -0.01em; }
-.sectors h3 a { color: var(--ink); text-decoration: none; }
-.sectors h3 a:hover { color: var(--brand); text-decoration: underline; }
-.sectors .status { display: inline-block; margin-top: 8px; font-size: 13px; color: var(--ink-3); }
-.sectors .status.live { color: var(--up); font-weight: 600; }
-.sectors .status.live::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--up); margin-right: 6px; vertical-align: 1px; }
-.sectors p { margin: 0; color: var(--ink-2); max-width: 62ch; }
-.sectors .src { margin-top: 6px; font-size: 13px; color: var(--ink-3); }
-.sectors .metrics { font-size: 14px; color: var(--ink-2); }
-.sectors .metrics strong { color: var(--ink); font-size: 17px; }
-.sectors .metrics div + div { margin-top: 4px; }
-.sectors .go { display: inline-block; margin-top: 10px; font-weight: 600; }
-.sectors li.soon h3 { color: var(--ink-2); }
-@media (max-width: 860px) { .sectors > li { grid-template-columns: 1fr; gap: 8px; } }
+.feature { margin: 20px 0 0; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 40px; padding: 28px; background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; }
+.feature h3 { font-family: var(--serif); font-weight: 550; font-size: 30px; line-height: 1.12; letter-spacing: -0.014em; margin: 10px 0 10px; }
+.feature h3 a { color: var(--ink); text-decoration: none; }
+.feature h3 a:hover { color: var(--brand); }
+.feature p { margin: 0; color: var(--ink-2); max-width: 52ch; }
+.feature .src { margin-top: 10px; font-size: 13px; color: var(--ink-3); }
+.feature .btn { display: inline-block; margin-top: 20px; padding: 11px 18px; border-radius: 6px; background: var(--brand); color: var(--brand-ink); font-weight: 620; text-decoration: none; }
+.feature .btn:hover { background: color-mix(in srgb, var(--brand) 85%, var(--ink)); }
+.feature .spark-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 14px; color: var(--ink-2); }
+.feature .spark-head strong { font-size: 30px; font-weight: 650; color: var(--ink); letter-spacing: -0.01em; display: block; line-height: 1.1; }
+.feature .spark { margin-top: 10px; }
+.feature .spark svg { display: block; width: 100%; height: auto; }
+.feature .spark text { fill: var(--ink-3); font-size: 11px; font-family: var(--sans); }
+.feature .metrics { display: flex; flex-wrap: wrap; gap: 6px 28px; margin: 14px 0 0; padding: 14px 0 0; border-top: 1px solid var(--rule); list-style: none; font-size: 14px; color: var(--ink-2); }
+.feature .metrics strong { color: var(--ink); font-size: 17px; margin-right: 4px; }
+@media (max-width: 860px) { .feature { grid-template-columns: 1fr; gap: 26px; padding: 22px 18px; } }
+
+.soon-title { font-family: var(--sans) !important; font-size: 15px !important; font-weight: 620 !important; color: var(--ink-2); margin: 36px 0 0 !important; }
+.soon-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 12px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--rule); }
+.soon-grid li { padding: 16px 20px 4px; border-left: 1px solid var(--rule); }
+.soon-grid li:first-child { border-left: 0; padding-left: 0; }
+.soon-grid h3 { font-family: var(--serif); font-weight: 550; font-size: 19px; margin: 0 0 6px; color: var(--ink); }
+.soon-grid p { margin: 0; font-size: 14.5px; color: var(--ink-2); line-height: 1.45; }
+.soon-grid .src { margin-top: 8px; font-size: 12.5px; color: var(--ink-3); }
+@media (max-width: 860px) { .soon-grid { grid-template-columns: 1fr 1fr; } .soon-grid li { padding: 14px 14px 14px 0; border-left: 0; border-bottom: 1px solid var(--rule); } .soon-grid li:nth-child(even) { padding-left: 14px; border-left: 1px solid var(--rule); } }
+@media (max-width: 520px) { .soon-grid { grid-template-columns: 1fr; } .soon-grid li:nth-child(even) { padding-left: 0; border-left: 0; } }
 .compact .feed li { padding: 12px 0; }
 .compact .feed p { display: none; }
 </style>
@@ -50,7 +49,7 @@
 <div class="wrap">
   <header class="top">
     <a class="mark" href="/">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="var(--brand)"/><path d="M5 24 L12 18 L18 20 L27 8" stroke="var(--brand-ink)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       Argentina Invest Monitor
     </a>
     <div class="lang" role="group" aria-label="Language / Idioma">
@@ -68,7 +67,9 @@
 
     <section class="section" aria-labelledby="sectorsTitle">
       <h2 id="sectorsTitle" data-i18n="sectorsTitle">Sectors</h2>
-      <ul class="sectors" id="sectors"></ul>
+      <div id="feature"></div>
+      <h2 class="soon-title" data-i18n="soonTitle">Next sectors</h2>
+      <ul class="soon-grid" id="soonGrid"></ul>
     </section>
 
     <section class="section two compact">
@@ -97,9 +98,37 @@
     </section>
   </main>
 
-  <footer>
-    <p data-i18n="footSources">All figures come from public, official sources cited on each page.</p>
-    <p data-i18n="disclaimer">For information only. Not investment advice.</p>
+  <footer class="site-foot">
+    <div class="cols">
+      <div class="about">
+        <a class="mark" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Argentina Invest Monitor
+        </a>
+        <p data-i18n="fAbout">Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.</p>
+      </div>
+      <div>
+        <h2 data-i18n="fSectors">Sectors</h2>
+        <ul>
+          <li><a href="/vaca-muerta/" data-i18n="fEnergy">Energy: Vaca Muerta</a></li>
+          <li class="soon" data-i18n="fMining">Mining (in development)</li>
+          <li class="soon" data-i18n="fAgro">Agriculture (in development)</li>
+          <li class="soon" data-i18n="fFinance">Finance and banking (in development)</li>
+          <li class="soon" data-i18n="fIndustry">Industry (in development)</li>
+        </ul>
+      </div>
+      <div>
+        <h2 data-i18n="fResources">Resources</h2>
+        <ul>
+          <li><a href="/metodologia/" data-i18n="fMethod">Methodology and sources</a></li>
+          <li><a href="/data/vm_monthly.csv" download data-i18n="fCsv">Download Vaca Muerta data (CSV)</a></li>
+          <li><a href="#signupTitle" data-i18n="fNewsletter">Weekly newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p data-i18n="footSources">All figures come from public, official sources cited on each page.</p>
+      <p data-i18n="disclaimer">For information only. Not investment advice.</p>
+    </div>
   </footer>
 </div>
 
@@ -134,6 +163,8 @@
       kBrent: "Brent crude", kBrentS: d => `USD per barrel, EIA, ${d}`,
       kWells: "Wells producing", kWellsS: m => `in Vaca Muerta, ${m}`,
       kRigi: "Latest RIGI approval", kRigiS: d => `Official Gazette, ${d}`,
+      soonTitle: "Next sectors", mYoy: "oil vs a year ago",
+      sparkLab: m => `barrels of oil a day, ${m}`, sparkRange: y => `since ${y}`, sparkAria: "Vaca Muerta oil production, monthly",
       mOil: "bbl/d of oil", mGas: "MMm³/d of gas", mBlocks: "blocks producing",
       regTitle: "Latest regulations", regAll: "All recent notices", newsTitle: "Sector news",
       signupTitle: "The week in Argentine investment, in five minutes",
@@ -142,6 +173,9 @@
       ok: "You're subscribed. The first issue arrives next week.", badEmail: "Enter a valid email address, like name@company.com.",
       notReady: "Sign-ups open soon. Try again in a few days.", fail: "The subscription didn't go through. Try again in a minute.",
       footSources: "All figures come from public, official sources cited on each page.",
+      fAbout: "Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.",
+      fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining (in development)", fAgro: "Agriculture (in development)", fFinance: "Finance and banking (in development)", fIndustry: "Industry (in development)",
+      fResources: "Resources", fMethod: "Methodology and sources", fCsv: "Download Vaca Muerta data (CSV)", fNewsletter: "Weekly newsletter",
       disclaimer: "For information only. Not investment advice.",
       topicNames: { Hidrocarburos: "Hydrocarbons", "Gas natural": "Natural gas", "Petróleo": "Oil", Biocombustibles: "Biofuels" },
     },
@@ -154,6 +188,8 @@
       kBrent: "Petróleo Brent", kBrentS: d => `USD por barril, EIA, ${d}`,
       kWells: "Pozos en producción", kWellsS: m => `en Vaca Muerta, ${m}`,
       kRigi: "Última aprobación RIGI", kRigiS: d => `Boletín Oficial, ${d}`,
+      soonTitle: "Próximos sectores", mYoy: "petróleo vs. un año atrás",
+      sparkLab: m => `barriles de petróleo por día, ${m}`, sparkRange: y => `desde ${y}`, sparkAria: "Producción de petróleo de Vaca Muerta, mensual",
       mOil: "bbl/d de petróleo", mGas: "MMm³/d de gas", mBlocks: "bloques produciendo",
       regTitle: "Normativa reciente", regAll: "Todos los avisos recientes", newsTitle: "Noticias del sector",
       signupTitle: "La semana de la inversión en Argentina, en cinco minutos",
@@ -162,6 +198,9 @@
       ok: "Listo, quedaste suscripto. El primer envío llega la semana que viene.", badEmail: "Ingresá un correo válido, por ejemplo nombre@empresa.com.",
       notReady: "Las suscripciones abren pronto. Probá de nuevo en unos días.", fail: "No se pudo completar la suscripción. Probá de nuevo en un minuto.",
       footSources: "Todas las cifras provienen de fuentes públicas y oficiales, citadas en cada página.",
+      fAbout: "Los datos públicos oficiales de la Argentina sobre energía, minería, agro, finanzas e industria, organizados para inversores y actualizados en forma automática.",
+      fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería (en desarrollo)", fAgro: "Agro (en desarrollo)", fFinance: "Finanzas y bancos (en desarrollo)", fIndustry: "Industria (en desarrollo)",
+      fResources: "Recursos", fMethod: "Metodología y fuentes", fCsv: "Descargar datos de Vaca Muerta (CSV)", fNewsletter: "Newsletter semanal",
       disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.",
       topicNames: {},
     },
@@ -190,6 +229,17 @@
     return li;
   }
 
+  function sparkline(vals, periods) {
+    const W = 560, H = 150, pad = { t: 6, r: 4, b: 18, l: 4 }, max = Math.max(...vals) * 1.05;
+    const x = i => pad.l + (i / (vals.length - 1)) * (W - pad.l - pad.r), y = v => pad.t + (1 - v / max) * (H - pad.t - pad.b);
+    const d = vals.map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("");
+    const area = `${d}L${x(vals.length - 1).toFixed(1)},${H - pad.b}L${pad.l},${H - pad.b}Z`;
+    const years = periods.map((p, i) => [p, i]).filter(([p]) => p.endsWith("-01") && +p.slice(0, 4) % 2 === 0);
+    const labs = years.map(([p, i]) => `<text x="${x(i).toFixed(1)}" y="${H - 4}" text-anchor="middle">${p.slice(0, 4)}</text>`).join("");
+    const lx = x(vals.length - 1), ly = y(vals[vals.length - 1]);
+    return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(T[lang].sparkAria)}"><line x1="${pad.l}" x2="${W - pad.r}" y1="${H - pad.b}" y2="${H - pad.b}" stroke="var(--rule)"/><path d="${area}" fill="var(--oil)" fill-opacity=".1"/><path d="${d}" fill="none" stroke="var(--oil)" stroke-width="2" stroke-linejoin="round"/><circle cx="${lx}" cy="${ly}" r="3.5" fill="var(--oil)"/>${labs}</svg>`;
+  }
+
   function render() {
     const t = T[lang];
     document.documentElement.lang = lang;
@@ -207,20 +257,22 @@
     if (rigi && pulse.length < 4) pulse.push({ k: t.kRigi, v: shortDate(rigi.date), s: t.kRigiS(rigi.title.split(" ").slice(0, 2).join(" ")), href: rigi.url, ext: true });
     $("#pulse").innerHTML = pulse.slice(0, 4).map(p => `<li><a href="${esc(p.href)}"${p.ext ? ' rel="noopener" target="_blank"' : ""}><span class="k">${esc(p.k)}</span><strong>${esc(p.v)}</strong><span class="s">${esc(p.s)}</span></a></li>`).join("");
 
-    // Sectors.
-    $("#sectors").innerHTML = SECTORS.map(sec => {
-      const c = sec[lang];
-      let right = "";
-      if (sec.id === "energy" && VM && VM.kpis) {
-        const blocks = (VM.areas_all || []).length;
-        right = `<div class="metrics"><div><strong>${fmt(VM.kpis.oil_bbl_d)}</strong> ${esc(t.mOil)}</div><div><strong>${fmt(VM.kpis.gas_mmm3_d, 1)}</strong> ${esc(t.mGas)}</div>${blocks ? `<div><strong>${fmt(blocks)}</strong> ${esc(t.mBlocks)}</div>` : ""}</div>`;
-      }
-      const name = sec.live ? `<a href="${sec.href}">${esc(c.name)}</a>` : esc(c.name);
-      return `<li class="${sec.live ? "" : "soon"}">
-        <div><h3>${name}</h3><span class="status ${sec.live ? "live" : ""}">${esc(sec.live ? t.live : t.soon)}</span></div>
-        <div><p>${esc(c.text)}</p><div class="src">${esc(sec.live ? t.sources : t.plannedSources)}: ${esc(c.src)}</div>${sec.live ? `<a class="go" href="${sec.href}">${esc(t.open)}</a>` : ""}</div>
-        <div>${right}</div></li>`;
-    }).join("");
+    // Sector en vivo, con su curva de producción.
+    const live = SECTORS.find(x => x.live), lc = live[lang];
+    let spark = "", metrics = "";
+    if (VM && VM.kpis && VM.monthly) {
+      const blocks = (VM.areas_all || []).length;
+      spark = `<div class="spark-head"><div><strong>${fmt(VM.kpis.oil_bbl_d)}</strong>${esc(t.sparkLab(monthName(VM.latest_period)))}</div><span>${esc(t.sparkRange(VM.monthly[0].period.slice(0, 4)))}</span></div><div class="spark">${sparkline(VM.monthly.map(r => r.oil_bbl_d), VM.monthly.map(r => r.period))}</div>`;
+      metrics = `<ul class="metrics"><li><strong>${pct(VM.kpis.oil_yoy_pct)}</strong>${esc(t.mYoy)}</li><li><strong>${fmt(VM.kpis.gas_mmm3_d, 1)}</strong>${esc(t.mGas)}</li>${blocks ? `<li><strong>${fmt(blocks)}</strong>${esc(t.mBlocks)}</li>` : ""}</ul>`;
+    }
+    $("#feature").innerHTML = `<article class="feature">
+      <div><span class="live-dot">${esc(t.live)}</span>
+        <h3><a href="${live.href}">${esc(lc.name)}</a></h3>
+        <p>${esc(lc.text)}</p><div class="src">${esc(t.sources)}: ${esc(lc.src)}</div>
+        <a class="btn" href="${live.href}">${esc(t.open)}</a></div>
+      <div>${spark}${metrics}</div></article>`;
+    $("#soonGrid").innerHTML = SECTORS.filter(x => !x.live).map(sec => { const c = sec[lang];
+      return `<li><h3>${esc(c.name)}</h3><p>${esc(c.text)}</p><div class="src">${esc(t.plannedSources)}: ${esc(c.src)}</div></li>`; }).join("");
 
     // Regulations and news.
     const regs = EX && EX.regulations && EX.regulations.items;

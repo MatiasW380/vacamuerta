@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology · Argentina Invest Monitor</title>
+<meta name="description" content="Where every figure in Argentina Invest Monitor comes from and how it is processed.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d4a57'/%3E%3Cpath d='M5 10.5h22M5 25.5h22' stroke='%23fff' stroke-opacity='.4' stroke-width='1.6' stroke-linecap='round'/%3E%3Crect x='5' y='15.5' width='22' height='5.4' rx='1.4' fill='%23d9a441'/%3E%3Cpath d='M10 5.5v10.2q0 2.5 2.5 2.5H25' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Literata:opsz,wght@7..72,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+.doc { max-width: 760px; padding: 36px 0 0; }
+.doc h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 5vw, 52px); line-height: 1.08; letter-spacing: -0.02em; margin: 0; }
+.doc h2 { font-family: var(--serif); font-weight: 550; font-size: 25px; letter-spacing: -0.01em; margin: 44px 0 10px; }
+.doc p, .doc dd { color: var(--ink-2); max-width: 68ch; }
+.doc dl { margin: 0; }
+.doc dt { font-weight: 620; color: var(--ink); margin-top: 18px; }
+.doc dd { margin: 4px 0 0; }
+.doc td .meta { font-size: 13px; color: var(--ink-3); }
+.doc td { vertical-align: top; font-size: 14.5px; }
+.doc td:nth-child(2) { color: var(--ink-2); }
+html[lang="es"] .doc > div[lang="en"], html[lang="en"] .doc > div[lang="es"] { display: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="mark" href="/">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Argentina Invest Monitor
+      </a>
+      <span class="crumb-sep" aria-hidden="true">/</span>
+      <span class="crumb-here" data-i18n="crumbHere">Methodology</span>
+    </nav>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+  </header>
+  <main id="main" class="doc">
+<div lang="en">
+<h1>Methodology and sources</h1>
+<p class="lede">Everything the monitor shows comes from public, official sources. We do not produce data: we download it, clean it, check it against other sources and show it with its source. This page explains how.</p>
+<h2>How it updates</h2>
+<p>An automatic process downloads each source on its own schedule: production by well once a week and everything else daily. If a source is down or changes format, the last valid figure is kept and the section shows its date. Every figure on screen carries its source and date.</p>
+<h2>Sources</h2>
+<div class="table-wrap"><table><thead><tr><th scope="col">Source</th><th scope="col" style="text-align:left">What we take</th><th scope="col">Frequency</th></tr></thead><tbody>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/produccion-de-petroleo-y-gas-por-pozo" rel="noopener">Chapter IV: production by well</a><div class="meta">Energy Secretariat</div></td><td style="text-align:left">Oil, gas and water for every well: the basis for production, operators, blocks, type curves and water cut.</td><td>Monthly</td></tr>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/datos-de-fractura-de-pozos-adjunto-iv" rel="noopener">Annex IV: hydraulic fracturing</a><div class="meta">Energy Secretariat</div></td><td style="text-align:left">Frac stages, sand and water per well, and lateral length.</td><td>Monthly</td></tr>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/reservas-de-petroleo-y-gas" rel="noopener">Oil and gas reserves</a><div class="meta">Energy Secretariat</div></td><td style="text-align:left">Proved, probable and possible reserves and contingent resources by operator, basin and field.</td><td>Yearly</td></tr>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado" rel="noopener">Crude oil royalties</a><div class="meta">Energy Secretariat</div></td><td style="text-align:left">Declared wellhead price, volume and royalties paid, by province.</td><td>Monthly</td></tr>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/precios-en-surtidor" rel="noopener">Pump prices</a><div class="meta">Energy Secretariat</div></td><td style="text-align:left">Current prices reported by each filling station.</td><td>Daily</td></tr>
+<tr><td><a href="https://hidrocarburos.energianeuquen.gob.ar/gis" rel="noopener">Blocks, pipelines and fluid windows</a><div class="meta">Neuquén Province</div></td><td style="text-align:left">Block outlines, holders, operator, granting decree and concession expiry.</td><td>Weekly</td></tr>
+<tr><td><a href="https://www.boletinoficial.gob.ar/" rel="noopener">Official Gazette, first section</a><div class="meta">Official Gazette of Argentina</div></td><td style="text-align:left">Rules on hydrocarbons, gas and the RIGI; each RIGI approval is read for company, project and investment.</td><td>Daily</td></tr>
+<tr><td><a href="https://www.argentina.gob.ar/economia/rigi" rel="noopener">RIGI portal</a><div class="meta">Ministry of Economy</div></td><td style="text-align:left">Yearly investment plan of approved projects, by sector.</td><td>Daily</td></tr>
+<tr><td><a href="https://www.bcra.gob.ar/" rel="noopener">Exchange rate</a><div class="meta">Central Bank, Communication A 3500</div></td><td style="text-align:left">Official wholesale dollar rate.</td><td>Daily</td></tr>
+<tr><td><a href="https://www.eia.gov/opendata/" rel="noopener">Brent and WTI</a><div class="meta">US Energy Information Administration</div></td><td style="text-align:left">International spot crude price.</td><td>Daily</td></tr>
+</tbody></table></div>
+<h2>How it is processed</h2>
+<dl>
+<dt>What counts as Vaca Muerta</dt><dd>Wells whose declared formation is Vaca Muerta and whose resource type is unconventional, in any province.</dd>
+<dt>Barrels per day</dt><dd>Monthly volume in cubic metres is converted to barrels (1 m³ = 6.2898 barrels) and divided by the days in the month.</dd>
+<dt>Operators</dt><dd>Legal entities are grouped by company (for example, Petrolera El Trébol under Phoenix Global). A block's operator is the company with the most production in that block in the latest month.</dd>
+<dt>Type curves</dt><dd>For each well, oil from its first six months of production is added up and averaged by start year. Only wells with six full months are included.</dd>
+<dt>Water cut</dt><dd>Produced water over water plus oil, by volume, across all wells.</dd>
+<dt>Reserves and years of reserves</dt><dd>We use reserves to the end of each concession, as certified by each company at 31 December. Years of reserves divide proved reserves by current output: a reference, not a forecast.</dd>
+<dt>Wellhead price</dt><dd>The price producers declare to pay royalties, published by province, converted from USD per m³ to USD per barrel.</dd>
+<dt>Regulation and the RIGI</dt><dd>Official Gazette notices are read and classified by topic from their operative part. Each RIGI approval is read for company, project, sub-sector and amount. The reading is automatic: the official text, linked on every row, always prevails.</dd>
+</dl>
+<h2>Limits</h2>
+<p>Official sources are published with a lag (production, one or two months) and are sometimes revised; when that happens, the monitor corrects itself on the next update. Share prices come from TradingView, with each exchange's delay. Nothing shown here is investment advice.</p>
+<h2>Licence</h2>
+<p>Energy Secretariat data is published under a Creative Commons Attribution 4.0 licence; the rest under the terms of each agency cited. The monthly Vaca Muerta series can be <a href="/data/vm_monthly.csv" download>downloaded as CSV</a>.</p>
+</div>
+<div lang="es">
+<h1>Metodología y fuentes</h1>
+<p class="lede">Todo lo que muestra el monitor sale de fuentes públicas y oficiales. No generamos datos: los descargamos, los limpiamos, los cruzamos entre sí y los mostramos con su fuente. Esta página explica cómo.</p>
+<h2>Cómo se actualiza</h2>
+<p>Un proceso automático descarga cada fuente a su propio ritmo: la producción por pozo una vez por semana y el resto todos los días. Si una fuente no responde o cambia de formato, se conserva el último dato válido y la sección indica de qué fecha es. Cada cifra en pantalla trae su fuente y su fecha.</p>
+<h2>Fuentes</h2>
+<div class="table-wrap"><table><thead><tr><th scope="col">Fuente</th><th scope="col" style="text-align:left">Qué se toma</th><th scope="col">Frecuencia</th></tr></thead><tbody>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/produccion-de-petroleo-y-gas-por-pozo" rel="noopener">Capítulo IV: producción por pozo</a><div class="meta">Secretaría de Energía</div></td><td style="text-align:left">Petróleo, gas y agua de cada pozo: base de la producción, operadoras, bloques, curvas tipo y corte de agua.</td><td>Mensual</td></tr>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/datos-de-fractura-de-pozos-adjunto-iv" rel="noopener">Adjunto IV: fractura hidráulica</a><div class="meta">Secretaría de Energía</div></td><td style="text-align:left">Etapas de fractura, arena y agua por pozo, y largo de rama lateral.</td><td>Mensual</td></tr>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/reservas-de-petroleo-y-gas" rel="noopener">Reservas de petróleo y gas</a><div class="meta">Secretaría de Energía</div></td><td style="text-align:left">Reservas comprobadas, probables y posibles y recursos contingentes, por operadora, cuenca y yacimiento.</td><td>Anual</td></tr>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado" rel="noopener">Regalías de petróleo crudo</a><div class="meta">Secretaría de Energía</div></td><td style="text-align:left">Precio declarado en boca de pozo, volumen y regalías pagadas, por provincia.</td><td>Mensual</td></tr>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/precios-en-surtidor" rel="noopener">Precios en surtidor</a><div class="meta">Secretaría de Energía</div></td><td style="text-align:left">Precios vigentes informados por cada estación de servicio.</td><td>Diaria</td></tr>
+<tr><td><a href="https://hidrocarburos.energianeuquen.gob.ar/gis" rel="noopener">Áreas, ductos y ventanas de fluidos</a><div class="meta">Provincia de Neuquén</div></td><td style="text-align:left">Límites de los bloques, titulares, operadora, norma de otorgamiento y vencimiento de la concesión.</td><td>Semanal</td></tr>
+<tr><td><a href="https://www.boletinoficial.gob.ar/" rel="noopener">Boletín Oficial, primera sección</a><div class="meta">Boletín Oficial de la República Argentina</div></td><td style="text-align:left">Normas sobre hidrocarburos, gas y RIGI; de cada aprobación RIGI se leen empresa, proyecto e inversión.</td><td>Diaria</td></tr>
+<tr><td><a href="https://www.argentina.gob.ar/economia/rigi" rel="noopener">Portal del RIGI</a><div class="meta">Ministerio de Economía</div></td><td style="text-align:left">Plan de inversión anual de los proyectos aprobados, por sector.</td><td>Diaria</td></tr>
+<tr><td><a href="https://www.bcra.gob.ar/" rel="noopener">Cotización del dólar</a><div class="meta">BCRA, Comunicación A 3500</div></td><td style="text-align:left">Dólar mayorista oficial.</td><td>Diaria</td></tr>
+<tr><td><a href="https://www.eia.gov/opendata/" rel="noopener">Brent y WTI</a><div class="meta">EIA de los Estados Unidos</div></td><td style="text-align:left">Precio spot internacional del crudo.</td><td>Diaria</td></tr>
+</tbody></table></div>
+<h2>Cómo se procesa</h2>
+<dl>
+<dt>Qué es Vaca Muerta</dt><dd>Pozos cuya formación declarada es Vaca Muerta y cuyo recurso es no convencional, en cualquier provincia.</dd>
+<dt>Barriles por día</dt><dd>El volumen mensual en metros cúbicos se convierte a barriles (1 m³ = 6,2898 barriles) y se divide por los días del mes.</dd>
+<dt>Operadoras</dt><dd>Las razones sociales se agrupan por empresa (por ejemplo, Petrolera El Trébol dentro de Phoenix Global). La operadora de un bloque es la empresa con más producción en ese bloque en el último mes.</dd>
+<dt>Curvas tipo</dt><dd>Para cada pozo se suma el petróleo de sus primeros seis meses de producción y se promedia por año de inicio. Solo entran pozos con seis meses completos.</dd>
+<dt>Corte de agua</dt><dd>Agua producida sobre agua más petróleo, en volumen, para el conjunto de los pozos.</dd>
+<dt>Reservas y años de reserva</dt><dd>Se usan las reservas hasta el fin de la concesión que certifica cada empresa al 31 de diciembre. Los años de reserva dividen las reservas comprobadas por la producción actual: son una referencia, no un pronóstico.</dd>
+<dt>Precio en boca de pozo</dt><dd>Es el precio que las productoras declaran para pagar regalías, publicado por provincia; se convierte de USD por m³ a USD por barril.</dd>
+<dt>Normativa y RIGI</dt><dd>Se leen los avisos del Boletín Oficial y se clasifican por tema a partir de su parte resolutiva. De cada aprobación RIGI se extraen la empresa, el proyecto, el subsector y el monto. La lectura es automática: ante cualquier duda vale el texto oficial, enlazado en cada fila.</dd>
+</dl>
+<h2>Límites</h2>
+<p>Las fuentes oficiales se publican con demora (la producción, uno o dos meses) y a veces se corrigen hacia atrás; cuando eso pasa, el monitor se corrige solo en la siguiente actualización. Las cotizaciones de bolsa las provee TradingView, con la demora de cada mercado. Nada de lo que se muestra es una recomendación de inversión.</p>
+<h2>Licencia</h2>
+<p>Los datos de la Secretaría de Energía se publican con licencia Creative Commons Atribución 4.0; el resto, según los términos de cada organismo citado. La serie mensual de Vaca Muerta se puede <a href="/data/vm_monthly.csv" download>descargar en CSV</a>.</p>
+</div>
+  </main>
+  <footer class="site-foot">
+    <div class="cols">
+      <div class="about">
+        <a class="mark" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Argentina Invest Monitor
+        </a>
+        <p data-i18n="fAbout">Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.</p>
+      </div>
+      <div>
+        <h2 data-i18n="fSectors">Sectors</h2>
+        <ul>
+          <li><a href="/vaca-muerta/" data-i18n="fEnergy">Energy: Vaca Muerta</a></li>
+          <li class="soon" data-i18n="fMining">Mining (in development)</li>
+          <li class="soon" data-i18n="fAgro">Agriculture (in development)</li>
+          <li class="soon" data-i18n="fFinance">Finance and banking (in development)</li>
+          <li class="soon" data-i18n="fIndustry">Industry (in development)</li>
+        </ul>
+      </div>
+      <div>
+        <h2 data-i18n="fResources">Resources</h2>
+        <ul>
+          <li><a href="/metodologia/" data-i18n="fMethod">Methodology and sources</a></li>
+          <li><a href="/data/vm_monthly.csv" download data-i18n="fCsv">Download Vaca Muerta data (CSV)</a></li>
+          <li><a href="/#signupTitle" data-i18n="fNewsletter">Weekly newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p data-i18n="disclaimer">For information only. Not investment advice.</p>
+    </div>
+  </footer>
+</div>
+<script>
+(() => {
+  const T = {
+    en: { fAbout: "Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.", fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining (in development)", fAgro: "Agriculture (in development)", fFinance: "Finance and banking (in development)", fIndustry: "Industry (in development)", fResources: "Resources", fMethod: "Methodology and sources", fCsv: "Download Vaca Muerta data (CSV)", fNewsletter: "Weekly newsletter", disclaimer: "For information only. Not investment advice.", crumbHere: "Methodology" },
+    es: { fAbout: "Los datos públicos oficiales de la Argentina sobre energía, minería, agro, finanzas e industria, organizados para inversores y actualizados en forma automática.", fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería (en desarrollo)", fAgro: "Agro (en desarrollo)", fFinance: "Finanzas y bancos (en desarrollo)", fIndustry: "Industria (en desarrollo)", fResources: "Recursos", fMethod: "Metodología y fuentes", fCsv: "Descargar datos de Vaca Muerta (CSV)", fNewsletter: "Newsletter semanal", disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.", crumbHere: "Metodología" },
+  };
+  let saved = null;
+  try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
+  let lang = saved || ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en");
+  function render() {
+    document.documentElement.lang = lang;
+    document.title = (lang === "es" ? "Metodología" : "Methodology") + " · Argentina Invest Monitor";
+    document.querySelectorAll("[data-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    document.querySelectorAll("[data-i18n]").forEach(el => { const v = T[lang][el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
+  }
+  document.querySelectorAll("[data-lang]").forEach(b => b.addEventListener("click", () => {
+    lang = b.dataset.lang; try { localStorage.setItem("vm-lang", lang); } catch (e) {} render();
+  }));
+  render();
+})();
+</script>
+</body>
+</html>
