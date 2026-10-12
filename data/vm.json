@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-12T18:36Z",
+ "generated_at": "2026-10-12T19:05Z",
  "latest_period": "2026-08",
  "source": {
   "name": "Secretaría de Energía de la Nación, Capítulo IV (Res. 319/93)",
@@ -427,6 +427,557 @@
    "gas_mmm3_d": 0.15,
    "share_pct": 2.1,
    "oil_yoy_pct": 107.9
+  }
+ ],
+ "areas_all": [
+  {
+   "name": "Loma Campana",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 92284,
+   "gas_mmm3_d": 3.63,
+   "oil_yoy_pct": 8.7,
+   "gas_yoy_pct": 29.7
+  },
+  {
+   "name": "La Amarga Chica",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 80949,
+   "gas_mmm3_d": 1.592,
+   "oil_yoy_pct": 11.0,
+   "gas_yoy_pct": 18.1
+  },
+  {
+   "name": "Bandurria Sur",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 72205,
+   "gas_mmm3_d": 2.523,
+   "oil_yoy_pct": 3.2,
+   "gas_yoy_pct": 17.9
+  },
+  {
+   "name": "Bajada del Palo Oeste",
+   "province": "Neuquén",
+   "operator": "Vista",
+   "oil_bbl_d": 58741,
+   "gas_mmm3_d": 1.056,
+   "oil_yoy_pct": 15.3,
+   "gas_yoy_pct": 16.0
+  },
+  {
+   "name": "Bajo del Choique - La Invernada",
+   "province": "Neuquén",
+   "operator": "Pluspetrol",
+   "oil_bbl_d": 46594,
+   "gas_mmm3_d": 2.545,
+   "oil_yoy_pct": 257.1,
+   "gas_yoy_pct": 220.2
+  },
+  {
+   "name": "La Angostura Sur I",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 46038,
+   "gas_mmm3_d": 1.636,
+   "oil_yoy_pct": 114.8,
+   "gas_yoy_pct": 127.5
+  },
+  {
+   "name": "La Calera",
+   "province": "Neuquén",
+   "operator": "Pluspetrol",
+   "oil_bbl_d": 31539,
+   "gas_mmm3_d": 13.646,
+   "oil_yoy_pct": 14.4,
+   "gas_yoy_pct": 18.3
+  },
+  {
+   "name": "El Trapial Este",
+   "province": "Neuquén",
+   "operator": "Chevron",
+   "oil_bbl_d": 24240,
+   "gas_mmm3_d": 1.786,
+   "oil_yoy_pct": 48.4,
+   "gas_yoy_pct": 68.1
+  },
+  {
+   "name": "Rincon de Aranda",
+   "province": "Neuquén",
+   "operator": "Pampa Energía",
+   "oil_bbl_d": 20117,
+   "gas_mmm3_d": 0.265,
+   "oil_yoy_pct": 30.8,
+   "gas_yoy_pct": 48.2
+  },
+  {
+   "name": "Cruz de Lorena",
+   "province": "Neuquén",
+   "operator": "Shell",
+   "oil_bbl_d": 19882,
+   "gas_mmm3_d": 0.292,
+   "oil_yoy_pct": 32.8,
+   "gas_yoy_pct": 24.0
+  },
+  {
+   "name": "Mata Mora Norte",
+   "province": "Neuquén",
+   "operator": "Phoenix Global",
+   "oil_bbl_d": 19529,
+   "gas_mmm3_d": 0.208,
+   "oil_yoy_pct": 44.7,
+   "gas_yoy_pct": 49.6
+  },
+  {
+   "name": "Lindero Atravesado",
+   "province": "Neuquén",
+   "operator": "Pan American Energy",
+   "oil_bbl_d": 17728,
+   "gas_mmm3_d": 0.316,
+   "oil_yoy_pct": -1.5,
+   "gas_yoy_pct": 13.5
+  },
+  {
+   "name": "Aguada del Chañar",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 16478,
+   "gas_mmm3_d": 0.206,
+   "oil_yoy_pct": -10.7,
+   "gas_yoy_pct": 9.7
+  },
+  {
+   "name": "Bajada del Palo Este",
+   "province": "Neuquén",
+   "operator": "Vista",
+   "oil_bbl_d": 16442,
+   "gas_mmm3_d": 0.116,
+   "oil_yoy_pct": 30.5,
+   "gas_yoy_pct": -0.2
+  },
+  {
+   "name": "Coiron Amargo Sur Este",
+   "province": "Neuquén",
+   "operator": "Pan American Energy",
+   "oil_bbl_d": 13787,
+   "gas_mmm3_d": 0.149,
+   "oil_yoy_pct": 107.9,
+   "gas_yoy_pct": 97.9
+  },
+  {
+   "name": "Fortin de Piedra",
+   "province": "Neuquén",
+   "operator": "Tecpetrol",
+   "oil_bbl_d": 10975,
+   "gas_mmm3_d": 20.532,
+   "oil_yoy_pct": 27.1,
+   "gas_yoy_pct": -1.5
+  },
+  {
+   "name": "Bajada de Añelo",
+   "province": "Neuquén",
+   "operator": "Shell",
+   "oil_bbl_d": 10013,
+   "gas_mmm3_d": 1.56,
+   "oil_yoy_pct": null,
+   "gas_yoy_pct": null
+  },
+  {
+   "name": "La Angostura Sur Ii",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 8786,
+   "gas_mmm3_d": 0.457,
+   "oil_yoy_pct": 36.7,
+   "gas_yoy_pct": 29.3
+  },
+  {
+   "name": "Bajo del Toro Norte",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 8023,
+   "gas_mmm3_d": 0.21,
+   "oil_yoy_pct": 115.0,
+   "gas_yoy_pct": 107.3
+  },
+  {
+   "name": "Sierras Blancas",
+   "province": "Neuquén",
+   "operator": "Shell",
+   "oil_bbl_d": 7047,
+   "gas_mmm3_d": 0.123,
+   "oil_yoy_pct": 15.4,
+   "gas_yoy_pct": 29.0
+  },
+  {
+   "name": "Aguada Federal",
+   "province": "Neuquén",
+   "operator": "Vista",
+   "oil_bbl_d": 6036,
+   "gas_mmm3_d": 0.109,
+   "oil_yoy_pct": 157.6,
+   "gas_yoy_pct": 45.0
+  },
+  {
+   "name": "Puesto Parada",
+   "province": "Neuquén",
+   "operator": "Tecpetrol",
+   "oil_bbl_d": 5837,
+   "gas_mmm3_d": 0.083,
+   "oil_yoy_pct": -12.2,
+   "gas_yoy_pct": -1.0
+  },
+  {
+   "name": "Coiron Amargo Sur Oeste",
+   "province": "Neuquén",
+   "operator": "Shell",
+   "oil_bbl_d": 5820,
+   "gas_mmm3_d": 0.093,
+   "oil_yoy_pct": -32.9,
+   "gas_yoy_pct": -30.4
+  },
+  {
+   "name": "Narambuena",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 3916,
+   "gas_mmm3_d": 0.151,
+   "oil_yoy_pct": null,
+   "gas_yoy_pct": null
+  },
+  {
+   "name": "Aguada Cánepa",
+   "province": "Neuquén",
+   "operator": "Pan American Energy",
+   "oil_bbl_d": 3709,
+   "gas_mmm3_d": 0.026,
+   "oil_yoy_pct": -25.2,
+   "gas_yoy_pct": -22.0
+  },
+  {
+   "name": "Los Toldos Ii Este",
+   "province": "Neuquén",
+   "operator": "Tecpetrol",
+   "oil_bbl_d": 3463,
+   "gas_mmm3_d": 0.137,
+   "oil_yoy_pct": 74.9,
+   "gas_yoy_pct": 110.1
+  },
+  {
+   "name": "Confluencia Norte",
+   "province": "Rio Negro",
+   "operator": "Phoenix Global",
+   "oil_bbl_d": 3159,
+   "gas_mmm3_d": 0.028,
+   "oil_yoy_pct": 45.2,
+   "gas_yoy_pct": 51.6
+  },
+  {
+   "name": "Aguada Pichana Este",
+   "province": "Neuquén",
+   "operator": "TotalEnergies",
+   "oil_bbl_d": 2466,
+   "gas_mmm3_d": 11.18,
+   "oil_yoy_pct": 9.7,
+   "gas_yoy_pct": 2.3
+  },
+  {
+   "name": "Confluencia Sur",
+   "province": "Rio Negro",
+   "operator": "Phoenix Global",
+   "oil_bbl_d": 1946,
+   "gas_mmm3_d": 0.019,
+   "oil_yoy_pct": null,
+   "gas_yoy_pct": null
+  },
+  {
+   "name": "Loma Jarillosa Este",
+   "province": "Neuquén",
+   "operator": "Geopark",
+   "oil_bbl_d": 1624,
+   "gas_mmm3_d": 0.018,
+   "oil_yoy_pct": 6.2,
+   "gas_yoy_pct": -13.6
+  },
+  {
+   "name": "Agua del Cajon",
+   "province": "Neuquén",
+   "operator": "Capex",
+   "oil_bbl_d": 1486,
+   "gas_mmm3_d": 0.019,
+   "oil_yoy_pct": -48.7,
+   "gas_yoy_pct": -45.0
+  },
+  {
+   "name": "La Escalonada",
+   "province": "Neuquén",
+   "operator": "Vaca Muerta Inversiones",
+   "oil_bbl_d": 1167,
+   "gas_mmm3_d": 0.058,
+   "oil_yoy_pct": -71.8,
+   "gas_yoy_pct": -74.7
+  },
+  {
+   "name": "Loma la Lata - Sierra Barrosa",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 1063,
+   "gas_mmm3_d": 0.029,
+   "oil_yoy_pct": 544.8,
+   "gas_yoy_pct": 105.3
+  },
+  {
+   "name": "Bandurria Centro",
+   "province": "Neuquén",
+   "operator": "Pan American Energy",
+   "oil_bbl_d": 887,
+   "gas_mmm3_d": 0.04,
+   "oil_yoy_pct": -21.7,
+   "gas_yoy_pct": -8.6
+  },
+  {
+   "name": "Bajo del Toro",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 852,
+   "gas_mmm3_d": 0.024,
+   "oil_yoy_pct": null,
+   "gas_yoy_pct": null
+  },
+  {
+   "name": "Meseta Buena Esperanza I",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 799,
+   "gas_mmm3_d": 0.553,
+   "oil_yoy_pct": null,
+   "gas_yoy_pct": null
+  },
+  {
+   "name": "Aguada Villanueva Norte",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 714,
+   "gas_mmm3_d": 0.224,
+   "oil_yoy_pct": -28.7,
+   "gas_yoy_pct": -13.6
+  },
+  {
+   "name": "Rio Neuquen",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 567,
+   "gas_mmm3_d": 0.006,
+   "oil_yoy_pct": -38.3,
+   "gas_yoy_pct": -50.3
+  },
+  {
+   "name": "Rincon la Ceniza",
+   "province": "Neuquén",
+   "operator": "Vaca Muerta Inversiones",
+   "oil_bbl_d": 554,
+   "gas_mmm3_d": 0.084,
+   "oil_yoy_pct": 75.6,
+   "gas_yoy_pct": 46.3
+  },
+  {
+   "name": "La Ribera Bloque I",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 523,
+   "gas_mmm3_d": 0.463,
+   "oil_yoy_pct": -3.6,
+   "gas_yoy_pct": -22.5
+  },
+  {
+   "name": "Aguila Mora",
+   "province": "Neuquén",
+   "operator": "Vista",
+   "oil_bbl_d": 306,
+   "gas_mmm3_d": 0.009,
+   "oil_yoy_pct": -20.0,
+   "gas_yoy_pct": -60.2
+  },
+  {
+   "name": "Los Toldos I Norte",
+   "province": "Neuquén",
+   "operator": "Tecpetrol",
+   "oil_bbl_d": 280,
+   "gas_mmm3_d": 0.027,
+   "oil_yoy_pct": -76.0,
+   "gas_yoy_pct": -84.5
+  },
+  {
+   "name": "Aguada de la Arena",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 213,
+   "gas_mmm3_d": 3.278,
+   "oil_yoy_pct": 32.0,
+   "gas_yoy_pct": -43.4
+  },
+  {
+   "name": "Cn Vii A",
+   "province": "Mendoza",
+   "operator": "YPF",
+   "oil_bbl_d": 179,
+   "gas_mmm3_d": 0.062,
+   "oil_yoy_pct": 12.7,
+   "gas_yoy_pct": -4.6
+  },
+  {
+   "name": "Los Toldos I Sur",
+   "province": "Neuquén",
+   "operator": "Pluspetrol",
+   "oil_bbl_d": 178,
+   "gas_mmm3_d": 0.075,
+   "oil_yoy_pct": -20.7,
+   "gas_yoy_pct": -6.3
+  },
+  {
+   "name": "Las Tacanas Ii",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 174,
+   "gas_mmm3_d": 0.146,
+   "oil_yoy_pct": -65.4,
+   "gas_yoy_pct": -56.5
+  },
+  {
+   "name": "Rincon del Mangrullo",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 112,
+   "gas_mmm3_d": 4.768,
+   "oil_yoy_pct": 54.5,
+   "gas_yoy_pct": -7.2
+  },
+  {
+   "name": "Sierra Chata",
+   "province": "Neuquén",
+   "operator": "Pampa Energía",
+   "oil_bbl_d": 104,
+   "gas_mmm3_d": 7.803,
+   "oil_yoy_pct": 4.1,
+   "gas_yoy_pct": 17.4
+  },
+  {
+   "name": "Chihuido de la Sierra Negra",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 67,
+   "gas_mmm3_d": 0.016,
+   "oil_yoy_pct": -53.6,
+   "gas_yoy_pct": -64.9
+  },
+  {
+   "name": "Puesto Rojas",
+   "province": "Mendoza",
+   "operator": "Petroquimica Comodoro Rivadavia",
+   "oil_bbl_d": 65,
+   "gas_mmm3_d": 0.003,
+   "oil_yoy_pct": -52.4,
+   "gas_yoy_pct": -55.3
+  },
+  {
+   "name": "Al Norte de la Dorsal",
+   "province": "Neuquén",
+   "operator": "Bentia Energy",
+   "oil_bbl_d": 36,
+   "gas_mmm3_d": 0.002,
+   "oil_yoy_pct": -13.0,
+   "gas_yoy_pct": -60.4
+  },
+  {
+   "name": "Puesto Silva Oeste",
+   "province": "Neuquén",
+   "operator": "Geopark",
+   "oil_bbl_d": 35,
+   "gas_mmm3_d": 0.0,
+   "oil_yoy_pct": -2.8,
+   "gas_yoy_pct": null
+  },
+  {
+   "name": "San Roque",
+   "province": "Neuquén",
+   "operator": "TotalEnergies",
+   "oil_bbl_d": 32,
+   "gas_mmm3_d": 0.002,
+   "oil_yoy_pct": -40.7,
+   "gas_yoy_pct": -42.8
+  },
+  {
+   "name": "El Orejano",
+   "province": "Neuquén",
+   "operator": "YPF",
+   "oil_bbl_d": 20,
+   "gas_mmm3_d": 0.773,
+   "oil_yoy_pct": 62.7,
+   "gas_yoy_pct": -52.4
+  },
+  {
+   "name": "Paso de las Bardas Norte",
+   "province": "Mendoza",
+   "operator": "YPF",
+   "oil_bbl_d": 11,
+   "gas_mmm3_d": 0.0,
+   "oil_yoy_pct": -87.0,
+   "gas_yoy_pct": -96.5
+  },
+  {
+   "name": "El Porvenir",
+   "province": "Neuquén",
+   "operator": "Oilstone Energia",
+   "oil_bbl_d": 6,
+   "gas_mmm3_d": 0.0,
+   "oil_yoy_pct": 7.3,
+   "gas_yoy_pct": null
+  },
+  {
+   "name": "Aguada de Castro",
+   "province": "Neuquén",
+   "operator": "Pan American Energy",
+   "oil_bbl_d": 0,
+   "gas_mmm3_d": 0.397,
+   "oil_yoy_pct": null,
+   "gas_yoy_pct": -34.9
+  },
+  {
+   "name": "Aguada Pichana Oeste",
+   "province": "Neuquén",
+   "operator": "Pan American Energy",
+   "oil_bbl_d": 0,
+   "gas_mmm3_d": 9.493,
+   "oil_yoy_pct": null,
+   "gas_yoy_pct": 9.6
+  },
+  {
+   "name": "El Mangrullo",
+   "province": "Neuquén",
+   "operator": "Pampa Energía",
+   "oil_bbl_d": 0,
+   "gas_mmm3_d": 2.087,
+   "oil_yoy_pct": null,
+   "gas_yoy_pct": -50.5
+  },
+  {
+   "name": "Pampa de las Yeguas I",
+   "province": "Neuquén",
+   "operator": "Pluspetrol",
+   "oil_bbl_d": 0,
+   "gas_mmm3_d": 0.094,
+   "oil_yoy_pct": null,
+   "gas_yoy_pct": -24.9
+  },
+  {
+   "name": "Parva Negra Este",
+   "province": "Neuquén",
+   "operator": "Pampa Energía",
+   "oil_bbl_d": 0,
+   "gas_mmm3_d": 0.126,
+   "oil_yoy_pct": null,
+   "gas_yoy_pct": null
   }
  ],
  "operators_history": {
