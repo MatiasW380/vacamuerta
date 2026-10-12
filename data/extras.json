@@ -5653,33 +5653,6 @@
     "all_gas_resources": 1014.0
    },
    {
-    "name": "Petrolera El Trebol",
-    "conv_oil_proved": 0.0,
-    "conv_gas_proved": 0.0,
-    "conv_oil_probable": 0.0,
-    "conv_gas_probable": 0.0,
-    "conv_oil_possible": 0.0,
-    "conv_gas_possible": 0.0,
-    "conv_oil_resources": 0.0,
-    "conv_gas_resources": 0.0,
-    "nc_oil_proved": 11869.7,
-    "nc_gas_proved": 919.3,
-    "nc_oil_probable": 11476.2,
-    "nc_gas_probable": 899.3,
-    "nc_oil_possible": 9987.3,
-    "nc_gas_possible": 838.9,
-    "nc_oil_resources": 31649.5,
-    "nc_gas_resources": 1014.0,
-    "all_oil_proved": 11869.7,
-    "all_gas_proved": 919.3,
-    "all_oil_probable": 11476.2,
-    "all_gas_probable": 899.3,
-    "all_oil_possible": 9987.3,
-    "all_gas_possible": 838.9,
-    "all_oil_resources": 31649.5,
-    "all_gas_resources": 1014.0
-   },
-   {
     "name": "Shell",
     "conv_oil_proved": 0.0,
     "conv_gas_proved": 0.0,
@@ -5813,6 +5786,33 @@
     "all_gas_possible": 2025.0,
     "all_oil_resources": 55430.4,
     "all_gas_resources": 14533.9
+   },
+   {
+    "name": "Geopark",
+    "conv_oil_proved": 0.0,
+    "conv_gas_proved": 0.0,
+    "conv_oil_probable": 0.0,
+    "conv_gas_probable": 0.0,
+    "conv_oil_possible": 0.0,
+    "conv_gas_possible": 0.0,
+    "conv_oil_resources": 0.0,
+    "conv_gas_resources": 0.0,
+    "nc_oil_proved": 1705.0,
+    "nc_gas_proved": 138.1,
+    "nc_oil_probable": 3655.1,
+    "nc_gas_probable": 282.2,
+    "nc_oil_possible": 5952.5,
+    "nc_gas_possible": 374.4,
+    "nc_oil_resources": 0.0,
+    "nc_gas_resources": 0.0,
+    "all_oil_proved": 1705.0,
+    "all_gas_proved": 138.1,
+    "all_oil_probable": 3655.1,
+    "all_gas_probable": 282.2,
+    "all_oil_possible": 5952.5,
+    "all_gas_possible": 374.4,
+    "all_oil_resources": 0.0,
+    "all_gas_resources": 0.0
    }
   ],
   "neuquina_totals": {
@@ -5824,22 +5824,22 @@
    "conv_gas_possible": 974.3,
    "conv_oil_resources": 80099.8,
    "conv_gas_resources": 27931.7,
-   "nc_oil_proved": 405514.5,
-   "nc_gas_proved": 409019.3,
-   "nc_oil_probable": 275968.6,
-   "nc_gas_probable": 152473.2,
-   "nc_oil_possible": 210014.2,
-   "nc_gas_possible": 123394.5,
-   "nc_oil_resources": 1146754.2,
-   "nc_gas_resources": 1966518.6,
-   "all_oil_proved": 431106.5,
-   "all_gas_proved": 422576.6,
-   "all_oil_probable": 285668.8,
-   "all_gas_probable": 153588.3,
-   "all_oil_possible": 217895.6,
-   "all_gas_possible": 124368.8,
-   "all_oil_resources": 1227535.0,
-   "all_gas_resources": 2017814.2
+   "nc_oil_proved": 393644.8,
+   "nc_gas_proved": 408100.0,
+   "nc_oil_probable": 264492.4,
+   "nc_gas_probable": 151574.0,
+   "nc_oil_possible": 200026.9,
+   "nc_gas_possible": 122555.6,
+   "nc_oil_resources": 1115104.7,
+   "nc_gas_resources": 1965504.6,
+   "all_oil_proved": 419236.8,
+   "all_gas_proved": 421657.2,
+   "all_oil_probable": 274192.6,
+   "all_gas_probable": 152689.0,
+   "all_oil_possible": 207908.3,
+   "all_gas_possible": 123530.0,
+   "all_oil_resources": 1195885.5,
+   "all_gas_resources": 2016800.2
   },
   "neuquina_by_area": [
    {
@@ -5983,34 +5983,6 @@
     "all_gas_resources": 208.0
    },
    {
-    "name": "Mata Mora Norte",
-    "operator": "Petrolera El Trebol",
-    "conv_oil_proved": 0.0,
-    "conv_gas_proved": 0.0,
-    "conv_oil_probable": 0.0,
-    "conv_gas_probable": 0.0,
-    "conv_oil_possible": 0.0,
-    "conv_gas_possible": 0.0,
-    "conv_oil_resources": 0.0,
-    "conv_gas_resources": 0.0,
-    "nc_oil_proved": 23458.2,
-    "nc_gas_proved": 1826.9,
-    "nc_oil_probable": 22952.4,
-    "nc_gas_probable": 1798.6,
-    "nc_oil_possible": 19974.6,
-    "nc_gas_possible": 1677.7,
-    "nc_oil_resources": 0.0,
-    "nc_gas_resources": 0.0,
-    "all_oil_proved": 23458.2,
-    "all_gas_proved": 1826.9,
-    "all_oil_probable": 22952.4,
-    "all_gas_probable": 1798.6,
-    "all_oil_possible": 19974.6,
-    "all_gas_possible": 1677.7,
-    "all_oil_resources": 0.0,
-    "all_gas_resources": 0.0
-   },
-   {
     "name": "Bajo Del Choique - La Invernada",
     "operator": "Pluspetrol",
     "conv_oil_proved": 0.0,
@@ -6119,6 +6091,34 @@
     "all_gas_probable": 660.1,
     "all_oil_possible": 8493.0,
     "all_gas_possible": 597.5,
+    "all_oil_resources": 0.0,
+    "all_gas_resources": 0.0
+   },
+   {
+    "name": "Mata Mora Norte",
+    "operator": "Phoenix Global",
+    "conv_oil_proved": 0.0,
+    "conv_gas_proved": 0.0,
+    "conv_oil_probable": 0.0,
+    "conv_gas_probable": 0.0,
+    "conv_oil_possible": 0.0,
+    "conv_gas_possible": 0.0,
+    "conv_oil_resources": 0.0,
+    "conv_gas_resources": 0.0,
+    "nc_oil_proved": 11729.1,
+    "nc_gas_proved": 913.4,
+    "nc_oil_probable": 11476.2,
+    "nc_gas_probable": 899.3,
+    "nc_oil_possible": 9987.3,
+    "nc_gas_possible": 838.9,
+    "nc_oil_resources": 0.0,
+    "nc_gas_resources": 0.0,
+    "all_oil_proved": 11729.1,
+    "all_gas_proved": 913.4,
+    "all_oil_probable": 11476.2,
+    "all_gas_probable": 899.3,
+    "all_oil_possible": 9987.3,
+    "all_gas_possible": 838.9,
     "all_oil_resources": 0.0,
     "all_gas_resources": 0.0
    },
@@ -6554,22 +6554,22 @@
     "conv_gas_possible": 974.3,
     "conv_oil_resources": 80099.8,
     "conv_gas_resources": 27931.7,
-    "nc_oil_proved": 405514.5,
-    "nc_gas_proved": 409019.3,
-    "nc_oil_probable": 275968.6,
-    "nc_gas_probable": 152473.2,
-    "nc_oil_possible": 210014.2,
-    "nc_gas_possible": 123394.5,
-    "nc_oil_resources": 1146754.2,
-    "nc_gas_resources": 1966518.6,
-    "all_oil_proved": 431106.5,
-    "all_gas_proved": 422576.6,
-    "all_oil_probable": 285668.8,
-    "all_gas_probable": 153588.3,
-    "all_oil_possible": 217895.6,
-    "all_gas_possible": 124368.8,
-    "all_oil_resources": 1227535.0,
-    "all_gas_resources": 2017814.2
+    "nc_oil_proved": 393644.8,
+    "nc_gas_proved": 408100.0,
+    "nc_oil_probable": 264492.4,
+    "nc_gas_probable": 151574.0,
+    "nc_oil_possible": 200026.9,
+    "nc_gas_possible": 122555.6,
+    "nc_oil_resources": 1115104.7,
+    "nc_gas_resources": 1965504.6,
+    "all_oil_proved": 419236.8,
+    "all_gas_proved": 421657.2,
+    "all_oil_probable": 274192.6,
+    "all_gas_probable": 152689.0,
+    "all_oil_possible": 207908.3,
+    "all_gas_possible": 123530.0,
+    "all_oil_resources": 1195885.5,
+    "all_gas_resources": 2016800.2
    },
    {
     "name": "Austral",
@@ -6600,13 +6600,13 @@
    },
    {
     "name": "Cuyana",
-    "conv_oil_proved": 2714.0,
-    "conv_gas_proved": 160.0,
-    "conv_oil_probable": 1451.0,
-    "conv_gas_probable": 161.0,
-    "conv_oil_possible": 276.0,
-    "conv_gas_possible": 16.0,
-    "conv_oil_resources": 7184.7,
+    "conv_oil_proved": 2436.0,
+    "conv_gas_proved": 132.0,
+    "conv_oil_probable": 1434.0,
+    "conv_gas_probable": 159.0,
+    "conv_oil_possible": 260.0,
+    "conv_gas_possible": 14.0,
+    "conv_oil_resources": 7175.7,
     "conv_gas_resources": 298.7,
     "nc_oil_proved": 0.0,
     "nc_gas_proved": 0.0,
@@ -6616,13 +6616,13 @@
     "nc_gas_possible": 0.0,
     "nc_oil_resources": 0.0,
     "nc_gas_resources": 0.0,
-    "all_oil_proved": 2714.0,
-    "all_gas_proved": 160.0,
-    "all_oil_probable": 1451.0,
-    "all_gas_probable": 161.0,
-    "all_oil_possible": 276.0,
-    "all_gas_possible": 16.0,
-    "all_oil_resources": 7184.7,
+    "all_oil_proved": 2436.0,
+    "all_gas_proved": 132.0,
+    "all_oil_probable": 1434.0,
+    "all_gas_probable": 159.0,
+    "all_oil_possible": 260.0,
+    "all_gas_possible": 14.0,
+    "all_oil_resources": 7175.7,
     "all_gas_resources": 298.7
    },
    {
@@ -6735,37 +6735,37 @@
    }
   ],
   "national_totals": {
-   "conv_oil_proved": 190558.0,
-   "conv_gas_proved": 47291.0,
-   "conv_oil_probable": 71860.2,
-   "conv_gas_probable": 11709.7,
-   "conv_oil_possible": 21880.1,
-   "conv_gas_possible": 3075.9,
-   "conv_oil_resources": 148549.1,
+   "conv_oil_proved": 190280.0,
+   "conv_gas_proved": 47263.0,
+   "conv_oil_probable": 71843.2,
+   "conv_gas_probable": 11707.7,
+   "conv_oil_possible": 21864.1,
+   "conv_gas_possible": 3073.9,
+   "conv_oil_resources": 148540.1,
    "conv_gas_resources": 65463.1,
-   "nc_oil_proved": 406038.3,
-   "nc_gas_proved": 414290.8,
-   "nc_oil_probable": 276047.8,
-   "nc_gas_probable": 153706.2,
-   "nc_oil_possible": 210051.1,
-   "nc_gas_possible": 123788.7,
-   "nc_oil_resources": 1146754.2,
-   "nc_gas_resources": 1966731.0,
-   "all_oil_proved": 596596.3,
-   "all_gas_proved": 461581.8,
-   "all_oil_probable": 347907.9,
-   "all_gas_probable": 165415.9,
-   "all_oil_possible": 231931.2,
-   "all_gas_possible": 126864.7,
-   "all_oil_resources": 1295984.3,
-   "all_gas_resources": 2055558.0
+   "nc_oil_proved": 394168.6,
+   "nc_gas_proved": 413371.5,
+   "nc_oil_probable": 264571.6,
+   "nc_gas_probable": 152807.0,
+   "nc_oil_possible": 200063.8,
+   "nc_gas_possible": 122949.8,
+   "nc_oil_resources": 1115104.7,
+   "nc_gas_resources": 1965717.0,
+   "all_oil_proved": 584448.6,
+   "all_gas_proved": 460634.5,
+   "all_oil_probable": 336414.7,
+   "all_gas_probable": 164514.6,
+   "all_oil_possible": 221927.9,
+   "all_gas_possible": 126023.8,
+   "all_oil_resources": 1264325.8,
+   "all_gas_resources": 2054544.0
   }
  },
- "generated_at": "2026-10-12T20:43Z",
+ "generated_at": "2026-10-12T20:46Z",
  "status": {
   "fracking": {
    "ok": true,
-   "at": "2026-10-12T20:42Z",
+   "at": "2026-10-12T20:45Z",
    "diag": {
     "resources": [
      "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
@@ -6826,7 +6826,7 @@
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-12T20:42Z",
+   "at": "2026-10-12T20:45Z",
    "diag": {
     "pages": 1
    }
@@ -6835,11 +6835,11 @@
    "ok": false,
    "error": "RuntimeError: Falta EIA_API_KEY (secreto del repositorio)",
    "diag": {},
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 872, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 858, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 243, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 919, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 904, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 243, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
   },
   "regulations": {
    "ok": true,
-   "at": "2026-10-12T20:43Z",
+   "at": "2026-10-12T20:45Z",
    "diag": {
     "pages": 6,
     "page_errors": 0,
@@ -6851,7 +6851,7 @@
   },
   "news": {
    "ok": true,
-   "at": "2026-10-12T20:43Z",
+   "at": "2026-10-12T20:45Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
@@ -6861,8 +6861,8 @@
    }
   },
   "reserves": {
-   "ok": false,
-   "error": "UnboundLocalError: cannot access local variable 'vals' where it is not associated with a value",
+   "ok": true,
+   "at": "2026-10-12T20:45Z",
    "diag": {
     "package": "http://datos.energia.gob.ar reservas-de-petroleo-y-gas",
     "zip_files": [
@@ -7061,13 +7061,15 @@
       "all_oil_resources": "convencional + no convencional | recursos contingentes | posibles | pet | (mm3)",
       "all_gas_resources": "convencional + no convencional | recursos contingentes | posibles | gas | (mmm3)"
      }
-    }
-   },
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 872, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 861, in <lambda>\n    (\"reserves\", lambda d: reserves(d)),\n                           ^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 577, in reserves\n    clave_dup = [c for c in (c_area, c_yac) if c] + vals\n                                                    ^^^^\nUnboundLocalError: cannot access local variable 'vals' where it is not associated with a value\n"
+    },
+    "duplicates_dropped": 4,
+    "rows": 1138,
+    "rows_neuquina": 641
+   }
   },
   "export_price": {
    "ok": true,
-   "at": "2026-10-12T20:43Z",
+   "at": "2026-10-12T20:45Z",
    "diag": {
     "package": "https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo",
     "resources": [
@@ -7398,7 +7400,7 @@
   },
   "fuel_prices": {
    "ok": true,
-   "at": "2026-10-12T20:43Z",
+   "at": "2026-10-12T20:46Z",
    "diag": {
     "package": "http://datos.energia.gob.ar precios-en-surtidor",
     "resources": [
@@ -7441,12 +7443,12 @@
   },
   "rigi_portal": {
    "ok": true,
-   "at": "2026-10-12T20:43Z",
+   "at": "2026-10-12T20:46Z",
    "diag": {
     "html_len": 76399,
     "context": "-thin\">&nbsp;</span><span class=\"fw-semibold fs-1\">M</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Empleos <span class=\"fw-medium br-sm br-xs\">(directos e indirectos)</span></dt><dd class=\"fs-1 fw-bold text-arg-verdin js-total-puestos-trabajo\">0</dd></div></dl></div><div class=\"col-md-12 m-y-2\"><h3 class=\"h4 font-sans-serif p-b-1 border-bottom\">Sectores</h3><dl class=\"dl-proyectos-sector\"><div class=\"d-grid\"><dt class=\"last\">Energía eléctrica</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-torre-electrica m-r-05\"></i> <span class=\"m-t-1 js-total-energia-electrica\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Petróleo y gas</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-petroleo-y-gas m-r-05\"></i> <span class=\"m-t-1 js-total-petroleo-y-gas\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Minería</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-mineria m-r-05\"></i> <span class=\"m-t-1 js-total-mineria\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Siderurgia</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-siderurgia m-r-05\"></i> <span class=\"m-t-1 js-total-siderurgia\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Infraestructura</dt><",
     "inline_scripts": [
-     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"pOqLM1gi91WosVvMcYZ422B7qryPTMJ6rSwnO9le8fM\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
+     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"8bq5Nb4uGb0xP7YnoUWMCXYV4TknLZXuNMtPdOUbJsE\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
      "const jsonContainer = document.getElementById('raw-data-json');\n  const jsonText = (jsonContainer.textContent || jsonContainer.innerText).trim();\n  const rawData = JSON.parse(jsonText);\n\n  const extractVal = (val) => (typeof val === 'object' && val !== null) ? (val.total || 0) : (val || 0);\n  const formatNum = (num) => Number(num || 0).toLocaleString('es-AR');\n\n  const getSeriesData = (key) => rawData.map(d => ({ \n    x: new Date(d.year).getTime(), \n    y: extractVal(d[key]) \n  }));\n\n  const seriesData = [\n    { key: 'energia', name: 'Energía Eléctrica', data: getSeriesData('energia') },\n    { key: 'petroleo', name: 'Petróleo y Gas', data: getSeriesData('petroleo') },\n    { key: 'mineria', name: 'Minería', data: getSeriesData('mineria') },\n    { key: 'siderurgia', name: 'Siderurgia', data: getSeriesData('siderurgia') },\n    { key: 'infra', name: 'Infraestructura', data: getSeriesData('infra') }\n  ];\n\n  var optionsMain = {\n    series: seriesData,\n    colors: ['#C2185B', '#B9CE39', '#6A1B99', '#4FBB73', '#F79D00'],\n    chart: {\n      id: 'chartBarMain',\n      type: 'bar',\n      height: 450,\n      stacked: true,\n      toolbar: { show: false }\n    },\n    grid: {\n      padding: {\n        right: 35,\n        left: 15\n      }\n    },\n    dataLabels: { enabled: false },\n    plotOptions: {\n      bar: {\n        dataLabels: {\n          total: {\n            enabled: true,\n            style: {\n              fontSize: '13px',\n              fontWeight: 900\n            },\n            formatter: function (val, opts) {\n              if (!val) return '';\n\n              // Validar si la columna está dentro del rango visible actual del zoom/brush\n              if (opts && opts.w && opts.w.globals) {\n                const timestamp = opts.w.globals.seriesX[0][opts.dataPointIndex];\n            ",
      "headStyle(\"rigi-cms-fix\", `.container:has(#mapa-portal){padding-left:0 !important;padding-right:0 !important;width:100% !important;}`);\nheadStyle('rigi__999d6df5647d2df27fe7', `.poncho-map{--pm-color-primary: var(--arg-escarapela);--pm-color-base: #eaeaea;--pm-slider-background: var(--arg-azul);--pm-slider-border-color: color-mix(in srgb, #626161 40%, white);--pm-slider-border-width: 2px;--pm-scrollbar-handle: #eaeaea;--pm-scrollbar-background: rgb(0, 0, 0, 0.15);--pm-hover-background: var(--arg-secundario);--pm-hover-color: white;--pm-active-color: #343232;--pm-active-visited-color: violet;--pm-active-background: var(--pm-color-primary);--color: var(--arg-escarapela);--pm-loader-spinner-background: var(--arg-amarillo);--pm-loader-background: var(--arg-azul);--pm-loader-spinner-color: var(--arg-primary-700)}details{--details-border-color: var(--arg-primary-300)}.details-container{--container-border-color: var(--arg-primary-500)}.poncho-map .marker--active:focus,.poncho-map .marker--active{fill:#000 !important;fill-opacity:0 !important}.color-primary{color:var(--color)}.poncho-map .pm-content a{color:var(--arg-escarapela)}.totals-overview{display:grid;gap:15px 15px;grid-template-areas:\"area-a area-b area-c\";grid-template-columns:27% 1fr 27%}.a,.b,.c{display:flex;flex-direction:column-reverse;align-self:self-start}.a{grid-area:area-a}.b{grid-area:area-b}.c{grid-area:area-c}.a .key,.b .key,.c .key,.a .value,.b .value,.c .value{margin:0}.a .key,.b .key,.c .key{font-size:.95rem}.value{grid-area:value}.a .value,.b .value,.c .value{font-size:1.35rem;line-height:2rem;display:flex;align-items:baseline}.c .value .small,.b .value .small,.c .value .small{font-size:1rem}.details-data dt{float:left;margin-right:.25rem}.details-data dt::after{content:\":\";font-weight:400}.details-data "
     ],
@@ -7493,6 +7495,36 @@
      }
     }
    }
+  },
+  "royalties": {
+   "ok": false,
+   "error": "RuntimeError: Sin recurso tabular de regalías de petróleo",
+   "diag": {
+    "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
+    "resources": [
+     [
+      "Regalías de Petróleo Crudo ",
+      "zip",
+      "ercado/mercado_hidrocarburos/informacion_estadistica/regalias/Regalias_CRUDO.zip"
+     ],
+     [
+      "Regalías de Gas Natural",
+      "zip",
+      "_mercado/mercado_hidrocarburos/informacion_estadistica/regalias/Regalias_GAS.zip"
+     ],
+     [
+      "Regalías de GLP ",
+      "zip",
+      "_mercado/mercado_hidrocarburos/informacion_estadistica/regalias/Regalias_GLP.zip"
+     ],
+     [
+      "Regalías de Gasolina y Condensado",
+      "zip",
+      "ado/mercado_hidrocarburos/informacion_estadistica/regalias/Regalias_GASOLINA.zip"
+     ]
+    ]
+   },
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 919, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 911, in <lambda>\n    (\"royalties\", lambda d: royalties(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 793, in royalties\n    raise RuntimeError(\"Sin recurso tabular de regalías de petróleo\")\nRuntimeError: Sin recurso tabular de regalías de petróleo\n"
   }
  }
 }
