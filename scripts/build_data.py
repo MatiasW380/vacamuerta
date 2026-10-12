@@ -175,12 +175,8 @@ def curvas_tipo(df: pd.DataFrame, primeros: pd.Series) -> dict:
     d["k"] = d["idx"] - d["pozo"].map(ini)
     d = d[(d["k"] >= 0) & (d["k"] < 12)]
     ultimo = int(d["idx"].max())
-    agg = d.groupby("pozo").agg(
-        oil6=("petroleo_m3", lambda x: x[d.loc[x.index, "k"] < 6].sum()),
-        gas6=("gas_mm3", lambda x: x[d.loc[x.index, "k"] < 6].sum()),
-        oil12=("petroleo_m3", "sum"),
-        empresa=("empresa", "first"),
-    )
+    d6 = d[d["k"] < 6].groupby("pozo")[["petroleo_m3", "gas_mm3"]].sum().rename(columns={"petroleo_m3": "oil6", "gas_mm3": "gas6"})
+    agg = d.groupby("pozo").agg(oil12=("petroleo_m3", "sum"), empresa=("empresa", "first")).join(d6, how="left").fillna({"oil6": 0, "gas6": 0})
     agg["inicio"] = agg.index.map(ini)
     agg["cohorte"] = (agg["inicio"] - 1) // 12
     agg["operadora"] = agg["empresa"].map(nombre_corto)

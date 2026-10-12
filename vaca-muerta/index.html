@@ -146,6 +146,52 @@
         </div>
       </div>
       <p class="note" id="priceNote"></p>
+      <div id="crudeBlock" hidden style="margin-top:28px">
+        <div class="chart-head">
+          <h2 style="font-size:17px" data-i18n="crudeTitle">What Argentine crude actually sells for, USD per barrel</h2>
+        </div>
+        <ul class="legend" id="crudeLegend"></ul>
+        <div class="chart" id="crudeChart"></div>
+        <p class="note" id="crudeNote"></p>
+      </div>
+    </section>
+
+    <section class="section" id="fuelSection" hidden aria-labelledby="fuelTitle">
+      <h2 id="fuelTitle" data-i18n="fuelTitle">Fuel prices at the pump</h2>
+      <p class="section-lede" id="fuelLede"></p>
+      <div class="two" style="margin-top:14px">
+        <div>
+          <h2 style="font-size:17px" data-i18n="fuelBrandTitle">Median price by brand, pesos per litre</h2>
+          <div class="table-wrap"><table class="ops-mini" id="fuelBrand">
+            <thead><tr><th scope="col" data-i18n="thBrand">Brand</th><th scope="col" data-i18n="fSuper">Regular</th><th scope="col" data-i18n="fPremium">Premium</th><th scope="col" data-i18n="fDiesel">Diesel</th><th scope="col" data-i18n="thStations">Stations</th></tr></thead>
+            <tbody></tbody></table></div>
+        </div>
+        <div>
+          <h2 style="font-size:17px" data-i18n="fuelProvTitle">Median price by province, pesos per litre</h2>
+          <div class="table-wrap scroll-table" style="max-height:380px"><table class="ops-mini" id="fuelProv">
+            <thead><tr><th scope="col" data-i18n="thProvince">Province</th><th scope="col" data-i18n="fSuper">Regular</th><th scope="col" data-i18n="fPremium">Premium</th><th scope="col" data-i18n="fDiesel">Diesel</th></tr></thead>
+            <tbody></tbody></table></div>
+        </div>
+      </div>
+      <p class="note" id="fuelNote"></p>
+    </section>
+
+    <section class="section" id="rigiSection" hidden aria-labelledby="rigiTitle">
+      <h2 id="rigiTitle" data-i18n="rigiTitle">RIGI projects approved</h2>
+      <p class="section-lede" data-i18n="rigiLede">Each approval resolution published in the Official Gazette, read automatically: project, company, sub-sector and committed investment.</p>
+      <div class="table-wrap">
+        <table id="rigiTable">
+          <thead><tr>
+            <th scope="col" data-i18n="thDate">Date</th>
+            <th scope="col" style="text-align:left" data-i18n="thProject">Project</th>
+            <th scope="col" style="text-align:left" data-i18n="thCompany">Company</th>
+            <th scope="col" style="text-align:left" data-i18n="thSubsector">Sub-sector</th>
+            <th scope="col" data-i18n="thUsdM">USD million</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="note" id="rigiNote"></p>
     </section>
 
     <section class="section">
@@ -333,6 +379,19 @@
       pOperator: "Operator", pPartners: "Partners", pType: "Type", pExpires: "Concession expires", pNorm: "Granted by", pNoProd: "No Vaca Muerta production reported last month.",
       mapNote: (src, p) => `Block outlines, pipelines and fluid windows: ${src}. Production: Energy Secretariat, ${p}. Only blocks in Neuquén are shown; a few Vaca Muerta blocks in Mendoza and Río Negro are not on the map. Basemap © OpenFreeMap, OpenStreetMap contributors.`,
       crumbHere: "Energy: Vaca Muerta",
+      crudeTitle: "What Argentine crude actually sells for, USD per barrel",
+      cFob: "Medanito, export (FOB)", cDom: "Medanito, domestic market", cBrent: "Brent",
+      crudeNote: (src, d) => `Source: ${src}. Medanito is the reference crude of the Neuquén basin. Latest month: ${d}.`,
+      fuelTitle: "Fuel prices at the pump",
+      fuelLede: (s, p, d, y) => `Median price across service stations: regular gasoline ${s}, premium ${p} and diesel ${d} pesos per litre. YPF sells regular for ${y}.`,
+      fuelBrandTitle: "Median price by brand, pesos per litre", fuelProvTitle: "Median price by province, pesos per litre",
+      thBrand: "Brand", thStations: "Stations", thProvince: "Province", fSuper: "Regular", fPremium: "Premium", fDiesel: "Diesel", others: "Others",
+      fuelNote: (src, d) => `Source: ${src}. Daytime prices reported by each station in the last 120 days, as of ${d}.`,
+      rigiTitle: "RIGI projects approved",
+      rigiLede: "Each approval resolution published in the Official Gazette, read automatically: project, company, sub-sector and committed investment.",
+      thDate: "Date", thProject: "Project", thSubsector: "Sub-sector", thUsdM: "USD million",
+      rigiNote: (n, d, portal) => `${n} approvals detected since ${d}; the list grows as new resolutions are published. For every project approved before that date, see the ${portal}.`,
+      rigiPortal: "official RIGI portal",
       prodTitle: "How productive the new wells are",
       prodLede: (y, v, a, b) => `A Vaca Muerta oil well that started in ${y} produced ${v} thousand barrels on average in its first six months, against ${a} thousand for wells started in ${b}.`,
       prodChartTitle: "Average oil in a well's first 6 months, thousand barrels, by start year",
@@ -409,6 +468,19 @@
       pOperator: "Operadora", pPartners: "Socios", pType: "Tipo", pExpires: "Vence la concesión", pNorm: "Otorgada por", pNoProd: "Sin producción de Vaca Muerta declarada el último mes.",
       mapNote: (src, p) => `Límites de bloques, ductos y ventanas de fluidos: ${src}. Producción: Secretaría de Energía, ${p}. Solo se muestran los bloques de Neuquén; algunos bloques de Vaca Muerta en Mendoza y Río Negro no figuran en el mapa. Mapa base © OpenFreeMap, colaboradores de OpenStreetMap.`,
       crumbHere: "Energía: Vaca Muerta",
+      crudeTitle: "A cuánto se vende de verdad el crudo argentino, USD por barril",
+      cFob: "Medanito, exportación (FOB)", cDom: "Medanito, mercado interno", cBrent: "Brent",
+      crudeNote: (src, d) => `Fuente: ${src}. Medanito es el crudo de referencia de la cuenca Neuquina. Último mes: ${d}.`,
+      fuelTitle: "Precios de combustibles en surtidor",
+      fuelLede: (s, p, d, y) => `Precio mediano en las estaciones de servicio: nafta súper ${s}, premium ${p} y gasoil ${d} pesos por litro. YPF vende la súper a ${y}.`,
+      fuelBrandTitle: "Precio mediano por bandera, pesos por litro", fuelProvTitle: "Precio mediano por provincia, pesos por litro",
+      thBrand: "Bandera", thStations: "Estaciones", thProvince: "Provincia", fSuper: "Súper", fPremium: "Premium", fDiesel: "Gasoil", others: "Otras",
+      fuelNote: (src, d) => `Fuente: ${src}. Precios diurnos informados por cada estación en los últimos 120 días, al ${d}.`,
+      rigiTitle: "Proyectos RIGI aprobados",
+      rigiLede: "Cada resolución de aprobación publicada en el Boletín Oficial, leída automáticamente: proyecto, empresa, subsector e inversión comprometida.",
+      thDate: "Fecha", thProject: "Proyecto", thSubsector: "Subsector", thUsdM: "Millones de USD",
+      rigiNote: (n, d, portal) => `${n} aprobaciones detectadas desde el ${d}; la lista crece con cada nueva resolución. Para todos los proyectos aprobados antes de esa fecha, ver el ${portal}.`,
+      rigiPortal: "portal oficial del RIGI",
       prodTitle: "Cuánto rinden los pozos nuevos",
       prodLede: (y, v, a, b) => `Un pozo petrolero de Vaca Muerta que empezó a producir en ${y} dio en promedio ${v} mil barriles en sus primeros seis meses, contra ${a} mil de los pozos que empezaron en ${b}.`,
       prodChartTitle: "Petróleo promedio en los primeros 6 meses de cada pozo, miles de barriles, por año de inicio",
@@ -810,6 +882,48 @@
         $("#brentBlock").hidden = true;
         $("#priceNote").innerHTML = t.priceNoteNoOil(fxSrc);
       }
+    }
+
+    const ep = E.export_price;
+    if (ep && ep.series && ep.series["fob|Medanito"]) {
+      const keys = [["fob|Medanito", t.cFob], ["domestic|Medanito", t.cDom], ["brent|Ice Brent", t.cBrent]].filter(([k]) => ep.series[k]);
+      const maps = keys.map(([k]) => Object.fromEntries(ep.series[k].map(p => [p.period, p.usd_bbl])));
+      const periods = Object.keys(maps[0]).filter(p => maps.every(m => m[p] != null)).sort();
+      if (periods.length > 3) {
+        $("#crudeBlock").hidden = false;
+        const names = keys.map(k => k[1]), series = {};
+        names.forEach((n, i) => { series[n] = periods.map(p => maps[i][p]); });
+        const colors = ["var(--s1)", "var(--s3)", "var(--s2)"];
+        $("#crudeLegend").innerHTML = names.map((n, k) => `<li><i style="background:${colors[k]}"></i>${esc(n)}</li>`).join("");
+        multiLine($("#crudeChart"), periods, names, series, colors);
+        $("#crudeNote").innerHTML = t.crudeNote(`<a href="${esc(ep.source.url)}" rel="noopener">${esc(ep.source.name)}</a>`, esc(monthName(periods[periods.length - 1])));
+      }
+    }
+
+    const fp = E.fuel_prices;
+    if (fp && fp.national_median && fp.by_brand) {
+      $("#fuelSection").hidden = false;
+      const n = fp.national_median, ypf = fp.by_brand.find(b => b.name === "YPF") || {};
+      $("#fuelLede").textContent = t.fuelLede(fmt(n.super), fmt(n.premium), fmt(n.diesel), fmt(ypf.super));
+      const order = ["YPF", "Shell", "Axion", "Puma", "Otras"];
+      $("#fuelBrand tbody").innerHTML = fp.by_brand.slice().sort((a, b) => order.indexOf(a.name) - order.indexOf(b.name)).map(b =>
+        `<tr><td>${esc(b.name === "Otras" ? t.others : b.name)}</td><td>${fmt(b.super)}</td><td>${fmt(b.premium)}</td><td>${fmt(b.diesel)}</td><td>${fmt((fp.stations_by_brand || {})[b.name])}</td></tr>`).join("");
+      $("#fuelProv tbody").innerHTML = fp.by_province.map(p =>
+        `<tr><td>${esc(p.name)}</td><td>${fmt(p.super)}</td><td>${fmt(p.premium)}</td><td>${fmt(p.diesel)}</td></tr>`).join("");
+      $("#fuelNote").innerHTML = t.fuelNote(`<a href="${esc(fp.source.url)}" rel="noopener">${esc(fp.source.name)}</a>`, esc(fp.as_of ? shortDate(fp.as_of) : "–"));
+    }
+
+    const ra = E.rigi_approvals;
+    if (ra && ra.length) {
+      $("#rigiSection").hidden = false;
+      $("#rigiTable tbody").innerHTML = ra.map(a => `<tr>
+        <td>${esc(shortDate(a.date))}</td>
+        <td style="text-align:left"><a href="${esc(a.url)}" rel="noopener" target="_blank">${esc(a.project || a.title)}</a>${a.area ? `<div class="meta">${esc(a.area)}</div>` : ""}</td>
+        <td style="text-align:left;max-width:260px">${esc(a.company || "–")}</td>
+        <td style="text-align:left;max-width:260px">${esc(a.subsector ? a.subsector.charAt(0).toUpperCase() + a.subsector.slice(1) : (a.sector || "–"))}</td>
+        <td>${a.usd_million ? fmt(a.usd_million, 0) : "–"}</td></tr>`).join("");
+      const desde = ra.reduce((m, a) => a.date < m ? a.date : m, ra[0].date);
+      $("#rigiNote").innerHTML = t.rigiNote(fmt(ra.length), esc(shortDate(desde)), `<a href="https://www.argentina.gob.ar/economia/rigi" rel="noopener">${esc(t.rigiPortal)}</a>`);
     }
 
     const reg = E.regulations;
