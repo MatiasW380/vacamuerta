@@ -142,7 +142,7 @@ def main() -> None:
                 "holders": limpio(pr.get("PARTICIPAC")),
                 "official_operator": limpio(pr.get("OPERADOR")),
                 "norm": limpio(pr.get("NORMA_LEGAL")),
-                "expires": fin[:10] if fin else None,
+                "expires": fin[:10] if fin and fin[:4].isdigit() and int(fin[:4]) >= 1950 else None,
             }
             if match:
                 usados.add(norm(match["name"]))
