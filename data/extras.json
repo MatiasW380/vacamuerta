@@ -6761,11 +6761,11 @@
    "all_gas_resources": 2054544.0
   }
  },
- "generated_at": "2026-10-12T20:49Z",
+ "generated_at": "2026-10-12T20:51Z",
  "status": {
   "fracking": {
    "ok": true,
-   "at": "2026-10-12T20:49Z",
+   "at": "2026-10-12T20:50Z",
    "diag": {
     "resources": [
      "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
@@ -6826,7 +6826,7 @@
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-12T20:49Z",
+   "at": "2026-10-12T20:50Z",
    "diag": {
     "pages": 1
    }
@@ -6835,11 +6835,11 @@
    "ok": false,
    "error": "RuntimeError: Falta EIA_API_KEY (secreto del repositorio)",
    "diag": {},
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 949, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 934, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 243, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 951, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 936, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 243, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
   },
   "regulations": {
    "ok": true,
-   "at": "2026-10-12T20:49Z",
+   "at": "2026-10-12T20:50Z",
    "diag": {
     "pages": 6,
     "page_errors": 0,
@@ -6851,7 +6851,7 @@
   },
   "news": {
    "ok": true,
-   "at": "2026-10-12T20:49Z",
+   "at": "2026-10-12T20:50Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
@@ -6862,7 +6862,7 @@
   },
   "reserves": {
    "ok": true,
-   "at": "2026-10-12T20:49Z",
+   "at": "2026-10-12T20:50Z",
    "diag": {
     "package": "http://datos.energia.gob.ar reservas-de-petroleo-y-gas",
     "zip_files": [
@@ -7069,7 +7069,7 @@
   },
   "export_price": {
    "ok": true,
-   "at": "2026-10-12T20:49Z",
+   "at": "2026-10-12T20:51Z",
    "diag": {
     "package": "https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo",
     "resources": [
@@ -7400,7 +7400,7 @@
   },
   "fuel_prices": {
    "ok": true,
-   "at": "2026-10-12T20:49Z",
+   "at": "2026-10-12T20:51Z",
    "diag": {
     "package": "http://datos.energia.gob.ar precios-en-surtidor",
     "resources": [
@@ -7443,12 +7443,12 @@
   },
   "rigi_portal": {
    "ok": true,
-   "at": "2026-10-12T20:49Z",
+   "at": "2026-10-12T20:51Z",
    "diag": {
     "html_len": 76399,
     "context": "-thin\">&nbsp;</span><span class=\"fw-semibold fs-1\">M</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Empleos <span class=\"fw-medium br-sm br-xs\">(directos e indirectos)</span></dt><dd class=\"fs-1 fw-bold text-arg-verdin js-total-puestos-trabajo\">0</dd></div></dl></div><div class=\"col-md-12 m-y-2\"><h3 class=\"h4 font-sans-serif p-b-1 border-bottom\">Sectores</h3><dl class=\"dl-proyectos-sector\"><div class=\"d-grid\"><dt class=\"last\">Energía eléctrica</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-torre-electrica m-r-05\"></i> <span class=\"m-t-1 js-total-energia-electrica\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Petróleo y gas</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-petroleo-y-gas m-r-05\"></i> <span class=\"m-t-1 js-total-petroleo-y-gas\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Minería</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-mineria m-r-05\"></i> <span class=\"m-t-1 js-total-mineria\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Siderurgia</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-siderurgia m-r-05\"></i> <span class=\"m-t-1 js-total-siderurgia\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Infraestructura</dt><",
     "inline_scripts": [
-     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"v3YiR4bA7OXnUigp8Ex1-W95MINPbpCbKDYbNGWQPFA\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
+     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"-VD6CURoDYfcyx02Fr3KFmpuh4LZbZI1ueTRXoILYe4\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
      "const jsonContainer = document.getElementById('raw-data-json');\n  const jsonText = (jsonContainer.textContent || jsonContainer.innerText).trim();\n  const rawData = JSON.parse(jsonText);\n\n  const extractVal = (val) => (typeof val === 'object' && val !== null) ? (val.total || 0) : (val || 0);\n  const formatNum = (num) => Number(num || 0).toLocaleString('es-AR');\n\n  const getSeriesData = (key) => rawData.map(d => ({ \n    x: new Date(d.year).getTime(), \n    y: extractVal(d[key]) \n  }));\n\n  const seriesData = [\n    { key: 'energia', name: 'Energía Eléctrica', data: getSeriesData('energia') },\n    { key: 'petroleo', name: 'Petróleo y Gas', data: getSeriesData('petroleo') },\n    { key: 'mineria', name: 'Minería', data: getSeriesData('mineria') },\n    { key: 'siderurgia', name: 'Siderurgia', data: getSeriesData('siderurgia') },\n    { key: 'infra', name: 'Infraestructura', data: getSeriesData('infra') }\n  ];\n\n  var optionsMain = {\n    series: seriesData,\n    colors: ['#C2185B', '#B9CE39', '#6A1B99', '#4FBB73', '#F79D00'],\n    chart: {\n      id: 'chartBarMain',\n      type: 'bar',\n      height: 450,\n      stacked: true,\n      toolbar: { show: false }\n    },\n    grid: {\n      padding: {\n        right: 35,\n        left: 15\n      }\n    },\n    dataLabels: { enabled: false },\n    plotOptions: {\n      bar: {\n        dataLabels: {\n          total: {\n            enabled: true,\n            style: {\n              fontSize: '13px',\n              fontWeight: 900\n            },\n            formatter: function (val, opts) {\n              if (!val) return '';\n\n              // Validar si la columna está dentro del rango visible actual del zoom/brush\n              if (opts && opts.w && opts.w.globals) {\n                const timestamp = opts.w.globals.seriesX[0][opts.dataPointIndex];\n            ",
      "headStyle(\"rigi-cms-fix\", `.container:has(#mapa-portal){padding-left:0 !important;padding-right:0 !important;width:100% !important;}`);\nheadStyle('rigi__999d6df5647d2df27fe7', `.poncho-map{--pm-color-primary: var(--arg-escarapela);--pm-color-base: #eaeaea;--pm-slider-background: var(--arg-azul);--pm-slider-border-color: color-mix(in srgb, #626161 40%, white);--pm-slider-border-width: 2px;--pm-scrollbar-handle: #eaeaea;--pm-scrollbar-background: rgb(0, 0, 0, 0.15);--pm-hover-background: var(--arg-secundario);--pm-hover-color: white;--pm-active-color: #343232;--pm-active-visited-color: violet;--pm-active-background: var(--pm-color-primary);--color: var(--arg-escarapela);--pm-loader-spinner-background: var(--arg-amarillo);--pm-loader-background: var(--arg-azul);--pm-loader-spinner-color: var(--arg-primary-700)}details{--details-border-color: var(--arg-primary-300)}.details-container{--container-border-color: var(--arg-primary-500)}.poncho-map .marker--active:focus,.poncho-map .marker--active{fill:#000 !important;fill-opacity:0 !important}.color-primary{color:var(--color)}.poncho-map .pm-content a{color:var(--arg-escarapela)}.totals-overview{display:grid;gap:15px 15px;grid-template-areas:\"area-a area-b area-c\";grid-template-columns:27% 1fr 27%}.a,.b,.c{display:flex;flex-direction:column-reverse;align-self:self-start}.a{grid-area:area-a}.b{grid-area:area-b}.c{grid-area:area-c}.a .key,.b .key,.c .key,.a .value,.b .value,.c .value{margin:0}.a .key,.b .key,.c .key{font-size:.95rem}.value{grid-area:value}.a .value,.b .value,.c .value{font-size:1.35rem;line-height:2rem;display:flex;align-items:baseline}.c .value .small,.b .value .small,.c .value .small{font-size:1rem}.details-data dt{float:left;margin-right:.25rem}.details-data dt::after{content:\":\";font-weight:400}.details-data "
     ],
@@ -7498,7 +7498,7 @@
   },
   "royalties": {
    "ok": false,
-   "error": "RuntimeError: No se identificaron columnas de precio o período (ver diag)",
+   "error": "RuntimeError: Excel de regalías: estructura en diagnóstico",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
@@ -7531,134 +7531,325 @@
     ],
     "sheets": {
      "Tabla precios": [
-      "PETRÓLEO CRUDO",
-      "Unnamed: 1",
-      "Unnamed: 2",
-      "Unnamed: 3",
-      "Unnamed: 4",
-      "Unnamed: 5",
-      "Unnamed: 6",
-      "Unnamed: 7",
-      "Unnamed: 8",
-      "Unnamed: 9",
-      "Fecha de realización:",
-      "2026-10-06 00:00:00"
+      445,
+      14
      ],
      "Tabla producción": [
-      "PETRÓLEO CRUDO",
-      "Unnamed: 1",
-      "Unnamed: 2",
-      "Unnamed: 3",
-      "Unnamed: 4",
-      "Unnamed: 5",
-      "Unnamed: 6",
-      "Unnamed: 7",
-      "Unnamed: 8",
-      "Unnamed: 9",
-      "Fecha de realización:",
-      "2026-10-06 00:00:00"
+      443,
+      14
      ],
      "Tabla regalías": [
-      "PETRÓLEO CRUDO",
-      "Unnamed: 1",
-      "Unnamed: 2",
-      "Unnamed: 3",
-      "Unnamed: 4",
-      "Unnamed: 5",
-      "Unnamed: 6",
-      "Unnamed: 7",
-      "Unnamed: 8",
-      "Unnamed: 9",
-      "Fecha de realización:",
-      "2026-10-06 00:00:00"
+      442,
+      14
      ],
      "detalle de tipos de crudo": [
-      "Unnamed: 0",
-      "Unnamed: 1",
-      "Unnamed: 2",
-      "Unnamed: 3"
+      17,
+      4
      ]
     },
-    "resource_used": "Regalías de Petróleo Crudo ",
-    "columns": [
-     "petroleo_crudo",
-     "unnamed:_1",
-     "unnamed:_2",
-     "unnamed:_3",
-     "unnamed:_4",
-     "unnamed:_5",
-     "unnamed:_6",
-     "unnamed:_7",
-     "unnamed:_8",
-     "unnamed:_9",
-     "fecha_de_realizacion:",
-     "2026-10-06_00:00:00",
-     "unnamed:_12",
-     "unnamed:_13"
-    ],
-    "rows": 444,
-    "sample": [
-     {
-      "petroleo_crudo": null,
-      "unnamed:_1": "10",
-      "unnamed:_2": "0",
-      "unnamed:_3": "0",
-      "unnamed:_4": "0",
-      "unnamed:_5": "0",
-      "unnamed:_6": "0",
-      "unnamed:_7": "0",
-      "unnamed:_8": "0",
-      "unnamed:_9": "0",
-      "fecha_de_realizacion:": "0",
-      "2026-10-06_00:00:00": "0",
-      "unnamed:_12": "0",
-      "unnamed:_13": "0"
-     },
-     {
-      "petroleo_crudo": null,
-      "unnamed:_1": "11",
-      "unnamed:_2": "0",
-      "unnamed:_3": "0",
-      "unnamed:_4": "0",
-      "unnamed:_5": "0",
-      "unnamed:_6": "0",
-      "unnamed:_7": "0",
-      "unnamed:_8": "0",
-      "unnamed:_9": "0",
-      "fecha_de_realizacion:": "0",
-      "2026-10-06_00:00:00": "0",
-      "unnamed:_12": "0",
-      "unnamed:_13": "0"
-     },
-     {
-      "petroleo_crudo": null,
-      "unnamed:_1": "12",
-      "unnamed:_2": "0",
-      "unnamed:_3": "0",
-      "unnamed:_4": "0",
-      "unnamed:_5": "0",
-      "unnamed:_6": "0",
-      "unnamed:_7": "0",
-      "unnamed:_8": "0",
-      "unnamed:_9": "0",
-      "fecha_de_realizacion:": "0",
-      "2026-10-06_00:00:00": "0",
-      "unnamed:_12": "0",
-      "unnamed:_13": "0"
-     }
-    ],
-    "mapped": {
-     "anio": null,
-     "mes": null,
-     "fecha": "fecha_de_realizacion:",
-     "provincia": null,
-     "empresa": null,
-     "volumen": null,
-     "precio": null,
-     "tc": null
+    "sheet_heads": {
+     "Tabla precios": [
+      [
+       "PETRÓLEO CRUDO",
+       "Fecha de realización:",
+       "2026-10-06 00:00:00"
+      ],
+      [
+       "  Nota: La información c",
+       "Fecha próxima actualizac",
+       "2026-11-06 00:00:00"
+      ],
+      [
+       "           Los tipos de "
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+       "Suma de USD/m3",
+       "CUENCA/PROVINCIA/TIPO DE"
+      ],
+      [
+       "AÑO",
+       "MES",
+       "CHUBUT",
+       "ESTADO NACIONAL",
+       "FORMOSA",
+       "JUJUY",
+       "LA PAMPA",
+       "MENDOZA",
+       "NEUQUEN",
+       "RIO NEGRO",
+       "SALTA",
+       "SANTA CRUZ",
+       "TIERRA DEL FUEGO",
+       "TOTAL PROVINCIA"
+      ],
+      [
+       "1991",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ]
+     ],
+     "Tabla producción": [
+      [
+       "PETRÓLEO CRUDO",
+       "Fecha de realización:",
+       "2026-10-06 00:00:00"
+      ],
+      [
+       "  Nota: La información c",
+       "Fecha próxima actualizac",
+       "2026-11-06 00:00:00"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+       "Suma de m3",
+       "CUENCA/PROVINCIA"
+      ],
+      [
+       "AÑO",
+       "MES",
+       "CHUBUT",
+       "ESTADO NACIONAL",
+       "FORMOSA",
+       "JUJUY",
+       "LA PAMPA",
+       "MENDOZA",
+       "NEUQUEN",
+       "RIO NEGRO",
+       "SALTA",
+       "SANTA CRUZ",
+       "TIERRA DEL FUEGO",
+       "TOTAL PROVINCIA"
+      ],
+      [
+       "1991",
+       "1",
+       "412991.019",
+       "0",
+       "46519.837",
+       "3621.278",
+       "43646.182",
+       "357581.806",
+       "477517.57300000003",
+       "194210.543",
+       "33795.731",
+       "467029.43799999997",
+       "199763.752",
+       "2236677.159"
+      ],
+      [
+       "2",
+       "362687.94",
+       "0",
+       "42309.530999999995",
+       "2981.633",
+       "39699.033",
+       "331037.783",
+       "412141.864",
+       "133775.571",
+       "27197.137",
+       "396058.116",
+       "179845.7",
+       "1927734.308"
+      ],
+      [
+       "3",
+       "347226.749",
+       "0",
+       "18340.514",
+       "3323.643",
+       "42234.778",
+       "367289.08900000004",
+       "548246.691",
+       "201173.339",
+       "41420.354999999996",
+       "499171.181",
+       "210295.119",
+       "2278721.458"
+      ]
+     ],
+     "Tabla regalías": [
+      [
+       "PETRÓLEO CRUDO",
+       "Fecha de realización:",
+       "2026-10-06 00:00:00"
+      ],
+      [
+       "  Nota: La información c",
+       "Fecha próxima actualizac",
+       "2026-11-06 00:00:00"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+       "Suma de USD",
+       "CUENCA/PROVINCIA"
+      ],
+      [
+       "AÑO",
+       "MES",
+       "CHUBUT",
+       "ESTADO NACIONAL",
+       "FORMOSA",
+       "JUJUY",
+       "LA PAMPA",
+       "MENDOZA",
+       "NEUQUEN",
+       "RIO NEGRO",
+       "SALTA",
+       "SANTA CRUZ",
+       "TIERRA DEL FUEGO",
+       "TOTAL PROVINCIA"
+      ],
+      [
+       "1991",
+       "1",
+       "5840361.509544267",
+       "0",
+       "631541.2849916557",
+       "48803.32452387385",
+       "610089.5810588729",
+       "4914918.358868016",
+       "6623689.077334236",
+       "2712411.714816508",
+       "412250.1016148229",
+       "6692109.524778634",
+       "3264605.2330325814",
+       "31750779.710563466"
+      ],
+      [
+       "2",
+       "4086888.986400623",
+       "0",
+       "484662.93918680184",
+       "34523.58353329081",
+       "453030.86068539735",
+       "3902497.8728396995",
+       "4650199.748729086",
+       "1527892.4533459656",
+       "279942.3876366427",
+       "4823290.336609741",
+       "2265273.586797577",
+       "22508202.755764823"
+      ],
+      [
+       "3",
+       "3709793.2683548774",
+       "0",
+       "197048.05732517815",
+       "35816.85257355474",
+       "468805.6660959228",
+       "4017436.253931209",
+       "5873388.24696192",
+       "2261848.465390086",
+       "293353.7534702291",
+       "5430099.800896893",
+       "2486989.6286555785",
+       "24774579.99365545"
+      ],
+      [
+       "4",
+       "4759505.00506008",
+       "0",
+       "447396.9222190703",
+       "35463.33446103539",
+       "468946.0440863308",
+       "4090014.621661552",
+       "6098303.011184503",
+       "1882276.9602918809",
+       "338335.1523171197",
+       "4950318.346108574",
+       "2555040.539692112",
+       "25625599.937082257"
+      ]
+     ],
+     "detalle de tipos de crudo": [
+      [],
+      [
+       "INFORME MENSUAL DE REGAL"
+      ],
+      [],
+      [
+       "Detalle de Tipos de Crud"
+      ],
+      [],
+      [
+       "TIPO DE CRUDO",
+       "CUENCA",
+       "PROVINCIA"
+      ],
+      [
+       "MAGALLANES",
+       "CUENCA AUSTRAL OFF-SHORE",
+       "SANTA CRUZ"
+      ],
+      [
+       "HIDRA (1)",
+       "CUENCA AUSTRAL OFF-SHORE",
+       "TIERRA DEL FUEGO + ESTAD"
+      ],
+      [
+       "SAN SEBASTIÁN",
+       "CUENCA AUSTRAL ON-SHORE",
+       "TIERRA DEL FUEGO"
+      ],
+      [
+       "MARÍA INÉS",
+       "CUENCA AUSTRAL ON-SHORE",
+       "SANTA CRUZ"
+      ],
+      [
+       "CAÑADÓN SECO",
+       "CUENCA GOLFO SAN JORGE",
+       "SANTA CRUZ"
+      ],
+      [
+       "ESCALANTE",
+       "CUENCA GOLFO SAN JORGE",
+       "CHUBUT"
+      ],
+      [
+       "MEDANITO",
+       "CUENCA NEUQUINA",
+       "LA PAMPA +  MENDOZA + NE"
+      ],
+      [
+       "MENDOZA NORTE",
+       "CUENCA CUYANA",
+       "MENDOZA"
+      ]
+     ]
     }
    },
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 949, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 941, in <lambda>\n    (\"royalties\", lambda d: royalties(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 838, in royalties\n    raise RuntimeError(\"No se identificaron columnas de precio o período (ver diag)\")\nRuntimeError: No se identificaron columnas de precio o período (ver diag)\n"
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 951, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 943, in <lambda>\n    (\"royalties\", lambda d: royalties(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 814, in royalties\n    return {\"_pending\": True} if False else (_ for _ in ()).throw(RuntimeError(\"Excel de regalías: estructura en diagnóstico\"))\n                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 814, in <genexpr>\n    return {\"_pending\": True} if False else (_ for _ in ()).throw(RuntimeError(\"Excel de regalías: estructura en diagnóstico\"))\nRuntimeError: Excel de regalías: estructura en diagnóstico\n"
   }
  }
 }
