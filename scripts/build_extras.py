@@ -997,18 +997,42 @@ def fx_mensual(diag: dict) -> dict:
     return _FX_MENSUAL
 
 
+def _serie_vigente(queries: list[str], debe: list[str], diag: dict, clave: str) -> tuple[dict, dict]:
+    """Primera serie mensual con datos recientes (la metadata de la API a veces no coincide con los datos)."""
+    vistos, probadas = set(), []
+    for q in queries:
+        res = get(f"{SERIES_API}/search/", params={"q": q, "limit": 40}, timeout=60).json().get("data", [])
+        for r in res:
+            f = r.get("field", {})
+            texto = norm(" ".join(str(x) for x in (f.get("description"), f.get("title"))))
+            if not all(d in texto for d in debe) or "indice" in texto:
+                continue
+            fid = f.get("id") or ""
+            ids = [fid]
+            if f.get("frequency") != "R/P1M":   # probar la versión mensual del mismo id
+                ids = [re.sub(r"^(\d+)\.\d_", r"\1.3_", fid).replace("_T_", "_M_").replace("_A_", "_M_")]
+            for i in ids:
+                if i in vistos:
+                    continue
+                vistos.add(i)
+                try:
+                    datos = {d[0][:7]: d[1] for d in serie_api([i], {}, "2010-01-01") if d[1] is not None}
+                except Exception:
+                    datos = {}
+                ult = max(datos) if datos else None
+                probadas.append({"id": i, "desc": (f.get("description") or "")[:90], "n": len(datos), "last": ult})
+                if ult and ult >= f"{date.today().year - 1}-01" and len(datos) >= 24:
+                    diag[f"tried_{clave}"] = probadas
+                    return {"id": i, "desc": f.get("description"), "units": f.get("units")}, datos
+    diag[f"tried_{clave}"] = probadas
+    raise RuntimeError(f"Sin serie mensual vigente para {clave}")
+
+
 def trade_balance(diag: dict) -> dict:
-    exp = _buscar_serie("exportaciones combustibles y energia", ["export", "combustibles", "energia"], diag, "exp")
-    imp = _buscar_serie("importaciones combustibles y lubricantes", ["import", "combustibles", "lubricantes"], diag, "imp")
+    exp, e = _serie_vigente(["exportaciones combustibles y energia", "exportaciones fob combustibles energia"], ["export", "combustibles", "energia"], diag, "exp")
+    imp, i_ = _serie_vigente(["importaciones combustibles y lubricantes", "importaciones cif combustibles lubricantes"], ["import", "combustibles", "lubricantes"], diag, "imp")
     diag["chosen"] = {"exp": exp, "imp": imp}
-    if not exp or not imp:
-        raise RuntimeError("No se encontraron las series mensuales de exportación e importación de energía")
-    e = {d[0][:7]: d[1] for d in serie_api([exp["id"]], diag) if d[1] is not None}
-    i_ = {d[0][:7]: d[1] for d in serie_api([imp["id"]], diag) if d[1] is not None}
-    if not e:   # sin fecha de inicio, por si la API la rechaza para esta serie
-        e = {d[0][:7]: d[1] for d in serie_api([exp["id"]], diag, None) if d[1] is not None}
-        i_ = {d[0][:7]: d[1] for d in serie_api([imp["id"]], diag, None) if d[1] is not None}
-    filas = [{"period": p, "exports": e[p], "imports": i_[p]} for p in sorted(set(e) & set(i_)) if p >= "2010-01"]
+    filas = [{"period": p, "exports": e[p], "imports": i_[p]} for p in sorted(set(e) & set(i_))]
     for f in filas:
         f["balance"] = round(f["exports"] - f["imports"], 1)
         f["exports"], f["imports"] = round(f["exports"], 1), round(f["imports"], 1)
