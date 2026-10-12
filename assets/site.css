@@ -173,3 +173,4 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
 
 .scroll-table { max-height: 560px; overflow: auto; border-bottom: 1px solid var(--rule); }
 .scroll-table thead th { position: sticky; top: 0; background: var(--bg); z-index: 1; }
+@media (max-width: 600px) { .hide-sm { display: none; } }

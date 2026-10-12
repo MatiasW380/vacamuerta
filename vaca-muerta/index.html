@@ -217,7 +217,7 @@
             <th scope="col" data-i18n="thDate">Date</th>
             <th scope="col" style="text-align:left" data-i18n="thProject">Project</th>
             <th scope="col" style="text-align:left" data-i18n="thCompany">Company</th>
-            <th scope="col" style="text-align:left" data-i18n="thSubsector">Sub-sector</th>
+            <th scope="col" class="hide-sm" style="text-align:left" data-i18n="thSubsector">Sub-sector</th>
             <th scope="col" data-i18n="thUsdM">USD million</th>
           </tr></thead>
           <tbody></tbody>
@@ -812,8 +812,9 @@
         g.append(svgEl("rect", { x: x0, y: top + 0.5, width: bw, height: Math.max(0, bot - top - 1), fill: s.color }));
         acc += v;
       });
-      const xl = svgEl("text", { x: cx, y: H - 8, "text-anchor": "middle" }); xl.textContent = lb; svg.append(xl);
-      if (tots[i]) { const tl = svgEl("text", { x: cx, y: y(tots[i]) - 5, "text-anchor": "middle", style: "fill:var(--ink-2);font-size:11px" }); tl.textContent = fmt(tots[i]); g.append(tl); }
+      const every = Math.ceil(34 / step);
+      if (i % every === 0 || i === labels.length - 1) { const xl = svgEl("text", { x: cx, y: H - 8, "text-anchor": "middle" }); xl.textContent = step < 34 && lb.length === 4 ? "’" + lb.slice(2) : lb; svg.append(xl); }
+      if (tots[i] && step >= 38) { const tl = svgEl("text", { x: cx, y: y(tots[i]) - 5, "text-anchor": "middle", style: "fill:var(--ink-2);font-size:11px" }); tl.textContent = fmt(tots[i]); g.append(tl); }
       const show = () => {
         tip.innerHTML = "";
         const h = document.createElement("strong"); h.textContent = `${lb}: ${fmt(tots[i])} ${unit}`; tip.append(h);
@@ -990,7 +991,8 @@
       const keys = [["fob|Medanito", t.cFob], ["domestic|Medanito", t.cDom], ["brent|Ice Brent", t.cBrent]].filter(([k]) => ep.series[k]);
       const maps = keys.map(([k]) => Object.fromEntries(ep.series[k].map(p => [p.period, p.usd_bbl])));
       const periods = Object.keys(maps[0]).filter(p => maps.every(m => m[p] != null)).sort();
-      if (periods.length > 3) {
+      const stale = periods.length && (Date.now() - new Date(periods[periods.length - 1] + "-15")) / 864e5 > 540;
+      if (periods.length > 3 && !stale) {
         $("#crudeBlock").hidden = false;
         const names = keys.map(k => k[1]), series = {};
         names.forEach((n, i) => { series[n] = periods.map(p => maps[i][p]); });
@@ -1025,7 +1027,11 @@
         { name: t.rpOther, color: "var(--ink-3)", get: r => v(r, "energia") + v(r, "mineria") + v(r, "siderurgia") + v(r, "infra") + Math.max(0, v(r, "petroleo") - v(r, "petroleo:Upstream") - v(r, "petroleo:Midstream") - v(r, "petroleo:Fertilizantes")) },
       ];
       $("#rigiPlanLegend").innerHTML = ser.map(x => `<li><i style="background:${x.color}"></i>${esc(x.name)}</li>`).join("");
-      stackedColumns($("#rigiPlanChart"), rp.map(r => String(r.year)), ser.map(x => ({ name: x.name, color: x.color, values: rp.map(x.get) })), "USD M");
+      // Años hasta 2035 uno por uno; el resto del plan (hasta 2050 y más) en una sola columna.
+      const corte = 2035, cab = rp.filter(r => r.year <= corte), cola = rp.filter(r => r.year > corte);
+      const labs = cab.map(r => String(r.year)).concat(cola.length ? [(window.innerWidth < 600 ? `’${String(corte + 1).slice(2)}+` : `${corte + 1}–${String(cola[cola.length - 1].year).slice(2)}`)] : []);
+      stackedColumns($("#rigiPlanChart"), labs, ser.map(x => ({ name: x.name, color: x.color,
+        values: cab.map(x.get).concat(cola.length ? [cola.reduce((a, r) => a + x.get(r), 0)] : []) })), "USD M");
       const tot = rp.reduce((a, r) => a + v(r, "energia") + v(r, "petroleo") + v(r, "mineria") + v(r, "siderurgia") + v(r, "infra"), 0);
       const oil = rp.reduce((a, r) => a + v(r, "petroleo"), 0);
       $("#rigiPlanNote").innerHTML = t.rigiPlanNote(`<a href="${esc(E.rigi_portal.source.url)}" rel="noopener">${esc(E.rigi_portal.source.name)}</a>`, fmt(tot), fmt(oil));
@@ -1061,7 +1067,7 @@
         <td>${esc(shortDate(a.date))}</td>
         <td style="text-align:left"><a href="${esc(a.url)}" rel="noopener" target="_blank">${esc(a.project || a.title)}</a>${a.area ? `<div class="meta">${esc(a.area)}</div>` : ""}</td>
         <td style="text-align:left;max-width:260px">${esc(a.company || "–")}</td>
-        <td style="text-align:left;max-width:260px">${esc(a.subsector ? a.subsector.charAt(0).toUpperCase() + a.subsector.slice(1) : (a.sector || "–"))}</td>
+        <td class="hide-sm" style="text-align:left;max-width:260px">${esc(a.subsector ? a.subsector.charAt(0).toUpperCase() + a.subsector.slice(1) : (a.sector || "–"))}</td>
         <td>${a.usd_million ? fmt(a.usd_million, 0) : "–"}</td></tr>`).join("");
       const desde = ra.reduce((m, a) => a.date < m ? a.date : m, ra[0].date);
       $("#rigiNote").innerHTML = t.rigiNote(fmt(ra.length), esc(shortDate(desde)), `<a href="https://www.argentina.gob.ar/economia/rigi" rel="noopener">${esc(t.rigiPortal)}</a>`);

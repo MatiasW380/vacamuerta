@@ -615,6 +615,14 @@ def export_price(diag: dict) -> dict:
                               "precio-exportacion-petroleo-crudo"], diag)
     rs = [r for r in recursos(paq) if r["url"].lower().split("?")[0].endswith((".csv", ".xlsx")) or r["format"] in ("csv", "xlsx")]
     diag["resources"] = [r["name"] for r in rs][:10]
+    # Este dataset se discontinuó en 2021: se buscan reemplazos para seguirlos en el diagnóstico.
+    try:
+        for base_b in ("http://datos.energia.gob.ar", "https://datos.gob.ar"):
+            res = get(f"{base_b}/api/3/action/package_search", params={"q": "precio petroleo crudo", "rows": 15}, timeout=60).json()["result"]["results"]
+            diag.setdefault("alternatives", []).extend({"base": base_b, "name": x.get("name"), "title": x.get("title"), "modified": x.get("metadata_modified", "")[:10],
+                                                        "resources": [(r.get("name"), (r.get("last_modified") or "")[:10]) for r in x.get("resources", [])][:6]} for x in res)
+    except Exception as e:
+        diag["alternatives_error"] = str(e)[:200]
     if not rs:
         raise RuntimeError("Sin recursos tabulares")
     crudo = get(rs[0]["url"], timeout=120).content
