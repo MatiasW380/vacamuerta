@@ -811,9 +811,14 @@ def royalties(diag: dict) -> dict:
             diag["sheets"] = {k: list(v.columns)[:12] for k, v in hojas.items()}
             df = max(hojas.values(), key=len)
         else:
-            texto = next((datos.decode(e) for e in ("utf-8-sig", "latin-1") if _decodifica(datos, e)), datos.decode("latin-1"))
-            sep = ";" if texto[:3000].count(";") > texto[:3000].count(",") else ","
-            df = pd.read_csv(io.StringIO(texto), sep=sep, dtype=str, low_memory=False)
+            enc = "utf-8-sig" if _decodifica(datos[:200000], "utf-8-sig") else "latin-1"
+            cab = datos[:5000].decode(enc, errors="replace")
+            sep = ";" if cab.count(";") > cab.count(",") else ","
+            muestra = pd.read_csv(io.BytesIO(datos), sep=sep, dtype=str, nrows=5, encoding=enc)
+            diag["raw_columns"] = list(muestra.columns)[:40]
+            utiles = [c for c in muestra.columns if re.search(r"a(n|ñ)o|mes|fecha|tiempo|periodo|provinc|jurisd|empresa|operador|volum|cantidad|precio|cambio", norm(c))]
+            df = pd.read_csv(io.BytesIO(datos), sep=sep, dtype=str, encoding=enc, usecols=utiles or None, low_memory=False)
+        del datos
         df.columns = [norm(c).replace(" ", "_") for c in df.columns]
     else:
         df = leer_tabla(rs[0]["url"])
@@ -957,7 +962,7 @@ def main() -> None:
     salida["generated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
     salida["status"] = status
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(limpiar_nan(salida), ensure_ascii=False, indent=1, allow_nan=False) + "\n", encoding="utf-8")
+    OUT.write_text(json.dumps(limpiar_nan(salida), ensure_ascii=False, indent=1, allow_nan=False, default=str) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":
