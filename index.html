@@ -143,6 +143,18 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
 @media (max-width: 860px) { .context { grid-template-columns: 1fr; gap: 24px; } }
 .quotes { margin-top: 18px; min-height: 420px; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; background: var(--surface); }
 .tickers td:nth-child(2), .tickers th:nth-child(2) { text-align: left; }
+.feed { list-style: none; margin: 16px 0 0; padding: 0; }
+.feed li { padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.feed li:first-child { border-top: 1px solid var(--rule); }
+.feed .meta { font-size: 13px; color: var(--ink-3); display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.feed .topic { color: var(--brand); font-weight: 600; }
+.feed a.t { display: block; font-weight: 600; color: var(--ink); text-decoration: none; margin: 3px 0 2px; }
+.feed a.t:hover { text-decoration: underline; }
+.feed p { margin: 0; color: var(--ink-2); font-size: 15px; max-width: 80ch; }
+.news a.t { font-weight: 500; }
+.lede-num { font-weight: 700; color: var(--ink); }
+.ops-mini { margin-top: 16px; }
+.ops-mini td, .ops-mini th { font-size: 14px; padding: 7px 8px; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
@@ -204,6 +216,40 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
           <div class="chart" id="perWellChart"></div>
         </div>
       </div>
+    </section>
+
+    <section class="section" id="fracSection" hidden>
+      <h2 data-i18n="fracTitle">Fracking stages</h2>
+      <p class="section-lede" id="fracLede"></p>
+      <div class="two" style="margin-top:18px">
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="fracChartTitle">Stages fractured per month</h2></div>
+          <div class="chart" id="fracChart"></div>
+        </div>
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="fracOpsTitle">Stages by operator, last 12 months</h2></div>
+          <div class="table-wrap"><table class="ops-mini" id="fracOps">
+            <thead><tr><th scope="col" data-i18n="thOperator">Operator</th><th scope="col" data-i18n="thStages">Stages</th><th scope="col" data-i18n="thShare">Share</th></tr></thead>
+            <tbody></tbody></table></div>
+        </div>
+      </div>
+      <p class="note" id="fracNote"></p>
+    </section>
+
+    <section class="section" id="priceSection" hidden>
+      <h2 data-i18n="priceTitle">Prices and exchange rate</h2>
+      <ul class="facts" id="priceFacts"></ul>
+      <div class="two" style="margin-top:18px">
+        <div id="brentBlock">
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="brentTitle">Brent crude, USD per barrel</h2></div>
+          <div class="chart" id="brentChart"></div>
+        </div>
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="fxTitle">Official exchange rate, pesos per dollar</h2></div>
+          <div class="chart" id="fxChart"></div>
+        </div>
+      </div>
+      <p class="note" id="priceNote"></p>
     </section>
 
     <section class="section">
@@ -279,6 +325,19 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
       <p class="note" data-i18n="method">Vaca Muerta here means wells in the Neuquén basin reporting the Vaca Muerta formation. Daily rates divide each month's declared volume by its number of days. The latest month can still be revised as operators correct their filings.</p>
     </section>
 
+    <section class="section" id="regSection" hidden aria-labelledby="regTitle">
+      <h2 id="regTitle" data-i18n="regTitle">Recent regulations</h2>
+      <p class="section-lede" data-i18n="regLede">Notices from the Official Gazette that deal with oil, gas, RIGI or Vaca Muerta, checked every morning. Each one links to the full text.</p>
+      <ul class="feed" id="regList"></ul>
+      <details id="regMore" hidden><summary data-i18n="regMore">Older notices</summary><ul class="feed" id="regListMore"></ul></details>
+    </section>
+
+    <section class="section" id="newsSection" hidden aria-labelledby="newsTitle">
+      <h2 id="newsTitle" data-i18n="newsTitle">Sector news</h2>
+      <p class="section-lede" data-i18n="newsLede">Latest headlines from Argentine energy media. Each link opens the original article.</p>
+      <ul class="feed news" id="newsList"></ul>
+    </section>
+
     <section class="section" aria-labelledby="contextTitle">
       <h2 id="contextTitle" data-i18n="contextTitle">Context for investors</h2>
       <div class="context">
@@ -344,6 +403,22 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
       empty: "Production data is being loaded for the first time. Check back in a few minutes.",
       disclaimer: "For information only. Not investment advice.",
       fWells: "wells producing",
+      fracTitle: "Fracking stages",
+      fracLede: (n, y, w, s) => `${n} fracking stages were pumped in Vaca Muerta in the last 12 months${y}, across ${w} wells and ${s} tonnes of sand.`,
+      fracYoy: v => `, ${v} on the previous year`,
+      fracChartTitle: "Stages fractured per month", fracOpsTitle: "Stages by operator, last 12 months", thStages: "Stages", stagesUnit: "stages",
+      fracNote: (p, src) => `Source: ${src}. Data through ${p}; recent months fill in as operators file their reports.`,
+      priceTitle: "Prices and exchange rate",
+      pBrent: "Brent, USD per barrel", pWti: "WTI, USD per barrel", pFx: "pesos per dollar, official", pValue: "million USD a day, Vaca Muerta oil at Brent",
+      brentTitle: "Brent crude, USD per barrel", fxTitle: "Official exchange rate, pesos per dollar",
+      priceNote: (b, f) => `Oil prices: ${b}. Exchange rate: ${f}. The production value multiplies the latest month's output by the latest Brent price; it is a reference, not the price operators actually receive.`,
+      priceNoteNoOil: f => `Exchange rate: ${f}. Oil prices will appear once the EIA connection is set up.`,
+      regTitle: "Recent regulations",
+      regLede: "Notices from the Official Gazette that deal with oil, gas, RIGI or Vaca Muerta, checked every morning. Each one links to the full text, published in Spanish.",
+      regMore: "Older notices",
+      similar: n => `and ${n} similar ${n === 1 ? "notice" : "notices"} the same day`,
+      newsTitle: "Sector news", newsLede: "Latest headlines from Argentine energy media, in Spanish. Each link opens the original article.",
+      topicNames: { Hidrocarburos: "Hydrocarbons", "Gas natural": "Natural gas", "Petróleo": "Oil", Biocombustibles: "Biofuels" },
       listedTitle: "Listed companies",
       listedLede: "Three Vaca Muerta operators trade on the stock market. Their share price next to what they actually produce in the formation.",
       thCompany: "Company", thTickers: "Tickers",
@@ -383,6 +458,22 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
       empty: "Los datos de producción se están cargando por primera vez. Volvé en unos minutos.",
       disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.",
       fWells: "pozos en producción",
+      fracTitle: "Etapas de fractura",
+      fracLede: (n, y, w, s) => `Se bombearon ${n} etapas de fractura en Vaca Muerta en los últimos 12 meses${y}, en ${w} pozos y con ${s} toneladas de arena.`,
+      fracYoy: v => `, ${v} contra el año anterior`,
+      fracChartTitle: "Etapas de fractura por mes", fracOpsTitle: "Etapas por operadora, últimos 12 meses", thStages: "Etapas", stagesUnit: "etapas",
+      fracNote: (p, src) => `Fuente: ${src}. Datos hasta ${p}; los meses recientes se completan a medida que las operadoras presentan sus declaraciones.`,
+      priceTitle: "Precios y tipo de cambio",
+      pBrent: "Brent, USD por barril", pWti: "WTI, USD por barril", pFx: "pesos por dólar, oficial", pValue: "millones de USD por día, petróleo de Vaca Muerta a precio Brent",
+      brentTitle: "Petróleo Brent, USD por barril", fxTitle: "Dólar oficial, pesos por dólar",
+      priceNote: (b, f) => `Precios del petróleo: ${b}. Tipo de cambio: ${f}. El valor de la producción multiplica el último mes de producción por el último precio Brent; es una referencia, no el precio que efectivamente cobran las operadoras.`,
+      priceNoteNoOil: f => `Tipo de cambio: ${f}. Los precios del petróleo van a aparecer cuando se configure la conexión con la EIA.`,
+      regTitle: "Normativa reciente",
+      regLede: "Avisos del Boletín Oficial sobre petróleo, gas, RIGI o Vaca Muerta, revisados cada mañana. Cada uno enlaza al texto completo.",
+      regMore: "Avisos anteriores",
+      similar: n => `y ${n} ${n === 1 ? "aviso similar" : "avisos similares"} el mismo día`,
+      newsTitle: "Noticias del sector", newsLede: "Últimos titulares de medios argentinos de energía. Cada enlace abre la nota original.",
+      topicNames: {},
       listedTitle: "Empresas que cotizan",
       listedLede: "Tres operadoras de Vaca Muerta cotizan en bolsa. Su acción al lado de lo que efectivamente producen en la formación.",
       thCompany: "Empresa", thTickers: "Tickers",
@@ -408,7 +499,7 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
   try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
   lang = saved || ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en");
   if (!T[lang]) lang = "en";
-  let DATA = null;
+  let DATA = null, EXTRAS = null;
 
   const $ = s => document.querySelector(s);
   const locale = () => (lang === "es" ? "es-AR" : "en-US");
@@ -418,6 +509,9 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
     const [y, m] = p.split("-").map(Number);
     return new Date(Date.UTC(y, m - 1, 15)).toLocaleDateString(locale(), { month: long ? "long" : "short", year: "numeric", timeZone: "UTC" });
   };
+  const periodLabel = p => p.length === 10
+    ? new Date(p + "T12:00:00Z").toLocaleDateString(locale(), { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })
+    : monthName(p);
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const svgEl = (tag, attrs = {}) => { const e = document.createElementNS("http://www.w3.org/2000/svg", tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
 
@@ -432,6 +526,18 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
   // Year labels on a time axis: only at January (or the first point), at least 46px apart.
   function yearTicks(svg, periods, x, yPos) {
     let lastX = -Infinity;
+    if (periods[0] && periods[0].length === 10) {   // daily dates: a tick at each new month
+      periods.forEach((p, i) => {
+        if (i && p.slice(0, 7) === periods[i - 1].slice(0, 7)) return;
+        const px = x(i);
+        if (px - lastX < 54 || (i === 0 && periods.length > 40)) { if (i === 0) lastX = px - 30; return; }
+        const [y, m] = p.split("-").map(Number);
+        const lab = svgEl("text", { x: px, y: yPos, "text-anchor": "middle" });
+        lab.textContent = new Date(Date.UTC(y, m - 1, 15)).toLocaleDateString(locale(), { month: "short", year: m === 1 ? "numeric" : undefined, timeZone: "UTC" });
+        svg.append(lab); lastX = px;
+      });
+      return;
+    }
     periods.forEach((p, i) => {
       if (!(p.endsWith("-01") || i === 0)) return;
       const px = x(i), nextJan = periods.findIndex((q, j) => j > i && q.endsWith("-01"));
@@ -484,7 +590,7 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
       tip.innerHTML = "";
       const v = document.createElement("strong"); v.textContent = `${fmt(r[key], digits)} ${unit}`;
       const k = document.createElement("span"); k.className = "key"; k.style.background = color;
-      const p = document.createElement("div"); p.textContent = monthName(r.period);
+      const p = document.createElement("div"); p.textContent = periodLabel(r.period);
       tip.append(k, v, p);
       const scale = host.clientWidth / W;
       const left = px * scale, tw = tip.offsetWidth;
@@ -547,7 +653,7 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
   }
 
   // Monthly columns (new wells) with per-bar tooltip.
-  function columnChart(host, rows, key, unit) {
+  function columnChart(host, rows, key, unit, label) {
     host.innerHTML = "";
     const W = host.clientWidth || 500, H = 260, m = { t: 8, r: 8, b: 28, l: 40 };
     const iw = W - m.l - m.r, ih = H - m.t - m.b;
@@ -555,7 +661,7 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
     const yMax = ticks[ticks.length - 1];
     const step = iw / rows.length, bw = Math.max(2, step - 2);
     const y = v => m.t + ih - (v / yMax) * ih;
-    const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": T[lang].newWellsTitle });
+    const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": label || "" });
     for (const t of ticks) {
       svg.append(svgEl("line", { x1: m.l, x2: W - m.r, y1: y(t), y2: y(t), stroke: "var(--grid)" }));
       const lab = svgEl("text", { x: m.l - 8, y: y(t) + 4, "text-anchor": "end" }); lab.textContent = fmt(t); svg.append(lab);
@@ -680,6 +786,94 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
     host.append(box);
   }
 
+  function shortDate(iso) {
+    const d = new Date(iso.length === 10 ? iso + "T12:00:00Z" : iso);
+    return d.toLocaleDateString(locale(), { day: "numeric", month: "short", year: "numeric", timeZone: "America/Argentina/Buenos_Aires" });
+  }
+  function link(url, text, cls) {
+    const a = document.createElement("a"); a.href = url; a.rel = "noopener"; a.target = "_blank"; a.textContent = text;
+    if (cls) a.className = cls; return a;
+  }
+  function regItem(i, t) {
+    const li = document.createElement("li");
+    const meta = document.createElement("div"); meta.className = "meta";
+    const d = document.createElement("span"); d.textContent = shortDate(i.date);
+    const top = document.createElement("span"); top.className = "topic";
+    top.textContent = (i.topics || []).map(x => t.topicNames[x] || x).join(", ");
+    const ag = document.createElement("span"); ag.textContent = i.agency;
+    meta.append(d, top, ag);
+    li.append(meta, link(i.url, i.title, "t"));
+    if (i.summary) { const p = document.createElement("p"); p.textContent = i.summary; li.append(p); }
+    if (i.similar) { const p = document.createElement("p"); p.className = "meta"; p.style.marginTop = "4px"; p.textContent = t.similar(i.similar); li.append(p); }
+    return li;
+  }
+
+  function renderExtras() {
+    const t = T[lang], E = EXTRAS;
+    if (!E || E === "empty") return;
+
+    const f = E.fracking;
+    if (f && f.monthly && f.monthly.length) {
+      $("#fracSection").hidden = false;
+      const y = f.stages_12m_yoy_pct == null ? "" : t.fracYoy(pct(f.stages_12m_yoy_pct));
+      $("#fracLede").textContent = t.fracLede(fmt(f.stages_12m), y, fmt(f.wells_12m), fmt(f.sand_12m_t));
+      columnChart($("#fracChart"), f.monthly, "stages", t.stagesUnit, t.fracChartTitle);
+      $("#fracOps tbody").innerHTML = f.operators.map(o =>
+        `<tr><td>${esc(o.name)}</td><td>${fmt(o.stages_12m)}</td><td>${o.share_pct == null ? "–" : fmt(o.share_pct, 1) + "%"}</td></tr>`).join("");
+      $("#fracNote").innerHTML = t.fracNote(esc(monthName(f.last_period)), `<a href="${esc(f.source.url)}" rel="noopener">${esc(f.source.name)}</a>, ${esc(f.source.license)}`);
+    }
+
+    const fx = E.fx, oil = E.oil_price;
+    if (fx && fx.daily && fx.daily.length) {
+      $("#priceSection").hidden = false;
+      const facts = [];
+      if (oil && oil.brent) {
+        facts.push([fmt(oil.brent.usd_bbl, 2), t.pBrent]);
+        facts.push([fmt(oil.wti.usd_bbl, 2), t.pWti]);
+        if (DATA && DATA.kpis) facts.push([fmt(DATA.kpis.oil_bbl_d * oil.brent.usd_bbl / 1e6, 1), t.pValue]);
+      }
+      facts.push([fmt(fx.latest.ars_per_usd, 2), t.pFx]);
+      $("#priceFacts").innerHTML = facts.map(([v, l]) => `<li><strong>${esc(v)}</strong>${esc(l)}</li>`).join("");
+      const fxRows = fx.daily.map(d => ({ period: d.date, v: d.ars_per_usd }));
+      lineChart($("#fxChart"), fxRows, "v", "var(--oil)", "ARS/USD", 2, 240);
+      const fxSrc = `<a href="${esc(fx.source.url)}" rel="noopener">${esc(fx.source.name)}</a>, ${esc(shortDate(fx.latest.date))}`;
+      if (oil && oil.daily && oil.daily.length) {
+        $("#brentBlock").hidden = false;
+        const bRows = oil.daily.filter(d => d.brent != null).map(d => ({ period: d.date, v: d.brent }));
+        lineChart($("#brentChart"), bRows, "v", "var(--gas)", "USD/bbl", 2, 240);
+        $("#priceNote").innerHTML = t.priceNote(`<a href="${esc(oil.source.url)}" rel="noopener">${esc(oil.source.name)}</a>, ${esc(shortDate(oil.brent.date))}`, fxSrc);
+      } else {
+        $("#brentBlock").hidden = true;
+        $("#priceNote").innerHTML = t.priceNoteNoOil(fxSrc);
+      }
+    }
+
+    const reg = E.regulations;
+    if (reg && reg.items && reg.items.length) {
+      $("#regSection").hidden = false;
+      const a = $("#regList"), b = $("#regListMore");
+      a.innerHTML = ""; b.innerHTML = "";
+      reg.items.slice(0, 8).forEach(i => a.append(regItem(i, t)));
+      reg.items.slice(8, 40).forEach(i => b.append(regItem(i, t)));
+      $("#regMore").hidden = reg.items.length <= 8;
+    }
+
+    const news = E.news;
+    if (news && news.items && news.items.length) {
+      $("#newsSection").hidden = false;
+      const ul = $("#newsList"); ul.innerHTML = "";
+      news.items.slice(0, 10).forEach(n => {
+        const li = document.createElement("li");
+        const meta = document.createElement("div"); meta.className = "meta";
+        const src = document.createElement("span"); src.className = "topic"; src.textContent = n.source;
+        meta.append(src);
+        if (n.published) { const d = document.createElement("span"); d.textContent = shortDate(n.published); meta.append(d); }
+        li.append(meta, link(n.url, n.title, "t"));
+        ul.append(li);
+      });
+    }
+  }
+
   function render() {
     const t = T[lang];
     document.documentElement.lang = lang;
@@ -714,7 +908,7 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
 
     if (DATA.wells && DATA.wells.length) {
       $("#wellsLede").textContent = t.wellsLede(fmt(k.new_wells_12m), fmt(k.oil_per_well_bbl_d, 0));
-      columnChart($("#wellsChart"), DATA.wells, "new", t.wellsUnit);
+      columnChart($("#wellsChart"), DATA.wells, "new", t.wellsUnit, t.newWellsTitle);
       lineChart($("#perWellChart"), DATA.wells.filter(w => w.oil_per_well_bbl_d != null), "oil_per_well_bbl_d", "var(--oil)", t.perWellUnit, 0, 260);
     }
     if (DATA.operators_history && DATA.operators_history.names.length) {
@@ -730,6 +924,7 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
         <td class="${o.oil_yoy_pct > 0 ? "delta-up" : o.oil_yoy_pct < 0 ? "delta-down" : ""}">${pct(o.oil_yoy_pct)}</td></tr>`;
     }).join("");
     mountQuotes();
+    renderExtras();
 
     if (DATA.areas) {
       $("#areasTable tbody").innerHTML = DATA.areas.map(a => `<tr>
@@ -771,6 +966,10 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
   });
 
   render();
+  fetch("data/extras.json", { cache: "no-cache" })
+    .then(r => (r.ok ? r.json() : Promise.reject(r.status)))
+    .then(d => { EXTRAS = d; if (DATA && DATA !== "empty") renderExtras(); })
+    .catch(() => { EXTRAS = "empty"; });
   fetch("data/vm.json", { cache: "no-cache" })
     .then(r => (r.ok ? r.json() : Promise.reject(r.status)))
     .then(d => { DATA = d && d.monthly && d.monthly.length ? d : "empty"; render(); })

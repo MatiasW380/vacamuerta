@@ -7,7 +7,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "scripts/**"
+      - "scripts/build_data.py"
       - ".github/workflows/update-data.yml"
 
 permissions:

@@ -260,10 +260,14 @@ NOISE = ["designase", "dase por designad", "prorrogase la designacion", "denunci
          "sumario", "licitacion privada"]
 
 
-def resumen_aviso(texto: str) -> str:
-    """Parte dispositiva del aviso: lo que sigue a RESUELVE/DECRETA/DISPONE, o el inicio del texto."""
+def parte_dispositiva(texto: str) -> str:
+    """Lo que sigue a RESUELVE/DECRETA/DISPONE (sin los considerandos), o el texto entero."""
     m = re.search(r"\b(RESUELVE|DECRETA|DISPONE|RESUELVEN|DISPONEN)\s*:\s*(.+)", texto)
-    cuerpo = m.group(2) if m else texto
+    return m.group(2) if m else texto
+
+
+def resumen_aviso(texto: str) -> str:
+    cuerpo = parte_dispositiva(texto)
     cuerpo = re.sub(r"^ART[IÍ]CULO\s*1\s*[°º]?\s*[.\-–:]*\s*", "", cuerpo.strip(), flags=re.I)
     cuerpo = re.split(r"\s+ART[IÍ]CULO\s*2", cuerpo, maxsplit=1, flags=re.I)[0]
     return cuerpo[:320].strip() + ("…" if len(cuerpo) > 320 else "")
@@ -272,8 +276,10 @@ def resumen_aviso(texto: str) -> str:
 def regulations(diag: dict, previo: dict | None) -> dict:
     from bs4 import BeautifulSoup
 
-    viejos = [i for i in (previo or {}).get("items", []) if i.get("topics")]
-    descartados = set((previo or {}).get("rejected_ids", []))
+    VERSION = 3   # al cambiar el criterio de filtrado se rearma el historial
+    vigente = (previo or {}).get("version") == VERSION
+    viejos = [i for i in (previo or {}).get("raw_items", []) if i.get("topics")] if vigente else []
+    descartados = set((previo or {}).get("rejected_ids", [])) if vigente else set()
     dias = 60 if len(viejos) < 5 else 7
     paginas = [BO_SECCION] + [f"{BO_SECCION}/{(date.today() - timedelta(days=d)).strftime('%Y%m%d')}"
                               for d in range(1, dias + 1) if (date.today() - timedelta(days=d)).weekday() < 5]
@@ -317,7 +323,7 @@ def regulations(diag: dict, previo: dict | None) -> dict:
         except Exception:
             fallas += 1
             continue
-        t = norm(texto)
+        t = norm(c["title"] + " " + parte_dispositiva(texto)[:3000])
         temas = [tema for tema, claves in TEMAS.items() if any(tiene(t, k) for k in claves)]
         if not temas or any(n in norm(c["title"]) for n in NOISE):
             descartados.add(c["id"])
@@ -330,10 +336,22 @@ def regulations(diag: dict, previo: dict | None) -> dict:
     por_id = {i["id"]: i for i in viejos}
     por_id.update({i["id"]: i for i in nuevos})
     limite = (date.today() - timedelta(days=120)).isoformat()
-    items = sorted((i for i in por_id.values() if i["date"] >= limite), key=lambda i: (i["date"], i["id"]), reverse=True)[:60]
+    todos = sorted((i for i in por_id.values() if i["date"] >= limite), key=lambda i: (i["date"], i["id"]), reverse=True)
+    # Agrupa avisos casi idénticos del mismo día y organismo (p. ej. un cuadro tarifario por distribuidora).
+    grupos, items = {}, []
+    for i in todos:
+        clave = (i["date"], norm(i["agency"])[:40], norm(i.get("summary") or "")[:28])
+        if clave in grupos:
+            grupos[clave]["similar"] = grupos[clave].get("similar", 0) + 1
+            continue
+        g = {k: v for k, v in i.items() if k != "similar"}
+        grupos[clave] = g
+        items.append(g)
     return {
+        "version": VERSION,
         "source": {"name": "Boletín Oficial de la República Argentina, primera sección", "url": BO_BASE},
-        "items": items,
+        "items": items[:60],
+        "raw_items": todos[:200],
         "rejected_ids": sorted(descartados)[-3000:],
     }
 
