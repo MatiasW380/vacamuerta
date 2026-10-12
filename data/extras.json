@@ -12339,11 +12339,310 @@
    }
   ]
  },
- "generated_at": "2026-10-12T21:53Z",
+ "trade_balance": {
+  "source": {
+   "name": "INDEC, intercambio comercial argentino (API de Series de Tiempo)",
+   "url": "https://datos.gob.ar/series",
+   "license": "CC BY 4.0"
+  },
+  "units": "Millones de dólares",
+  "freq": "quarter",
+  "ids": [
+   "75.2_TCE_0_T_26",
+   "74.2_IICL_0_T_42"
+  ],
+  "monthly": [
+   {
+    "period": "2010-04",
+    "exports": 1513.0,
+    "imports": 1669.6,
+    "balance": -156.6
+   },
+   {
+    "period": "2010-10",
+    "exports": 1829.8,
+    "imports": 922.6,
+    "balance": 907.2
+   },
+   {
+    "period": "2011-01",
+    "exports": 1736.0,
+    "imports": 1369.0,
+    "balance": 367.0
+   },
+   {
+    "period": "2011-04",
+    "exports": 1330.5,
+    "imports": 3031.7,
+    "balance": -1701.2
+   },
+   {
+    "period": "2011-07",
+    "exports": 1638.5,
+    "imports": 3570.6,
+    "balance": -1932.2
+   },
+   {
+    "period": "2011-10",
+    "exports": 1976.8,
+    "imports": 1824.9,
+    "balance": 151.9
+   },
+   {
+    "period": "2012-04",
+    "exports": 1774.7,
+    "imports": 3605.1,
+    "balance": -1830.5
+   },
+   {
+    "period": "2012-07",
+    "exports": 1622.3,
+    "imports": 2662.5,
+    "balance": -1040.2
+   },
+   {
+    "period": "2012-10",
+    "exports": 1780.5,
+    "imports": 1543.0,
+    "balance": 237.5
+   },
+   {
+    "period": "2013-04",
+    "exports": 1666.5,
+    "imports": 4134.2,
+    "balance": -2467.7
+   },
+   {
+    "period": "2013-07",
+    "exports": 1218.0,
+    "imports": 3476.2,
+    "balance": -2258.2
+   },
+   {
+    "period": "2013-10",
+    "exports": 1288.5,
+    "imports": 2576.1,
+    "balance": -1287.7
+   },
+   {
+    "period": "2014-04",
+    "exports": 1353.1,
+    "imports": 3637.8,
+    "balance": -2284.8
+   },
+   {
+    "period": "2014-07",
+    "exports": 987.9,
+    "imports": 3193.0,
+    "balance": -2205.1
+   },
+   {
+    "period": "2014-10",
+    "exports": 964.2,
+    "imports": 1630.5,
+    "balance": -666.3
+   },
+   {
+    "period": "2015-04",
+    "exports": 595.2,
+    "imports": 2314.6,
+    "balance": -1719.4
+   },
+   {
+    "period": "2015-07",
+    "exports": 366.8,
+    "imports": 2348.2,
+    "balance": -1981.4
+   },
+   {
+    "period": "2016-01",
+    "exports": 422.2,
+    "imports": 849.0,
+    "balance": -426.8
+   },
+   {
+    "period": "2016-04",
+    "exports": 493.1,
+    "imports": 1445.0,
+    "balance": -951.9
+   },
+   {
+    "period": "2016-07",
+    "exports": 387.0,
+    "imports": 1805.0,
+    "balance": -1418.0
+   },
+   {
+    "period": "2016-10",
+    "exports": 712.3,
+    "imports": 815.0,
+    "balance": -102.7
+   },
+   {
+    "period": "2017-01",
+    "exports": 618.0,
+    "imports": 849.0,
+    "balance": -231.0
+   },
+   {
+    "period": "2017-04",
+    "exports": 422.0,
+    "imports": 1912.0,
+    "balance": -1490.0
+   },
+   {
+    "period": "2017-07",
+    "exports": 507.0,
+    "imports": 1639.0,
+    "balance": -1132.0
+   },
+   {
+    "period": "2018-01",
+    "exports": 1145.0,
+    "imports": 1281.0,
+    "balance": -136.0
+   },
+   {
+    "period": "2018-04",
+    "exports": 820.0,
+    "imports": 1964.0,
+    "balance": -1144.0
+   },
+   {
+    "period": "2019-01",
+    "exports": 1131.0,
+    "imports": 970.0,
+    "balance": 161.0
+   },
+   {
+    "period": "2019-04",
+    "exports": 1075.0,
+    "imports": 1372.0,
+    "balance": -297.0
+   },
+   {
+    "period": "2020-01",
+    "exports": 1037.0,
+    "imports": 800.0,
+    "balance": 237.0
+   },
+   {
+    "period": "2020-04",
+    "exports": 758.0,
+    "imports": 632.0,
+    "balance": 126.0
+   },
+   {
+    "period": "2020-10",
+    "exports": 1040.0,
+    "imports": 437.0,
+    "balance": 603.0
+   },
+   {
+    "period": "2021-01",
+    "exports": 968.0,
+    "imports": 743.0,
+    "balance": 225.0
+   },
+   {
+    "period": "2021-10",
+    "exports": 1774.0,
+    "imports": 1602.0,
+    "balance": 172.0
+   },
+   {
+    "period": "2022-01",
+    "exports": 1946.0,
+    "imports": 2173.0,
+    "balance": -227.0
+   },
+   {
+    "period": "2022-07",
+    "exports": 2127.0,
+    "imports": 4631.0,
+    "balance": -2504.0
+   },
+   {
+    "period": "2022-10",
+    "exports": 2362.0,
+    "imports": 1511.0,
+    "balance": 851.0
+   },
+   {
+    "period": "2023-01",
+    "exports": 2047.3,
+    "imports": 1874.3,
+    "balance": 173.0
+   },
+   {
+    "period": "2023-04",
+    "exports": 1751.0,
+    "imports": 2712.8,
+    "balance": -961.8
+   },
+   {
+    "period": "2023-10",
+    "exports": 2226.0,
+    "imports": 1211.9,
+    "balance": 1014.1
+   },
+   {
+    "period": "2024-04",
+    "exports": 2470.1,
+    "imports": 1449.9,
+    "balance": 1020.3
+   },
+   {
+    "period": "2024-07",
+    "exports": 2369.7,
+    "imports": 1412.7,
+    "balance": 957.0
+   },
+   {
+    "period": "2024-10",
+    "exports": 2530.1,
+    "imports": 512.0,
+    "balance": 2018.0
+   },
+   {
+    "period": "2025-04",
+    "exports": 2561.6,
+    "imports": 930.8,
+    "balance": 1630.8
+   },
+   {
+    "period": "2025-07",
+    "exports": 2761.0,
+    "imports": 1144.4,
+    "balance": 1616.6
+   },
+   {
+    "period": "2025-10",
+    "exports": 2994.1,
+    "imports": 524.2,
+    "balance": 2469.9
+   },
+   {
+    "period": "2026-04",
+    "exports": 4778.1,
+    "imports": 1258.9,
+    "balance": 3519.2
+   }
+  ],
+  "last_12m": {
+   "from": "2025-04",
+   "to": "2026-04",
+   "exports": 13094.8,
+   "imports": 3858.3,
+   "balance": 9236.5,
+   "balance_prev": 5009.4
+  }
+ },
+ "generated_at": "2026-10-12T21:55Z",
  "status": {
   "fracking": {
    "ok": true,
-   "at": "2026-10-12T21:53Z",
+   "at": "2026-10-12T21:54Z",
    "diag": {
     "resources": [
      "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
@@ -12404,19 +12703,19 @@
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-12T21:53Z",
+   "at": "2026-10-12T21:54Z",
    "diag": {
     "pages": 1
    }
   },
   "oil_price": {
    "ok": true,
-   "at": "2026-10-12T21:53Z",
+   "at": "2026-10-12T21:54Z",
    "diag": {}
   },
   "regulations": {
    "ok": true,
-   "at": "2026-10-12T21:53Z",
+   "at": "2026-10-12T21:55Z",
    "diag": {
     "pages": 6,
     "page_errors": 0,
@@ -12428,7 +12727,7 @@
   },
   "news": {
    "ok": true,
-   "at": "2026-10-12T21:53Z",
+   "at": "2026-10-12T21:55Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
@@ -12439,7 +12738,7 @@
   },
   "reserves": {
    "ok": true,
-   "at": "2026-10-12T21:53Z",
+   "at": "2026-10-12T21:55Z",
    "diag": {
     "package": "http://datos.energia.gob.ar reservas-de-petroleo-y-gas",
     "zip_files": [
@@ -12646,7 +12945,7 @@
   },
   "export_price": {
    "ok": true,
-   "at": "2026-10-12T21:53Z",
+   "at": "2026-10-12T21:55Z",
    "diag": {
     "package": "https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo",
     "resources": [
@@ -12977,7 +13276,7 @@
   },
   "fuel_prices": {
    "ok": true,
-   "at": "2026-10-12T21:53Z",
+   "at": "2026-10-12T21:55Z",
    "diag": {
     "package": "http://datos.energia.gob.ar precios-en-surtidor",
     "resources": [
@@ -13020,12 +13319,12 @@
   },
   "rigi_portal": {
    "ok": true,
-   "at": "2026-10-12T21:53Z",
+   "at": "2026-10-12T21:55Z",
    "diag": {
     "html_len": 76399,
     "context": "-thin\">&nbsp;</span><span class=\"fw-semibold fs-1\">M</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Empleos <span class=\"fw-medium br-sm br-xs\">(directos e indirectos)</span></dt><dd class=\"fs-1 fw-bold text-arg-verdin js-total-puestos-trabajo\">0</dd></div></dl></div><div class=\"col-md-12 m-y-2\"><h3 class=\"h4 font-sans-serif p-b-1 border-bottom\">Sectores</h3><dl class=\"dl-proyectos-sector\"><div class=\"d-grid\"><dt class=\"last\">Energía eléctrica</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-torre-electrica m-r-05\"></i> <span class=\"m-t-1 js-total-energia-electrica\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Petróleo y gas</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-petroleo-y-gas m-r-05\"></i> <span class=\"m-t-1 js-total-petroleo-y-gas\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Minería</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-mineria m-r-05\"></i> <span class=\"m-t-1 js-total-mineria\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Siderurgia</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-siderurgia m-r-05\"></i> <span class=\"m-t-1 js-total-siderurgia\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Infraestructura</dt><",
     "inline_scripts": [
-     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"hZmQzlAA-uQvaqoSrjLO1Atz8yi7jxzuqfud3URtjZM\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
+     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"8bq5Nb4uGb0xP7YnoUWMCXYV4TknLZXuNMtPdOUbJsE\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
      "const jsonContainer = document.getElementById('raw-data-json');\n  const jsonText = (jsonContainer.textContent || jsonContainer.innerText).trim();\n  const rawData = JSON.parse(jsonText);\n\n  const extractVal = (val) => (typeof val === 'object' && val !== null) ? (val.total || 0) : (val || 0);\n  const formatNum = (num) => Number(num || 0).toLocaleString('es-AR');\n\n  const getSeriesData = (key) => rawData.map(d => ({ \n    x: new Date(d.year).getTime(), \n    y: extractVal(d[key]) \n  }));\n\n  const seriesData = [\n    { key: 'energia', name: 'Energía Eléctrica', data: getSeriesData('energia') },\n    { key: 'petroleo', name: 'Petróleo y Gas', data: getSeriesData('petroleo') },\n    { key: 'mineria', name: 'Minería', data: getSeriesData('mineria') },\n    { key: 'siderurgia', name: 'Siderurgia', data: getSeriesData('siderurgia') },\n    { key: 'infra', name: 'Infraestructura', data: getSeriesData('infra') }\n  ];\n\n  var optionsMain = {\n    series: seriesData,\n    colors: ['#C2185B', '#B9CE39', '#6A1B99', '#4FBB73', '#F79D00'],\n    chart: {\n      id: 'chartBarMain',\n      type: 'bar',\n      height: 450,\n      stacked: true,\n      toolbar: { show: false }\n    },\n    grid: {\n      padding: {\n        right: 35,\n        left: 15\n      }\n    },\n    dataLabels: { enabled: false },\n    plotOptions: {\n      bar: {\n        dataLabels: {\n          total: {\n            enabled: true,\n            style: {\n              fontSize: '13px',\n              fontWeight: 900\n            },\n            formatter: function (val, opts) {\n              if (!val) return '';\n\n              // Validar si la columna está dentro del rango visible actual del zoom/brush\n              if (opts && opts.w && opts.w.globals) {\n                const timestamp = opts.w.globals.seriesX[0][opts.dataPointIndex];\n            ",
      "headStyle(\"rigi-cms-fix\", `.container:has(#mapa-portal){padding-left:0 !important;padding-right:0 !important;width:100% !important;}`);\nheadStyle('rigi__999d6df5647d2df27fe7', `.poncho-map{--pm-color-primary: var(--arg-escarapela);--pm-color-base: #eaeaea;--pm-slider-background: var(--arg-azul);--pm-slider-border-color: color-mix(in srgb, #626161 40%, white);--pm-slider-border-width: 2px;--pm-scrollbar-handle: #eaeaea;--pm-scrollbar-background: rgb(0, 0, 0, 0.15);--pm-hover-background: var(--arg-secundario);--pm-hover-color: white;--pm-active-color: #343232;--pm-active-visited-color: violet;--pm-active-background: var(--pm-color-primary);--color: var(--arg-escarapela);--pm-loader-spinner-background: var(--arg-amarillo);--pm-loader-background: var(--arg-azul);--pm-loader-spinner-color: var(--arg-primary-700)}details{--details-border-color: var(--arg-primary-300)}.details-container{--container-border-color: var(--arg-primary-500)}.poncho-map .marker--active:focus,.poncho-map .marker--active{fill:#000 !important;fill-opacity:0 !important}.color-primary{color:var(--color)}.poncho-map .pm-content a{color:var(--arg-escarapela)}.totals-overview{display:grid;gap:15px 15px;grid-template-areas:\"area-a area-b area-c\";grid-template-columns:27% 1fr 27%}.a,.b,.c{display:flex;flex-direction:column-reverse;align-self:self-start}.a{grid-area:area-a}.b{grid-area:area-b}.c{grid-area:area-c}.a .key,.b .key,.c .key,.a .value,.b .value,.c .value{margin:0}.a .key,.b .key,.c .key{font-size:.95rem}.value{grid-area:value}.a .value,.b .value,.c .value{font-size:1.35rem;line-height:2rem;display:flex;align-items:baseline}.c .value .small,.b .value .small,.c .value .small{font-size:1rem}.details-data dt{float:left;margin-right:.25rem}.details-data dt::after{content:\":\";font-weight:400}.details-data "
     ],
@@ -13075,7 +13374,7 @@
   },
   "royalties": {
    "ok": true,
-   "at": "2026-10-12T21:53Z",
+   "at": "2026-10-12T21:55Z",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
@@ -13485,7 +13784,7 @@
   },
   "royalties_gas": {
    "ok": true,
-   "at": "2026-10-12T21:53Z",
+   "at": "2026-10-12T21:55Z",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
@@ -13990,8 +14289,8 @@
    }
   },
   "trade_balance": {
-   "ok": false,
-   "error": "RuntimeError: Sin serie mensual vigente para exp",
+   "ok": true,
+   "at": "2026-10-12T21:55Z",
    "diag": {
     "tried_exp": [
      {
@@ -14001,20 +14300,47 @@
       "last": null
      },
      {
-      "id": "74.3_IECE_0_M_35",
-      "desc": "Exportación de combustibles y energía. En millones de dólares.",
+      "id": "75.2_TCE_0_T_26",
+      "desc": "Exportaciones de total combustibles y energía. En millones de dólares FOB",
+      "n": 46,
+      "last": "2026-04"
+     }
+    ],
+    "tried_imp": [
+     {
+      "id": "242.3_VFIS_IMTES_0_0_37",
+      "desc": "Volumen Físico de Importaciones. Combustibles y Lubricantes",
       "n": 0,
       "last": null
      },
      {
-      "id": "75.3_ITCE_0_M_30",
-      "desc": "Exportaciones de total combustibles y energía. En millones de dólares FOB",
+      "id": "74.3_IICL_0_M_42",
+      "desc": "Importaciones de combustibles y lubricantes. En millones de dólares.",
       "n": 0,
       "last": null
+     },
+     {
+      "id": "74.2_IICL_0_T_42",
+      "desc": "Importaciones de combustibles y lubricantes. En millones de dólares.",
+      "n": 66,
+      "last": "2026-04"
      }
-    ]
-   },
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1141, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1133, in <lambda>\n    (\"trade_balance\", lambda d: trade_balance(d)),\n                                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1032, in trade_balance\n    exp, e = _serie_vigente([\"exportaciones combustibles y energia\", \"exportaciones fob combustibles energia\"], [\"export\", \"combustibles\", \"energia\"], diag, \"exp\")\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1028, in _serie_vigente\n    raise RuntimeError(f\"Sin serie mensual vigente para {clave}\")\nRuntimeError: Sin serie mensual vigente para exp\n"
+    ],
+    "chosen": {
+     "exp": {
+      "id": "75.2_TCE_0_T_26",
+      "desc": "Exportaciones de total combustibles y energía. En millones de dólares FOB",
+      "units": "Millones de dólares",
+      "freq": "quarter"
+     },
+     "imp": {
+      "id": "74.2_IICL_0_T_42",
+      "desc": "Importaciones de combustibles y lubricantes. En millones de dólares.",
+      "units": "Millones de dólares",
+      "freq": "quarter"
+     }
+    }
+   }
   }
  }
 }
