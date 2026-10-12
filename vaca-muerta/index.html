@@ -88,6 +88,11 @@
           <div class="chart" id="perWellChart"></div>
         </div>
       </div>
+      <div id="wcutBlock" hidden style="margin-top:22px">
+        <div class="chart-head"><h2 style="font-size:17px" data-i18n="wcutTitle">Water cut: share of water in produced liquids, %</h2></div>
+        <p class="note" data-i18n="wcutNote">Water over oil plus water, by volume, across all Vaca Muerta wells. A rising share means more water to handle and dispose of per barrel.</p>
+        <div class="chart" id="wcutChart"></div>
+      </div>
     </section>
 
     <section class="section" id="prodSection" hidden aria-labelledby="prodTitle">
@@ -428,6 +433,8 @@
       wellsLede: (n, p) => `${n} new wells started producing in the last 12 months. Each one now delivers ${p} barrels a day on average.`,
       newWellsTitle: "New wells starting production, per month", perWellTitle: "Average oil per producing well, bbl/d",
       wellsUnit: "new wells", perWellUnit: "bbl/d per well",
+      wcutTitle: "Water cut: share of water in produced liquids, %", wcutUnit: "% water",
+      wcutNote: "Water over oil plus water, by volume, across all Vaca Muerta wells. A rising share means more water to handle and dispose of per barrel.",
       histTitle: "The five largest operators since 2019", histUnit: "Oil, barrels per day",
       areasTitle: "Largest blocks, latest month",
       areasLede: "Concessions and exploration permits ranked by oil output. The operator shown is the company with the most production in each block.",
@@ -517,6 +524,8 @@
       wellsLede: (n, p) => `${n} pozos nuevos empezaron a producir en los últimos 12 meses. Cada pozo rinde hoy ${p} barriles por día en promedio.`,
       newWellsTitle: "Pozos nuevos que empiezan a producir, por mes", perWellTitle: "Petróleo promedio por pozo en producción, bbl/d",
       wellsUnit: "pozos nuevos", perWellUnit: "bbl/d por pozo",
+      wcutTitle: "Corte de agua: proporción de agua en los líquidos producidos, %", wcutUnit: "% de agua",
+      wcutNote: "Agua sobre petróleo más agua, en volumen, para todos los pozos de Vaca Muerta. Si sube, hay más agua para tratar y disponer por cada barril.",
       histTitle: "Las cinco operadoras principales desde 2019", histUnit: "Petróleo, barriles por día",
       areasTitle: "Principales bloques, último mes",
       areasLede: "Concesiones y permisos de exploración ordenados por producción de petróleo. La operadora es la empresa con más producción en cada bloque.",
@@ -1140,6 +1149,11 @@
       $("#wellsLede").textContent = t.wellsLede(fmt(k.new_wells_12m), fmt(k.oil_per_well_bbl_d, 0));
       columnChart($("#wellsChart"), DATA.wells, "new", t.wellsUnit, t.newWellsTitle);
       lineChart($("#perWellChart"), DATA.wells.filter(w => w.oil_per_well_bbl_d != null), "oil_per_well_bbl_d", "var(--oil)", t.perWellUnit, 0, 260);
+    }
+    const wc = rows.filter(r => r.water_cut_pct != null && r.period >= "2016-01");
+    if (wc.length > 12) {
+      $("#wcutBlock").hidden = false;
+      lineChart($("#wcutChart"), wc, "water_cut_pct", "var(--s3)", t.wcutUnit, 1, 220);
     }
     if (DATA.operators_history && DATA.operators_history.names.length) {
       const h = DATA.operators_history, colors = ["var(--s1)", "var(--s2)", "var(--s3)", "var(--s4)", "var(--s5)"];
