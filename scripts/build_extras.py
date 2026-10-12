@@ -1031,49 +1031,50 @@ def _serie_vigente(queries: list[str], debe: list[str], diag: dict, clave: str) 
     raise RuntimeError(f"Sin serie mensual vigente para {clave}")
 
 
+TRADE_IDS = {   # INDEC: intercambio comercial (74.x) y exportaciones por rubro (75.x)
+    "exp_q": ["74.2_IECE_0_T_35", "75.2_TCE_0_T_26"], "exp_a": ["74.1_IECE_0_A_35", "75.1_TCE_0_A_26"],
+    "imp_q": ["74.2_IICL_0_T_42"], "imp_a": ["74.1_IICL_0_A_42"],
+}
+
+
 def trade_balance(diag: dict) -> dict:
-    exp, e = _serie_vigente(["exportaciones combustibles y energia", "exportaciones fob combustibles energia"], ["export", "combustibles", "energia"], diag, "exp")
-    imp, i_ = _serie_vigente(["importaciones combustibles y lubricantes", "importaciones cif combustibles lubricantes"], ["import", "combustibles", "lubricantes"], diag, "imp")
-    diag["chosen"] = {"exp": exp, "imp": imp}
-    if exp["freq"] != imp["freq"]:   # llevar la mensual a trimestres
-        def trim(dd):
-            out = {}
-            for p, v in dd.items():
-                q = f"{p[:4]}-{(int(p[5:7]) - 1) // 3 * 3 + 1:02d}"
-                out.setdefault(q, []).append(v)
-            return {q: sum(v) for q, v in out.items() if len(v) == 3}
-        if exp["freq"] == "month":
-            e = trim(e)
-        else:
-            i_ = trim(i_)
-        exp["freq"] = imp["freq"] = "quarter"
-    filas = [{"period": p, "exports": e[p], "imports": i_[p]} for p in sorted(set(e) & set(i_))]
-    for f in filas:
-        f["balance"] = round(f["exports"] - f["imports"], 1)
-        f["exports"], f["imports"] = round(f["exports"], 1), round(f["imports"], 1)
-    # Serie anual (completa) para el gráfico; el último trimestre con datos como dato reciente.
-    anual = lambda i: re.sub(r"^(\d+)\.\d_", r"\1.1_", i).replace("_T_", "_A_").replace("_M_", "_A_")
-    crudo_e = serie_api([anual(exp["id"])], diag, "2005-01-01")
-    diag["export_annual_raw"] = crudo_e
-    ea = {d[0][:4]: d[1] for d in crudo_e if d[1] is not None}
-    try:
-        alt = []
-        for q in ("balanza comercial energetica", "saldo comercial energia", "exportaciones energia millones dolares mensual"):
-            for r in get(f"{SERIES_API}/search/", params={"q": q, "limit": 15}, timeout=60).json().get("data", []):
-                f = r.get("field", {})
-                alt.append((f.get("id"), (f.get("description") or "")[:90], f.get("frequency"), f.get("time_index_end"), (r.get("dataset") or {}).get("title", "")[:50]))
-        diag["alternatives"] = alt
-    except Exception as e:
-        diag["alternatives_error"] = str(e)[:200]
-    ia = {d[0][:4]: d[1] for d in serie_api([anual(imp["id"])], diag, "2005-01-01") if d[1] is not None}
-    anios = [{"year": int(y), "exports": round(ea[y], 1), "imports": round(ia[y], 1), "balance": round(ea[y] - ia[y], 1)} for y in sorted(set(ea) & set(ia))]
-    if len(anios) < 5:
+    def mejor(ids, corte):
+        best, best_id = {}, None
+        for i in ids:
+            try:
+                d = {x[0][:corte]: x[1] for x in serie_api([i], {}, "2005-01-01") if x[1] is not None}
+            except Exception:
+                d = {}
+            diag.setdefault("tried", {})[i] = [len(d), max(d) if d else None]
+            if len(d) > len(best):
+                best, best_id = d, i
+        return best, best_id
+    eq, eq_id = mejor(TRADE_IDS["exp_q"], 7)
+    ea, ea_id = mejor(TRADE_IDS["exp_a"], 4)
+    iq, iq_id = mejor(TRADE_IDS["imp_q"], 7)
+    ia, ia_id = mejor(TRADE_IDS["imp_a"], 4)
+    def anual(a, q):
+        out = dict(a)
+        for y in {p[:4] for p in q}:
+            ps = [f"{y}-{m:02d}" for m in (1, 4, 7, 10)]
+            if y not in out and all(p in q for p in ps):
+                out[y] = sum(q[p] for p in ps)
+        return out
+    ea, ia = anual(ea, eq), anual(ia, iq)
+    anios = [{"year": int(y), "exports": round(ea[y], 1), "imports": round(ia[y], 1), "balance": round(ea[y] - ia[y], 1)}
+             for y in sorted(set(ea) & set(ia)) if y >= "2006"]
+    huecos = [y for y in range(anios[0]["year"], anios[-1]["year"] + 1) if y not in {a["year"] for a in anios}] if anios else []
+    diag["missing_years"] = huecos
+    if len(anios) < 8:
         raise RuntimeError(f"Serie anual demasiado corta: {len(anios)} años")
-    ultimo = filas[-1] if filas else None
-    hace_un_anio = next((f for f in filas if ultimo and f["period"] == f"{int(ultimo['period'][:4]) - 1}{ultimo['period'][4:]}"), None)
+    trims = sorted(set(eq) & set(iq))
+    ult = trims[-1] if trims else None
+    def trim(p):
+        return {"period": p, "exports": round(eq[p], 1), "imports": round(iq[p], 1), "balance": round(eq[p] - iq[p], 1)} if p in eq and p in iq else None
     return {"source": {"name": "INDEC, intercambio comercial argentino (API de Series de Tiempo)", "url": "https://datos.gob.ar/series", "license": "CC BY 4.0"},
-            "units": exp.get("units"), "ids": [anual(exp["id"]), anual(imp["id"]), exp["id"], imp["id"]],
-            "yearly": anios, "latest_period": ultimo, "latest_period_prev_year": hace_un_anio, "period_kind": exp["freq"]}
+            "units": "Millones de dólares", "ids": [i for i in (ea_id, ia_id, eq_id, iq_id) if i], "yearly": anios, "missing_years": huecos,
+            "latest_quarter": trim(ult) if ult else None,
+            "latest_quarter_prev_year": trim(f"{int(ult[:4]) - 1}{ult[4:]}") if ult else None}
 
 
 # ---------------------------------------------------------------------------
