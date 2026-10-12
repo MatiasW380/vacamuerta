@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-12T19:09Z",
+ "generated_at": "2026-10-12T19:32Z",
  "latest_period": "2026-08",
  "source": {
   "name": "Secretaría de Energía de la Nación, Capítulo IV (Res. 319/93)",
@@ -980,6 +980,162 @@
    "gas_yoy_pct": null
   }
  ],
+ "type_curves": {
+  "cohorts": [
+   {
+    "year": 2014,
+    "wells_6m": 150,
+    "avg_6m_kbbl": 22.3,
+    "median_6m_kbbl": 18.3,
+    "wells_12m": 150,
+    "avg_12m_kbbl": 34.2
+   },
+   {
+    "year": 2015,
+    "wells_6m": 144,
+    "avg_6m_kbbl": 25.6,
+    "median_6m_kbbl": 17.1,
+    "wells_12m": 144,
+    "avg_12m_kbbl": 38.7
+   },
+   {
+    "year": 2016,
+    "wells_6m": 77,
+    "avg_6m_kbbl": 57.2,
+    "median_6m_kbbl": 59.6,
+    "wells_12m": 77,
+    "avg_12m_kbbl": 101.4
+   },
+   {
+    "year": 2017,
+    "wells_6m": 61,
+    "avg_6m_kbbl": 66.1,
+    "median_6m_kbbl": 61.9,
+    "wells_12m": 61,
+    "avg_12m_kbbl": 119.4
+   },
+   {
+    "year": 2018,
+    "wells_6m": 89,
+    "avg_6m_kbbl": 95.6,
+    "median_6m_kbbl": 87.6,
+    "wells_12m": 89,
+    "avg_12m_kbbl": 166.4
+   },
+   {
+    "year": 2019,
+    "wells_6m": 106,
+    "avg_6m_kbbl": 120.7,
+    "median_6m_kbbl": 125.1,
+    "wells_12m": 106,
+    "avg_12m_kbbl": 209.7
+   },
+   {
+    "year": 2020,
+    "wells_6m": 73,
+    "avg_6m_kbbl": 127.8,
+    "median_6m_kbbl": 113.7,
+    "wells_12m": 73,
+    "avg_12m_kbbl": 234.8
+   },
+   {
+    "year": 2021,
+    "wells_6m": 179,
+    "avg_6m_kbbl": 144.2,
+    "median_6m_kbbl": 137.4,
+    "wells_12m": 179,
+    "avg_12m_kbbl": 247.1
+   },
+   {
+    "year": 2022,
+    "wells_6m": 204,
+    "avg_6m_kbbl": 144.3,
+    "median_6m_kbbl": 141.4,
+    "wells_12m": 204,
+    "avg_12m_kbbl": 252.5
+   },
+   {
+    "year": 2023,
+    "wells_6m": 240,
+    "avg_6m_kbbl": 141.0,
+    "median_6m_kbbl": 137.9,
+    "wells_12m": 240,
+    "avg_12m_kbbl": 235.5
+   },
+   {
+    "year": 2024,
+    "wells_6m": 330,
+    "avg_6m_kbbl": 137.3,
+    "median_6m_kbbl": 135.3,
+    "wells_12m": 330,
+    "avg_12m_kbbl": 231.7
+   },
+   {
+    "year": 2025,
+    "wells_6m": 398,
+    "avg_6m_kbbl": 153.8,
+    "median_6m_kbbl": 150.3,
+    "wells_12m": 342,
+    "avg_12m_kbbl": 252.3
+   },
+   {
+    "year": 2026,
+    "wells_6m": 126,
+    "avg_6m_kbbl": 142.6,
+    "median_6m_kbbl": 138.8,
+    "wells_12m": 0,
+    "avg_12m_kbbl": null
+   }
+  ],
+  "operators_recent": [
+   {
+    "name": "Pluspetrol",
+    "wells": 27,
+    "avg_6m_kbbl": 222.2
+   },
+   {
+    "name": "Petrolera El Trebol",
+    "wells": 18,
+    "avg_6m_kbbl": 206.2
+   },
+   {
+    "name": "Vista",
+    "wells": 108,
+    "avg_6m_kbbl": 161.4
+   },
+   {
+    "name": "YPF",
+    "wells": 449,
+    "avg_6m_kbbl": 142.7
+   },
+   {
+    "name": "Shell",
+    "wells": 31,
+    "avg_6m_kbbl": 136.7
+   },
+   {
+    "name": "Pampa Energía",
+    "wells": 41,
+    "avg_6m_kbbl": 134.8
+   },
+   {
+    "name": "Pan American Energy",
+    "wells": 42,
+    "avg_6m_kbbl": 127.4
+   },
+   {
+    "name": "Chevron",
+    "wells": 24,
+    "avg_6m_kbbl": 124.9
+   },
+   {
+    "name": "Tecpetrol",
+    "wells": 22,
+    "avg_6m_kbbl": 102.5
+   }
+  ],
+  "operators_window": "2024-04"
+ },
  "operators_history": {
   "names": [
    "YPF",
@@ -1559,702 +1715,842 @@
   {
    "period": "2015-01",
    "oil_bbl_d": 20475,
-   "gas_mmm3_d": 2.69
+   "gas_mmm3_d": 2.69,
+   "water_cut_pct": 43.7
   },
   {
    "period": "2015-02",
    "oil_bbl_d": 20875,
-   "gas_mmm3_d": 2.69
+   "gas_mmm3_d": 2.69,
+   "water_cut_pct": 44.6
   },
   {
    "period": "2015-03",
    "oil_bbl_d": 21145,
-   "gas_mmm3_d": 2.61
+   "gas_mmm3_d": 2.61,
+   "water_cut_pct": 38.1
   },
   {
    "period": "2015-04",
    "oil_bbl_d": 21437,
-   "gas_mmm3_d": 2.66
+   "gas_mmm3_d": 2.66,
+   "water_cut_pct": 36.5
   },
   {
    "period": "2015-05",
    "oil_bbl_d": 21783,
-   "gas_mmm3_d": 2.75
+   "gas_mmm3_d": 2.75,
+   "water_cut_pct": 39.4
   },
   {
    "period": "2015-06",
    "oil_bbl_d": 21171,
-   "gas_mmm3_d": 3.02
+   "gas_mmm3_d": 3.02,
+   "water_cut_pct": 39.8
   },
   {
    "period": "2015-07",
    "oil_bbl_d": 21650,
-   "gas_mmm3_d": 3.58
+   "gas_mmm3_d": 3.58,
+   "water_cut_pct": 42.2
   },
   {
    "period": "2015-08",
    "oil_bbl_d": 21963,
-   "gas_mmm3_d": 3.58
+   "gas_mmm3_d": 3.58,
+   "water_cut_pct": 40.8
   },
   {
    "period": "2015-09",
    "oil_bbl_d": 23167,
-   "gas_mmm3_d": 3.52
+   "gas_mmm3_d": 3.52,
+   "water_cut_pct": 36.6
   },
   {
    "period": "2015-10",
    "oil_bbl_d": 24845,
-   "gas_mmm3_d": 3.66
+   "gas_mmm3_d": 3.66,
+   "water_cut_pct": 38.4
   },
   {
    "period": "2015-11",
    "oil_bbl_d": 22649,
-   "gas_mmm3_d": 3.39
+   "gas_mmm3_d": 3.39,
+   "water_cut_pct": 40.1
   },
   {
    "period": "2015-12",
    "oil_bbl_d": 24511,
-   "gas_mmm3_d": 3.42
+   "gas_mmm3_d": 3.42,
+   "water_cut_pct": 40.1
   },
   {
    "period": "2016-01",
    "oil_bbl_d": 24629,
-   "gas_mmm3_d": 3.55
+   "gas_mmm3_d": 3.55,
+   "water_cut_pct": 34.3
   },
   {
    "period": "2016-02",
    "oil_bbl_d": 23465,
-   "gas_mmm3_d": 3.45
+   "gas_mmm3_d": 3.45,
+   "water_cut_pct": 42.0
   },
   {
    "period": "2016-03",
    "oil_bbl_d": 24476,
-   "gas_mmm3_d": 4.2
+   "gas_mmm3_d": 4.2,
+   "water_cut_pct": 47.7
   },
   {
    "period": "2016-04",
    "oil_bbl_d": 26468,
-   "gas_mmm3_d": 3.81
+   "gas_mmm3_d": 3.81,
+   "water_cut_pct": 39.3
   },
   {
    "period": "2016-05",
    "oil_bbl_d": 26654,
-   "gas_mmm3_d": 4.3
+   "gas_mmm3_d": 4.3,
+   "water_cut_pct": 40.0
   },
   {
    "period": "2016-06",
    "oil_bbl_d": 28757,
-   "gas_mmm3_d": 4.16
+   "gas_mmm3_d": 4.16,
+   "water_cut_pct": 36.6
   },
   {
    "period": "2016-07",
    "oil_bbl_d": 30282,
-   "gas_mmm3_d": 4.38
+   "gas_mmm3_d": 4.38,
+   "water_cut_pct": 37.3
   },
   {
    "period": "2016-08",
    "oil_bbl_d": 31880,
-   "gas_mmm3_d": 4.57
+   "gas_mmm3_d": 4.57,
+   "water_cut_pct": 40.2
   },
   {
    "period": "2016-09",
    "oil_bbl_d": 32949,
-   "gas_mmm3_d": 4.49
+   "gas_mmm3_d": 4.49,
+   "water_cut_pct": 38.6
   },
   {
    "period": "2016-10",
    "oil_bbl_d": 33701,
-   "gas_mmm3_d": 5.0
+   "gas_mmm3_d": 5.0,
+   "water_cut_pct": 38.2
   },
   {
    "period": "2016-11",
    "oil_bbl_d": 33361,
-   "gas_mmm3_d": 4.89
+   "gas_mmm3_d": 4.89,
+   "water_cut_pct": 37.7
   },
   {
    "period": "2016-12",
    "oil_bbl_d": 35984,
-   "gas_mmm3_d": 4.94
+   "gas_mmm3_d": 4.94,
+   "water_cut_pct": 32.3
   },
   {
    "period": "2017-01",
    "oil_bbl_d": 36208,
-   "gas_mmm3_d": 5.09
+   "gas_mmm3_d": 5.09,
+   "water_cut_pct": 33.4
   },
   {
    "period": "2017-02",
    "oil_bbl_d": 34504,
-   "gas_mmm3_d": 5.12
+   "gas_mmm3_d": 5.12,
+   "water_cut_pct": 33.5
   },
   {
    "period": "2017-03",
    "oil_bbl_d": 34606,
-   "gas_mmm3_d": 5.55
+   "gas_mmm3_d": 5.55,
+   "water_cut_pct": 32.8
   },
   {
    "period": "2017-04",
    "oil_bbl_d": 34757,
-   "gas_mmm3_d": 5.71
+   "gas_mmm3_d": 5.71,
+   "water_cut_pct": 32.2
   },
   {
    "period": "2017-05",
    "oil_bbl_d": 36730,
-   "gas_mmm3_d": 5.9
+   "gas_mmm3_d": 5.9,
+   "water_cut_pct": 33.6
   },
   {
    "period": "2017-06",
    "oil_bbl_d": 37408,
-   "gas_mmm3_d": 5.95
+   "gas_mmm3_d": 5.95,
+   "water_cut_pct": 35.3
   },
   {
    "period": "2017-07",
    "oil_bbl_d": 38069,
-   "gas_mmm3_d": 6.13
+   "gas_mmm3_d": 6.13,
+   "water_cut_pct": 28.2
   },
   {
    "period": "2017-08",
    "oil_bbl_d": 37344,
-   "gas_mmm3_d": 6.15
+   "gas_mmm3_d": 6.15,
+   "water_cut_pct": 30.4
   },
   {
    "period": "2017-09",
    "oil_bbl_d": 38139,
-   "gas_mmm3_d": 6.32
+   "gas_mmm3_d": 6.32,
+   "water_cut_pct": 32.5
   },
   {
    "period": "2017-10",
    "oil_bbl_d": 39101,
-   "gas_mmm3_d": 7.26
+   "gas_mmm3_d": 7.26,
+   "water_cut_pct": 35.5
   },
   {
    "period": "2017-11",
    "oil_bbl_d": 40587,
-   "gas_mmm3_d": 7.51
+   "gas_mmm3_d": 7.51,
+   "water_cut_pct": 36.3
   },
   {
    "period": "2017-12",
    "oil_bbl_d": 40078,
-   "gas_mmm3_d": 8.27
+   "gas_mmm3_d": 8.27,
+   "water_cut_pct": 33.8
   },
   {
    "period": "2018-01",
    "oil_bbl_d": 41499,
-   "gas_mmm3_d": 9.14
+   "gas_mmm3_d": 9.14,
+   "water_cut_pct": 35.7
   },
   {
    "period": "2018-02",
    "oil_bbl_d": 46231,
-   "gas_mmm3_d": 11.53
+   "gas_mmm3_d": 11.53,
+   "water_cut_pct": 38.5
   },
   {
    "period": "2018-03",
    "oil_bbl_d": 48406,
-   "gas_mmm3_d": 12.9
+   "gas_mmm3_d": 12.9,
+   "water_cut_pct": 38.5
   },
   {
    "period": "2018-04",
    "oil_bbl_d": 49685,
-   "gas_mmm3_d": 13.8
+   "gas_mmm3_d": 13.8,
+   "water_cut_pct": 37.4
   },
   {
    "period": "2018-05",
    "oil_bbl_d": 51227,
-   "gas_mmm3_d": 15.5
+   "gas_mmm3_d": 15.5,
+   "water_cut_pct": 40.6
   },
   {
    "period": "2018-06",
    "oil_bbl_d": 52490,
-   "gas_mmm3_d": 17.47
+   "gas_mmm3_d": 17.47,
+   "water_cut_pct": 40.2
   },
   {
    "period": "2018-07",
    "oil_bbl_d": 53683,
-   "gas_mmm3_d": 17.92
+   "gas_mmm3_d": 17.92,
+   "water_cut_pct": 41.6
   },
   {
    "period": "2018-08",
    "oil_bbl_d": 60873,
-   "gas_mmm3_d": 20.41
+   "gas_mmm3_d": 20.41,
+   "water_cut_pct": 42.1
   },
   {
    "period": "2018-09",
    "oil_bbl_d": 65135,
-   "gas_mmm3_d": 22.53
+   "gas_mmm3_d": 22.53,
+   "water_cut_pct": 40.9
   },
   {
    "period": "2018-10",
    "oil_bbl_d": 66810,
-   "gas_mmm3_d": 24.92
+   "gas_mmm3_d": 24.92,
+   "water_cut_pct": 40.6
   },
   {
    "period": "2018-11",
    "oil_bbl_d": 71478,
-   "gas_mmm3_d": 26.67
+   "gas_mmm3_d": 26.67,
+   "water_cut_pct": 39.3
   },
   {
    "period": "2018-12",
    "oil_bbl_d": 74094,
-   "gas_mmm3_d": 27.6
+   "gas_mmm3_d": 27.6,
+   "water_cut_pct": 39.1
   },
   {
    "period": "2019-01",
    "oil_bbl_d": 77582,
-   "gas_mmm3_d": 28.73
+   "gas_mmm3_d": 28.73,
+   "water_cut_pct": 37.0
   },
   {
    "period": "2019-02",
    "oil_bbl_d": 76964,
-   "gas_mmm3_d": 31.05
+   "gas_mmm3_d": 31.05,
+   "water_cut_pct": 36.4
   },
   {
    "period": "2019-03",
    "oil_bbl_d": 72470,
-   "gas_mmm3_d": 29.1
+   "gas_mmm3_d": 29.1,
+   "water_cut_pct": 37.2
   },
   {
    "period": "2019-04",
    "oil_bbl_d": 81842,
-   "gas_mmm3_d": 28.73
+   "gas_mmm3_d": 28.73,
+   "water_cut_pct": 36.0
   },
   {
    "period": "2019-05",
    "oil_bbl_d": 84121,
-   "gas_mmm3_d": 30.01
+   "gas_mmm3_d": 30.01,
+   "water_cut_pct": 38.3
   },
   {
    "period": "2019-06",
    "oil_bbl_d": 81718,
-   "gas_mmm3_d": 32.66
+   "gas_mmm3_d": 32.66,
+   "water_cut_pct": 39.8
   },
   {
    "period": "2019-07",
    "oil_bbl_d": 86574,
-   "gas_mmm3_d": 34.83
+   "gas_mmm3_d": 34.83,
+   "water_cut_pct": 44.1
   },
   {
    "period": "2019-08",
    "oil_bbl_d": 100580,
-   "gas_mmm3_d": 35.58
+   "gas_mmm3_d": 35.58,
+   "water_cut_pct": 41.6
   },
   {
    "period": "2019-09",
    "oil_bbl_d": 101575,
-   "gas_mmm3_d": 33.96
+   "gas_mmm3_d": 33.96,
+   "water_cut_pct": 36.7
   },
   {
    "period": "2019-10",
    "oil_bbl_d": 101683,
-   "gas_mmm3_d": 35.21
+   "gas_mmm3_d": 35.21,
+   "water_cut_pct": 36.3
   },
   {
    "period": "2019-11",
    "oil_bbl_d": 104307,
-   "gas_mmm3_d": 28.4
+   "gas_mmm3_d": 28.4,
+   "water_cut_pct": 32.2
   },
   {
    "period": "2019-12",
    "oil_bbl_d": 110758,
-   "gas_mmm3_d": 29.57
+   "gas_mmm3_d": 29.57,
+   "water_cut_pct": 32.7
   },
   {
    "period": "2020-01",
    "oil_bbl_d": 111964,
-   "gas_mmm3_d": 32.43
+   "gas_mmm3_d": 32.43,
+   "water_cut_pct": 31.7
   },
   {
    "period": "2020-02",
    "oil_bbl_d": 118265,
-   "gas_mmm3_d": 32.41
+   "gas_mmm3_d": 32.41,
+   "water_cut_pct": 33.0
   },
   {
    "period": "2020-03",
    "oil_bbl_d": 122755,
-   "gas_mmm3_d": 30.84
+   "gas_mmm3_d": 30.84,
+   "water_cut_pct": 31.3
   },
   {
    "period": "2020-04",
    "oil_bbl_d": 91567,
-   "gas_mmm3_d": 27.35
+   "gas_mmm3_d": 27.35,
+   "water_cut_pct": 31.0
   },
   {
    "period": "2020-05",
    "oil_bbl_d": 93153,
-   "gas_mmm3_d": 29.32
+   "gas_mmm3_d": 29.32,
+   "water_cut_pct": 29.8
   },
   {
    "period": "2020-06",
    "oil_bbl_d": 116555,
-   "gas_mmm3_d": 31.49
+   "gas_mmm3_d": 31.49,
+   "water_cut_pct": 27.9
   },
   {
    "period": "2020-07",
    "oil_bbl_d": 116802,
-   "gas_mmm3_d": 32.15
+   "gas_mmm3_d": 32.15,
+   "water_cut_pct": 27.9
   },
   {
    "period": "2020-08",
    "oil_bbl_d": 117364,
-   "gas_mmm3_d": 32.15
+   "gas_mmm3_d": 32.15,
+   "water_cut_pct": 27.7
   },
   {
    "period": "2020-09",
    "oil_bbl_d": 111082,
-   "gas_mmm3_d": 29.74
+   "gas_mmm3_d": 29.74,
+   "water_cut_pct": 29.5
   },
   {
    "period": "2020-10",
    "oil_bbl_d": 115397,
-   "gas_mmm3_d": 29.94
+   "gas_mmm3_d": 29.94,
+   "water_cut_pct": 28.7
   },
   {
    "period": "2020-11",
    "oil_bbl_d": 118496,
-   "gas_mmm3_d": 25.98
+   "gas_mmm3_d": 25.98,
+   "water_cut_pct": 26.9
   },
   {
    "period": "2020-12",
    "oil_bbl_d": 123923,
-   "gas_mmm3_d": 25.21
+   "gas_mmm3_d": 25.21,
+   "water_cut_pct": 28.2
   },
   {
    "period": "2021-01",
    "oil_bbl_d": 133071,
-   "gas_mmm3_d": 26.77
+   "gas_mmm3_d": 26.77,
+   "water_cut_pct": 26.3
   },
   {
    "period": "2021-02",
    "oil_bbl_d": 137507,
-   "gas_mmm3_d": 26.49
+   "gas_mmm3_d": 26.49,
+   "water_cut_pct": 28.1
   },
   {
    "period": "2021-03",
    "oil_bbl_d": 144294,
-   "gas_mmm3_d": 27.67
+   "gas_mmm3_d": 27.67,
+   "water_cut_pct": 30.3
   },
   {
    "period": "2021-04",
    "oil_bbl_d": 147266,
-   "gas_mmm3_d": 26.17
+   "gas_mmm3_d": 26.17,
+   "water_cut_pct": 28.7
   },
   {
    "period": "2021-05",
    "oil_bbl_d": 147565,
-   "gas_mmm3_d": 32.22
+   "gas_mmm3_d": 32.22,
+   "water_cut_pct": 30.8
   },
   {
    "period": "2021-06",
    "oil_bbl_d": 151926,
-   "gas_mmm3_d": 38.42
+   "gas_mmm3_d": 38.42,
+   "water_cut_pct": 34.2
   },
   {
    "period": "2021-07",
    "oil_bbl_d": 161321,
-   "gas_mmm3_d": 41.43
+   "gas_mmm3_d": 41.43,
+   "water_cut_pct": 34.6
   },
   {
    "period": "2021-08",
    "oil_bbl_d": 157856,
-   "gas_mmm3_d": 44.23
+   "gas_mmm3_d": 44.23,
+   "water_cut_pct": 35.6
   },
   {
    "period": "2021-09",
    "oil_bbl_d": 174004,
-   "gas_mmm3_d": 44.12
+   "gas_mmm3_d": 44.12,
+   "water_cut_pct": 35.7
   },
   {
    "period": "2021-10",
    "oil_bbl_d": 190224,
-   "gas_mmm3_d": 42.24
+   "gas_mmm3_d": 42.24,
+   "water_cut_pct": 33.5
   },
   {
    "period": "2021-11",
    "oil_bbl_d": 198027,
-   "gas_mmm3_d": 43.68
+   "gas_mmm3_d": 43.68,
+   "water_cut_pct": 31.0
   },
   {
    "period": "2021-12",
    "oil_bbl_d": 206521,
-   "gas_mmm3_d": 43.52
+   "gas_mmm3_d": 43.52,
+   "water_cut_pct": 31.1
   },
   {
    "period": "2022-01",
    "oil_bbl_d": 217468,
-   "gas_mmm3_d": 45.44
+   "gas_mmm3_d": 45.44,
+   "water_cut_pct": 30.2
   },
   {
    "period": "2022-02",
    "oil_bbl_d": 216436,
-   "gas_mmm3_d": 42.95
+   "gas_mmm3_d": 42.95,
+   "water_cut_pct": 28.3
   },
   {
    "period": "2022-03",
    "oil_bbl_d": 221723,
-   "gas_mmm3_d": 45.98
+   "gas_mmm3_d": 45.98,
+   "water_cut_pct": 29.8
   },
   {
    "period": "2022-04",
    "oil_bbl_d": 228817,
-   "gas_mmm3_d": 44.83
+   "gas_mmm3_d": 44.83,
+   "water_cut_pct": 31.1
   },
   {
    "period": "2022-05",
    "oil_bbl_d": 234541,
-   "gas_mmm3_d": 51.89
+   "gas_mmm3_d": 51.89,
+   "water_cut_pct": 32.1
   },
   {
    "period": "2022-06",
    "oil_bbl_d": 232581,
-   "gas_mmm3_d": 53.36
+   "gas_mmm3_d": 53.36,
+   "water_cut_pct": 31.1
   },
   {
    "period": "2022-07",
    "oil_bbl_d": 240581,
-   "gas_mmm3_d": 55.08
+   "gas_mmm3_d": 55.08,
+   "water_cut_pct": 33.1
   },
   {
    "period": "2022-08",
    "oil_bbl_d": 244645,
-   "gas_mmm3_d": 56.17
+   "gas_mmm3_d": 56.17,
+   "water_cut_pct": 33.7
   },
   {
    "period": "2022-09",
    "oil_bbl_d": 258276,
-   "gas_mmm3_d": 54.51
+   "gas_mmm3_d": 54.51,
+   "water_cut_pct": 31.9
   },
   {
    "period": "2022-10",
    "oil_bbl_d": 269264,
-   "gas_mmm3_d": 51.32
+   "gas_mmm3_d": 51.32,
+   "water_cut_pct": 30.5
   },
   {
    "period": "2022-11",
    "oil_bbl_d": 270273,
-   "gas_mmm3_d": 46.47
+   "gas_mmm3_d": 46.47,
+   "water_cut_pct": 29.5
   },
   {
    "period": "2022-12",
    "oil_bbl_d": 276605,
-   "gas_mmm3_d": 49.82
+   "gas_mmm3_d": 49.82,
+   "water_cut_pct": 30.4
   },
   {
    "period": "2023-01",
    "oil_bbl_d": 284580,
-   "gas_mmm3_d": 50.71
+   "gas_mmm3_d": 50.71,
+   "water_cut_pct": 30.2
   },
   {
    "period": "2023-02",
    "oil_bbl_d": 292853,
-   "gas_mmm3_d": 52.34
+   "gas_mmm3_d": 52.34,
+   "water_cut_pct": 28.8
   },
   {
    "period": "2023-03",
    "oil_bbl_d": 300436,
-   "gas_mmm3_d": 52.57
+   "gas_mmm3_d": 52.57,
+   "water_cut_pct": 30.4
   },
   {
    "period": "2023-04",
    "oil_bbl_d": 295442,
-   "gas_mmm3_d": 51.98
+   "gas_mmm3_d": 51.98,
+   "water_cut_pct": 30.9
   },
   {
    "period": "2023-05",
    "oil_bbl_d": 295978,
-   "gas_mmm3_d": 57.93
+   "gas_mmm3_d": 57.93,
+   "water_cut_pct": 30.2
   },
   {
    "period": "2023-06",
    "oil_bbl_d": 290385,
-   "gas_mmm3_d": 62.28
+   "gas_mmm3_d": 62.28,
+   "water_cut_pct": 30.2
   },
   {
    "period": "2023-07",
    "oil_bbl_d": 290708,
-   "gas_mmm3_d": 64.88
+   "gas_mmm3_d": 64.88,
+   "water_cut_pct": 33.3
   },
   {
    "period": "2023-08",
    "oil_bbl_d": 296870,
-   "gas_mmm3_d": 68.52
+   "gas_mmm3_d": 68.52,
+   "water_cut_pct": 34.3
   },
   {
    "period": "2023-09",
    "oil_bbl_d": 304794,
-   "gas_mmm3_d": 67.41
+   "gas_mmm3_d": 67.41,
+   "water_cut_pct": 34.1
   },
   {
    "period": "2023-10",
    "oil_bbl_d": 323203,
-   "gas_mmm3_d": 57.07
+   "gas_mmm3_d": 57.07,
+   "water_cut_pct": 33.7
   },
   {
    "period": "2023-11",
    "oil_bbl_d": 339269,
-   "gas_mmm3_d": 58.88
+   "gas_mmm3_d": 58.88,
+   "water_cut_pct": 30.5
   },
   {
    "period": "2023-12",
    "oil_bbl_d": 351727,
-   "gas_mmm3_d": 51.2
+   "gas_mmm3_d": 51.2,
+   "water_cut_pct": 29.6
   },
   {
    "period": "2024-01",
    "oil_bbl_d": 345310,
-   "gas_mmm3_d": 56.32
+   "gas_mmm3_d": 56.32,
+   "water_cut_pct": 29.0
   },
   {
    "period": "2024-02",
    "oil_bbl_d": 352633,
-   "gas_mmm3_d": 61.51
+   "gas_mmm3_d": 61.51,
+   "water_cut_pct": 29.9
   },
   {
    "period": "2024-03",
    "oil_bbl_d": 360258,
-   "gas_mmm3_d": 62.67
+   "gas_mmm3_d": 62.67,
+   "water_cut_pct": 31.0
   },
   {
    "period": "2024-04",
    "oil_bbl_d": 362974,
-   "gas_mmm3_d": 64.33
+   "gas_mmm3_d": 64.33,
+   "water_cut_pct": 30.8
   },
   {
    "period": "2024-05",
    "oil_bbl_d": 366054,
-   "gas_mmm3_d": 77.56
+   "gas_mmm3_d": 77.56,
+   "water_cut_pct": 34.3
   },
   {
    "period": "2024-06",
    "oil_bbl_d": 373057,
-   "gas_mmm3_d": 77.98
+   "gas_mmm3_d": 77.98,
+   "water_cut_pct": 36.5
   },
   {
    "period": "2024-07",
    "oil_bbl_d": 385832,
-   "gas_mmm3_d": 82.83
+   "gas_mmm3_d": 82.83,
+   "water_cut_pct": 37.4
   },
   {
    "period": "2024-08",
    "oil_bbl_d": 402300,
-   "gas_mmm3_d": 83.83
+   "gas_mmm3_d": 83.83,
+   "water_cut_pct": 36.5
   },
   {
    "period": "2024-09",
    "oil_bbl_d": 385341,
-   "gas_mmm3_d": 78.13
+   "gas_mmm3_d": 78.13,
+   "water_cut_pct": 37.0
   },
   {
    "period": "2024-10",
    "oil_bbl_d": 421383,
-   "gas_mmm3_d": 64.66
+   "gas_mmm3_d": 64.66,
+   "water_cut_pct": 34.1
   },
   {
    "period": "2024-11",
    "oil_bbl_d": 437204,
-   "gas_mmm3_d": 61.98
+   "gas_mmm3_d": 61.98,
+   "water_cut_pct": 32.1
   },
   {
    "period": "2024-12",
    "oil_bbl_d": 447391,
-   "gas_mmm3_d": 61.38
+   "gas_mmm3_d": 61.38,
+   "water_cut_pct": 31.9
   },
   {
    "period": "2025-01",
    "oil_bbl_d": 442315,
-   "gas_mmm3_d": 68.61
+   "gas_mmm3_d": 68.61,
+   "water_cut_pct": 33.0
   },
   {
    "period": "2025-02",
    "oil_bbl_d": 443085,
-   "gas_mmm3_d": 74.21
+   "gas_mmm3_d": 74.21,
+   "water_cut_pct": 34.2
   },
   {
    "period": "2025-03",
    "oil_bbl_d": 446188,
-   "gas_mmm3_d": 66.62
+   "gas_mmm3_d": 66.62,
+   "water_cut_pct": 33.8
   },
   {
    "period": "2025-04",
    "oil_bbl_d": 441543,
-   "gas_mmm3_d": 69.13
+   "gas_mmm3_d": 69.13,
+   "water_cut_pct": 34.8
   },
   {
    "period": "2025-05",
    "oil_bbl_d": 447807,
-   "gas_mmm3_d": 79.56
+   "gas_mmm3_d": 79.56,
+   "water_cut_pct": 36.4
   },
   {
    "period": "2025-06",
    "oil_bbl_d": 476128,
-   "gas_mmm3_d": 88.58
+   "gas_mmm3_d": 88.58,
+   "water_cut_pct": 38.4
   },
   {
    "period": "2025-07",
    "oil_bbl_d": 508615,
-   "gas_mmm3_d": 91.13
+   "gas_mmm3_d": 91.13,
+   "water_cut_pct": 36.9
   },
   {
    "period": "2025-08",
    "oil_bbl_d": 526554,
-   "gas_mmm3_d": 90.09
+   "gas_mmm3_d": 90.09,
+   "water_cut_pct": 37.3
   },
   {
    "period": "2025-09",
    "oil_bbl_d": 546753,
-   "gas_mmm3_d": 75.31
+   "gas_mmm3_d": 75.31,
+   "water_cut_pct": 36.7
   },
   {
    "period": "2025-10",
    "oil_bbl_d": 568312,
-   "gas_mmm3_d": 64.85
+   "gas_mmm3_d": 64.85,
+   "water_cut_pct": 32.8
   },
   {
    "period": "2025-11",
    "oil_bbl_d": 576729,
-   "gas_mmm3_d": 64.07
+   "gas_mmm3_d": 64.07,
+   "water_cut_pct": 32.7
   },
   {
    "period": "2025-12",
    "oil_bbl_d": 590393,
-   "gas_mmm3_d": 72.66
+   "gas_mmm3_d": 72.66,
+   "water_cut_pct": 31.9
   },
   {
    "period": "2026-01",
    "oil_bbl_d": 599441,
-   "gas_mmm3_d": 72.81
+   "gas_mmm3_d": 72.81,
+   "water_cut_pct": 32.9
   },
   {
    "period": "2026-02",
    "oil_bbl_d": 590795,
-   "gas_mmm3_d": 78.22
+   "gas_mmm3_d": 78.22,
+   "water_cut_pct": 34.0
   },
   {
    "period": "2026-03",
    "oil_bbl_d": 597581,
-   "gas_mmm3_d": 82.59
+   "gas_mmm3_d": 82.59,
+   "water_cut_pct": 35.1
   },
   {
    "period": "2026-04",
    "oil_bbl_d": 616043,
-   "gas_mmm3_d": 82.77
+   "gas_mmm3_d": 82.77,
+   "water_cut_pct": 36.2
   },
   {
    "period": "2026-05",
    "oil_bbl_d": 622632,
-   "gas_mmm3_d": 95.45
+   "gas_mmm3_d": 95.45,
+   "water_cut_pct": 36.0
   },
   {
    "period": "2026-06",
    "oil_bbl_d": 633509,
-   "gas_mmm3_d": 97.66
+   "gas_mmm3_d": 97.66,
+   "water_cut_pct": 37.4
   },
   {
    "period": "2026-07",
    "oil_bbl_d": 643115,
-   "gas_mmm3_d": 96.49
+   "gas_mmm3_d": 96.49,
+   "water_cut_pct": 36.7
   },
   {
    "period": "2026-08",
    "oil_bbl_d": 669802,
-   "gas_mmm3_d": 95.35
+   "gas_mmm3_d": 95.35,
+   "water_cut_pct": 35.9
   }
  ],
  "operators": [
