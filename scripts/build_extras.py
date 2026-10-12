@@ -1009,8 +1009,10 @@ def _serie_vigente(queries: list[str], debe: list[str], diag: dict, clave: str) 
                 continue
             fid = f.get("id") or ""
             ids = [fid]
-            if f.get("frequency") != "R/P1M":   # probar la versión mensual del mismo id
-                ids = [re.sub(r"^(\d+)\.\d_", r"\1.3_", fid).replace("_T_", "_M_").replace("_A_", "_M_")]
+            if f.get("frequency") != "R/P1M":   # probar primero la versión mensual del mismo id
+                ids = [re.sub(r"^(\d+)\.\d_", r"\1.3_", fid).replace("_T_", "_M_").replace("_A_", "_M_"), fid]
+            if f.get("frequency") not in ("R/P1M", "R/P3M"):
+                ids = ids[:1]
             for i in ids:
                 if i in vistos:
                     continue
@@ -1021,9 +1023,10 @@ def _serie_vigente(queries: list[str], debe: list[str], diag: dict, clave: str) 
                     datos = {}
                 ult = max(datos) if datos else None
                 probadas.append({"id": i, "desc": (f.get("description") or "")[:90], "n": len(datos), "last": ult})
-                if ult and ult >= f"{date.today().year - 1}-01" and len(datos) >= 24:
+                trimestral = "_T_" in i
+                if ult and ult >= f"{date.today().year - 1}-01" and len(datos) >= (8 if trimestral else 24):
                     diag[f"tried_{clave}"] = probadas
-                    return {"id": i, "desc": f.get("description"), "units": f.get("units")}, datos
+                    return {"id": i, "desc": f.get("description"), "units": f.get("units"), "freq": "quarter" if trimestral else "month"}, datos
     diag[f"tried_{clave}"] = probadas
     raise RuntimeError(f"Sin serie mensual vigente para {clave}")
 
@@ -1032,15 +1035,28 @@ def trade_balance(diag: dict) -> dict:
     exp, e = _serie_vigente(["exportaciones combustibles y energia", "exportaciones fob combustibles energia"], ["export", "combustibles", "energia"], diag, "exp")
     imp, i_ = _serie_vigente(["importaciones combustibles y lubricantes", "importaciones cif combustibles lubricantes"], ["import", "combustibles", "lubricantes"], diag, "imp")
     diag["chosen"] = {"exp": exp, "imp": imp}
+    if exp["freq"] != imp["freq"]:   # llevar la mensual a trimestres
+        def trim(dd):
+            out = {}
+            for p, v in dd.items():
+                q = f"{p[:4]}-{(int(p[5:7]) - 1) // 3 * 3 + 1:02d}"
+                out.setdefault(q, []).append(v)
+            return {q: sum(v) for q, v in out.items() if len(v) == 3}
+        if exp["freq"] == "month":
+            e = trim(e)
+        else:
+            i_ = trim(i_)
+        exp["freq"] = imp["freq"] = "quarter"
     filas = [{"period": p, "exports": e[p], "imports": i_[p]} for p in sorted(set(e) & set(i_))]
     for f in filas:
         f["balance"] = round(f["exports"] - f["imports"], 1)
         f["exports"], f["imports"] = round(f["exports"], 1), round(f["imports"], 1)
-    if len(filas) < 24:
-        raise RuntimeError(f"Serie demasiado corta: {len(filas)} meses")
-    ult = filas[-12:]; prev = filas[-24:-12]
+    per_anio = 4 if exp["freq"] == "quarter" else 12
+    if len(filas) < 2 * per_anio:
+        raise RuntimeError(f"Serie demasiado corta: {len(filas)} períodos")
+    ult = filas[-per_anio:]; prev = filas[-2 * per_anio:-per_anio]
     return {"source": {"name": "INDEC, intercambio comercial argentino (API de Series de Tiempo)", "url": "https://datos.gob.ar/series", "license": "CC BY 4.0"},
-            "units": exp.get("units"), "ids": [exp["id"], imp["id"]], "monthly": filas,
+            "units": exp.get("units"), "freq": exp["freq"], "ids": [exp["id"], imp["id"]], "monthly": filas,
             "last_12m": {"from": ult[0]["period"], "to": ult[-1]["period"], "exports": round(sum(f["exports"] for f in ult), 1),
                          "imports": round(sum(f["imports"] for f in ult), 1), "balance": round(sum(f["balance"] for f in ult), 1),
                          "balance_prev": round(sum(f["balance"] for f in prev), 1)}}
