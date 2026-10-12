@@ -462,68 +462,124 @@ def numero(s: pd.Series) -> pd.Series:
 # ---------------------------------------------------------------------------
 # 6. Reservas de petróleo y gas
 # ---------------------------------------------------------------------------
+def _plano(t) -> str:
+    return norm(t) if isinstance(t, str) else ""
+
+
+def tabla_reservas(raw: pd.DataFrame, diag: dict) -> pd.DataFrame:
+    """Excel de reservas con encabezado en varios niveles (grupo / fluido / categoría)."""
+    fila = next((i for i in range(min(30, len(raw)))
+                 if any(re.search(r"\b(empresa|operador)", _plano(v)) for v in raw.iloc[i].tolist())), None)
+    diag["header_row"] = fila
+    diag["head_rows"] = [[str(v)[:40] for v in raw.iloc[i].tolist() if isinstance(v, str)] for i in range(min(12, len(raw)))]
+    if fila is None:
+        raise RuntimeError("No se encontró la fila de encabezados (empresa/operador)")
+    niveles = []
+    for i in range(max(0, fila - 3), fila + 1):
+        filav = raw.iloc[i].copy()
+        if i < fila:
+            filav = filav.ffill()
+        niveles.append([_plano(v) for v in filav.tolist()])
+    # Si la fila siguiente a los encabezados también es texto (unidades/categorías), se suma.
+    sig = raw.iloc[fila + 1].tolist() if fila + 1 < len(raw) else []
+    extra = sum(isinstance(v, str) for v in sig) >= 3 and not any(isinstance(v, (int, float)) and not pd.isna(v) for v in sig)
+    if extra:
+        niveles.append([_plano(v) for v in pd.Series(sig).tolist()])
+    cols = []
+    for j in range(raw.shape[1]):
+        partes = []
+        for n in niveles:
+            v = n[j] if j < len(n) else ""
+            if v and v not in partes and "reservas y recursos al" not in v:
+                partes.append(v)
+        cols.append(" | ".join(partes) or f"c{j}")
+    df = raw.iloc[fila + (2 if extra else 1):].copy()
+    df.columns = cols
+    return df.reset_index(drop=True)
+
+
+def clave_reserva(nombre: str) -> str | None:
+    n = nombre
+    if "convencional + no" in n or "conv + no" in n or "total" in n.split(" | ")[0]:
+        grupo = "all"
+    elif "no convencional" in n:
+        grupo = "nc"
+    elif "convencional" in n:
+        grupo = "conv"
+    else:
+        grupo = "all"
+    fluido = "oil" if re.search(r"petr|crudo|oil|liquid", n) else "gas" if "gas" in n else None
+    cat = ("proved" if re.search(r"probad|\bp1\b|comprobad", n) else "probable" if re.search(r"probable|\bp2\b", n)
+           else "possible" if re.search(r"posible|\bp3\b", n) else "resources" if "recurso" in n else None)
+    if not fluido or not cat:
+        return None
+    return f"{grupo}_{fluido}_{cat}"
+
+
 def reserves(diag: dict) -> dict:
+    from build_data import nombre_corto
     paq, base = ckan_paquete(["http://datos.energia.gob.ar", "https://datos.gob.ar"],
                              ["reservas-de-petroleo-y-gas", "energia-reservas-petroleo-gas"], diag)
     todos = recursos(paq)
-    diag["all_resources"] = [{"name": r["name"], "format": r["format"], "url": r["url"][-90:]} for r in todos][:25]
-    rs = [r for r in todos if r["format"] in ("csv", "xlsx", "xls") or r["url"].lower().split("?")[0].endswith((".csv", ".xlsx", ".xls"))]
-    diag["resources"] = [r["name"] for r in rs][:20]
     def anio(r):
         m = re.findall(r"(20\d\d)", r["name"] + r["url"])
         return int(m[-1]) if m else 0
-    rs.sort(key=lambda r: anio(r), reverse=True)
     zips = sorted([r for r in todos if r["format"] == "zip" or r["url"].lower().endswith(".zip")], key=anio, reverse=True)
-    if zips and (not rs or anio(zips[0]) >= anio(rs[0])):
-        import zipfile
-        r = zips[0]
-        z = zipfile.ZipFile(io.BytesIO(get(r["url"], timeout=300).content))
-        diag["zip_files"] = [(n.filename, n.file_size) for n in z.infolist()][:20]
-        cand = sorted([n for n in z.infolist() if n.filename.lower().endswith((".csv", ".xlsx", ".xls"))], key=lambda n: n.file_size, reverse=True)
-        if not cand:
-            raise RuntimeError("El ZIP no trae CSV ni Excel")
-        datos = z.read(cand[0].filename)
-        if cand[0].filename.lower().endswith(".csv"):
-            texto = datos.decode("utf-8-sig", errors="replace")
-            sep = ";" if texto[:3000].count(";") > texto[:3000].count(",") else ","
-            df = pd.read_csv(io.StringIO(texto), sep=sep, dtype=str, low_memory=False)
-        else:
-            hojas = pd.read_excel(io.BytesIO(datos), sheet_name=None, dtype=str)
-            diag["sheets"] = {k: list(v.columns)[:15] for k, v in hojas.items()}
-            df = max(hojas.values(), key=len)
-        df.columns = [norm(c).replace(" ", "_") for c in df.columns]
-    elif rs:
-        r = rs[0]
-        df = leer_tabla(r["url"])
-    else:
-        raise RuntimeError("Sin recursos tabulares ni ZIP")
-    diag.update({"resource_used": r["name"], "columns": list(df.columns)[:50], "rows": int(len(df)),
-                 "sample": df.head(2).to_dict(orient="records")})
-    c_cuenca = col(df, "cuenca")
-    c_emp = col(df, "empresa", "operador")
-    c_area = col(df, "areapermisoconcesion", "area", "concesion", "yacimiento")
-    c_rec = col(df, "tipo_de_recurso", "subtipo", "recurso", "convencional")
-    c_tipo = col(df, "clasificacion", "tipo_reserva", "categoria")
-    num_cols = [c for c in df.columns if any(x in c for x in ("petroleo", "gas", "reserva")) and numero(df[c]).notna().mean() > 0.5]
-    diag["mapped"] = {"cuenca": c_cuenca, "empresa": c_emp, "area": c_area, "recurso": c_rec, "tipo": c_tipo, "numeric": num_cols}
-    d = df.copy()
+    if not zips:
+        raise RuntimeError("Sin archivos ZIP de reservas")
+    import zipfile
+    r = zips[0]
+    z = zipfile.ZipFile(io.BytesIO(get(r["url"], timeout=300).content))
+    diag["zip_files"] = [(n.filename, n.file_size) for n in z.infolist()][:20]
+    cand = sorted([n for n in z.infolist() if n.filename.lower().endswith((".xlsx", ".xls"))], key=lambda n: n.file_size, reverse=True)
+    if not cand:
+        raise RuntimeError("El ZIP no trae Excel")
+    hojas = pd.read_excel(io.BytesIO(z.read(cand[0].filename)), sheet_name=None, header=None, dtype=object)
+    diag["sheets"] = list(hojas)
+    # Hasta el fin de la concesión: es el criterio de reservas comprobadas que informa la Secretaría.
+    hoja = next((k for k in hojas if "concesi" in _plano(k)), max(hojas, key=lambda k: len(hojas[k])))
+    diag["sheet_used"] = hoja
+    df = tabla_reservas(hojas[hoja], diag)
+    diag["columns"] = list(df.columns)[:40]
+    c_emp = next((c for c in df.columns if re.search(r"\b(empresa|operador)", c.split(" | ")[-1])), None)
+    c_cuenca = next((c for c in df.columns if "cuenca" in c.split(" | ")[-1]), None)
+    c_area = next((c for c in df.columns if re.search(r"\b(area|yacimiento|concesion)", c.split(" | ")[-1])), None)
+    c_prov = next((c for c in df.columns if "provincia" in c.split(" | ")[-1]), None)
+    claves = {}
+    for c in df.columns:
+        if c in (c_emp, c_cuenca, c_area, c_prov):
+            continue
+        k = clave_reserva(c)
+        if k and k not in claves and pd.to_numeric(df[c], errors="coerce").notna().mean() > 0.3:
+            claves[k] = c
+    diag["mapped"] = {"empresa": c_emp, "cuenca": c_cuenca, "area": c_area, "provincia": c_prov, "values": claves}
+    if not c_emp or not claves:
+        raise RuntimeError("No se pudieron identificar operadora o volúmenes (ver diag)")
+    d = df[df[c_emp].map(lambda v: isinstance(v, str) and v.strip() != "" and "total" not in norm(v))].copy()
     if c_cuenca:
-        d = d[d[c_cuenca].fillna("").map(norm).str.contains("neuquina")]
-    if c_rec:
-        nc = d[c_rec].fillna("").map(norm)
-        if nc.str.contains("no convencional").any():
-            d = d[nc.str.contains("no convencional")]
-    diag["rows_neuquina_nc"] = int(len(d))
-    if not num_cols or not c_emp:
-        raise RuntimeError("No se pudieron identificar columnas de volumen u operadora (ver diag)")
-    for c in num_cols:
-        d[c] = numero(d[c]).fillna(0)
-    por_op = d.groupby(d[c_emp].map(nombre_corto))[num_cols].sum().sort_values(num_cols[0], ascending=False)
+        d[c_cuenca] = d[c_cuenca].ffill()
+    for k, c in claves.items():
+        d[k] = pd.to_numeric(d[c], errors="coerce").fillna(0)
+    diag["rows"] = int(len(d))
+    neu = d[d[c_cuenca].map(lambda v: "neuquina" in _plano(v))] if c_cuenca else d
+    diag["rows_neuquina"] = int(len(neu))
+    vals = list(claves)
+    def agrupar(x, por):
+        g = x.groupby(por)[vals].sum()
+        orden = next((k for k in ("nc_oil_proved", "all_oil_proved") if k in vals), vals[0])
+        return g.sort_values(orden, ascending=False)
+    por_op = agrupar(neu, neu[c_emp].map(nombre_corto))
+    por_cuenca = agrupar(d, d[c_cuenca].map(lambda v: str(v).strip().title())) if c_cuenca else None
+    redo = lambda fila: {k: round(float(v), 1) for k, v in fila.items()}
     return {
         "source": {"name": "Secretaría de Energía, reservas de petróleo y gas", "url": "http://datos.energia.gob.ar/dataset/reservas-de-petroleo-y-gas", "license": "CC BY 4.0"},
-        "resource": r["name"], "year": anio(r) or None, "columns": num_cols,
-        "by_operator": [{"name": n, **{c: round(float(v), 1) for c, v in fila.items()}} for n, fila in por_op.head(12).iterrows()],
-        "totals": {c: round(float(d[c].sum()), 1) for c in num_cols},
+        "resource": r["name"], "year": anio(r) or None, "sheet": hoja,
+        "units": {"oil": "Mm3", "gas": "MMm3"},
+        "keys": vals,
+        "neuquina_by_operator": [{"name": n, **redo(f)} for n, f in por_op.head(12).iterrows()],
+        "neuquina_totals": redo(neu[vals].sum()),
+        "by_basin": [{"name": n, **redo(f)} for n, f in por_cuenca.iterrows()] if por_cuenca is not None else [],
+        "national_totals": redo(d[vals].sum()),
     }
 
 
@@ -664,16 +720,16 @@ def rigi_portal(diag: dict) -> dict:
     urls = sorted(set(re.findall(r"""["'](https?://[^"'\s]+?\.(?:json|csv|xlsx|js)(?:\?[^"'\s]*)?)["']""", html) +
                       ["https://www.argentina.gob.ar" + u for u in re.findall(r"""["'](/[^"'\s]+?\.(?:json|csv|xlsx)(?:\?[^"'\s]*)?)["']""", html)]))
     diag["candidate_urls"] = [u for u in urls if "rigi" in u.lower() or u.endswith((".json", ".csv", ".xlsx"))][:30]
-    # JSON incrustado con el plan de inversiones anual por sector.
+    # JSON incrustado (elemento #raw-data-json) con el plan de inversiones anual por sector.
     plan = None
-    for m in re.finditer(r"(\[\s*\{[^<]{200,}?\}\s*\])", html):
+    from bs4 import BeautifulSoup
+    el = BeautifulSoup(html, "html.parser").find(id="raw-data-json")
+    if el is not None:
         try:
-            arr = json.loads(m.group(1))
-        except Exception:
-            continue
-        if isinstance(arr, list) and arr and isinstance(arr[0], dict) and any("petroleo" in norm(k) for k in arr[0]):
-            plan = arr
-            break
+            plan = json.loads(el.get_text().strip())
+        except Exception as e:
+            diag["json_error"] = str(e)[:200]
+            diag["json_head"] = el.get_text()[:400]
     if not plan:
         raise RuntimeError("No se encontró el plan de inversiones incrustado")
     diag["plan_sample"] = plan[0]
