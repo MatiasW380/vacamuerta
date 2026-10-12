@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-12T20:27Z",
+ "generated_at": "2026-10-12T20:42Z",
  "latest_period": "2026-08",
  "source": {
   "name": "Secretaría de Energía de la Nación, Capítulo IV (Res. 319/93)",
@@ -1094,9 +1094,9 @@
     "avg_6m_kbbl": 222.2
    },
    {
-    "name": "Petrolera El Trebol",
-    "wells": 18,
-    "avg_6m_kbbl": 206.2
+    "name": "Phoenix Global",
+    "wells": 22,
+    "avg_6m_kbbl": 193.0
    },
    {
     "name": "Vista",
@@ -2594,7 +2594,7 @@
    "oil_bbl_d": 24634,
    "gas_mmm3_d": 0.26,
    "share_pct": 3.7,
-   "oil_yoy_pct": null
+   "oil_yoy_pct": 1032.0
   },
   {
    "name": "Chevron",
