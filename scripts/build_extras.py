@@ -286,6 +286,23 @@ def regulations(diag: dict, previo: dict | None) -> dict:
     por_id.update({i["id"]: i for i in nuevos})
     limite = (date.today() - timedelta(days=120)).isoformat()
     items = sorted((i for i in por_id.values() if i["date"] >= limite), key=lambda i: (i["date"], i["id"]), reverse=True)[:60]
+    # Resumen: primer artículo resolutivo del aviso (solo para los que todavía no lo tienen).
+    pedidos = fallas = 0
+    for i in items:
+        if i.get("summary") is not None:
+            continue
+        pedidos += 1
+        try:
+            det = BeautifulSoup(get(i["url"], timeout=40).text, "html.parser")
+            cuerpo = det.select_one("#cuerpoDetalleAviso") or det.select_one(".cuerpo-aviso") or det.body
+            texto = re.sub(r"\s+", " ", cuerpo.get_text(" ")).strip() if cuerpo else ""
+            m = re.search(r"ART[IÍ]CULO\s*1\s*[°º]?\s*[.\-–:]*\s*(.+?)(?=ART[IÍ]CULO\s*2|$)", texto, re.I)
+            resumen = (m.group(1) if m else texto)[:320].strip()
+            i["summary"] = resumen + ("…" if len(resumen) == 320 else "")
+        except Exception:
+            fallas += 1
+            i["summary"] = None
+    diag.update({"details_fetched": pedidos, "details_failed": fallas})
     return {
         "source": {"name": "Boletín Oficial de la República Argentina, primera sección", "url": BO_BASE},
         "keywords": KEYWORDS,
