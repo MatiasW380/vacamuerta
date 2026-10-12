@@ -6761,11 +6761,2140 @@
    "all_gas_resources": 2054544.0
   }
  },
- "generated_at": "2026-10-12T20:51Z",
+ "royalties": {
+  "source": {
+   "name": "Secretaría de Energía, regalías de petróleo crudo",
+   "url": "http://datos.energia.gob.ar/dataset/regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
+   "license": "CC BY 4.0"
+  },
+  "price_usd_bbl": {
+   "Neuquén": [
+    {
+     "period": "2019-09",
+     "usd_bbl": 50.09
+    },
+    {
+     "period": "2019-10",
+     "usd_bbl": 50.2
+    },
+    {
+     "period": "2019-11",
+     "usd_bbl": 49.84
+    },
+    {
+     "period": "2019-12",
+     "usd_bbl": 52.41
+    },
+    {
+     "period": "2020-01",
+     "usd_bbl": 53.83
+    },
+    {
+     "period": "2020-02",
+     "usd_bbl": 50.82
+    },
+    {
+     "period": "2020-03",
+     "usd_bbl": 41.76
+    },
+    {
+     "period": "2020-04",
+     "usd_bbl": 23.5
+    },
+    {
+     "period": "2020-05",
+     "usd_bbl": 27.67
+    },
+    {
+     "period": "2020-06",
+     "usd_bbl": 40.44
+    },
+    {
+     "period": "2020-07",
+     "usd_bbl": 41.85
+    },
+    {
+     "period": "2020-08",
+     "usd_bbl": 43.13
+    },
+    {
+     "period": "2020-09",
+     "usd_bbl": 40.11
+    },
+    {
+     "period": "2020-10",
+     "usd_bbl": 38.91
+    },
+    {
+     "period": "2020-11",
+     "usd_bbl": 39.13
+    },
+    {
+     "period": "2020-12",
+     "usd_bbl": 43.84
+    },
+    {
+     "period": "2021-01",
+     "usd_bbl": 48.16
+    },
+    {
+     "period": "2021-02",
+     "usd_bbl": 51.31
+    },
+    {
+     "period": "2021-03",
+     "usd_bbl": 51.03
+    },
+    {
+     "period": "2021-04",
+     "usd_bbl": 53.87
+    },
+    {
+     "period": "2021-05",
+     "usd_bbl": 53.52
+    },
+    {
+     "period": "2021-06",
+     "usd_bbl": 55.74
+    },
+    {
+     "period": "2021-07",
+     "usd_bbl": 55.31
+    },
+    {
+     "period": "2021-08",
+     "usd_bbl": 56.27
+    },
+    {
+     "period": "2021-09",
+     "usd_bbl": 56.66
+    },
+    {
+     "period": "2021-10",
+     "usd_bbl": 59.82
+    },
+    {
+     "period": "2021-11",
+     "usd_bbl": 58.26
+    },
+    {
+     "period": "2021-12",
+     "usd_bbl": 60.47
+    },
+    {
+     "period": "2022-01",
+     "usd_bbl": 59.29
+    },
+    {
+     "period": "2022-02",
+     "usd_bbl": 63.47
+    },
+    {
+     "period": "2022-03",
+     "usd_bbl": 64.51
+    },
+    {
+     "period": "2022-04",
+     "usd_bbl": 66.51
+    },
+    {
+     "period": "2022-05",
+     "usd_bbl": 69.18
+    },
+    {
+     "period": "2022-06",
+     "usd_bbl": 73.8
+    },
+    {
+     "period": "2022-07",
+     "usd_bbl": 69.15
+    },
+    {
+     "period": "2022-08",
+     "usd_bbl": 70.98
+    },
+    {
+     "period": "2022-09",
+     "usd_bbl": 71.63
+    },
+    {
+     "period": "2022-10",
+     "usd_bbl": 70.44
+    },
+    {
+     "period": "2022-11",
+     "usd_bbl": 68.95
+    },
+    {
+     "period": "2022-12",
+     "usd_bbl": 67.33
+    },
+    {
+     "period": "2023-01",
+     "usd_bbl": 66.03
+    },
+    {
+     "period": "2023-02",
+     "usd_bbl": 66.93
+    },
+    {
+     "period": "2023-03",
+     "usd_bbl": 65.47
+    },
+    {
+     "period": "2023-04",
+     "usd_bbl": 65.46
+    },
+    {
+     "period": "2023-05",
+     "usd_bbl": 63.72
+    },
+    {
+     "period": "2023-06",
+     "usd_bbl": 63.78
+    },
+    {
+     "period": "2023-07",
+     "usd_bbl": 63.68
+    },
+    {
+     "period": "2023-08",
+     "usd_bbl": 64.35
+    },
+    {
+     "period": "2023-09",
+     "usd_bbl": 65.22
+    },
+    {
+     "period": "2023-10",
+     "usd_bbl": 63.31
+    },
+    {
+     "period": "2023-11",
+     "usd_bbl": 64.0
+    },
+    {
+     "period": "2023-12",
+     "usd_bbl": 63.83
+    },
+    {
+     "period": "2024-01",
+     "usd_bbl": 67.76
+    },
+    {
+     "period": "2024-02",
+     "usd_bbl": 69.8
+    },
+    {
+     "period": "2024-03",
+     "usd_bbl": 72.83
+    },
+    {
+     "period": "2024-04",
+     "usd_bbl": 74.04
+    },
+    {
+     "period": "2024-05",
+     "usd_bbl": 72.26
+    },
+    {
+     "period": "2024-06",
+     "usd_bbl": 71.91
+    },
+    {
+     "period": "2024-07",
+     "usd_bbl": 76.03
+    },
+    {
+     "period": "2024-08",
+     "usd_bbl": 69.93
+    },
+    {
+     "period": "2024-09",
+     "usd_bbl": 66.56
+    },
+    {
+     "period": "2024-10",
+     "usd_bbl": 67.9
+    },
+    {
+     "period": "2024-11",
+     "usd_bbl": 66.68
+    },
+    {
+     "period": "2024-12",
+     "usd_bbl": 66.73
+    },
+    {
+     "period": "2025-01",
+     "usd_bbl": 70.56
+    },
+    {
+     "period": "2025-02",
+     "usd_bbl": 69.03
+    },
+    {
+     "period": "2025-03",
+     "usd_bbl": 66.25
+    },
+    {
+     "period": "2025-04",
+     "usd_bbl": 61.72
+    },
+    {
+     "period": "2025-05",
+     "usd_bbl": 59.46
+    },
+    {
+     "period": "2025-06",
+     "usd_bbl": 63.26
+    },
+    {
+     "period": "2025-07",
+     "usd_bbl": 64.26
+    },
+    {
+     "period": "2025-08",
+     "usd_bbl": 62.31
+    },
+    {
+     "period": "2025-09",
+     "usd_bbl": 61.92
+    },
+    {
+     "period": "2025-10",
+     "usd_bbl": 58.25
+    },
+    {
+     "period": "2025-11",
+     "usd_bbl": 57.53
+    },
+    {
+     "period": "2025-12",
+     "usd_bbl": 54.92
+    },
+    {
+     "period": "2026-01",
+     "usd_bbl": 57.39
+    },
+    {
+     "period": "2026-02",
+     "usd_bbl": 61.28
+    },
+    {
+     "period": "2026-03",
+     "usd_bbl": 81.63
+    },
+    {
+     "period": "2026-04",
+     "usd_bbl": 95.03
+    },
+    {
+     "period": "2026-05",
+     "usd_bbl": 97.09
+    },
+    {
+     "period": "2026-06",
+     "usd_bbl": 81.45
+    },
+    {
+     "period": "2026-07",
+     "usd_bbl": 76.78
+    },
+    {
+     "period": "2026-08",
+     "usd_bbl": 79.24
+    }
+   ],
+   "Chubut": [
+    {
+     "period": "2019-09",
+     "usd_bbl": 52.3
+    },
+    {
+     "period": "2019-10",
+     "usd_bbl": 52.44
+    },
+    {
+     "period": "2019-11",
+     "usd_bbl": 55.46
+    },
+    {
+     "period": "2019-12",
+     "usd_bbl": 58.21
+    },
+    {
+     "period": "2020-01",
+     "usd_bbl": 57.93
+    },
+    {
+     "period": "2020-02",
+     "usd_bbl": 52.3
+    },
+    {
+     "period": "2020-03",
+     "usd_bbl": 43.16
+    },
+    {
+     "period": "2020-04",
+     "usd_bbl": 22.06
+    },
+    {
+     "period": "2020-05",
+     "usd_bbl": 24.87
+    },
+    {
+     "period": "2020-06",
+     "usd_bbl": 35.07
+    },
+    {
+     "period": "2020-07",
+     "usd_bbl": 34.37
+    },
+    {
+     "period": "2020-08",
+     "usd_bbl": 41.12
+    },
+    {
+     "period": "2020-09",
+     "usd_bbl": 42.2
+    },
+    {
+     "period": "2020-10",
+     "usd_bbl": 41.42
+    },
+    {
+     "period": "2020-11",
+     "usd_bbl": 43.62
+    },
+    {
+     "period": "2020-12",
+     "usd_bbl": 49.08
+    },
+    {
+     "period": "2021-01",
+     "usd_bbl": 54.65
+    },
+    {
+     "period": "2021-02",
+     "usd_bbl": 59.78
+    },
+    {
+     "period": "2021-03",
+     "usd_bbl": 57.54
+    },
+    {
+     "period": "2021-04",
+     "usd_bbl": 58.19
+    },
+    {
+     "period": "2021-05",
+     "usd_bbl": 60.46
+    },
+    {
+     "period": "2021-06",
+     "usd_bbl": 61.87
+    },
+    {
+     "period": "2021-07",
+     "usd_bbl": 64.43
+    },
+    {
+     "period": "2021-08",
+     "usd_bbl": 63.82
+    },
+    {
+     "period": "2021-09",
+     "usd_bbl": 62.47
+    },
+    {
+     "period": "2021-10",
+     "usd_bbl": 67.21
+    },
+    {
+     "period": "2021-11",
+     "usd_bbl": 66.5
+    },
+    {
+     "period": "2021-12",
+     "usd_bbl": 64.56
+    },
+    {
+     "period": "2022-01",
+     "usd_bbl": 68.28
+    },
+    {
+     "period": "2022-02",
+     "usd_bbl": 81.89
+    },
+    {
+     "period": "2022-03",
+     "usd_bbl": 79.5
+    },
+    {
+     "period": "2022-04",
+     "usd_bbl": 77.68
+    },
+    {
+     "period": "2022-05",
+     "usd_bbl": 72.92
+    },
+    {
+     "period": "2022-06",
+     "usd_bbl": 84.49
+    },
+    {
+     "period": "2022-07",
+     "usd_bbl": 74.06
+    },
+    {
+     "period": "2022-08",
+     "usd_bbl": 78.29
+    },
+    {
+     "period": "2022-09",
+     "usd_bbl": 74.93
+    },
+    {
+     "period": "2022-10",
+     "usd_bbl": 71.55
+    },
+    {
+     "period": "2022-11",
+     "usd_bbl": 74.15
+    },
+    {
+     "period": "2022-12",
+     "usd_bbl": 73.17
+    },
+    {
+     "period": "2023-01",
+     "usd_bbl": 72.69
+    },
+    {
+     "period": "2023-02",
+     "usd_bbl": 72.63
+    },
+    {
+     "period": "2023-03",
+     "usd_bbl": 72.23
+    },
+    {
+     "period": "2023-04",
+     "usd_bbl": 72.3
+    },
+    {
+     "period": "2023-05",
+     "usd_bbl": 69.76
+    },
+    {
+     "period": "2023-06",
+     "usd_bbl": 68.6
+    },
+    {
+     "period": "2023-07",
+     "usd_bbl": 69.53
+    },
+    {
+     "period": "2023-08",
+     "usd_bbl": 69.16
+    },
+    {
+     "period": "2023-09",
+     "usd_bbl": 66.23
+    },
+    {
+     "period": "2023-10",
+     "usd_bbl": 66.6
+    },
+    {
+     "period": "2023-11",
+     "usd_bbl": 68.37
+    },
+    {
+     "period": "2023-12",
+     "usd_bbl": 68.53
+    },
+    {
+     "period": "2024-01",
+     "usd_bbl": 71.46
+    },
+    {
+     "period": "2024-02",
+     "usd_bbl": 73.21
+    },
+    {
+     "period": "2024-03",
+     "usd_bbl": 74.55
+    },
+    {
+     "period": "2024-04",
+     "usd_bbl": 74.56
+    },
+    {
+     "period": "2024-05",
+     "usd_bbl": 75.41
+    },
+    {
+     "period": "2024-06",
+     "usd_bbl": 74.87
+    },
+    {
+     "period": "2024-07",
+     "usd_bbl": 75.88
+    },
+    {
+     "period": "2024-08",
+     "usd_bbl": 73.67
+    },
+    {
+     "period": "2024-09",
+     "usd_bbl": 72.56
+    },
+    {
+     "period": "2024-10",
+     "usd_bbl": 72.74
+    },
+    {
+     "period": "2024-11",
+     "usd_bbl": 71.47
+    },
+    {
+     "period": "2024-12",
+     "usd_bbl": 69.06
+    },
+    {
+     "period": "2025-01",
+     "usd_bbl": 73.75
+    },
+    {
+     "period": "2025-02",
+     "usd_bbl": 69.78
+    },
+    {
+     "period": "2025-03",
+     "usd_bbl": 66.44
+    },
+    {
+     "period": "2025-04",
+     "usd_bbl": 62.1
+    },
+    {
+     "period": "2025-05",
+     "usd_bbl": 60.72
+    },
+    {
+     "period": "2025-06",
+     "usd_bbl": 64.17
+    },
+    {
+     "period": "2025-07",
+     "usd_bbl": 66.13
+    },
+    {
+     "period": "2025-08",
+     "usd_bbl": 63.6
+    },
+    {
+     "period": "2025-09",
+     "usd_bbl": 63.72
+    },
+    {
+     "period": "2025-10",
+     "usd_bbl": 59.22
+    },
+    {
+     "period": "2025-11",
+     "usd_bbl": 59.18
+    },
+    {
+     "period": "2025-12",
+     "usd_bbl": 57.5
+    },
+    {
+     "period": "2026-01",
+     "usd_bbl": 59.37
+    },
+    {
+     "period": "2026-02",
+     "usd_bbl": 62.64
+    },
+    {
+     "period": "2026-03",
+     "usd_bbl": 88.82
+    },
+    {
+     "period": "2026-04",
+     "usd_bbl": 96.75
+    },
+    {
+     "period": "2026-05",
+     "usd_bbl": 103.12
+    },
+    {
+     "period": "2026-06",
+     "usd_bbl": 83.43
+    },
+    {
+     "period": "2026-07",
+     "usd_bbl": 76.87
+    },
+    {
+     "period": "2026-08",
+     "usd_bbl": 79.99
+    }
+   ],
+   "Santa Cruz": [
+    {
+     "period": "2019-09",
+     "usd_bbl": 53.62
+    },
+    {
+     "period": "2019-10",
+     "usd_bbl": 53.69
+    },
+    {
+     "period": "2019-11",
+     "usd_bbl": 53.24
+    },
+    {
+     "period": "2019-12",
+     "usd_bbl": 56.6
+    },
+    {
+     "period": "2020-01",
+     "usd_bbl": 58.39
+    },
+    {
+     "period": "2020-02",
+     "usd_bbl": 54.28
+    },
+    {
+     "period": "2020-03",
+     "usd_bbl": 46.19
+    },
+    {
+     "period": "2020-04",
+     "usd_bbl": 19.46
+    },
+    {
+     "period": "2020-05",
+     "usd_bbl": 28.38
+    },
+    {
+     "period": "2020-06",
+     "usd_bbl": 38.31
+    },
+    {
+     "period": "2020-07",
+     "usd_bbl": 37.87
+    },
+    {
+     "period": "2020-08",
+     "usd_bbl": 41.32
+    },
+    {
+     "period": "2020-09",
+     "usd_bbl": 43.43
+    },
+    {
+     "period": "2020-10",
+     "usd_bbl": 42.08
+    },
+    {
+     "period": "2020-11",
+     "usd_bbl": 42.41
+    },
+    {
+     "period": "2020-12",
+     "usd_bbl": 48.12
+    },
+    {
+     "period": "2021-01",
+     "usd_bbl": 53.04
+    },
+    {
+     "period": "2021-02",
+     "usd_bbl": 57.35
+    },
+    {
+     "period": "2021-03",
+     "usd_bbl": 57.84
+    },
+    {
+     "period": "2021-04",
+     "usd_bbl": 56.99
+    },
+    {
+     "period": "2021-05",
+     "usd_bbl": 57.64
+    },
+    {
+     "period": "2021-06",
+     "usd_bbl": 60.96
+    },
+    {
+     "period": "2021-07",
+     "usd_bbl": 64.25
+    },
+    {
+     "period": "2021-08",
+     "usd_bbl": 66.97
+    },
+    {
+     "period": "2021-09",
+     "usd_bbl": 67.48
+    },
+    {
+     "period": "2021-10",
+     "usd_bbl": 69.03
+    },
+    {
+     "period": "2021-11",
+     "usd_bbl": 70.26
+    },
+    {
+     "period": "2021-12",
+     "usd_bbl": 69.01
+    },
+    {
+     "period": "2022-01",
+     "usd_bbl": 69.4
+    },
+    {
+     "period": "2022-02",
+     "usd_bbl": 73.07
+    },
+    {
+     "period": "2022-03",
+     "usd_bbl": 79.97
+    },
+    {
+     "period": "2022-04",
+     "usd_bbl": 80.24
+    },
+    {
+     "period": "2022-05",
+     "usd_bbl": 80.21
+    },
+    {
+     "period": "2022-06",
+     "usd_bbl": 81.26
+    },
+    {
+     "period": "2022-07",
+     "usd_bbl": 80.63
+    },
+    {
+     "period": "2022-08",
+     "usd_bbl": 79.82
+    },
+    {
+     "period": "2022-09",
+     "usd_bbl": 79.01
+    },
+    {
+     "period": "2022-10",
+     "usd_bbl": 77.62
+    },
+    {
+     "period": "2022-11",
+     "usd_bbl": 78.67
+    },
+    {
+     "period": "2022-12",
+     "usd_bbl": 73.89
+    },
+    {
+     "period": "2023-01",
+     "usd_bbl": 75.1
+    },
+    {
+     "period": "2023-02",
+     "usd_bbl": 73.94
+    },
+    {
+     "period": "2023-03",
+     "usd_bbl": 75.09
+    },
+    {
+     "period": "2023-04",
+     "usd_bbl": 73.84
+    },
+    {
+     "period": "2023-05",
+     "usd_bbl": 70.04
+    },
+    {
+     "period": "2023-06",
+     "usd_bbl": 69.64
+    },
+    {
+     "period": "2023-07",
+     "usd_bbl": 70.09
+    },
+    {
+     "period": "2023-08",
+     "usd_bbl": 69.37
+    },
+    {
+     "period": "2023-09",
+     "usd_bbl": 69.87
+    },
+    {
+     "period": "2023-10",
+     "usd_bbl": 70.9
+    },
+    {
+     "period": "2023-11",
+     "usd_bbl": 69.72
+    },
+    {
+     "period": "2023-12",
+     "usd_bbl": 71.18
+    },
+    {
+     "period": "2024-01",
+     "usd_bbl": 72.48
+    },
+    {
+     "period": "2024-02",
+     "usd_bbl": 76.63
+    },
+    {
+     "period": "2024-03",
+     "usd_bbl": 78.46
+    },
+    {
+     "period": "2024-04",
+     "usd_bbl": 79.93
+    },
+    {
+     "period": "2024-05",
+     "usd_bbl": 80.92
+    },
+    {
+     "period": "2024-06",
+     "usd_bbl": 76.84
+    },
+    {
+     "period": "2024-07",
+     "usd_bbl": 77.0
+    },
+    {
+     "period": "2024-08",
+     "usd_bbl": 75.56
+    },
+    {
+     "period": "2024-09",
+     "usd_bbl": 67.9
+    },
+    {
+     "period": "2024-10",
+     "usd_bbl": 70.08
+    },
+    {
+     "period": "2024-11",
+     "usd_bbl": 69.62
+    },
+    {
+     "period": "2024-12",
+     "usd_bbl": 68.56
+    },
+    {
+     "period": "2025-01",
+     "usd_bbl": 70.88
+    },
+    {
+     "period": "2025-02",
+     "usd_bbl": 72.13
+    },
+    {
+     "period": "2025-03",
+     "usd_bbl": 70.14
+    },
+    {
+     "period": "2025-04",
+     "usd_bbl": 66.02
+    },
+    {
+     "period": "2025-05",
+     "usd_bbl": 62.39
+    },
+    {
+     "period": "2025-06",
+     "usd_bbl": 64.49
+    },
+    {
+     "period": "2025-07",
+     "usd_bbl": 64.2
+    },
+    {
+     "period": "2025-08",
+     "usd_bbl": 66.36
+    },
+    {
+     "period": "2025-09",
+     "usd_bbl": 63.72
+    },
+    {
+     "period": "2025-10",
+     "usd_bbl": 63.41
+    },
+    {
+     "period": "2025-11",
+     "usd_bbl": 59.18
+    },
+    {
+     "period": "2025-12",
+     "usd_bbl": 58.57
+    },
+    {
+     "period": "2026-01",
+     "usd_bbl": 58.51
+    },
+    {
+     "period": "2026-02",
+     "usd_bbl": 61.66
+    },
+    {
+     "period": "2026-03",
+     "usd_bbl": 76.57
+    },
+    {
+     "period": "2026-04",
+     "usd_bbl": 86.41
+    },
+    {
+     "period": "2026-05",
+     "usd_bbl": 96.84
+    },
+    {
+     "period": "2026-06",
+     "usd_bbl": 91.64
+    },
+    {
+     "period": "2026-07",
+     "usd_bbl": 84.74
+    },
+    {
+     "period": "2026-08",
+     "usd_bbl": 78.99
+    }
+   ],
+   "Mendoza": [
+    {
+     "period": "2019-09",
+     "usd_bbl": 48.56
+    },
+    {
+     "period": "2019-10",
+     "usd_bbl": 48.49
+    },
+    {
+     "period": "2019-11",
+     "usd_bbl": 47.61
+    },
+    {
+     "period": "2019-12",
+     "usd_bbl": 49.61
+    },
+    {
+     "period": "2020-01",
+     "usd_bbl": 51.09
+    },
+    {
+     "period": "2020-02",
+     "usd_bbl": 48.72
+    },
+    {
+     "period": "2020-03",
+     "usd_bbl": 42.09
+    },
+    {
+     "period": "2020-04",
+     "usd_bbl": 23.45
+    },
+    {
+     "period": "2020-05",
+     "usd_bbl": 29.42
+    },
+    {
+     "period": "2020-06",
+     "usd_bbl": 40.04
+    },
+    {
+     "period": "2020-07",
+     "usd_bbl": 41.35
+    },
+    {
+     "period": "2020-08",
+     "usd_bbl": 41.8
+    },
+    {
+     "period": "2020-09",
+     "usd_bbl": 38.23
+    },
+    {
+     "period": "2020-10",
+     "usd_bbl": 37.22
+    },
+    {
+     "period": "2020-11",
+     "usd_bbl": 37.2
+    },
+    {
+     "period": "2020-12",
+     "usd_bbl": 42.12
+    },
+    {
+     "period": "2021-01",
+     "usd_bbl": 45.96
+    },
+    {
+     "period": "2021-02",
+     "usd_bbl": 47.45
+    },
+    {
+     "period": "2021-03",
+     "usd_bbl": 46.98
+    },
+    {
+     "period": "2021-04",
+     "usd_bbl": 48.4
+    },
+    {
+     "period": "2021-05",
+     "usd_bbl": 48.93
+    },
+    {
+     "period": "2021-06",
+     "usd_bbl": 49.91
+    },
+    {
+     "period": "2021-07",
+     "usd_bbl": 49.05
+    },
+    {
+     "period": "2021-08",
+     "usd_bbl": 51.52
+    },
+    {
+     "period": "2021-09",
+     "usd_bbl": 50.71
+    },
+    {
+     "period": "2021-10",
+     "usd_bbl": 54.55
+    },
+    {
+     "period": "2021-11",
+     "usd_bbl": 54.28
+    },
+    {
+     "period": "2021-12",
+     "usd_bbl": 52.09
+    },
+    {
+     "period": "2022-01",
+     "usd_bbl": 52.85
+    },
+    {
+     "period": "2022-02",
+     "usd_bbl": 51.47
+    },
+    {
+     "period": "2022-03",
+     "usd_bbl": 55.26
+    },
+    {
+     "period": "2022-04",
+     "usd_bbl": 59.08
+    },
+    {
+     "period": "2022-05",
+     "usd_bbl": 60.71
+    },
+    {
+     "period": "2022-06",
+     "usd_bbl": 64.23
+    },
+    {
+     "period": "2022-07",
+     "usd_bbl": 61.39
+    },
+    {
+     "period": "2022-08",
+     "usd_bbl": 63.14
+    },
+    {
+     "period": "2022-09",
+     "usd_bbl": 62.26
+    },
+    {
+     "period": "2022-10",
+     "usd_bbl": 63.99
+    },
+    {
+     "period": "2022-11",
+     "usd_bbl": 64.25
+    },
+    {
+     "period": "2022-12",
+     "usd_bbl": 62.1
+    },
+    {
+     "period": "2023-01",
+     "usd_bbl": 62.08
+    },
+    {
+     "period": "2023-02",
+     "usd_bbl": 62.2
+    },
+    {
+     "period": "2023-03",
+     "usd_bbl": 60.4
+    },
+    {
+     "period": "2023-04",
+     "usd_bbl": 58.43
+    },
+    {
+     "period": "2023-05",
+     "usd_bbl": 58.24
+    },
+    {
+     "period": "2023-06",
+     "usd_bbl": 58.58
+    },
+    {
+     "period": "2023-07",
+     "usd_bbl": 57.59
+    },
+    {
+     "period": "2023-08",
+     "usd_bbl": 54.45
+    },
+    {
+     "period": "2023-09",
+     "usd_bbl": 54.73
+    },
+    {
+     "period": "2023-10",
+     "usd_bbl": 54.83
+    },
+    {
+     "period": "2023-11",
+     "usd_bbl": 56.85
+    },
+    {
+     "period": "2023-12",
+     "usd_bbl": 56.4
+    },
+    {
+     "period": "2024-01",
+     "usd_bbl": 62.1
+    },
+    {
+     "period": "2024-02",
+     "usd_bbl": 64.78
+    },
+    {
+     "period": "2024-03",
+     "usd_bbl": 65.42
+    },
+    {
+     "period": "2024-04",
+     "usd_bbl": 65.58
+    },
+    {
+     "period": "2024-05",
+     "usd_bbl": 66.79
+    },
+    {
+     "period": "2024-06",
+     "usd_bbl": 67.64
+    },
+    {
+     "period": "2024-07",
+     "usd_bbl": 68.2
+    },
+    {
+     "period": "2024-08",
+     "usd_bbl": 67.48
+    },
+    {
+     "period": "2024-09",
+     "usd_bbl": 65.6
+    },
+    {
+     "period": "2024-10",
+     "usd_bbl": 65.02
+    },
+    {
+     "period": "2024-11",
+     "usd_bbl": 65.15
+    },
+    {
+     "period": "2024-12",
+     "usd_bbl": 64.94
+    },
+    {
+     "period": "2025-01",
+     "usd_bbl": 69.49
+    },
+    {
+     "period": "2025-02",
+     "usd_bbl": 66.8
+    },
+    {
+     "period": "2025-03",
+     "usd_bbl": 63.56
+    },
+    {
+     "period": "2025-04",
+     "usd_bbl": 58.54
+    },
+    {
+     "period": "2025-05",
+     "usd_bbl": 56.59
+    },
+    {
+     "period": "2025-06",
+     "usd_bbl": 61.72
+    },
+    {
+     "period": "2025-07",
+     "usd_bbl": 61.43
+    },
+    {
+     "period": "2025-08",
+     "usd_bbl": 58.0
+    },
+    {
+     "period": "2025-09",
+     "usd_bbl": 57.94
+    },
+    {
+     "period": "2025-10",
+     "usd_bbl": 54.03
+    },
+    {
+     "period": "2025-11",
+     "usd_bbl": 52.65
+    },
+    {
+     "period": "2025-12",
+     "usd_bbl": 51.76
+    },
+    {
+     "period": "2026-01",
+     "usd_bbl": 53.81
+    },
+    {
+     "period": "2026-02",
+     "usd_bbl": 58.77
+    },
+    {
+     "period": "2026-03",
+     "usd_bbl": 88.47
+    },
+    {
+     "period": "2026-04",
+     "usd_bbl": 95.0
+    },
+    {
+     "period": "2026-05",
+     "usd_bbl": 97.56
+    },
+    {
+     "period": "2026-06",
+     "usd_bbl": 76.56
+    },
+    {
+     "period": "2026-07",
+     "usd_bbl": 69.53
+    },
+    {
+     "period": "2026-08",
+     "usd_bbl": 75.48
+    }
+   ],
+   "Río Negro": [
+    {
+     "period": "2019-09",
+     "usd_bbl": 47.52
+    },
+    {
+     "period": "2019-10",
+     "usd_bbl": 46.74
+    },
+    {
+     "period": "2019-11",
+     "usd_bbl": 49.54
+    },
+    {
+     "period": "2019-12",
+     "usd_bbl": 52.28
+    },
+    {
+     "period": "2020-01",
+     "usd_bbl": 54.39
+    },
+    {
+     "period": "2020-02",
+     "usd_bbl": 49.76
+    },
+    {
+     "period": "2020-03",
+     "usd_bbl": 36.83
+    },
+    {
+     "period": "2020-04",
+     "usd_bbl": 22.33
+    },
+    {
+     "period": "2020-05",
+     "usd_bbl": 26.33
+    },
+    {
+     "period": "2020-06",
+     "usd_bbl": 37.27
+    },
+    {
+     "period": "2020-07",
+     "usd_bbl": 40.41
+    },
+    {
+     "period": "2020-08",
+     "usd_bbl": 42.35
+    },
+    {
+     "period": "2020-09",
+     "usd_bbl": 40.58
+    },
+    {
+     "period": "2020-10",
+     "usd_bbl": 39.28
+    },
+    {
+     "period": "2020-11",
+     "usd_bbl": 39.52
+    },
+    {
+     "period": "2020-12",
+     "usd_bbl": 42.19
+    },
+    {
+     "period": "2021-01",
+     "usd_bbl": 47.96
+    },
+    {
+     "period": "2021-02",
+     "usd_bbl": 49.63
+    },
+    {
+     "period": "2021-03",
+     "usd_bbl": 53.77
+    },
+    {
+     "period": "2021-04",
+     "usd_bbl": 52.58
+    },
+    {
+     "period": "2021-05",
+     "usd_bbl": 53.7
+    },
+    {
+     "period": "2021-06",
+     "usd_bbl": 57.1
+    },
+    {
+     "period": "2021-07",
+     "usd_bbl": 54.01
+    },
+    {
+     "period": "2021-08",
+     "usd_bbl": 58.73
+    },
+    {
+     "period": "2021-09",
+     "usd_bbl": 54.9
+    },
+    {
+     "period": "2021-10",
+     "usd_bbl": 57.3
+    },
+    {
+     "period": "2021-11",
+     "usd_bbl": 57.14
+    },
+    {
+     "period": "2021-12",
+     "usd_bbl": 64.64
+    },
+    {
+     "period": "2022-01",
+     "usd_bbl": 57.21
+    },
+    {
+     "period": "2022-02",
+     "usd_bbl": 60.99
+    },
+    {
+     "period": "2022-03",
+     "usd_bbl": 68.55
+    },
+    {
+     "period": "2022-04",
+     "usd_bbl": 68.12
+    },
+    {
+     "period": "2022-05",
+     "usd_bbl": 69.8
+    },
+    {
+     "period": "2022-06",
+     "usd_bbl": 71.38
+    },
+    {
+     "period": "2022-07",
+     "usd_bbl": 82.34
+    },
+    {
+     "period": "2022-08",
+     "usd_bbl": 69.34
+    },
+    {
+     "period": "2022-09",
+     "usd_bbl": 69.79
+    },
+    {
+     "period": "2022-10",
+     "usd_bbl": 68.56
+    },
+    {
+     "period": "2022-11",
+     "usd_bbl": 69.03
+    },
+    {
+     "period": "2022-12",
+     "usd_bbl": 66.18
+    },
+    {
+     "period": "2023-01",
+     "usd_bbl": 66.62
+    },
+    {
+     "period": "2023-02",
+     "usd_bbl": 66.35
+    },
+    {
+     "period": "2023-03",
+     "usd_bbl": 67.08
+    },
+    {
+     "period": "2023-04",
+     "usd_bbl": 63.5
+    },
+    {
+     "period": "2023-05",
+     "usd_bbl": 61.99
+    },
+    {
+     "period": "2023-06",
+     "usd_bbl": 62.3
+    },
+    {
+     "period": "2023-07",
+     "usd_bbl": 61.1
+    },
+    {
+     "period": "2023-08",
+     "usd_bbl": 62.48
+    },
+    {
+     "period": "2023-09",
+     "usd_bbl": 61.83
+    },
+    {
+     "period": "2023-10",
+     "usd_bbl": 63.55
+    },
+    {
+     "period": "2023-11",
+     "usd_bbl": 61.29
+    },
+    {
+     "period": "2023-12",
+     "usd_bbl": 60.67
+    },
+    {
+     "period": "2024-01",
+     "usd_bbl": 66.0
+    },
+    {
+     "period": "2024-02",
+     "usd_bbl": 67.11
+    },
+    {
+     "period": "2024-03",
+     "usd_bbl": 68.61
+    },
+    {
+     "period": "2024-04",
+     "usd_bbl": 70.61
+    },
+    {
+     "period": "2024-05",
+     "usd_bbl": 70.63
+    },
+    {
+     "period": "2024-06",
+     "usd_bbl": 70.67
+    },
+    {
+     "period": "2024-07",
+     "usd_bbl": 71.19
+    },
+    {
+     "period": "2024-08",
+     "usd_bbl": 69.81
+    },
+    {
+     "period": "2024-09",
+     "usd_bbl": 67.62
+    },
+    {
+     "period": "2024-10",
+     "usd_bbl": 68.29
+    },
+    {
+     "period": "2024-11",
+     "usd_bbl": 67.15
+    },
+    {
+     "period": "2024-12",
+     "usd_bbl": 67.11
+    },
+    {
+     "period": "2025-01",
+     "usd_bbl": 70.05
+    },
+    {
+     "period": "2025-02",
+     "usd_bbl": 69.05
+    },
+    {
+     "period": "2025-03",
+     "usd_bbl": 66.69
+    },
+    {
+     "period": "2025-04",
+     "usd_bbl": 62.28
+    },
+    {
+     "period": "2025-05",
+     "usd_bbl": 59.27
+    },
+    {
+     "period": "2025-06",
+     "usd_bbl": 62.4
+    },
+    {
+     "period": "2025-07",
+     "usd_bbl": 64.03
+    },
+    {
+     "period": "2025-08",
+     "usd_bbl": 62.38
+    },
+    {
+     "period": "2025-09",
+     "usd_bbl": 61.34
+    },
+    {
+     "period": "2025-10",
+     "usd_bbl": 59.16
+    },
+    {
+     "period": "2025-11",
+     "usd_bbl": 57.24
+    },
+    {
+     "period": "2025-12",
+     "usd_bbl": 55.98
+    },
+    {
+     "period": "2026-01",
+     "usd_bbl": 57.23
+    },
+    {
+     "period": "2026-02",
+     "usd_bbl": 60.33
+    },
+    {
+     "period": "2026-03",
+     "usd_bbl": 78.06
+    },
+    {
+     "period": "2026-04",
+     "usd_bbl": 82.53
+    },
+    {
+     "period": "2026-05",
+     "usd_bbl": 88.6
+    },
+    {
+     "period": "2026-06",
+     "usd_bbl": 79.7
+    },
+    {
+     "period": "2026-07",
+     "usd_bbl": 74.26
+    },
+    {
+     "period": "2026-08",
+     "usd_bbl": 81.23
+    }
+   ]
+  },
+  "last_period": "2026-08",
+  "neuquen_12m": {
+   "from": "2025-09",
+   "to": "2026-08",
+   "royalties_usd_m": 1636.4,
+   "volume_m3": 30841554,
+   "national_royalties_usd_m": 2379.1
+  },
+  "royalties_monthly": [
+   {
+    "period": "2019-09",
+    "neuquen_usd_m": 27.04,
+    "total_usd_m": 94.1
+   },
+   {
+    "period": "2019-10",
+    "neuquen_usd_m": 27.39,
+    "total_usd_m": 96.23
+   },
+   {
+    "period": "2019-11",
+    "neuquen_usd_m": 26.92,
+    "total_usd_m": 94.7
+   },
+   {
+    "period": "2019-12",
+    "neuquen_usd_m": 29.94,
+    "total_usd_m": 106.85
+   },
+   {
+    "period": "2020-01",
+    "neuquen_usd_m": 31.26,
+    "total_usd_m": 105.4
+   },
+   {
+    "period": "2020-02",
+    "neuquen_usd_m": 29.07,
+    "total_usd_m": 93.49
+   },
+   {
+    "period": "2020-03",
+    "neuquen_usd_m": 26.59,
+    "total_usd_m": 83.25
+   },
+   {
+    "period": "2020-04",
+    "neuquen_usd_m": 10.53,
+    "total_usd_m": 36.59
+   },
+   {
+    "period": "2020-05",
+    "neuquen_usd_m": 12.98,
+    "total_usd_m": 44.36
+   },
+   {
+    "period": "2020-06",
+    "neuquen_usd_m": 21.83,
+    "total_usd_m": 64.48
+   },
+   {
+    "period": "2020-07",
+    "neuquen_usd_m": 23.72,
+    "total_usd_m": 67.73
+   },
+   {
+    "period": "2020-08",
+    "neuquen_usd_m": 24.73,
+    "total_usd_m": 73.81
+   },
+   {
+    "period": "2020-09",
+    "neuquen_usd_m": 21.13,
+    "total_usd_m": 69.56
+   },
+   {
+    "period": "2020-10",
+    "neuquen_usd_m": 21.65,
+    "total_usd_m": 71.01
+   },
+   {
+    "period": "2020-11",
+    "neuquen_usd_m": 21.37,
+    "total_usd_m": 70.08
+   },
+   {
+    "period": "2020-12",
+    "neuquen_usd_m": 25.77,
+    "total_usd_m": 83.06
+   },
+   {
+    "period": "2021-01",
+    "neuquen_usd_m": 29.98,
+    "total_usd_m": 92.76
+   },
+   {
+    "period": "2021-02",
+    "neuquen_usd_m": 29.81,
+    "total_usd_m": 91.19
+   },
+   {
+    "period": "2021-03",
+    "neuquen_usd_m": 33.75,
+    "total_usd_m": 100.06
+   },
+   {
+    "period": "2021-04",
+    "neuquen_usd_m": 34.61,
+    "total_usd_m": 99.57
+   },
+   {
+    "period": "2021-05",
+    "neuquen_usd_m": 36.59,
+    "total_usd_m": 105.92
+   },
+   {
+    "period": "2021-06",
+    "neuquen_usd_m": 37.6,
+    "total_usd_m": 105.4
+   },
+   {
+    "period": "2021-07",
+    "neuquen_usd_m": 40.24,
+    "total_usd_m": 111.48
+   },
+   {
+    "period": "2021-08",
+    "neuquen_usd_m": 40.43,
+    "total_usd_m": 113.56
+   },
+   {
+    "period": "2021-09",
+    "neuquen_usd_m": 42.34,
+    "total_usd_m": 111.44
+   },
+   {
+    "period": "2021-10",
+    "neuquen_usd_m": 49.51,
+    "total_usd_m": 123.96
+   },
+   {
+    "period": "2021-11",
+    "neuquen_usd_m": 48.02,
+    "total_usd_m": 121.37
+   },
+   {
+    "period": "2021-12",
+    "neuquen_usd_m": 53.18,
+    "total_usd_m": 126.39
+   },
+   {
+    "period": "2022-01",
+    "neuquen_usd_m": 53.82,
+    "total_usd_m": 130.23
+   },
+   {
+    "period": "2022-02",
+    "neuquen_usd_m": 51.36,
+    "total_usd_m": 127.24
+   },
+   {
+    "period": "2022-03",
+    "neuquen_usd_m": 57.63,
+    "total_usd_m": 144.08
+   },
+   {
+    "period": "2022-04",
+    "neuquen_usd_m": 59.84,
+    "total_usd_m": 142.89
+   },
+   {
+    "period": "2022-05",
+    "neuquen_usd_m": 65.28,
+    "total_usd_m": 150.68
+   },
+   {
+    "period": "2022-06",
+    "neuquen_usd_m": 67.72,
+    "total_usd_m": 157.36
+   },
+   {
+    "period": "2022-07",
+    "neuquen_usd_m": 67.42,
+    "total_usd_m": 153.26
+   },
+   {
+    "period": "2022-08",
+    "neuquen_usd_m": 70.76,
+    "total_usd_m": 159.52
+   },
+   {
+    "period": "2022-09",
+    "neuquen_usd_m": 69.62,
+    "total_usd_m": 152.09
+   },
+   {
+    "period": "2022-10",
+    "neuquen_usd_m": 75.47,
+    "total_usd_m": 160.19
+   },
+   {
+    "period": "2022-11",
+    "neuquen_usd_m": 71.34,
+    "total_usd_m": 154.64
+   },
+   {
+    "period": "2022-12",
+    "neuquen_usd_m": 72.8,
+    "total_usd_m": 156.32
+   },
+   {
+    "period": "2023-01",
+    "neuquen_usd_m": 72.77,
+    "total_usd_m": 155.07
+   },
+   {
+    "period": "2023-02",
+    "neuquen_usd_m": 68.1,
+    "total_usd_m": 142.73
+   },
+   {
+    "period": "2023-03",
+    "neuquen_usd_m": 74.98,
+    "total_usd_m": 156.22
+   },
+   {
+    "period": "2023-04",
+    "neuquen_usd_m": 71.27,
+    "total_usd_m": 148.88
+   },
+   {
+    "period": "2023-05",
+    "neuquen_usd_m": 71.26,
+    "total_usd_m": 148.35
+   },
+   {
+    "period": "2023-06",
+    "neuquen_usd_m": 67.35,
+    "total_usd_m": 141.17
+   },
+   {
+    "period": "2023-07",
+    "neuquen_usd_m": 71.31,
+    "total_usd_m": 147.13
+   },
+   {
+    "period": "2023-08",
+    "neuquen_usd_m": 73.48,
+    "total_usd_m": 147.27
+   },
+   {
+    "period": "2023-09",
+    "neuquen_usd_m": 73.86,
+    "total_usd_m": 145.83
+   },
+   {
+    "period": "2023-10",
+    "neuquen_usd_m": 74.3,
+    "total_usd_m": 148.0
+   },
+   {
+    "period": "2023-11",
+    "neuquen_usd_m": 77.98,
+    "total_usd_m": 150.37
+   },
+   {
+    "period": "2023-12",
+    "neuquen_usd_m": 83.85,
+    "total_usd_m": 158.01
+   },
+   {
+    "period": "2024-01",
+    "neuquen_usd_m": 87.86,
+    "total_usd_m": 166.03
+   },
+   {
+    "period": "2024-02",
+    "neuquen_usd_m": 87.54,
+    "total_usd_m": 160.56
+   },
+   {
+    "period": "2024-03",
+    "neuquen_usd_m": 98.71,
+    "total_usd_m": 180.27
+   },
+   {
+    "period": "2024-04",
+    "neuquen_usd_m": 90.14,
+    "total_usd_m": 170.09
+   },
+   {
+    "period": "2024-05",
+    "neuquen_usd_m": 96.02,
+    "total_usd_m": 179.4
+   },
+   {
+    "period": "2024-06",
+    "neuquen_usd_m": 88.03,
+    "total_usd_m": 159.31
+   },
+   {
+    "period": "2024-07",
+    "neuquen_usd_m": 95.69,
+    "total_usd_m": 170.5
+   },
+   {
+    "period": "2024-08",
+    "neuquen_usd_m": 94.65,
+    "total_usd_m": 175.09
+   },
+   {
+    "period": "2024-09",
+    "neuquen_usd_m": 58.94,
+    "total_usd_m": 124.6
+   },
+   {
+    "period": "2024-10",
+    "neuquen_usd_m": 66.2,
+    "total_usd_m": 133.95
+   },
+   {
+    "period": "2024-11",
+    "neuquen_usd_m": 88.55,
+    "total_usd_m": 161.37
+   },
+   {
+    "period": "2024-12",
+    "neuquen_usd_m": 92.62,
+    "total_usd_m": 166.7
+   },
+   {
+    "period": "2025-01",
+    "neuquen_usd_m": 96.65,
+    "total_usd_m": 175.55
+   },
+   {
+    "period": "2025-02",
+    "neuquen_usd_m": 86.01,
+    "total_usd_m": 155.47
+   },
+   {
+    "period": "2025-03",
+    "neuquen_usd_m": 93.42,
+    "total_usd_m": 165.0
+   },
+   {
+    "period": "2025-04",
+    "neuquen_usd_m": 87.74,
+    "total_usd_m": 150.72
+   },
+   {
+    "period": "2025-05",
+    "neuquen_usd_m": 87.54,
+    "total_usd_m": 149.16
+   },
+   {
+    "period": "2025-06",
+    "neuquen_usd_m": 99.66,
+    "total_usd_m": 159.05
+   },
+   {
+    "period": "2025-07",
+    "neuquen_usd_m": 106.36,
+    "total_usd_m": 162.54
+   },
+   {
+    "period": "2025-08",
+    "neuquen_usd_m": 105.54,
+    "total_usd_m": 159.86
+   },
+   {
+    "period": "2025-09",
+    "neuquen_usd_m": 97.99,
+    "total_usd_m": 149.43
+   },
+   {
+    "period": "2025-10",
+    "neuquen_usd_m": 102.26,
+    "total_usd_m": 151.38
+   },
+   {
+    "period": "2025-11",
+    "neuquen_usd_m": 99.91,
+    "total_usd_m": 144.8
+   },
+   {
+    "period": "2025-12",
+    "neuquen_usd_m": 102.69,
+    "total_usd_m": 152.3
+   },
+   {
+    "period": "2026-01",
+    "neuquen_usd_m": 99.11,
+    "total_usd_m": 150.95
+   },
+   {
+    "period": "2026-02",
+    "neuquen_usd_m": 96.54,
+    "total_usd_m": 143.99
+   },
+   {
+    "period": "2026-03",
+    "neuquen_usd_m": 152.52,
+    "total_usd_m": 228.79
+   },
+   {
+    "period": "2026-04",
+    "neuquen_usd_m": 188.99,
+    "total_usd_m": 270.96
+   },
+   {
+    "period": "2026-05",
+    "neuquen_usd_m": 201.66,
+    "total_usd_m": 291.49
+   },
+   {
+    "period": "2026-06",
+    "neuquen_usd_m": 162.66,
+    "total_usd_m": 232.52
+   },
+   {
+    "period": "2026-07",
+    "neuquen_usd_m": 158.78,
+    "total_usd_m": 224.43
+   },
+   {
+    "period": "2026-08",
+    "neuquen_usd_m": 173.29,
+    "total_usd_m": 238.06
+   }
+  ]
+ },
+ "generated_at": "2026-10-12T20:53Z",
  "status": {
   "fracking": {
    "ok": true,
-   "at": "2026-10-12T20:50Z",
+   "at": "2026-10-12T20:52Z",
    "diag": {
     "resources": [
      "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
@@ -6826,7 +8955,7 @@
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-12T20:50Z",
+   "at": "2026-10-12T20:52Z",
    "diag": {
     "pages": 1
    }
@@ -6835,11 +8964,11 @@
    "ok": false,
    "error": "RuntimeError: Falta EIA_API_KEY (secreto del repositorio)",
    "diag": {},
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 951, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 936, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 243, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1004, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 989, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 243, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
   },
   "regulations": {
    "ok": true,
-   "at": "2026-10-12T20:50Z",
+   "at": "2026-10-12T20:52Z",
    "diag": {
     "pages": 6,
     "page_errors": 0,
@@ -6851,7 +8980,7 @@
   },
   "news": {
    "ok": true,
-   "at": "2026-10-12T20:50Z",
+   "at": "2026-10-12T20:52Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
@@ -6862,7 +8991,7 @@
   },
   "reserves": {
    "ok": true,
-   "at": "2026-10-12T20:50Z",
+   "at": "2026-10-12T20:52Z",
    "diag": {
     "package": "http://datos.energia.gob.ar reservas-de-petroleo-y-gas",
     "zip_files": [
@@ -7069,7 +9198,7 @@
   },
   "export_price": {
    "ok": true,
-   "at": "2026-10-12T20:51Z",
+   "at": "2026-10-12T20:52Z",
    "diag": {
     "package": "https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo",
     "resources": [
@@ -7400,7 +9529,7 @@
   },
   "fuel_prices": {
    "ok": true,
-   "at": "2026-10-12T20:51Z",
+   "at": "2026-10-12T20:53Z",
    "diag": {
     "package": "http://datos.energia.gob.ar precios-en-surtidor",
     "resources": [
@@ -7443,12 +9572,12 @@
   },
   "rigi_portal": {
    "ok": true,
-   "at": "2026-10-12T20:51Z",
+   "at": "2026-10-12T20:53Z",
    "diag": {
     "html_len": 76399,
     "context": "-thin\">&nbsp;</span><span class=\"fw-semibold fs-1\">M</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Empleos <span class=\"fw-medium br-sm br-xs\">(directos e indirectos)</span></dt><dd class=\"fs-1 fw-bold text-arg-verdin js-total-puestos-trabajo\">0</dd></div></dl></div><div class=\"col-md-12 m-y-2\"><h3 class=\"h4 font-sans-serif p-b-1 border-bottom\">Sectores</h3><dl class=\"dl-proyectos-sector\"><div class=\"d-grid\"><dt class=\"last\">Energía eléctrica</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-torre-electrica m-r-05\"></i> <span class=\"m-t-1 js-total-energia-electrica\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Petróleo y gas</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-petroleo-y-gas m-r-05\"></i> <span class=\"m-t-1 js-total-petroleo-y-gas\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Minería</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-mineria m-r-05\"></i> <span class=\"m-t-1 js-total-mineria\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Siderurgia</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-siderurgia m-r-05\"></i> <span class=\"m-t-1 js-total-siderurgia\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Infraestructura</dt><",
     "inline_scripts": [
-     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"-VD6CURoDYfcyx02Fr3KFmpuh4LZbZI1ueTRXoILYe4\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
+     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"pOqLM1gi91WosVvMcYZ422B7qryPTMJ6rSwnO9le8fM\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
      "const jsonContainer = document.getElementById('raw-data-json');\n  const jsonText = (jsonContainer.textContent || jsonContainer.innerText).trim();\n  const rawData = JSON.parse(jsonText);\n\n  const extractVal = (val) => (typeof val === 'object' && val !== null) ? (val.total || 0) : (val || 0);\n  const formatNum = (num) => Number(num || 0).toLocaleString('es-AR');\n\n  const getSeriesData = (key) => rawData.map(d => ({ \n    x: new Date(d.year).getTime(), \n    y: extractVal(d[key]) \n  }));\n\n  const seriesData = [\n    { key: 'energia', name: 'Energía Eléctrica', data: getSeriesData('energia') },\n    { key: 'petroleo', name: 'Petróleo y Gas', data: getSeriesData('petroleo') },\n    { key: 'mineria', name: 'Minería', data: getSeriesData('mineria') },\n    { key: 'siderurgia', name: 'Siderurgia', data: getSeriesData('siderurgia') },\n    { key: 'infra', name: 'Infraestructura', data: getSeriesData('infra') }\n  ];\n\n  var optionsMain = {\n    series: seriesData,\n    colors: ['#C2185B', '#B9CE39', '#6A1B99', '#4FBB73', '#F79D00'],\n    chart: {\n      id: 'chartBarMain',\n      type: 'bar',\n      height: 450,\n      stacked: true,\n      toolbar: { show: false }\n    },\n    grid: {\n      padding: {\n        right: 35,\n        left: 15\n      }\n    },\n    dataLabels: { enabled: false },\n    plotOptions: {\n      bar: {\n        dataLabels: {\n          total: {\n            enabled: true,\n            style: {\n              fontSize: '13px',\n              fontWeight: 900\n            },\n            formatter: function (val, opts) {\n              if (!val) return '';\n\n              // Validar si la columna está dentro del rango visible actual del zoom/brush\n              if (opts && opts.w && opts.w.globals) {\n                const timestamp = opts.w.globals.seriesX[0][opts.dataPointIndex];\n            ",
      "headStyle(\"rigi-cms-fix\", `.container:has(#mapa-portal){padding-left:0 !important;padding-right:0 !important;width:100% !important;}`);\nheadStyle('rigi__999d6df5647d2df27fe7', `.poncho-map{--pm-color-primary: var(--arg-escarapela);--pm-color-base: #eaeaea;--pm-slider-background: var(--arg-azul);--pm-slider-border-color: color-mix(in srgb, #626161 40%, white);--pm-slider-border-width: 2px;--pm-scrollbar-handle: #eaeaea;--pm-scrollbar-background: rgb(0, 0, 0, 0.15);--pm-hover-background: var(--arg-secundario);--pm-hover-color: white;--pm-active-color: #343232;--pm-active-visited-color: violet;--pm-active-background: var(--pm-color-primary);--color: var(--arg-escarapela);--pm-loader-spinner-background: var(--arg-amarillo);--pm-loader-background: var(--arg-azul);--pm-loader-spinner-color: var(--arg-primary-700)}details{--details-border-color: var(--arg-primary-300)}.details-container{--container-border-color: var(--arg-primary-500)}.poncho-map .marker--active:focus,.poncho-map .marker--active{fill:#000 !important;fill-opacity:0 !important}.color-primary{color:var(--color)}.poncho-map .pm-content a{color:var(--arg-escarapela)}.totals-overview{display:grid;gap:15px 15px;grid-template-areas:\"area-a area-b area-c\";grid-template-columns:27% 1fr 27%}.a,.b,.c{display:flex;flex-direction:column-reverse;align-self:self-start}.a{grid-area:area-a}.b{grid-area:area-b}.c{grid-area:area-c}.a .key,.b .key,.c .key,.a .value,.b .value,.c .value{margin:0}.a .key,.b .key,.c .key{font-size:.95rem}.value{grid-area:value}.a .value,.b .value,.c .value{font-size:1.35rem;line-height:2rem;display:flex;align-items:baseline}.c .value .small,.b .value .small,.c .value .small{font-size:1rem}.details-data dt{float:left;margin-right:.25rem}.details-data dt::after{content:\":\";font-weight:400}.details-data "
     ],
@@ -7497,8 +9626,8 @@
    }
   },
   "royalties": {
-   "ok": false,
-   "error": "RuntimeError: Excel de regalías: estructura en diagnóstico",
+   "ok": true,
+   "at": "2026-10-12T20:53Z",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
@@ -7847,9 +9976,61 @@
        "MENDOZA"
       ]
      ]
+    },
+    "tables": {
+     "price": [
+      [
+       "chubut",
+       "estado nacional",
+       "formosa",
+       "jujuy",
+       "la pampa",
+       "mendoza",
+       "neuquen",
+       "rio negro",
+       "salta",
+       "santa cruz",
+       "tierra del fuego",
+       "total provincia"
+      ],
+      "2026-12"
+     ],
+     "volume": [
+      [
+       "chubut",
+       "estado nacional",
+       "formosa",
+       "jujuy",
+       "la pampa",
+       "mendoza",
+       "neuquen",
+       "rio negro",
+       "salta",
+       "santa cruz",
+       "tierra del fuego",
+       "total provincia"
+      ],
+      "2026-12"
+     ],
+     "royalties": [
+      [
+       "chubut",
+       "estado nacional",
+       "formosa",
+       "jujuy",
+       "la pampa",
+       "mendoza",
+       "neuquen",
+       "rio negro",
+       "salta",
+       "santa cruz",
+       "tierra del fuego",
+       "total provincia"
+      ],
+      "2026-12"
+     ]
     }
-   },
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 951, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 943, in <lambda>\n    (\"royalties\", lambda d: royalties(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 814, in royalties\n    return {\"_pending\": True} if False else (_ for _ in ()).throw(RuntimeError(\"Excel de regalías: estructura en diagnóstico\"))\n                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 814, in <genexpr>\n    return {\"_pending\": True} if False else (_ for _ in ()).throw(RuntimeError(\"Excel de regalías: estructura en diagnóstico\"))\nRuntimeError: Excel de regalías: estructura en diagnóstico\n"
+   }
   }
  }
 }
