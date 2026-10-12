@@ -195,6 +195,25 @@
         <div class="chart" id="crudeChart"></div>
         <p class="note" id="crudeNote"></p>
       </div>
+      <div id="gasBlock" hidden style="margin-top:36px">
+        <div class="chart-head">
+          <h2 style="font-size:17px" data-i18n="gasPTitle">What Argentine gas sells for at the wellhead, USD per million BTU, by province</h2>
+        </div>
+        <ul class="facts" id="gasFacts" style="margin:4px 0 18px"></ul>
+        <ul class="legend" id="gasLegend"></ul>
+        <div class="chart" id="gasPChart"></div>
+        <p class="note" id="gasNote"></p>
+      </div>
+    </section>
+
+    <section class="section" id="tradeSection" hidden aria-labelledby="tradeTitle">
+      <h2 id="tradeTitle" data-i18n="tradeTitle">From importing energy to exporting it</h2>
+      <p class="section-lede" id="tradeLede"></p>
+      <ul class="facts" id="tradeFacts"></ul>
+      <div class="chart-head" style="margin-top:26px"><h2 style="font-size:17px" data-i18n="tradeChartTitle">Energy trade balance by year: fuel and energy exports minus fuel imports, USD million</h2></div>
+      <ul class="legend" id="tradeLegend"></ul>
+      <div class="chart" id="tradeChart"></div>
+      <p class="note" id="tradeNote"></p>
     </section>
 
     <section class="section" id="fuelSection" hidden aria-labelledby="fuelTitle">
@@ -464,6 +483,16 @@
       crudeTitle2: "What Argentine crude sells for at the wellhead, USD per barrel, by province",
       crudeF1: (m) => `per barrel in Neuquén, ${m}`, crudeF2: "in oil royalties paid to Neuquén over the last 12 months", crudeF3: "of all oil royalties in the country go to Neuquén",
       crudeNote2: (src) => `Source: ${src}. Average price declared by producers to pay royalties; converted from USD per m³. Neuquén sells Medanito, Chubut sells Escalante and Santa Cruz sells Cañadón Seco.`,
+      gasPTitle: "What Argentine gas sells for at the wellhead, USD per million BTU, by province",
+      gasF1: (m) => `per million BTU in Neuquén, ${m}`, gasF2: "in gas royalties paid to Neuquén over the last 12 months", gasF3: "of all gas royalties in the country go to Neuquén",
+      gasNote: (src) => `Source: ${src}. Price declared by producers to pay royalties, published in pesos per thousand m³; converted to dollars with the monthly official exchange rate (BCRA) and to million BTU at 9,300 kcal per m³.`,
+      tradeTitle: "From importing energy to exporting it",
+      tradeLede: (y, v) => `Argentina's energy trade turned positive thanks to Vaca Muerta: in ${y} fuel and energy exports exceeded fuel imports by USD ${v} million.`,
+      tradeF1: (y) => `energy trade surplus in ${y}, USD million`, tradeF2: (y) => `fuel and energy exports in ${y}, USD million`,
+      tradeF3: (q) => `surplus in ${q}, USD million`, tradeF4: (q) => `the same quarter a year earlier`,
+      tradeChartTitle: "Energy trade balance by year: fuel and energy exports minus fuel imports, USD million",
+      tradeSurplus: "Surplus", tradeDeficit: "Deficit", qLabel: (p) => `Q${(+p.slice(5, 7) + 2) / 3} ${p.slice(0, 4)}`,
+      tradeNote: (src) => `Source: ${src}. Exports of fuels and energy and imports of fuels and lubricants, in current dollars. Years without an annual figure are rebuilt from the four quarters.`,
       cFob: "Medanito, export (FOB)", cDom: "Medanito, domestic market", cBrent: "Brent",
       crudeNote: (src, d) => `Source: ${src}. Medanito is the reference crude of the Neuquén basin. Latest month: ${d}.`,
       fuelTitle: "Fuel prices at the pump",
@@ -477,7 +506,7 @@
       rigiNote: (n, d, portal) => `${n} approvals detected since ${d}; the list grows as new resolutions are published. For every project approved before that date, see the ${portal}.`,
       rigiPortal: "official RIGI portal",
       lowBase: "Growth from a small base: the operator or block produced little a year ago.", lowBaseNote: "* Change of more than 200%, from a small base a year ago.",
-      navProd: "Production", navMap: "Map", navWells: "Wells", navRes: "Reserves", navPrices: "Prices", navRigi: "RIGI", navCos: "Companies", navData: "Data tables", navReg: "Regulation and news",
+      navProd: "Production", navMap: "Map", navWells: "Wells", navRes: "Reserves", navPrices: "Prices and trade", navRigi: "RIGI", navCos: "Companies", navData: "Data tables", navReg: "Regulation and news",
       rigiPlanTitle: "Committed RIGI investment by year, USD million",
       rigiPlanNote: (src, tot, oil) => `All approved projects, every sector: USD ${tot} million in total, of which USD ${oil} million in oil and gas. Source: ${src}.`,
       rpOther: "Other sectors", rpUp: "Oil & gas upstream", rpMid: "Oil & gas midstream", rpFert: "Fertilisers",
@@ -574,6 +603,16 @@
       crudeTitle2: "A cuánto se vende el crudo argentino en boca de pozo, USD por barril, por provincia",
       crudeF1: (m) => `por barril en Neuquén, ${m}`, crudeF2: "de regalías petroleras cobradas por Neuquén en los últimos 12 meses", crudeF3: "de todas las regalías petroleras del país van a Neuquén",
       crudeNote2: (src) => `Fuente: ${src}. Precio promedio que declaran las productoras para pagar regalías; convertido desde USD por m³. Neuquén vende crudo Medanito, Chubut Escalante y Santa Cruz Cañadón Seco.`,
+      gasPTitle: "A cuánto se vende el gas argentino en boca de pozo, USD por millón de BTU, por provincia",
+      gasF1: (m) => `por millón de BTU en Neuquén, ${m}`, gasF2: "de regalías gasíferas cobradas por Neuquén en los últimos 12 meses", gasF3: "de todas las regalías de gas del país van a Neuquén",
+      gasNote: (src) => `Fuente: ${src}. Precio que declaran las productoras para pagar regalías, publicado en pesos por mil m³; convertido a dólares con el tipo de cambio oficial mensual (BCRA) y a millones de BTU con 9.300 kcal por m³.`,
+      tradeTitle: "De importar energía a exportarla",
+      tradeLede: (y, v) => `La balanza comercial de la energía se volvió positiva gracias a Vaca Muerta: en ${y} las exportaciones de combustibles y energía superaron a las importaciones de combustibles en USD ${v} millones.`,
+      tradeF1: (y) => `superávit energético en ${y}, millones de USD`, tradeF2: (y) => `exportaciones de combustibles y energía en ${y}, millones de USD`,
+      tradeF3: (q) => `superávit en el ${q}, millones de USD`, tradeF4: (q) => `el mismo trimestre un año antes`,
+      tradeChartTitle: "Balanza comercial energética por año: exportaciones de combustibles y energía menos importaciones de combustibles, millones de USD",
+      tradeSurplus: "Superávit", tradeDeficit: "Déficit", qLabel: (p) => `${(+p.slice(5, 7) + 2) / 3}.º trimestre de ${p.slice(0, 4)}`,
+      tradeNote: (src) => `Fuente: ${src}. Exportaciones de combustibles y energía e importaciones de combustibles y lubricantes, en dólares corrientes. Los años sin dato anual se reconstruyen con sus cuatro trimestres.`,
       cFob: "Medanito, exportación (FOB)", cDom: "Medanito, mercado interno", cBrent: "Brent",
       crudeNote: (src, d) => `Fuente: ${src}. Medanito es el crudo de referencia de la cuenca Neuquina. Último mes: ${d}.`,
       fuelTitle: "Precios de combustibles en surtidor",
@@ -587,7 +626,7 @@
       rigiNote: (n, d, portal) => `${n} aprobaciones detectadas desde el ${d}; la lista crece con cada nueva resolución. Para todos los proyectos aprobados antes de esa fecha, ver el ${portal}.`,
       rigiPortal: "portal oficial del RIGI",
       lowBase: "Crecimiento desde una base chica: la operadora o el bloque producía poco hace un año.", lowBaseNote: "* Variación de más del 200%, desde una base chica hace un año.",
-      navProd: "Producción", navMap: "Mapa", navWells: "Pozos", navRes: "Reservas", navPrices: "Precios", navRigi: "RIGI", navCos: "Empresas", navData: "Tablas", navReg: "Normativa y noticias",
+      navProd: "Producción", navMap: "Mapa", navWells: "Pozos", navRes: "Reservas", navPrices: "Precios y comercio", navRigi: "RIGI", navCos: "Empresas", navData: "Tablas", navReg: "Normativa y noticias",
       rigiPlanTitle: "Inversión comprometida en el RIGI por año, millones de USD",
       rigiPlanNote: (src, tot, oil) => `Todos los proyectos aprobados, de todos los sectores: USD ${tot} millones en total, de los cuales USD ${oil} millones en petróleo y gas. Fuente: ${src}.`,
       rpOther: "Otros sectores", rpUp: "Petróleo y gas, upstream", rpMid: "Petróleo y gas, midstream", rpFert: "Fertilizantes",
@@ -853,6 +892,47 @@
     host.append(svg, tip);
   }
 
+  // Columnas por encima y por debajo de cero (superávit / déficit).
+  function divergingColumns(host, labels, vals, unit, label) {
+    host.innerHTML = "";
+    const W = host.clientWidth || 700, H = 280, m = { t: 14, r: 8, b: 28, l: 52 };
+    const iw = W - m.l - m.r, ih = H - m.t - m.b;
+    const hi = Math.max(0, ...vals), lo = Math.min(0, ...vals);
+    const tk = niceTicks(Math.max(hi, -lo)), top = tk[tk.length - 1];
+    const ymax = hi > 0 ? top : 0, ymin = lo < 0 ? -top : 0;
+    const y = v => m.t + (ymax - v) / (ymax - ymin) * ih;
+    const step = iw / labels.length, bw = Math.max(3, Math.min(34, step * 0.7));
+    const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": label || "" });
+    const ticks = [...tk.filter(v => v <= ymax), ...tk.filter(v => v > 0 && -v >= ymin).map(v => -v)];
+    for (const v of ticks) {
+      svg.append(svgEl("line", { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), stroke: v === 0 ? "var(--ink-3)" : "var(--grid)" }));
+      const lab = svgEl("text", { x: m.l - 8, y: y(v) + 4, "text-anchor": "end" }); lab.textContent = (v < 0 ? "−" : "") + axisLabel(Math.abs(v)); svg.append(lab);
+    }
+    const tip = document.createElement("div"); tip.className = "tip";
+    const every = Math.ceil(36 / step);
+    labels.forEach((lb, i) => {
+      const v = vals[i], cx = m.l + i * step + step / 2;
+      const g = svgEl("g", { tabindex: 0 });
+      g.append(svgEl("rect", { x: m.l + i * step, y: m.t, width: step, height: ih, fill: "transparent" }));
+      g.append(svgEl("rect", { x: cx - bw / 2, y: Math.min(y(v), y(0)), width: bw, height: Math.max(1, Math.abs(y(v) - y(0))), rx: 1.5, fill: v >= 0 ? "var(--up)" : "var(--down)" }));
+      if ((labels.length - 1 - i) % every === 0) { const xl = svgEl("text", { x: cx, y: H - 8, "text-anchor": "middle" }); xl.textContent = step < 30 ? "’" + lb.slice(2) : lb; svg.append(xl); }
+      const show = () => {
+        tip.innerHTML = "";
+        const s1 = document.createElement("strong"); s1.textContent = `${v < 0 ? "−" : "+"}${fmt(Math.abs(v))} ${unit}`;
+        const d = document.createElement("div"); d.textContent = lb; tip.append(s1, d);
+        const sc = host.clientWidth / W;
+        tip.style.left = Math.min(Math.max(0, cx * sc - tip.offsetWidth / 2), host.clientWidth - tip.offsetWidth) + "px";
+        tip.style.top = Math.max(0, Math.min(y(v), y(0)) * sc - tip.offsetHeight - 10) + "px";
+        tip.style.opacity = 1;
+      };
+      const hide = () => { tip.style.opacity = 0; };
+      g.addEventListener("pointerenter", show); g.addEventListener("pointerleave", hide);
+      g.addEventListener("focus", show); g.addEventListener("blur", hide);
+      svg.append(g);
+    });
+    host.append(svg, tip);
+  }
+
   // Yearly stacked columns with a tooltip listing every segment.
   function stackedColumns(host, labels, series, unit) {
     host.innerHTML = "";
@@ -1089,6 +1169,42 @@
       $("#fuelProv tbody").innerHTML = fp.by_province.map(p =>
         `<tr><td>${esc(p.name)}</td><td>${fmt(p.super)}</td><td>${fmt(p.premium)}</td><td>${fmt(p.diesel)}</td></tr>`).join("");
       $("#fuelNote").innerHTML = t.fuelNote(`<a href="${esc(fp.source.url)}" rel="noopener">${esc(fp.source.name)}</a>`, esc(fp.as_of ? shortDate(fp.as_of) : "–"));
+    }
+
+    const rg = E.royalties_gas;
+    if (rg && rg.price_usd_mmbtu && rg.price_usd_mmbtu["Neuquén"] && rg.price_usd_mmbtu["Neuquén"].length > 12) {
+      $("#gasBlock").hidden = false;
+      const provs = ["Neuquén", "Santa Cruz", "Chubut"].filter(n => rg.price_usd_mmbtu[n]);
+      const maps = provs.map(n => Object.fromEntries(rg.price_usd_mmbtu[n].map(p => [p.period, p.usd_mmbtu])));
+      const periods = Object.keys(maps[0]).filter(p => p >= "2019-01" && maps.every(m => m[p] != null)).sort();
+      const series = {}; provs.forEach((n, i) => { series[n] = periods.map(p => maps[i][p]); });
+      const colors = ["var(--gas)", "var(--s3)", "var(--s4)"];
+      $("#gasLegend").innerHTML = provs.map((n, k) => `<li><i style="background:${colors[k]}"></i>${esc(n)}</li>`).join("");
+      multiLine($("#gasPChart"), periods, provs, series, colors);
+      const r12 = rg.neuquen_12m, last = periods[periods.length - 1];
+      const f = [[`USD ${fmt(maps[0][last], 2)}`, t.gasF1(monthName(last))]];
+      if (r12) {
+        f.push([`USD ${fmt(r12.royalties_usd_m, 0)} M`, t.gasF2]);
+        if (r12.national_royalties_usd_m) f.push([fmt(r12.royalties_usd_m / r12.national_royalties_usd_m * 100, 0) + "%", t.gasF3]);
+      }
+      $("#gasFacts").innerHTML = f.map(([a, b]) => `<li><strong>${esc(a)}</strong>${esc(b)}</li>`).join("");
+      $("#gasNote").innerHTML = t.gasNote(`<a href="${esc(rg.source.url)}" rel="noopener">${esc(rg.source.name)}</a>, ${esc(rg.source.license)}`);
+    }
+
+    const tb = E.trade_balance;
+    if (tb && tb.yearly && tb.yearly.length > 6) {
+      $("#tradeSection").hidden = false;
+      const ly = tb.yearly[tb.yearly.length - 1];
+      $("#tradeLede").textContent = t.tradeLede(ly.year, fmt(ly.balance));
+      const f = [[fmt(ly.balance), t.tradeF1(ly.year)], [fmt(ly.exports), t.tradeF2(ly.year)]];
+      if (tb.latest_quarter) {
+        f.push([fmt(tb.latest_quarter.balance), t.tradeF3(t.qLabel(tb.latest_quarter.period))]);
+        if (tb.latest_quarter_prev_year) f.push([fmt(tb.latest_quarter_prev_year.balance), t.tradeF4()]);
+      }
+      $("#tradeFacts").innerHTML = f.map(([a, b]) => `<li><strong>${esc(a)}</strong>${esc(b)}</li>`).join("");
+      $("#tradeLegend").innerHTML = `<li><i style="background:var(--up)"></i>${esc(t.tradeSurplus)}</li><li><i style="background:var(--down)"></i>${esc(t.tradeDeficit)}</li>`;
+      divergingColumns($("#tradeChart"), tb.yearly.map(y => String(y.year)), tb.yearly.map(y => y.balance), "USD M", t.tradeChartTitle);
+      $("#tradeNote").innerHTML = t.tradeNote(`<a href="${esc(tb.source.url)}" rel="noopener">${esc(tb.source.name)}</a>, ${esc(tb.source.license)}`);
     }
 
     const rp = E.rigi_portal && E.rigi_portal.plan_by_year;
