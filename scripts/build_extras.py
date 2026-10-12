@@ -125,6 +125,11 @@ def fracking(diag: dict) -> dict:
     df = df[df["_per"] < tope]  # el mes en curso siempre está incompleto
     mens = df.groupby("_per").agg(stages=("_etapas", "sum"), sand_t=("_arena", "sum"),
                                   wells=("_etapas", "size"), lateral_m=("_rama", "mean")).sort_index()
+    # Los últimos meses llegan incompletos (las operadoras declaran con demora):
+    # se descartan mientras estén por debajo del 50% del promedio de los 6 meses previos.
+    while len(mens) > 8 and mens["stages"].iloc[-1] < 0.5 * mens["stages"].iloc[-7:-1].mean():
+        diag.setdefault("dropped_incomplete", []).append(int(mens.index[-1]))
+        mens = mens.iloc[:-1]
     mens = mens.tail(48)
     monthly = [{
         "period": f"{p // 100:04d}-{p % 100:02d}",
@@ -239,14 +244,22 @@ NOISE = ["licitacion privada", "designase", "designacion", "dase por designad", 
 def regulations(diag: dict, previo: dict | None) -> dict:
     from bs4 import BeautifulSoup
 
-    html = get(BO_SECCION).text
-    diag["html_len"] = len(html)
-    soup = BeautifulSoup(html, "html.parser")
-    links = soup.select('a[href*="/detalleAviso/primera/"]')
-    diag["links"] = len(links)
+    viejos = (previo or {}).get("items", [])
+    # Sin historial, se recorren los últimos 60 días; después alcanza con la última semana.
+    dias = 60 if len(viejos) < 5 else 7
+    paginas = [BO_SECCION] + [f"{BO_SECCION}/{(date.today() - timedelta(days=d)).strftime('%Y%m%d')}"
+                              for d in range(1, dias + 1) if (date.today() - timedelta(days=d)).weekday() < 5]
+    links, errores = [], 0
+    for url in paginas:
+        try:
+            soup = BeautifulSoup(get(url, timeout=40).text, "html.parser")
+            links += soup.select('a[href*="/detalleAviso/primera/"]')
+        except Exception:
+            errores += 1
+    diag.update({"pages": len(paginas), "page_errors": errores, "links": len(links)})
     if not links:
-        diag["sample"] = re.sub(r"\s+", " ", soup.get_text(" "))[:400]
-        raise RuntimeError("No se encontraron avisos en la página de la primera sección")
+        raise RuntimeError("No se encontraron avisos en la primera sección")
+    diag["sample"] = [" | ".join(p.strip() for p in a.get_text("\n").split("\n") if p.strip())[:200] for a in links[:3]]
 
     nuevos = []
     for a in links:
@@ -268,8 +281,7 @@ def regulations(diag: dict, previo: dict | None) -> dict:
             "url": BO_BASE + href if href.startswith("/") else href,
             "tags": sorted({k for k in KEYWORDS if k in t})[:5],
         })
-    diag["matched_today"] = len(nuevos)
-    viejos = (previo or {}).get("items", [])
+    diag["matched"] = len(nuevos)
     por_id = {i["id"]: i for i in viejos}
     por_id.update({i["id"]: i for i in nuevos})
     limite = (date.today() - timedelta(days=120)).isoformat()
@@ -286,17 +298,14 @@ def regulations(diag: dict, previo: dict | None) -> dict:
 # ---------------------------------------------------------------------------
 FEEDS = [
     ("EconoJournal", ["https://econojournal.com.ar/feed/"]),
-    ("Shale24", ["https://www.shale24.com/rss", "https://www.shale24.com/feed", "https://www.shale24.com/rss/pages/home.xml"]),
-    ("Río Negro", ["https://www.rionegro.com.ar/arc/outboundfeeds/rss/category/energia/?outputType=xml",
-                   "https://www.rionegro.com.ar/energia/feed/"]),
-    ("Mejor Energía", ["https://www.mejorenergia.com.ar/rss", "https://www.mejorenergia.com.ar/feed"]),
     ("Infobae", ["https://www.infobae.com/arc/outboundfeeds/rss/category/economia/"]),
     ("Ámbito", ["https://www.ambito.com/rss/pages/energia.xml", "https://www.ambito.com/rss/pages/economia.xml"]),
 ]
 NEWS_KW = ["vaca muerta", "shale", "neuquen", "ypf", "vista energy", "pluspetrol", "tecpetrol", "pampa energia",
-           "rigi", "gnl", "oleoducto", "gasoducto", "hidrocarburo", "petroleo", "fracking", "fractura"]
+           "rigi", "gnl", "oleoducto", "gasoducto", "hidrocarburo", "petroleo", "petrolera", "fracking", "fractura",
+           "brent", "crudo", "barriles", "energia"]
 # Medios dedicados a energía: no se filtran por palabra clave.
-SECTORIALES = {"EconoJournal", "Shale24", "Mejor Energía"}
+SECTORIALES = {"EconoJournal"}
 
 
 def news(diag: dict) -> dict:
@@ -317,7 +326,7 @@ def news(diag: dict) -> dict:
                     link = e.get("link", "")
                     if not titulo or not link.startswith("http"):
                         continue
-                    t = norm(titulo + " " + e.get("summary", "")[:300])
+                    t = norm(titulo)
                     if medio not in SECTORIALES and not any(k in t for k in NEWS_KW):
                         continue
                     cuando = None
