@@ -1,0 +1,1647 @@
+{
+ "fracking": {
+  "source": {
+   "name": "Secretaría de Energía, Adjunto IV (datos de fractura)",
+   "url": "http://datos.energia.gob.ar/dataset/datos-de-fractura-de-pozos-adjunto-iv",
+   "license": "CC BY 4.0"
+  },
+  "monthly": [
+   {
+    "period": "2022-08",
+    "stages": 1007,
+    "wells": 24,
+    "sand_t": 242469,
+    "lateral_m": 2689
+   },
+   {
+    "period": "2022-09",
+    "stages": 1214,
+    "wells": 28,
+    "sand_t": 282650,
+    "lateral_m": 2772
+   },
+   {
+    "period": "2022-10",
+    "stages": 1101,
+    "wells": 28,
+    "sand_t": 247906,
+    "lateral_m": 2472
+   },
+   {
+    "period": "2022-11",
+    "stages": 1164,
+    "wells": 27,
+    "sand_t": 428071,
+    "lateral_m": 2639
+   },
+   {
+    "period": "2022-12",
+    "stages": 928,
+    "wells": 24,
+    "sand_t": 204096,
+    "lateral_m": 2429
+   },
+   {
+    "period": "2023-01",
+    "stages": 1534,
+    "wells": 37,
+    "sand_t": 342710,
+    "lateral_m": 2481
+   },
+   {
+    "period": "2023-02",
+    "stages": 718,
+    "wells": 15,
+    "sand_t": 168151,
+    "lateral_m": 2867
+   },
+   {
+    "period": "2023-03",
+    "stages": 1327,
+    "wells": 29,
+    "sand_t": 278756,
+    "lateral_m": 2835
+   },
+   {
+    "period": "2023-04",
+    "stages": 1420,
+    "wells": 30,
+    "sand_t": 309917,
+    "lateral_m": 2737
+   },
+   {
+    "period": "2023-05",
+    "stages": 1164,
+    "wells": 27,
+    "sand_t": 269944,
+    "lateral_m": 2673
+   },
+   {
+    "period": "2023-06",
+    "stages": 1302,
+    "wells": 30,
+    "sand_t": 305553,
+    "lateral_m": 2758
+   },
+   {
+    "period": "2023-07",
+    "stages": 1321,
+    "wells": 27,
+    "sand_t": 306584,
+    "lateral_m": 3078
+   },
+   {
+    "period": "2023-08",
+    "stages": 1086,
+    "wells": 23,
+    "sand_t": 252515,
+    "lateral_m": 2925
+   },
+   {
+    "period": "2023-09",
+    "stages": 1023,
+    "wells": 28,
+    "sand_t": 236383,
+    "lateral_m": 2290
+   },
+   {
+    "period": "2023-10",
+    "stages": 1537,
+    "wells": 40,
+    "sand_t": 358941,
+    "lateral_m": 2448
+   },
+   {
+    "period": "2023-11",
+    "stages": 512,
+    "wells": 13,
+    "sand_t": 134756,
+    "lateral_m": 2875
+   },
+   {
+    "period": "2023-12",
+    "stages": 940,
+    "wells": 21,
+    "sand_t": 205292,
+    "lateral_m": 2704
+   },
+   {
+    "period": "2024-01",
+    "stages": 1424,
+    "wells": 30,
+    "sand_t": 329739,
+    "lateral_m": 2727
+   },
+   {
+    "period": "2024-02",
+    "stages": 1457,
+    "wells": 34,
+    "sand_t": 324441,
+    "lateral_m": 2624
+   },
+   {
+    "period": "2024-03",
+    "stages": 1687,
+    "wells": 34,
+    "sand_t": 380852,
+    "lateral_m": 2901
+   },
+   {
+    "period": "2024-04",
+    "stages": 2102,
+    "wells": 43,
+    "sand_t": 491820,
+    "lateral_m": 2898
+   },
+   {
+    "period": "2024-05",
+    "stages": 972,
+    "wells": 28,
+    "sand_t": 232754,
+    "lateral_m": 2411
+   },
+   {
+    "period": "2024-06",
+    "stages": 1077,
+    "wells": 21,
+    "sand_t": 255847,
+    "lateral_m": 3202
+   },
+   {
+    "period": "2024-07",
+    "stages": 1116,
+    "wells": 23,
+    "sand_t": 269527,
+    "lateral_m": 2924
+   },
+   {
+    "period": "2024-08",
+    "stages": 1384,
+    "wells": 32,
+    "sand_t": 331077,
+    "lateral_m": 2775
+   },
+   {
+    "period": "2024-09",
+    "stages": 1722,
+    "wells": 35,
+    "sand_t": 400657,
+    "lateral_m": 2992
+   },
+   {
+    "period": "2024-10",
+    "stages": 1454,
+    "wells": 28,
+    "sand_t": 342370,
+    "lateral_m": 3187
+   },
+   {
+    "period": "2024-11",
+    "stages": 1156,
+    "wells": 26,
+    "sand_t": 279939,
+    "lateral_m": 2857
+   },
+   {
+    "period": "2024-12",
+    "stages": 1048,
+    "wells": 22,
+    "sand_t": 236538,
+    "lateral_m": 2820
+   },
+   {
+    "period": "2025-01",
+    "stages": 2252,
+    "wells": 46,
+    "sand_t": 521665,
+    "lateral_m": 3016
+   },
+   {
+    "period": "2025-02",
+    "stages": 1572,
+    "wells": 29,
+    "sand_t": 366721,
+    "lateral_m": 2919
+   },
+   {
+    "period": "2025-03",
+    "stages": 1892,
+    "wells": 39,
+    "sand_t": 417572,
+    "lateral_m": 2867
+   },
+   {
+    "period": "2025-04",
+    "stages": 2289,
+    "wells": 49,
+    "sand_t": 545338,
+    "lateral_m": 2870
+   },
+   {
+    "period": "2025-05",
+    "stages": 3089,
+    "wells": 55,
+    "sand_t": 676595,
+    "lateral_m": 3296
+   },
+   {
+    "period": "2025-06",
+    "stages": 951,
+    "wells": 18,
+    "sand_t": 223476,
+    "lateral_m": 3309
+   },
+   {
+    "period": "2025-07",
+    "stages": 2273,
+    "wells": 45,
+    "sand_t": 545897,
+    "lateral_m": 3192
+   },
+   {
+    "period": "2025-08",
+    "stages": 1833,
+    "wells": 35,
+    "sand_t": 414819,
+    "lateral_m": 3097
+   },
+   {
+    "period": "2025-09",
+    "stages": 1815,
+    "wells": 35,
+    "sand_t": 421235,
+    "lateral_m": 3149
+   },
+   {
+    "period": "2025-10",
+    "stages": 1855,
+    "wells": 34,
+    "sand_t": 417564,
+    "lateral_m": 3333
+   },
+   {
+    "period": "2025-11",
+    "stages": 1562,
+    "wells": 32,
+    "sand_t": 368494,
+    "lateral_m": 2994
+   },
+   {
+    "period": "2025-12",
+    "stages": 2181,
+    "wells": 40,
+    "sand_t": 479514,
+    "lateral_m": 3092
+   },
+   {
+    "period": "2026-01",
+    "stages": 2474,
+    "wells": 46,
+    "sand_t": 538461,
+    "lateral_m": 3087
+   },
+   {
+    "period": "2026-02",
+    "stages": 2592,
+    "wells": 51,
+    "sand_t": 595395,
+    "lateral_m": 3050
+   },
+   {
+    "period": "2026-03",
+    "stages": 1656,
+    "wells": 32,
+    "sand_t": 376197,
+    "lateral_m": 3038
+   },
+   {
+    "period": "2026-04",
+    "stages": 1821,
+    "wells": 34,
+    "sand_t": 417378,
+    "lateral_m": 3194
+   },
+   {
+    "period": "2026-05",
+    "stages": 1583,
+    "wells": 32,
+    "sand_t": 361212,
+    "lateral_m": 3044
+   },
+   {
+    "period": "2026-06",
+    "stages": 1589,
+    "wells": 33,
+    "sand_t": 359877,
+    "lateral_m": 2954
+   },
+   {
+    "period": "2026-07",
+    "stages": 174,
+    "wells": 4,
+    "sand_t": 40821,
+    "lateral_m": 3200
+   }
+  ],
+  "stages_12m": 21135,
+  "stages_12m_yoy_pct": 0.3,
+  "wells_12m": 408,
+  "sand_12m_t": 4790967,
+  "operators": [
+   {
+    "name": "YPF",
+    "stages_12m": 10842,
+    "share_pct": 51.3
+   },
+   {
+    "name": "Pluspetrol",
+    "stages_12m": 2781,
+    "share_pct": 13.2
+   },
+   {
+    "name": "Vista",
+    "stages_12m": 2200,
+    "share_pct": 10.4
+   },
+   {
+    "name": "Pampa Energía",
+    "stages_12m": 1738,
+    "share_pct": 8.2
+   },
+   {
+    "name": "Pan American Energy",
+    "stages_12m": 1226,
+    "share_pct": 5.8
+   },
+   {
+    "name": "Shell",
+    "stages_12m": 725,
+    "share_pct": 3.4
+   },
+   {
+    "name": "Chevron",
+    "stages_12m": 588,
+    "share_pct": 2.8
+   },
+   {
+    "name": "TotalEnergies",
+    "stages_12m": 444,
+    "share_pct": 2.1
+   }
+  ],
+  "last_period": "2026-07"
+ },
+ "fx": {
+  "source": {
+   "name": "BCRA, Estadísticas Cambiarias (Comunicación A 3500)",
+   "url": "https://www.bcra.gob.ar/en/central-bank-api-catalog/"
+  },
+  "latest": {
+   "date": "2026-10-09",
+   "ars_per_usd": 1517.0
+  },
+  "yoy_pct": 12.5,
+  "daily": [
+   {
+    "date": "2025-10-13",
+    "ars_per_usd": 1349.0
+   },
+   {
+    "date": "2025-10-14",
+    "ars_per_usd": 1360.0
+   },
+   {
+    "date": "2025-10-15",
+    "ars_per_usd": 1380.0
+   },
+   {
+    "date": "2025-10-16",
+    "ars_per_usd": 1402.0
+   },
+   {
+    "date": "2025-10-17",
+    "ars_per_usd": 1450.0
+   },
+   {
+    "date": "2025-10-20",
+    "ars_per_usd": 1475.0
+   },
+   {
+    "date": "2025-10-21",
+    "ars_per_usd": 1490.5
+   },
+   {
+    "date": "2025-10-22",
+    "ars_per_usd": 1489.0
+   },
+   {
+    "date": "2025-10-23",
+    "ars_per_usd": 1479.0
+   },
+   {
+    "date": "2025-10-24",
+    "ars_per_usd": 1492.0
+   },
+   {
+    "date": "2025-10-27",
+    "ars_per_usd": 1435.0
+   },
+   {
+    "date": "2025-10-28",
+    "ars_per_usd": 1470.0
+   },
+   {
+    "date": "2025-10-29",
+    "ars_per_usd": 1436.0
+   },
+   {
+    "date": "2025-10-30",
+    "ars_per_usd": 1438.0
+   },
+   {
+    "date": "2025-10-31",
+    "ars_per_usd": 1445.0
+   },
+   {
+    "date": "2025-11-03",
+    "ars_per_usd": 1482.0
+   },
+   {
+    "date": "2025-11-04",
+    "ars_per_usd": 1454.0
+   },
+   {
+    "date": "2025-11-05",
+    "ars_per_usd": 1452.0
+   },
+   {
+    "date": "2025-11-07",
+    "ars_per_usd": 1415.0
+   },
+   {
+    "date": "2025-11-10",
+    "ars_per_usd": 1420.5
+   },
+   {
+    "date": "2025-11-11",
+    "ars_per_usd": 1413.0
+   },
+   {
+    "date": "2025-11-12",
+    "ars_per_usd": 1412.0
+   },
+   {
+    "date": "2025-11-13",
+    "ars_per_usd": 1406.0
+   },
+   {
+    "date": "2025-11-14",
+    "ars_per_usd": 1403.0
+   },
+   {
+    "date": "2025-11-17",
+    "ars_per_usd": 1387.0
+   },
+   {
+    "date": "2025-11-18",
+    "ars_per_usd": 1400.0
+   },
+   {
+    "date": "2025-11-19",
+    "ars_per_usd": 1406.5
+   },
+   {
+    "date": "2025-11-20",
+    "ars_per_usd": 1425.0
+   },
+   {
+    "date": "2025-11-25",
+    "ars_per_usd": 1447.5
+   },
+   {
+    "date": "2025-11-26",
+    "ars_per_usd": 1453.5
+   },
+   {
+    "date": "2025-11-27",
+    "ars_per_usd": 1450.0
+   },
+   {
+    "date": "2025-11-28",
+    "ars_per_usd": 1451.5
+   },
+   {
+    "date": "2025-12-01",
+    "ars_per_usd": 1451.5
+   },
+   {
+    "date": "2025-12-02",
+    "ars_per_usd": 1455.0
+   },
+   {
+    "date": "2025-12-03",
+    "ars_per_usd": 1453.0
+   },
+   {
+    "date": "2025-12-04",
+    "ars_per_usd": 1444.0
+   },
+   {
+    "date": "2025-12-05",
+    "ars_per_usd": 1435.0
+   },
+   {
+    "date": "2025-12-09",
+    "ars_per_usd": 1442.0
+   },
+   {
+    "date": "2025-12-10",
+    "ars_per_usd": 1437.5
+   },
+   {
+    "date": "2025-12-11",
+    "ars_per_usd": 1436.0
+   },
+   {
+    "date": "2025-12-12",
+    "ars_per_usd": 1441.0
+   },
+   {
+    "date": "2025-12-15",
+    "ars_per_usd": 1438.5
+   },
+   {
+    "date": "2025-12-16",
+    "ars_per_usd": 1451.0
+   },
+   {
+    "date": "2025-12-17",
+    "ars_per_usd": 1451.0
+   },
+   {
+    "date": "2025-12-18",
+    "ars_per_usd": 1451.0
+   },
+   {
+    "date": "2025-12-19",
+    "ars_per_usd": 1450.0
+   },
+   {
+    "date": "2025-12-22",
+    "ars_per_usd": 1452.0
+   },
+   {
+    "date": "2025-12-23",
+    "ars_per_usd": 1451.0
+   },
+   {
+    "date": "2025-12-26",
+    "ars_per_usd": 1452.5
+   },
+   {
+    "date": "2025-12-29",
+    "ars_per_usd": 1457.0
+   },
+   {
+    "date": "2025-12-30",
+    "ars_per_usd": 1455.0
+   },
+   {
+    "date": "2025-12-31",
+    "ars_per_usd": 1455.0
+   },
+   {
+    "date": "2026-01-02",
+    "ars_per_usd": 1475.0
+   },
+   {
+    "date": "2026-01-05",
+    "ars_per_usd": 1470.0
+   },
+   {
+    "date": "2026-01-06",
+    "ars_per_usd": 1467.5
+   },
+   {
+    "date": "2026-01-07",
+    "ars_per_usd": 1460.0
+   },
+   {
+    "date": "2026-01-08",
+    "ars_per_usd": 1464.0
+   },
+   {
+    "date": "2026-01-09",
+    "ars_per_usd": 1465.0
+   },
+   {
+    "date": "2026-01-12",
+    "ars_per_usd": 1467.5
+   },
+   {
+    "date": "2026-01-13",
+    "ars_per_usd": 1457.0
+   },
+   {
+    "date": "2026-01-14",
+    "ars_per_usd": 1453.0
+   },
+   {
+    "date": "2026-01-15",
+    "ars_per_usd": 1441.0
+   },
+   {
+    "date": "2026-01-16",
+    "ars_per_usd": 1430.0
+   },
+   {
+    "date": "2026-01-19",
+    "ars_per_usd": 1434.5
+   },
+   {
+    "date": "2026-01-20",
+    "ars_per_usd": 1434.5
+   },
+   {
+    "date": "2026-01-21",
+    "ars_per_usd": 1430.5
+   },
+   {
+    "date": "2026-01-22",
+    "ars_per_usd": 1429.5
+   },
+   {
+    "date": "2026-01-23",
+    "ars_per_usd": 1433.0
+   },
+   {
+    "date": "2026-01-26",
+    "ars_per_usd": 1437.5
+   },
+   {
+    "date": "2026-01-27",
+    "ars_per_usd": 1442.5
+   },
+   {
+    "date": "2026-01-28",
+    "ars_per_usd": 1444.5
+   },
+   {
+    "date": "2026-01-29",
+    "ars_per_usd": 1444.5
+   },
+   {
+    "date": "2026-01-30",
+    "ars_per_usd": 1447.0
+   },
+   {
+    "date": "2026-02-02",
+    "ars_per_usd": 1451.0
+   },
+   {
+    "date": "2026-02-03",
+    "ars_per_usd": 1446.0
+   },
+   {
+    "date": "2026-02-04",
+    "ars_per_usd": 1447.5
+   },
+   {
+    "date": "2026-02-05",
+    "ars_per_usd": 1442.0
+   },
+   {
+    "date": "2026-02-06",
+    "ars_per_usd": 1432.0
+   },
+   {
+    "date": "2026-02-09",
+    "ars_per_usd": 1416.0
+   },
+   {
+    "date": "2026-02-10",
+    "ars_per_usd": 1406.0
+   },
+   {
+    "date": "2026-02-11",
+    "ars_per_usd": 1400.0
+   },
+   {
+    "date": "2026-02-12",
+    "ars_per_usd": 1395.0
+   },
+   {
+    "date": "2026-02-13",
+    "ars_per_usd": 1399.5
+   },
+   {
+    "date": "2026-02-18",
+    "ars_per_usd": 1396.0
+   },
+   {
+    "date": "2026-02-19",
+    "ars_per_usd": 1389.0
+   },
+   {
+    "date": "2026-02-20",
+    "ars_per_usd": 1376.0
+   },
+   {
+    "date": "2026-02-23",
+    "ars_per_usd": 1370.5
+   },
+   {
+    "date": "2026-02-24",
+    "ars_per_usd": 1380.5
+   },
+   {
+    "date": "2026-02-25",
+    "ars_per_usd": 1399.0
+   },
+   {
+    "date": "2026-02-26",
+    "ars_per_usd": 1408.0
+   },
+   {
+    "date": "2026-02-27",
+    "ars_per_usd": 1397.0
+   },
+   {
+    "date": "2026-03-02",
+    "ars_per_usd": 1395.0
+   },
+   {
+    "date": "2026-03-03",
+    "ars_per_usd": 1415.0
+   },
+   {
+    "date": "2026-03-04",
+    "ars_per_usd": 1400.5
+   },
+   {
+    "date": "2026-03-05",
+    "ars_per_usd": 1407.0
+   },
+   {
+    "date": "2026-03-06",
+    "ars_per_usd": 1416.0
+   },
+   {
+    "date": "2026-03-09",
+    "ars_per_usd": 1416.0
+   },
+   {
+    "date": "2026-03-10",
+    "ars_per_usd": 1400.0
+   },
+   {
+    "date": "2026-03-11",
+    "ars_per_usd": 1396.0
+   },
+   {
+    "date": "2026-03-12",
+    "ars_per_usd": 1394.5
+   },
+   {
+    "date": "2026-03-13",
+    "ars_per_usd": 1400.0
+   },
+   {
+    "date": "2026-03-16",
+    "ars_per_usd": 1396.0
+   },
+   {
+    "date": "2026-03-17",
+    "ars_per_usd": 1396.0
+   },
+   {
+    "date": "2026-03-18",
+    "ars_per_usd": 1394.0
+   },
+   {
+    "date": "2026-03-19",
+    "ars_per_usd": 1394.5
+   },
+   {
+    "date": "2026-03-20",
+    "ars_per_usd": 1390.5
+   },
+   {
+    "date": "2026-03-25",
+    "ars_per_usd": 1377.5
+   },
+   {
+    "date": "2026-03-26",
+    "ars_per_usd": 1368.0
+   },
+   {
+    "date": "2026-03-27",
+    "ars_per_usd": 1382.5
+   },
+   {
+    "date": "2026-03-30",
+    "ars_per_usd": 1398.0
+   },
+   {
+    "date": "2026-03-31",
+    "ars_per_usd": 1382.0
+   },
+   {
+    "date": "2026-04-01",
+    "ars_per_usd": 1394.0
+   },
+   {
+    "date": "2026-04-06",
+    "ars_per_usd": 1393.0
+   },
+   {
+    "date": "2026-04-07",
+    "ars_per_usd": 1392.5
+   },
+   {
+    "date": "2026-04-08",
+    "ars_per_usd": 1387.5
+   },
+   {
+    "date": "2026-04-09",
+    "ars_per_usd": 1381.0
+   },
+   {
+    "date": "2026-04-10",
+    "ars_per_usd": 1370.0
+   },
+   {
+    "date": "2026-04-13",
+    "ars_per_usd": 1354.0
+   },
+   {
+    "date": "2026-04-14",
+    "ars_per_usd": 1364.0
+   },
+   {
+    "date": "2026-04-15",
+    "ars_per_usd": 1359.0
+   },
+   {
+    "date": "2026-04-16",
+    "ars_per_usd": 1358.0
+   },
+   {
+    "date": "2026-04-17",
+    "ars_per_usd": 1364.5
+   },
+   {
+    "date": "2026-04-20",
+    "ars_per_usd": 1377.0
+   },
+   {
+    "date": "2026-04-21",
+    "ars_per_usd": 1375.5
+   },
+   {
+    "date": "2026-04-22",
+    "ars_per_usd": 1378.0
+   },
+   {
+    "date": "2026-04-23",
+    "ars_per_usd": 1392.0
+   },
+   {
+    "date": "2026-04-24",
+    "ars_per_usd": 1399.5
+   },
+   {
+    "date": "2026-04-27",
+    "ars_per_usd": 1417.0
+   },
+   {
+    "date": "2026-04-28",
+    "ars_per_usd": 1404.5
+   },
+   {
+    "date": "2026-04-29",
+    "ars_per_usd": 1391.5
+   },
+   {
+    "date": "2026-04-30",
+    "ars_per_usd": 1391.0
+   },
+   {
+    "date": "2026-05-04",
+    "ars_per_usd": 1402.5
+   },
+   {
+    "date": "2026-05-05",
+    "ars_per_usd": 1393.0
+   },
+   {
+    "date": "2026-05-06",
+    "ars_per_usd": 1388.0
+   },
+   {
+    "date": "2026-05-07",
+    "ars_per_usd": 1396.0
+   },
+   {
+    "date": "2026-05-08",
+    "ars_per_usd": 1398.0
+   },
+   {
+    "date": "2026-05-11",
+    "ars_per_usd": 1391.5
+   },
+   {
+    "date": "2026-05-12",
+    "ars_per_usd": 1384.0
+   },
+   {
+    "date": "2026-05-13",
+    "ars_per_usd": 1392.0
+   },
+   {
+    "date": "2026-05-14",
+    "ars_per_usd": 1391.0
+   },
+   {
+    "date": "2026-05-15",
+    "ars_per_usd": 1394.5
+   },
+   {
+    "date": "2026-05-18",
+    "ars_per_usd": 1397.0
+   },
+   {
+    "date": "2026-05-19",
+    "ars_per_usd": 1398.0
+   },
+   {
+    "date": "2026-05-20",
+    "ars_per_usd": 1397.0
+   },
+   {
+    "date": "2026-05-21",
+    "ars_per_usd": 1389.5
+   },
+   {
+    "date": "2026-05-22",
+    "ars_per_usd": 1403.0
+   },
+   {
+    "date": "2026-05-26",
+    "ars_per_usd": 1411.0
+   },
+   {
+    "date": "2026-05-27",
+    "ars_per_usd": 1412.5
+   },
+   {
+    "date": "2026-05-28",
+    "ars_per_usd": 1410.0
+   },
+   {
+    "date": "2026-05-29",
+    "ars_per_usd": 1408.0
+   },
+   {
+    "date": "2026-06-01",
+    "ars_per_usd": 1426.0
+   },
+   {
+    "date": "2026-06-02",
+    "ars_per_usd": 1427.0
+   },
+   {
+    "date": "2026-06-03",
+    "ars_per_usd": 1438.5
+   },
+   {
+    "date": "2026-06-04",
+    "ars_per_usd": 1436.5
+   },
+   {
+    "date": "2026-06-05",
+    "ars_per_usd": 1440.5
+   },
+   {
+    "date": "2026-06-08",
+    "ars_per_usd": 1446.5
+   },
+   {
+    "date": "2026-06-09",
+    "ars_per_usd": 1441.0
+   },
+   {
+    "date": "2026-06-10",
+    "ars_per_usd": 1432.5
+   },
+   {
+    "date": "2026-06-11",
+    "ars_per_usd": 1432.5
+   },
+   {
+    "date": "2026-06-12",
+    "ars_per_usd": 1428.0
+   },
+   {
+    "date": "2026-06-16",
+    "ars_per_usd": 1436.5
+   },
+   {
+    "date": "2026-06-17",
+    "ars_per_usd": 1441.5
+   },
+   {
+    "date": "2026-06-18",
+    "ars_per_usd": 1451.0
+   },
+   {
+    "date": "2026-06-19",
+    "ars_per_usd": 1461.0
+   },
+   {
+    "date": "2026-06-22",
+    "ars_per_usd": 1461.5
+   },
+   {
+    "date": "2026-06-23",
+    "ars_per_usd": 1471.5
+   },
+   {
+    "date": "2026-06-24",
+    "ars_per_usd": 1479.0
+   },
+   {
+    "date": "2026-06-25",
+    "ars_per_usd": 1477.0
+   },
+   {
+    "date": "2026-06-26",
+    "ars_per_usd": 1477.0
+   },
+   {
+    "date": "2026-06-29",
+    "ars_per_usd": 1481.5
+   },
+   {
+    "date": "2026-06-30",
+    "ars_per_usd": 1482.0
+   },
+   {
+    "date": "2026-07-01",
+    "ars_per_usd": 1489.0
+   },
+   {
+    "date": "2026-07-02",
+    "ars_per_usd": 1488.0
+   },
+   {
+    "date": "2026-07-03",
+    "ars_per_usd": 1488.5
+   },
+   {
+    "date": "2026-07-06",
+    "ars_per_usd": 1486.5
+   },
+   {
+    "date": "2026-07-07",
+    "ars_per_usd": 1492.0
+   },
+   {
+    "date": "2026-07-08",
+    "ars_per_usd": 1488.0
+   },
+   {
+    "date": "2026-07-13",
+    "ars_per_usd": 1482.0
+   },
+   {
+    "date": "2026-07-14",
+    "ars_per_usd": 1471.5
+   },
+   {
+    "date": "2026-07-15",
+    "ars_per_usd": 1474.5
+   },
+   {
+    "date": "2026-07-16",
+    "ars_per_usd": 1476.0
+   },
+   {
+    "date": "2026-07-17",
+    "ars_per_usd": 1478.0
+   },
+   {
+    "date": "2026-07-20",
+    "ars_per_usd": 1481.0
+   },
+   {
+    "date": "2026-07-21",
+    "ars_per_usd": 1477.5
+   },
+   {
+    "date": "2026-07-22",
+    "ars_per_usd": 1483.0
+   },
+   {
+    "date": "2026-07-23",
+    "ars_per_usd": 1489.0
+   },
+   {
+    "date": "2026-07-24",
+    "ars_per_usd": 1497.0
+   },
+   {
+    "date": "2026-07-27",
+    "ars_per_usd": 1497.0
+   },
+   {
+    "date": "2026-07-28",
+    "ars_per_usd": 1498.0
+   },
+   {
+    "date": "2026-07-29",
+    "ars_per_usd": 1496.0
+   },
+   {
+    "date": "2026-07-30",
+    "ars_per_usd": 1488.0
+   },
+   {
+    "date": "2026-07-31",
+    "ars_per_usd": 1485.0
+   },
+   {
+    "date": "2026-08-03",
+    "ars_per_usd": 1495.0
+   },
+   {
+    "date": "2026-08-04",
+    "ars_per_usd": 1496.0
+   },
+   {
+    "date": "2026-08-05",
+    "ars_per_usd": 1496.5
+   },
+   {
+    "date": "2026-08-06",
+    "ars_per_usd": 1499.5
+   },
+   {
+    "date": "2026-08-07",
+    "ars_per_usd": 1498.5
+   },
+   {
+    "date": "2026-08-10",
+    "ars_per_usd": 1495.5
+   },
+   {
+    "date": "2026-08-11",
+    "ars_per_usd": 1490.5
+   },
+   {
+    "date": "2026-08-12",
+    "ars_per_usd": 1491.5
+   },
+   {
+    "date": "2026-08-13",
+    "ars_per_usd": 1492.0
+   },
+   {
+    "date": "2026-08-14",
+    "ars_per_usd": 1487.5
+   },
+   {
+    "date": "2026-08-18",
+    "ars_per_usd": 1495.0
+   },
+   {
+    "date": "2026-08-19",
+    "ars_per_usd": 1497.0
+   },
+   {
+    "date": "2026-08-20",
+    "ars_per_usd": 1497.0
+   },
+   {
+    "date": "2026-08-21",
+    "ars_per_usd": 1499.0
+   },
+   {
+    "date": "2026-08-24",
+    "ars_per_usd": 1510.0
+   },
+   {
+    "date": "2026-08-25",
+    "ars_per_usd": 1511.5
+   },
+   {
+    "date": "2026-08-26",
+    "ars_per_usd": 1514.0
+   },
+   {
+    "date": "2026-08-27",
+    "ars_per_usd": 1512.0
+   },
+   {
+    "date": "2026-08-28",
+    "ars_per_usd": 1512.0
+   },
+   {
+    "date": "2026-08-31",
+    "ars_per_usd": 1508.5
+   },
+   {
+    "date": "2026-09-01",
+    "ars_per_usd": 1513.0
+   },
+   {
+    "date": "2026-09-02",
+    "ars_per_usd": 1511.0
+   },
+   {
+    "date": "2026-09-03",
+    "ars_per_usd": 1508.0
+   },
+   {
+    "date": "2026-09-04",
+    "ars_per_usd": 1508.0
+   },
+   {
+    "date": "2026-09-07",
+    "ars_per_usd": 1511.5
+   },
+   {
+    "date": "2026-09-08",
+    "ars_per_usd": 1512.0
+   },
+   {
+    "date": "2026-09-09",
+    "ars_per_usd": 1513.5
+   },
+   {
+    "date": "2026-09-10",
+    "ars_per_usd": 1513.0
+   },
+   {
+    "date": "2026-09-11",
+    "ars_per_usd": 1508.5
+   },
+   {
+    "date": "2026-09-14",
+    "ars_per_usd": 1507.5
+   },
+   {
+    "date": "2026-09-15",
+    "ars_per_usd": 1506.5
+   },
+   {
+    "date": "2026-09-16",
+    "ars_per_usd": 1513.5
+   },
+   {
+    "date": "2026-09-17",
+    "ars_per_usd": 1510.0
+   },
+   {
+    "date": "2026-09-18",
+    "ars_per_usd": 1514.5
+   },
+   {
+    "date": "2026-09-21",
+    "ars_per_usd": 1514.0
+   },
+   {
+    "date": "2026-09-22",
+    "ars_per_usd": 1514.0
+   },
+   {
+    "date": "2026-09-23",
+    "ars_per_usd": 1516.0
+   },
+   {
+    "date": "2026-09-24",
+    "ars_per_usd": 1519.5
+   },
+   {
+    "date": "2026-09-25",
+    "ars_per_usd": 1525.5
+   },
+   {
+    "date": "2026-09-28",
+    "ars_per_usd": 1524.5
+   },
+   {
+    "date": "2026-09-29",
+    "ars_per_usd": 1522.0
+   },
+   {
+    "date": "2026-09-30",
+    "ars_per_usd": 1517.0
+   },
+   {
+    "date": "2026-10-01",
+    "ars_per_usd": 1524.5
+   },
+   {
+    "date": "2026-10-02",
+    "ars_per_usd": 1520.0
+   },
+   {
+    "date": "2026-10-05",
+    "ars_per_usd": 1520.0
+   },
+   {
+    "date": "2026-10-06",
+    "ars_per_usd": 1520.0
+   },
+   {
+    "date": "2026-10-07",
+    "ars_per_usd": 1517.0
+   },
+   {
+    "date": "2026-10-08",
+    "ars_per_usd": 1515.5
+   },
+   {
+    "date": "2026-10-09",
+    "ars_per_usd": 1517.0
+   }
+  ]
+ },
+ "regulations": {
+  "source": {
+   "name": "Boletín Oficial de la República Argentina, primera sección",
+   "url": "https://www.boletinoficial.gob.ar"
+  },
+  "keywords": [
+   "rigi",
+   "regimen de incentivo para grandes inversiones",
+   "hidrocarburo",
+   "petroleo",
+   "gas natural",
+   "gnl",
+   "gas natural licuado",
+   "oleoducto",
+   "gasoducto",
+   "vaca muerta",
+   "neuquen",
+   "secretaria de energia",
+   "ente nacional regulador del gas",
+   "enargas",
+   "cammesa",
+   "upstream",
+   "refinacion",
+   "combustible",
+   "concesion de explotacion",
+   "no convencional",
+   "exportacion de crudo",
+   "biocombustible"
+  ],
+  "items": []
+ },
+ "news": {
+  "items": [
+   {
+    "source": "Infobae",
+    "title": "Vuelve el auto del abuelo: la nueva versión del 2CV será eléctrica, de precio accesible y llegará en 2028",
+    "url": "https://www.infobae.com/economia/2026/10/12/vuelve-el-auto-del-abuelo-la-nueva-version-del-2cv-sera-electrica-de-precio-accesible-y-llegara-en-2028/",
+    "published": "2026-10-12T17:31Z"
+   },
+   {
+    "source": "Infobae",
+    "title": "Crece la volatilidad del petróleo: revirtió sus pérdidas y superó los USD 107 en medio de ataques de Irán, los rebeldes hutíes y Rusia",
+    "url": "https://www.infobae.com/america/mundo/2026/10/12/crece-la-volatilidad-del-petroleo-revirtio-sus-perdidas-y-supero-los-usd-106-en-medio-de-ataques-de-iran-los-rebeldes-huties-y-rusia/",
+    "published": "2026-10-12T16:30Z"
+   },
+   {
+    "source": "EconoJournal",
+    "title": "La caída de 10% en la capacidad global de refinamiento lleva a Trump a negociar con Putin para sumar diésel ruso al mercado",
+    "url": "https://econojournal.com.ar/internacionales/caida-de-capacidad-de-refinamiento-lleva-a-trump-a-negociar-con-putin-para-sumar-diesel-ruso/",
+    "published": "2026-10-12T13:31Z"
+   },
+   {
+    "source": "Infobae",
+    "title": "De Texas a Neuquén: por qué Vaca Muerta es atractivo para las empresas de la cuenca petrolera más grande de EEUU",
+    "url": "https://www.infobae.com/economia/2026/10/12/de-texas-a-neuquen-por-que-vaca-muerta-es-atractivo-para-las-empresas-de-la-cuenca-petrolera-mas-grande-de-eeuu/",
+    "published": "2026-10-12T11:42Z"
+   },
+   {
+    "source": "EconoJournal",
+    "title": "Canon al agua: cuáles son los proyectos de cultivos que presentaron las petroleras en Vaca Muerta",
+    "url": "https://econojournal.com.ar/oilgas/canon-al-agua-cuales-son-los-proyectos-de-cultivos-que-presentaron-las-petroleras-en-vaca-muerta/",
+    "published": "2026-10-11T23:00Z"
+   },
+   {
+    "source": "Infobae",
+    "title": "Una provincia vive el mes más grande de su historia minera: se estrenan cuatro plantas de litio por USD 2.000 millones",
+    "url": "https://www.infobae.com/economia/2026/10/11/una-provincia-vive-el-mes-mas-grande-de-su-historia-minera-se-estrenan-cuatro-plantas-de-litio-por-usd-2000-millones/",
+    "published": "2026-10-11T14:21Z"
+   },
+   {
+    "source": "EconoJournal",
+    "title": "El idilio de Milei y una nueva visita en Vaca Muerta",
+    "url": "https://econojournal.com.ar/enclave/el-idilio-de-milei-y-una-nueva-visita-en-vaca-muerta/",
+    "published": "2026-10-11T11:00Z"
+   },
+   {
+    "source": "EconoJournal",
+    "title": "Rolando Figueroa: «Rediscutimos la renta petrolera y le estamos ganando la pulseada a las empresas»",
+    "url": "https://econojournal.com.ar/enclave/rolando-figueroa-rediscutimos-la-renta-petrolera-y-le-estamos-ganando-la-pulseada-a-las-empresas/",
+    "published": "2026-10-11T03:00Z"
+   },
+   {
+    "source": "EconoJournal",
+    "title": "Galuccio: “A través del gas de Vaca Muerta, la Argentina puede contribuir a la resiliencia global de la infraestructura digital”",
+    "url": "https://econojournal.com.ar/destacada/galuccio-gas-vaca-muerta-ia/",
+    "published": "2026-10-10T19:59Z"
+   },
+   {
+    "source": "Infobae",
+    "title": "En Silicon Valley, Miguel Galuccio destacó el potencial aporte de la Argentina a “la resiliencia global de la infraestructura digital”",
+    "url": "https://www.infobae.com/economia/2026/10/10/en-silicon-valley-miguel-galuccio-destaco-el-potencial-aporte-de-la-argentina-a-la-resiliencia-global-de-la-infraestructura-digital/",
+    "published": "2026-10-10T19:59Z"
+   },
+   {
+    "source": "EconoJournal",
+    "title": "YPF acordó comprar el 25% de YPF Luz por US$ 430 millones y pasará a controlar el 100% de la compañía",
+    "url": "https://econojournal.com.ar/energia/ypf-acordo-comprar-el-25-de-ypf-luz-controla-el-100-de-la-compania/",
+    "published": "2026-10-09T12:05Z"
+   },
+   {
+    "source": "Ámbito",
+    "title": "El Gobierno aprobó el ingreso al RIGI del proyecto de Tecpetrol y GyP por u$s6.400 millones",
+    "url": "https://www.ambito.com/energia/el-gobierno-aprobo-el-ingreso-al-rigi-del-proyecto-tecpetrol-y-gyp-us6400-millones-n6331891",
+    "published": "2026-10-09T11:58Z"
+   },
+   {
+    "source": "EconoJournal",
+    "title": "Milei visitará Neuquén para encabezar la apertura de la AOG Patagonia 2026",
+    "url": "https://econojournal.com.ar/oilgas/milei-visitara-neuquen-para-encabezar-la-apertura-de-la-aog-patagonia-2026/",
+    "published": "2026-10-09T11:00Z"
+   },
+   {
+    "source": "Ámbito",
+    "title": "YPF acordó comprar el 25% restante de YPF Luz por u$s430 millones",
+    "url": "https://www.ambito.com/energia/ypf-acordo-comprar-el-25-restante-ypf-luz-us430-millones-n6331851",
+    "published": "2026-10-09T01:49Z"
+   },
+   {
+    "source": "EconoJournal",
+    "title": "Genneia inaugura el parque solar más grande de San Juan con una inversión de US$ 110 millones",
+    "url": "https://econojournal.com.ar/renovables-te/genneia-inaugura-el-parque-solar-mas-grande-de-san-juan/",
+    "published": "2026-10-08T20:33Z"
+   },
+   {
+    "source": "EconoJournal",
+    "title": "Embalse salió de servicio por una parada técnica y volverá a generar electricidad a fines de noviembre",
+    "url": "https://econojournal.com.ar/actualidad-mineria-energia/embalse-salio-de-servicio-por-una-parada-tecnica/",
+    "published": "2026-10-08T15:56Z"
+   },
+   {
+    "source": "EconoJournal",
+    "title": "Un relevamiento entre profesionales argentinos del sector energético que trabajan en el exterior revela que el 54% considera probable volver al país",
+    "url": "https://econojournal.com.ar/oilgas/profesionales-argentinos-del-sector-energetico-consideran-probable-volver-al-pais/",
+    "published": "2026-10-08T13:27Z"
+   },
+   {
+    "source": "Ámbito",
+    "title": "Jujuy acelera el litio con más inversiones RIGI: suman capacidad Río Tinto, Exar y CNGR",
+    "url": "https://www.ambito.com/energia/jujuy-acelera-el-litio-mas-inversiones-rigi-suman-capacidad-rio-tinto-exar-y-cngr-n6331202",
+    "published": "2026-10-07T18:31Z"
+   },
+   {
+    "source": "Ámbito",
+    "title": "Nuevo RIGI: Pluspetrol invertirá u$s12.400 millones en Vaca Muerta",
+    "url": "https://www.ambito.com/economia/pluspetrol-anuncia-la-inversion-us-12400-millones-vaca-muerta-traves-del-rigi-n6329233",
+    "published": "2026-10-02T10:31Z"
+   },
+   {
+    "source": "Ámbito",
+    "title": "AOG Patagonia 2026: Vaca Muerta reúne a los CEOs del petróleo y prepara una agenda clave para la industria",
+    "url": "https://www.ambito.com/energia/aog-patagonia-2026-vaca-muerta-reune-los-ceos-del-petroleo-y-prepara-una-agenda-clave-la-industria-n6327731",
+    "published": "2026-09-29T00:21Z"
+   },
+   {
+    "source": "Ámbito",
+    "title": "Vaca Muerta por dentro: el boom de Añelo, los sueldos millonarios y los perfiles que las empresas no consiguen",
+    "url": "https://www.ambito.com/energia/vaca-muerta-dentro-el-boom-anelo-los-sueldos-millonarios-y-los-perfiles-que-las-empresas-no-consiguen-n6322493",
+    "published": "2026-09-28T16:11Z"
+   },
+   {
+    "source": "Ámbito",
+    "title": "Tour petrolero en Vaca Muerta: Chevron abrió El Trapial, mostró operaciones y prometió triplicar producción de petróleo y gas no convencional",
+    "url": "https://www.ambito.com/energia/tour-petrolero-vaca-muerta-chevron-abrio-el-trapial-mostro-operaciones-y-prometio-triplicar-produccion-petroleo-y-gas-no-convencional-n6327159",
+    "published": "2026-09-27T17:05Z"
+   },
+   {
+    "source": "Ámbito",
+    "title": "El regreso del petróleo convencional: Mendoza suma inversiones, pozos y nuevos jugadores",
+    "url": "https://www.ambito.com/energia/el-regreso-del-petroleo-convencional-mendoza-suma-inversiones-pozos-y-nuevos-jugadores-n6327019",
+    "published": "2026-09-26T17:51Z"
+   },
+   {
+    "source": "Ámbito",
+    "title": "Vaca Muerta, litio, trenes y puertos: qué hay detrás del acuerdo del corredor Andes-Atlántico entre Argentina y EEUU",
+    "url": "https://www.ambito.com/economia/vaca-muerta-litio-trenes-y-puertos-que-hay-detras-del-acuerdo-del-corredor-andes-atlantico-argentina-y-eeuu-n6326033",
+    "published": "2026-09-24T11:07Z"
+   }
+  ]
+ },
+ "generated_at": "2026-10-12T18:03Z",
+ "status": {
+  "fracking": {
+   "ok": true,
+   "at": "2026-10-12T18:03Z",
+   "diag": {
+    "resources": [
+     "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
+    ],
+    "resource_used": "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria",
+    "columns": [
+     "id_base_fractura_adjiv",
+     "idpozo",
+     "sigla",
+     "cuenca",
+     "areapermisoconcesion",
+     "yacimiento",
+     "formacion_productiva",
+     "tipo_reservorio",
+     "subtipo_reservorio",
+     "longitud_rama_horizontal_m",
+     "cantidad_fracturas",
+     "tipo_terminacion",
+     "arena_bombeada_nacional_tn",
+     "arena_bombeada_importada_tn",
+     "agua_inyectada_m3",
+     "co2_inyectado_m3",
+     "presion_maxima_psi",
+     "potencia_equipos_fractura_hp",
+     "fecha_inicio_fractura",
+     "fecha_fin_fractura",
+     "fecha_data",
+     "anio_if",
+     "mes_if",
+     "anio_ff",
+     "mes_ff",
+     "anio_carga",
+     "mes_carga",
+     "empresa_informante",
+     "mes",
+     "anio"
+    ],
+    "rows": 4984,
+    "mapped": {
+     "etapas": "cantidad_fracturas",
+     "arena": [
+      "arena_bombeada_nacional_tn",
+      "arena_bombeada_importada_tn"
+     ],
+     "fecha": "fecha_inicio_fractura",
+     "anio": "anio_if",
+     "mes": "mes_if",
+     "empresa": "empresa_informante",
+     "formacion": "formacion_productiva",
+     "cuenca": "cuenca",
+     "pozo": "idpozo",
+     "rama": "longitud_rama_horizontal_m"
+    }
+   }
+  },
+  "fx": {
+   "ok": true,
+   "at": "2026-10-12T18:03Z",
+   "diag": {
+    "pages": 1
+   }
+  },
+  "oil_price": {
+   "ok": false,
+   "error": "RuntimeError: Falta EIA_API_KEY (secreto del repositorio)",
+   "diag": {},
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 372, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 362, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 201, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
+  },
+  "regulations": {
+   "ok": true,
+   "at": "2026-10-12T18:03Z",
+   "diag": {
+    "html_len": 196497,
+    "links": 111,
+    "matched_today": 0
+   }
+  },
+  "news": {
+   "ok": true,
+   "at": "2026-10-12T18:03Z",
+   "diag": {
+    "feeds": {
+     "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
+     "Shale24": "HTTPError: 404 Client Error: Not Found for url: https://www.shale24.com/rss/pages/home.xml (https://www.shale24.com/rss/pages/home.xml)",
+     "Río Negro": "sin entradas en https://www.rionegro.com.ar/energia/feed/",
+     "Mejor Energía": "HTTPError: 404 Client Error: Not Found for url: https://www.mejorenergia.com.ar/feed (https://www.mejorenergia.com.ar/feed)",
+     "Infobae": "ok 5 de https://www.infobae.com/arc/outboundfeeds/rss/category/economia/",
+     "Ámbito": "ok 9 de https://www.ambito.com/rss/pages/energia.xml"
+    }
+   }
+  }
+ }
+}
