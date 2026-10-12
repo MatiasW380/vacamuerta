@@ -833,22 +833,36 @@ def regalias_excel(hojas: dict, diag: dict, base: str, fluido: str = "crudo") ->
     else:
         # Gas: USD por miles de m³ (Mm3/dam3) o por m³ → USD/MMBtu, con 9.300 kcal/m³ (1 MMBtu = 27,1 m³).
         clave = "usd_mmbtu"
-        factor = 27.1 if re.search(r"usd ?/ ?m3\b", unidad) else 27.1 / 1000 if re.search(r"(mm3|dam3|miles)", unidad) else None
+        factor = 27.1 if re.search(r"/ ?m3\b", unidad) else 27.1 / 1000 if re.search(r"(mm3|dam3|miles)", unidad) else None
         if re.search(r"mmbtu", unidad):
             factor = 1.0
         diag["gas_unit"] = unidad
         if factor is None:
             raise RuntimeError(f"Unidad de precio de gas desconocida: {unidad!r}")
+    en_pesos = "ars" in unidad
+    tc = fx_mensual(diag) if en_pesos else {}
+    a_usd = (lambda p, v: v / tc[p] if p in tc else None) if en_pesos else (lambda p, v: v)
     series = {}
     for c, nombre in provs.items():
         if c in precio.columns:
-            series[nombre] = [{"period": p, clave: round(float(v) * factor, 2)} for p, v in precio[c].items() if pd.notna(v) and v > 0][-84:]
+            pts = []
+            for p, v in precio[c].items():
+                if pd.notna(v) and v > 0:
+                    u = a_usd(p, float(v))
+                    if u is not None:
+                        pts.append({"period": p, clave: round(u * factor, 2)})
+            series[nombre] = pts[-84:]
     nombre_fuente = "regalías de petróleo crudo" if fluido == "crudo" else "regalías de gas natural"
     out = {"source": {"name": f"Secretaría de Energía, {nombre_fuente}", "url": f"{base}/dataset/regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado", "license": "CC BY 4.0"},
            ("price_usd_bbl" if fluido == "crudo" else "price_usd_mmbtu"): series, "unit_raw": precio.attrs.get("title"),
            "last_period": precio.index[-1] if len(precio) else None}
     if "royalties" in t and "volume" in t:
-        r, vol = t["royalties"], t["volume"]
+        r, vol = t["royalties"].copy(), t["volume"]
+        if "ars" in _plano(r.attrs.get("title", "")):
+            tc = fx_mensual(diag)
+            r = r[r.index.isin(list(tc))]
+            r = r.div(pd.Series({p: tc[p] for p in r.index}), axis=0)
+            out["royalties_converted_from_ars"] = True
         ult = [p for p in r.index if r.loc[p].get("neuquen", 0) > 0][-12:]
         if ult:
             out["neuquen_12m"] = {"from": ult[0], "to": ult[-1],
@@ -950,14 +964,43 @@ def _buscar_serie(q: str, debe: list[str], diag: dict, clave: str) -> dict | Non
     return buenas[0] if buenas else None
 
 
+def serie_api(ids: list[str], diag: dict, desde: str = "2010-01-01") -> list:
+    r = requests.get(f"{SERIES_API}/series/", params={"ids": ",".join(ids), "format": "json", "limit": 1000, "start_date": desde},
+                     headers=UA, timeout=60)
+    diag["series_status"] = r.status_code
+    try:
+        j = r.json()
+    except Exception:
+        diag["series_body"] = r.text[:400]
+        raise
+    if "data" not in j:
+        diag["series_body"] = str(j)[:400]
+    return j.get("data", [])
+
+
+_FX_MENSUAL: dict | None = None
+
+
+def fx_mensual(diag: dict) -> dict:
+    """Tipo de cambio mayorista, promedio mensual (ARS por USD), desde la API de Series de Tiempo."""
+    global _FX_MENSUAL
+    if _FX_MENSUAL is None:
+        c = _buscar_serie("tipo de cambio mayorista promedio mensual", ["tipo de cambio"], diag, "fx")
+        diag["fx_series"] = c
+        if not c:
+            raise RuntimeError("No se encontró la serie mensual de tipo de cambio")
+        _FX_MENSUAL = {d[0][:7]: d[1] for d in serie_api([c["id"]], diag, "2005-01-01") if d[1]}
+    return _FX_MENSUAL
+
+
 def trade_balance(diag: dict) -> dict:
     exp = _buscar_serie("exportaciones combustibles y energia", ["export", "combustibles", "energia"], diag, "exp")
     imp = _buscar_serie("importaciones combustibles y lubricantes", ["import", "combustibles", "lubricantes"], diag, "imp")
     diag["chosen"] = {"exp": exp, "imp": imp}
     if not exp or not imp:
         raise RuntimeError("No se encontraron las series mensuales de exportación e importación de energía")
-    j = get(f"{SERIES_API}/series/", params={"ids": f"{exp['id']},{imp['id']}", "format": "json", "limit": 1000, "start_date": "2010-01-01"}, timeout=60).json()
-    filas = [{"period": d[0][:7], "exports": d[1], "imports": d[2]} for d in j.get("data", []) if d[1] is not None and d[2] is not None]
+    j = serie_api([exp["id"], imp["id"]], diag)
+    filas = [{"period": d[0][:7], "exports": d[1], "imports": d[2]} for d in j if d[1] is not None and d[2] is not None]
     for f in filas:
         f["balance"] = round(f["exports"] - f["imports"], 1)
         f["exports"], f["imports"] = round(f["exports"], 1), round(f["imports"], 1)
