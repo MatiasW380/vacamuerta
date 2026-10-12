@@ -3145,10 +3145,6 @@
      "usd_bbl": 28.82
     },
     {
-     "period": "2020-08",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2020-09",
      "usd_bbl": 40.61
     },
@@ -3177,10 +3173,6 @@
      "usd_bbl": 62.61
     },
     {
-     "period": "2021-04",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2021-05",
      "usd_bbl": 69.29
     },
@@ -3190,66 +3182,6 @@
     }
    ],
    "fob|Cañadon Seco": [
-    {
-     "period": "2019-01",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-02",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-03",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-04",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-05",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-06",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-07",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-08",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-09",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-10",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-11",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-12",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-01",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-02",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-03",
-     "usd_bbl": NaN
-    },
     {
      "period": "2020-04",
      "usd_bbl": 10.14
@@ -3261,61 +3193,9 @@
     {
      "period": "2020-06",
      "usd_bbl": 36.79
-    },
-    {
-     "period": "2020-07",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-08",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-09",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-10",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-11",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-12",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-01",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-02",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-03",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-04",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-05",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-06",
-     "usd_bbl": NaN
     }
    ],
    "fob|Maria Ines": [
-    {
-     "period": "2019-01",
-     "usd_bbl": NaN
-    },
     {
      "period": "2019-02",
      "usd_bbl": 57.19
@@ -3327,10 +3207,6 @@
     {
      "period": "2019-04",
      "usd_bbl": 61.79
-    },
-    {
-     "period": "2019-05",
-     "usd_bbl": NaN
     },
     {
      "period": "2019-06",
@@ -3361,10 +3237,6 @@
      "usd_bbl": 55.2
     },
     {
-     "period": "2020-01",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2020-02",
      "usd_bbl": 45.96
     },
@@ -3375,10 +3247,6 @@
     {
      "period": "2020-04",
      "usd_bbl": 15.63
-    },
-    {
-     "period": "2020-05",
-     "usd_bbl": NaN
     },
     {
      "period": "2020-06",
@@ -3415,10 +3283,6 @@
     {
      "period": "2021-02",
      "usd_bbl": 59.62
-    },
-    {
-     "period": "2021-03",
-     "usd_bbl": NaN
     },
     {
      "period": "2021-04",
@@ -3495,18 +3359,6 @@
      "usd_bbl": 26.23
     },
     {
-     "period": "2020-04",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-05",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-06",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2020-07",
      "usd_bbl": 31.67
     },
@@ -3535,10 +3387,6 @@
      "usd_bbl": 41.05
     },
     {
-     "period": "2021-02",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2021-03",
      "usd_bbl": 57.53
     },
@@ -3557,68 +3405,12 @@
    ],
    "fob|Medanito": [
     {
-     "period": "2019-01",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2019-02",
      "usd_bbl": 59.21
     },
     {
-     "period": "2019-03",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-04",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-05",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-06",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2019-07",
      "usd_bbl": 52.81
-    },
-    {
-     "period": "2019-08",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-09",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-10",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-11",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-12",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-01",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-02",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-03",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-04",
-     "usd_bbl": NaN
     },
     {
      "period": "2020-05",
@@ -3641,36 +3433,16 @@
      "usd_bbl": 40.94
     },
     {
-     "period": "2020-10",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2020-11",
      "usd_bbl": 39.85
-    },
-    {
-     "period": "2020-12",
-     "usd_bbl": NaN
     },
     {
      "period": "2021-01",
      "usd_bbl": 47.12
     },
     {
-     "period": "2021-02",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2021-03",
      "usd_bbl": 59.47
-    },
-    {
-     "period": "2021-04",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-05",
-     "usd_bbl": NaN
     },
     {
      "period": "2021-06",
@@ -3983,18 +3755,6 @@
      "usd_bbl": 24.8
     },
     {
-     "period": "2020-04",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-05",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-06",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2020-07",
      "usd_bbl": 16.0
     },
@@ -4097,72 +3857,12 @@
      "usd_bbl": 48.35
     },
     {
-     "period": "2020-02",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-03",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-04",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-05",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2020-06",
      "usd_bbl": 18.76
     },
     {
-     "period": "2020-07",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-08",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-09",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-10",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-11",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-12",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-01",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-02",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-03",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-04",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2021-05",
      "usd_bbl": 49.33
-    },
-    {
-     "period": "2021-06",
-     "usd_bbl": NaN
     }
    ],
    "domestic|Medanito": [
@@ -4365,10 +4065,6 @@
      "usd_bbl": -14.4
     },
     {
-     "period": "2020-08",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2020-09",
      "usd_bbl": -1.26
     },
@@ -4397,10 +4093,6 @@
      "usd_bbl": -3.09
     },
     {
-     "period": "2021-04",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2021-05",
      "usd_bbl": 0.98
     },
@@ -4410,66 +4102,6 @@
     }
    ],
    "fob_vs_brent|Cañadon Seco": [
-    {
-     "period": "2019-01",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-02",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-03",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-04",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-05",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-06",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-07",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-08",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-09",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-10",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-11",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-12",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-01",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-02",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-03",
-     "usd_bbl": NaN
-    },
     {
      "period": "2020-04",
      "usd_bbl": -16.49
@@ -4481,61 +4113,9 @@
     {
      "period": "2020-06",
      "usd_bbl": -3.98
-    },
-    {
-     "period": "2020-07",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-08",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-09",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-10",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-11",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-12",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-01",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-02",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-03",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-04",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-05",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-06",
-     "usd_bbl": NaN
     }
    ],
    "fob_vs_brent|Maria Ines": [
-    {
-     "period": "2019-01",
-     "usd_bbl": NaN
-    },
     {
      "period": "2019-02",
      "usd_bbl": -7.12
@@ -4547,10 +4127,6 @@
     {
      "period": "2019-04",
      "usd_bbl": -9.84
-    },
-    {
-     "period": "2019-05",
-     "usd_bbl": NaN
     },
     {
      "period": "2019-06",
@@ -4581,10 +4157,6 @@
      "usd_bbl": -9.97
     },
     {
-     "period": "2020-01",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2020-02",
      "usd_bbl": -9.51
     },
@@ -4595,10 +4167,6 @@
     {
      "period": "2020-04",
      "usd_bbl": -11.0
-    },
-    {
-     "period": "2020-05",
-     "usd_bbl": NaN
     },
     {
      "period": "2020-06",
@@ -4635,10 +4203,6 @@
     {
      "period": "2021-02",
      "usd_bbl": -2.66
-    },
-    {
-     "period": "2021-03",
-     "usd_bbl": NaN
     },
     {
      "period": "2021-04",
@@ -4715,18 +4279,6 @@
      "usd_bbl": -6.75
     },
     {
-     "period": "2020-04",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-05",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-06",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2020-07",
      "usd_bbl": -11.55
     },
@@ -4755,10 +4307,6 @@
      "usd_bbl": -14.27
     },
     {
-     "period": "2021-02",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2021-03",
      "usd_bbl": -8.17
     },
@@ -4777,68 +4325,12 @@
    ],
    "fob_vs_brent|Medanito": [
     {
-     "period": "2019-01",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2019-02",
      "usd_bbl": -5.11
     },
     {
-     "period": "2019-03",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-04",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-05",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-06",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2019-07",
      "usd_bbl": -11.38
-    },
-    {
-     "period": "2019-08",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-09",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-10",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-11",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2019-12",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-01",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-02",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-03",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-04",
-     "usd_bbl": NaN
     },
     {
      "period": "2020-05",
@@ -4861,36 +4353,16 @@
      "usd_bbl": -0.93
     },
     {
-     "period": "2020-10",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2020-11",
      "usd_bbl": -3.75
-    },
-    {
-     "period": "2020-12",
-     "usd_bbl": NaN
     },
     {
      "period": "2021-01",
      "usd_bbl": -8.2
     },
     {
-     "period": "2021-02",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2021-03",
      "usd_bbl": -6.23
-    },
-    {
-     "period": "2021-04",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-05",
-     "usd_bbl": NaN
     },
     {
      "period": "2021-06",
@@ -5203,18 +4675,6 @@
      "usd_bbl": -8.18
     },
     {
-     "period": "2020-04",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-05",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-06",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2020-07",
      "usd_bbl": -27.22
     },
@@ -5317,72 +4777,12 @@
      "usd_bbl": -15.33
     },
     {
-     "period": "2020-02",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-03",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-04",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-05",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2020-06",
      "usd_bbl": -22.01
     },
     {
-     "period": "2020-07",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-08",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-09",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-10",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-11",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2020-12",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-01",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-02",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-03",
-     "usd_bbl": NaN
-    },
-    {
-     "period": "2021-04",
-     "usd_bbl": NaN
-    },
-    {
      "period": "2021-05",
      "usd_bbl": -18.98
-    },
-    {
-     "period": "2021-06",
-     "usd_bbl": NaN
     }
    ],
    "domestic_vs_brent|Medanito": [

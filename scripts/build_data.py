@@ -70,7 +70,7 @@ OPERADORAS = [
     (r"SHELL", "Shell"),
     (r"TOTAL", "TotalEnergies"),
     (r"CHEVRON", "Chevron"),
-    (r"PHOENIX", "Phoenix Global"),
+    (r"PHOENIX|EL TREBOL", "Phoenix Global"),
     (r"EXXON", "ExxonMobil"),
     (r"PETRONAS", "Petronas"),
     (r"WINTERSHALL|HARBOUR", "Harbour Energy"),

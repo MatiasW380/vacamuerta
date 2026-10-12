@@ -40,6 +40,19 @@ def norm(t: str) -> str:
     return re.sub(r"\s+", " ", t).strip().lower()
 
 
+def limpiar_nan(x):
+    """JSON válido para el navegador: NaN/inf pasan a null y se descartan puntos de serie sin valor."""
+    import math
+    if isinstance(x, float):
+        return None if math.isnan(x) or math.isinf(x) else x
+    if isinstance(x, dict):
+        return {k: limpiar_nan(v) for k, v in x.items()}
+    if isinstance(x, list):
+        out = [limpiar_nan(v) for v in x]
+        return [v for v in out if not (isinstance(v, dict) and "usd_bbl" in v and v["usd_bbl"] is None)]
+    return x
+
+
 def tiene(texto: str, clave: str) -> bool:
     """Coincidencia de clave en texto normalizado; las claves cortas solo como palabra completa."""
     if len(clave) <= 5:
@@ -560,6 +573,12 @@ def reserves(diag: dict) -> dict:
         d[c_cuenca] = d[c_cuenca].ffill()
     for k, c in claves.items():
         d[k] = pd.to_numeric(d[c], errors="coerce").fillna(0)
+    c_yac = next((c for c in df.columns if "yacimiento" in c.split(" | ")[-1]), None)
+    clave_dup = [c for c in (c_area, c_yac) if c] + vals
+    antes = len(d)
+    if c_area:   # el mismo yacimiento cargado dos veces bajo dos razones sociales del mismo grupo
+        d = d[~(d.duplicated(subset=clave_dup, keep="first") & (d[vals].sum(axis=1) > 0))]
+    diag["duplicates_dropped"] = int(antes - len(d))
     diag["rows"] = int(len(d))
     neu = d[d[c_cuenca].map(lambda v: "neuquina" in _plano(v))] if c_cuenca else d
     diag["rows_neuquina"] = int(len(neu))
@@ -858,7 +877,7 @@ def main() -> None:
     salida["generated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
     salida["status"] = status
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(salida, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    OUT.write_text(json.dumps(limpiar_nan(salida), ensure_ascii=False, indent=1, allow_nan=False) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

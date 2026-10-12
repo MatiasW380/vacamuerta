@@ -1349,8 +1349,9 @@
     .then(r => (r.ok ? r.json() : null)).then(d => { CONC = d; renderConc(); }).catch(() => {});
   fetch("/data/extras.json", { cache: "no-cache" })
     .then(r => (r.ok ? r.json() : Promise.reject(r.status)))
-    .then(d => { EXTRAS = d; if (DATA && DATA !== "empty") { renderExtras(); renderProd(); } })
-    .catch(() => { EXTRAS = "empty"; });
+    .then(d => { EXTRAS = d; }, () => { EXTRAS = "empty"; })
+    .then(() => { if (EXTRAS !== "empty" && DATA && DATA !== "empty") { renderExtras(); renderProd(); } })
+    .catch(e => console.error(e));
   fetch("/data/vm.json", { cache: "no-cache" })
     .then(r => (r.ok ? r.json() : Promise.reject(r.status)))
     .then(d => { DATA = d && d.monthly && d.monthly.length ? d : "empty"; render(); })
