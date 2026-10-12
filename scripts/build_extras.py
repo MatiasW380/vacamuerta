@@ -1053,7 +1053,18 @@ def trade_balance(diag: dict) -> dict:
         f["exports"], f["imports"] = round(f["exports"], 1), round(f["imports"], 1)
     # Serie anual (completa) para el gráfico; el último trimestre con datos como dato reciente.
     anual = lambda i: re.sub(r"^(\d+)\.\d_", r"\1.1_", i).replace("_T_", "_A_").replace("_M_", "_A_")
-    ea = {d[0][:4]: d[1] for d in serie_api([anual(exp["id"])], diag, "2005-01-01") if d[1] is not None}
+    crudo_e = serie_api([anual(exp["id"])], diag, "2005-01-01")
+    diag["export_annual_raw"] = crudo_e
+    ea = {d[0][:4]: d[1] for d in crudo_e if d[1] is not None}
+    try:
+        alt = []
+        for q in ("balanza comercial energetica", "saldo comercial energia", "exportaciones energia millones dolares mensual"):
+            for r in get(f"{SERIES_API}/search/", params={"q": q, "limit": 15}, timeout=60).json().get("data", []):
+                f = r.get("field", {})
+                alt.append((f.get("id"), (f.get("description") or "")[:90], f.get("frequency"), f.get("time_index_end"), (r.get("dataset") or {}).get("title", "")[:50]))
+        diag["alternatives"] = alt
+    except Exception as e:
+        diag["alternatives_error"] = str(e)[:200]
     ia = {d[0][:4]: d[1] for d in serie_api([anual(imp["id"])], diag, "2005-01-01") if d[1] is not None}
     anios = [{"year": int(y), "exports": round(ea[y], 1), "imports": round(ia[y], 1), "balance": round(ea[y] - ia[y], 1)} for y in sorted(set(ea) & set(ia))]
     if len(anios) < 5:
