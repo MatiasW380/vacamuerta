@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - "scripts/build_data.py"
+      - "scripts/build_map.py"
       - ".github/workflows/update-data.yml"
 
 permissions:
@@ -35,8 +36,10 @@ jobs:
       - name: Descargar y procesar Capítulo IV
         run: |
           python scripts/build_data.py
+          python scripts/build_map.py
           echo "### Datos generados" >> "$GITHUB_STEP_SUMMARY"
           jq -c "{latest_period, kpis, meses: (.monthly|length)}" data/vm.json >> "$GITHUB_STEP_SUMMARY"
+          jq -c "{ok, error, areas_layer, ducts_layer, areas_matched, oil_share_on_map_pct}" data/map_status.json >> "$GITHUB_STEP_SUMMARY"
 
       - name: Guardar cambios
         run: |

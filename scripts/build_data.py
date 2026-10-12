@@ -48,6 +48,7 @@ COLUMNAS = {
     "empresa": ["empresa", "operadora"],
     "pozo": ["idpozo", "id_pozo", "pozoid"],
     "cuenca": ["cuenca"],
+    "provincia": ["provincia"],
     "area": ["areapermisoconcesion", "area_permiso_concesion", "areayacimiento", "yacimiento"],
     "formacion": ["formacion", "formprod"],
     "tipo_recurso": ["tipo_de_recurso", "tiporecurso", "tipo_recurso", "sub_tipo_recurso", "subtipoderecurso"],
@@ -131,10 +132,10 @@ def leer_csv(fuente: str | Path) -> pd.DataFrame:
     faltan = [c for c in ("empresa", "cuenca", "anio", "mes", "petroleo_m3", "gas_mm3") if c not in df.columns]
     if faltan:
         raise ValueError(f"Faltan columnas {faltan} en {fuente}. Columnas: {list(df.columns)}")
-    for c in ("formacion", "tipo_recurso", "pozo", "area"):
+    for c in ("formacion", "tipo_recurso", "pozo", "area", "provincia"):
         if c not in df.columns:
             df[c] = ""
-    df = df[["empresa", "pozo", "area", "cuenca", "formacion", "tipo_recurso", "anio", "mes", "petroleo_m3", "gas_mm3"]].copy()
+    df = df[["empresa", "pozo", "area", "provincia", "cuenca", "formacion", "tipo_recurso", "anio", "mes", "petroleo_m3", "gas_mm3"]].copy()
     for c in ("petroleo_m3", "gas_mm3"):
         df[c] = pd.to_numeric(df[c].str.replace(",", ".", regex=False), errors="coerce").fillna(0.0)
     df["anio"] = pd.to_numeric(df["anio"], errors="coerce")
@@ -271,8 +272,12 @@ def construir(historico: pd.DataFrame, anuales: list[pd.DataFrame]) -> dict:
     ar_act = ar[(ar["anio"] == ult_a) & (ar["mes"] == ult_m)].set_index("area_n")
     ar_prev = ar[(ar["anio"] == ult_a - 1) & (ar["mes"] == ult_m)].set_index("area_n")
     ult_vm = vm[(vm["anio"] == ult_a) & (vm["mes"] == ult_m)]
-    op_area = ult_vm.groupby(["area_n", "operadora"])["petroleo_m3"].sum().reset_index()
-    op_area = op_area.sort_values("petroleo_m3", ascending=False).drop_duplicates("area_n").set_index("area_n")["operadora"]
+    # Operadora principal por bloque: la de mayor producción en barriles equivalentes (petróleo + gas).
+    ult_vm = ult_vm.assign(boe=ult_vm["petroleo_m3"] * M3_TO_BBL + ult_vm["gas_mm3"] * 5.886)
+    op_area = ult_vm.groupby(["area_n", "operadora"])["boe"].sum().reset_index()
+    op_area = op_area.sort_values("boe", ascending=False).drop_duplicates("area_n").set_index("area_n")["operadora"]
+    prov_area = (ult_vm[ult_vm["provincia"].fillna("").str.strip() != ""].groupby("area_n")["provincia"]
+                 .agg(lambda x: x.mode().iat[0] if len(x.mode()) else "").map(lambda p: str(p).strip().title()))
     areas = []
     for nombre, f in ar_act.sort_values("oil_bbl_d", ascending=False).head(15).iterrows():
         prev = ar_prev["oil_bbl_d"].get(nombre) if nombre in ar_prev.index else None
@@ -283,6 +288,23 @@ def construir(historico: pd.DataFrame, anuales: list[pd.DataFrame]) -> dict:
             "gas_mmm3_d": round(float(f["gas_mmm3_d"]), 2),
             "share_pct": round(float(f["oil_bbl_d"]) / total_oil * 100, 1) if total_oil else None,
             "oil_yoy_pct": variacion(float(f["oil_bbl_d"]), prev),
+        })
+
+    # Todos los bloques con producción en el último mes (para el mapa).
+    areas_all = []
+    for nombre, f in ar_act.sort_values("oil_bbl_d", ascending=False).iterrows():
+        if f["oil_bbl_d"] <= 0 and f["gas_mmm3_d"] <= 0:
+            continue
+        p_oil = ar_prev["oil_bbl_d"].get(nombre) if nombre in ar_prev.index else None
+        p_gas = ar_prev["gas_mmm3_d"].get(nombre) if nombre in ar_prev.index else None
+        areas_all.append({
+            "name": nombre,
+            "province": prov_area.get(nombre, ""),
+            "operator": op_area.get(nombre, ""),
+            "oil_bbl_d": round(float(f["oil_bbl_d"])),
+            "gas_mmm3_d": round(float(f["gas_mmm3_d"]), 3),
+            "oil_yoy_pct": variacion(float(f["oil_bbl_d"]), p_oil),
+            "gas_yoy_pct": variacion(float(f["gas_mmm3_d"]), p_gas),
         })
 
     # Serie mensual de las cinco operadoras principales del último mes.
@@ -320,6 +342,7 @@ def construir(historico: pd.DataFrame, anuales: list[pd.DataFrame]) -> dict:
         },
         "wells": wells,
         "areas": areas,
+        "areas_all": areas_all,
         "operators_history": operators_history,
         "monthly": [
             {
