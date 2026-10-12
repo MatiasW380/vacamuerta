@@ -784,14 +784,39 @@ def rigi_portal(diag: dict) -> dict:
 # ---------------------------------------------------------------------------
 # Regalías de petróleo crudo: precio declarado en boca de pozo, mensual
 # ---------------------------------------------------------------------------
+def _decodifica(b: bytes, enc: str) -> bool:
+    try:
+        b.decode(enc); return True
+    except UnicodeDecodeError:
+        return False
+
+
 def royalties(diag: dict) -> dict:
     paq, base = ckan_paquete(["http://datos.energia.gob.ar", "https://datos.gob.ar"],
                              ["regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado"], diag)
-    rs = [r for r in recursos(paq) if "petr" in norm(r["name"]) and (r["format"] in ("csv", "xlsx", "xls") or r["url"].lower().split("?")[0].endswith((".csv", ".xlsx", ".xls")))]
+    rs = [r for r in recursos(paq) if "petr" in norm(r["name"]) or "crudo" in r["url"].lower()]
     diag["resources"] = [(r["name"], r["format"], r["url"][-80:]) for r in recursos(paq)][:12]
     if not rs:
-        raise RuntimeError("Sin recurso tabular de regalías de petróleo")
-    df = leer_tabla(rs[0]["url"])
+        raise RuntimeError("Sin recurso de regalías de petróleo")
+    if rs[0]["format"] == "zip" or rs[0]["url"].lower().endswith(".zip"):
+        import zipfile
+        z = zipfile.ZipFile(io.BytesIO(get(rs[0]["url"], timeout=300).content))
+        diag["zip_files"] = [(n.filename, n.file_size) for n in z.infolist()][:20]
+        cand = sorted([n for n in z.infolist() if n.filename.lower().endswith((".csv", ".xlsx", ".xls", ".txt"))], key=lambda n: n.file_size, reverse=True)
+        if not cand:
+            raise RuntimeError("El ZIP no trae tablas")
+        datos = z.read(cand[0].filename)
+        if cand[0].filename.lower().endswith((".xlsx", ".xls")):
+            hojas = pd.read_excel(io.BytesIO(datos), sheet_name=None, dtype=str)
+            diag["sheets"] = {k: list(v.columns)[:12] for k, v in hojas.items()}
+            df = max(hojas.values(), key=len)
+        else:
+            texto = next((datos.decode(e) for e in ("utf-8-sig", "latin-1") if _decodifica(datos, e)), datos.decode("latin-1"))
+            sep = ";" if texto[:3000].count(";") > texto[:3000].count(",") else ","
+            df = pd.read_csv(io.StringIO(texto), sep=sep, dtype=str, low_memory=False)
+        df.columns = [norm(c).replace(" ", "_") for c in df.columns]
+    else:
+        df = leer_tabla(rs[0]["url"])
     diag.update({"resource_used": rs[0]["name"], "columns": list(df.columns)[:40], "rows": int(len(df)),
                  "sample": df.tail(3).to_dict(orient="records")})
     c_anio = col(df, "anio", "ano", "año")
