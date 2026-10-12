@@ -133,10 +133,21 @@ def main() -> None:
             geom = simplificar(f["geometry"], TOL_AREAS) if f.get("geometry") else None
             if not geom:
                 continue
-            props = {"name": str(nombre).strip().title() or "Sin nombre"}
+            pr = f.get("properties") or {}
+            limpio = lambda v: str(v).strip() if v not in (None, "") and str(v).strip() else None
+            fin = limpio(pr.get("FIN_CONTRATO"))
+            props = {
+                "name": str(nombre).strip().title() or "Sin nombre",
+                "type": limpio(pr.get("TIPO_AREA")),
+                "holders": limpio(pr.get("PARTICIPAC")),
+                "official_operator": limpio(pr.get("OPERADOR")),
+                "norm": limpio(pr.get("NORMA_LEGAL")),
+                "expires": fin[:10] if fin else None,
+            }
             if match:
                 usados.add(norm(match["name"]))
                 props.update({k: match[k] for k in ("name", "operator", "oil_bbl_d", "gas_mmm3_d", "oil_yoy_pct", "gas_yoy_pct")})
+            props = {k: v for k, v in props.items() if v is not None}
             salida.append({"type": "Feature", "geometry": geom, "properties": props})
         sin_cruce = [a["name"] for k, a in prod.items() if k not in usados and (a.get("province", "").lower().startswith("neuq"))]
         diag["areas_matched"] = len(usados)
@@ -160,8 +171,10 @@ def main() -> None:
                 geom = simplificar(f["geometry"], TOL_DUCTS) if f.get("geometry") else None
                 if not geom:
                     continue
-                texto = norm(" ".join(str(v) for v in (f.get("properties") or {}).values())).lower()
-                kind = "gas" if "gas" in texto else "oil" if ("oleo" in texto or "petrol" in texto or "crudo" in texto) else "other"
+                pr = f.get("properties") or {}
+                fluido = norm(pr.get("FLUIDO") or "").lower()
+                texto = fluido or norm(pr.get("NOMBRE") or "").lower()
+                kind = "gas" if "gas" in texto else "oil" if any(x in texto for x in ("oleo", "petrol", "crudo", "oil")) else "other"
                 nombre = next((str(v) for k, v in (f.get("properties") or {}).items()
                                if isinstance(v, str) and any(x in k.lower() for x in ("nombre", "name", "denom"))), "")
                 lineas.append({"type": "Feature", "geometry": geom, "properties": {"kind": kind, "name": nombre.strip().title()}})
@@ -169,7 +182,29 @@ def main() -> None:
             (DATA / "map_ducts.geojson").write_text(json.dumps({
                 "type": "FeatureCollection", "source": SOURCE, "features": lineas},
                 ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-        for nombre in ("map_areas.geojson", "map_ducts.geojson"):
+        capa_fluidos = elegir(lista, ["vm", "fluido"]) or elegir(lista, ["fluido"])
+        diag["fluids_layer"] = capa_fluidos
+        if capa_fluidos:
+            ffe = features(capa_fluidos)
+            diag["fluids_features"] = len(ffe)
+            diag["fluids_sample_props"] = ffe[0]["properties"] if ffe else None
+            ventanas = []
+            for f in ffe:
+                geom = simplificar(f["geometry"], 0.004) if f.get("geometry") else None
+                if not geom:
+                    continue
+                pr = f.get("properties") or {}
+                etiqueta = next((str(v).strip() for k, v in pr.items() if isinstance(v, str) and v.strip()
+                                 and any(x in k.lower() for x in ("fluido", "ventana", "tipo", "nombre", "descrip"))), "")
+                t = norm(etiqueta).lower()
+                kind = ("dry_gas" if "seco" in t else "wet_gas" if ("humedo" in t or "condens" in t) else
+                        "oil" if ("petrol" in t or "oil" in t or "crudo" in t) else "other")
+                ventanas.append({"type": "Feature", "geometry": geom, "properties": {"kind": kind, "label": etiqueta.title()}})
+            diag["fluids_kinds"] = {k: sum(1 for v in ventanas if v["properties"]["kind"] == k) for k in ("oil", "wet_gas", "dry_gas", "other")}
+            (DATA / "map_fluids.geojson").write_text(json.dumps({
+                "type": "FeatureCollection", "source": SOURCE, "features": ventanas},
+                ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        for nombre in ("map_areas.geojson", "map_ducts.geojson", "map_fluids.geojson"):
             p = DATA / nombre
             if p.exists():
                 diag[f"{nombre}_kb"] = round(p.stat().st_size / 1024)
