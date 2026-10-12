@@ -270,6 +270,7 @@ def resumen_aviso(texto: str) -> str:
     cuerpo = parte_dispositiva(texto)
     cuerpo = re.sub(r"^ART[IÍ]CULO\s*1\s*[°º]?\s*[.\-–:]*\s*", "", cuerpo.strip(), flags=re.I)
     cuerpo = re.split(r"\s+ART[IÍ]CULO\s*2", cuerpo, maxsplit=1, flags=re.I)[0]
+    cuerpo = re.sub(r"^[^\wÁÉÍÓÚÑ(]+", "", cuerpo)
     return cuerpo[:320].strip() + ("…" if len(cuerpo) > 320 else "")
 
 

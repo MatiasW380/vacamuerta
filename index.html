@@ -509,6 +509,7 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
     const [y, m] = p.split("-").map(Number);
     return new Date(Date.UTC(y, m - 1, 15)).toLocaleDateString(locale(), { month: long ? "long" : "short", year: "numeric", timeZone: "UTC" });
   };
+  const axisLabel = v => v >= 1000 ? fmt(v / 1000, v % 1000 ? 1 : 0) + "k" : fmt(v, v % 1 ? 1 : 0);
   const periodLabel = p => p.length === 10
     ? new Date(p + "T12:00:00Z").toLocaleDateString(locale(), { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })
     : monthName(p);
@@ -562,7 +563,7 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
     for (const t of ticks) {
       svg.append(svgEl("line", { x1: m.l, x2: W - m.r, y1: y(t), y2: y(t), stroke: "var(--grid)", "stroke-width": t === 0 ? 1.25 : 1 }));
       const lab = svgEl("text", { x: m.l - 8, y: y(t) + 4, "text-anchor": "end" });
-      lab.textContent = t >= 1000 ? fmt(t / 1000) + "k" : fmt(t, t % 1 ? 1 : 0);
+      lab.textContent = axisLabel(t);
       svg.append(lab);
     }
     yearTicks(svg, rows.map(r => r.period), x, H - 8);
@@ -707,7 +708,7 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
     for (const t of ticks) {
       svg.append(svgEl("line", { x1: m.l, x2: m.l + iw, y1: y(t), y2: y(t), stroke: "var(--grid)" }));
       const lab = svgEl("text", { x: m.l - 8, y: y(t) + 4, "text-anchor": "end" });
-      lab.textContent = t >= 1000 ? fmt(t / 1000) + "k" : fmt(t); svg.append(lab);
+      lab.textContent = axisLabel(t); svg.append(lab);
     }
     yearTicks(svg, periods, x, H - 8);
     // End labels, nudged apart so they never overlap.
@@ -803,7 +804,7 @@ footer p { margin: 0 0 8px; max-width: 75ch; }
     const ag = document.createElement("span"); ag.textContent = i.agency;
     meta.append(d, top, ag);
     li.append(meta, link(i.url, i.title, "t"));
-    if (i.summary) { const p = document.createElement("p"); p.textContent = i.summary; li.append(p); }
+    if (i.summary) { const p = document.createElement("p"); p.textContent = i.summary.replace(/^[^\p{L}\d(]+/u, ""); li.append(p); }
     if (i.similar) { const p = document.createElement("p"); p.className = "meta"; p.style.marginTop = "4px"; p.textContent = t.similar(i.similar); li.append(p); }
     return li;
   }
