@@ -807,9 +807,11 @@ def royalties(diag: dict) -> dict:
             raise RuntimeError("El ZIP no trae tablas")
         datos = z.read(cand[0].filename)
         if cand[0].filename.lower().endswith((".xlsx", ".xls")):
-            hojas = pd.read_excel(io.BytesIO(datos), sheet_name=None, dtype=str)
-            diag["sheets"] = {k: list(v.columns)[:12] for k, v in hojas.items()}
-            df = max(hojas.values(), key=len)
+            hojas = pd.read_excel(io.BytesIO(datos), sheet_name=None, header=None, dtype=object)
+            diag["sheets"] = {k: [len(v), v.shape[1]] for k, v in hojas.items()}
+            diag["sheet_heads"] = {k: [[str(x)[:24] for x in v.iloc[i].tolist() if pd.notna(x)][:16] for i in range(min(14, len(v)))]
+                                   for k, v in list(hojas.items())[:8]}
+            return {"_pending": True} if False else (_ for _ in ()).throw(RuntimeError("Excel de regalías: estructura en diagnóstico"))
         else:
             enc = "utf-8-sig" if _decodifica(datos[:200000], "utf-8-sig") else "latin-1"
             cab = datos[:5000].decode(enc, errors="replace")
