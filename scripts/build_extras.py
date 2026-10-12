@@ -63,6 +63,9 @@ FRAC_PAGE = f"http://datos.energia.gob.ar/dataset/{FRAC_DATASET}"
 
 def col(df: pd.DataFrame, *patrones: str) -> str | None:
     """Primera columna cuyo nombre contiene todos los fragmentos de algún patrón."""
+    for patron in patrones:          # primero, coincidencia exacta
+        if "+" not in patron and patron in df.columns:
+            return patron
     for patron in patrones:
         partes = patron.split("+")
         for c in df.columns:
@@ -288,6 +291,9 @@ def resumen_aviso(texto: str) -> str:
     return cuerpo[:320].strip() + ("…" if len(cuerpo) > 320 else "")
 
 
+RIGI_V = 2
+
+
 def datos_rigi(texto: str) -> dict | None:
     """De una resolución de adhesión al RIGI: proyecto, empresa y monto."""
     if not re.search(r"adhesi[oó]n al R[eé]gimen de Incentivo para Grandes Inversiones|adhesi[oó]n al RIGI", texto, re.I):
@@ -302,10 +308,12 @@ def datos_rigi(texto: str) -> dict | None:
     sector = next((s for s, k in [("Petróleo y gas", "hidrocarbur"), ("Petróleo y gas", "petr"), ("Gas natural licuado", "licuado"),
                                   ("Minería", "miner"), ("Energía eléctrica", "energ[ií]a el[eé]ctrica"), ("Siderurgia", "sider"),
                                   ("Infraestructura", "infraestructura|puerto")] if re.search(k, disp, re.I)), None)
-    return {"project": proyecto.group(1).strip() if proyecto else None,
+    i = disp.find("Apru")
+    return {"excerpt": disp[max(0, i): max(0, i) + 700],
+            "project": proyecto.group(1).strip() if proyecto else None,
             "company": empresa.group(1).strip(" ,.") if empresa else None,
             "usd_million": round(monto / 1e6, 1) if monto and monto > 1e6 else None,
-            "sector": sector}
+            "sector": sector, "v": RIGI_V}
 
 
 def regulations(diag: dict, previo: dict | None) -> dict:
@@ -369,6 +377,15 @@ def regulations(diag: dict, previo: dict | None) -> dict:
             c["rigi"] = datos_rigi(texto)
         nuevos.append(c)
     diag.update({"kept": len(nuevos), "details_failed": fallas})
+    # Re-procesa los avisos RIGI ya guardados cuando cambia el extractor.
+    for i in viejos:
+        if "RIGI" in i.get("topics", []) and (i.get("rigi") or {}).get("v") != RIGI_V:
+            try:
+                det = BeautifulSoup(get(i["url"], timeout=40).text, "html.parser")
+                cuerpo = det.select_one("#cuerpoDetalleAviso") or det.body
+                i["rigi"] = datos_rigi(re.sub(r"\s+", " ", cuerpo.get_text(" ")).strip())
+            except Exception:
+                pass
 
     por_id = {i["id"]: i for i in viejos}
     por_id.update({i["id"]: i for i in nuevos})
@@ -444,7 +461,9 @@ def numero(s: pd.Series) -> pd.Series:
 def reserves(diag: dict) -> dict:
     paq, base = ckan_paquete(["http://datos.energia.gob.ar", "https://datos.gob.ar"],
                              ["reservas-de-petroleo-y-gas", "energia-reservas-petroleo-gas"], diag)
-    rs = [r for r in recursos(paq) if r["format"] in ("csv", "xlsx", "xls") or r["url"].lower().endswith((".csv", ".xlsx"))]
+    todos = recursos(paq)
+    diag["all_resources"] = [{"name": r["name"], "format": r["format"], "url": r["url"][-90:]} for r in todos][:25]
+    rs = [r for r in todos if r["format"] in ("csv", "xlsx", "xls") or r["url"].lower().split("?")[0].endswith((".csv", ".xlsx", ".xls"))]
     diag["resources"] = [r["name"] for r in rs][:20]
     if not rs:
         raise RuntimeError("Sin recursos tabulares")
@@ -584,6 +603,10 @@ RIGI_PORTAL = "https://www.argentina.gob.ar/economia/rigi"
 def rigi_portal(diag: dict) -> dict:
     html = get(RIGI_PORTAL).text
     diag["html_len"] = len(html)
+    i = html.lower().find("petroleo")
+    diag["context"] = html[max(0, i - 700): i + 500] if i >= 0 else None
+    scripts = re.findall(r"<script[^>]*src=[\"']([^\"']+)[\"']", html)
+    diag["scripts"] = [x for x in scripts if "rigi" in x.lower() or "mapa" in x.lower() or "economia" in x.lower()][:15]
     # Recursos que el portal podría cargar con JavaScript (para seguirlos en futuras corridas).
     urls = sorted(set(re.findall(r"""["'](https?://[^"'\s]+?\.(?:json|csv|xlsx|js)(?:\?[^"'\s]*)?)["']""", html) +
                       ["https://www.argentina.gob.ar" + u for u in re.findall(r"""["'](/[^"'\s]+?\.(?:json|csv|xlsx)(?:\?[^"'\s]*)?)["']""", html)]))

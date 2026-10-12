@@ -90,6 +90,30 @@
       </div>
     </section>
 
+    <section class="section" id="prodSection" hidden aria-labelledby="prodTitle">
+      <h2 id="prodTitle" data-i18n="prodTitle">How productive the new wells are</h2>
+      <p class="section-lede" id="prodLede"></p>
+      <div class="two" style="margin-top:18px">
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="prodChartTitle">Average oil in a well's first 6 months, thousand barrels, by start year</h2></div>
+          <div class="chart" id="prodChart"></div>
+        </div>
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="prodOpsTitle">By operator, wells started in the last two years</h2></div>
+          <div class="table-wrap"><table class="ops-mini" id="prodOps">
+            <thead><tr><th scope="col" data-i18n="thOperator">Operator</th><th scope="col" data-i18n="thWells">Wells</th><th scope="col" data-i18n="th6m">First 6 months, kbbl</th></tr></thead>
+            <tbody></tbody></table></div>
+        </div>
+      </div>
+      <div class="table-wrap" id="designWrap" hidden style="margin-top:24px">
+        <h2 style="font-size:17px" data-i18n="designTitle">Well design by year</h2>
+        <table class="ops-mini" id="designTable">
+          <thead><tr><th scope="col" data-i18n="thYear">Year</th><th scope="col" data-i18n="thFracWells">Wells fractured</th><th scope="col" data-i18n="thLateral">Lateral, m</th><th scope="col" data-i18n="thStagesWell">Stages per well</th><th scope="col" data-i18n="thSandWell">Sand per well, t</th><th scope="col" data-i18n="thWaterWell">Water per well, m³</th></tr></thead>
+          <tbody></tbody></table>
+      </div>
+      <p class="note" data-i18n="prodNote">Oil wells only: wells where oil is more than half of the output in barrels of oil equivalent during their first six months. Early years include vertical wells, which explains the lower figures. Well design comes from the fracking filings (Adjunto IV).</p>
+    </section>
+
     <section class="section" id="fracSection" hidden>
       <h2 data-i18n="fracTitle">Fracking stages</h2>
       <p class="section-lede" id="fracLede"></p>
@@ -179,6 +203,31 @@
           </tr></thead>
           <tbody></tbody>
         </table>
+      </div>
+      <div id="concWrap" hidden>
+        <h2 style="margin-top:44px" id="concTitle" data-i18n="concTitle">Concessions and when they expire</h2>
+        <p class="section-lede" data-i18n="concLede">Every hydrocarbon area in Neuquén with a contract end date, its holders and the decree that granted it. Expiry dates shape how long an operator can recover its investment.</p>
+        <div class="map-tools">
+          <div class="seg" role="group" aria-label="Filter">
+            <button type="button" data-conc="soon" aria-pressed="true" data-i18n="concSoon">Expiring within 15 years</button>
+            <button type="button" data-conc="prod" aria-pressed="false" data-i18n="concProd">Producing in Vaca Muerta</button>
+            <button type="button" data-conc="all" aria-pressed="false" data-i18n="concAll">All</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table id="concTable">
+            <thead><tr>
+              <th scope="col" data-i18n="thArea">Block</th>
+              <th scope="col" data-i18n="thExpires">Expires</th>
+              <th scope="col" data-i18n="thYearsLeft">Years left</th>
+              <th scope="col" style="text-align:left" data-i18n="thHolders">Holders</th>
+              <th scope="col" data-i18n="thOil">Oil, bbl/d</th>
+              <th scope="col" style="text-align:left" data-i18n="thNorm">Granted by</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="note" id="concNote"></p>
       </div>
       <details>
         <summary data-i18n="monthlyData">Monthly series as a table</summary>
@@ -284,6 +333,18 @@
       pOperator: "Operator", pPartners: "Partners", pType: "Type", pExpires: "Concession expires", pNorm: "Granted by", pNoProd: "No Vaca Muerta production reported last month.",
       mapNote: (src, p) => `Block outlines, pipelines and fluid windows: ${src}. Production: Energy Secretariat, ${p}. Only blocks in Neuquén are shown; a few Vaca Muerta blocks in Mendoza and Río Negro are not on the map. Basemap © OpenFreeMap, OpenStreetMap contributors.`,
       crumbHere: "Energy: Vaca Muerta",
+      prodTitle: "How productive the new wells are",
+      prodLede: (y, v, a, b) => `A Vaca Muerta oil well that started in ${y} produced ${v} thousand barrels on average in its first six months, against ${a} thousand for wells started in ${b}.`,
+      prodChartTitle: "Average oil in a well's first 6 months, thousand barrels, by start year",
+      prodOpsTitle: "By operator, wells started in the last two years", thWells: "Wells", th6m: "First 6 months, kbbl", kbblUnit: "thousand bbl",
+      designTitle: "Well design by year", thYear: "Year", thFracWells: "Wells fractured", thLateral: "Lateral, m", thStagesWell: "Stages per well", thSandWell: "Sand per well, t", thWaterWell: "Water per well, m³",
+      prodNote: "Oil wells only: wells where oil is more than half of the output in barrels of oil equivalent during their first six months. Early years include vertical wells, which explains the lower figures. Well design comes from the fracking filings (Adjunto IV).",
+      wellsCohort: (n, y) => `${n} wells started in ${y}`,
+      concTitle: "Concessions and when they expire",
+      concLede: "Every hydrocarbon area in Neuquén with a contract end date, its holders and the decree that granted it. Expiry dates shape how long an operator can recover its investment.",
+      concSoon: "Expiring within 15 years", concProd: "Producing in Vaca Muerta", concAll: "All",
+      thExpires: "Expires", thYearsLeft: "Years left", thHolders: "Holders", thNorm: "Granted by",
+      concNote: (src, n) => `Source: ${src}. ${n} areas with a contract end date. Holders and shares as registered by the province.`,
       fracTitle: "Fracking stages",
       fracLede: (n, y, w, s) => `${n} fracking stages were pumped in Vaca Muerta in the last 12 months${y}, across ${w} wells and ${s} tonnes of sand.`,
       fracYoy: v => `, ${v} on the previous year`,
@@ -348,6 +409,18 @@
       pOperator: "Operadora", pPartners: "Socios", pType: "Tipo", pExpires: "Vence la concesión", pNorm: "Otorgada por", pNoProd: "Sin producción de Vaca Muerta declarada el último mes.",
       mapNote: (src, p) => `Límites de bloques, ductos y ventanas de fluidos: ${src}. Producción: Secretaría de Energía, ${p}. Solo se muestran los bloques de Neuquén; algunos bloques de Vaca Muerta en Mendoza y Río Negro no figuran en el mapa. Mapa base © OpenFreeMap, colaboradores de OpenStreetMap.`,
       crumbHere: "Energía: Vaca Muerta",
+      prodTitle: "Cuánto rinden los pozos nuevos",
+      prodLede: (y, v, a, b) => `Un pozo petrolero de Vaca Muerta que empezó a producir en ${y} dio en promedio ${v} mil barriles en sus primeros seis meses, contra ${a} mil de los pozos que empezaron en ${b}.`,
+      prodChartTitle: "Petróleo promedio en los primeros 6 meses de cada pozo, miles de barriles, por año de inicio",
+      prodOpsTitle: "Por operadora, pozos iniciados en los últimos dos años", thWells: "Pozos", th6m: "Primeros 6 meses, miles de bbl", kbblUnit: "miles de bbl",
+      designTitle: "Diseño de pozos por año", thYear: "Año", thFracWells: "Pozos fracturados", thLateral: "Rama, m", thStagesWell: "Etapas por pozo", thSandWell: "Arena por pozo, t", thWaterWell: "Agua por pozo, m³",
+      prodNote: "Solo pozos petroleros: aquellos en los que el petróleo es más de la mitad de la producción en barriles equivalentes durante sus primeros seis meses. Los primeros años incluyen pozos verticales, de ahí las cifras más bajas. El diseño de pozos sale de las declaraciones de fractura (Adjunto IV).",
+      wellsCohort: (n, y) => `${n} pozos iniciados en ${y}`,
+      concTitle: "Concesiones y sus vencimientos",
+      concLede: "Cada área hidrocarburífera de Neuquén con fecha de fin de contrato, sus titulares y la norma que la otorgó. El vencimiento define cuánto tiempo tiene una operadora para recuperar su inversión.",
+      concSoon: "Vencen en 15 años o menos", concProd: "Producen en Vaca Muerta", concAll: "Todas",
+      thExpires: "Vence", thYearsLeft: "Años restantes", thHolders: "Titulares", thNorm: "Otorgada por",
+      concNote: (src, n) => `Fuente: ${src}. ${n} áreas con fecha de fin de contrato. Titulares y participaciones según el registro provincial.`,
       fracTitle: "Etapas de fractura",
       fracLede: (n, y, w, s) => `Se bombearon ${n} etapas de fractura en Vaca Muerta en los últimos 12 meses${y}, en ${w} pozos y con ${s} toneladas de arena.`,
       fracYoy: v => `, ${v} contra el año anterior`,
@@ -400,7 +473,7 @@
     return new Date(Date.UTC(y, m - 1, 15)).toLocaleDateString(locale(), { month: long ? "long" : "short", year: "numeric", timeZone: "UTC" });
   };
   const axisLabel = v => v >= 1000 ? fmt(v / 1000, v % 1000 ? 1 : 0) + "k" : fmt(v, v % 1 ? 1 : 0);
-  const periodLabel = p => p.length === 10
+  const periodLabel = p => p.length === 4 ? p : p.length === 10
     ? new Date(p + "T12:00:00Z").toLocaleDateString(locale(), { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })
     : monthName(p);
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -560,7 +633,7 @@
     const tip = document.createElement("div"); tip.className = "tip";
     rows.forEach((r, i) => {
       const x0 = m.l + i * step + 1, v = r[key], top = y(v), h = y(0) - top;
-      if (r.period.endsWith("-01")) {
+      if (r.period.endsWith("-01") || r.period.length === 4) {
         const lab = svgEl("text", { x: x0, y: H - 8 }); lab.textContent = r.period.slice(0, 4); svg.append(lab);
       }
       const g = svgEl("g", { tabindex: 0 });
@@ -570,7 +643,7 @@
       const show = () => {
         tip.innerHTML = "";
         const s1 = document.createElement("strong"); s1.textContent = `${fmt(v)} ${unit}`;
-        const d = document.createElement("div"); d.textContent = monthName(r.period);
+        const d = document.createElement("div"); d.textContent = r.label || periodLabel(r.period);
         tip.append(s1, d);
         const sc = host.clientWidth / W;
         tip.style.left = Math.min(Math.max(0, x0 * sc - tip.offsetWidth / 2), host.clientWidth - tip.offsetWidth) + "px";
@@ -877,6 +950,46 @@
     new IntersectionObserver((ents, obs) => { if (ents.some(x => x.isIntersecting)) { obs.disconnect(); initMap(); } }, { rootMargin: "400px" }).observe($("#mapSection"));
   } else initMap();
 
+  let CONC = null, concFilter = "soon";
+  function renderConc() {
+    if (!CONC || !CONC.items || !CONC.items.length) return;
+    const t = T[lang], hoy = Date.now();
+    $("#concWrap").hidden = false;
+    const yearsLeft = d => (Date.parse(d) - hoy) / (365.25 * 864e5);
+    let rows = CONC.items.filter(c => c.expires && yearsLeft(c.expires) > -1);
+    if (concFilter === "soon") rows = rows.filter(c => yearsLeft(c.expires) <= 15);
+    if (concFilter === "prod") rows = rows.filter(c => c.oil_bbl_d > 0 || c.gas_mmm3_d > 0);
+    $("#concTable tbody").innerHTML = rows.map(c => {
+      const y = yearsLeft(c.expires);
+      return `<tr><td>${esc(c.name)}</td><td>${esc(shortDate(c.expires))}</td>
+        <td class="${y < 5 ? "delta-down" : ""}">${fmt(Math.max(0, y), 1)}</td>
+        <td style="text-align:left;max-width:260px">${esc(c.holders || c.official_operator || "–")}</td>
+        <td>${c.oil_bbl_d ? fmt(c.oil_bbl_d) : "–"}</td><td style="text-align:left">${esc(c.norm || "–")}</td></tr>`;
+    }).join("");
+    $("#concNote").innerHTML = t.concNote(`<a href="${esc(CONC.source.url)}" rel="noopener">${esc(CONC.source.name)}</a>`, fmt(CONC.items.length));
+  }
+  document.querySelectorAll("[data-conc]").forEach(b => b.addEventListener("click", () => {
+    concFilter = b.dataset.conc;
+    document.querySelectorAll("[data-conc]").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    renderConc();
+  }));
+
+  function renderProd() {
+    const t = T[lang], tc = DATA && DATA.type_curves;
+    if (!tc || !tc.cohorts || !tc.cohorts.length) return;
+    $("#prodSection").hidden = false;
+    const cs = tc.cohorts.filter(c => c.wells_6m >= 20);
+    const last = cs[cs.length - 1], base = cs.find(c => c.year >= 2016) || cs[0];
+    $("#prodLede").textContent = t.prodLede(last.year, fmt(last.avg_6m_kbbl, 0), fmt(base.avg_6m_kbbl, 0), base.year);
+    columnChart($("#prodChart"), cs.map(c => ({ period: String(c.year), v: c.avg_6m_kbbl, label: t.wellsCohort(fmt(c.wells_6m), c.year) })), "v", t.kbblUnit, t.prodChartTitle);
+    $("#prodOps tbody").innerHTML = tc.operators_recent.map(o => `<tr><td>${esc(o.name)}</td><td>${fmt(o.wells)}</td><td>${fmt(o.avg_6m_kbbl, 1)}</td></tr>`).join("");
+    const des = EXTRAS && EXTRAS !== "empty" && EXTRAS.fracking && EXTRAS.fracking.design;
+    if (des && des.length) {
+      $("#designWrap").hidden = false;
+      $("#designTable tbody").innerHTML = des.slice().reverse().map(r => `<tr><td>${r.year}</td><td>${fmt(r.wells)}</td><td>${fmt(r.lateral_m)}</td><td>${fmt(r.stages_per_well, 1)}</td><td>${fmt(r.sand_per_well_t)}</td><td>${fmt(r.water_per_well_m3)}</td></tr>`).join("");
+    }
+  }
+
   function render() {
     const t = T[lang];
     document.documentElement.lang = lang;
@@ -928,6 +1041,8 @@
     }).join("");
     mountQuotes();
     renderExtras();
+    renderProd();
+    renderConc();
     if (mapState === "ready" || mapState === "idle") mapLegend();
 
     if (DATA.areas) {
@@ -970,9 +1085,11 @@
   });
 
   render();
+  fetch("/data/concessions.json", { cache: "no-cache" })
+    .then(r => (r.ok ? r.json() : null)).then(d => { CONC = d; renderConc(); }).catch(() => {});
   fetch("/data/extras.json", { cache: "no-cache" })
     .then(r => (r.ok ? r.json() : Promise.reject(r.status)))
-    .then(d => { EXTRAS = d; if (DATA && DATA !== "empty") renderExtras(); })
+    .then(d => { EXTRAS = d; if (DATA && DATA !== "empty") { renderExtras(); renderProd(); } })
     .catch(() => { EXTRAS = "empty"; });
   fetch("/data/vm.json", { cache: "no-cache" })
     .then(r => (r.ok ? r.json() : Promise.reject(r.status)))
