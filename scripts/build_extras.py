@@ -797,6 +797,7 @@ def tabla_pivote(raw: pd.DataFrame) -> pd.DataFrame | None:
     if fila is None:
         return None
     cols = [_plano(v) for v in raw.iloc[fila].tolist()]
+    titulo = next((str(v) for i in range(max(0, fila - 3), fila) for v in raw.iloc[i].tolist() if isinstance(v, str) and "suma de" in v.lower()), "")
     d = raw.iloc[fila + 1:].copy()
     d.columns = [c or f"c{j}" for j, c in enumerate(cols)]
     d["ano"] = pd.to_numeric(d["ano"], errors="coerce").ffill()
@@ -806,10 +807,12 @@ def tabla_pivote(raw: pd.DataFrame) -> pd.DataFrame | None:
     for c in d.columns:
         if c not in ("ano", "mes", "period"):
             d[c] = pd.to_numeric(d[c], errors="coerce")
-    return d.set_index("period").drop(columns=["ano", "mes"])
+    d = d.set_index("period").drop(columns=["ano", "mes"])
+    d.attrs["title"] = titulo
+    return d
 
 
-def regalias_excel(hojas: dict, diag: dict, base: str) -> dict:
+def regalias_excel(hojas: dict, diag: dict, base: str, fluido: str = "crudo") -> dict:
     t = {}
     for k, v in hojas.items():
         n = _plano(k)
@@ -818,19 +821,32 @@ def regalias_excel(hojas: dict, diag: dict, base: str) -> dict:
             piv = tabla_pivote(v)
             if piv is not None:
                 t[clave] = piv
-    diag["tables"] = {k: [list(v.columns)[:14], v.index[-1] if len(v) else None] for k, v in t.items()}
+    diag["tables"] = {k: [v.attrs.get("title"), list(v.columns)[:14], v.index[-1] if len(v) else None] for k, v in t.items()}
     if "price" not in t:
         raise RuntimeError("No se encontró la tabla de precios")
     provs = {"neuquen": "Neuquén", "chubut": "Chubut", "santa cruz": "Santa Cruz", "mendoza": "Mendoza", "rio negro": "Río Negro"}
     precio = t["price"]
     precio = precio[(precio.get("neuquen", 0) > 0)]
-    m3_bbl = 6.2898
+    unidad = _plano(precio.attrs.get("title", ""))
+    if fluido == "crudo":
+        clave, factor = "usd_bbl", 1 / 6.2898                      # USD/m³ → USD/bbl
+    else:
+        # Gas: USD por miles de m³ (Mm3/dam3) o por m³ → USD/MMBtu, con 9.300 kcal/m³ (1 MMBtu = 27,1 m³).
+        clave = "usd_mmbtu"
+        factor = 27.1 if re.search(r"usd ?/ ?m3\b", unidad) else 27.1 / 1000 if re.search(r"(mm3|dam3|miles)", unidad) else None
+        if re.search(r"mmbtu", unidad):
+            factor = 1.0
+        diag["gas_unit"] = unidad
+        if factor is None:
+            raise RuntimeError(f"Unidad de precio de gas desconocida: {unidad!r}")
     series = {}
     for c, nombre in provs.items():
         if c in precio.columns:
-            series[nombre] = [{"period": p, "usd_bbl": round(float(v) / m3_bbl, 2)} for p, v in precio[c].items() if pd.notna(v) and v > 0][-84:]
-    out = {"source": {"name": "Secretaría de Energía, regalías de petróleo crudo", "url": f"{base}/dataset/regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado", "license": "CC BY 4.0"},
-           "price_usd_bbl": series, "last_period": precio.index[-1] if len(precio) else None}
+            series[nombre] = [{"period": p, clave: round(float(v) * factor, 2)} for p, v in precio[c].items() if pd.notna(v) and v > 0][-84:]
+    nombre_fuente = "regalías de petróleo crudo" if fluido == "crudo" else "regalías de gas natural"
+    out = {"source": {"name": f"Secretaría de Energía, {nombre_fuente}", "url": f"{base}/dataset/regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado", "license": "CC BY 4.0"},
+           ("price_usd_bbl" if fluido == "crudo" else "price_usd_mmbtu"): series, "unit_raw": precio.attrs.get("title"),
+           "last_period": precio.index[-1] if len(precio) else None}
     if "royalties" in t and "volume" in t:
         r, vol = t["royalties"], t["volume"]
         ult = [p for p in r.index if r.loc[p].get("neuquen", 0) > 0][-12:]
@@ -844,10 +860,13 @@ def regalias_excel(hojas: dict, diag: dict, base: str) -> dict:
     return out
 
 
-def royalties(diag: dict) -> dict:
+def royalties(diag: dict, fluido: str = "crudo") -> dict:
     paq, base = ckan_paquete(["http://datos.energia.gob.ar", "https://datos.gob.ar"],
                              ["regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado"], diag)
-    rs = [r for r in recursos(paq) if "petr" in norm(r["name"]) or "crudo" in r["url"].lower()]
+    if fluido == "crudo":
+        rs = [r for r in recursos(paq) if "petr" in norm(r["name"]) or "crudo" in r["url"].lower()]
+    else:
+        rs = [r for r in recursos(paq) if "gas natural" in norm(r["name"]) or r["url"].lower().endswith("regalias_gas.zip")]
     diag["resources"] = [(r["name"], r["format"], r["url"][-80:]) for r in recursos(paq)][:12]
     if not rs:
         raise RuntimeError("Sin recurso de regalías de petróleo")
@@ -864,7 +883,7 @@ def royalties(diag: dict) -> dict:
             diag["sheets"] = {k: [len(v), v.shape[1]] for k, v in hojas.items()}
             diag["sheet_heads"] = {k: [[str(x)[:24] for x in v.iloc[i].tolist() if pd.notna(x)][:16] for i in range(min(14, len(v)))]
                                    for k, v in list(hojas.items())[:8]}
-            return regalias_excel(hojas, diag, base)
+            return regalias_excel(hojas, diag, base, fluido)
         else:
             enc = "utf-8-sig" if _decodifica(datos[:200000], "utf-8-sig") else "latin-1"
             cab = datos[:5000].decode(enc, errors="replace")
@@ -909,6 +928,47 @@ def royalties(diag: dict) -> dict:
         neu = d[d[c_prov].fillna("").map(norm).str.contains("neuqu")]
         out["neuquen"] = serie(neu)
     return out
+
+
+# ---------------------------------------------------------------------------
+# Balanza comercial energética (INDEC, vía API de Series de Tiempo)
+# ---------------------------------------------------------------------------
+SERIES_API = "https://apis.datos.gob.ar/series/api"
+
+
+def _buscar_serie(q: str, debe: list[str], diag: dict, clave: str) -> dict | None:
+    res = get(f"{SERIES_API}/search/", params={"q": q, "limit": 40}, timeout=60).json().get("data", [])
+    cands = []
+    for r in res:
+        f, ds = r.get("field", {}), r.get("dataset", {})
+        texto = norm(" ".join(str(x) for x in (f.get("description"), f.get("title"), ds.get("title"))))
+        cands.append({"id": f.get("id"), "title": f.get("title"), "desc": (f.get("description") or "")[:120], "freq": f.get("frequency"),
+                      "end": f.get("time_index_end"), "units": f.get("units"), "dataset": (ds.get("title") or "")[:80], "ok": all(d in texto for d in debe)})
+    diag[f"candidates_{clave}"] = cands[:15]
+    buenas = [c for c in cands if c["ok"] and c["freq"] == "R/P1M" and c["end"]]
+    buenas.sort(key=lambda c: (c["end"], "dolar" in norm(str(c["units"]))), reverse=True)
+    return buenas[0] if buenas else None
+
+
+def trade_balance(diag: dict) -> dict:
+    exp = _buscar_serie("exportaciones combustibles y energia", ["export", "combustibles", "energia"], diag, "exp")
+    imp = _buscar_serie("importaciones combustibles y lubricantes", ["import", "combustibles", "lubricantes"], diag, "imp")
+    diag["chosen"] = {"exp": exp, "imp": imp}
+    if not exp or not imp:
+        raise RuntimeError("No se encontraron las series mensuales de exportación e importación de energía")
+    j = get(f"{SERIES_API}/series/", params={"ids": f"{exp['id']},{imp['id']}", "format": "json", "limit": 1000, "start_date": "2010-01-01"}, timeout=60).json()
+    filas = [{"period": d[0][:7], "exports": d[1], "imports": d[2]} for d in j.get("data", []) if d[1] is not None and d[2] is not None]
+    for f in filas:
+        f["balance"] = round(f["exports"] - f["imports"], 1)
+        f["exports"], f["imports"] = round(f["exports"], 1), round(f["imports"], 1)
+    if len(filas) < 24:
+        raise RuntimeError(f"Serie demasiado corta: {len(filas)} meses")
+    ult = filas[-12:]; prev = filas[-24:-12]
+    return {"source": {"name": "INDEC, intercambio comercial argentino (API de Series de Tiempo)", "url": "https://datos.gob.ar/series", "license": "CC BY 4.0"},
+            "units": exp.get("units"), "ids": [exp["id"], imp["id"]], "monthly": filas,
+            "last_12m": {"from": ult[0]["period"], "to": ult[-1]["period"], "exports": round(sum(f["exports"] for f in ult), 1),
+                         "imports": round(sum(f["imports"] for f in ult), 1), "balance": round(sum(f["balance"] for f in ult), 1),
+                         "balance_prev": round(sum(f["balance"] for f in prev), 1)}}
 
 
 # ---------------------------------------------------------------------------
@@ -994,6 +1054,8 @@ def main() -> None:
         ("fuel_prices", lambda d: fuel_prices(d)),
         ("rigi_portal", lambda d: rigi_portal(d)),
         ("royalties", lambda d: royalties(d)),
+        ("royalties_gas", lambda d: royalties(d, "gas")),
+        ("trade_balance", lambda d: trade_balance(d)),
     ]
     solo = set(sys.argv[1:])
     for nombre, fn in tareas:

@@ -181,7 +181,13 @@ def curvas_tipo(df: pd.DataFrame, primeros: pd.Series) -> dict:
     agg["cohorte"] = (agg["inicio"] - 1) // 12
     agg["operadora"] = agg["empresa"].map(nombre_corto)
     boe_oil = agg["oil6"] * M3_TO_BBL
-    agg = agg[(boe_oil > 0) & (boe_oil / (boe_oil + agg["gas6"] * 5.886) > 0.5)]
+    # Ficha mínima de cada pozo para el mapa: inicio, operadora, fluido y petróleo de los primeros 6 meses.
+    completo = agg["inicio"] <= ultimo - 5
+    petrolero = (boe_oil > 0) & (boe_oil / (boe_oil + agg["gas6"] * 5.886) > 0.5)
+    fichas = {str(pz): [f"{(int(i) - 1) // 12}-{(int(i) - 1) % 12 + 1:02d}", op, "o" if pe else "g",
+                        round(float(o6) * M3_TO_BBL / 1000, 1) if c else None]
+              for pz, i, op, pe, o6, c in zip(agg.index, agg["inicio"], agg["operadora"], petrolero, agg["oil6"], completo)}
+    agg = agg[petrolero]
     con6 = agg[agg["inicio"] <= ultimo - 5]
     con12 = agg[agg["inicio"] <= ultimo - 11]
     kbbl = lambda m3: round(float(m3) * M3_TO_BBL / 1000, 1)
@@ -205,7 +211,7 @@ def curvas_tipo(df: pd.DataFrame, primeros: pd.Series) -> dict:
         if len(g) >= 8:
             ops.append({"name": nombre, "wells": int(len(g)), "avg_6m_kbbl": kbbl(g["oil6"].mean())})
     ops.sort(key=lambda o: o["avg_6m_kbbl"], reverse=True)
-    return {"cohorts": cohortes, "operators_recent": ops[:10],
+    return {"_wells": fichas, "cohorts": cohortes, "operators_recent": ops[:10],
             "operators_window": f"{(ultimo - 30) // 12}-{((ultimo - 30) % 12) + 1:02d}"}
 
 
@@ -429,6 +435,11 @@ def main() -> None:
 
     datos = construir(historico, anuales)
     args.out.parent.mkdir(parents=True, exist_ok=True)
+    fichas = datos.get("type_curves", {}).pop("_wells", None)
+    if fichas:
+        (args.out.parent / "wells_vm.json").write_text(json.dumps(
+            {"fields": ["start", "operator", "fluid", "oil_6m_kbbl"], "wells": fichas},
+            ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     args.out.write_text(json.dumps(datos, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     pozos = {w["period"]: w for w in datos["wells"]}
     lineas = ["period,oil_bbl_d,gas_mmm3_d,new_wells,active_wells"]

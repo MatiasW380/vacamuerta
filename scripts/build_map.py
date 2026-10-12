@@ -221,7 +221,52 @@ def main() -> None:
             (DATA / "map_fluids.geojson").write_text(json.dumps({
                 "type": "FeatureCollection", "source": SOURCE, "features": ventanas},
                 ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-        for nombre in ("map_areas.geojson", "map_ducts.geojson", "map_fluids.geojson"):
+        # Pozos de Vaca Muerta, unidos a su ficha de producción (data/wells_vm.json) por identificador.
+        capa_pozos = next((c["name"] for c in lista if c["name"].lower().endswith("pozos_vm")), None)
+        diag["wells_layer"] = capa_pozos
+        if capa_pozos:
+            pfe = features(capa_pozos)
+            diag["wells_features"] = len(pfe)
+            diag["wells_sample_props"] = pfe[0]["properties"] if pfe else None
+            diag["wells_geom_types"] = sorted({(f.get("geometry") or {}).get("type") for f in pfe if f.get("geometry")})
+            fichas = {}
+            fp = DATA / "wells_vm.json"
+            if fp.exists():
+                fichas = json.loads(fp.read_text(encoding="utf-8")).get("wells", {})
+            # Atributo que coincide con el idpozo del Capítulo IV.
+            mejor, mejor_n = None, 0
+            if fichas and pfe:
+                for k in pfe[0]["properties"]:
+                    n = sum(1 for f in pfe[:800] if str((f["properties"] or {}).get(k, "")).strip().split(".")[0] in fichas)
+                    if n > mejor_n:
+                        mejor, mejor_n = k, n
+            diag["wells_join_key"] = mejor
+            diag["wells_join_sample_hits"] = mejor_n
+            puntos, unidos = [], 0
+            for f in pfe:
+                g = f.get("geometry") or {}
+                c = g.get("coordinates")
+                if not c:
+                    continue
+                while isinstance(c[0], (list, tuple)):
+                    c = c[0]
+                pr = f.get("properties") or {}
+                props = {}
+                nombre = next((str(v).strip() for k, v in pr.items() if isinstance(v, str) and k.lower() in ("sigla", "nombre", "pozo", "denominacion")), None)
+                if nombre:
+                    props["n"] = nombre
+                ficha = fichas.get(str(pr.get(mejor, "")).strip().split(".")[0]) if mejor else None
+                if ficha:
+                    unidos += 1
+                    props.update({"s": ficha[0], "op": ficha[1], "f": ficha[2]})
+                    if ficha[3] is not None:
+                        props["o6"] = ficha[3]
+                puntos.append({"type": "Feature", "geometry": {"type": "Point", "coordinates": [round(c[0], 4), round(c[1], 4)]}, "properties": props})
+            diag["wells_matched"] = unidos
+            (DATA / "map_wells.geojson").write_text(json.dumps({
+                "type": "FeatureCollection", "source": SOURCE, "features": puntos},
+                ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        for nombre in ("map_areas.geojson", "map_ducts.geojson", "map_fluids.geojson", "map_wells.geojson"):
             p = DATA / nombre
             if p.exists():
                 diag[f"{nombre}_kb"] = round(p.stat().st_size / 1024)
