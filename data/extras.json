@@ -12349,7 +12349,7 @@
   "ids": [
    "75.1_TCE_0_A_26",
    "74.1_IICL_0_A_42",
-   "75.2_TCE_0_T_26",
+   "74.2_IECE_0_T_35",
    "74.2_IICL_0_T_42"
   ],
   "yearly": [
@@ -12360,10 +12360,22 @@
     "balance": 6080.8
    },
    {
+    "year": 2007,
+    "exports": 6948.9,
+    "imports": 2844.6,
+    "balance": 4104.3
+   },
+   {
     "year": 2008,
     "exports": 7847.8,
     "imports": 4333.3,
     "balance": 3514.5
+   },
+   {
+    "year": 2009,
+    "exports": 6456.6,
+    "imports": 2626.2,
+    "balance": 3830.4
    },
    {
     "year": 2010,
@@ -12384,6 +12396,12 @@
     "balance": -2150.3
    },
    {
+    "year": 2013,
+    "exports": 5561.6,
+    "imports": 12464.1,
+    "balance": -6902.5
+   },
+   {
     "year": 2014,
     "exports": 4950.4,
     "imports": 11420.2,
@@ -12396,10 +12414,22 @@
     "balance": -4699.9
    },
    {
+    "year": 2016,
+    "exports": 2014.6,
+    "imports": 4914.0,
+    "balance": -2899.4
+   },
+   {
     "year": 2017,
     "exports": 2477.0,
     "imports": 5715.0,
     "balance": -3238.0
+   },
+   {
+    "year": 2018,
+    "exports": 4200.0,
+    "imports": 6555.0,
+    "balance": -2355.0
    },
    {
     "year": 2019,
@@ -12420,10 +12450,22 @@
     "balance": -558.0
    },
    {
+    "year": 2022,
+    "exports": 8509.0,
+    "imports": 12868.0,
+    "balance": -4359.0
+   },
+   {
     "year": 2023,
     "exports": 7910.7,
     "imports": 7924.0,
     "balance": -13.4
+   },
+   {
+    "year": 2024,
+    "exports": 9717.1,
+    "imports": 3987.1,
+    "balance": 5730.0
    },
    {
     "year": 2025,
@@ -12432,25 +12474,25 @@
     "balance": 7829.1
    }
   ],
-  "latest_period": {
+  "missing_years": [],
+  "latest_quarter": {
    "period": "2026-04",
    "exports": 4778.1,
    "imports": 1258.9,
    "balance": 3519.2
   },
-  "latest_period_prev_year": {
+  "latest_quarter_prev_year": {
    "period": "2025-04",
    "exports": 2561.6,
    "imports": 930.8,
    "balance": 1630.8
-  },
-  "period_kind": "quarter"
+  }
  },
- "generated_at": "2026-10-12T22:07Z",
+ "generated_at": "2026-10-12T22:09Z",
  "status": {
   "fracking": {
    "ok": true,
-   "at": "2026-10-12T21:58Z",
+   "at": "2026-10-12T22:08Z",
    "diag": {
     "resources": [
      "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
@@ -12511,29 +12553,31 @@
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-12T21:58Z",
+   "at": "2026-10-12T22:08Z",
    "diag": {
     "pages": 1
    }
   },
   "oil_price": {
    "ok": true,
-   "at": "2026-10-12T21:58Z",
+   "at": "2026-10-12T22:08Z",
    "diag": {}
   },
   "regulations": {
-   "ok": false,
-   "error": "RuntimeError: No se encontraron avisos en la primera sección",
+   "ok": true,
+   "at": "2026-10-12T22:09Z",
    "diag": {
     "pages": 6,
-    "page_errors": 6,
-    "links": 0
-   },
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1171, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1155, in <lambda>\n    (\"regulations\", lambda d: regulations(d, previo.get(\"regulations\"))),\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 355, in regulations\n    raise RuntimeError(\"No se encontraron avisos en la primera sección\")\nRuntimeError: No se encontraron avisos en la primera sección\n"
+    "page_errors": 0,
+    "links": 628,
+    "candidates": 0,
+    "kept": 0,
+    "details_failed": 0
+   }
   },
   "news": {
    "ok": true,
-   "at": "2026-10-12T22:06Z",
+   "at": "2026-10-12T22:09Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
@@ -12544,7 +12588,7 @@
   },
   "reserves": {
    "ok": true,
-   "at": "2026-10-12T22:06Z",
+   "at": "2026-10-12T22:09Z",
    "diag": {
     "package": "http://datos.energia.gob.ar reservas-de-petroleo-y-gas",
     "zip_files": [
@@ -12751,7 +12795,7 @@
   },
   "export_price": {
    "ok": true,
-   "at": "2026-10-12T22:06Z",
+   "at": "2026-10-12T22:09Z",
    "diag": {
     "package": "https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo",
     "resources": [
@@ -13082,7 +13126,7 @@
   },
   "fuel_prices": {
    "ok": true,
-   "at": "2026-10-12T22:07Z",
+   "at": "2026-10-12T22:09Z",
    "diag": {
     "package": "http://datos.energia.gob.ar precios-en-surtidor",
     "resources": [
@@ -13125,7 +13169,7 @@
   },
   "rigi_portal": {
    "ok": true,
-   "at": "2026-10-12T22:07Z",
+   "at": "2026-10-12T22:09Z",
    "diag": {
     "html_len": 76399,
     "context": "-thin\">&nbsp;</span><span class=\"fw-semibold fs-1\">M</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Empleos <span class=\"fw-medium br-sm br-xs\">(directos e indirectos)</span></dt><dd class=\"fs-1 fw-bold text-arg-verdin js-total-puestos-trabajo\">0</dd></div></dl></div><div class=\"col-md-12 m-y-2\"><h3 class=\"h4 font-sans-serif p-b-1 border-bottom\">Sectores</h3><dl class=\"dl-proyectos-sector\"><div class=\"d-grid\"><dt class=\"last\">Energía eléctrica</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-torre-electrica m-r-05\"></i> <span class=\"m-t-1 js-total-energia-electrica\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Petróleo y gas</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-petroleo-y-gas m-r-05\"></i> <span class=\"m-t-1 js-total-petroleo-y-gas\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Minería</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-mineria m-r-05\"></i> <span class=\"m-t-1 js-total-mineria\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Siderurgia</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-siderurgia m-r-05\"></i> <span class=\"m-t-1 js-total-siderurgia\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Infraestructura</dt><",
@@ -13180,7 +13224,7 @@
   },
   "royalties": {
    "ok": true,
-   "at": "2026-10-12T22:07Z",
+   "at": "2026-10-12T22:09Z",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
@@ -13590,7 +13634,7 @@
   },
   "royalties_gas": {
    "ok": true,
-   "at": "2026-10-12T22:07Z",
+   "at": "2026-10-12T22:09Z",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
@@ -14096,518 +14140,35 @@
   },
   "trade_balance": {
    "ok": true,
-   "at": "2026-10-12T22:07Z",
+   "at": "2026-10-12T22:09Z",
    "diag": {
-    "tried_exp": [
-     {
-      "id": "75.3_TCE_0_M_26",
-      "desc": "Exportaciones de total combustibles y energía. En millones de dólares FOB",
-      "n": 0,
-      "last": null
-     },
-     {
-      "id": "75.2_TCE_0_T_26",
-      "desc": "Exportaciones de total combustibles y energía. En millones de dólares FOB",
-      "n": 46,
-      "last": "2026-04"
-     }
-    ],
-    "tried_imp": [
-     {
-      "id": "242.3_VFIS_IMTES_0_0_37",
-      "desc": "Volumen Físico de Importaciones. Combustibles y Lubricantes",
-      "n": 0,
-      "last": null
-     },
-     {
-      "id": "74.3_IICL_0_M_42",
-      "desc": "Importaciones de combustibles y lubricantes. En millones de dólares.",
-      "n": 0,
-      "last": null
-     },
-     {
-      "id": "74.2_IICL_0_T_42",
-      "desc": "Importaciones de combustibles y lubricantes. En millones de dólares.",
-      "n": 66,
-      "last": "2026-04"
-     }
-    ],
-    "chosen": {
-     "exp": {
-      "id": "75.2_TCE_0_T_26",
-      "desc": "Exportaciones de total combustibles y energía. En millones de dólares FOB",
-      "units": "Millones de dólares",
-      "freq": "quarter"
-     },
-     "imp": {
-      "id": "74.2_IICL_0_T_42",
-      "desc": "Importaciones de combustibles y lubricantes. En millones de dólares.",
-      "units": "Millones de dólares",
-      "freq": "quarter"
-     }
-    },
-    "series_status": 200,
-    "series_head": {
-     "75.1_TCE_0_A_26": {
-      "count": 21,
-      "params": {
-       "ids": "75.1_TCE_0_A_26",
-       "format": "json",
-       "limit": "1000",
-       "start_date": "2005-01-01",
-       "identifiers": [
-        {
-         "id": "75.1_TCE_0_A_26",
-         "distribution": "75.1",
-         "dataset": "75"
-        }
-       ]
-      },
-      "n": 21,
-      "first": [
-       [
-        "2005-01-01",
-        7150.056321999999
-       ],
-       [
-        "2006-01-01",
-        7812.990769
-       ]
-      ],
-      "meta": "[{'frequency': 'year', 'start_date': '2005-01-01', 'end_date': '2025-01-01'}, {'catalog': {'title': 'Datos Programación Macroeconómica'}, 'dataset': {'title': 'Exportaciones FOB por rubro', 'description': 'Intercambio Comercial Argentino en millones de dólares', 'issued': '2017-09-28', 'source': 'In"
-     },
-     "74.1_IICL_0_A_42": {
-      "count": 13,
-      "params": {
-       "ids": "74.1_IICL_0_A_42",
-       "format": "json",
-       "limit": "1000",
-       "start_date": "2005-01-01",
-       "identifiers": [
-        {
-         "id": "74.1_IICL_0_A_42",
-         "distribution": "74.1",
-         "dataset": "74"
-        }
-       ]
-      },
-      "n": 20,
-      "first": [
-       [
-        "2006-01-01",
-        1732.151276
-       ],
-       [
-        "2007-01-01",
-        null
-       ]
-      ],
-      "meta": "[{'frequency': 'year', 'start_date': '2006-01-01', 'end_date': '2025-01-01'}, {'catalog': {'title': 'Datos Programación Macroeconómica'}, 'dataset': {'title': 'Intercambio Comercial Argentino', 'description': 'Intercambio Comercial Argentino en millones de dólares', 'issued': '2017-09-28', 'source':"
-     }
-    },
-    "export_annual_raw": [
-     [
-      "2005-01-01",
-      7150.056321999999
+    "tried": {
+     "74.2_IECE_0_T_35": [
+      86,
+      "2026-04"
      ],
-     [
-      "2006-01-01",
-      7812.990769
+     "75.2_TCE_0_T_26": [
+      86,
+      "2026-04"
      ],
-     [
-      "2007-01-01",
-      6948.878045469999
+     "74.1_IECE_0_A_35": [
+      15,
+      "2024"
      ],
-     [
-      "2008-01-01",
-      7847.75705697
+     "75.1_TCE_0_A_26": [
+      21,
+      "2025"
      ],
-     [
-      "2009-01-01",
-      6456.604585540001
+     "74.2_IICL_0_T_42": [
+      86,
+      "2026-04"
      ],
-     [
-      "2010-01-01",
-      6525.16189795
-     ],
-     [
-      "2011-01-01",
-      6681.679813549999
-     ],
-     [
-      "2012-01-01",
-      6978.016447779999
-     ],
-     [
-      "2013-01-01",
-      5561.5744833300005
-     ],
-     [
-      "2014-01-01",
-      4950.43133279
-     ],
-     [
-      "2015-01-01",
-      2251.65607518
-     ],
-     [
-      "2016-01-01",
-      2014.6373242501293
-     ],
-     [
-      "2017-01-01",
-      2477.0
-     ],
-     [
-      "2018-01-01",
-      4200.0
-     ],
-     [
-      "2019-01-01",
-      4421.0
-     ],
-     [
-      "2020-01-01",
-      3593.0
-     ],
-     [
-      "2021-01-01",
-      5284.0
-     ],
-     [
-      "2022-01-01",
-      8509.0
-     ],
-     [
-      "2023-01-01",
-      7910.657621920001
-     ],
-     [
-      "2024-01-01",
-      9717.08312146
-     ],
-     [
-      "2025-01-01",
-      11100.16311483
+     "74.1_IICL_0_A_42": [
+      13,
+      "2025"
      ]
-    ],
-    "alternatives": [
-     [
-      "AGRO_0411",
-      "Cantidad de dólares en la balanza comercial de queso fundido.",
-      "R/P1Y",
-      "2009-01-01",
-      "Lácteos - Balanza comercial"
-     ],
-     [
-      "AGRO_0423",
-      "Cantidad de dólares en la balanza comercial de helados.",
-      "R/P1Y",
-      "2009-01-01",
-      "Lácteos - Balanza comercial"
-     ],
-     [
-      "AGRO_0422",
-      "Cantidad de dólares en la balanza comercial de lactosa.",
-      "R/P1Y",
-      "2009-01-01",
-      "Lácteos - Balanza comercial"
-     ],
-     [
-      "AGRO_0424",
-      "Cantidad de dólares en la balanza comercial de otros lácteos.",
-      "R/P1Y",
-      "2009-01-01",
-      "Lácteos - Balanza comercial"
-     ],
-     [
-      "AGRO_0412",
-      "Cantidad de dólares en la balanza comercial de otros quesos.",
-      "R/P1Y",
-      "2009-01-01",
-      "Lácteos - Balanza comercial"
-     ],
-     [
-      "AGRO_0405",
-      "Cantidad de dólares en la balanza comercial de leche condensada.",
-      "R/P1Y",
-      "2009-01-01",
-      "Lácteos - Balanza comercial"
-     ],
-     [
-      "AGRO_0415",
-      "Cantidad de dólares en la balanza comercial de crema.",
-      "R/P1Y",
-      "2009-01-01",
-      "Lácteos - Balanza comercial"
-     ],
-     [
-      "AGRO_0418",
-      "Cantidad de dólares en la balanza comercial de caseina.",
-      "R/P1Y",
-      "2009-01-01",
-      "Lácteos - Balanza comercial"
-     ],
-     [
-      "AGRO_0419",
-      "Cantidad de dólares en la balanza comercial de caseinatos.",
-      "R/P1Y",
-      "2009-01-01",
-      "Lácteos - Balanza comercial"
-     ],
-     [
-      "AGRO_0420",
-      "Cantidad de dólares en la balanza comercial de suero.",
-      "R/P1Y",
-      "2009-01-01",
-      "Lácteos - Balanza comercial"
-     ],
-     [
-      "AGRO_0414",
-      "Cantidad de dólares en la balanza comercial de aceite butírico.",
-      "R/P1Y",
-      "2009-01-01",
-      "Lácteos - Balanza comercial"
-     ],
-     [
-      "AGRO_0413",
-      "Cantidad de dólares en la balanza comercial de manteca.",
-      "R/P1Y",
-      "2009-01-01",
-      "Lácteos - Balanza comercial"
-     ],
-     [
-      "AGRO_0410",
-      "Cantidad de dólares en la balanza comercial de queso rallado.",
-      "R/P1Y",
-      "2009-01-01",
-      "Lácteos - Balanza comercial"
-     ],
-     [
-      "AGRO_0416",
-      "Cantidad de dólares en la balanza comercial de yogur.",
-      "R/P1Y",
-      "2009-01-01",
-      "Lácteos - Balanza comercial"
-     ],
-     [
-      "AGRO_0401",
-      "Cantidad de dólares en la balanza comercial de leche fluida.",
-      "R/P1Y",
-      "2009-01-01",
-      "Lácteos - Balanza comercial"
-     ],
-     [
-      "164.2_SLGODONDON_0_0_10",
-      "Saldo comercial. Algodón. Millones de USD. Trimestral.",
-      "R/P3M",
-      "2024-10-01",
-      "Saldo comercial clasificado el Nomenclador Común d"
-     ],
-     [
-      "164.2_SBONOSNOS_0_0_9",
-      "Saldo comercial. Abonos. Millones de USD. Trimestral.",
-      "R/P3M",
-      "2024-10-01",
-      "Saldo comercial clasificado el Nomenclador Común d"
-     ],
-     [
-      "164.1_SEDAEDA_0_0_7",
-      "Saldo comercial. Seda. Millones de USD. Anual.",
-      "R/P1Y",
-      "2024-01-01",
-      "Saldo comercial clasificado el Nomenclador Común d"
-     ],
-     [
-      "164.1_SESTOSTO_0_0_8",
-      "Saldo comercial. Resto. Millones de USD. Anual.",
-      "R/P1Y",
-      "2024-01-01",
-      "Saldo comercial clasificado el Nomenclador Común d"
-     ],
-     [
-      "74.3_ISC_0_M_19",
-      "Saldo comercial. En millones de dólares.",
-      "R/P1M",
-      "2026-08-01",
-      "Intercambio Comercial Argentino"
-     ],
-     [
-      "164.1_SEREALELES_0_0_11",
-      "Saldo comercial. Cereales. Millones de USD. Anual.",
-      "R/P1Y",
-      "2024-01-01",
-      "Saldo comercial clasificado el Nomenclador Común d"
-     ],
-     [
-      "164.3_SEDAEDA_0_0_7",
-      "Saldo comercial. Seda. Millones de USD. Mensual.",
-      "R/P1M",
-      "2025-02-01",
-      "Saldo comercial clasificado el Nomenclador Común d"
-     ],
-     [
-      "164.3_SEREALELES_0_0_11",
-      "Saldo comercial. Cereales. Millones de USD. Mensual.",
-      "R/P1M",
-      "2025-02-01",
-      "Saldo comercial clasificado el Nomenclador Común d"
-     ],
-     [
-      "164.3_SOTALTAL_0_0_8",
-      "Saldo comercial. Total. Millones de USD. Mensual.",
-      "R/P1M",
-      "2025-02-01",
-      "Saldo comercial clasificado el Nomenclador Común d"
-     ],
-     [
-      "164.3_SLGODONDON_0_0_10",
-      "Saldo comercial. Algodón. Millones de USD. Mensual.",
-      "R/P1M",
-      "2025-02-01",
-      "Saldo comercial clasificado el Nomenclador Común d"
-     ],
-     [
-      "164.2_SESTOSTO_0_0_8",
-      "Saldo comercial. Resto. Millones de USD. Trimestral.",
-      "R/P3M",
-      "2024-10-01",
-      "Saldo comercial clasificado el Nomenclador Común d"
-     ],
-     [
-      "164.1_SOTALTAL_0_0_8",
-      "Saldo comercial. Total. Millones de USD. Anual.",
-      "R/P1Y",
-      "2024-01-01",
-      "Saldo comercial clasificado el Nomenclador Común d"
-     ],
-     [
-      "74.1_SC_0_A_15",
-      "Saldo comercial. En millones de dólares.",
-      "R/P1Y",
-      "2025-01-01",
-      "Intercambio Comercial Argentino"
-     ],
-     [
-      "164.2_SOTALTAL_0_0_8",
-      "Saldo comercial. Total. Millones de USD. Trimestral.",
-      "R/P3M",
-      "2024-10-01",
-      "Saldo comercial clasificado el Nomenclador Común d"
-     ],
-     [
-      "74.2_SC_0_T_15",
-      "Saldo comercial. En millones de dólares.",
-      "R/P3M",
-      "2026-04-01",
-      "Intercambio Comercial Argentino"
-     ],
-     [
-      "75.3_IEE_0_M_21",
-      "Exportaciones de energía eléctrica. En millones de dólares FOB",
-      "R/P1M",
-      "2026-08-01",
-      "Exportaciones FOB por rubro"
-     ],
-     [
-      "75.2_EE_0_T_17",
-      "Exportaciones de energía eléctrica. En millones de dólares FOB",
-      "R/P3M",
-      "2026-04-01",
-      "Exportaciones FOB por rubro"
-     ],
-     [
-      "75.1_EE_0_A_17",
-      "Exportaciones de energía eléctrica. En millones de dólares FOB",
-      "R/P1Y",
-      "2025-01-01",
-      "Exportaciones FOB por rubro"
-     ],
-     [
-      "75.3_ITCE_0_M_30",
-      "Exportaciones de total combustibles y energía. En millones de dólares FOB",
-      "R/P1M",
-      "2026-08-01",
-      "Exportaciones FOB por rubro"
-     ],
-     [
-      "75.1_TCE_0_A_26",
-      "Exportaciones de total combustibles y energía. En millones de dólares FOB",
-      "R/P1Y",
-      "2025-01-01",
-      "Exportaciones FOB por rubro"
-     ],
-     [
-      "75.2_TCE_0_T_26",
-      "Exportaciones de total combustibles y energía. En millones de dólares FOB",
-      "R/P3M",
-      "2026-04-01",
-      "Exportaciones FOB por rubro"
-     ],
-     [
-      "74.1_IECE_0_A_35",
-      "Exportación de combustibles y energía. En millones de dólares.",
-      "R/P1Y",
-      "2025-01-01",
-      "Intercambio Comercial Argentino"
-     ],
-     [
-      "74.2_IECE_0_T_35",
-      "Exportación de combustibles y energía. En millones de dólares.",
-      "R/P3M",
-      "2026-04-01",
-      "Intercambio Comercial Argentino"
-     ],
-     [
-      "74.3_IECE_0_M_35",
-      "Exportación de combustibles y energía. En millones de dólares.",
-      "R/P1M",
-      "2026-08-01",
-      "Intercambio Comercial Argentino"
-     ],
-     [
-      "83.1_EMD_2004_A_30",
-      "Exportaciones en millones de dolares",
-      "R/P1Y",
-      "2025-01-01",
-      "Poder de compra de las exportaciones de bienes y g"
-     ],
-     [
-      "74.3_IET_0_M_16",
-      "Exportaciones totales. En millones de dólares.",
-      "R/P1M",
-      "2026-08-01",
-      "Intercambio Comercial Argentino"
-     ],
-     [
-      "126.2_EE_1993_0_19",
-      "Energía eléctrica índice mensual IPIM",
-      "R/P1M",
-      "2015-10-01",
-      "Índice de Precios Internos al por Mayor (IPIM). SE"
-     ],
-     [
-      "121.3_EN_0_0_7",
-      "Índice de Commodities. Energía. Mensual",
-      "R/P1M",
-      "2017-04-01",
-      "Índices de precios internacionales de productos bá"
-     ],
-     [
-      "74.1_IET_0_A_16",
-      "Exportaciones totales. En millones de dólares.",
-      "R/P1Y",
-      "2025-01-01",
-      "Intercambio Comercial Argentino"
-     ],
-     [
-      "74.2_IET_0_T_16",
-      "Exportaciones totales. En millones de dólares.",
-      "R/P3M",
-      "2026-04-01",
-      "Intercambio Comercial Argentino"
-     ]
-    ]
+    },
+    "missing_years": []
    }
   }
  }
