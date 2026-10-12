@@ -82,6 +82,7 @@
         </div>
         <label><input type="checkbox" id="tDucts" checked> <span data-i18n="tDucts">Main pipelines</span></label>
         <label><input type="checkbox" id="tFluids"> <span data-i18n="tFluids">Oil and gas windows</span></label>
+        <label><input type="checkbox" id="tWells"> <span data-i18n="tWells">Wells by start year</span></label>
       </div>
       <div class="map-wrap"><div id="map" role="region" aria-label="Map"></div><div class="map-empty" id="mapEmpty" data-i18n="mapLoading">Loading map…</div></div>
       <div class="map-legend" id="mapLegend"></div>
@@ -451,7 +452,8 @@
       fWells: "wells producing",
       mapTitle: "Map of Vaca Muerta blocks",
       mapLede: "Each block in Neuquén shaded by its output in the latest month. Tap a block for its operator, partners and when its concession expires.",
-      mOil: "Oil", mGas: "Gas", tDucts: "Main pipelines", tFluids: "Oil and gas windows", mapLoading: "Loading map…",
+      mOil: "Oil", mGas: "Gas", tDucts: "Main pipelines", tFluids: "Oil and gas windows", tWells: "Wells by start year",
+      lgWells: "Wells, by year they started producing:", lgWellsNone: "no production record", wStart: "Started producing", wOil6: "Oil in its first 6 months", wKbbl: "thousand bbl", mapLoading: "Loading map…",
       mapFail: "The map could not be loaded. The block table below has the same figures.",
       lgNoProd: "No Vaca Muerta output", lgOilDuct: "Oil pipeline", lgGasDuct: "Gas pipeline",
       lgOilW: "Oil window", lgWetW: "Wet gas window", lgDryW: "Dry gas window",
@@ -560,7 +562,8 @@
       fWells: "pozos en producción",
       mapTitle: "Mapa de bloques de Vaca Muerta",
       mapLede: "Cada bloque de Neuquén coloreado según su producción del último mes. Tocá un bloque para ver su operadora, los socios y cuándo vence la concesión.",
-      mOil: "Petróleo", mGas: "Gas", tDucts: "Ductos principales", tFluids: "Ventanas de petróleo y gas", mapLoading: "Cargando mapa…",
+      mOil: "Petróleo", mGas: "Gas", tDucts: "Ductos principales", tFluids: "Ventanas de petróleo y gas", tWells: "Pozos por año de inicio",
+      lgWells: "Pozos, por año en que empezaron a producir:", lgWellsNone: "sin registro de producción", wStart: "Empezó a producir", wOil6: "Petróleo en sus primeros 6 meses", wKbbl: "miles de bbl", mapLoading: "Cargando mapa…",
       mapFail: "No se pudo cargar el mapa. La tabla de bloques de abajo tiene las mismas cifras.",
       lgNoProd: "Sin producción en Vaca Muerta", lgOilDuct: "Oleoducto", lgGasDuct: "Gasoducto",
       lgOilW: "Ventana de petróleo", lgWetW: "Ventana de gas húmedo", lgDryW: "Ventana de gas seco",
@@ -1174,6 +1177,10 @@
   // ---------- Map ----------
   const RAMPS = { oil: ["#d3eee1", "#8fd3b3", "#3fa77b", "#17805a", "#0b4d35"], gas: ["#fbdcd5", "#f2a493", "#e0654c", "#c8412b", "#7f2214"] };
   const BINS = { oil: [1, 2000, 10000, 30000, 60000], gas: [0.05, 0.5, 2, 5, 10] };
+  const WELL_RAMP = [["2015", "#f1dfb0"], ["2018", "#e2b85c"], ["2021", "#c2871f"], ["2023", "#8e5a12"], ["2026", "#4f2f06"]];
+  const WELL_BREAKS = [2016, 2019, 2022, 2024];
+  const wellColor = ["case", ["!", ["has", "s"]], "#9aa5ad",
+    ["step", ["to-number", ["slice", ["get", "s"], 0, 4]], WELL_RAMP[0][1], WELL_BREAKS[0], WELL_RAMP[1][1], WELL_BREAKS[1], WELL_RAMP[2][1], WELL_BREAKS[2], WELL_RAMP[3][1], WELL_BREAKS[3], WELL_RAMP[4][1]]];
   const FLUID = { oil: "#8fae2e", wet_gas: "#d9a441", dry_gas: "#c8412b", other: "#9aa5ad" };
   let map = null, mapMeasure = "oil", mapState = "idle", mapMeta = null;
 
@@ -1189,6 +1196,11 @@
     let h = `<span class="ramp"><em>0</em>${RAMPS[mapMeasure].map(c => `<span style="background:${c}"></span>`).join("")}<em>${lab(b[4])}+ ${unit}</em></span>`;
     h += `<span><b style="background:transparent;border:1px solid #9aa5ad"></b>${esc(t.lgNoProd)}</span>`;
     if ($("#tDucts").checked) h += `<span><i style="background:#142029"></i>${esc(t.lgOilDuct)}</span><span><i style="background:#c8412b"></i>${esc(t.lgGasDuct)}</span>`;
+    if ($("#tWells").checked && map && map.getLayer && map.getLayer("wells")) {
+      const labs = ["≤2015", "2016–18", "2019–21", "2022–23", "2024+"];
+      h += `<span>${esc(t.lgWells)}</span>` + WELL_RAMP.map((r, k) => `<span><b style="background:${r[1]};border-radius:50%;width:10px"></b>${labs[k]}</span>`).join("") +
+        `<span><b style="background:#9aa5ad;border-radius:50%;width:10px"></b>${esc(t.lgWellsNone)}</span>`;
+    }
     if ($("#tFluids").checked) h += `<span><b style="background:${FLUID.oil};opacity:.5"></b>${esc(t.lgOilW)}</span><span><b style="background:${FLUID.wet_gas};opacity:.5"></b>${esc(t.lgWetW)}</span><span><b style="background:${FLUID.dry_gas};opacity:.5"></b>${esc(t.lgDryW)}</span>`;
     $("#mapLegend").innerHTML = h;
     if (mapMeta) $("#mapNote").innerHTML = t.mapNote(`<a href="${esc(mapMeta.source.url)}" rel="noopener">${esc(mapMeta.source.name)}</a>`, esc(monthName(mapMeta.period || DATA.latest_period)));
@@ -1213,10 +1225,11 @@
     mapState = "loading";
     try {
       loadCss("https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css");
-      const [areas, ducts, fluids] = await Promise.all([
+      const [areas, ducts, fluids, wells] = await Promise.all([
         fetch("/data/map_areas.geojson").then(r => r.ok ? r.json() : Promise.reject(r.status)),
         fetch("/data/map_ducts.geojson").then(r => r.ok ? r.json() : null).catch(() => null),
         fetch("/data/map_fluids.geojson").then(r => r.ok ? r.json() : null).catch(() => null),
+        fetch("/data/map_wells.geojson").then(r => r.ok ? r.json() : null).catch(() => null),
         loadScript("https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"),
       ]);
       mapMeta = areas;
@@ -1243,6 +1256,20 @@
           map.addLayer({ id: "ducts", type: "line", source: "ducts",
             paint: { "line-color": ["match", ["get", "kind"], "gas", "#c8412b", "#142029"], "line-width": 1.6 } });
         }
+        if (wells && wells.features.length) {
+          map.addSource("wells", { type: "geojson", data: wells });
+          map.addLayer({ id: "wells", type: "circle", source: "wells", layout: { visibility: $("#tWells").checked ? "visible" : "none" },
+            paint: { "circle-color": wellColor, "circle-radius": ["interpolate", ["linear"], ["zoom"], 6, 1.6, 9, 3, 12, 5.5],
+                     "circle-stroke-color": "#ffffff", "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 6, 0, 10, 0.6] } });
+          map.on("click", "wells", e => {
+            const p = e.features[0].properties, t = T[lang];
+            const rows = [p.op ? `<div>${esc(p.op)}</div>` : "", p.s ? `<div class="muted">${esc(t.wStart)}: ${esc(monthName(p.s))}</div>` : "",
+              p.o6 != null ? `<div class="muted">${esc(t.wOil6)}: <strong>${fmt(p.o6, 1)}</strong> ${esc(t.wKbbl)}</div>` : ""].join("");
+            new maplibregl.Popup({ maxWidth: "260px" }).setLngLat(e.features[0].geometry.coordinates).setHTML(`<h4>${esc(p.n || "–")}</h4>${rows}`).addTo(map);
+          });
+          map.on("mouseenter", "wells", () => { map.getCanvas().style.cursor = "pointer"; });
+          map.on("mouseleave", "wells", () => { map.getCanvas().style.cursor = ""; });
+        } else { $("#tWells").parentElement.hidden = true; }
         let hov = null;
         map.on("mousemove", "areas-fill", e => {
           map.getCanvas().style.cursor = "pointer";
@@ -1278,6 +1305,7 @@
     mapLegend();
   }));
   $("#tDucts").addEventListener("change", e => { if (mapState === "ready" && map.getLayer("ducts")) map.setLayoutProperty("ducts", "visibility", e.target.checked ? "visible" : "none"); mapLegend(); });
+  $("#tWells").addEventListener("change", e => { if (mapState === "ready" && map.getLayer("wells")) map.setLayoutProperty("wells", "visibility", e.target.checked ? "visible" : "none"); mapLegend(); });
   $("#tFluids").addEventListener("change", e => { if (mapState === "ready" && map.getLayer("fluids")) map.setLayoutProperty("fluids", "visibility", e.target.checked ? "visible" : "none"); mapLegend(); });
   if ("IntersectionObserver" in window) {
     new IntersectionObserver((ents, obs) => { if (ents.some(x => x.isIntersecting)) { obs.disconnect(); initMap(); } }, { rootMargin: "400px" }).observe($("#mapSection"));

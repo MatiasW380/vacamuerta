@@ -975,6 +975,7 @@ def serie_api(ids: list[str], diag: dict, desde: str = "2010-01-01") -> list:
         raise
     if "data" not in j:
         diag["series_body"] = str(j)[:400]
+    diag.setdefault("series_head", {})[",".join(ids)[:60]] = {"keys": list(j)[:8], "n": len(j.get("data", [])), "first": j.get("data", [])[:2], "last": j.get("data", [])[-2:]}
     return j.get("data", [])
 
 
