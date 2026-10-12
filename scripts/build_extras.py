@@ -475,7 +475,7 @@ def tabla_reservas(raw: pd.DataFrame, diag: dict) -> pd.DataFrame:
     if fila is None:
         raise RuntimeError("No se encontró la fila de encabezados (empresa/operador)")
     niveles = []
-    for i in range(max(0, fila - 3), fila + 1):
+    for i in range(max(0, fila - 5), fila + 1):
         filav = raw.iloc[i].copy()
         if i < fila:
             filav = filav.ffill()
@@ -508,8 +508,8 @@ def clave_reserva(nombre: str) -> str | None:
         grupo = "conv"
     else:
         grupo = "all"
-    fluido = "oil" if re.search(r"petr|crudo|oil|liquid", n) else "gas" if "gas" in n else None
-    cat = ("proved" if re.search(r"probad|\bp1\b|comprobad", n) else "probable" if re.search(r"probable|\bp2\b", n)
+    fluido = "oil" if re.search(r"\bpet\b|petr|crudo|oil|liquid", n) else "gas" if re.search(r"\bgas\b", n) else None
+    cat = ("resources" if "recurso" in n else "proved" if re.search(r"probad|\bp1\b|comprobad", n) else "probable" if re.search(r"probable|\bp2\b", n)
            else "possible" if re.search(r"posible|\bp3\b", n) else "resources" if "recurso" in n else None)
     if not fluido or not cat:
         return None
@@ -569,6 +569,9 @@ def reserves(diag: dict) -> dict:
         orden = next((k for k in ("nc_oil_proved", "all_oil_proved") if k in vals), vals[0])
         return g.sort_values(orden, ascending=False)
     por_op = agrupar(neu, neu[c_emp].map(nombre_corto))
+    por_area = agrupar(neu, neu[c_area].map(lambda v: str(v).strip().title())) if c_area else None
+    if por_area is not None:
+        ops = neu.groupby(neu[c_area].map(lambda v: str(v).strip().title()))[c_emp].agg(lambda x: nombre_corto(x.mode().iat[0]))
     por_cuenca = agrupar(d, d[c_cuenca].map(lambda v: str(v).strip().title())) if c_cuenca else None
     redo = lambda fila: {k: round(float(v), 1) for k, v in fila.items()}
     return {
@@ -578,6 +581,7 @@ def reserves(diag: dict) -> dict:
         "keys": vals,
         "neuquina_by_operator": [{"name": n, **redo(f)} for n, f in por_op.head(12).iterrows()],
         "neuquina_totals": redo(neu[vals].sum()),
+        "neuquina_by_area": [{"name": n, "operator": ops.get(n), **redo(f)} for n, f in por_area.head(25).iterrows()] if por_area is not None else [],
         "by_basin": [{"name": n, **redo(f)} for n, f in por_cuenca.iterrows()] if por_cuenca is not None else [],
         "national_totals": redo(d[vals].sum()),
     }

@@ -137,6 +137,27 @@
       <p class="note" id="fracNote"></p>
     </section>
 
+    <section class="section" id="resSection" hidden aria-labelledby="resTitle">
+      <h2 id="resTitle" data-i18n="resTitle">Reserves: how much oil and gas is booked</h2>
+      <p class="section-lede" id="resLede"></p>
+      <ul class="facts" id="resFacts"></ul>
+      <div class="two" style="margin-top:22px">
+        <div>
+          <h2 style="font-size:17px" data-i18n="resOpsTitle">Unconventional reserves in the Neuquén basin, by operator</h2>
+          <div class="table-wrap"><table class="ops-mini" id="resOps">
+            <thead><tr><th scope="col" data-i18n="thOperator">Operator</th><th scope="col" data-i18n="thProvedOil">Proved oil, MMbbl</th><th scope="col" data-i18n="thProbOil">Probable oil, MMbbl</th><th scope="col" data-i18n="thProvedGas">Proved gas, bcm</th><th scope="col" data-i18n="thRP">Years at current output</th></tr></thead>
+            <tbody></tbody></table></div>
+        </div>
+        <div>
+          <h2 style="font-size:17px" data-i18n="resAreasTitle">Blocks with the largest unconventional proved oil reserves</h2>
+          <div class="table-wrap scroll-table" style="max-height:420px"><table class="ops-mini" id="resAreas">
+            <thead><tr><th scope="col" data-i18n="thBlock">Block</th><th scope="col" data-i18n="thOperator">Operator</th><th scope="col" data-i18n="thProvedOil">Proved oil, MMbbl</th><th scope="col" data-i18n="thProvedGas">Proved gas, bcm</th></tr></thead>
+            <tbody></tbody></table></div>
+        </div>
+      </div>
+      <p class="note" id="resNote"></p>
+    </section>
+
     <section class="section" id="priceSection" hidden>
       <h2 data-i18n="priceTitle">Prices and exchange rate</h2>
       <ul class="facts" id="priceFacts"></ul>
@@ -183,6 +204,12 @@
 
     <section class="section" id="rigiSection" hidden aria-labelledby="rigiTitle">
       <h2 id="rigiTitle" data-i18n="rigiTitle">RIGI projects approved</h2>
+      <div id="rigiPlan" hidden style="margin:6px 0 26px">
+        <div class="chart-head"><h2 style="font-size:17px" data-i18n="rigiPlanTitle">Committed RIGI investment by year, USD million</h2></div>
+        <ul class="legend" id="rigiPlanLegend"></ul>
+        <div class="chart" id="rigiPlanChart"></div>
+        <p class="note" id="rigiPlanNote"></p>
+      </div>
       <p class="section-lede" data-i18n="rigiLede">Each approval resolution published in the Official Gazette, read automatically: project, company, sub-sector and committed investment.</p>
       <div class="table-wrap">
         <table id="rigiTable">
@@ -397,6 +424,16 @@
       thDate: "Date", thProject: "Project", thSubsector: "Sub-sector", thUsdM: "USD million",
       rigiNote: (n, d, portal) => `${n} approvals detected since ${d}; the list grows as new resolutions are published. For every project approved before that date, see the ${portal}.`,
       rigiPortal: "official RIGI portal",
+      rigiPlanTitle: "Committed RIGI investment by year, USD million",
+      rigiPlanNote: (src, tot, oil) => `All approved projects, every sector: USD ${tot} million in total, of which USD ${oil} million in oil and gas. Source: ${src}.`,
+      rpOther: "Other sectors", rpUp: "Oil & gas upstream", rpMid: "Oil & gas midstream", rpFert: "Fertilisers",
+      resTitle: "Reserves: how much oil and gas is booked",
+      resLede: (y) => `Proved, probable and possible reserves that each company certifies to the Energy Secretariat, to the end of its concession, as of 31 December ${y}.`,
+      resF1: "proved unconventional oil, Neuquén basin (million bbl)", resF2: "proved unconventional gas (bcm)",
+      resF3: "years of proved oil at the current Vaca Muerta output", resF4: "share of Argentina's proved oil that is unconventional",
+      resOpsTitle: "Unconventional reserves in the Neuquén basin, by operator", resAreasTitle: "Blocks with the largest unconventional proved oil reserves",
+      thProvedOil: "Proved oil, MMbbl", thProbOil: "Probable oil, MMbbl", thProvedGas: "Proved gas, bcm", thRP: "Years at current output", thBlock: "Block",
+      resNote: (src) => `Source: ${src}. Volumes converted from thousand m³ (oil) and million m³ (gas); MMbbl is million barrels. Years at current output divides proved oil by the latest monthly rate of each operator in Vaca Muerta.`,
       prodTitle: "How productive the new wells are",
       prodLede: (y, v, a, b) => `A Vaca Muerta oil well that started in ${y} produced ${v} thousand barrels on average in its first six months, against ${a} thousand for wells started in ${b}.`,
       prodChartTitle: "Average oil in a well's first 6 months, thousand barrels, by start year",
@@ -488,6 +525,16 @@
       thDate: "Fecha", thProject: "Proyecto", thSubsector: "Subsector", thUsdM: "Millones de USD",
       rigiNote: (n, d, portal) => `${n} aprobaciones detectadas desde el ${d}; la lista crece con cada nueva resolución. Para todos los proyectos aprobados antes de esa fecha, ver el ${portal}.`,
       rigiPortal: "portal oficial del RIGI",
+      rigiPlanTitle: "Inversión comprometida en el RIGI por año, millones de USD",
+      rigiPlanNote: (src, tot, oil) => `Todos los proyectos aprobados, de todos los sectores: USD ${tot} millones en total, de los cuales USD ${oil} millones en petróleo y gas. Fuente: ${src}.`,
+      rpOther: "Otros sectores", rpUp: "Petróleo y gas, upstream", rpMid: "Petróleo y gas, midstream", rpFert: "Fertilizantes",
+      resTitle: "Reservas: cuánto petróleo y gas hay certificado",
+      resLede: (y) => `Reservas comprobadas, probables y posibles que cada empresa certifica ante la Secretaría de Energía, hasta el fin de su concesión, al 31 de diciembre de ${y}.`,
+      resF1: "petróleo no convencional comprobado, cuenca Neuquina (millones de bbl)", resF2: "gas no convencional comprobado (miles de millones de m³)",
+      resF3: "años de petróleo comprobado al ritmo actual de Vaca Muerta", resF4: "del petróleo comprobado del país es no convencional",
+      resOpsTitle: "Reservas no convencionales de la cuenca Neuquina, por operadora", resAreasTitle: "Bloques con más petróleo no convencional comprobado",
+      thProvedOil: "Petróleo comprobado, MMbbl", thProbOil: "Petróleo probable, MMbbl", thProvedGas: "Gas comprobado, MMMm³", thRP: "Años al ritmo actual", thBlock: "Bloque",
+      resNote: (src) => `Fuente: ${src}. Volúmenes convertidos desde miles de m³ (petróleo) y millones de m³ (gas); MMbbl son millones de barriles. Los años al ritmo actual dividen el petróleo comprobado por la producción del último mes de cada operadora en Vaca Muerta.`,
       prodTitle: "Cuánto rinden los pozos nuevos",
       prodLede: (y, v, a, b) => `Un pozo petrolero de Vaca Muerta que empezó a producir en ${y} dio en promedio ${v} mil barriles en sus primeros seis meses, contra ${a} mil de los pozos que empezaron en ${b}.`,
       prodChartTitle: "Petróleo promedio en los primeros 6 meses de cada pozo, miles de barriles, por año de inicio",
@@ -739,6 +786,51 @@
     host.append(svg, tip);
   }
 
+  // Yearly stacked columns with a tooltip listing every segment.
+  function stackedColumns(host, labels, series, unit) {
+    host.innerHTML = "";
+    const W = host.clientWidth || 600, H = 260, m = { t: 18, r: 8, b: 28, l: 48 };
+    const iw = W - m.l - m.r, ih = H - m.t - m.b;
+    const tots = labels.map((_, i) => series.reduce((a, s) => a + s.values[i], 0));
+    const ticks = niceTicks(Math.max(1, ...tots)), yMax = ticks[ticks.length - 1];
+    const step = iw / labels.length, bw = Math.min(56, step * 0.68);
+    const y = v => m.t + ih - (v / yMax) * ih;
+    const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": T[lang].rigiPlanTitle });
+    for (const tk of ticks) {
+      svg.append(svgEl("line", { x1: m.l, x2: W - m.r, y1: y(tk), y2: y(tk), stroke: "var(--grid)" }));
+      const lab = svgEl("text", { x: m.l - 8, y: y(tk) + 4, "text-anchor": "end" }); lab.textContent = axisLabel(tk, ticks); svg.append(lab);
+    }
+    const tip = document.createElement("div"); tip.className = "tip";
+    labels.forEach((lb, i) => {
+      const cx = m.l + i * step + step / 2, x0 = cx - bw / 2;
+      const g = svgEl("g", { tabindex: 0 });
+      g.append(svgEl("rect", { x: m.l + i * step, y: m.t, width: step, height: ih, fill: "transparent" }));
+      let acc = 0;
+      series.forEach(s => {
+        const v = s.values[i]; if (!v) return;
+        const top = y(acc + v), bot = y(acc);
+        g.append(svgEl("rect", { x: x0, y: top + 0.5, width: bw, height: Math.max(0, bot - top - 1), fill: s.color }));
+        acc += v;
+      });
+      const xl = svgEl("text", { x: cx, y: H - 8, "text-anchor": "middle" }); xl.textContent = lb; svg.append(xl);
+      if (tots[i]) { const tl = svgEl("text", { x: cx, y: y(tots[i]) - 5, "text-anchor": "middle", style: "fill:var(--ink-2);font-size:11px" }); tl.textContent = fmt(tots[i]); g.append(tl); }
+      const show = () => {
+        tip.innerHTML = "";
+        const h = document.createElement("strong"); h.textContent = `${lb}: ${fmt(tots[i])} ${unit}`; tip.append(h);
+        series.forEach(s => { if (s.values[i]) { const d = document.createElement("div"); d.textContent = `${s.name}: ${fmt(s.values[i])}`; tip.append(d); } });
+        const sc = host.clientWidth / W;
+        tip.style.left = Math.min(Math.max(0, cx * sc - tip.offsetWidth / 2), host.clientWidth - tip.offsetWidth) + "px";
+        tip.style.top = Math.max(0, y(tots[i]) * sc - tip.offsetHeight - 12) + "px";
+        tip.style.opacity = 1;
+      };
+      const hide = () => { tip.style.opacity = 0; };
+      g.addEventListener("pointerenter", show); g.addEventListener("pointerleave", hide);
+      g.addEventListener("focus", show); g.addEventListener("blur", hide);
+      svg.append(g);
+    });
+    host.append(svg, tip);
+  }
+
   // Several series on one axis, crosshair tooltip listing all of them, end labels.
   function multiLine(host, periods, names, series, colors) {
     host.innerHTML = "";
@@ -920,6 +1012,46 @@
       $("#fuelProv tbody").innerHTML = fp.by_province.map(p =>
         `<tr><td>${esc(p.name)}</td><td>${fmt(p.super)}</td><td>${fmt(p.premium)}</td><td>${fmt(p.diesel)}</td></tr>`).join("");
       $("#fuelNote").innerHTML = t.fuelNote(`<a href="${esc(fp.source.url)}" rel="noopener">${esc(fp.source.name)}</a>`, esc(fp.as_of ? shortDate(fp.as_of) : "–"));
+    }
+
+    const rp = E.rigi_portal && E.rigi_portal.plan_by_year;
+    if (rp && rp.length) {
+      $("#rigiSection").hidden = false; $("#rigiPlan").hidden = false;
+      const v = (r, k) => +(r[k] || 0);
+      const ser = [
+        { name: t.rpUp, color: "var(--s1)", get: r => v(r, "petroleo:Upstream") },
+        { name: t.rpMid, color: "var(--s2)", get: r => v(r, "petroleo:Midstream") },
+        { name: t.rpFert, color: "var(--s3)", get: r => v(r, "petroleo:Fertilizantes") },
+        { name: t.rpOther, color: "var(--ink-3)", get: r => v(r, "energia") + v(r, "mineria") + v(r, "siderurgia") + v(r, "infra") + Math.max(0, v(r, "petroleo") - v(r, "petroleo:Upstream") - v(r, "petroleo:Midstream") - v(r, "petroleo:Fertilizantes")) },
+      ];
+      $("#rigiPlanLegend").innerHTML = ser.map(x => `<li><i style="background:${x.color}"></i>${esc(x.name)}</li>`).join("");
+      stackedColumns($("#rigiPlanChart"), rp.map(r => String(r.year)), ser.map(x => ({ name: x.name, color: x.color, values: rp.map(x.get) })), "USD M");
+      const tot = rp.reduce((a, r) => a + v(r, "energia") + v(r, "petroleo") + v(r, "mineria") + v(r, "siderurgia") + v(r, "infra"), 0);
+      const oil = rp.reduce((a, r) => a + v(r, "petroleo"), 0);
+      $("#rigiPlanNote").innerHTML = t.rigiPlanNote(`<a href="${esc(E.rigi_portal.source.url)}" rel="noopener">${esc(E.rigi_portal.source.name)}</a>`, fmt(tot), fmt(oil));
+    }
+
+    const rs = E.reserves;
+    if (rs && rs.neuquina_by_operator && rs.neuquina_by_operator.length) {
+      $("#resSection").hidden = false;
+      const bbl = m3k => m3k * 6.2898 / 1000, bcm = mm => mm / 1000;
+      const nt = rs.neuquina_totals, at = rs.national_totals;
+      const vmNow = DATA && DATA.kpis ? DATA.kpis.oil_bbl_d : null;
+      const years = (mbbl, bd) => bd ? mbbl * 1e6 / (bd * 365) : null;
+      $("#resLede").textContent = t.resLede(rs.year);
+      const f = [[fmt(bbl(nt.nc_oil_proved), 0), t.resF1], [fmt(bcm(nt.nc_gas_proved), 0), t.resF2]];
+      const yv = years(bbl(nt.nc_oil_proved), vmNow);
+      if (yv) f.push([fmt(yv, 1), t.resF3]);
+      if (at.all_oil_proved) f.push([fmt(at.nc_oil_proved / at.all_oil_proved * 100, 0) + "%", t.resF4]);
+      $("#resFacts").innerHTML = f.map(([a, b]) => `<li><strong>${esc(a)}</strong>${esc(b)}</li>`).join("");
+      const prodOp = Object.fromEntries(((DATA && DATA.operators) || []).map(o => [o.name, o.oil_bbl_d]));
+      $("#resOps tbody").innerHTML = rs.neuquina_by_operator.filter(o => o.nc_oil_proved > 0 || o.nc_gas_proved > 0).slice(0, 10).map(o => {
+        const y = years(bbl(o.nc_oil_proved), prodOp[o.name]);
+        return `<tr><td>${esc(o.name)}</td><td>${fmt(bbl(o.nc_oil_proved), 0)}</td><td>${fmt(bbl(o.nc_oil_probable || 0), 0)}</td><td>${fmt(bcm(o.nc_gas_proved), 1)}</td><td>${y ? fmt(y, 1) : "–"}</td></tr>`;
+      }).join("");
+      $("#resAreas tbody").innerHTML = (rs.neuquina_by_area || []).filter(a => a.nc_oil_proved > 0).map(a =>
+        `<tr><td>${esc(a.name)}</td><td>${esc(a.operator || "–")}</td><td>${fmt(bbl(a.nc_oil_proved), 0)}</td><td>${fmt(bcm(a.nc_gas_proved), 1)}</td></tr>`).join("");
+      $("#resNote").innerHTML = t.resNote(`<a href="${esc(rs.source.url)}" rel="noopener">${esc(rs.source.name)}</a>, ${esc(rs.source.license)}`);
     }
 
     const ra = E.rigi_approvals;
