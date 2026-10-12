@@ -965,7 +965,10 @@ def _buscar_serie(q: str, debe: list[str], diag: dict, clave: str) -> dict | Non
 
 
 def serie_api(ids: list[str], diag: dict, desde: str = "2010-01-01") -> list:
-    r = requests.get(f"{SERIES_API}/series/", params={"ids": ",".join(ids), "format": "json", "limit": 1000, "start_date": desde},
+    params = {"ids": ",".join(ids), "format": "json", "limit": 1000}
+    if desde:
+        params["start_date"] = desde
+    r = requests.get(f"{SERIES_API}/series/", params=params,
                      headers=UA, timeout=60)
     diag["series_status"] = r.status_code
     try:
@@ -975,7 +978,7 @@ def serie_api(ids: list[str], diag: dict, desde: str = "2010-01-01") -> list:
         raise
     if "data" not in j:
         diag["series_body"] = str(j)[:400]
-    diag.setdefault("series_head", {})[",".join(ids)[:60]] = {"keys": list(j)[:8], "n": len(j.get("data", [])), "first": j.get("data", [])[:2], "last": j.get("data", [])[-2:]}
+    diag.setdefault("series_head", {})[",".join(ids)[:60]] = {"count": j.get("count"), "params": j.get("params"), "n": len(j.get("data", [])), "first": j.get("data", [])[:2], "meta": str(j.get("meta"))[:300]}
     return j.get("data", [])
 
 
@@ -1000,8 +1003,12 @@ def trade_balance(diag: dict) -> dict:
     diag["chosen"] = {"exp": exp, "imp": imp}
     if not exp or not imp:
         raise RuntimeError("No se encontraron las series mensuales de exportación e importación de energía")
-    j = serie_api([exp["id"], imp["id"]], diag)
-    filas = [{"period": d[0][:7], "exports": d[1], "imports": d[2]} for d in j if d[1] is not None and d[2] is not None]
+    e = {d[0][:7]: d[1] for d in serie_api([exp["id"]], diag) if d[1] is not None}
+    i_ = {d[0][:7]: d[1] for d in serie_api([imp["id"]], diag) if d[1] is not None}
+    if not e:   # sin fecha de inicio, por si la API la rechaza para esta serie
+        e = {d[0][:7]: d[1] for d in serie_api([exp["id"]], diag, None) if d[1] is not None}
+        i_ = {d[0][:7]: d[1] for d in serie_api([imp["id"]], diag, None) if d[1] is not None}
+    filas = [{"period": p, "exports": e[p], "imports": i_[p]} for p in sorted(set(e) & set(i_)) if p >= "2010-01"]
     for f in filas:
         f["balance"] = round(f["exports"] - f["imports"], 1)
         f["exports"], f["imports"] = round(f["exports"], 1), round(f["imports"], 1)
