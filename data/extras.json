@@ -5510,11 +5510,551 @@
   },
   "main": "fob|Medanito"
  },
- "generated_at": "2026-10-12T20:25Z",
+ "rigi_portal": {
+  "source": {
+   "name": "Ministerio de Economía, portal oficial del RIGI",
+   "url": "https://www.argentina.gob.ar/economia/rigi"
+  },
+  "plan_by_year": [
+   {
+    "year": 2024,
+    "energia": 37,
+    "energia:Energía Eléctrica": 37,
+    "petroleo": 49,
+    "petroleo:Midstream": 34,
+    "petroleo:Upstream": 15,
+    "mineria": 527,
+    "mineria:Cobre": 109,
+    "mineria:Litio": 374,
+    "mineria:Oro y Plata": 44,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2025,
+    "energia": 252,
+    "energia:Energía Eléctrica": 252,
+    "petroleo": 2150,
+    "petroleo:Midstream": 1574,
+    "petroleo:Upstream": 576,
+    "mineria": 1473,
+    "mineria:Cobre": 419,
+    "mineria:Litio": 948,
+    "mineria:Oro y Plata": 105,
+    "siderurgia": 82,
+    "siderurgia:Siderurgia": 82,
+    "infra": 92,
+    "infra:Puerto": 92
+   },
+   {
+    "year": 2026,
+    "energia": 162,
+    "energia:Energía Eléctrica": 162,
+    "petroleo": 4344,
+    "petroleo:Midstream": 2348,
+    "petroleo:Upstream": 1470,
+    "petroleo:Fertilizantes": 527,
+    "mineria": 2579,
+    "mineria:Cobre": 962,
+    "mineria:Litio": 1358,
+    "mineria:Oro y Plata": 259,
+    "siderurgia": 130,
+    "siderurgia:Siderurgia": 130,
+    "infra": 74,
+    "infra:Puerto": 74
+   },
+   {
+    "year": 2027,
+    "energia": 36,
+    "energia:Energía Eléctrica": 36,
+    "petroleo": 3023,
+    "petroleo:Midstream": 1090,
+    "petroleo:Upstream": 1355,
+    "petroleo:Fertilizantes": 578,
+    "mineria": 3875,
+    "mineria:Cobre": 2362,
+    "mineria:Litio": 1141,
+    "mineria:Oro y Plata": 372,
+    "siderurgia": 66,
+    "siderurgia:Siderurgia": 66,
+    "infra": 64,
+    "infra:Puerto": 64
+   },
+   {
+    "year": 2028,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 2945,
+    "petroleo:Midstream": 818,
+    "petroleo:Upstream": 952,
+    "petroleo:Fertilizantes": 1175,
+    "mineria": 4128,
+    "mineria:Cobre": 2999,
+    "mineria:Litio": 749,
+    "mineria:Oro y Plata": 380,
+    "siderurgia": 8,
+    "siderurgia:Siderurgia": 8,
+    "infra": 24,
+    "infra:Puerto": 24
+   },
+   {
+    "year": 2029,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 1499,
+    "petroleo:Midstream": 685,
+    "petroleo:Upstream": 401,
+    "petroleo:Fertilizantes": 413,
+    "mineria": 3278,
+    "mineria:Cobre": 2843,
+    "mineria:Litio": 229,
+    "mineria:Oro y Plata": 206,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 21,
+    "infra:Puerto": 21
+   },
+   {
+    "year": 2030,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 1166,
+    "petroleo:Midstream": 685,
+    "petroleo:Upstream": 481,
+    "mineria": 2450,
+    "mineria:Cobre": 2223,
+    "mineria:Litio": 190,
+    "mineria:Oro y Plata": 37,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 2,
+    "infra:Puerto": 2
+   },
+   {
+    "year": 2031,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 1048,
+    "petroleo:Midstream": 685,
+    "petroleo:Upstream": 363,
+    "mineria": 1503,
+    "mineria:Cobre": 1144,
+    "mineria:Litio": 339,
+    "mineria:Oro y Plata": 20,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2032,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 1091,
+    "petroleo:Midstream": 685,
+    "petroleo:Upstream": 406,
+    "mineria": 416,
+    "mineria:Cobre": 11,
+    "mineria:Litio": 384,
+    "mineria:Oro y Plata": 21,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2033,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 1086,
+    "petroleo:Midstream": 689,
+    "petroleo:Upstream": 397,
+    "mineria": 105,
+    "mineria:Cobre": 16,
+    "mineria:Litio": 75,
+    "mineria:Oro y Plata": 14,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2034,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 1129,
+    "petroleo:Midstream": 693,
+    "petroleo:Upstream": 436,
+    "mineria": 30,
+    "mineria:Cobre": 12,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 18,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2035,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 949,
+    "petroleo:Midstream": 698,
+    "petroleo:Upstream": 251,
+    "mineria": 52,
+    "mineria:Cobre": 30,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 22,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2036,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 990,
+    "petroleo:Midstream": 702,
+    "petroleo:Upstream": 288,
+    "mineria": 31,
+    "mineria:Cobre": 14,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 17,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2037,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 994,
+    "petroleo:Midstream": 706,
+    "petroleo:Upstream": 288,
+    "mineria": 32,
+    "mineria:Cobre": 11,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 21,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2038,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 999,
+    "petroleo:Midstream": 711,
+    "petroleo:Upstream": 288,
+    "mineria": 29,
+    "mineria:Cobre": 11,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 18,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2039,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 1004,
+    "petroleo:Midstream": 716,
+    "petroleo:Upstream": 288,
+    "mineria": 31,
+    "mineria:Cobre": 13,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 18,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2040,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 1008,
+    "petroleo:Midstream": 720,
+    "petroleo:Upstream": 288,
+    "mineria": 25,
+    "mineria:Cobre": 11,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 14,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2041,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 1013,
+    "petroleo:Midstream": 725,
+    "petroleo:Upstream": 288,
+    "mineria": 27,
+    "mineria:Cobre": 11,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 16,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2042,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 863,
+    "petroleo:Midstream": 730,
+    "petroleo:Upstream": 133,
+    "mineria": 30,
+    "mineria:Cobre": 11,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 19,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2043,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 735,
+    "petroleo:Midstream": 735,
+    "petroleo:Upstream": 0,
+    "mineria": 73,
+    "mineria:Cobre": 11,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 62,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2044,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 873,
+    "petroleo:Midstream": 740,
+    "petroleo:Upstream": 133,
+    "mineria": 94,
+    "mineria:Cobre": 67,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 27,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2045,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 878,
+    "petroleo:Midstream": 745,
+    "petroleo:Upstream": 133,
+    "mineria": 28,
+    "mineria:Cobre": 1,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 27,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2046,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 884,
+    "petroleo:Midstream": 751,
+    "petroleo:Upstream": 133,
+    "mineria": 28,
+    "mineria:Cobre": 1,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 27,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2047,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 890,
+    "petroleo:Midstream": 757,
+    "petroleo:Upstream": 133,
+    "mineria": 8,
+    "mineria:Cobre": 1,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 7,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2048,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 569,
+    "petroleo:Midstream": 436,
+    "petroleo:Upstream": 133,
+    "mineria": 8,
+    "mineria:Cobre": 1,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 7,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2049,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 133,
+    "petroleo:Midstream": 0,
+    "petroleo:Upstream": 133,
+    "mineria": 8,
+    "mineria:Cobre": 1,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 7,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2050,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 133,
+    "petroleo:Midstream": 0,
+    "petroleo:Upstream": 133,
+    "mineria": 8,
+    "mineria:Cobre": 1,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 7,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2051,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 133,
+    "petroleo:Midstream": 0,
+    "petroleo:Upstream": 133,
+    "mineria": 8,
+    "mineria:Cobre": 1,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 7,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2052,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 133,
+    "petroleo:Midstream": 0,
+    "petroleo:Upstream": 133,
+    "mineria": 8,
+    "mineria:Cobre": 1,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 7,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2053,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 133,
+    "petroleo:Midstream": 0,
+    "petroleo:Upstream": 133,
+    "mineria": 8,
+    "mineria:Cobre": 1,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 7,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2054,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 133,
+    "petroleo:Midstream": 0,
+    "petroleo:Upstream": 133,
+    "mineria": 8,
+    "mineria:Cobre": 1,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 7,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2055,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 133,
+    "petroleo:Midstream": 0,
+    "petroleo:Upstream": 133,
+    "mineria": 7,
+    "mineria:Cobre": 0,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 7,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   },
+   {
+    "year": 2056,
+    "energia": 0,
+    "energia:Energía Eléctrica": 0,
+    "petroleo": 133,
+    "petroleo:Midstream": 0,
+    "petroleo:Upstream": 133,
+    "mineria": 44,
+    "mineria:Cobre": 0,
+    "mineria:Litio": 0,
+    "mineria:Oro y Plata": 44,
+    "siderurgia": 0,
+    "siderurgia:Siderurgia": 0,
+    "infra": 0,
+    "infra:Puerto": 0
+   }
+  ]
+ },
+ "generated_at": "2026-10-12T20:30Z",
  "status": {
   "fracking": {
    "ok": true,
-   "at": "2026-10-12T20:24Z",
+   "at": "2026-10-12T20:29Z",
    "diag": {
     "resources": [
      "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
@@ -5575,7 +6115,7 @@
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-12T20:24Z",
+   "at": "2026-10-12T20:29Z",
    "diag": {
     "pages": 1
    }
@@ -5584,11 +6124,11 @@
    "ok": false,
    "error": "RuntimeError: Falta EIA_API_KEY (secreto del repositorio)",
    "diag": {},
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 785, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 771, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 230, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 841, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 827, in <lambda>\n    (\"oil_price\", lambda d: oil_price(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 230, in oil_price\n    raise RuntimeError(\"Falta EIA_API_KEY (secreto del repositorio)\")\nRuntimeError: Falta EIA_API_KEY (secreto del repositorio)\n"
   },
   "regulations": {
    "ok": true,
-   "at": "2026-10-12T20:24Z",
+   "at": "2026-10-12T20:29Z",
    "diag": {
     "pages": 6,
     "page_errors": 0,
@@ -5600,7 +6140,7 @@
   },
   "news": {
    "ok": true,
-   "at": "2026-10-12T20:24Z",
+   "at": "2026-10-12T20:29Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
@@ -5611,293 +6151,180 @@
   },
   "reserves": {
    "ok": false,
-   "error": "RuntimeError: No se pudieron identificar columnas de volumen u operadora (ver diag)",
+   "error": "TypeError: arg must be a list, tuple, 1-d array, or Series",
    "diag": {
     "package": "http://datos.energia.gob.ar reservas-de-petroleo-y-gas",
-    "all_resources": [
-     {
-      "name": "Reservas al 31/12/2025 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión",
-      "format": "zip",
-      "url": "_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_al_31-12-2025.zip"
-     },
-     {
-      "name": "Reservas al 31/12/2024 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión",
-      "format": "zip",
-      "url": "_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_al_31-12-2024.zip"
-     },
-     {
-      "name": "Reservas al 31/12/2023 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión",
-      "format": "zip",
-      "url": "_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_al_31-12-2023.zip"
-     },
-     {
-      "name": "Consolidacion de reservas de gas y petroleo, reporte anual 2021",
-      "format": "pdf",
-      "url": "on_estadistica/reservas/Consolidacion_de_reservas_de_gas_y_petroleo_reporte_anual_2021.pdf"
-     },
-     {
-      "name": "Reservas al 31/12/2022 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión",
-      "format": "zip",
-      "url": "_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_al_31-12-2022.zip"
-     },
-     {
-      "name": "Reservas al 31/12/2021 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión",
-      "format": "zip",
-      "url": "_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_al_31-12-2021.zip"
-     },
-     {
-      "name": "Síntesis de la evolución de reservas de hidrocarburos al 31 de diciembre de cada año. Hasta el final de la vida útil de los yacimientos. Período 2007-2016",
-      "format": "pdf",
-      "url": "ercado_hidrocarburos/informacion_estadistica/reservas/MINEM_Informe_Reservas_HFVU_2016.pdf"
-     },
-     {
-      "name": "Reservas al 31/12/2020 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión",
-      "format": "zip",
-      "url": "_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_al_31-12-2020.zip"
-     },
-     {
-      "name": "Reservas al 31/12/2019 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión",
-      "format": "zip",
-      "url": "ado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_cpcy_al_31_12_2019.zip"
-     },
-     {
-      "name": "Consolidación de reservas de gas y petróleo de la República Argentina 2018",
-      "format": "pdf",
-      "url": "uros/informacion_estadistica/reservas/Reporte_de_Reservas_2018-Version_Final_24-Oct-19.pdf"
-     },
-     {
-      "name": "Reservas al 31/12/2018 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión",
-      "format": "zip",
-      "url": "mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_hfvuy_31122018.zip"
-     },
-     {
-      "name": "Síntesis de la evolución de reservas de hidrocarburos al 31 de diciembre de cada año. Hasta el final de la vida útil de los yacimientos. 2009-2018",
-      "format": "pdf",
-      "url": "mercado/mercado_hidrocarburos/informacion_estadistica/reservas/informe_reservas_2018v3.pdf"
-     },
-     {
-      "name": "Reservas al 31/12/2017 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión",
-      "format": "zip",
-      "url": "mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122017.zip"
-     },
-     {
-      "name": "Síntesis de la evolución de reservas de hidrocarburos al 31 de diciembre de cada año. Hasta el final de la vida útil de los yacimientos. 2008-2017",
-      "format": "pdf",
-      "url": "cado/mercado_hidrocarburos/informacion_estadistica/reservas/Informe_Reservas_HFVU_2017.pdf"
-     },
-     {
-      "name": "Reservas al 31/12/2016 hasta el Final de la Vida Útil de los Yacimientos",
-      "format": "zip",
-      "url": "mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122016.zip"
-     },
-     {
-      "name": "Reservas al 31/12/2016 hasta el Final de la Concesión",
-      "format": "zip",
-      "url": "l_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122016.zip"
-     },
-     {
-      "name": "Reservas al 31/12/2015 hasta el Final de la Vida Útil de los Yacimientos",
-      "format": "zip",
-      "url": "mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122015.zip"
-     },
-     {
-      "name": "Reservas al 31/12/2015 hasta el Final de la Concesión",
-      "format": "zip",
-      "url": "l_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122015.zip"
-     },
-     {
-      "name": "Reservas al 31/12/2014 hasta el Final de la Vida Útil de los Yacimientos",
-      "format": "zip",
-      "url": "mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122014.zip"
-     },
-     {
-      "name": "Reservas al 31/12/2014 hasta el Final de la Concesión",
-      "format": "zip",
-      "url": "l_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122014.zip"
-     },
-     {
-      "name": "Reservas al 31/12/2013 hasta el Final de la Vida Útil de los Yacimientos",
-      "format": "zip",
-      "url": "mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122013.zip"
-     },
-     {
-      "name": "Reservas al 31/12/2013 hasta el Final de la Concesión",
-      "format": "zip",
-      "url": "l_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122013.zip"
-     },
-     {
-      "name": "Reservas al 31/12/2012 hasta el Final de la Vida Útil de los Yacimientos",
-      "format": "zip",
-      "url": "mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122012.zip"
-     },
-     {
-      "name": "Reservas al 31/12/2012 hasta el Final de la Concesión",
-      "format": "zip",
-      "url": "l_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122012.zip"
-     },
-     {
-      "name": "Reservas al 31/12/2011 hasta el Final de la Vida Útil de los Yacimientos",
-      "format": "zip",
-      "url": "mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122011.zip"
-     }
-    ],
-    "resources": [],
     "zip_files": [
      [
       "reservas al 31-12-2025.xlsx",
       308389
      ]
     ],
-    "sheets": {
-     "fin de concesión": [
-      "Unnamed: 0",
-      "Unnamed: 1",
-      "Unnamed: 2",
-      "Unnamed: 3",
-      "Unnamed: 4",
-      "RESERVAS Y RECURSOS  AL 31/12/2025 - HASTA EL FIN DE LA CONCESIÓN",
-      "Unnamed: 6",
-      "Unnamed: 7",
-      "Unnamed: 8",
-      "Unnamed: 9",
-      "Unnamed: 10",
-      "Unnamed: 11",
-      "Unnamed: 12",
-      "Unnamed: 13",
-      "Unnamed: 14"
+    "sheets": [
+     "fin de concesión",
+     "fin de vida util"
+    ],
+    "sheet_used": "fin de concesión",
+    "header_row": 6,
+    "head_rows": [
+     [
+      "RESERVAS Y RECURSOS  AL 31/12/2025 - HAS"
      ],
-     "fin de vida util": [
-      "Unnamed: 0",
-      "Unnamed: 1",
-      "Unnamed: 2",
-      "Unnamed: 3",
-      "Unnamed: 4",
-      "RESERVAS Y RECURSOS  AL 31/12/2025 - HASTA EL FIN DE LA VIDA ÚTIL",
-      "Unnamed: 6",
-      "Unnamed: 7",
-      "Unnamed: 8",
-      "Unnamed: 9",
-      "Unnamed: 10",
-      "Unnamed: 11",
-      "Unnamed: 12",
-      "Unnamed: 13",
-      "Unnamed: 14"
+     [],
+     [
+      "CONVENCIONAL",
+      "NO CONVENCIONAL",
+      "CONVENCIONAL + NO CONVENCIONAL"
+     ],
+     [
+      "RESERVAS",
+      "RECURSOS CONTINGENTES",
+      "RESERVAS",
+      "RECURSOS CONTINGENTES",
+      "RESERVAS",
+      "RECURSOS CONTINGENTES"
+     ],
+     [
+      "COMPROBADAS",
+      "PROBABLES",
+      "POSIBLES",
+      "COMPROBADAS",
+      "PROBABLES",
+      "POSIBLES",
+      "COMPROBADAS",
+      "PROBABLES",
+      "POSIBLES"
+     ],
+     [
+      "PET",
+      "GAS",
+      "PET",
+      "GAS",
+      "PET",
+      "GAS",
+      "PET",
+      "GAS",
+      "PET",
+      "GAS",
+      "PET",
+      "GAS",
+      "PET",
+      "GAS",
+      "PET",
+      "GAS",
+      "PET",
+      "GAS",
+      "PET",
+      "GAS",
+      "PET",
+      "GAS",
+      "PET",
+      "GAS"
+     ],
+     [
+      "OPERADOR",
+      "CUENCA",
+      "PROVINCIA",
+      "CONCESIÓN O PERMISO",
+      "YACIMIENTO",
+      "(Mm3)",
+      "(MMm3)",
+      "(Mm3)",
+      "(MMm3)",
+      "(Mm3)",
+      "(MMm3)",
+      "(Mm3)",
+      "(MMm3)",
+      "(Mm3)",
+      "(MMm3)",
+      "(Mm3)",
+      "(MMm3)",
+      "(Mm3)",
+      "(MMm3)",
+      "(Mm3)",
+      "(MMm3)",
+      "(Mm3)",
+      "(MMm3)",
+      "(Mm3)",
+      "(MMm3)",
+      "(Mm3)",
+      "(MMm3)",
+      "(Mm3)",
+      "(MMm3)"
+     ],
+     [
+      "PETROQUIMICA COMODORO RIVADAVIA S.A.",
+      "NEUQUINA",
+      "La Pampa",
+      "25 DE MAYO - MEDANITO SUD ESTE LP",
+      "25 DE MAYO - MEDANITO SUDESTE LP"
+     ],
+     [
+      "Petrolera Aconcagua Energia S.A.",
+      "NEUQUINA",
+      "Rio Negro",
+      "25 DE MAYO - MEDANITO SUD ESTE RN",
+      "25 DE MAYO - MEDANITO SUDESTE RN"
+     ],
+     [
+      "PAN AMERICAN ENERGY SL",
+      "NOROESTE",
+      "Salta",
+      "ACAMBUCO",
+      "AGUARAY"
+     ],
+     [
+      "PAN AMERICAN ENERGY SL",
+      "NOROESTE",
+      "Salta",
+      "ACAMBUCO",
+      "CAPIAZUTI"
+     ],
+     [
+      "PAN AMERICAN ENERGY SL",
+      "NOROESTE",
+      "Salta",
+      "ACAMBUCO",
+      "CERRO TUYUNTI                           "
      ]
-    },
-    "resource_used": "Reservas al 31/12/2025 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión",
+    ],
     "columns": [
-     "unnamed:_0",
-     "unnamed:_1",
-     "unnamed:_2",
-     "unnamed:_3",
-     "unnamed:_4",
-     "reservas_y_recursos_al_31/12/2025_-_hasta_el_fin_de_la_concesion",
-     "unnamed:_6",
-     "unnamed:_7",
-     "unnamed:_8",
-     "unnamed:_9",
-     "unnamed:_10",
-     "unnamed:_11",
-     "unnamed:_12",
-     "unnamed:_13",
-     "unnamed:_14",
-     "unnamed:_15",
-     "unnamed:_16",
-     "unnamed:_17",
-     "unnamed:_18",
-     "unnamed:_19",
-     "unnamed:_20",
-     "unnamed:_21",
-     "unnamed:_22",
-     "unnamed:_23",
-     "unnamed:_24",
-     "unnamed:_25",
-     "unnamed:_26",
-     "unnamed:_27",
-     "unnamed:_28"
-    ],
-    "rows": 1178,
-    "sample": [
-     {
-      "unnamed:_0": NaN,
-      "unnamed:_1": NaN,
-      "unnamed:_2": NaN,
-      "unnamed:_3": NaN,
-      "unnamed:_4": NaN,
-      "reservas_y_recursos_al_31/12/2025_-_hasta_el_fin_de_la_concesion": NaN,
-      "unnamed:_6": NaN,
-      "unnamed:_7": NaN,
-      "unnamed:_8": NaN,
-      "unnamed:_9": NaN,
-      "unnamed:_10": NaN,
-      "unnamed:_11": NaN,
-      "unnamed:_12": NaN,
-      "unnamed:_13": NaN,
-      "unnamed:_14": NaN,
-      "unnamed:_15": NaN,
-      "unnamed:_16": NaN,
-      "unnamed:_17": NaN,
-      "unnamed:_18": NaN,
-      "unnamed:_19": NaN,
-      "unnamed:_20": NaN,
-      "unnamed:_21": NaN,
-      "unnamed:_22": NaN,
-      "unnamed:_23": NaN,
-      "unnamed:_24": NaN,
-      "unnamed:_25": NaN,
-      "unnamed:_26": NaN,
-      "unnamed:_27": NaN,
-      "unnamed:_28": NaN
-     },
-     {
-      "unnamed:_0": NaN,
-      "unnamed:_1": NaN,
-      "unnamed:_2": NaN,
-      "unnamed:_3": NaN,
-      "unnamed:_4": NaN,
-      "reservas_y_recursos_al_31/12/2025_-_hasta_el_fin_de_la_concesion": "CONVENCIONAL",
-      "unnamed:_6": NaN,
-      "unnamed:_7": NaN,
-      "unnamed:_8": NaN,
-      "unnamed:_9": NaN,
-      "unnamed:_10": NaN,
-      "unnamed:_11": NaN,
-      "unnamed:_12": NaN,
-      "unnamed:_13": "NO CONVENCIONAL",
-      "unnamed:_14": NaN,
-      "unnamed:_15": NaN,
-      "unnamed:_16": NaN,
-      "unnamed:_17": NaN,
-      "unnamed:_18": NaN,
-      "unnamed:_19": NaN,
-      "unnamed:_20": NaN,
-      "unnamed:_21": "CONVENCIONAL + NO CONVENCIONAL",
-      "unnamed:_22": NaN,
-      "unnamed:_23": NaN,
-      "unnamed:_24": NaN,
-      "unnamed:_25": NaN,
-      "unnamed:_26": NaN,
-      "unnamed:_27": NaN,
-      "unnamed:_28": NaN
-     }
-    ],
-    "mapped": {
-     "cuenca": null,
-     "empresa": null,
-     "area": "reservas_y_recursos_al_31/12/2025_-_hasta_el_fin_de_la_concesion",
-     "recurso": "reservas_y_recursos_al_31/12/2025_-_hasta_el_fin_de_la_concesion",
-     "tipo": null,
-     "numeric": [
-      "reservas_y_recursos_al_31/12/2025_-_hasta_el_fin_de_la_concesion"
-     ]
-    },
-    "rows_neuquina_nc": 1178
+     "operador",
+     "cuenca",
+     "provincia",
+     "concesion o permiso",
+     "yacimiento",
+     "reservas | comprobadas | pet | (mm3)",
+     "reservas | comprobadas | gas | (mmm3)",
+     "reservas | probables | pet | (mm3)",
+     "reservas | probables | gas | (mmm3)",
+     "reservas | posibles | pet | (mm3)",
+     "reservas | posibles | gas | (mmm3)",
+     "recursos contingentes | posibles | pet | (mm3)",
+     "recursos contingentes | posibles | gas | (mmm3)",
+     "reservas | comprobadas | pet | (mm3)",
+     "reservas | comprobadas | gas | (mmm3)",
+     "reservas | probables | pet | (mm3)",
+     "reservas | probables | gas | (mmm3)",
+     "reservas | posibles | pet | (mm3)",
+     "reservas | posibles | gas | (mmm3)",
+     "recursos contingentes | posibles | pet | (mm3)",
+     "recursos contingentes | posibles | gas | (mmm3)",
+     "reservas | comprobadas | pet | (mm3)",
+     "reservas | comprobadas | gas | (mmm3)",
+     "reservas | probables | pet | (mm3)",
+     "reservas | probables | gas | (mmm3)",
+     "reservas | posibles | pet | (mm3)",
+     "reservas | posibles | gas | (mmm3)",
+     "recursos contingentes | posibles | pet | (mm3)",
+     "recursos contingentes | posibles | gas | (mmm3)"
+    ]
    },
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 785, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 774, in <lambda>\n    (\"reserves\", lambda d: reserves(d)),\n                           ^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 518, in reserves\n    raise RuntimeError(\"No se pudieron identificar columnas de volumen u operadora (ver diag)\")\nRuntimeError: No se pudieron identificar columnas de volumen u operadora (ver diag)\n"
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 841, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 830, in <lambda>\n    (\"reserves\", lambda d: reserves(d)),\n                           ^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 553, in reserves\n    if k and k not in claves and pd.to_numeric(df[c], errors=\"coerce\").notna().mean() > 0.3:\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/pandas/core/tools/numeric.py\", line 212, in to_numeric\n    raise TypeError(\"arg must be a list, tuple, 1-d array, or Series\")\nTypeError: arg must be a list, tuple, 1-d array, or Series\n"
   },
   "export_price": {
    "ok": true,
-   "at": "2026-10-12T20:25Z",
+   "at": "2026-10-12T20:29Z",
    "diag": {
     "package": "https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo",
     "resources": [
@@ -5930,7 +6357,7 @@
   },
   "fuel_prices": {
    "ok": true,
-   "at": "2026-10-12T20:25Z",
+   "at": "2026-10-12T20:30Z",
    "diag": {
     "package": "http://datos.energia.gob.ar precios-en-surtidor",
     "resources": [
@@ -5972,13 +6399,13 @@
    }
   },
   "rigi_portal": {
-   "ok": false,
-   "error": "RuntimeError: No se encontró el plan de inversiones incrustado",
+   "ok": true,
+   "at": "2026-10-12T20:30Z",
    "diag": {
     "html_len": 76399,
     "context": "-thin\">&nbsp;</span><span class=\"fw-semibold fs-1\">M</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Empleos <span class=\"fw-medium br-sm br-xs\">(directos e indirectos)</span></dt><dd class=\"fs-1 fw-bold text-arg-verdin js-total-puestos-trabajo\">0</dd></div></dl></div><div class=\"col-md-12 m-y-2\"><h3 class=\"h4 font-sans-serif p-b-1 border-bottom\">Sectores</h3><dl class=\"dl-proyectos-sector\"><div class=\"d-grid\"><dt class=\"last\">Energía eléctrica</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-torre-electrica m-r-05\"></i> <span class=\"m-t-1 js-total-energia-electrica\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Petróleo y gas</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-petroleo-y-gas m-r-05\"></i> <span class=\"m-t-1 js-total-petroleo-y-gas\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Minería</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-mineria m-r-05\"></i> <span class=\"m-t-1 js-total-mineria\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Siderurgia</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-siderurgia m-r-05\"></i> <span class=\"m-t-1 js-total-siderurgia\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Infraestructura</dt><",
     "inline_scripts": [
-     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"ylixNXMbF15eP8yZnw-lLfkysICHTDbP87udV5Q64P0\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
+     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"hZmQzlAA-uQvaqoSrjLO1Atz8yi7jxzuqfud3URtjZM\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
      "const jsonContainer = document.getElementById('raw-data-json');\n  const jsonText = (jsonContainer.textContent || jsonContainer.innerText).trim();\n  const rawData = JSON.parse(jsonText);\n\n  const extractVal = (val) => (typeof val === 'object' && val !== null) ? (val.total || 0) : (val || 0);\n  const formatNum = (num) => Number(num || 0).toLocaleString('es-AR');\n\n  const getSeriesData = (key) => rawData.map(d => ({ \n    x: new Date(d.year).getTime(), \n    y: extractVal(d[key]) \n  }));\n\n  const seriesData = [\n    { key: 'energia', name: 'Energía Eléctrica', data: getSeriesData('energia') },\n    { key: 'petroleo', name: 'Petróleo y Gas', data: getSeriesData('petroleo') },\n    { key: 'mineria', name: 'Minería', data: getSeriesData('mineria') },\n    { key: 'siderurgia', name: 'Siderurgia', data: getSeriesData('siderurgia') },\n    { key: 'infra', name: 'Infraestructura', data: getSeriesData('infra') }\n  ];\n\n  var optionsMain = {\n    series: seriesData,\n    colors: ['#C2185B', '#B9CE39', '#6A1B99', '#4FBB73', '#F79D00'],\n    chart: {\n      id: 'chartBarMain',\n      type: 'bar',\n      height: 450,\n      stacked: true,\n      toolbar: { show: false }\n    },\n    grid: {\n      padding: {\n        right: 35,\n        left: 15\n      }\n    },\n    dataLabels: { enabled: false },\n    plotOptions: {\n      bar: {\n        dataLabels: {\n          total: {\n            enabled: true,\n            style: {\n              fontSize: '13px',\n              fontWeight: 900\n            },\n            formatter: function (val, opts) {\n              if (!val) return '';\n\n              // Validar si la columna está dentro del rango visible actual del zoom/brush\n              if (opts && opts.w && opts.w.globals) {\n                const timestamp = opts.w.globals.seriesX[0][opts.dataPointIndex];\n            ",
      "headStyle(\"rigi-cms-fix\", `.container:has(#mapa-portal){padding-left:0 !important;padding-right:0 !important;width:100% !important;}`);\nheadStyle('rigi__999d6df5647d2df27fe7', `.poncho-map{--pm-color-primary: var(--arg-escarapela);--pm-color-base: #eaeaea;--pm-slider-background: var(--arg-azul);--pm-slider-border-color: color-mix(in srgb, #626161 40%, white);--pm-slider-border-width: 2px;--pm-scrollbar-handle: #eaeaea;--pm-scrollbar-background: rgb(0, 0, 0, 0.15);--pm-hover-background: var(--arg-secundario);--pm-hover-color: white;--pm-active-color: #343232;--pm-active-visited-color: violet;--pm-active-background: var(--pm-color-primary);--color: var(--arg-escarapela);--pm-loader-spinner-background: var(--arg-amarillo);--pm-loader-background: var(--arg-azul);--pm-loader-spinner-color: var(--arg-primary-700)}details{--details-border-color: var(--arg-primary-300)}.details-container{--container-border-color: var(--arg-primary-500)}.poncho-map .marker--active:focus,.poncho-map .marker--active{fill:#000 !important;fill-opacity:0 !important}.color-primary{color:var(--color)}.poncho-map .pm-content a{color:var(--arg-escarapela)}.totals-overview{display:grid;gap:15px 15px;grid-template-areas:\"area-a area-b area-c\";grid-template-columns:27% 1fr 27%}.a,.b,.c{display:flex;flex-direction:column-reverse;align-self:self-start}.a{grid-area:area-a}.b{grid-area:area-b}.c{grid-area:area-c}.a .key,.b .key,.c .key,.a .value,.b .value,.c .value{margin:0}.a .key,.b .key,.c .key{font-size:.95rem}.value{grid-area:value}.a .value,.b .value,.c .value{font-size:1.35rem;line-height:2rem;display:flex;align-items:baseline}.c .value .small,.b .value .small,.c .value .small{font-size:1rem}.details-data dt{float:left;margin-right:.25rem}.details-data dt::after{content:\":\";font-weight:400}.details-data "
     ],
@@ -5987,9 +6414,44 @@
     ],
     "candidate_urls": [
      "https://www.argentina.gob.ar/manifest.json"
-    ]
-   },
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 785, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 777, in <lambda>\n    (\"rigi_portal\", lambda d: rigi_portal(d)),\n                              ^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 678, in rigi_portal\n    raise RuntimeError(\"No se encontró el plan de inversiones incrustado\")\nRuntimeError: No se encontró el plan de inversiones incrustado\n"
+    ],
+    "plan_sample": {
+     "year": "2024-01-02",
+     "energia": {
+      "total": 37,
+      "sub": {
+       "Energía Eléctrica": 37
+      }
+     },
+     "petroleo": {
+      "total": 49,
+      "sub": {
+       "Midstream": 34,
+       "Upstream": 15
+      }
+     },
+     "mineria": {
+      "total": 527,
+      "sub": {
+       "Cobre": 109,
+       "Litio": 374,
+       "Oro y Plata": 44
+      }
+     },
+     "siderurgia": {
+      "total": 0,
+      "sub": {
+       "Siderurgia": 0
+      }
+     },
+     "infra": {
+      "total": 0,
+      "sub": {
+       "Puerto": 0
+      }
+     }
+    }
+   }
   }
  }
 }
