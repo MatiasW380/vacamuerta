@@ -56,6 +56,7 @@ COLUMNAS = {
     "mes": ["mes", "month"],
     "petroleo_m3": ["prod_pet", "produccion_petroleo", "pet_m3"],
     "gas_mm3": ["prod_gas", "produccion_gas", "gas_mm3"],
+    "agua_m3": ["prod_agua", "produccion_agua", "agua"],
 }
 
 # Nombres cortos de operadoras: patrón sobre el nombre normalizado -> etiqueta.
@@ -132,11 +133,11 @@ def leer_csv(fuente: str | Path) -> pd.DataFrame:
     faltan = [c for c in ("empresa", "cuenca", "anio", "mes", "petroleo_m3", "gas_mm3") if c not in df.columns]
     if faltan:
         raise ValueError(f"Faltan columnas {faltan} en {fuente}. Columnas: {list(df.columns)}")
-    for c in ("formacion", "tipo_recurso", "pozo", "area", "provincia"):
+    for c in ("formacion", "tipo_recurso", "pozo", "area", "provincia", "agua_m3"):
         if c not in df.columns:
             df[c] = ""
-    df = df[["empresa", "pozo", "area", "provincia", "cuenca", "formacion", "tipo_recurso", "anio", "mes", "petroleo_m3", "gas_mm3"]].copy()
-    for c in ("petroleo_m3", "gas_mm3"):
+    df = df[["empresa", "pozo", "area", "provincia", "cuenca", "formacion", "tipo_recurso", "anio", "mes", "petroleo_m3", "gas_mm3", "agua_m3"]].copy()
+    for c in ("petroleo_m3", "gas_mm3", "agua_m3"):
         df[c] = pd.to_numeric(df[c].str.replace(",", ".", regex=False), errors="coerce").fillna(0.0)
     df["anio"] = pd.to_numeric(df["anio"], errors="coerce")
     df["mes"] = pd.to_numeric(df["mes"], errors="coerce")
@@ -162,6 +163,56 @@ def por_dia(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def curvas_tipo(df: pd.DataFrame, primeros: pd.Series) -> dict:
+    """Producción acumulada de petróleo de cada pozo en sus primeros 6 y 12 meses, por camada.
+
+    Camada = año en que el pozo empezó a producir. Solo pozos petroleros (más del 50% de su
+    producción en barriles equivalentes es petróleo durante los primeros 6 meses).
+    """
+    d = df[["pozo", "empresa", "anio", "mes", "petroleo_m3", "gas_mm3"]].copy()
+    d["idx"] = d["anio"] * 12 + d["mes"]
+    ini = primeros.map(lambda p: (p // 100) * 12 + p % 100)
+    d["k"] = d["idx"] - d["pozo"].map(ini)
+    d = d[(d["k"] >= 0) & (d["k"] < 12)]
+    ultimo = int(d["idx"].max())
+    agg = d.groupby("pozo").agg(
+        oil6=("petroleo_m3", lambda x: x[d.loc[x.index, "k"] < 6].sum()),
+        gas6=("gas_mm3", lambda x: x[d.loc[x.index, "k"] < 6].sum()),
+        oil12=("petroleo_m3", "sum"),
+        empresa=("empresa", "first"),
+    )
+    agg["inicio"] = agg.index.map(ini)
+    agg["cohorte"] = (agg["inicio"] - 1) // 12
+    agg["operadora"] = agg["empresa"].map(nombre_corto)
+    boe_oil = agg["oil6"] * M3_TO_BBL
+    agg = agg[(boe_oil > 0) & (boe_oil / (boe_oil + agg["gas6"] * 5.886) > 0.5)]
+    con6 = agg[agg["inicio"] <= ultimo - 5]
+    con12 = agg[agg["inicio"] <= ultimo - 11]
+    kbbl = lambda m3: round(float(m3) * M3_TO_BBL / 1000, 1)
+    cohortes = []
+    for c in sorted(con6["cohorte"].unique()):
+        if c < 2014:
+            continue
+        g6, g12 = con6[con6["cohorte"] == c], con12[con12["cohorte"] == c]
+        if len(g6) < 10:
+            continue
+        cohortes.append({
+            "year": int(c), "wells_6m": int(len(g6)),
+            "avg_6m_kbbl": kbbl(g6["oil6"].mean()), "median_6m_kbbl": kbbl(g6["oil6"].median()),
+            "wells_12m": int(len(g12)),
+            "avg_12m_kbbl": kbbl(g12["oil12"].mean()) if len(g12) >= 10 else None,
+        })
+    # Operadoras: pozos de los últimos 24 meses con 6 meses completos.
+    rec = con6[con6["inicio"] > ultimo - 30]
+    ops = []
+    for nombre, g in rec.groupby("operadora"):
+        if len(g) >= 8:
+            ops.append({"name": nombre, "wells": int(len(g)), "avg_6m_kbbl": kbbl(g["oil6"].mean())})
+    ops.sort(key=lambda o: o["avg_6m_kbbl"], reverse=True)
+    return {"cohorts": cohortes, "operators_recent": ops[:10],
+            "operators_window": f"{(ultimo - 30) // 12}-{((ultimo - 30) % 12) + 1:02d}"}
+
+
 def construir(historico: pd.DataFrame, anuales: list[pd.DataFrame]) -> dict:
     hist_vm = historico[es_vaca_muerta(historico)]
     ultimo_hist = hist_vm["anio"] * 100 + hist_vm["mes"]
@@ -181,6 +232,7 @@ def construir(historico: pd.DataFrame, anuales: list[pd.DataFrame]) -> dict:
     con_id = vm["pozo"].fillna("").str.strip().ne("")
     # Mes de primera producción de cada pozo (sobre toda la historia disponible).
     primeros = vm[produce & con_id].groupby("pozo")["periodo"].min()
+    type_curves = curvas_tipo(vm[produce & con_id], primeros)
     nuevos_por_mes = primeros.value_counts()
     activos_por_mes = vm[produce & con_id].groupby("periodo")["pozo"].nunique()
     vm = vm[vm["anio"] >= START_YEAR]
@@ -188,7 +240,7 @@ def construir(historico: pd.DataFrame, anuales: list[pd.DataFrame]) -> dict:
     vm["area_n"] = vm["area"].fillna("").map(nombre_area)
 
     mensual = (
-        vm.groupby(["anio", "mes"], as_index=False)[["petroleo_m3", "gas_mm3"]].sum()
+        vm.groupby(["anio", "mes"], as_index=False)[["petroleo_m3", "gas_mm3", "agua_m3"]].sum()
         .sort_values(["anio", "mes"])
     )
     mensual = por_dia(mensual)
@@ -343,12 +395,14 @@ def construir(historico: pd.DataFrame, anuales: list[pd.DataFrame]) -> dict:
         "wells": wells,
         "areas": areas,
         "areas_all": areas_all,
+        "type_curves": type_curves,
         "operators_history": operators_history,
         "monthly": [
             {
                 "period": f"{int(r.anio):04d}-{int(r.mes):02d}",
                 "oil_bbl_d": round(float(r.oil_bbl_d)),
                 "gas_mmm3_d": round(float(r.gas_mmm3_d), 2),
+                "water_cut_pct": round(float(r.agua_m3) / float(r.agua_m3 + r.petroleo_m3) * 100, 1) if (r.agua_m3 + r.petroleo_m3) > 0 else None,
             }
             for r in mensual.itertuples()
         ],

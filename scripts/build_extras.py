@@ -102,6 +102,7 @@ def fracking(diag: dict) -> dict:
     c_cuenca = col(df, "cuenca")
     c_pozo = col(df, "idpozo", "id_pozo", "sigla")
     c_rama = col(df, "longitud_rama", "rama_horizontal")
+    c_agua = col(df, "agua_inyectada")
     diag["mapped"] = {"etapas": c_etapas, "arena": c_arena, "fecha": c_fecha, "anio": c_anio, "mes": c_mes,
                       "empresa": c_empresa, "formacion": c_form, "cuenca": c_cuenca, "pozo": c_pozo, "rama": c_rama}
 
@@ -109,6 +110,7 @@ def fracking(diag: dict) -> dict:
     df["_etapas"] = num(df[c_etapas]).fillna(0)
     df["_arena"] = sum(num(df[c]).fillna(0) for c in c_arena) if c_arena else 0
     df["_rama"] = num(df[c_rama]) if c_rama else float("nan")
+    df["_agua"] = num(df[c_agua]).fillna(0) if c_agua else 0
     if c_fecha:
         f = pd.to_datetime(df[c_fecha], errors="coerce", dayfirst=False)
         df["_anio"], df["_mes"] = f.dt.year, f.dt.month
@@ -130,7 +132,7 @@ def fracking(diag: dict) -> dict:
     hoy = date.today()
     tope = hoy.year * 100 + hoy.month
     df = df[df["_per"] < tope]  # el mes en curso siempre está incompleto
-    mens = df.groupby("_per").agg(stages=("_etapas", "sum"), sand_t=("_arena", "sum"),
+    mens = df.groupby("_per").agg(stages=("_etapas", "sum"), sand_t=("_arena", "sum"), water_m3=("_agua", "sum"),
                                   wells=("_etapas", "size"), lateral_m=("_rama", "mean")).sort_index()
     # Los últimos meses llegan incompletos (las operadoras declaran con demora):
     # se descartan mientras estén por debajo del 50% del promedio de los 6 meses previos.
@@ -143,7 +145,18 @@ def fracking(diag: dict) -> dict:
         "stages": int(r.stages), "wells": int(r.wells),
         "sand_t": int(round(r.sand_t)) if r.sand_t else None,
         "lateral_m": int(round(r.lateral_m)) if pd.notna(r.lateral_m) else None,
+        "stages_per_well": round(r.stages / r.wells, 1) if r.wells else None,
+        "sand_per_stage_t": round(r.sand_t / r.stages, 1) if r.stages and r.sand_t else None,
+        "water_per_stage_m3": round(r.water_m3 / r.stages) if r.stages and r.water_m3 else None,
     } for p, r in mens.iterrows()]
+    # Tendencia anual de diseño de pozos (años completos o el año en curso hasta el último mes completo).
+    anual = df.groupby("_anio").agg(stages=("_etapas", "sum"), wells=("_etapas", "size"),
+                                    lateral_m=("_rama", "mean"), sand_t=("_arena", "sum"), water_m3=("_agua", "sum"))
+    design = [{"year": int(a), "wells": int(r.wells), "lateral_m": int(round(r.lateral_m)) if pd.notna(r.lateral_m) else None,
+               "stages_per_well": round(r.stages / r.wells, 1) if r.wells else None,
+               "sand_per_well_t": int(round(r.sand_t / r.wells)) if r.wells and r.sand_t else None,
+               "water_per_well_m3": int(round(r.water_m3 / r.wells)) if r.wells and r.water_m3 else None}
+              for a, r in anual.iterrows() if a >= 2014 and r.wells >= 20]
 
     ult12 = [m["period"] for m in monthly[-12:]]
     per12 = {int(p.replace("-", "")) for p in ult12}
@@ -163,6 +176,7 @@ def fracking(diag: dict) -> dict:
         "sand_12m_t": int(round(d12["_arena"].sum())) if c_arena else None,
         "operators": operators,
         "last_period": monthly[-1]["period"] if monthly else None,
+        "design": design,
     }
 
 
@@ -274,10 +288,30 @@ def resumen_aviso(texto: str) -> str:
     return cuerpo[:320].strip() + ("…" if len(cuerpo) > 320 else "")
 
 
+def datos_rigi(texto: str) -> dict | None:
+    """De una resolución de adhesión al RIGI: proyecto, empresa y monto."""
+    if not re.search(r"adhesi[oó]n al R[eé]gimen de Incentivo para Grandes Inversiones|adhesi[oó]n al RIGI", texto, re.I):
+        return None
+    disp = parte_dispositiva(texto)
+    proyecto = re.search(r"(?:proyecto|denominado)\s*[“\"«]([^”\"»]{3,140})[”\"»]", disp, re.I) or \
+               re.search(r"(?:proyecto|denominado)\s*[“\"«]([^”\"»]{3,140})[”\"»]", texto, re.I)
+    empresa = re.search(r"(?:presentada|solicitada|formulada) por (?:la (?:empresa|firma|sociedad)\s+)?([A-ZÁÉÍÓÚÑ0-9][A-ZÁÉÍÓÚÑ0-9 .,&\-]{2,90}?(?:S\.?A\.?U?\.?|S\.?R\.?L\.?|SOCIEDAD AN[OÓ]NIMA(?: UNIPERSONAL)?|S\.?A\.?S\.?))", texto)
+    montos = [float(m.replace(".", "").replace(",", "."))
+              for m in re.findall(r"(?:USD|U\$S|US\$|D[OÓ]LARES ESTADOUNIDENSES[^()]{0,200}\(\s*(?:USD|U\$S|US\$)?)\s*([\d]{1,3}(?:\.\d{3})+(?:,\d+)?)", texto)]
+    monto = max(montos) if montos else None
+    sector = next((s for s, k in [("Petróleo y gas", "hidrocarbur"), ("Petróleo y gas", "petr"), ("Gas natural licuado", "licuado"),
+                                  ("Minería", "miner"), ("Energía eléctrica", "energ[ií]a el[eé]ctrica"), ("Siderurgia", "sider"),
+                                  ("Infraestructura", "infraestructura|puerto")] if re.search(k, disp, re.I)), None)
+    return {"project": proyecto.group(1).strip() if proyecto else None,
+            "company": empresa.group(1).strip(" ,.") if empresa else None,
+            "usd_million": round(monto / 1e6, 1) if monto and monto > 1e6 else None,
+            "sector": sector}
+
+
 def regulations(diag: dict, previo: dict | None) -> dict:
     from bs4 import BeautifulSoup
 
-    VERSION = 3   # al cambiar el criterio de filtrado se rearma el historial
+    VERSION = 4   # al cambiar el criterio de filtrado se rearma el historial
     vigente = (previo or {}).get("version") == VERSION
     viejos = [i for i in (previo or {}).get("raw_items", []) if i.get("topics")] if vigente else []
     descartados = set((previo or {}).get("rejected_ids", [])) if vigente else set()
@@ -331,6 +365,8 @@ def regulations(diag: dict, previo: dict | None) -> dict:
             continue
         c["topics"] = temas
         c["summary"] = resumen_aviso(texto)
+        if "RIGI" in temas:
+            c["rigi"] = datos_rigi(texto)
         nuevos.append(c)
     diag.update({"kept": len(nuevos), "details_failed": fallas})
 
@@ -355,6 +391,230 @@ def regulations(diag: dict, previo: dict | None) -> dict:
         "raw_items": todos[:200],
         "rejected_ids": sorted(descartados)[-3000:],
     }
+
+
+# ---------------------------------------------------------------------------
+# Utilidades CKAN (portales de datos abiertos)
+# ---------------------------------------------------------------------------
+def ckan_paquete(bases: list[str], ids: list[str], diag: dict) -> tuple[dict, str]:
+    errores = []
+    for base in bases:
+        for pid in ids:
+            try:
+                j = get(f"{base}/api/3/action/package_show", params={"id": pid}, timeout=60).json()
+                if j.get("success"):
+                    diag["package"] = f"{base} {pid}"
+                    return j["result"], base
+            except Exception as e:
+                errores.append(f"{base} {pid}: {type(e).__name__}")
+    raise RuntimeError(f"No se encontró el dataset: {errores}")
+
+
+def leer_tabla(url: str, timeout: int = 300) -> pd.DataFrame:
+    crudo = get(url, timeout=timeout).content
+    if url.lower().split("?")[0].endswith((".xlsx", ".xls")):
+        df = pd.read_excel(io.BytesIO(crudo), dtype=str)
+    else:
+        for enc in ("utf-8-sig", "latin-1"):
+            try:
+                texto = crudo.decode(enc); break
+            except UnicodeDecodeError:
+                continue
+        sep = ";" if texto[:3000].count(";") > texto[:3000].count(",") else ","
+        df = pd.read_csv(io.StringIO(texto), sep=sep, dtype=str, low_memory=False)
+    df.columns = [norm(c).replace(" ", "_") for c in df.columns]
+    return df
+
+
+def recursos(paquete: dict) -> list[dict]:
+    return [{"name": r.get("name") or "", "url": r.get("url") or "", "format": (r.get("format") or "").lower(),
+             "modified": r.get("last_modified") or r.get("created") or ""} for r in paquete.get("resources", [])]
+
+
+def numero(s: pd.Series) -> pd.Series:
+    t = s.astype(str).str.strip()
+    # 1.234,56 -> 1234.56 ; 1234.56 se deja igual
+    t = t.where(~t.str.contains(r"\d\.\d{3},"), t.str.replace(".", "", regex=False))
+    return pd.to_numeric(t.str.replace(",", ".", regex=False), errors="coerce")
+
+
+# ---------------------------------------------------------------------------
+# 6. Reservas de petróleo y gas
+# ---------------------------------------------------------------------------
+def reserves(diag: dict) -> dict:
+    paq, base = ckan_paquete(["http://datos.energia.gob.ar", "https://datos.gob.ar"],
+                             ["reservas-de-petroleo-y-gas", "energia-reservas-petroleo-gas"], diag)
+    rs = [r for r in recursos(paq) if r["format"] in ("csv", "xlsx", "xls") or r["url"].lower().endswith((".csv", ".xlsx"))]
+    diag["resources"] = [r["name"] for r in rs][:20]
+    if not rs:
+        raise RuntimeError("Sin recursos tabulares")
+    # El recurso más reciente que no sea "fin de concesión" ni histórico agregado.
+    def anio(r):
+        m = re.findall(r"(20\d\d)", r["name"] + r["url"])
+        return int(m[-1]) if m else 0
+    rs.sort(key=lambda r: (anio(r), "fin" not in norm(r["name"])), reverse=True)
+    r = rs[0]
+    df = leer_tabla(r["url"])
+    diag.update({"resource_used": r["name"], "columns": list(df.columns)[:50], "rows": int(len(df)),
+                 "sample": df.head(2).to_dict(orient="records")})
+    c_cuenca = col(df, "cuenca")
+    c_emp = col(df, "empresa", "operador")
+    c_area = col(df, "areapermisoconcesion", "area", "concesion", "yacimiento")
+    c_rec = col(df, "tipo_de_recurso", "subtipo", "recurso", "convencional")
+    c_tipo = col(df, "clasificacion", "tipo_reserva", "categoria")
+    num_cols = [c for c in df.columns if any(x in c for x in ("petroleo", "gas", "reserva")) and numero(df[c]).notna().mean() > 0.5]
+    diag["mapped"] = {"cuenca": c_cuenca, "empresa": c_emp, "area": c_area, "recurso": c_rec, "tipo": c_tipo, "numeric": num_cols}
+    d = df.copy()
+    if c_cuenca:
+        d = d[d[c_cuenca].fillna("").map(norm).str.contains("neuquina")]
+    if c_rec:
+        nc = d[c_rec].fillna("").map(norm)
+        if nc.str.contains("no convencional").any():
+            d = d[nc.str.contains("no convencional")]
+    diag["rows_neuquina_nc"] = int(len(d))
+    if not num_cols or not c_emp:
+        raise RuntimeError("No se pudieron identificar columnas de volumen u operadora (ver diag)")
+    for c in num_cols:
+        d[c] = numero(d[c]).fillna(0)
+    por_op = d.groupby(d[c_emp].map(nombre_corto))[num_cols].sum().sort_values(num_cols[0], ascending=False)
+    return {
+        "source": {"name": "Secretaría de Energía, reservas de petróleo y gas", "url": "http://datos.energia.gob.ar/dataset/reservas-de-petroleo-y-gas", "license": "CC BY 4.0"},
+        "resource": r["name"], "year": anio(r) or None, "columns": num_cols,
+        "by_operator": [{"name": n, **{c: round(float(v), 1) for c, v in fila.items()}} for n, fila in por_op.head(12).iterrows()],
+        "totals": {c: round(float(d[c].sum()), 1) for c in num_cols},
+    }
+
+
+# ---------------------------------------------------------------------------
+# 7. Precio de exportación del petróleo crudo
+# ---------------------------------------------------------------------------
+def export_price(diag: dict) -> dict:
+    paq, base = ckan_paquete(["https://datos.gob.ar", "http://datos.energia.gob.ar"],
+                             ["energia-precio-exportacion-petroleo-crudo", "precio-de-exportacion-de-petroleo-crudo",
+                              "precio-exportacion-petroleo-crudo"], diag)
+    rs = [r for r in recursos(paq) if r["url"].lower().split("?")[0].endswith((".csv", ".xlsx")) or r["format"] in ("csv", "xlsx")]
+    diag["resources"] = [r["name"] for r in rs][:10]
+    if not rs:
+        raise RuntimeError("Sin recursos tabulares")
+    df = leer_tabla(rs[0]["url"])
+    diag.update({"resource_used": rs[0]["name"], "columns": list(df.columns)[:40], "rows": int(len(df)),
+                 "sample": df.head(3).to_dict(orient="records")})
+    c_fecha = col(df, "indice_tiempo", "fecha", "periodo", "mes")
+    c_anio, c_mes = col(df, "anio", "ano"), col(df, "mes")
+    nums = [c for c in df.columns if c not in (c_fecha, c_anio, c_mes) and numero(df[c]).notna().mean() > 0.6]
+    c_precio = next((c for c in nums if "precio" in c or "usd" in c or "dolar" in c), nums[0] if nums else None)
+    c_tipo = col(df, "tipo_de_crudo", "crudo", "tipo", "calidad", "producto")
+    diag["mapped"] = {"fecha": c_fecha, "anio": c_anio, "mes": c_mes, "precio": c_precio, "tipo": c_tipo}
+    if not c_precio:
+        raise RuntimeError("No se encontró la columna de precio")
+    if c_fecha:
+        f = pd.to_datetime(df[c_fecha], errors="coerce")
+    else:
+        f = pd.to_datetime(df[c_anio].astype(str) + "-" + df[c_mes].astype(str).str.zfill(2) + "-01", errors="coerce")
+    d = pd.DataFrame({"fecha": f, "precio": numero(df[c_precio]), "tipo": df[c_tipo].fillna("") if c_tipo else ""}).dropna(subset=["fecha", "precio"])
+    d["period"] = d["fecha"].dt.strftime("%Y-%m")
+    series = {}
+    for tipo, g in d.groupby("tipo"):
+        g = g.groupby("period")["precio"].mean().sort_index().tail(60)
+        series[str(tipo).strip().title() or "Total"] = [{"period": p, "usd_bbl": round(float(v), 2)} for p, v in g.items()]
+    principal = max(series, key=lambda k: len(series[k]))
+    return {"source": {"name": "Secretaría de Energía, precio de exportación de petróleo crudo",
+                       "url": "https://datos.gob.ar/dataset/energia-precio-exportacion-petroleo-crudo", "license": "CC BY 4.0"},
+            "unit_column": c_precio, "main": principal, "series": series}
+
+
+# ---------------------------------------------------------------------------
+# 8. Precios de combustibles en surtidor (Res. 314/2016)
+# ---------------------------------------------------------------------------
+PRODUCTOS = {"super": ["super", "92 y 95"], "premium": ["premium", "mas de 95"], "diesel": ["grado 2"], "diesel_premium": ["grado 3"]}
+
+
+def fuel_prices(diag: dict) -> dict:
+    paq, base = ckan_paquete(["http://datos.energia.gob.ar", "https://datos.gob.ar"],
+                             ["precios-en-surtidor", "energia-precios-surtidor---resolucion-3142016"], diag)
+    rs = [r for r in recursos(paq) if r["url"].lower().split("?")[0].endswith(".csv") or r["format"] == "csv"]
+    diag["resources"] = [r["name"] for r in rs][:10]
+    vig = next((r for r in rs if "vigente" in norm(r["name"])), rs[0] if rs else None)
+    if not vig:
+        raise RuntimeError("Sin recurso CSV")
+    df = leer_tabla(vig["url"], timeout=600)
+    diag.update({"resource_used": vig["name"], "columns": list(df.columns)[:40], "rows": int(len(df))})
+    c_prod, c_prec = col(df, "producto"), col(df, "precio")
+    c_prov, c_band = col(df, "provincia"), col(df, "empresabandera", "bandera")
+    c_hor, c_fecha = col(df, "tipohorario", "horario"), col(df, "fecha_vigencia", "fecha")
+    diag["mapped"] = {"producto": c_prod, "precio": c_prec, "provincia": c_prov, "bandera": c_band, "horario": c_hor, "fecha": c_fecha}
+    if not (c_prod and c_prec and c_prov):
+        raise RuntimeError("Faltan columnas de producto, precio o provincia")
+    d = pd.DataFrame({"prod": df[c_prod].fillna("").map(norm), "precio": numero(df[c_prec]),
+                      "prov": df[c_prov].fillna("").map(lambda x: str(x).strip().title()),
+                      "band": df[c_band].fillna("").map(lambda x: str(x).strip()) if c_band else "",
+                      "hor": df[c_hor].fillna("").map(norm) if c_hor else "diurno",
+                      "fecha": pd.to_datetime(df[c_fecha], errors="coerce") if c_fecha else pd.NaT})
+    d = d[(d["precio"] > 50) & (d["precio"] < 1e6)]
+    if c_hor:
+        d = d[d["hor"].str.contains("diurno")]
+    # Solo precios informados en los últimos 120 días.
+    if c_fecha and d["fecha"].notna().any():
+        d = d[d["fecha"] >= d["fecha"].max() - pd.Timedelta(days=120)]
+    d["clave"] = None
+    for clave, pats in PRODUCTOS.items():
+        d.loc[d["clave"].isna() & d["prod"].map(lambda p: any(x in p for x in pats)), "clave"] = clave
+    d = d.dropna(subset=["clave"])
+    diag["rows_used"] = int(len(d))
+    por_prov = (d.groupby(["prov", "clave"])["precio"].median().unstack().round(0))
+    marcas = d["band"].map(lambda b: "YPF" if "YPF" in b.upper() else "Shell" if "SHELL" in b.upper() else
+                           "Axion" if "AXION" in b.upper() else "Puma" if "PUMA" in b.upper() else "Otras")
+    por_marca = d.assign(marca=marcas).groupby(["marca", "clave"])["precio"].median().unstack().round(0)
+    estaciones = d.assign(marca=marcas).groupby("marca").size()
+    fmt = lambda df_: [{"name": n, **{k: (None if pd.isna(v) else int(v)) for k, v in fila.items()}} for n, fila in df_.iterrows()]
+    return {"source": {"name": "Secretaría de Energía, precios en surtidor (Res. 314/2016)",
+                       "url": "http://datos.energia.gob.ar/dataset/precios-en-surtidor", "license": "CC BY 4.0"},
+            "as_of": d["fecha"].max().strftime("%Y-%m-%d") if c_fecha and d["fecha"].notna().any() else None,
+            "by_province": fmt(por_prov.sort_values("super", ascending=False) if "super" in por_prov else por_prov),
+            "by_brand": fmt(por_marca), "stations_by_brand": {k: int(v) for k, v in estaciones.items()},
+            "national_median": {k: int(v) for k, v in d.groupby("clave")["precio"].median().round(0).items()}}
+
+
+# ---------------------------------------------------------------------------
+# 9. RIGI: plan de inversiones del portal oficial
+# ---------------------------------------------------------------------------
+RIGI_PORTAL = "https://www.argentina.gob.ar/economia/rigi"
+
+
+def rigi_portal(diag: dict) -> dict:
+    html = get(RIGI_PORTAL).text
+    diag["html_len"] = len(html)
+    # Recursos que el portal podría cargar con JavaScript (para seguirlos en futuras corridas).
+    urls = sorted(set(re.findall(r"""["'](https?://[^"'\s]+?\.(?:json|csv|xlsx|js)(?:\?[^"'\s]*)?)["']""", html) +
+                      ["https://www.argentina.gob.ar" + u for u in re.findall(r"""["'](/[^"'\s]+?\.(?:json|csv|xlsx)(?:\?[^"'\s]*)?)["']""", html)]))
+    diag["candidate_urls"] = [u for u in urls if "rigi" in u.lower() or u.endswith((".json", ".csv", ".xlsx"))][:30]
+    # JSON incrustado con el plan de inversiones anual por sector.
+    plan = None
+    for m in re.finditer(r"(\[\s*\{[^<]{200,}?\}\s*\])", html):
+        try:
+            arr = json.loads(m.group(1))
+        except Exception:
+            continue
+        if isinstance(arr, list) and arr and isinstance(arr[0], dict) and any("petroleo" in norm(k) for k in arr[0]):
+            plan = arr
+            break
+    if not plan:
+        raise RuntimeError("No se encontró el plan de inversiones incrustado")
+    diag["plan_sample"] = plan[0]
+    filas = []
+    for r in plan:
+        anio = str(r.get("year") or r.get("anio") or r.get("fecha") or next(iter(r.values())))[:4]
+        fila = {"year": int(anio) if anio.isdigit() else anio}
+        for k, v in r.items():
+            if isinstance(v, dict) and "total" in v:
+                fila[norm(k)] = v.get("total")
+                for sk, sv in (v.get("sub") or {}).items():
+                    fila[f"{norm(k)}:{sk}"] = sv
+            elif isinstance(v, (int, float)) and norm(k) not in ("year", "anio"):
+                fila[norm(k)] = v
+        filas.append(fila)
+    return {"source": {"name": "Ministerio de Economía, portal oficial del RIGI", "url": RIGI_PORTAL},
+            "plan_by_year": filas}
 
 
 # ---------------------------------------------------------------------------
@@ -435,6 +695,10 @@ def main() -> None:
         ("oil_price", lambda d: oil_price(d)),
         ("regulations", lambda d: regulations(d, previo.get("regulations"))),
         ("news", lambda d: news(d)),
+        ("reserves", lambda d: reserves(d)),
+        ("export_price", lambda d: export_price(d)),
+        ("fuel_prices", lambda d: fuel_prices(d)),
+        ("rigi_portal", lambda d: rigi_portal(d)),
     ]
     solo = set(sys.argv[1:])
     for nombre, fn in tareas:
@@ -449,6 +713,12 @@ def main() -> None:
             status[nombre] = {"ok": False, "error": f"{type(e).__name__}: {str(e)[:500]}", "diag": diag,
                               "trace": traceback.format_exc()[-1200:]}
             print(f"ERROR {nombre}: {e}", file=sys.stderr)
+    # Aprobaciones RIGI detectadas en el Boletín Oficial: se acumulan sin vencimiento.
+    previas = {a["id"]: a for a in previo.get("rigi_approvals", [])}
+    for i in (salida.get("regulations") or {}).get("raw_items", []):
+        if i.get("rigi"):
+            previas[i["id"]] = {"id": i["id"], "date": i["date"], "url": i["url"], "title": i["title"], **i["rigi"]}
+    salida["rigi_approvals"] = sorted(previas.values(), key=lambda a: a["date"], reverse=True)
     salida["generated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
     salida["status"] = status
     OUT.parent.mkdir(parents=True, exist_ok=True)

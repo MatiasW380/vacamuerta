@@ -158,6 +158,20 @@ def main() -> None:
         cubierto = sum(prod[k]["oil_bbl_d"] for k in usados)
         diag["oil_share_on_map_pct"] = round(cubierto / total * 100, 1)
 
+        # Concesiones: todas las áreas con fecha de vencimiento, con su producción si la tienen.
+        conc = []
+        for f in salida:
+            pr = f["properties"]
+            if not pr.get("expires"):
+                continue
+            conc.append({k: pr.get(k) for k in ("name", "type", "holders", "official_operator", "operator",
+                                                 "expires", "norm", "oil_bbl_d", "gas_mmm3_d")})
+        conc.sort(key=lambda c: c["expires"])
+        diag["concessions"] = len(conc)
+        (DATA / "concessions.json").write_text(json.dumps({
+            "source": SOURCE, "period": vm.get("latest_period"), "items": conc},
+            ensure_ascii=False, indent=0), encoding="utf-8")
+
         (DATA / "map_areas.geojson").write_text(json.dumps({
             "type": "FeatureCollection", "source": SOURCE, "period": vm.get("latest_period"),
             "features": salida}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
