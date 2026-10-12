@@ -1,5 +1,5 @@
 {
- "at": "2026-10-12T19:05Z",
+ "at": "2026-10-12T19:09Z",
  "layers": [
   {
    "name": "Hidrocarburos:Areas",
@@ -106,8 +106,8 @@
   "TIPO_CONTRATO": " ",
   "DCHO_OTORGADO": null,
   "NORMA_LEGAL": "Dec.Adm.435/1997",
-  "INI_CONTRATO": "2017-08-11T03:00:00.915Z",
-  "FIN_CONTRATO": "2052-08-10T03:00:00.915Z",
+  "INI_CONTRATO": "2017-08-11T03:00:00.111Z",
+  "FIN_CONTRATO": "2052-08-10T03:00:00.111Z",
   "ID_BLOQUE": "A155128"
  },
  "areas_matched": 57,
@@ -159,7 +159,25 @@
   "gas": 75,
   "other": 2
  },
- "map_areas.geojson_kb": 122,
+ "fluids_layer": "Hidrocarburos:VM_Distribucion_Fluidos",
+ "fluids_features": 5,
+ "fluids_sample_props": {
+  "OBJECTID": 0,
+  "Nombre": "GAS HÚMEDO",
+  "VALUE": "1.100",
+  "Shape_Leng": 0,
+  "superficie": 0,
+  "area_nueva": 0,
+  "Observacio": "1461,09 km2"
+ },
+ "fluids_kinds": {
+  "oil": 2,
+  "wet_gas": 2,
+  "dry_gas": 1,
+  "other": 0
+ },
+ "map_areas.geojson_kb": 156,
  "map_ducts.geojson_kb": 44,
+ "map_fluids.geojson_kb": 6,
  "ok": true
 }
