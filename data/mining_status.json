@@ -1,0 +1,1234 @@
+{
+ "catalog": {
+  "ok": false,
+  "error": "HTTPError: 502 Server Error: Bad Gateway for url: https://datos.gob.ar/api/3/action/package_search?q=siacam&rows=60",
+  "diag": {},
+  "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_mining.py\", line 179, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_mining.py\", line 66, in catalogo\n    res = get(f\"{CKAN}/package_search\", params={\"q\": q, \"rows\": 60}).json()[\"result\"][\"results\"]\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_mining.py\", line 41, in get\n    r.raise_for_status()\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/models.py\", line 1167, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://datos.gob.ar/api/3/action/package_search?q=siacam&rows=60\n"
+ },
+ "series": {
+  "ok": true,
+  "diag": {
+   "series": [
+    [
+     "162.1_XNERALEZAS_0_0_40",
+     "Exportaciones. Minerales metalíferos. Millones de USD. Anual.",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones según el Nomenclador Común del Mercosur (NCM)"
+    ],
+    [
+     "162.2_XNERALEZAS_0_0_40",
+     "Exportaciones. Minerales metalíferos. Millones de USD. Trimestral.",
+     "R/P3M",
+     "2024-10-01",
+     "Exportaciones según el Nomenclador Común del Mercosur (NCM)"
+    ],
+    [
+     "162.3_XNERALEZAS_0_0_40",
+     "Exportaciones. Minerales metalíferos. Millones de USD. Mensual.",
+     "R/P1M",
+     "2025-02-01",
+     "Exportaciones según el Nomenclador Común del Mercosur (NCM)"
+    ],
+    [
+     "162.3_XMB_MINION_0_0_56",
+     "Exportaciones. Combustibles minerales, aceites minerales, y productos de . destilación,  Millones de",
+     "R/P1M",
+     "2025-02-01",
+     "Exportaciones según el Nomenclador Común del Mercosur (NCM)"
+    ],
+    [
+     "162.2_XMB_MINION_0_0_56",
+     "Exportaciones. Combustibles minerales, aceites minerales, y productos de su. destilación,Millones de",
+     "R/P3M",
+     "2024-10-01",
+     "Exportaciones según el Nomenclador Común del Mercosur (NCM)"
+    ],
+    [
+     "162.1_XMB_MINION_0_0_56",
+     "Exportaciones. Combustibles minerales, aceites minerales, y productos de su destilación. Millones de",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones según el Nomenclador Común del Mercosur (NCM)"
+    ],
+    [
+     "12.1_MM_2004_A_19",
+     "EMI. Minerales metálicos. Índice (Base 2004)",
+     "R/P1Y",
+     "2014-01-01",
+     "Estimador Mensual Industrial (EMI). Índice. Base 2004"
+    ],
+    [
+     "12.3_MM_2004_M_19",
+     "EMI. Minerales metálicos. Índice (Base 2004)",
+     "R/P1M",
+     "2015-09-01",
+     "Estimador Mensual Industrial (EMI). Índice. Base 2004"
+    ],
+    [
+     "252.1_OS_MINELES_0_0_15",
+     "PIB Explotación Minas y Canteras. Otros Minerales",
+     "R/P3M",
+     "1980-10-01",
+     "Cuentas Nacionales 1970-1980. Base 1970"
+    ],
+    [
+     "164.2_SOMBUSTION_0_0_60",
+     "Saldo comercial. Combustibles minerales, aceites minerales, y productos de su destilación. Millones ",
+     "R/P3M",
+     "2024-10-01",
+     "Saldo comercial clasificado el Nomenclador Común del Mercosu"
+    ],
+    [
+     "164.3_SOMBUSTION_0_0_60",
+     "Saldo comercial. Combustibles minerales, aceites minerales, y productos de su destilación. Millones ",
+     "R/P1M",
+     "2025-02-01",
+     "Saldo comercial clasificado el Nomenclador Común del Mercosu"
+    ],
+    [
+     "164.1_SOMBUSTION_0_0_60",
+     "Saldo comercial. Combustibles minerales, aceites minerales, y productos de su destilación. Millones ",
+     "R/P1Y",
+     "2024-01-01",
+     "Saldo comercial clasificado el Nomenclador Común del Mercosu"
+    ],
+    [
+     "126.1_OAMNMA_1993_0_44",
+     "Otros artículos de minerales no metalíferos n.c.e.p. índice anual IPIB",
+     "R/P1Y",
+     "2014-01-01",
+     "Índice de Precios Internos al por Mayor (IPIM). SERIE DISCON"
+    ],
+    [
+     "164.1_SINERALZAS_0_0_41",
+     "Saldo comercial. Minerales metalíferos. Millones de USD. Anual.",
+     "R/P1Y",
+     "2024-01-01",
+     "Saldo comercial clasificado el Nomenclador Común del Mercosu"
+    ],
+    [
+     "163.1_MMBUSTIION_0_0_59",
+     "Importaciones. Combustibles minerales, aceites minerales, y productos d. su destilación, Millones de",
+     "R/P1Y",
+     "2024-01-01",
+     "Importaciones según el Nomenclador Común del Mercosur (NCM)"
+    ],
+    [
+     "12.2_MM_2004_T_19",
+     "EMI. Minerales metálicos. Índice (Base 2004)",
+     "R/P3M",
+     "2015-07-01",
+     "Estimador Mensual Industrial (EMI). Índice. Base 2004"
+    ],
+    [
+     "252.1_MRALES_ROS_0_0_21",
+     "PIB Explotación Minas y Canteras. Minerales Metálicos",
+     "R/P3M",
+     "1980-10-01",
+     "Cuentas Nacionales 1970-1980. Base 1970"
+    ],
+    [
+     "13.1_MM_2012_A_19",
+     "EMI. Minerales metálicos. Índice (Base 2012)",
+     "R/P1Y",
+     "2014-01-01",
+     "Estimador Mensual Industrial (EMI). Índice. Base 2012"
+    ],
+    [
+     "327.2_FABR_PRODSCOS__33",
+     "fabricación de productos minerales no metálicos",
+     "R/P3M",
+     "2016-10-01",
+     "Remuneración total por sector de actividad económica en el s"
+    ],
+    [
+     "441.1_FABRICACIOCOS_0_0_44_28",
+     "Fabricación de productos minerales no metálicos",
+     "R/P1Y",
+     "2025-01-01",
+     "Valor Bruto de Producción a precios básicos por rama de acti"
+    ],
+    [
+     "184.1_BIENES_PAGRIA_0_M_20",
+     "Bienes Pagos Mineria",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes sectorial - Balance Cambiario"
+    ],
+    [
+     "184.1_BIENES_COBRIA_0_M_21",
+     "Bienes Cobros Mineria",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes sectorial - Balance Cambiario"
+    ],
+    [
+     "ddaa_mineria_002",
+     "Datos Abiertos de la Secretaría de Minería. Cantidad de datasets.",
+     "R/P1D",
+     "2026-09-22",
+     "Indicadores de la Red de Datos Abiertos de la Administración"
+    ],
+    [
+     "ddaa_mineria_009",
+     "Datos Abiertos de la Secretaría de Minería. Cantidad de distribuciones.",
+     "R/P1D",
+     "2026-09-22",
+     "Indicadores de la Red de Datos Abiertos de la Administración"
+    ],
+    [
+     "155.1_MRIA_PELEO_C_0_0_16",
+     "Empleo registrado. Sector Privado. Minería y Petróleo.",
+     "R/P3M",
+     "2025-10-01",
+     "Empleo registrado del sector privado, por sector de activida"
+    ],
+    [
+     "241.1_MRIARIA_1969_0_7",
+     "Precios implícitos PIB a costo de factores. Minería",
+     "R/P1Y",
+     "1962-01-01",
+     "Cuentas Nacionales 1935-1962"
+    ],
+    [
+     "241.1_MRIARIA_1950_0_7",
+     "Precios implícitos PIB a costo de factores. Minería",
+     "R/P1Y",
+     "1962-01-01",
+     "Cuentas Nacionales 1935-1962"
+    ],
+    [
+     "155.2_MRIA_PELEO_S_0_0_16",
+     "Empleo registrado. Sector Privado. Sin Estacionalidad. Minería y Petróleo.",
+     "R/P3M",
+     "2025-10-01",
+     "Empleo registrado del sector privado, por sector de activida"
+    ],
+    [
+     "ddaa_mineria_004",
+     "Datos Abiertos de la Secretaría de Minería. Cantidad de datasets no federados.",
+     "R/P1D",
+     "2025-10-28",
+     "Indicadores de la Red de Datos Abiertos de la Administración"
+    ],
+    [
+     "250.1_MRIARIA_0_0_7",
+     "Ingreso Bruto Nacional y Producto Bruto Interno a costo de factores. Minería",
+     "R/P1Y",
+     "1962-01-01",
+     "Cuentas Nacionales 1935-1962"
+    ],
+    [
+     "ddaa_mineria_007",
+     "Datos Abiertos de la Secretaría de Minería. Cantidad de datasets con metadatos inválidos.",
+     "R/P1D",
+     "2026-09-22",
+     "Indicadores de la Red de Datos Abiertos de la Administración"
+    ],
+    [
+     "ddaa_mineria_011",
+     "Datos Abiertos de la Secretaría de Minería. Porcentaje global de metadatos recomendados completados.",
+     "R/P1D",
+     "2026-09-22",
+     "Indicadores de la Red de Datos Abiertos de la Administración"
+    ],
+    [
+     "ddaa_mineria_006",
+     "Datos Abiertos de la Secretaría de Minería. Cantidad de datasets con metadatos válidos.",
+     "R/P1D",
+     "2026-09-22",
+     "Indicadores de la Red de Datos Abiertos de la Administración"
+    ],
+    [
+     "269.1_MRIARIA_0_0_7",
+     "Ingreso Bruto Nacional y Producto Bruto Interno a costo de factores. Minería",
+     "R/P1Y",
+     "1962-01-01",
+     "Cuentas Nacionales 1935-1962"
+    ],
+    [
+     "ddaa_mineria_008",
+     "Datos Abiertos de la Secretaría de Minería. Porcentaje de datasets con metadatos válidos.",
+     "R/P1D",
+     "2026-09-22",
+     "Indicadores de la Red de Datos Abiertos de la Administración"
+    ],
+    [
+     "ddaa_mineria_003",
+     "Datos Abiertos de la Secretaría de Minería. Cantidad de datasets federados.",
+     "R/P1D",
+     "2025-10-28",
+     "Indicadores de la Red de Datos Abiertos de la Administración"
+    ],
+    [
+     "ddaa_mineria_015",
+     "Datos Abiertos de la Secretaría de Minería. Cantidad de datasets con datos.",
+     "R/P1D",
+     "2026-09-22",
+     "Indicadores de la Red de Datos Abiertos de la Administración"
+    ],
+    [
+     "ddaa_mineria_014",
+     "Datos Abiertos de la Secretaría de Minería. Cantidad de datasets sin datos.",
+     "R/P1D",
+     "2026-09-22",
+     "Indicadores de la Red de Datos Abiertos de la Administración"
+    ],
+    [
+     "ddaa_mineria_013",
+     "Datos Abiertos de la Secretaría de Minería. Porcentaje de datasets con datos.",
+     "R/P1D",
+     "2026-09-22",
+     "Indicadores de la Red de Datos Abiertos de la Administración"
+    ],
+    [
+     "ddaa_mineria_012",
+     "Datos Abiertos de la Secretaría de Minería. Porcentaje global de metadatos opcionales completados.",
+     "R/P1D",
+     "2026-09-22",
+     "Indicadores de la Red de Datos Abiertos de la Administración"
+    ],
+    [
+     "350.1_TOTAL_EXPONES__39",
+     "Exportaciones total exportaciones total exportaciones",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y rubro"
+    ],
+    [
+     "350.1_TOTAL_EXPOCYE__23",
+     "Exportaciones total exportaciones cye",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y rubro"
+    ],
+    [
+     "350.1_TOTAL_EXPOMOA__23",
+     "Exportaciones total exportaciones moa",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y rubro"
+    ],
+    [
+     "350.1_TOTAL_EXPO_PP__22",
+     "Exportaciones total exportaciones pp",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y rubro"
+    ],
+    [
+     "368.3_BIODISEL_ENES__22",
+     "Biodisel exportaciones",
+     "R/P1M",
+     "2026-08-01",
+     "Producción y ventas de biocombustibles"
+    ],
+    [
+     "368.2_BIODISEL_ENES__22",
+     "Biodisel exportaciones",
+     "R/P3M",
+     "2026-04-01",
+     "Producción y ventas de biocombustibles"
+    ],
+    [
+     "234.1_PEXPORTTAL_0_0_23",
+     "PIB Exportaciones Total",
+     "R/P3M",
+     "1980-10-01",
+     "Cuentas Nacionales 1970-1980. Base 1970"
+    ],
+    [
+     "181.1_UNCTAD_TOTNES_0_A_26",
+     "UNCTAD Total Exportaciones",
+     "R/P1Y",
+     "2016-01-01",
+     "Exportaciones e importaciones por Intensidad tecnológica"
+    ],
+    [
+     "181.1_UNCTAD_EXPRAS_0_A_26",
+     "UNCTAD Exportaciones Otras",
+     "R/P1Y",
+     "2016-01-01",
+     "Exportaciones e importaciones por Intensidad tecnológica"
+    ],
+    [
+     "357.1_JUJUY_PARAUAY__14",
+     "Datos exportaciones Jujuy Paraguay",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y por país de destino"
+    ],
+    [
+     "357.1_FORMOSA_RESTO__13",
+     "Datos exportaciones Formosa Resto",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y por país de destino"
+    ],
+    [
+     "357.1_CABA_RESTOSTO__10",
+     "Datos exportaciones caba Resto",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y por país de destino"
+    ],
+    [
+     "357.1_EXTRANJEROUAY__18",
+     "Datos exportaciones Extranjero Uruguay",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y por país de destino"
+    ],
+    [
+     "357.1_TUCUMAN_ESNIA__15",
+     "Datos exportaciones Tucuman Espania",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y por país de destino"
+    ],
+    [
+     "357.1_CHUBUT_ALENIA__15",
+     "Datos exportaciones Chubut Alemania",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y por país de destino"
+    ],
+    [
+     "357.1_CHACO_CHILILE__11",
+     "Datos exportaciones Chaco Chile",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y por país de destino"
+    ],
+    [
+     "357.1_CHUBUT_CHIINA__12",
+     "Datos exportaciones Chubut China",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y por país de destino"
+    ],
+    [
+     "357.1_MISIONES_CINA__14",
+     "Datos exportaciones Misiones China",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y por país de destino"
+    ],
+    [
+     "350.1_MENDOZA_MOMOA__11",
+     "Exportaciones mendoza moa",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y rubro"
+    ],
+    [
+     "350.1_FORMOSA_TOOSA__21",
+     "Exportaciones formosa total formosa",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y rubro"
+    ],
+    [
+     "181.1_UNCTAD_X_PRIO_0_A_59",
+     "UNCTAD Exportaciones Productos primarios, piedras preciosas y oro no monetario",
+     "R/P1Y",
+     "2016-01-01",
+     "Exportaciones e importaciones por Intensidad tecnológica"
+    ],
+    [
+     "300.1_AP_ACT_RESORO_0_M_32",
+     "Apertura activo. Apertura de reservas internacionales. Apertura oro, oro.",
+     "R/P1M",
+     "2009-06-01",
+     "Activos y pasivos del Banco Central de la Republica Argentin"
+    ],
+    [
+     "300.2_AP_ACT_RESORO_0_A_32",
+     "Apertura activo. Apertura de reservas internacionales. Apertura oro, oro.",
+     "R/P1Y",
+     "2008-01-01",
+     "Activos y pasivos del Banco Central de la Republica Argentin"
+    ],
+    [
+     "300.2_AP_ACT_RESORO_0_A_48",
+     "Apertura activo. Apertura de reservas internacionales. Apertura oro. Previsión por fineza de oro",
+     "R/P1Y",
+     "2008-01-01",
+     "Activos y pasivos del Banco Central de la Republica Argentin"
+    ],
+    [
+     "144.1_OMONETAUAL_0_A_19",
+     "Activos. Valor del oro monetario. Anual",
+     "R/P1Y",
+     "2025-01-01",
+     "Posición de Inversión Internacional neta"
+    ],
+    [
+     "300.1_AP_ACT_RESORO_0_M_48",
+     "Apertura activo. Apertura de reservas internacionales. Apertura oro. Previsión por fineza de oro",
+     "R/P1M",
+     "2009-06-01",
+     "Activos y pasivos del Banco Central de la Republica Argentin"
+    ],
+    [
+     "300.2_AP_ACT_RESNES_0_A_42",
+     "Apertura activo. Apertura de reservas internacionales. Oro neto de previsiones",
+     "R/P1Y",
+     "2024-01-01",
+     "Activos y pasivos del Banco Central de la Republica Argentin"
+    ],
+    [
+     "144.2_OMONETARAL_0_T_24",
+     "Activos. Valor del oro monetario. Anual",
+     "R/P3M",
+     "2026-04-01",
+     "Posición de Inversión Internacional neta"
+    ],
+    [
+     "181.1_UNCTAD_M_PRIO_0_A_59",
+     "UNCTAD Importaciones Productos primarios, piedras preciosas y oro no monetario",
+     "R/P1Y",
+     "2016-01-01",
+     "Exportaciones e importaciones por Intensidad tecnológica"
+    ],
+    [
+     "300.1_AP_ACT_RESNES_0_M_42",
+     "Apertura activo. Apertura de reservas internacionales. Oro neto de previsiones",
+     "R/P1M",
+     "2025-10-01",
+     "Activos y pasivos del Banco Central de la Republica Argentin"
+    ],
+    [
+     "350.1_TOTAL_EXPONES__39",
+     "Exportaciones total exportaciones total exportaciones",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y rubro"
+    ],
+    [
+     "bcra_247",
+     "Reservas internacionales del BCRA, saldos diarios, en miles de dólares estadounidenses - Oro, divisa",
+     "R/P1D",
+     "2021-07-28",
+     "Dinero y crédito (saldos)"
+    ],
+    [
+     "350.1_TOTAL_EXPOCYE__23",
+     "Exportaciones total exportaciones cye",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y rubro"
+    ],
+    [
+     "350.1_TOTAL_EXPOMOA__23",
+     "Exportaciones total exportaciones moa",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y rubro"
+    ],
+    [
+     "350.1_TOTAL_EXPOMOI__23",
+     "Exportaciones total exportaciones moi",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y rubro"
+    ],
+    [
+     "350.1_TOTAL_EXPO_PP__22",
+     "Exportaciones total exportaciones pp",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones por provincia y rubro"
+    ],
+    [
+     "bcra_1",
+     "Reservas internacionales del BCRA - oro, divisas, colocaciones a plazo y otros - Saldos a fin de mes",
+     "R/P1M",
+     "2021-06-01",
+     "Panorama monetario y financiero"
+    ],
+    [
+     "368.3_BIODISEL_ENES__22",
+     "Biodisel exportaciones",
+     "R/P1M",
+     "2026-08-01",
+     "Producción y ventas de biocombustibles"
+    ],
+    [
+     "368.1_BIODISEL_ENES__22",
+     "Biodisel exportaciones",
+     "R/P1Y",
+     "2025-01-01",
+     "Producción y ventas de biocombustibles"
+    ],
+    [
+     "368.2_BIODISEL_ENES__22",
+     "Biodisel exportaciones",
+     "R/P3M",
+     "2026-04-01",
+     "Producción y ventas de biocombustibles"
+    ],
+    [
+     "155.1_MRIA_PELEO_C_0_0_16",
+     "Empleo registrado. Sector Privado. Minería y Petróleo.",
+     "R/P3M",
+     "2025-10-01",
+     "Empleo registrado del sector privado, por sector de activida"
+    ],
+    [
+     "155.2_MRIA_PELEO_S_0_0_16",
+     "Empleo registrado. Sector Privado. Sin Estacionalidad. Minería y Petróleo.",
+     "R/P3M",
+     "2025-10-01",
+     "Empleo registrado del sector privado, por sector de activida"
+    ],
+    [
+     "184.1_BIENES_PAGRIA_0_M_20",
+     "Bienes Pagos Mineria",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes sectorial - Balance Cambiario"
+    ],
+    [
+     "184.1_BIENES_COBRIA_0_M_21",
+     "Bienes Cobros Mineria",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes sectorial - Balance Cambiario"
+    ],
+    [
+     "ddaa_mineria_002",
+     "Datos Abiertos de la Secretaría de Minería. Cantidad de datasets.",
+     "R/P1D",
+     "2026-09-22",
+     "Indicadores de la Red de Datos Abiertos de la Administración"
+    ],
+    [
+     "ddaa_mineria_009",
+     "Datos Abiertos de la Secretaría de Minería. Cantidad de distribuciones.",
+     "R/P1D",
+     "2026-09-22",
+     "Indicadores de la Red de Datos Abiertos de la Administración"
+    ],
+    [
+     "241.1_MRIARIA_1969_0_7",
+     "Precios implícitos PIB a costo de factores. Minería",
+     "R/P1Y",
+     "1962-01-01",
+     "Cuentas Nacionales 1935-1962"
+    ],
+    [
+     "241.1_MRIARIA_1950_0_7",
+     "Precios implícitos PIB a costo de factores. Minería",
+     "R/P1Y",
+     "1962-01-01",
+     "Cuentas Nacionales 1935-1962"
+    ],
+    [
+     "324.1_B_PESCA_PUAJO__23",
+     "b pesca puestos trabajo",
+     "R/P3M",
+     "2026-01-01",
+     "Insumo de mano de obra por sector de actividad económica"
+    ],
+    [
+     "156.1_TLTAL_0_0_5",
+     "Total empleo registrado",
+     "R/P3M",
+     "2019-01-01",
+     "Empleo registrado del sector privado, por rama de actividad"
+    ],
+    [
+     "186.1_OTRAS_POLISOC_0_0_52",
+     "GPN en otras Políticas de Empleo del Ministerio de Trabajo, Empleo y Seguridad Social (MTESS). Deven",
+     "R/P1Y",
+     "2025-01-01",
+     "Gasto Público del Gobierno Nacional en Política de Ingresos"
+    ],
+    [
+     "155.1_ISTRIARIA_C_0_0_9",
+     "Empleo registrado. Sector Privado. Industria.",
+     "R/P3M",
+     "2025-10-01",
+     "Empleo registrado del sector privado, por sector de activida"
+    ],
+    [
+     "156.1_ISTRIA_ERA_0_0_23",
+     "Empleo registrado del sector industria_manufacturera",
+     "R/P3M",
+     "2019-01-01",
+     "Empleo registrado del sector privado, por rama de actividad"
+    ],
+    [
+     "156.1_SICIOS_LUD_0_0_24",
+     "Empleo registrado del sector servicios_sociales_salud",
+     "R/P3M",
+     "2019-01-01",
+     "Empleo registrado del sector privado, por rama de actividad"
+    ],
+    [
+     "eoh_pteq_1",
+     "Puestos de trabajo equivalentes total",
+     "R/P1M",
+     "2025-08-01",
+     "Encuesta de Ocupación Hotelera y Parahotelera (EOH)"
+    ],
+    [
+     "186.2_OTRAS_POLISOC_0_0_52",
+     "GPN en otras Políticas de Empleo del Ministerio de Trabajo, Empleo y Seguridad Social (MTESS). Deven",
+     "R/P3M",
+     "2026-04-01",
+     "Gasto Público del Gobierno Nacional en Política de Ingresos"
+    ],
+    [
+     "324.1_M_ENSENIANZAJO__27",
+     "m enseñanza puestos trabajo",
+     "R/P3M",
+     "2026-01-01",
+     "Insumo de mano de obra por sector de actividad económica"
+    ],
+    [
+     "324.1_F_CONSTRUCAJO__30",
+     "f construccion puestos trabajo",
+     "R/P3M",
+     "2026-01-01",
+     "Insumo de mano de obra por sector de actividad económica"
+    ],
+    [
+     "ddaa_trabajo_015",
+     "Datos Abiertos de Trabajo, Empleo y Seguridad Social. Cantidad de datasets sin datos.",
+     "R/P1D",
+     "2026-09-22",
+     "Indicadores de la Red de Datos Abiertos de la Administración"
+    ],
+    [
+     "ddaa_trabajo_002",
+     "Datos Abiertos de Trabajo, Empleo y Seguridad Social. Cantidad de datasets.",
+     "R/P1D",
+     "2026-09-22",
+     "Indicadores de la Red de Datos Abiertos de la Administración"
+    ],
+    [
+     "368.3_BIODISEL_PION__19",
+     "Biodisel producción",
+     "R/P1M",
+     "2026-08-01",
+     "Producción y ventas de biocombustibles"
+    ],
+    [
+     "368.1_BIODISEL_PION__19",
+     "Biodisel producción",
+     "R/P1Y",
+     "2025-01-01",
+     "Producción y ventas de biocombustibles"
+    ],
+    [
+     "368.2_BIODISEL_PION__19",
+     "Biodisel producción",
+     "R/P3M",
+     "2026-04-01",
+     "Producción y ventas de biocombustibles"
+    ],
+    [
+     "363.2_PRODUCCIONANO__21",
+     "Producción de Propano",
+     "R/P3M",
+     "2025-07-01",
+     "Producción y ventas de petróleo y derivados"
+    ],
+    [
+     "363.3_PRODUCCIONANO__21",
+     "Producción de Propano",
+     "R/P1M",
+     "2025-11-01",
+     "Producción y ventas de petróleo y derivados"
+    ],
+    [
+     "363.1_PRODUCCIONANO__20",
+     "Producción de Butano",
+     "R/P1Y",
+     "2024-01-01",
+     "Producción y ventas de petróleo y derivados"
+    ],
+    [
+     "363.1_PRODUCCIONANO__21",
+     "Producción de Propano",
+     "R/P1Y",
+     "2024-01-01",
+     "Producción y ventas de petróleo y derivados"
+    ],
+    [
+     "363.1_PRODUCCIONENE__26",
+     "Producción de Aerokerosene",
+     "R/P1Y",
+     "2024-01-01",
+     "Producción y ventas de petróleo y derivados"
+    ],
+    [
+     "309.1_PRODUCCIONDES_0_M_30",
+     "Producción automotriz Unidades",
+     "R/P1M",
+     "2025-04-01",
+     "Brasil Actividad económica, industrial y producción automotr"
+    ],
+    [
+     "AGRO_0242",
+     "Exportaciones: Exportación /Producción (%)",
+     "R/P1Y",
+     "2018-01-01",
+     "Ganadería - Indicadores bovinos anuales"
+    ],
+    [
+     "AGRO_0193",
+     "Producción de Jujuy.",
+     "R/P1Y",
+     "2017-01-01",
+     "INV - Producción de uvas"
+    ],
+    [
+     "AGRO_0203",
+     "Producción de Tucuman.",
+     "R/P1Y",
+     "2017-01-01",
+     "INV - Producción de uvas"
+    ],
+    [
+     "363.3_PRODUCCIONIFO__25",
+     "Producción de Mezclas IFO",
+     "R/P1M",
+     "2025-11-01",
+     "Producción y ventas de petróleo y derivados"
+    ],
+    [
+     "363.3_PRODUCCIONQUE__19",
+     "Producción de Coque",
+     "R/P1M",
+     "2025-11-01",
+     "Producción y ventas de petróleo y derivados"
+    ],
+    [
+     "363.3_PRODUCCIONUDO__28",
+     "Producción de Petróleo Crudo",
+     "R/P1M",
+     "2025-11-01",
+     "Producción y ventas de petróleo y derivados"
+    ],
+    [
+     "363.1_PRODUCCIONUDO__28",
+     "Producción de Petróleo Crudo",
+     "R/P1Y",
+     "2024-01-01",
+     "Producción y ventas de petróleo y derivados"
+    ],
+    [
+     "368.1_BIOETANOL_ION__26",
+     "Bioetanol total producción",
+     "R/P1Y",
+     "2025-01-01",
+     "Producción y ventas de biocombustibles"
+    ],
+    [
+     "PROD_PET_SESCO_6_1",
+     "Producción total de petróleo ",
+     "R/P1M",
+     "2018-07-01",
+     "Producción de Petróleo y Gas (SESCO)"
+    ],
+    [
+     "AGRO_0200",
+     "Producción de Salta.",
+     "R/P1Y",
+     "2017-01-01",
+     "INV - Producción de uvas"
+    ],
+    [
+     "AGRO_0196",
+     "Producción de Mendoza.",
+     "R/P1Y",
+     "2017-01-01",
+     "INV - Producción de uvas"
+    ]
+   ]
+  }
+ },
+ "world_bank": {
+  "ok": true,
+  "diag": {
+   "links": [
+    "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx"
+   ],
+   "sheets": {
+    "Mismatch Details": [
+     156,
+     7
+    ],
+    "Monthly Prices": [
+     807,
+     72
+    ],
+    "Monthly Indices": [
+     810,
+     17
+    ],
+    "Description": [
+     134,
+     20
+    ],
+    "Index Weights": [
+     90,
+     19
+    ]
+   },
+   "head": [
+    [
+     "World Bank Commodity P"
+    ],
+    [
+     "monthly prices in nomi"
+    ],
+    [
+     "(monthly series are av"
+    ],
+    [
+     "Updated on October 02,"
+    ],
+    [
+     "Crude oil, average",
+     "Crude oil, Brent",
+     "Crude oil, Dubai",
+     "Crude oil, WTI",
+     "Coal, Australian",
+     "Coal, South African **",
+     "Natural gas, US",
+     "Natural gas, Europe",
+     "Liquefied natural gas,",
+     "Natural gas index",
+     "Cocoa",
+     "Coffee, Arabica",
+     "Coffee, Robusta",
+     "Tea, avg 3 auctions",
+     "Tea, Colombo",
+     "Tea, Kolkata",
+     "Tea, Mombasa",
+     "Coconut oil",
+     "Groundnuts",
+     "Fish meal",
+     "Groundnut oil **",
+     "Palm oil",
+     "Palm kernel oil",
+     "Soybeans",
+     "Soybean oil",
+     "Soybean meal",
+     "Rapeseed oil",
+     "Sunflower oil",
+     "Barley",
+     "Maize",
+     "Sorghum",
+     "Rice, Thai 5% ",
+     "Rice, Thai 25% ",
+     "Rice, Thai A.1",
+     "Rice, Viet Namese 5%",
+     "Wheat, US SRW",
+     "Wheat, US HRW",
+     "Banana, Europe",
+     "Banana, US",
+     "Orange",
+     "Beef **",
+     "Chicken **",
+     "Lamb **",
+     "Shrimps, Mexican",
+     "Sugar, EU",
+     "Sugar, US",
+     "Sugar, world",
+     "Tobacco, US import u.v",
+     "Logs, Cameroon",
+     "Logs, Malaysian",
+     "Sawnwood, Cameroon",
+     "Sawnwood, Malaysian",
+     "Plywood",
+     "Cotton, A Index",
+     "Rubber, TSR20 **",
+     "Rubber, RSS3",
+     "Phosphate rock",
+     "DAP",
+     "TSP",
+     "Urea ",
+     "Potassium chloride **",
+     "Aluminum",
+     "Iron ore, cfr spot",
+     "Copper",
+     "Lead",
+     "Tin",
+     "Nickel",
+     "Zinc",
+     "Gold",
+     "Platinum",
+     "Silver"
+    ],
+    [
+     "($/bbl)",
+     "($/bbl)",
+     "($/bbl)",
+     "($/bbl)",
+     "($/mt)",
+     "($/mt)",
+     "($/mmbtu)",
+     "($/mmbtu)",
+     "($/mmbtu)",
+     "(2010=100)",
+     "($/kg)",
+     "($/kg)",
+     "($/kg)",
+     "($/kg)",
+     "($/kg)",
+     "($/kg)",
+     "($/kg)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/kg)",
+     "($/kg)",
+     "($/kg)",
+     "($/kg)",
+     "($/kg)",
+     "($/kg)",
+     "($/kg)",
+     "($/kg)",
+     "($/kg)",
+     "($/kg)",
+     "($/mt)",
+     "($/cubic meter)",
+     "($/cubic meter)",
+     "($/cubic meter)",
+     "($/cubic meter)",
+     "(cents/sheet)",
+     "($/kg)",
+     "($/kg)",
+     "($/kg)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/dmtu)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/mt)",
+     "($/troy oz)",
+     "($/troy oz)",
+     "($/troy oz)"
+    ],
+    [
+     "1960M01",
+     "1.6",
+     "1.6",
+     "1.6",
+     "…",
+     "…",
+     "…",
+     "0.14",
+     "0.4",
+     "…",
+     "…",
+     "0.63",
+     "0.94",
+     "0.7",
+     "1.03",
+     "0.93",
+     "1.12",
+     "1.04",
+     "390",
+     "…",
+     "…",
+     "334",
+     "233",
+     "…",
+     "94",
+     "204",
+     "92",
+     "…",
+     "…",
+     "20.4",
+     "45",
+     "39",
+     "104.5",
+     "…",
+     "…",
+     "…",
+     "…",
+     "59.9",
+     "…",
+     "0.14",
+     "0.12",
+     "0.71",
+     "0.3",
+     "…",
+     "1.43",
+     "0.12",
+     "0.12",
+     "0.07",
+     "1737",
+     "…",
+     "31.9",
+     "…",
+     "149.2",
+     "…",
+     "0.65",
+     "…",
+     "0.82",
+     "13",
+     "...",
+     "53",
+     "42.3",
+     "28.5",
+     "511",
+     "11.4",
+     "715",
+     "206",
+     "2180",
+     "1631",
+     "261",
+     "35",
+     "84",
+     "0.9"
+    ],
+    [
+     "1960M02",
+     "1.6",
+     "1.6",
+     "1.6",
+     "…",
+     "…",
+     "…",
+     "0.14",
+     "0.4",
+     "…",
+     "…",
+     "0.61",
+     "0.95",
+     "0.69",
+     "1.03",
+     "0.93",
+     "1.12",
+     "1.04",
+     "379",
+     "…",
+     "…",
+     "341",
+     "229",
+     "…",
+     "91",
+     "201",
+     "87",
+     "…",
+     "…",
+     "20.4",
+     "44",
+     "39",
+     "103.5",
+     "…",
+     "…",
+     "…",
+     "…",
+     "61",
+     "…",
+     "0.14",
+     "0.11",
+     "0.71",
+     "0.3",
+     "…",
+     "1.5",
+     "0.12",
+     "0.12",
+     "0.07",
+     "1737",
+     "…",
+     "31.9",
+     "…",
+     "149.2",
+     "…",
+     "0.65",
+     "…",
+     "0.83",
+     "13",
+     "...",
+     "53",
+     "42.3",
+     "28.5",
+     "511",
+     "11.4",
+     "728",
+     "204",
+     "2180",
+     "1631",
+     "245",
+     "35",
+     "84",
+     "0.9"
+    ]
+   ],
+   "found": {
+    "aluminum": [
+     "Aluminum",
+     "($/mt)",
+     201
+    ],
+    "copper": [
+     "Copper",
+     "($/mt)",
+     201
+    ],
+    "lead": [
+     "Lead",
+     "($/mt)",
+     201
+    ],
+    "zinc": [
+     "Zinc",
+     "($/mt)",
+     201
+    ],
+    "gold": [
+     "Gold",
+     "($/troy oz)",
+     201
+    ],
+    "silver": [
+     "Silver",
+     "($/troy oz)",
+     201
+    ]
+   }
+  }
+ },
+ "segemar": {
+  "ok": true,
+  "diag": {
+   "capabilities": {
+    "https://sigam.segemar.gov.ar/geoserver/wfs": "HTTPError: 404 Client Error: Not Found for url: https://sigam.segemar.gov.ar/geoserver/wfs?service=WFS&version=2.0.0&request=GetCapabilities",
+    "https://sigam.segemar.gov.ar/geoserver/ows": "HTTPError: 404 Client Error: Not Found for url: https://sigam.segemar.gov.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities"
+   }
+  }
+ }
+}
