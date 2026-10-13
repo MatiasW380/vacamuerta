@@ -300,41 +300,7 @@
  "other": {
   "ok": true,
   "diag": {
-   "cand": {
-    "ucii": [
-     {
-      "id": "31.3_UIMB_2004_M_33",
-      "desc": "Utilización de la capacidad instalada en la industria de metales básicos como porcentaje del total de la capacidad del sector",
-      "end": "2026-07-01",
-      "units": "Porcentaje"
-     },
-     {
-      "id": "31.3_UPT_2004_M_23",
-      "desc": "Utilización de la capacidad instalada en la industria de Productos textiles como porcentaje del total de la capacidad del sector",
-      "end": "2026-07-01",
-      "units": "Porcentaje"
-     },
-     {
-      "id": "31.3_USPQ_2004_M_34",
-      "desc": "Utilización de la capacidad instalada en la industria de Productos químicos como porcentaje del total de la capacidad del sector",
-      "end": "2026-07-01",
-      "units": "Porcentaje"
-     }
-    ],
-    "isac": [
-     {
-      "id": "33.2_ISAC_SIN_EDAD_0_M_23_56",
-      "desc": "Indicador sintético de la actividad de la construcción. Sin Estacionalidad",
-      "end": "2026-08-01",
-      "units": "Índice 2004=100"
-     }
-    ]
-   },
    "points": {
-    "ucii": [
-     0,
-     null
-    ],
     "isac": [
      128,
      [
@@ -342,20 +308,51 @@
       140.737938979259
      ]
     ],
-    "cement_kt": [
-     0,
-     null
-    ],
-    "cars_units": [
-     78,
+    "isac_orig": [
+     128,
      [
-      "2025-12-01",
-      100.1
+      "2026-08-01",
+      146.8626017285303
      ]
     ],
-    "steel_kt": [
+    "steel": [
+     104,
+     [
+      "2026-08-01",
+      80.53385013224572
+     ]
+    ],
+    "cement": [
+     70,
+     [
+      "2026-08-01",
+      156.67838437880005
+     ]
+    ],
+    "autoparts": [
+     104,
+     [
+      "2026-08-01",
+      82.6395920821475
+     ]
+    ],
+    "pharma": [
      0,
      null
+    ],
+    "agrochem": [
+     104,
+     [
+      "2026-08-01",
+      133.43141016805717
+     ]
+    ],
+    "machinery": [
+     42,
+     [
+      "2021-06-01",
+      85.14121495805685
+     ]
     ]
    }
   }
@@ -421,7 +418,8 @@
     "lat": null,
     "lon": null,
     "loc": "LOCALIDAD",
-    "with_coords": 0
+    "with_coords": 346,
+    "total": 362
    }
   }
  }
