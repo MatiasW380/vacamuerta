@@ -63,6 +63,46 @@ def leer(url: str, max_bytes: int = 60_000_000) -> pd.DataFrame:
     return pd.read_csv(io.StringIO(texto), sep=sep, dtype=str, low_memory=False)
 
 
+URLS = {
+    "expo": "https://www.mecon.gob.ar/dataset/Comercio/expominerales-siacam.csv",
+    "expo_sector": "https://www.mecon.gob.ar/dataset/Comercio/expo-mineria-por-sector.csv",
+    "expo_prov": "https://www.mecon.gob.ar/dataset/Comercio/expo-mineria-por-provincia.csv",
+    "expo_prod": "https://www.mecon.gob.ar/dataset/Comercio/principales-productos-mineros-exportados.csv",
+    "balanza": "https://www.mecon.gob.ar/dataset/Comercio/balanza-comercial-mineria.csv",
+    "litio": "https://www.mecon.gob.ar/dataset/Tablero-Litio/Exportaciones-litio.csv",
+    "litio_dest": "https://www.mecon.gob.ar/dataset/Tablero-Litio/Exportaciones-por-destino-litio.csv",
+    "empleo": "https://www.mecon.gob.ar/dataset/Empleo-rubro-prov.csv",
+    "ipi": "https://www.mecon.gob.ar/dataset/ipi-minero/ipi-minero-series.csv",
+    "ipi_ramas": "https://www.mecon.gob.ar/dataset/ipi-minero/ipi-minero-ramas-actividad.csv",
+    "ipi_litio": "https://www.mecon.gob.ar/dataset/ipi-minero/ipi-minero-produccion-litio.csv",
+    "precios": "https://www.mecon.gob.ar/dataset/precios-internacionales-minerales.xlsx",
+    "cartera": "https://www.mecon.gob.ar/dataset/Cartera-de-Proyectos-Mineros-Metaliferos-y-Litio-del-SIACAM.xlsx",
+    "anuncios": None,
+}
+
+
+def estructura(diag: dict) -> dict:
+    """Columnas, últimas filas y valores distintos de las columnas de texto de cada archivo."""
+    out = {}
+    for k, u in URLS.items():
+        if not u:
+            continue
+        try:
+            df = leer(u)
+            info = {"rows": int(len(df)), "columns": list(df.columns)[:30], "tail": df.tail(2).astype(str).to_dict(orient="records")}
+            cats = {}
+            for c in df.columns[:30]:
+                vals = df[c].dropna().unique()
+                if 1 < len(vals) <= 40 and not pd.to_numeric(pd.Series(vals), errors="coerce").notna().all():
+                    cats[c] = [str(v)[:40] for v in vals[:40]]
+            info["categories"] = cats
+            out[k] = info
+        except Exception as e:
+            out[k] = {"error": f"{type(e).__name__}: {str(e)[:160]}"}
+    diag["files"] = out
+    return {"n": len(out)}
+
+
 # ---------------------------------------------------------------------------
 # Relevamiento: qué publica el SIACAM y con qué columnas
 # ---------------------------------------------------------------------------
@@ -182,7 +222,7 @@ def main() -> None:
             previo = json.loads(salida_p.read_text(encoding="utf-8"))
         except Exception:
             previo = {}
-    tareas = [("catalog", catalogo), ("series", series_buscar), ("world_bank", banco_mundial), ("segemar", segemar)]
+    tareas = [("structure", estructura), ("world_bank", banco_mundial)]
     salida, status = dict(previo), {}
     for nombre, fn in tareas:
         diag: dict = {}
