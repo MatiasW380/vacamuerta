@@ -168,27 +168,28 @@ def ipi(diag: dict) -> dict:
 
 
 def otras(diag: dict) -> dict:
-    out = {}
-    ucii = buscar("utilizacion capacidad instalada industria nivel general", ["capacidad instalada", "como porcentaje del total"], "31.3", diag, "ucii")
-    if ucii:
-        out["capacity"] = {"desc": ucii["desc"], "monthly": mensual(ucii["id"], diag, "ucii")}
-    isac = buscar("isac sin estacionalidad", ["construccion", "sin estacionalidad"], "33.2", diag, "isac") or {"id": "33.2_ISAC_SIN_EDAD_0_M_23_56", "desc": "ISAC sin estacionalidad"}
-    out["construction"] = {"monthly": mensual(isac["id"], diag, "isac")}
-    for clave, i in (("cement_kt", "41.3_CP_0_A_16"), ("cars_units", "41.3_AA_0_A_23"), ("steel_kt", "359.3_ACERO_CRUDUDO__11")):
+    out = {"source": INDEC}
+    # Utilización de la capacidad instalada: trimestral (la serie mensual no está en la API)
+    try:
+        d = serie_api(["31.2_UNG_2004_T_18"], "2016-01-01")
+        out["capacity"] = {"quarterly": [{"period": x[0][:7], "v": round(float(x[1]), 1)} for x in d]}
+    except Exception as e:
+        diag.setdefault("errors", []).append(f"ucii: {e}"[:150])
+    out["construction"] = {"monthly": mensual("33.2_ISAC_SIN_EDAD_0_M_23_56", diag, "isac")}
+    out["construction"]["yoy"] = yoy(mensual("33.2_ISAC_NIVELRAL_0_M_18_63", diag, "isac_orig"))
+    # Ramas que miran los inversores, desde el IPI (índice 2004 = 100)
+    for clave, i in (("steel", "453.2_INDUSTRIA_ICA_0_0_21_100"), ("cement", "453.2_CEMENTONTO_0_0_7_59"), ("autoparts", "453.2_AUTOPARTESTES_0_0_10_100"),
+                     ("pharma", "453.2_PRODUCTOS_COS_0_0_23_90"), ("agrochem", "453.2_AGROQUIMICCOS_0_0_12_6"), ("machinery", "453.2_MAQUINARIARAL_0_0_22_43")):
         try:
-            s = mensual(i, diag, clave, "2016-01-01")
-            out[clave] = {"monthly": s, "yoy": yoy(s), "ytd": acumulado(s)}
+            sr = mensual(i, diag, clave, "2018-01-01")
+            out[clave] = {"monthly": sr, "yoy": yoy(sr), "ytd": acumulado(sr)}
         except Exception as e:
             diag.setdefault("errors", []).append(f"{clave}: {e}"[:150])
-    for k in ("capacity", "construction"):
-        if k in out:
-            out[k]["yoy"] = yoy(out[k]["monthly"])
     try:
         emp = serie_api(["155.1_ISTRIARIA_C_0_0_9"], "2012-01-01")
         out["jobs_quarterly"] = [{"period": x[0][:7], "v": round(float(x[1]))} for x in emp]
     except Exception as e:
         diag.setdefault("errors", []).append(f"jobs: {e}"[:150])
-    out["source"] = INDEC
     return out
 
 
@@ -220,8 +221,29 @@ def parques(diag: dict) -> dict:
             if pd.notna(la) and pd.notna(lo) and -56 < la < -21 and -74 < lo < -53:
                 it["lat"], it["lon"] = round(float(la), 4), round(float(lo), 4)
         items.append(it)
+    # Ubicación por localidad con Georef (consulta en lote), guardada para no repetirla
+    cache_p = DATA / "parks_geo.json"
+    cache = json.loads(cache_p.read_text(encoding="utf-8")) if cache_p.exists() else {}
+    faltan = [i for i in items if "lat" not in i and f'{i["locality"]}|{i["province"]}' not in cache]
+    for k in range(0, len(faltan), 200):
+        lote = faltan[k:k + 200]
+        try:
+            body = {"localidades": [{"nombre": i["locality"], "provincia": i["province"], "max": 1, "campos": "centroide"} for i in lote]}
+            res = requests.post("https://apis.datos.gob.ar/georef/api/localidades", json=body, headers=UA, timeout=120).json().get("resultados", [])
+            for i, r in zip(lote, res):
+                loc = (r.get("localidades") or [None])[0]
+                cache[f'{i["locality"]}|{i["province"]}'] = [round(loc["centroide"]["lat"], 4), round(loc["centroide"]["lon"], 4)] if loc else None
+        except Exception as e:
+            diag.setdefault("errors", []).append(f"georef: {e}"[:150])
+    cache_p.write_text(json.dumps(cache, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    for i in items:
+        c = cache.get(f'{i["locality"]}|{i["province"]}')
+        if "lat" not in i and c:
+            i["lat"], i["lon"] = c
+        i["province"] = (i["province"] or "").title().replace(" Del ", " del ").replace(" De ", " de ")
+        i["name"] = i["name"].title().replace(" De ", " de ").replace(" Del ", " del ").replace(" La ", " la ").replace(" Y ", " y ")
     por_prov = pd.Series([i["province"] for i in items]).value_counts().to_dict()
-    diag["mapped"] = {"prov": c_prov, "name": c_nom, "type": c_tipo, "lat": c_lat, "lon": c_lon, "loc": c_loc, "with_coords": sum(1 for i in items if "lat" in i)}
+    diag["mapped"] = {"prov": c_prov, "name": c_nom, "type": c_tipo, "lat": c_lat, "lon": c_lon, "loc": c_loc, "with_coords": sum(1 for i in items if "lat" in i), "total": len(items)}
     return {"source": {"name": "Ministerio de Economía, Registro Nacional de Parques Industriales (RENPI)", "url": "https://datos.gob.ar/dataset/registro-nacional-de-parques-industriales-renpi", "license": "CC BY 4.0"},
             "items": items, "by_province": por_prov, "updated": r.get("last_modified") or r.get("created")}
 
