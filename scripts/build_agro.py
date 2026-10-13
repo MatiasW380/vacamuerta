@@ -104,9 +104,23 @@ def series(diag: dict) -> dict:
     return {"n": len(out)}
 
 
+def estructura(diag: dict) -> dict:
+    est = leer("https://datos.magyp.gob.ar/dataset/9e1e77ba-267e-4eaa-a59f-3296e86b5f36/resource/95d066e6-8a0f-4a80-b59d-6f28f88eacd5/download/estimaciones-agricolas-2026-03.csv")
+    diag["est_cultivos"] = est.groupby("cultivo")["campania"].max().to_dict()
+    diag["est_rows"] = int(len(est))
+    fob = leer("https://infra.datos.gob.ar/catalog/sspm/dataset/358/distribution/358.1/download/precios-fob-oficiales-valores-diarios.csv")
+    diag["fob_cols"] = list(fob.columns)
+    diag["fob_tail"] = fob.tail(2).to_dict(orient="records")
+    pk = get("https://datos.magyp.gob.ar/api/3/action/package_show", params={"id": "estimaciones-agricolas"}).json()["result"]
+    diag["est_resources"] = [(r.get("name"), r.get("url")) for r in pk.get("resources", [])]
+    g = get("https://apis.datos.gob.ar/georef/api/departamentos", params={"max": 3, "campos": "id,nombre,centroide,provincia.nombre"}).json()
+    diag["georef_sample"] = g
+    return {}
+
+
 def main() -> None:
     status, salida = {}, {}
-    for nombre, fn in [("catalog", catalogo), ("series", series)]:
+    for nombre, fn in [("structure", estructura)]:
         diag: dict = {}
         try:
             salida[nombre] = fn(diag)
