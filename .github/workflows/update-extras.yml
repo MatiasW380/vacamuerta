@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - "scripts/build_extras.py"
+      - "scripts/build_mining.py"
       - ".github/workflows/update-extras.yml"
 
 permissions:
@@ -39,6 +40,10 @@ jobs:
           python scripts/build_extras.py
           echo "### Estado de las fuentes" >> "$GITHUB_STEP_SUMMARY"
           jq -r '.status | to_entries[] | "- \(.key): \(if .value.ok then "ok" else .value.error end)"' data/extras.json >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Minería
+        continue-on-error: true
+        run: python scripts/build_mining.py
 
       - name: Guardar cambios
         run: |
