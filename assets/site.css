@@ -253,3 +253,6 @@ footer:not(.site-foot) { margin: 64px 0 0; padding: 28px 0 40px; border-top: 1px
 .filters { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin-top: 14px; font-size: 14px; color: var(--ink-2); }
 .filters select { font: inherit; font-size: 14px; padding: 5px 8px; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); color: var(--ink); }
 .feature + .feature { margin-top: 16px; }
+.show-sm { display: none; }
+@media (max-width: 600px) { .show-sm { display: block; } }
+td .meta { font-size: 13px; color: var(--ink-3); }

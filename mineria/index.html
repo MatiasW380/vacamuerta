@@ -35,6 +35,7 @@
       <li><a href="#lithSection" data-i18n="navLithium">Lithium</a></li>
       <li><a href="#priceSection" data-i18n="navPrices">Prices</a></li>
       <li><a href="#jobsSection" data-i18n="navJobs">Output and jobs</a></li>
+      <li><a href="#coSection" data-i18n="navCos">Listed companies</a></li>
       <li><a href="#invSection" data-i18n="navInvest">Investment</a></li>
     </ol>
   </nav>
@@ -163,6 +164,21 @@
       <p class="note" id="jobsNote"></p>
     </section>
 
+    <section class="section chapter" id="coSection" aria-labelledby="coTitle">
+      <h2 id="coTitle" data-i18n="coTitle">Listed mining companies with projects in Argentina</h2>
+      <p class="section-lede" data-i18n="coLede">No mining company is listed on the Buenos Aires exchange. The way to invest in Argentine mining through the stock market is through companies listed in New York, Toronto, Sydney, London or Hong Kong that own projects in the country.</p>
+      <h2 style="font-size:17px;margin-top:26px" data-i18n="coFocusTitle">Companies whose main assets are in Argentina</h2>
+      <div class="table-wrap"><table id="coFocus">
+        <thead><tr><th scope="col" data-i18n="thCompany">Company</th><th scope="col" class="hide-sm" style="text-align:left" data-i18n="thTicker">Exchange and ticker</th><th scope="col" style="text-align:left" data-i18n="thArgProjects">Projects in Argentina and stage</th></tr></thead>
+        <tbody></tbody></table></div>
+      <div class="quotes" id="quotes"></div>
+      <h2 style="font-size:17px;margin-top:34px" data-i18n="coGlobalTitle">Global miners with large operations in the country</h2>
+      <div class="table-wrap"><table id="coGlobal">
+        <thead><tr><th scope="col" data-i18n="thCompany">Company</th><th scope="col" class="hide-sm" style="text-align:left" data-i18n="thTicker">Exchange and ticker</th><th scope="col" style="text-align:left" data-i18n="thArgProjects">Projects in Argentina and stage</th></tr></thead>
+        <tbody></tbody></table></div>
+      <p class="note" id="coNote"></p>
+    </section>
+
     <section class="section chapter" id="invSection" hidden aria-labelledby="invTitle">
       <h2 id="invTitle" data-i18n="invTitle">Investment under the RIGI</h2>
       <p class="section-lede" id="invLede"></p>
@@ -268,6 +284,12 @@
       branches: { "Plata y oro y sus concentrados": "Gold and silver", "Carbonato de litio y otros minerales de litio": "Lithium", "Extracción de minerales metalíferos": "All metals", "Extracción de minerales no metalíferos y rocas de aplicación": "Non-metallic and construction rocks", "Resto (incluye hierro, cobre, plomo, cinc, molibdeno y otros minerales metalíferos no ferrosos y sus concentrados)": "Copper, lead, zinc and other metals" },
       rubros: { "Metalíferos": "Metals", "Litio": "Lithium", "Rocas de aplicación": "Construction rocks", "No metaliferos": "Non-metallic", "Servicios mineros y actividades relacionadas": "Mining services", "Combustibles-Producción": "Mineral fuels", "Minerales no clasificados previamente": "Other minerals" },
       jobsNote: (src) => `Source: ${src}. The output index covers mining only, without oil and gas; jobs are registered private-sector positions.`,
+      coTitle: "Listed mining companies with projects in Argentina",
+      coLede: "No mining company is listed on the Buenos Aires exchange. The way to invest in Argentine mining through the stock market is through companies listed in New York, Toronto, Sydney, London or Hong Kong that own projects in the country.",
+      coFocusTitle: "Companies whose main assets are in Argentina", coGlobalTitle: "Global miners with large operations in the country",
+      thTicker: "Exchange and ticker", thArgProjects: "Projects in Argentina and stage", navCos: "Listed companies",
+      coNote: (src) => `Company list compiled by the monitor; each project's stage and controlling company come from ${src}. Share prices by TradingView, with each exchange's delay. Not a recommendation to buy or sell.`,
+      ctrl: "controls", partner: "partner",
       invTitle: "Investment under the RIGI", invLede: (v) => `Mining projects approved under the RIGI regime commit USD ${v} million, according to the official portal's yearly plan.`,
       invPlanTitle: "Committed mining investment by year, USD million", invApprTitle: "Mining projects approved, from the Official Gazette",
       cuNames: { Cobre: "Copper", Litio: "Lithium", "Oro y Plata": "Gold and silver" },
@@ -315,6 +337,12 @@
       branches: { "Plata y oro y sus concentrados": "Oro y plata", "Carbonato de litio y otros minerales de litio": "Litio", "Extracción de minerales metalíferos": "Metalíferos en total", "Extracción de minerales no metalíferos y rocas de aplicación": "No metalíferos y rocas de aplicación", "Resto (incluye hierro, cobre, plomo, cinc, molibdeno y otros minerales metalíferos no ferrosos y sus concentrados)": "Cobre, plomo, cinc y otros metales" },
       rubros: { "Metalíferos": "Metalíferos", "Litio": "Litio", "Rocas de aplicación": "Rocas de aplicación", "No metaliferos": "No metalíferos", "Servicios mineros y actividades relacionadas": "Servicios mineros", "Combustibles-Producción": "Combustibles minerales", "Minerales no clasificados previamente": "Otros minerales" },
       jobsNote: (src) => `Fuente: ${src}. El índice de producción cubre solo minería, sin petróleo ni gas; el empleo son puestos registrados del sector privado.`,
+      coTitle: "Mineras que cotizan en bolsa con proyectos en la Argentina",
+      coLede: "No hay ninguna minera listada en la bolsa de Buenos Aires. Para invertir en la minería argentina a través de la bolsa hay que ir a empresas que cotizan en Nueva York, Toronto, Sídney, Londres o Hong Kong y tienen proyectos en el país.",
+      coFocusTitle: "Empresas con sus activos principales en la Argentina", coGlobalTitle: "Grandes mineras globales con operaciones importantes en el país",
+      thTicker: "Bolsa y ticker", thArgProjects: "Proyectos en la Argentina y etapa", navCos: "Empresas que cotizan",
+      coNote: (src) => `Lista de empresas armada por el monitor; la etapa y la empresa controlante de cada proyecto salen de ${src}. Cotizaciones de TradingView, con la demora de cada bolsa. No es una recomendación de compra o venta.`,
+      ctrl: "controla", partner: "socia",
       invTitle: "Inversión en el RIGI", invLede: (v) => `Los proyectos mineros aprobados en el RIGI comprometen USD ${v} millones, según el plan anual del portal oficial.`,
       invPlanTitle: "Inversión minera comprometida por año, millones de USD", invApprTitle: "Proyectos mineros aprobados, según el Boletín Oficial",
       cuNames: { Cobre: "Cobre", Litio: "Litio", "Oro y Plata": "Oro y plata" },
@@ -484,7 +512,79 @@
       }
       $("#invNote").innerHTML = t.invNote(`<a href="https://www.argentina.gob.ar/economia/rigi" rel="noopener">${lang === "es" ? "Ministerio de Economía, portal del RIGI; Boletín Oficial" : "Ministry of Economy, RIGI portal; Official Gazette"}</a>`);
     }
+    renderCompanies();
     syncNav(); spy();
+  }
+
+
+  // Empresas que cotizan: lista armada a mano; etapa y controlante salen de la cartera del SIACAM.
+  const LISTED_FOCUS = [
+    { name: "Lithium Argentina", tickers: "NYSE: LAR · TSX: LAR", tv: "NYSE:LAR", projects: ["Cauchari-Olaroz", "Pozuelos Pastos Grandes"] },
+    { name: "NGEx Minerals", tickers: "TSX: NGEX", tv: "TSX:NGEX", projects: ["Lunahuasi"] },
+    { name: "McEwen", tickers: "NYSE: MUX · TSX: MUX", tv: "NYSE:MUX", projects: ["Los Azules", "San José"] },
+    { name: "Galan Lithium", tickers: "ASX: GLN", tv: "ASX:GLN", projects: ["Hombre Muerto Oeste"] },
+    { name: "Lake Resources", tickers: "ASX: LKE", tv: "ASX:LKE", projects: ["Kachi"] },
+    { name: "Argosy Minerals", tickers: "ASX: AGY", tv: "ASX:AGY", projects: ["Rincón"] },
+    { name: "Argentina Lithium & Energy", tickers: "TSXV: LIT", tv: "TSXV:LIT", projects: ["Rincón Oeste", "Incahuasi"] },
+    { name: "Aldebaran Resources", tickers: "TSXV: ALDE", tv: "TSXV:ALDE", projects: ["Altar"] },
+    { name: "Challenger Gold", tickers: "ASX: CEL", tv: "ASX:CEL", projects: ["Hualilán"] },
+    { name: "Austral Gold", tickers: "ASX: AGD", tv: "ASX:AGD", projects: ["Casposo"] },
+    { name: "Patagonia Gold", tickers: "TSXV: PGDC", tv: "TSXV:PGDC", projects: ["Calcatreu", "Cap-Oeste"] },
+  ];
+  const LISTED_GLOBAL = [
+    { name: "Lundin Mining", tickers: "TSX: LUN", projects: ["Vicuña"] },
+    { name: "BHP", tickers: "NYSE: BHP · ASX: BHP", projects: ["Vicuña"] },
+    { name: "Newmont", tickers: "NYSE: NEM", projects: ["Cerro Negro"] },
+    { name: "Barrick", tickers: "NYSE: B", projects: ["Veladero"] },
+    { name: "Pan American Silver", tickers: "NYSE: PAAS · TSX: PAAS", projects: ["Cerro Moro", "Navidad"] },
+    { name: "AngloGold Ashanti", tickers: "NYSE: AU", projects: ["Cerro Vanguardia"] },
+    { name: "Hochschild Mining", tickers: "LSE: HOC", projects: ["San José"] },
+    { name: "Rio Tinto", tickers: "NYSE: RIO · LSE: RIO", projects: ["Fenix", "Olaroz", "Sal de Vida", "Cauchari Jv"] },
+    { name: "Glencore", tickers: "LSE: GLEN", projects: ["El Pachón", "Mara"] },
+    { name: "Ganfeng Lithium", tickers: "HKEX: 1772", projects: ["Cauchari-Olaroz", "Mariana", "Pozuelos Pastos Grandes"] },
+    { name: "Zijin Mining", tickers: "HKEX: 2899", projects: ["Tres Quebradas"] },
+    { name: "POSCO Holdings", tickers: "NYSE: PKX", projects: ["Sal de Oro", "Hombre Muerto Norte"] },
+    { name: "Eramet", tickers: "Euronext París: ERA", projects: ["Centenario-Ratones"] },
+  ];
+  const nrm = s => String(s || "").normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
+  function projCell(names, company) {
+    const t = T[lang], items = (D && D.projects && D.projects.items) || [];
+    return names.map(n => {
+      const p = items.find(x => nrm(x.name) === nrm(n));
+      if (!p) return `<div>${esc(n)}</div>`;
+      const first = nrm((p.owners[0] || {}).name), me = nrm(company).split(" ")[0];
+      const role = first.startsWith(me.slice(0, 5)) ? t.ctrl : t.partner;
+      return `<div><span class="dot" style="background:${minColor(p.mineral)}"></span>${esc(p.name)} <span class="meta">(${esc(minName(p.mineral).toLowerCase())}, ${esc(p.province || "")}, ${esc(stageName(p.stage).toLowerCase())}; ${esc(role)})</span></div>`;
+    }).join("");
+  }
+  function renderCompanies() {
+    const row = c => `<tr><td style="vertical-align:top"><strong>${esc(c.name)}</strong><div class="meta show-sm">${esc(c.tickers)}</div></td><td class="hide-sm" style="text-align:left;vertical-align:top;white-space:nowrap">${esc(c.tickers)}</td><td style="text-align:left">${projCell(c.projects, c.name)}</td></tr>`;
+    $("#coFocus tbody").innerHTML = LISTED_FOCUS.map(row).join("");
+    $("#coGlobal tbody").innerHTML = LISTED_GLOBAL.map(row).join("");
+    $("#coNote").innerHTML = T[lang].coNote(D && D.projects ? srcLink(D.projects.source) : "SIACAM");
+    mountQuotes();
+  }
+  let quotesKey = "";
+  function mountQuotes() {
+    const host = $("#quotes"), dark = isDark(), key = lang + (dark ? "d" : "l");
+    if (key === quotesKey) return;
+    quotesKey = key; host.innerHTML = "";
+    const box = document.createElement("div"); box.className = "tradingview-widget-container";
+    const inner = document.createElement("div"); inner.className = "tradingview-widget-container__widget";
+    const s = document.createElement("script");
+    s.src = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js"; s.async = true; s.type = "text/javascript";
+    s.text = JSON.stringify({
+      symbols: LISTED_FOCUS.slice(0, 6).map(c => [c.name, c.tv + "|12M"]),
+      chartOnly: false, width: "100%", height: 420, locale: lang === "es" ? "es" : "en", colorTheme: dark ? "dark" : "light",
+      autosize: false, showVolume: false, showMA: false, hideDateRanges: false, hideMarketStatus: false, hideSymbolLogo: false,
+      scalePosition: "right", scaleMode: "Normal", fontFamily: "Archivo, system-ui, sans-serif", fontSize: "11", noTimeScale: false,
+      valuesTracking: "1", changeMode: "price-and-percent", chartType: "area", lineWidth: 2, lineType: 0,
+      dateRanges: ["1m|30", "3m|60", "12m|1D", "60m|1W", "all|1M"],
+      lineColor: dark ? "#e08a52" : "#a65a2a", topColor: dark ? "rgba(224,138,82,.18)" : "rgba(166,90,42,.12)",
+      bottomColor: "rgba(166,90,42,0)", backgroundColor: dark ? "#172026" : "#ffffff",
+      gridLineColor: dark ? "rgba(255,255,255,.06)" : "rgba(23,33,43,.06)",
+    });
+    box.append(inner, s); host.append(box);
   }
 
   function renderProjTable() {
