@@ -1,304 +1,86 @@
 {
- "structure": {
+ "crops": {
   "ok": true,
   "diag": {
-   "est_cultivos": {
-    "ajo": "1997/1998",
-    "algodón": "2024/2025",
-    "alpiste": "2024/2025",
-    "arroz": "2024/2025",
-    "arveja": "2024/2025",
-    "avena": "2024/2025",
-    "banana": "1997/1998",
-    "caña de azúcar": "2004/2005",
-    "cebada cervecera": "2015/2016",
-    "cebada forrajera": "2015/2016",
-    "cebada total": "2024/2025",
-    "cebolla total": "1997/1998",
-    "centeno": "2024/2025",
-    "colza": "2024/2025",
-    "cártamo": "2024/2025",
-    "garbanzo": "2024/2025",
-    "girasol": "2024/2025",
-    "jojoba": "2007/2008",
-    "lenteja": "2024/2025",
-    "limón": "1996/1997",
-    "lino": "2024/2025",
-    "mandarina": "1996/1997",
-    "maní": "2024/2025",
-    "maíz": "2024/2025",
-    "mijo": "2024/2025",
-    "naranja": "1996/1997",
-    "papa total": "1997/1998",
-    "pomelo": "1996/1997",
-    "poroto alubia": "2024/2025",
-    "poroto negro": "2024/2025",
-    "poroto otros": "2024/2025",
-    "poroto total": "2024/2025",
-    "soja 1ra": "2024/2025",
-    "soja 2da": "2024/2025",
-    "soja total": "2024/2025",
-    "sorgo": "2024/2025",
-    "trigo candeal": "2024/2025",
-    "trigo total": "2024/2025",
-    "tung": "2009/2010",
-    "té": "2023/2024",
-    "yerba mate": "2023/2024"
+   "resource": "https://datos.magyp.gob.ar/dataset/9e1e77ba-267e-4eaa-a59f-3296e86b5f36/resource/95d066e6-8a0f-4a80-b59d-6f28f88eacd5/download/estimaciones-agricolas-2026-03.csv",
+   "latest": {
+    "barley": "2024/2025",
+    "corn": "2024/2025",
+    "peanut": "2024/2025",
+    "sorghum": "2024/2025",
+    "soy": "2024/2025",
+    "sunflower": "2024/2025",
+    "wheat": "2024/2025"
    },
-   "est_rows": 160499,
-   "fob_cols": [
-    "indice_tiempo",
-    "tortas_expellers_pellets_harina_soja_pellets_harina_extr",
-    "tortas_expellers_pellets_harina_soja_pellets_harinas_tortas",
-    "habas_soja_demas_granel_hasta_15_porciento_embolsado",
-    "habas_soja_demas_mas_15_porciento_embolsado",
-    "aceite_soja_granel",
-    "maiz_demas_grano_granel_hasta_15_porciento_embolsado",
-    "maiz_demas_grano_mas_15_porciento_embolsado",
-    "maiz_maiz_pisingallo_granel_hasta_15_porciento_embolsado",
-    "maiz_maiz_pisingallo_mas_15_porciento_embolsado",
-    "maiz_flint_plata_granel_hasta_15_porciento_embolsado",
-    "maiz_flint_plata_mas_15_porciento_embolsado",
-    "trigo_granel_hasta_15_porciento_embolsado",
-    "trigo_pan_mas_15_porciento_embolsado",
-    "aceite_girasol_granel",
-    "malta_cervecera_malta_cebada_cervecera",
-    "cebada_cervecera_granel_hasta_15_porciento_embolsado",
-    "cebada_cervecera_mas_15_porciento_embolsado",
-    "cacahuate_mani_confiteria_tostadero",
-    "cacahuate_mani_demas_granel_hasta_15_porciento_embolsado",
-    "cacahuate_mani_demas_mas_15_porciento_embolsado",
-    "cacahuate_mani_mani_partido",
-    "cebada_cervecera_detalle_granel_hasta_15_porciento_embol",
-    "cebada_cervecera_granel_mas_15_porciento_embolsado",
-    "arroz_no_parbolizado_cont_grano_quebrado_men_igual_10porc",
-    "arroz_puli_glas_no_parbo_cont_grano_quebrado_may_10porc",
-    "arroz_pulido_glasaseado_cont_gra_quebr_men_igual_10porc",
-    "arroz_pulido_glaseado_contenido_grano_quebrado_may_10porc",
-    "harina_trigo",
-    "sorgo_granifero_demas_granel_hasta_15_porciento_embolsado",
-    "sorgo_granifero_demas_mas_15_porciento_embolsado",
-    "poro_blanc_alubias_ovales_envases_may_20_kg",
-    "poro_blanc_alubias_env_may_20_kg_dsd_191_hta_220_gr_c_100_gr",
-    "poro_blanc_alubias_env_may_20_kg_dsd_221_gr_cada_100_gr",
-    "poro_blanc_alubias_env_may_20_kg_hta_190_gr_cada_100_gr",
-    "poro_negros_envases_may_20_kg",
-    "tortas_expellers_pellets_harinas_girasol_tortas",
-    "tortas_expellers_pellets_harinas_girasol_harinas_tortas",
-    "tortas_expellers_pellets_harinas_girasol_pellets_integral",
-    "tortas_expellers_pellets_harinas_girasol_pellets_extr",
-    "semilla_girasol_unica_ind_demas_granel_hta_15_porc_embol",
-    "semilla_girasol_unica_ind_demas_girasol_tipo_confiteria",
-    "semilla_girasol_unica_ind_demas_mas_15_por_embolsado",
-    "aceite_cacahuete_mani_granel",
-    "s_cardar_peinar_desmo_algo_grado_b",
-    "algo_s_cardar_peinar_desmo_grado_c",
-    "s_cardar_peinar_desmo_grado_c_1_2",
-    "s_cardar_peinar_desmo_grado_d_1_2_long_27_mm_1_1_16",
-    "s_cardar_peinar_desmo_grado_d_long_27_mm_1_1_16",
-    "s_cardar_peinar_desmotado_grado_long_26_mm_1_1_32",
-    "sin_cardar_peinar_desmotado_grado_f_long_26_mm_1_1_32",
-    "garbanzos_enteros",
-    "garbanzos_partidos",
-    "porotos_colorados_envases_mayores_20_kg",
-    "arvejas_enteras",
-    "arvejas_partidas",
-    "aceite_girasol_demas_refinado_granel",
-    "aceite_girasol_demas_refinado_tambores_mas_200_litros",
-    "arroz_descascarillado_arroz_cargo_arroz_pardo_demas_no_parbo"
-   ],
-   "fob_tail": [
-    {
-     "indice_tiempo": "2025-01-20",
-     "tortas_expellers_pellets_harina_soja_pellets_harina_extr": "322.0",
-     "tortas_expellers_pellets_harina_soja_pellets_harinas_tortas": NaN,
-     "habas_soja_demas_granel_hasta_15_porciento_embolsado": "412.0",
-     "habas_soja_demas_mas_15_porciento_embolsado": "432.0",
-     "aceite_soja_granel": "1044.0",
-     "maiz_demas_grano_granel_hasta_15_porciento_embolsado": "229.0",
-     "maiz_demas_grano_mas_15_porciento_embolsado": "249.0",
-     "maiz_maiz_pisingallo_granel_hasta_15_porciento_embolsado": NaN,
-     "maiz_maiz_pisingallo_mas_15_porciento_embolsado": NaN,
-     "maiz_flint_plata_granel_hasta_15_porciento_embolsado": "238.0",
-     "maiz_flint_plata_mas_15_porciento_embolsado": "258.0",
-     "trigo_granel_hasta_15_porciento_embolsado": "229.0",
-     "trigo_pan_mas_15_porciento_embolsado": "249.0",
-     "aceite_girasol_granel": "1080.0",
-     "malta_cervecera_malta_cebada_cervecera": "570.0",
-     "cebada_cervecera_granel_hasta_15_porciento_embolsado": "213.0",
-     "cebada_cervecera_mas_15_porciento_embolsado": "238.0",
-     "cacahuate_mani_confiteria_tostadero": NaN,
-     "cacahuate_mani_demas_granel_hasta_15_porciento_embolsado": NaN,
-     "cacahuate_mani_demas_mas_15_porciento_embolsado": NaN,
-     "cacahuate_mani_mani_partido": NaN,
-     "cebada_cervecera_detalle_granel_hasta_15_porciento_embol": "230.0",
-     "cebada_cervecera_granel_mas_15_porciento_embolsado": "255.0",
-     "arroz_no_parbolizado_cont_grano_quebrado_men_igual_10porc": NaN,
-     "arroz_puli_glas_no_parbo_cont_grano_quebrado_may_10porc": NaN,
-     "arroz_pulido_glasaseado_cont_gra_quebr_men_igual_10porc": NaN,
-     "arroz_pulido_glaseado_contenido_grano_quebrado_may_10porc": NaN,
-     "harina_trigo": "355.0",
-     "sorgo_granifero_demas_granel_hasta_15_porciento_embolsado": "205.0",
-     "sorgo_granifero_demas_mas_15_porciento_embolsado": "225.0",
-     "poro_blanc_alubias_ovales_envases_may_20_kg": NaN,
-     "poro_blanc_alubias_env_may_20_kg_dsd_191_hta_220_gr_c_100_gr": NaN,
-     "poro_blanc_alubias_env_may_20_kg_dsd_221_gr_cada_100_gr": NaN,
-     "poro_blanc_alubias_env_may_20_kg_hta_190_gr_cada_100_gr": NaN,
-     "poro_negros_envases_may_20_kg": NaN,
-     "tortas_expellers_pellets_harinas_girasol_tortas": "225.0",
-     "tortas_expellers_pellets_harinas_girasol_harinas_tortas": "221.0",
-     "tortas_expellers_pellets_harinas_girasol_pellets_integral": "165.0",
-     "tortas_expellers_pellets_harinas_girasol_pellets_extr": "223.0",
-     "semilla_girasol_unica_ind_demas_granel_hta_15_porc_embol": "445.0",
-     "semilla_girasol_unica_ind_demas_girasol_tipo_confiteria": "690.0",
-     "semilla_girasol_unica_ind_demas_mas_15_por_embolsado": "465.0",
-     "aceite_cacahuete_mani_granel": NaN,
-     "s_cardar_peinar_desmo_algo_grado_b": NaN,
-     "algo_s_cardar_peinar_desmo_grado_c": NaN,
-     "s_cardar_peinar_desmo_grado_c_1_2": NaN,
-     "s_cardar_peinar_desmo_grado_d_1_2_long_27_mm_1_1_16": NaN,
-     "s_cardar_peinar_desmo_grado_d_long_27_mm_1_1_16": NaN,
-     "s_cardar_peinar_desmotado_grado_long_26_mm_1_1_32": NaN,
-     "sin_cardar_peinar_desmotado_grado_f_long_26_mm_1_1_32": NaN,
-     "garbanzos_enteros": NaN,
-     "garbanzos_partidos": NaN,
-     "porotos_colorados_envases_mayores_20_kg": NaN,
-     "arvejas_enteras": NaN,
-     "arvejas_partidas": NaN,
-     "aceite_girasol_demas_refinado_granel": "1252.8",
-     "aceite_girasol_demas_refinado_tambores_mas_200_litros": "1600.0",
-     "arroz_descascarillado_arroz_cargo_arroz_pardo_demas_no_parbo": NaN
-    },
-    {
-     "indice_tiempo": "2025-01-21",
-     "tortas_expellers_pellets_harina_soja_pellets_harina_extr": "335.0",
-     "tortas_expellers_pellets_harina_soja_pellets_harinas_tortas": NaN,
-     "habas_soja_demas_granel_hasta_15_porciento_embolsado": "420.0",
-     "habas_soja_demas_mas_15_porciento_embolsado": "440.0",
-     "aceite_soja_granel": "1042.0",
-     "maiz_demas_grano_granel_hasta_15_porciento_embolsado": "232.0",
-     "maiz_demas_grano_mas_15_porciento_embolsado": "252.0",
-     "maiz_maiz_pisingallo_granel_hasta_15_porciento_embolsado": NaN,
-     "maiz_maiz_pisingallo_mas_15_porciento_embolsado": NaN,
-     "maiz_flint_plata_granel_hasta_15_porciento_embolsado": "241.0",
-     "maiz_flint_plata_mas_15_porciento_embolsado": "261.0",
-     "trigo_granel_hasta_15_porciento_embolsado": "229.0",
-     "trigo_pan_mas_15_porciento_embolsado": "249.0",
-     "aceite_girasol_granel": "1080.0",
-     "malta_cervecera_malta_cebada_cervecera": "570.0",
-     "cebada_cervecera_granel_hasta_15_porciento_embolsado": "213.0",
-     "cebada_cervecera_mas_15_porciento_embolsado": "238.0",
-     "cacahuate_mani_confiteria_tostadero": NaN,
-     "cacahuate_mani_demas_granel_hasta_15_porciento_embolsado": NaN,
-     "cacahuate_mani_demas_mas_15_porciento_embolsado": NaN,
-     "cacahuate_mani_mani_partido": NaN,
-     "cebada_cervecera_detalle_granel_hasta_15_porciento_embol": "230.0",
-     "cebada_cervecera_granel_mas_15_porciento_embolsado": "255.0",
-     "arroz_no_parbolizado_cont_grano_quebrado_men_igual_10porc": NaN,
-     "arroz_puli_glas_no_parbo_cont_grano_quebrado_may_10porc": NaN,
-     "arroz_pulido_glasaseado_cont_gra_quebr_men_igual_10porc": NaN,
-     "arroz_pulido_glaseado_contenido_grano_quebrado_may_10porc": NaN,
-     "harina_trigo": "355.0",
-     "sorgo_granifero_demas_granel_hasta_15_porciento_embolsado": "205.0",
-     "sorgo_granifero_demas_mas_15_porciento_embolsado": "225.0",
-     "poro_blanc_alubias_ovales_envases_may_20_kg": NaN,
-     "poro_blanc_alubias_env_may_20_kg_dsd_191_hta_220_gr_c_100_gr": NaN,
-     "poro_blanc_alubias_env_may_20_kg_dsd_221_gr_cada_100_gr": NaN,
-     "poro_blanc_alubias_env_may_20_kg_hta_190_gr_cada_100_gr": NaN,
-     "poro_negros_envases_may_20_kg": NaN,
-     "tortas_expellers_pellets_harinas_girasol_tortas": "225.0",
-     "tortas_expellers_pellets_harinas_girasol_harinas_tortas": "221.0",
-     "tortas_expellers_pellets_harinas_girasol_pellets_integral": "165.0",
-     "tortas_expellers_pellets_harinas_girasol_pellets_extr": "223.0",
-     "semilla_girasol_unica_ind_demas_granel_hta_15_porc_embol": "445.0",
-     "semilla_girasol_unica_ind_demas_girasol_tipo_confiteria": "690.0",
-     "semilla_girasol_unica_ind_demas_mas_15_por_embolsado": "465.0",
-     "aceite_cacahuete_mani_granel": NaN,
-     "s_cardar_peinar_desmo_algo_grado_b": NaN,
-     "algo_s_cardar_peinar_desmo_grado_c": NaN,
-     "s_cardar_peinar_desmo_grado_c_1_2": NaN,
-     "s_cardar_peinar_desmo_grado_d_1_2_long_27_mm_1_1_16": NaN,
-     "s_cardar_peinar_desmo_grado_d_long_27_mm_1_1_16": NaN,
-     "s_cardar_peinar_desmotado_grado_long_26_mm_1_1_32": NaN,
-     "sin_cardar_peinar_desmotado_grado_f_long_26_mm_1_1_32": NaN,
-     "garbanzos_enteros": NaN,
-     "garbanzos_partidos": NaN,
-     "porotos_colorados_envases_mayores_20_kg": NaN,
-     "arvejas_enteras": NaN,
-     "arvejas_partidas": NaN,
-     "aceite_girasol_demas_refinado_granel": "1252.8",
-     "aceite_girasol_demas_refinado_tambores_mas_200_litros": "1600.0",
-     "arroz_descascarillado_arroz_cargo_arroz_pardo_demas_no_parbo": NaN
-    }
-   ],
-   "est_resources": [
-    [
-     "Estimaciones agrícolas",
-     "https://datos.magyp.gob.ar/dataset/9e1e77ba-267e-4eaa-a59f-3296e86b5f36/resource/95d066e6-8a0f-4a80-b59d-6f28f88eacd5/download/estimaciones-agricolas-2026-03.csv"
+   "deps_with_coords": 312
+  }
+ },
+ "prices": {
+  "ok": true,
+  "diag": {
+   "found": {
+    "soybeans": [
+     "Soybeans",
+     "($/mt)",
+     201
     ],
-    [
-     "Visualización Avanzada",
-     "http://datosestimaciones.magyp.gob.ar/reportes.php?reporte=Estimaciones"
+    "soybean_oil": [
+     "Soybean oil",
+     "($/mt)",
+     201
     ],
-    [
-     "Visor de cultivos",
-     "https://geoportal.magyp.gob.ar/tematizador/agricola/"
+    "soybean_meal": [
+     "Soybean meal",
+     "($/mt)",
+     201
     ],
-    [
-     "Serie de Tiempo Estimación de Trigo Pan",
-     "https://datos.magyp.gob.ar/dataset/9e1e77ba-267e-4eaa-a59f-3296e86b5f36/resource/ca5e31b5-a51f-4738-bae0-773838b5dd1e/download/serie-de-tiempo-trigo.csv"
+    "maize": [
+     "Maize",
+     "($/mt)",
+     201
+    ],
+    "wheat": [
+     "Wheat, US HRW",
+     "($/mt)",
+     201
+    ],
+    "sunflower_oil": [
+     "Sunflower oil",
+     "($/mt)",
+     201
+    ],
+    "beef": [
+     "Beef **",
+     "($/kg)",
+     201
     ]
-   ],
-   "georef_sample": {
-    "cantidad": 3,
-    "departamentos": [
-     {
-      "centroide": {
-       "lat": -37.9646159068483,
-       "lon": -60.2482821323384
-      },
-      "id": "06014",
-      "nombre": "Adolfo Gonzales Chaves",
-      "provincia": {
-       "nombre": "Buenos Aires"
-      }
-     },
-     {
-      "centroide": {
-       "lat": -31.2902983724746,
-       "lon": -58.2378696898985
-      },
-      "id": "30015",
-      "nombre": "Concordia",
-      "provincia": {
-       "nombre": "Entre Ríos"
-      }
-     },
-     {
-      "centroide": {
-       "lat": -30.9924267798293,
-       "lon": -58.8918600477175
-      },
-      "id": "30035",
-      "nombre": "Federal",
-      "provincia": {
-       "nombre": "Entre Ríos"
-      }
-     }
-    ],
-    "inicio": 0,
-    "parametros": {
-     "campos": [
-      "provincia.nombre",
-      "id",
-      "nombre",
-      "centroide.lat",
-      "centroide.lon"
-     ],
-     "max": 3
-    },
-    "total": 529
    }
+  }
+ },
+ "fx_settlements": {
+  "ok": true,
+  "diag": {
+   "last": {
+    "period": "2026-09",
+    "usd_m": 3227.9
+   }
+  }
+ },
+ "exports": {
+  "ok": true,
+  "diag": {
+   "primary": [
+    66,
+    "2026-04"
+   ],
+   "moa": [
+    35,
+    "2026-01"
+   ],
+   "cereals": [
+    0,
+    null
+   ]
   }
  }
 }
