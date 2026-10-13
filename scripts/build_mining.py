@@ -37,9 +37,15 @@ def norm(t) -> str:
 
 
 def get(url, **kw):
-    r = requests.get(url, headers=UA, timeout=kw.pop("timeout", 90), **kw)
-    r.raise_for_status()
-    return r
+    import time
+    timeout = kw.pop("timeout", 90)
+    for intento in range(4):
+        r = requests.get(url, headers=UA, timeout=timeout, **kw)
+        if r.status_code in (502, 503, 504) and intento < 3:
+            time.sleep(4 * (intento + 1))
+            continue
+        r.raise_for_status()
+        return r
 
 
 def leer(url: str, max_bytes: int = 60_000_000) -> pd.DataFrame:
@@ -62,8 +68,12 @@ def leer(url: str, max_bytes: int = 60_000_000) -> pd.DataFrame:
 # ---------------------------------------------------------------------------
 def catalogo(diag: dict) -> dict:
     vistos, out = set(), []
-    for q in ("siacam", "mineria proyectos", "mineria exportaciones", "empleo minero", "litio"):
-        res = get(f"{CKAN}/package_search", params={"q": q, "rows": 60}).json()["result"]["results"]
+    errores = []
+    for q in ("siacam", "mineria proyectos", "mineria exportaciones", "empleo minero", "litio", "organization:mineria"):
+        try:
+            res = get(f"{CKAN}/package_search", params={"q": q, "rows": 25}).json()["result"]["results"]
+        except Exception as e:
+            errores.append(f"{q}: {e}"[:160]); continue
         for p in res:
             if p["name"] in vistos:
                 continue
@@ -72,6 +82,7 @@ def catalogo(diag: dict) -> dict:
                         "modified": (p.get("metadata_modified") or "")[:10],
                         "resources": [{"name": r.get("name"), "format": (r.get("format") or "").lower(), "url": r.get("url"),
                                        "modified": (r.get("last_modified") or r.get("created") or "")[:10]} for r in p.get("resources", [])][:12]})
+    diag["search_errors"] = errores
     diag["datasets"] = [d for d in out if "mine" in norm(d["title"] + " " + d["name"]) or "siacam" in d["name"] or "litio" in norm(d["title"])]
     # Columnas y muestra del primer recurso tabular de cada dataset minero.
     muestras = {}
