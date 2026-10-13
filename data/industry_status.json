@@ -1,943 +1,427 @@
 {
- "series": {
+ "ipi": {
   "ok": true,
   "diag": {
-   "series": [
-    [
-     "ipi manufacturero nivel general",
-     "453.1_SERIE_ORIGNAL_0_0_14_46",
-     "IPI Nivel General Serie Original",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero nivel general",
-     "453.1_SERIE_TENDCLO_0_0_21_61",
-     "IPI Nivel General Serie Tendencia Ciclo",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero nivel general",
-     "453.2_MAQUINARIARAL_0_0_22_43",
-     "IPI Divisiones y Subclases Maquinaria de uso general",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero nivel general",
-     "199.2_NIVEL_GENERAL_DICI_0_13_51",
-     "Nivel de precio nivel general",
-     "R/P1M",
-     "2026-01-01",
-     "Índice base 100",
-     "Índice de Precios al Consumidor de la Provincia de Tucumán."
-    ],
-    [
-     "ipi manufacturero nivel general",
-     "198.1_NIVEL_GENERAL_2014_0_13",
-     "Nivel de precio nivel general",
-     "R/P1M",
-     "2026-07-01",
-     "Índice base 100",
-     "Índice de Precios al Consumidor de la Provincia de Santa Fe."
-    ],
-    [
-     "ipi manufacturero nivel general",
-     "302.3_S_DESEST_NRAL_0_S_19",
-     "Serie desestacionalizada. Nivel general",
-     "R/P1M",
-     "2026-07-01",
-     "2004=100",
-     "Estadísticas de servicios públicos."
-    ],
-    [
-     "ipi manufacturero nivel general",
-     "370.3_ICG_NIVEL_RAL_0_0_17_94",
-     "ICG Nivel General",
-     "R/P1M",
-     "2026-09-01",
-     "Indice",
-     "Índice de Confianza en el Gobierno"
-    ],
-    [
-     "ipi manufacturero nivel general",
-     "448.1_NIVEL_GENERAL_0_0_13_46",
-     "IPIM Nivel general",
-     "R/P1M",
-     "2026-08-01",
-     "Índice Dic-2015=100",
-     "Índice de Precios Internos al por Mayor (IPIM). Dic-2015 = 1"
-    ],
-    [
-     "indice produccion industrial manufacturero",
-     "453.2_AUTOPARTESTES_0_0_10_100",
-     "IPI Divisiones y Subclases Autopartes",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "indice produccion industrial manufacturero",
-     "453.2_INDUSTRIA_ICA_0_0_21_100",
-     "IPI Divisiones y Subclases Industria siderúrgica",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "indice produccion industrial manufacturero",
-     "453.2_OTROS_PRODCOS_0_0_38_93",
-     "IPI Divisiones y Subclases Otros productos minerales no metálicos",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "indice produccion industrial manufacturero",
-     "453.2_PRODUCTOS_COS_0_0_23_90",
-     "IPI Divisiones y Subclases Productos farmacéuticos",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "indice produccion industrial manufacturero",
-     "453.2_MATERIAS_PICO_0_0_44_25",
-     "IPI Divisiones y Subclases Materias primas plásticas y caucho sintético",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "indice produccion industrial manufacturero",
-     "453.2_ASFALTOSTOS_0_0_8_16",
-     "IPI Divisiones y Subclases Asfaltos",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "indice produccion industrial manufacturero",
-     "453.2_FUELOILOIL_0_0_7_2",
-     "IPI Divisiones y Subclases Fueloil",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "indice produccion industrial manufacturero",
-     "453.2_CIGARRILLOLOS_0_0_11_16",
-     "IPI Divisiones y Subclases Cigarrillos",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "indice produccion industrial manufacturero",
-     "453.2_PRENDAS_VEADO_0_0_28_88",
-     "IPI Divisiones y Subclases Prendas de vestir, cuero y calzado",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "indice produccion industrial manufacturero",
-     "453.2_CARNE_AVIAIAR_0_0_11_85",
-     "IPI Divisiones y Subclases Carne aviar",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero desestacionalizado",
-     "453.2_AUTOPARTESTES_0_0_10_100",
-     "IPI Divisiones y Subclases Autopartes",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero desestacionalizado",
-     "453.2_INDUSTRIA_ICA_0_0_21_100",
-     "IPI Divisiones y Subclases Industria siderúrgica",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero desestacionalizado",
-     "453.2_OTROS_PRODCOS_0_0_38_93",
-     "IPI Divisiones y Subclases Otros productos minerales no metálicos",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero desestacionalizado",
-     "453.2_PRODUCTOS_COS_0_0_23_90",
-     "IPI Divisiones y Subclases Productos farmacéuticos",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero desestacionalizado",
-     "453.2_MATERIAS_PICO_0_0_44_25",
-     "IPI Divisiones y Subclases Materias primas plásticas y caucho sintético",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero desestacionalizado",
-     "453.2_ASFALTOSTOS_0_0_8_16",
-     "IPI Divisiones y Subclases Asfaltos",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero desestacionalizado",
-     "453.2_FUELOILOIL_0_0_7_2",
-     "IPI Divisiones y Subclases Fueloil",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero desestacionalizado",
-     "453.2_CIGARRILLOLOS_0_0_11_16",
-     "IPI Divisiones y Subclases Cigarrillos",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero desestacionalizado",
-     "453.2_PRENDAS_VEADO_0_0_28_88",
-     "IPI Divisiones y Subclases Prendas de vestir, cuero y calzado",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero desestacionalizado",
-     "453.2_CARNE_AVIAIAR_0_0_11_85",
-     "IPI Divisiones y Subclases Carne aviar",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero desestacionalizado",
-     "453.2_MAQUINARIARAL_0_0_22_43",
-     "IPI Divisiones y Subclases Maquinaria de uso general",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero desestacionalizado",
-     "453.2_OTRA_MAQUIIAL_0_0_28_5",
-     "IPI Divisiones y Subclases Otra maquinaria de uso especial",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero divisiones",
-     "453.2_AUTOPARTESTES_0_0_10_100",
-     "IPI Divisiones y Subclases Autopartes",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero divisiones",
-     "453.2_ASFALTOSTOS_0_0_8_16",
-     "IPI Divisiones y Subclases Asfaltos",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero divisiones",
-     "453.2_FUELOILOIL_0_0_7_2",
-     "IPI Divisiones y Subclases Fueloil",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero divisiones",
-     "453.2_CIGARRILLOLOS_0_0_11_16",
-     "IPI Divisiones y Subclases Cigarrillos",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero divisiones",
-     "453.2_CEMENTONTO_0_0_7_59",
-     "IPI Divisiones y Subclases Cemento",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero divisiones",
-     "453.2_PINTURASRAS_0_0_8_67",
-     "IPI Divisiones y Subclases Pinturas",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero divisiones",
-     "453.2_AGROQUIMICCOS_0_0_12_6",
-     "IPI Divisiones y Subclases Agroquímicos",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero divisiones",
-     "453.2_GASOILOIL_0_0_6_78",
-     "IPI Divisiones y Subclases Gasoil",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero divisiones",
-     "453.2_VINOINO_0_0_4_89",
-     "IPI Divisiones y Subclases Vino",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero divisiones",
-     "453.2_MOTOCICLETTAS_0_0_12_50",
-     "IPI Divisiones y Subclases Motocicletas",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero divisiones",
-     "453.2_NEUMATICOSCOS_0_0_10_63",
-     "IPI Divisiones y Subclases Neumáticos",
-     "R/P1M",
-     "2026-01-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "ipi manufacturero divisiones",
-     "453.2_INDUSTRIA_ICA_0_0_21_100",
-     "IPI Divisiones y Subclases Industria siderúrgica",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "utilizacion capacidad instalada industria",
-     "31.3_UIMB_2004_M_33",
-     "Utilización de la capacidad instalada en la industria de metales básicos como porcentaje del total d",
-     "R/P1M",
-     "2026-07-01",
-     "Porcentaje",
-     "Utilización de la capacidad instalada en la industria. En po"
-    ],
-    [
-     "utilizacion capacidad instalada industria",
-     "31.2_USPQ_2004_T_34",
-     "Utilización de la capacidad instalada en la industria de Productos químicos como porcentaje del tota",
-     "R/P3M",
-     "2026-04-01",
-     "Porcentaje",
-     "Utilización de la capacidad instalada en la industria. En po"
-    ],
-    [
-     "utilizacion capacidad instalada industria",
-     "31.2_UIMB_2004_T_33",
-     "Utilización de la capacidad instalada en la industria de metales básicos como porcentaje del total d",
-     "R/P3M",
-     "2026-04-01",
-     "Porcentaje",
-     "Utilización de la capacidad instalada en la industria. En po"
-    ],
-    [
-     "utilizacion capacidad instalada industria",
-     "31.2_UNG_2004_T_18",
-     "Utilización de la capacidad instalada en la industria como porcentaje del total",
-     "R/P3M",
-     "2026-04-01",
-     "Porcentaje",
-     "Utilización de la capacidad instalada en la industria. En po"
-    ],
-    [
-     "isac indicador sintetico actividad construccion",
-     "33.3_ISAC_CALESLES_0_0_10_7",
-     "Indicador sintético de la actividad de la construcción. Insumos. Cales",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004=100",
-     "Indicador sintético de la actividad de la construcción (ISAC"
-    ],
-    [
-     "isac indicador sintetico actividad construccion",
-     "33.3_ISAC_YESOESO_0_0_9_54",
-     "Indicador sintético de la actividad de la construcción. Insumos. Yeso",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004=100",
-     "Indicador sintético de la actividad de la construcción (ISAC"
-    ],
-    [
-     "isac indicador sintetico actividad construccion",
-     "33.2_ISAC_SIN_EDAD_0_M_23_56",
-     "Indicador sintético de la actividad de la construcción. Sin Estacionalidad",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004=100",
-     "Indicador sintético de la actividad de la construcción (ISAC"
-    ],
-    [
-     "isac indicador sintetico actividad construccion",
-     "33.2_ISAC_NIVELRAL_0_M_18_63",
-     "Indicador sintético de la actividad de la construcción. Nivel General",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004=100",
-     "Indicador sintético de la actividad de la construcción (ISAC"
-    ],
-    [
-     "despacho cemento",
-     "41.2_CP_0_T_16",
-     "Cemento Portland en Miles Toneladas",
-     "R/P3M",
-     "2026-04-01",
-     "Miles de unidades",
-     "Indicadores de producción de la Industria manufacturera"
-    ],
-    [
-     "despacho cemento",
-     "453.2_CEMENTONTO_0_0_7_59",
-     "IPI Divisiones y Subclases Cemento",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "despacho cemento",
-     "41.3_CP_0_A_16",
-     "Cemento Portland en Miles Toneladas",
-     "R/P1M",
-     "2026-07-01",
-     "Miles de unidades",
-     "Indicadores de producción de la Industria manufacturera"
-    ],
-    [
-     "despacho cemento",
-     "453.2_ARTICULOS_ESO_0_0_22_22",
-     "IPI Divisiones y Subclases Artículos de cemento y de yeso",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004 = 100",
-     "Índice de Producción Industrial Manufacturero (IPI)"
-    ],
-    [
-     "despacho cemento",
-     "33.4_ISAC_CEMENAND_0_0_21_24",
-     "Indicador sintético de la actividad de la construcción. Insumos. Cemento portland. Serie sin estacio",
-     "R/P1M",
-     "2026-08-01",
-     "Índice 2004=100",
-     "Indicador sintético de la actividad de la construcción (ISAC"
-    ],
-    [
-     "produccion automotores",
-     "41.2_AA_0_T_23",
-     "Automotores Automóviles en Unidades",
-     "R/P3M",
-     "2026-04-01",
-     "Automóviles",
-     "Indicadores de producción de la Industria manufacturera"
-    ],
-    [
-     "produccion automotores",
-     "41.3_AA_0_A_23",
-     "Automotores Automóviles en Unidades",
-     "R/P1M",
-     "2026-07-01",
-     "Automóviles",
-     "Indicadores de producción de la Industria manufacturera"
-    ],
-    [
-     "empleo registrado industria",
-     "149.1_TL_REGIADO_OCTU_0_16",
-     "Índice de Salarios. Empleo registrado.",
-     "R/P1M",
-     "2026-07-01",
-     "Índice",
-     "Índice de salarios. Base octubre 2016"
-    ],
-    [
-     "exportaciones manufacturas origen industrial",
-     "74.3_IEMOI_0_M_46",
-     "Exportaciones de manufacturas de origen industrial. En millones d.e dólares",
-     "R/P1M",
-     "2026-08-01",
-     "Millones de dólares",
-     "Intercambio Comercial Argentino"
-    ],
-    [
-     "exportaciones manufacturas origen industrial",
-     "74.2_IEMOI_0_T_46",
-     "Exportaciones de manufacturas de origen industrial. En millones d.e dólares",
-     "R/P3M",
-     "2026-04-01",
-     "Millones de dólares",
-     "Intercambio Comercial Argentino"
-    ],
-    [
-     "exportaciones manufacturas origen industrial",
-     "75.3_ITMOA_0_M_13",
-     "Exportaciones totales de manufacturas de origen industrial (MOA). En millones de dólares FOB",
-     "R/P1M",
-     "2026-08-01",
-     "Millones de dólares",
-     "Exportaciones FOB por rubro"
-    ],
-    [
-     "exportaciones manufacturas origen industrial",
-     "75.3_ITM_0_M_13",
-     "Exportaciones totales de manufacturas de origen industrial. En millones de dólares FOB",
-     "R/P1M",
-     "2026-08-01",
-     "Millones de dólares",
-     "Exportaciones FOB por rubro"
-    ],
-    [
-     "exportaciones manufacturas origen industrial",
-     "75.2_ITMOA_0_T_13",
-     "Exportaciones totales de manufacturas de origen industrial (MOA). En millones de dólares FOB",
-     "R/P3M",
-     "2026-04-01",
-     "Millones de dólares",
-     "Exportaciones FOB por rubro"
-    ],
-    [
-     "exportaciones manufacturas origen industrial",
-     "75.2_ITM_0_T_13",
-     "Exportaciones totales de manufacturas de origen industrial. En millones de dólares FOB",
-     "R/P3M",
-     "2026-04-01",
-     "Millones de dólares",
-     "Exportaciones FOB por rubro"
-    ],
-    [
-     "exportaciones manufacturas origen industrial",
-     "74.3_IEMOA_0_M_48",
-     "Exportaciones de manufacturas de origen agropecuario. En millone.s de dólares",
-     "R/P1M",
-     "2026-08-01",
-     "Millones de dólares",
-     "Intercambio Comercial Argentino"
-    ],
-    [
-     "exportaciones manufacturas origen industrial",
-     "74.2_IEMOA_0_T_48",
-     "Exportaciones de manufacturas de origen agropecuario. En millone.s de dólares",
-     "R/P3M",
-     "2026-04-01",
-     "Millones de dólares",
-     "Intercambio Comercial Argentino"
-    ],
-    [
-     "acero crudo produccion",
-     "359.2_ACERO_CRUDUDO__11",
-     "Volúmen de produción de acero crudo",
-     "R/P3M",
-     "2126-04-01",
-     "Miles de Toneladas",
-     "Datos históricos de la industria siderúrgica"
-    ],
-    [
-     "acero crudo produccion",
-     "41.2_AC_0_T_11",
-     "Acero Crudo en Miles de Toneladas",
-     "R/P3M",
-     "2026-04-01",
-     "Miles de toneladas",
-     "Indicadores de producción de la Industria manufacturera"
-    ],
-    [
-     "acero crudo produccion",
-     "359.3_ACERO_CRUDUDO__11",
-     "Volúmen de produción de acero crudo",
-     "R/P1M",
-     "2026-08-01",
-     "Miles de Toneladas",
-     "Datos históricos de la industria siderúrgica"
-    ],
-    [
-     "acero crudo produccion",
-     "41.3_AC_0_A_11",
-     "Acero Crudo en Miles de Toneladas",
-     "R/P1M",
-     "2026-07-01",
-     "Miles de toneladas",
-     "Indicadores de producción de la Industria manufacturera"
-    ],
-    [
-     "acero crudo produccion",
-     "365.3_PRODUCCION_SA__51",
-     "Producción de Petróleo Crudo PETROBRAS ARGENTINA S.A.",
-     "R/P1M",
-     "2026-08-01",
-     "Metros Cúbicos",
-     "Producción y Ventas de Petróleo, Gas y Derivados por Empresa"
+   "cand": {
+    "sa": [
+     {
+      "id": "453.1_SERIE_DESEADA_0_0_24_58",
+      "desc": "IPI Nivel General Serie Desestacionalizada",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
+    "orig": [
+     {
+      "id": "453.1_SERIE_ORIGNAL_0_0_14_46",
+      "desc": "IPI Nivel General Serie Original",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
+    "food": [
+     {
+      "id": "453.2_ALIMENTOS_DAS_0_0_17_18",
+      "desc": "IPI Divisiones y Subclases Alimentos y bebidas",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
+    "tobacco": [
+     {
+      "id": "453.2_PRODUCTOS_ACO_0_0_16_81",
+      "desc": "IPI Divisiones y Subclases Productos de tabaco",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
+    "textiles": [
+     {
+      "id": "453.2_OTROS_PRODLES_0_0_24_67",
+      "desc": "IPI Divisiones y Subclases Otros productos textiles",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     },
+     {
+      "id": "453.2_PRODUCTOS_LES_0_0_18_32",
+      "desc": "IPI Divisiones y Subclases Productos textiles",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     },
+     {
+      "id": "453.2_TEJIDOS_ACLES_0_0_34_1",
+      "desc": "IPI Divisiones y Subclases Tejidos y acabado de productos textiles",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
+    "apparel": [
+     {
+      "id": "453.2_PRENDAS_VEADO_0_0_28_88",
+      "desc": "IPI Divisiones y Subclases Prendas de vestir, cuero y calzado",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     },
+     {
+      "id": "453.2_PRENDAS_VETIR_0_0_14_10",
+      "desc": "IPI Divisiones y Subclases Prendas de vestir",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
+    "paper": [
+     {
+      "id": "453.2_MADERA_PAPION_0_0_30_66",
+      "desc": "IPI Divisiones y Subclases Madera, papel, edición e impresión",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     },
+     {
+      "id": "453.2_PRODUCTOS_CHO_0_0_23_95",
+      "desc": "IPI Divisiones y Subclases Madera y productos de madera y corcho, excepto muebles",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
+    "refining": [],
+    "chemicals": [
+     {
+      "id": "453.2_SUSTANCIASCOS_0_0_29_82",
+      "desc": "IPI Divisiones y Subclases Sustancias y productos químicos",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
+    "plastics": [
+     {
+      "id": "453.2_PRODUCTOS_ICO_0_0_25_26",
+      "desc": "IPI Divisiones y Subclases Productos de caucho y plástico",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
+    "minerals": [
+     {
+      "id": "453.2_OTROS_PRODCOS_0_0_38_93",
+      "desc": "IPI Divisiones y Subclases Otros productos minerales no metálicos",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     },
+     {
+      "id": "453.2_PRODUCTOS_COS_0_0_32_70",
+      "desc": "IPI Divisiones y Subclases Productos minerales no metálicos",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
+    "basic_metals": [
+     {
+      "id": "453.2_INDUSTRIASCAS_0_0_28_0",
+      "desc": "IPI Divisiones y Subclases Industrias metálicas básicas",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
+    "metal_products": [
+     {
+      "id": "453.2_PRODUCTOS_TAL_0_0_15_15",
+      "desc": "IPI Divisiones y Subclases Productos de metal",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     },
+     {
+      "id": "453.2_OTROS_PRODIOS_0_0_33_55",
+      "desc": "IPI Divisiones y Subclases Otros productos de metal y servicios de trabajo de metales",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
+    "machinery": [
+     {
+      "id": "453.2_MAQUINARIAIPO_0_0_17_14",
+      "desc": "IPI Divisiones y Subclases Maquinaria y equipo",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
+    "equipment": [
+     {
+      "id": "453.2_OTROS_EQUITOS_0_0_35_77",
+      "desc": "IPI Divisiones y Subclases Otros equipos, aparatos e instrumentos",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
+    "autos": [
+     {
+      "id": "453.2_VEHICULOS_TES_0_0_54_37",
+      "desc": "IPI Divisiones y Subclases Vehículos automotores, carrocerías, remolques y autopartes",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     },
+     {
+      "id": "453.2_VEHICULOS_RES_0_0_21_54",
+      "desc": "IPI Divisiones y Subclases Vehículos automotores",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
+    "transport": [
+     {
+      "id": "453.2_OTRO_EQUIPRTE_0_0_25_29",
+      "desc": "IPI Divisiones y Subclases Otro equipo de transporte",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
+    "furniture": [
+     {
+      "id": "453.2_MUEBLES_CORAS_0_0_49_35",
+      "desc": "IPI Divisiones y Subclases Muebles y colchones, y otras industrias manufactureras",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     },
+     {
+      "id": "453.2_MUEBLES_CONES_0_0_17_98",
+      "desc": "IPI Divisiones y Subclases Muebles y colchones",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
     ]
-   ]
+   },
+   "points": {
+    "orig": [
+     128,
+     [
+      "2026-08-01",
+      119.29064776379852
+     ]
+    ],
+    "sa": [
+     128,
+     [
+      "2026-08-01",
+      114.286133053828
+     ]
+    ],
+    "food": [
+     44,
+     [
+      "2026-08-01",
+      151.57953373674502
+     ]
+    ],
+    "tobacco": [
+     0,
+     null
+    ],
+    "textiles": [
+     44,
+     [
+      "2026-08-01",
+      53.587224336568745
+     ]
+    ],
+    "apparel": [
+     44,
+     [
+      "2026-08-01",
+      71.42327207000798
+     ]
+    ],
+    "paper": [
+     0,
+     null
+    ],
+    "chemicals": [
+     44,
+     [
+      "2026-08-01",
+      147.24508671553895
+     ]
+    ],
+    "plastics": [
+     0,
+     null
+    ],
+    "minerals": [
+     44,
+     [
+      "2026-08-01",
+      131.60642195792582
+     ]
+    ],
+    "basic_metals": [
+     44,
+     [
+      "2026-08-01",
+      93.19976102718572
+     ]
+    ],
+    "metal_products": [
+     44,
+     [
+      "2026-08-01",
+      81.49254811707966
+     ]
+    ],
+    "machinery": [
+     44,
+     [
+      "2026-08-01",
+      111.94430524538232
+     ]
+    ],
+    "equipment": [
+     0,
+     null
+    ],
+    "autos": [
+     27,
+     [
+      "2026-07-01",
+      127.62973719303164
+     ]
+    ],
+    "transport": [
+     44,
+     [
+      "2026-08-01",
+      139.35987368838514
+     ]
+    ],
+    "furniture": [
+     0,
+     null
+    ]
+   }
   }
  },
- "catalog": {
+ "other": {
   "ok": true,
   "diag": {
-   "datasets": [
-    {
-     "name": "registro-nacional-de-parques-industriales-renpi",
-     "title": "Registro Nacional de Parques Industriales (RENPI)",
-     "modified": "2026-08-03",
-     "resources": [
-      {
-       "name": "Parques Industriales inscriptos en el RENPI",
-       "format": "ods",
-       "url": "https://cdn.produccion.gob.ar/cdn-secind/rempi-datos-abiertos/base-rempi-para-publicar.ods",
-       "modified": "2023-08-29"
-      }
+   "cand": {
+    "ucii": [
+     {
+      "id": "31.3_UIMB_2004_M_33",
+      "desc": "Utilización de la capacidad instalada en la industria de metales básicos como porcentaje del total de la capacidad del sector",
+      "end": "2026-07-01",
+      "units": "Porcentaje"
+     },
+     {
+      "id": "31.3_UPT_2004_M_23",
+      "desc": "Utilización de la capacidad instalada en la industria de Productos textiles como porcentaje del total de la capacidad del sector",
+      "end": "2026-07-01",
+      "units": "Porcentaje"
+     },
+     {
+      "id": "31.3_USPQ_2004_M_34",
+      "desc": "Utilización de la capacidad instalada en la industria de Productos químicos como porcentaje del total de la capacidad del sector",
+      "end": "2026-07-01",
+      "units": "Porcentaje"
+     }
+    ],
+    "isac": [
+     {
+      "id": "33.2_ISAC_SIN_EDAD_0_M_23_56",
+      "desc": "Indicador sintético de la actividad de la construcción. Sin Estacionalidad",
+      "end": "2026-08-01",
+      "units": "Índice 2004=100"
+     }
+    ]
+   },
+   "points": {
+    "ucii": [
+     0,
+     null
+    ],
+    "isac": [
+     128,
+     [
+      "2026-08-01",
+      140.737938979259
      ]
+    ],
+    "cement_kt": [
+     0,
+     null
+    ],
+    "cars_units": [
+     78,
+     [
+      "2025-12-01",
+      100.1
+     ]
+    ],
+    "steel_kt": [
+     0,
+     null
+    ]
+   }
+  }
+ },
+ "parks": {
+  "ok": true,
+  "diag": {
+   "resource": [
+    "Parques Industriales inscriptos en el RENPI",
+    "https://cdn.produccion.gob.ar/cdn-secind/rempi-datos-abiertos/base-rempi-para-publicar.ods"
+   ],
+   "sheets": {
+    "PRINCIPALES_DATOS": [
+     362,
+     [
+      "REGISTRO N°",
+      "NOMBRE DEL AGRUPAMIENTO",
+      "PROVINCIA",
+      "LOCALIDAD",
+      "CARÁCTER",
+      "PÁGINA WEB",
+      "TELÉFONO",
+      "CORREO ELECTRÓNICO"
+     ]
+    ]
+   },
+   "sample": [
+    {
+     "REGISTRO N°": "RL-2019-101396766-APN-CPI#MPYT",
+     "NOMBRE DEL AGRUPAMIENTO": "SECTOR INDUSTRIAL PLANIFICADO DE SAN ANDRÉS DE GILES",
+     "PROVINCIA": "BUENOS AIRES",
+     "LOCALIDAD": "SAN ANDRÉS DE GILES",
+     "CARÁCTER": "PÚBLICO",
+     "PÁGINA WEB": NaN,
+     "TELÉFONO": "(02325) 442385",
+     "CORREO ELECTRÓNICO": "produccion.sagiles@gmail.com ; produccionymedioambiente.sag@gmail.com; sergio_udines@hotmail.com"
     },
     {
-     "name": "registro-nacional-de-parques-industriales-renpi",
-     "title": "Registro Nacional de Parques Industriales (RENPI)",
-     "modified": "2026-08-03",
-     "resources": [
-      {
-       "name": "Parques Industriales inscriptos en el RENPI",
-       "format": "ods",
-       "url": "https://cdn.produccion.gob.ar/cdn-secind/rempi-datos-abiertos/base-rempi-para-publicar.ods",
-       "modified": "2023-08-29"
-      }
-     ]
+     "REGISTRO N°": "RL-2019-101397554-APN-CPI#MPYT",
+     "NOMBRE DEL AGRUPAMIENTO": "PARQUE INDUSTRIAL DE LA CIUDAD DE PICHANAL",
+     "PROVINCIA": "SALTA",
+     "LOCALIDAD": "PICHANAL",
+     "CARÁCTER": "PÚBLICO",
+     "PÁGINA WEB": NaN,
+     "TELÉFONO": "(0387) 4953092 // 4953178",
+     "CORREO ELECTRÓNICO": "direcciondeindustria@gmail.com; ignacio.enteparques@gmail.com"
     },
     {
-     "name": "parques-nacionales",
-     "title": "Parques Nacionales",
-     "modified": "2026-08-03",
-     "resources": [
-      {
-       "name": "Visitas a los Parques Nacionales según tipo de residencia del visitante",
-       "format": "csv",
-       "url": "https://datos.yvera.gob.ar/dataset/458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc/resource/a570af75-ed33-427c-9797-980fc0cd8fd1/download/visitas-residentes-y-no-residentes.csv",
-       "modified": "2026-05-15"
-      },
-      {
-       "name": "Visitas a los Parques Nacionales por región de destino según tipo de residencia del visitante",
-       "format": "csv",
-       "url": "https://datos.yvera.gob.ar/dataset/458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc/resource/e8f7c0d7-02f9-4fdd-aa83-d61c13f565ae/download/visitas-residentes-y-no-residentes-por-region.csv",
-       "modified": "2026-05-15"
-      },
-      {
-       "name": "Ficha Técnica: Parques Nacionales",
-       "format": "pdf",
-       "url": "https://datos.yvera.gob.ar/dataset/458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc/resource/06e92813-b7d7-4702-8298-d73db3dbdce0/download/parques_nac.pdf",
-       "modified": "2023-10-31"
-      },
-      {
-       "name": "Serie de tiempo",
-       "format": "csv",
-       "url": "https://datos.yvera.gob.ar/dataset/458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc/resource/78aea6ed-761c-4659-bdf2-7fcb0f616fad/download/serie-tiempo-parques-nacionales-mensual.csv",
-       "modified": "2026-05-15"
-      },
-      {
-       "name": "Novedades",
-       "format": "csv",
-       "url": "https://datos.yvera.gob.ar/dataset/458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc/resource/678bc2ed-871b-4aae-a4a3-69f070b488aa/download/novedades.csv",
-       "modified": "2022-05-12"
-      }
-     ]
-    },
-    {
-     "name": "estadistica-de-tramites-de-maquinarias",
-     "title": "Estadística de trámites de maquinarias",
-     "modified": "2026-10-07",
-     "resources": [
-      {
-       "name": "Estadística de inscripciones iniciales de maquinarias - 201309 - 202609",
-       "format": "csv",
-       "url": "https://datos.jus.gob.ar/dataset/852b58b1-98b5-4f80-9f80-62e09cf3cfbb/resource/c8ca86f7-beb5-4a40-bc26-3a411d87de5e/download/estadistica-inscripciones-iniciales-maquinarias-2013-09-2026-09.csv",
-       "modified": "2026-10-05"
-      },
-      {
-       "name": "Estadística de transferencias de maquinarias - 201309 - 202609",
-       "format": "csv",
-       "url": "https://datos.jus.gob.ar/dataset/852b58b1-98b5-4f80-9f80-62e09cf3cfbb/resource/9bb1bec9-c309-45d5-ac8b-dafb086c6298/download/estadistica-transferencias-maquinarias-2013-09-2026-09.csv",
-       "modified": "2026-10-05"
-      },
-      {
-       "name": "Estadística de trámites de maquinarias",
-       "format": "zip",
-       "url": "https://datos.jus.gob.ar/dataset/852b58b1-98b5-4f80-9f80-62e09cf3cfbb/resource/4e1fa83d-f7af-409f-843b-a28895cd95a7/download/estadistica-tramites-maquinarias.zip",
-       "modified": "2026-10-05"
-      },
-      {
-       "name": "Trámites de maquinaria agrícola, vial e industrial - Gráficos estadísticos",
-       "format": "gráfico",
-       "url": "https://public.tableau.com/app/profile/justicia.abierta/viz/DNRPAestadisticatramitesmaquinarias/Estadisticadetramitesmaquinariasagrcolasvialeseindustriales",
-       "modified": ""
-      }
-     ]
-    },
-    {
-     "name": "listado-de-registros-seccionales-de-la-dnrnpa",
-     "title": "Registros Seccionales de la Propiedad Automotor",
-     "modified": "2026-10-07",
-     "resources": [
-      {
-       "name": "Listado de Registros Seccionales de todo el país - 202609",
-       "format": "csv",
-       "url": "https://datos.jus.gob.ar/dataset/bbdac295-c88e-4e2d-8f74-a845a2e93a61/resource/a67af271-1b6a-48a3-93e6-c9967e862b0c/download/listado-registros-seccionales-202609.csv",
-       "modified": "2026-10-05"
-      },
-      {
-       "name": "Listado de Registros Seccionales de todo el país - 2026",
-       "format": "zip",
-       "url": "https://datos.jus.gob.ar/dataset/bbdac295-c88e-4e2d-8f74-a845a2e93a61/resource/edff57e0-8416-400c-b55f-0b8c6b7ef9aa/download/listado-registros-seccionales-2026.zip",
-       "modified": "2026-10-05"
-      },
-      {
-       "name": "Listado de Registros Seccionales de todo el país - 2025",
-       "format": "zip",
-       "url": "https://datos.jus.gob.ar/dataset/bbdac295-c88e-4e2d-8f74-a845a2e93a61/resource/d24c7807-0f1f-4d94-a375-bb2f98855ee6/download/listado-registros-seccionales-2025.zip",
-       "modified": "2026-01-02"
-      },
-      {
-       "name": "Listado de Registros Seccionales de todo el país - 2024",
-       "format": "zip",
-       "url": "https://datos.jus.gob.ar/dataset/bbdac295-c88e-4e2d-8f74-a845a2e93a61/resource/d571465c-ad8a-4ab6-bdd2-3ad5acd02c9a/download/listado-registros-seccionales-2024.zip",
-       "modified": "2025-01-02"
-      },
-      {
-       "name": "Listado de Registros Seccionales de todo el país - 2023",
-       "format": "zip",
-       "url": "https://datos.jus.gob.ar/dataset/bbdac295-c88e-4e2d-8f74-a845a2e93a61/resource/dffe1b66-9ed7-48ad-a26e-dca4450d35b6/download/listado-registros-seccionales-2023.zip",
-       "modified": "2024-01-02"
-      },
-      {
-       "name": "Listado de Registros Seccionales de todo el país - 2022",
-       "format": "zip",
-       "url": "https://datos.jus.gob.ar/dataset/bbdac295-c88e-4e2d-8f74-a845a2e93a61/resource/28100b66-8117-4230-bc57-6212717245ea/download/listado-registros-seccionales-2022.zip",
-       "modified": "2023-01-03"
-      }
-     ]
-    },
-    {
-     "name": "permer-ii",
-     "title": "PERMER II",
-     "modified": "2026-10-05",
-     "resources": [
-      {
-       "name": "Boyeros",
-       "format": "shp",
-       "url": "http://datos.energia.gob.ar/dataset/f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef/resource/73cd7be2-6131-40ae-9bee-cb7b71b0b897/download/boyeros.zip",
-       "modified": "2026-10-02"
-      },
-      {
-       "name": "Hogares 2G",
-       "format": "shp",
-       "url": "http://datos.energia.gob.ar/dataset/f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef/resource/d5731284-3cad-4aea-b34a-6d3ffa25731f/download/hogares-2g.zip",
-       "modified": "2026-10-02"
-      },
-      {
-       "name": "Hogares 3G",
-       "format": "shp",
-       "url": "http://datos.energia.gob.ar/dataset/f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef/resource/e69608c5-a1d3-45b1-acb8-189b45784c55/download/hogares-3g.zip",
-       "modified": "2026-10-02"
-      },
-      {
-       "name": "Escuelas",
-       "format": "shp",
-       "url": "http://datos.energia.gob.ar/dataset/f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef/resource/337d1ee9-97a8-4e82-a68f-5906fe23d416/download/escuelas.zip",
-       "modified": "2026-10-02"
-      },
-      {
-       "name": "Miniredes",
-       "format": "shp",
-       "url": "http://datos.energia.gob.ar/dataset/f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef/resource/1aa84f05-ff18-4326-bc63-a6948ce8132d/download/miniredes.zip",
-       "modified": "2026-10-02"
-      },
-      {
-       "name": "Instituciones Públicas",
-       "format": "shp",
-       "url": "http://datos.energia.gob.ar/dataset/f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef/resource/39517e45-51ee-4a0d-9809-b1417f1a712c/download/instituciones-pblicas.zip",
-       "modified": "2026-10-02"
-      }
-     ]
-    },
-    {
-     "name": "registro-nacional-de-parques-industriales-renpi",
-     "title": "Registro Nacional de Parques Industriales (RENPI)",
-     "modified": "2026-08-03",
-     "resources": [
-      {
-       "name": "Parques Industriales inscriptos en el RENPI",
-       "format": "ods",
-       "url": "https://cdn.produccion.gob.ar/cdn-secind/rempi-datos-abiertos/base-rempi-para-publicar.ods",
-       "modified": "2023-08-29"
-      }
-     ]
-    },
-    {
-     "name": "innovacion-productiva-empresas-que-mas-invierten-en-id-a-nivel-mundial",
-     "title": "Innovación productiva: empresas que más invierten en I+D a nivel mundial",
-     "modified": "2026-08-03",
-     "resources": [
-      {
-       "name": "Empresas más innovadoras del sector tecnológico",
-       "format": "xls",
-       "url": "https://datos.produccion.gob.ar/dataset/369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7/resource/d8a3b5c6-7037-4372-b0e0-c73b3052dcb4/download/empresas-mas-innovadoras-del-sector-tecnologico.xlsx",
-       "modified": "2021-10-07"
-      },
-      {
-       "name": "Empresas más innovadoras del sector salud",
-       "format": "xls",
-       "url": "https://datos.produccion.gob.ar/dataset/369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7/resource/604b2540-9383-45bc-add5-c140919c564c/download/empresas-mas-innovadoras-del-sector-salud.xlsx",
-       "modified": "2021-10-07"
-      },
-      {
-       "name": "Empresas más innovadoras del sector de bienes y servicios industriales",
-       "format": "xls",
-       "url": "https://datos.produccion.gob.ar/dataset/369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7/resource/0f6f1310-5e4d-4517-ac56-fda43848362c/download/empresas-mas-innovadoras-del-sector-de-bienes-y-servicios-industriales.xlsx",
-       "modified": "2021-10-07"
-      },
-      {
-       "name": "Empresas más innovadoras del sector automotriz",
-       "format": "xls",
-       "url": "https://datos.produccion.gob.ar/dataset/369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7/resource/78405df7-dd9d-4bc0-9065-7cab0f48b863/download/empresas-mas-innovadoras-del-sector-automotriz.xlsx",
-       "modified": "2021-10-07"
-      },
-      {
-       "name": "Empresas más innovadoras del sector de bienes y servicios finales",
-       "format": "xls",
-       "url": "https://datos.produccion.gob.ar/dataset/369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7/resource/3d5a2d4e-caea-4aa0-870b-9037b22edec8/download/empresas-mas-innovadoras-del-sector-de-bienes-y-servicios-finales.xlsx",
-       "modified": "2021-10-07"
-      },
-      {
-       "name": "Las 50 empresas más innovadoras entre 2013 y 2019",
-       "format": "xls",
-       "url": "https://datos.produccion.gob.ar/dataset/369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7/resource/64aa7c24-2adc-46f1-b60d-1d34e2c7dbee/download/las-50-empresas-mas-innovadoras-entre-2013-y-2019.xlsx",
-       "modified": "2021-10-07"
-      }
-     ]
+     "REGISTRO N°": "RL-2019-101398392-APN-CPI#MPYT",
+     "NOMBRE DEL AGRUPAMIENTO": "ZONA DE ACTIVIDADES ECONÓMICAS GOYA",
+     "PROVINCIA": "CORRIENTES",
+     "LOCALIDAD": "GOYA",
+     "CARÁCTER": "PÚBLICO",
+     "PÁGINA WEB": NaN,
+     "TELÉFONO": "03777 420574//432798",
+     "CORREO ELECTRÓNICO": "gerencia@agenpro.org.ar; belengoetze@gmail.com"
     }
    ],
-   "samples": {
-    "parques-nacionales | Visitas a los Parques Nacionales según tipo de residencia del visitante": {
-     "url": "https://datos.yvera.gob.ar/dataset/458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc/resource/a570af75-ed33-427c-9797-980fc0cd8fd1/download/visitas-residentes-y-no-residentes.csv",
-     "rows": 660,
-     "columns": [
-      "indice_tiempo",
-      "origen_visitantes",
-      "visitas",
-      "observaciones"
-     ],
-     "tail": [
-      {
-       "indice_tiempo": "2026-4-01",
-       "origen_visitantes": "residentes",
-       "visitas": "152884",
-       "observaciones": NaN
-      },
-      {
-       "indice_tiempo": "2026-4-01",
-       "origen_visitantes": "total",
-       "visitas": "259966",
-       "observaciones": NaN
-      }
-     ]
-    },
-    "parques-nacionales | Visitas a los Parques Nacionales por región de destino según tipo de residencia del visit": {
-     "url": "https://datos.yvera.gob.ar/dataset/458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc/resource/e8f7c0d7-02f9-4fdd-aa83-d61c13f565ae/download/visitas-residentes-y-no-residentes-por-region.csv",
-     "rows": 3960,
-     "columns": [
-      "indice_tiempo",
-      "region_de_destino",
-      "origen_visitantes",
-      "visitas",
-      "observaciones"
-     ],
-     "tail": [
-      {
-       "indice_tiempo": "2026-4-01",
-       "region_de_destino": "patagonia",
-       "origen_visitantes": "residentes",
-       "visitas": "69084",
-       "observaciones": NaN
-      },
-      {
-       "indice_tiempo": "2026-4-01",
-       "region_de_destino": "patagonia",
-       "origen_visitantes": "total",
-       "visitas": "117251",
-       "observaciones": NaN
-      }
-     ]
-    }
+   "mapped": {
+    "prov": "PROVINCIA",
+    "name": "NOMBRE DEL AGRUPAMIENTO",
+    "type": "CARÁCTER",
+    "lat": null,
+    "lon": null,
+    "loc": "LOCALIDAD",
+    "with_coords": 0
    }
   }
  }
