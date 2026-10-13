@@ -12478,11 +12478,11 @@
    "balance": 1630.8
   }
  },
- "generated_at": "2026-10-13T14:04Z",
+ "generated_at": "2026-10-13T14:16Z",
  "status": {
   "fracking": {
    "ok": true,
-   "at": "2026-10-13T14:03Z",
+   "at": "2026-10-13T14:07Z",
    "diag": {
     "resources": [
      "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
@@ -12543,31 +12543,29 @@
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-13T14:03Z",
+   "at": "2026-10-13T14:07Z",
    "diag": {
     "pages": 1
    }
   },
   "oil_price": {
    "ok": true,
-   "at": "2026-10-13T14:03Z",
+   "at": "2026-10-13T14:07Z",
    "diag": {}
   },
   "regulations": {
-   "ok": true,
-   "at": "2026-10-13T14:03Z",
+   "ok": false,
+   "error": "RuntimeError: No se encontraron avisos en la primera sección",
    "diag": {
     "pages": 6,
-    "page_errors": 0,
-    "links": 499,
-    "candidates": 0,
-    "kept": 0,
-    "details_failed": 0
-   }
+    "page_errors": 6,
+    "links": 0
+   },
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1172, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1156, in <lambda>\n    (\"regulations\", lambda d: regulations(d, previo.get(\"regulations\"))),\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 355, in regulations\n    raise RuntimeError(\"No se encontraron avisos en la primera sección\")\nRuntimeError: No se encontraron avisos en la primera sección\n"
   },
   "news": {
    "ok": true,
-   "at": "2026-10-13T14:03Z",
+   "at": "2026-10-13T14:15Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
@@ -12578,7 +12576,7 @@
   },
   "reserves": {
    "ok": true,
-   "at": "2026-10-13T14:03Z",
+   "at": "2026-10-13T14:15Z",
    "diag": {
     "package": "http://datos.energia.gob.ar reservas-de-petroleo-y-gas",
     "zip_files": [
@@ -12785,7 +12783,7 @@
   },
   "export_price": {
    "ok": true,
-   "at": "2026-10-13T14:04Z",
+   "at": "2026-10-13T14:15Z",
    "diag": {
     "package": "https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo",
     "resources": [
@@ -13116,7 +13114,7 @@
   },
   "fuel_prices": {
    "ok": true,
-   "at": "2026-10-13T14:04Z",
+   "at": "2026-10-13T14:15Z",
    "diag": {
     "package": "http://datos.energia.gob.ar precios-en-surtidor",
     "resources": [
@@ -13159,7 +13157,7 @@
   },
   "rigi_portal": {
    "ok": true,
-   "at": "2026-10-13T14:04Z",
+   "at": "2026-10-13T14:15Z",
    "diag": {
     "html_len": 76399,
     "context": "-thin\">&nbsp;</span><span class=\"fw-semibold fs-1\">M</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Empleos <span class=\"fw-medium br-sm br-xs\">(directos e indirectos)</span></dt><dd class=\"fs-1 fw-bold text-arg-verdin js-total-puestos-trabajo\">0</dd></div></dl></div><div class=\"col-md-12 m-y-2\"><h3 class=\"h4 font-sans-serif p-b-1 border-bottom\">Sectores</h3><dl class=\"dl-proyectos-sector\"><div class=\"d-grid\"><dt class=\"last\">Energía eléctrica</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-torre-electrica m-r-05\"></i> <span class=\"m-t-1 js-total-energia-electrica\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Petróleo y gas</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-petroleo-y-gas m-r-05\"></i> <span class=\"m-t-1 js-total-petroleo-y-gas\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Minería</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-mineria m-r-05\"></i> <span class=\"m-t-1 js-total-mineria\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Siderurgia</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-siderurgia m-r-05\"></i> <span class=\"m-t-1 js-total-siderurgia\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Infraestructura</dt><",
@@ -13214,7 +13212,7 @@
   },
   "royalties": {
    "ok": true,
-   "at": "2026-10-13T14:04Z",
+   "at": "2026-10-13T14:16Z",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
@@ -13624,7 +13622,7 @@
   },
   "royalties_gas": {
    "ok": true,
-   "at": "2026-10-13T14:04Z",
+   "at": "2026-10-13T14:16Z",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
@@ -14130,7 +14128,7 @@
   },
   "trade_balance": {
    "ok": true,
-   "at": "2026-10-13T14:04Z",
+   "at": "2026-10-13T14:16Z",
    "diag": {
     "tried": {
      "74.2_IECE_0_T_35": [
