@@ -118,33 +118,6 @@
    }
   }
  },
- "fiscal": {
-  "ok": true,
-  "diag": {
-   "cand_prim": [
-    {
-     "id": "379.9_RESULTADO_017__31_73",
-     "desc": "Resultado primario sin rentas. Metodología 2017",
-     "end": "2026-08-01",
-     "units": "Millones de pesos"
-    }
-   ],
-   "cand_fin": [
-    {
-     "id": "379.9_RESULTADO_017__18_38",
-     "desc": "Resultado financiero . Metodología 2017",
-     "end": "2026-08-01",
-     "units": "Millones de pesos"
-    },
-    {
-     "id": "379.9_RESULTADO_017__36_89",
-     "desc": "Resultado financiero antes de figurativos . Metodología 2017",
-     "end": "2026-08-01",
-     "units": "Millones de pesos"
-    }
-   ]
-  }
- },
  "activity": {
   "ok": true,
   "diag": {
