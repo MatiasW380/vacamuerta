@@ -104,23 +104,153 @@ def series(diag: dict) -> dict:
     return {"n": len(out)}
 
 
-def estructura(diag: dict) -> dict:
-    est = leer("https://datos.magyp.gob.ar/dataset/9e1e77ba-267e-4eaa-a59f-3296e86b5f36/resource/95d066e6-8a0f-4a80-b59d-6f28f88eacd5/download/estimaciones-agricolas-2026-03.csv")
-    diag["est_cultivos"] = est.groupby("cultivo")["campania"].max().to_dict()
-    diag["est_rows"] = int(len(est))
-    fob = leer("https://infra.datos.gob.ar/catalog/sspm/dataset/358/distribution/358.1/download/precios-fob-oficiales-valores-diarios.csv")
-    diag["fob_cols"] = list(fob.columns)
-    diag["fob_tail"] = fob.tail(2).to_dict(orient="records")
+MAGYP = {"name": "Secretaría de Agricultura, Ganadería y Pesca, estimaciones agrícolas", "url": "https://datos.magyp.gob.ar/dataset/estimaciones-agricolas", "license": "CC BY 4.0"}
+CULTIVOS = {"soja total": "soy", "maíz": "corn", "trigo total": "wheat", "girasol": "sunflower", "cebada total": "barley", "sorgo": "sorghum", "maní": "peanut"}
+
+
+def num(sr):
+    return pd.to_numeric(sr.astype(str).str.replace(",", ".", regex=False), errors="coerce")
+
+
+def estimaciones(diag: dict) -> dict:
     pk = get("https://datos.magyp.gob.ar/api/3/action/package_show", params={"id": "estimaciones-agricolas"}).json()["result"]
-    diag["est_resources"] = [(r.get("name"), r.get("url")) for r in pk.get("resources", [])]
-    g = get("https://apis.datos.gob.ar/georef/api/departamentos", params={"max": 3, "campos": "id,nombre,centroide,provincia.nombre"}).json()
-    diag["georef_sample"] = g
-    return {}
+    r = next(r for r in pk["resources"] if norm(r.get("name")) == "estimaciones agricolas" and (r.get("url") or "").lower().endswith(".csv"))
+    diag["resource"] = r["url"]
+    df = leer(r["url"])
+    df = df[df["cultivo"].isin(CULTIVOS)].copy()
+    for c in ("superficie_sembrada_ha", "superficie_cosechada_ha", "produccion_tm"):
+        df[c] = num(df[c]).fillna(0)
+    df["crop"] = df["cultivo"].map(CULTIVOS)
+    df["camp"] = df["campania"].astype(str)
+    df["dep_id"] = df["departamento_id"].astype(str).str.split(".").str[0].str.zfill(5)
+    ult = df.groupby("crop")["camp"].max().to_dict()
+    camp = max(ult.values())
+    diag["latest"] = ult
+    # Serie nacional por campaña y cultivo
+    nat = df.groupby(["camp", "crop"])[["superficie_sembrada_ha", "superficie_cosechada_ha", "produccion_tm"]].sum().reset_index()
+    camps = sorted(nat["camp"].unique())[-25:]
+    serie = {c: [] for c in CULTIVOS.values()}
+    for _, x in nat[nat["camp"].isin(camps)].iterrows():
+        rend = x["produccion_tm"] / x["superficie_cosechada_ha"] * 1000 if x["superficie_cosechada_ha"] else None
+        serie[x["crop"]].append({"campaign": x["camp"], "planted_ha": int(x["superficie_sembrada_ha"]), "production_t": int(x["produccion_tm"]),
+                                 "yield_kg_ha": round(rend) if rend else None})
+    # Provincias, última campaña
+    d = df[df["camp"] == camp]
+    prov = d.groupby("provincia")["produccion_tm"].sum().sort_values(ascending=False)
+    prov_crop = d.pivot_table(index="provincia", columns="crop", values="produccion_tm", aggfunc="sum").fillna(0)
+    total = float(prov.sum())
+    provincias = [{"name": n, "production_t": int(v), "share_pct": round(v / total * 100, 1),
+                   "by_crop": {c: int(prov_crop.loc[n, c]) for c in prov_crop.columns if prov_crop.loc[n, c] > 0}} for n, v in prov.items() if v > 0]
+    # Departamentos, última campaña: producción por cultivo
+    dep = d.groupby(["dep_id", "departamento", "provincia", "crop"])["produccion_tm"].sum().reset_index()
+    deps = {}
+    for _, x in dep.iterrows():
+        k = x["dep_id"]
+        e = deps.setdefault(k, {"id": k, "name": x["departamento"], "province": x["provincia"], "by_crop": {}})
+        if x["produccion_tm"] > 0:
+            e["by_crop"][x["crop"]] = int(x["produccion_tm"])
+    lista = [dict(v, total_t=sum(v["by_crop"].values())) for v in deps.values()]
+    lista = [x for x in lista if x["total_t"] > 0]
+    # Centroides (Georef, API oficial de normalización geográfica)
+    try:
+        g = get("https://apis.datos.gob.ar/georef/api/departamentos", params={"max": 1000, "campos": "id,centroide"}).json()["departamentos"]
+        cen = {x["id"]: x["centroide"] for x in g}
+        for x in lista:
+            c = cen.get(x["id"])
+            if c:
+                x["lat"], x["lon"] = round(c["lat"], 3), round(c["lon"], 3)
+        diag["deps_with_coords"] = sum(1 for x in lista if "lat" in x)
+    except Exception as e:
+        diag["georef_error"] = str(e)[:200]
+    lista.sort(key=lambda x: x["total_t"], reverse=True)
+    cba = next((p for p in provincias if norm(p["name"]) == "cordoba"), None)
+    return {"source": MAGYP, "campaign": camp, "latest_by_crop": ult, "national": serie, "provinces": provincias,
+            "departments": lista, "total_t": int(total), "cordoba": cba}
+
+
+def banco_mundial(diag: dict) -> dict:
+    html = get("https://www.worldbank.org/en/research/commodity-markets").text
+    links = sorted(set(re.findall(r'href="([^"]+CMO-Historical-Data-Monthly\.xlsx)"', html)))
+    if not links:
+        raise RuntimeError("No se encontró el archivo mensual del Banco Mundial")
+    url = links[0] if links[0].startswith("http") else "https://www.worldbank.org" + links[0]
+    m = pd.read_excel(io.BytesIO(get(url, timeout=180).content), sheet_name="Monthly Prices", header=None, dtype=object)
+    fila = next(i for i in range(15) if any(isinstance(v, str) and "soybean" in v.lower() for v in m.iloc[i].tolist()))
+    nombres = [str(v).strip() if pd.notna(v) else "" for v in m.iloc[fila].tolist()]
+    unidades = [str(v).strip() if pd.notna(v) else "" for v in m.iloc[fila + 1].tolist()]
+    quiero = [("soybeans", "soybeans"), ("soybean_oil", "soybean oil"), ("soybean_meal", "soybean meal"), ("maize", "maize"),
+              ("wheat", "wheat, us hrw"), ("sunflower_oil", "sunflower oil"), ("beef", "beef")]
+    cols = {}
+    for clave, pal in quiero:
+        j = next((j for j, n in enumerate(nombres) if norm(n).startswith(pal)), None)
+        if j is not None:
+            cols[clave] = j
+    out = {}
+    datos = m.iloc[fila + 2:]
+    for clave, j in cols.items():
+        pts = []
+        for _, r in datos.iterrows():
+            mm = re.match(r"^(\d{4})M(\d{2})$", str(r.iloc[0]))
+            v = pd.to_numeric(r.iloc[j], errors="coerce")
+            if mm and pd.notna(v) and mm.group(1) >= "2010":
+                pts.append({"period": f"{mm.group(1)}-{mm.group(2)}", "v": round(float(v), 2)})
+        out[clave] = {"name": nombres[j], "unit": unidades[j], "monthly": pts}
+    diag["found"] = {k: [v["name"], v["unit"], len(v["monthly"])] for k, v in out.items()}
+    return {"source": {"name": "World Bank, Commodity Price Data (Pink Sheet)", "url": "https://www.worldbank.org/en/research/commodity-markets", "license": "CC BY 4.0"}, "prices": out}
+
+
+def serie_api(ids, desde="2005-01-01"):
+    j = get(f"{SERIES_API}/series/", params={"ids": ",".join(ids), "format": "json", "limit": 1000, "start_date": desde}).json()
+    return j.get("data", [])
+
+
+def divisas(diag: dict) -> dict:
+    """Liquidación de divisas de la agroexportación (CIARA-CEC), publicada en la API de Series de Tiempo."""
+    filas = [x for x in serie_api(["349.2_ACUM_MENSUAL__13"], "2010-01-01") if x[1] is not None]
+    if len(filas) < 24:
+        raise RuntimeError(f"Serie corta: {len(filas)}")
+    m = [{"period": x[0][:7], "usd_m": round(float(x[1]), 1)} for x in filas]
+    diag["last"] = m[-1]
+    # La serie viene en millones de USD; si viniera en USD se ajusta.
+    if max(x["usd_m"] for x in m) > 1e6:
+        for x in m:
+            x["usd_m"] = round(x["usd_m"] / 1e6, 1)
+    u12, p12 = m[-12:], m[-24:-12]
+    return {"source": {"name": "CIARA-CEC, liquidación de divisas de la agroexportación (API de Series de Tiempo)", "url": "https://datos.gob.ar/series/api/series/?ids=349.2_ACUM_MENSUAL__13", "license": "CC BY 4.0"},
+            "monthly": m, "last_12m": round(sum(x["usd_m"] for x in u12), 1), "prev_12m": round(sum(x["usd_m"] for x in p12), 1), "latest_period": m[-1]["period"]}
+
+
+EXPO_IDS = {"primary": "75.2_IETPP_0_T_43", "moa": "75.2_ITMOA_0_T_13", "cereals": "75.2_IEC_0_T_26"}
+
+
+def exportaciones(diag: dict) -> dict:
+    out = {}
+    for k, i in EXPO_IDS.items():
+        d = {x[0][:7]: x[1] for x in serie_api([i], "2010-01-01") if x[1] is not None}
+        diag[k] = [len(d), max(d) if d else None]
+        out[k] = d
+    # Años completos (4 trimestres) para primarios y manufacturas de origen agropecuario
+    anios = {}
+    for k in ("primary", "moa"):
+        for p, v in out[k].items():
+            anios.setdefault(p[:4], {}).setdefault(k, []).append(v)
+    yearly = [{"year": int(y), "primary": round(sum(v["primary"]), 1), "moa": round(sum(v["moa"]), 1)}
+              for y, v in sorted(anios.items()) if len(v.get("primary", [])) == 4 and len(v.get("moa", [])) == 4]
+    ult = max(set(out["primary"]) & set(out["moa"])) if out["primary"] and out["moa"] else None
+    return {"source": {"name": "INDEC, exportaciones por grandes rubros (API de Series de Tiempo)", "url": "https://datos.gob.ar/series", "license": "CC BY 4.0"},
+            "yearly": yearly, "latest_quarter": {"period": ult, "primary": out["primary"].get(ult), "moa": out["moa"].get(ult)} if ult else None,
+            "note_moa": "Manufacturas de origen agropecuario: harinas, aceites, carnes, lácteos y otros productos industrializados del agro."}
 
 
 def main() -> None:
     status, salida = {}, {}
-    for nombre, fn in [("structure", estructura)]:
+    previo = DATA / "agro.json"
+    if previo.exists():
+        try:
+            salida = json.loads(previo.read_text(encoding="utf-8"))
+        except Exception:
+            salida = {}
+    for nombre, fn in [("crops", estimaciones), ("prices", banco_mundial), ("fx_settlements", divisas), ("exports", exportaciones)]:
         diag: dict = {}
         try:
             salida[nombre] = fn(diag)
@@ -128,6 +258,19 @@ def main() -> None:
         except Exception as e:
             status[nombre] = {"ok": False, "error": f"{type(e).__name__}: {str(e)[:300]}", "diag": diag, "trace": traceback.format_exc()[-1000:]}
         print(nombre, status[nombre]["ok"], file=sys.stderr)
+    import math
+    def limpio(x):
+        if isinstance(x, float):
+            return None if math.isnan(x) or math.isinf(x) else x
+        if isinstance(x, dict):
+            return {str(k): limpio(v) for k, v in x.items()}
+        if isinstance(x, (list, tuple)):
+            return [limpio(v) for v in x]
+        if hasattr(x, "item"):
+            return limpio(x.item())
+        return x
+    salida["generated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
+    previo.write_text(json.dumps(limpio(salida), ensure_ascii=False, separators=(",", ":"), allow_nan=False, default=str) + "\n", encoding="utf-8")
     (DATA / "agro_status.json").write_text(json.dumps(status, ensure_ascii=False, indent=1, default=str) + "\n", encoding="utf-8")
 
 
