@@ -10,6 +10,7 @@ on:
       - "scripts/build_extras.py"
       - "scripts/build_mining.py"
       - "scripts/build_agro.py"
+      - "scripts/build_finance.py"
       - ".github/workflows/update-extras.yml"
 
 permissions:
@@ -49,6 +50,10 @@ jobs:
       - name: Agro
         continue-on-error: true
         run: python scripts/build_agro.py
+
+      - name: Finanzas
+        continue-on-error: true
+        run: python scripts/build_finance.py
 
       - name: Guardar cambios
         run: |
