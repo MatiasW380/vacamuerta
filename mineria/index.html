@@ -376,7 +376,7 @@
   const minName = m => T[lang].minNames[m] || m;
   const stageName = s => T[lang].stageNames[s] || s;
   const srcLink = s => `<a href="${esc(s.url)}" rel="noopener">${esc(s.name)}</a>${s.license ? ", " + esc(s.license) : ""}`;
-  const isDark = () => matchMedia("(prefers-color-scheme: dark)").matches;
+  const isDark = () => false;
 
   function render() {
     const t = T[lang];

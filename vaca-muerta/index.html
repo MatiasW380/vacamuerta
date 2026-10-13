@@ -1044,8 +1044,7 @@
   let quotesKey = "";
   function mountQuotes() {
     const host = $("#quotes");
-    const dark = document.documentElement.dataset.theme === "dark" ||
-      (document.documentElement.dataset.theme !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+    const dark = false;
     const key = lang + (dark ? "d" : "l");
     if (key === quotesKey) return;
     quotesKey = key;

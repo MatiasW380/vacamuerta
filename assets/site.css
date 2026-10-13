@@ -5,46 +5,29 @@
    Cada sector nuevo suma su propio color en --sector. */
 :root {
   color-scheme: light;
-  --bg: #f2f4f2;
+  --bg: #ffffff;
   --surface: #ffffff;
-  --ink: #142029;
-  --ink-2: #47545e;
-  --ink-3: #69747d;
-  --rule: #d3d9db;
-  --grid: #e4e8e9;
-  --brand: #0d4a57;          /* azul petróleo */
+  --ink: #0e1a2b;
+  --ink-2: #44505e;
+  --ink-3: #6a7480;
+  --rule: #dde2e7;
+  --grid: #eef1f4;
+  --brand: #0b2d4f;          /* azul marino institucional */
   --brand-ink: #ffffff;
-  --brand-soft: #e1eced;
-  --accent: #b07a17;         /* ocre: marca, estado en vivo */
+  --brand-soft: #e9eef5;
+  --accent: #b8862b;         /* ocre: marca, estado en vivo */
   --oil: #17805a;
   --gas: #c8412b;
-  --price: #2b5fc2;
+  --price: #1f5fbf;
   --water: #2d8fa6;
   --s1: #17805a; --s2: #c8412b; --s3: #2b5fc2; --s4: #b07a17; --s5: #8a5bb5;
   --up: #12733f;
   --down: #b8352a;
-  --focus: #2b5fc2;
+  --focus: #1f5fbf;
   --serif: "Literata", Georgia, serif;
   --sans: "Archivo", system-ui, sans-serif;
   --nav-h: 48px;
 }
-@media (prefers-color-scheme: dark) {
-  :root:where(:not([data-theme="light"])) {
-    color-scheme: dark;
-    --bg: #10171c; --surface: #172026; --ink: #edf1f2; --ink-2: #b6c0c6; --ink-3: #8b969d;
-    --rule: #2c373e; --grid: #222c32; --brand: #6cb8c6; --brand-ink: #0a191d; --brand-soft: #1b2e33; --accent: #d9a441;
-    --oil: #3bbd88; --gas: #f0735c; --price: #74a0f2; --water: #4fb6cc; --up: #4cc47f; --down: #f07a6e; --focus: #74a0f2;
-    --s1: #3bbd88; --s2: #f0735c; --s3: #74a0f2; --s4: #d9a441; --s5: #b38ae0;
-  }
-}
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --bg: #10171c; --surface: #172026; --ink: #edf1f2; --ink-2: #b6c0c6; --ink-3: #8b969d;
-  --rule: #2c373e; --grid: #222c32; --brand: #6cb8c6; --brand-ink: #0a191d; --brand-soft: #1b2e33; --accent: #d9a441;
-  --oil: #3bbd88; --gas: #f0735c; --price: #74a0f2; --water: #4fb6cc; --up: #4cc47f; --down: #f07a6e; --focus: #74a0f2;
-  --s1: #3bbd88; --s2: #f0735c; --s3: #74a0f2; --s4: #d9a441; --s5: #b38ae0;
-}
-
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
@@ -242,8 +225,6 @@ footer:not(.site-foot) { margin: 64px 0 0; padding: 28px 0 40px; border-top: 1px
 
 /* Sector minería: color de sector y de cada mineral (iguales en mapa, gráficos y tablas) */
 :root { --min: #a65a2a; --gold: #b8860f; --silver: #7d8a96; --copper: #a65a2a; --lithium: #2b5fc2; --uranium: #6c8f2f; --other-min: #8a7a6a; }
-@media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) { --min: #e08a52; --gold: #e3b04a; --silver: #a9b4be; --copper: #e08a52; --lithium: #74a0f2; --uranium: #9cc25a; --other-min: #b3a595; } }
-:root[data-theme="dark"] { --min: #e08a52; --gold: #e3b04a; --silver: #a9b4be; --copper: #e08a52; --lithium: #74a0f2; --uranium: #9cc25a; --other-min: #b3a595; }
 .small-multiples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 48px; margin-top: 18px; }
 @media (max-width: 860px) { .small-multiples { grid-template-columns: 1fr; } }
 .matrix td, .matrix th { text-align: right; }
@@ -259,15 +240,44 @@ td .meta { font-size: 13px; color: var(--ink-3); }
 
 /* Sector agro: color de sector y de cada cultivo */
 :root { --agro: #5f7d1d; --soy: #6f8a1c; --corn: #c99a0e; --wheat: #a8743f; --sunflower: #d0611f; --barley: #8c7a5b; --sorghum: #8e3b2e; --peanut: #b08d63; }
-@media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) { --agro: #9cc04a; --soy: #a3c24a; --corn: #e6bd3c; --wheat: #d29b62; --sunflower: #f08a4b; --barley: #b8a688; --sorghum: #d2735f; --peanut: #d4b48b; } }
-:root[data-theme="dark"] { --agro: #9cc04a; --soy: #a3c24a; --corn: #e6bd3c; --wheat: #d29b62; --sunflower: #f08a4b; --barley: #b8a688; --sorghum: #d2735f; --peanut: #d4b48b; }
 
 /* Sector finanzas */
 :root { --fin: #3f4fa3; --fin2: #8a5bb5; --fin3: #2d8fa6; }
-@media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) { --fin: #8f9cf0; --fin2: #b38ae0; --fin3: #4fb6cc; } }
-:root[data-theme="dark"] { --fin: #8f9cf0; --fin2: #b38ae0; --fin3: #4fb6cc; }
 
 /* Sector industria */
 :root { --ind: #4b6f86; --ind2: #a0662e; }
-@media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) { --ind: #7fa8c2; --ind2: #d79a5c; } }
-:root[data-theme="dark"] { --ind: #7fa8c2; --ind2: #d79a5c; }
+
+/* Rediseño institucional: fondo blanco, reglas finas, jerarquía sobria */
+body { font-size: 16.5px; }
+.top { border-bottom: 1px solid var(--rule); padding: 16px 0; }
+.mark { font-size: 16px; letter-spacing: 0; }
+.lang { border-radius: 4px; }
+.lang button { border-radius: 3px; font-size: 13px; font-weight: 600; letter-spacing: .03em; padding: 4px 10px; }
+.lang button[aria-pressed="true"] { background: var(--brand); color: #fff; }
+.hero { padding: 48px 0 12px; }
+.hero h1 { font-weight: 500; font-size: clamp(30px, 4.3vw, 48px); line-height: 1.12; letter-spacing: -0.015em; max-width: 22ch; }
+.lede { font-size: 18px; line-height: 1.6; }
+.facts, .pulse { border-top: 1px solid var(--ink); border-bottom: 1px solid var(--rule); }
+.facts strong, .pulse strong { font-size: 26px; font-weight: 600; color: var(--brand); }
+.facts strong.delta-up, .pulse strong.delta-up { color: var(--up); }
+.facts strong.delta-down, .pulse strong.delta-down { color: var(--down); }
+.chapter { margin-top: 56px; padding-top: 36px; border-top: 1px solid var(--ink); }
+.section > h2, .section > div > h2:not([style]), .chapter-title { font-weight: 500; font-size: 28px; }
+.chart-head h2 { font-weight: 600; font-size: 16px; }
+.hero .chart-head h2, .section.two > div > .chart-head h2, .section > .chart-head h2 { font-weight: 500; font-size: 21px; }
+.chart text { font-size: 11.5px; }
+th { font-size: 12.5px; font-weight: 600; color: var(--ink-3); }
+tbody tr:hover td { background: #f6f8fa; }
+.signup { border-radius: 4px; background: var(--brand); }
+.signup input, .signup button { border-radius: 3px; }
+.map-wrap, .quotes { border-radius: 4px; }
+.map-wrap { background: #f7f9fb; }
+.seg { border-radius: 4px; }
+.seg button { border-radius: 3px; }
+.seg button[aria-pressed="true"] { background: var(--brand); color: #fff; }
+.secnav { background: rgba(255, 255, 255, .96); }
+.secnav a { font-weight: 550; font-size: 14px; }
+.secnav a[aria-current="true"] { color: var(--brand); border-bottom-color: var(--brand); }
+.site-foot { border-top: 1px solid var(--ink); background: #fff; }
+.feed .topic { color: var(--brand); }
+.tip { border-radius: 4px; box-shadow: 0 6px 20px rgba(14, 26, 43, .12); }

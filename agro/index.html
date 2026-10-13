@@ -262,7 +262,7 @@
   const { fmt, pct, monthName, esc } = C;
   const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
   const srcLink = s => `<a href="${esc(s.url)}" rel="noopener">${esc(s.name)}</a>${s.license ? ", " + esc(s.license) : ""}`;
-  const isDark = () => matchMedia("(prefers-color-scheme: dark)").matches;
+  const isDark = () => false;
   const mt = t => t / 1e6;
 
   function render() {

@@ -247,7 +247,7 @@
   const { fmt, pct, monthName, esc } = C;
   const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
   const srcLink = s => `<a href="${esc(s.url)}" rel="noopener">${esc(s.name)}</a>${s.license ? ", " + esc(s.license) : ""}`;
-  const isDark = () => matchMedia("(prefers-color-scheme: dark)").matches;
+  const isDark = () => false;
   const facts = (host, f) => { $(host).innerHTML = f.map(([v, l, d]) => `<li><strong class="${d > 0 ? "delta-up" : d < 0 ? "delta-down" : ""}">${esc(v)}</strong>${esc(l)}</li>`).join(""); };
   const loc = s => String(s || "").toLowerCase().replace(/(^|[\s\-(])(\p{L})/gu, (m, a, b) => a + b.toUpperCase()).replace(/\b(De|Del|La|Las|Los|Y|El)\b/g, w => w.toLowerCase()).replace(/^./, c => c.toUpperCase());
   const cls = v => v > 0 ? "delta-up" : v < 0 ? "delta-down" : "";

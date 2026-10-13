@@ -256,7 +256,7 @@
   const { fmt, pct, monthName, esc } = C;
   const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
   const srcLink = s => `<a href="${esc(s.url)}" rel="noopener">${esc(s.name)}</a>${s.license && s.license !== "Datos públicos" ? ", " + esc(s.license) : ""}`;
-  const isDark = () => matchMedia("(prefers-color-scheme: dark)").matches;
+  const isDark = () => false;
   const day = d => C.periodLabel(d);
   const facts = (host, f) => { $(host).innerHTML = f.map(([v, l, d]) => `<li><strong class="${d > 0 ? "delta-up" : d < 0 ? "delta-down" : ""}">${esc(v)}</strong>${esc(l)}</li>`).join(""); };
   const legend = (host, names, colors) => { $(host).innerHTML = names.map((n, k) => `<li><i style="background:${colors[k]}"></i>${esc(n)}</li>`).join(""); };
