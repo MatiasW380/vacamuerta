@@ -256,3 +256,8 @@ footer:not(.site-foot) { margin: 64px 0 0; padding: 28px 0 40px; border-top: 1px
 .show-sm { display: none; }
 @media (max-width: 600px) { .show-sm { display: block; } }
 td .meta { font-size: 13px; color: var(--ink-3); }
+
+/* Sector agro: color de sector y de cada cultivo */
+:root { --agro: #5f7d1d; --soy: #6f8a1c; --corn: #c99a0e; --wheat: #a8743f; --sunflower: #d0611f; --barley: #8c7a5b; --sorghum: #8e3b2e; --peanut: #b08d63; }
+@media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) { --agro: #9cc04a; --soy: #a3c24a; --corn: #e6bd3c; --wheat: #d29b62; --sunflower: #f08a4b; --barley: #b8a688; --sorghum: #d2735f; --peanut: #d4b48b; } }
+:root[data-theme="dark"] { --agro: #9cc04a; --soy: #a3c24a; --corn: #e6bd3c; --wheat: #d29b62; --sunflower: #f08a4b; --barley: #b8a688; --sorghum: #d2735f; --peanut: #d4b48b; }

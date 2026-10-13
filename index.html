@@ -111,7 +111,7 @@
         <ul>
           <li><a href="/vaca-muerta/" data-i18n="fEnergy">Energy: Vaca Muerta</a></li>
           <li><a href="/mineria/" data-i18n="fMining">Mining</a></li>
-          <li class="soon" data-i18n="fAgro">Agriculture (in development)</li>
+          <li><a href="/agro/" data-i18n="fAgro">Agriculture</a></li>
           <li class="soon" data-i18n="fFinance">Finance and banking (in development)</li>
           <li class="soon" data-i18n="fIndustry">Industry (in development)</li>
         </ul>
@@ -143,9 +143,9 @@
     { id: "mining", live: true, href: "/mineria/",
       en: { name: "Mining", text: "Mineral exports, the map of every metal and lithium project with its owners, lithium output, metal prices, jobs and RIGI investment.", src: "Mining Secretariat (SIACAM), Ministry of Economy" },
       es: { name: "Minería", text: "Exportaciones mineras, el mapa de todos los proyectos metalíferos y de litio con sus dueños, producción de litio, precios de los metales, empleo e inversión RIGI.", src: "Secretaría de Minería (SIACAM), Ministerio de Economía" } },
-    { id: "agro",
-      en: { name: "Agriculture", text: "Planting and harvest estimates by crop and district, export sales declarations, prices and weather.", src: "Agriculture Secretariat (MAGyP), National Weather Service" },
-      es: { name: "Agro", text: "Estimaciones de siembra y cosecha por cultivo y departamento, declaraciones de exportación, precios y clima.", src: "Secretaría de Agricultura (MAGyP), Servicio Meteorológico Nacional" } },
+    { id: "agro", live: true, href: "/agro/",
+      en: { name: "Agriculture", text: "The grain and oilseed harvest by crop, province and department on a map, Córdoba up close, the dollars grain exporters bring in and international prices.", src: "Agriculture Secretariat (MAGyP), CIARA-CEC, World Bank" },
+      es: { name: "Agro", text: "La cosecha de granos y oleaginosas por cultivo, provincia y departamento en un mapa, Córdoba de cerca, los dólares que liquida la agroexportación y los precios internacionales.", src: "Secretaría de Agricultura (MAGyP), CIARA-CEC, Banco Mundial" } },
     { id: "finance",
       en: { name: "Finance and banking", text: "Interest rates, deposits, lending, reserves and exchange rates, with the central bank's own data.", src: "BCRA public APIs" },
       es: { name: "Finanzas y bancos", text: "Tasas, depósitos, crédito, reservas y tipo de cambio, con los datos del propio Banco Central.", src: "APIs públicas del BCRA" } },
@@ -164,7 +164,7 @@
       kWells: "Wells producing", kWellsS: m => `in Vaca Muerta, ${m}`,
       kRigi: "Latest RIGI approval", kRigiS: d => `Official Gazette, ${d}`,
       soonTitle: "Next sectors", mYoy: "oil vs a year ago",
-      sparkMin: m => `mineral exports, 12 months to ${m}`, mYoy12: "vs the previous 12 months", mProj: "projects on the map", mJobs: "mining jobs",
+      sparkMin: m => `mineral exports, 12 months to ${m}`, sparkAgro: c => `grains and oilseeds harvested, ${c} season`, mCba: "from Córdoba", mFxAgro: "from grain exporters, last 12 months", mYoy12: "vs the previous 12 months", mProj: "projects on the map", mJobs: "mining jobs",
       kMin: "Mineral exports", kMinS: m => `USD million, 12 months to ${m}`,
       sparkLab: m => `barrels of oil a day, ${m}`, sparkRange: y => `since ${y}`, sparkAria: "Vaca Muerta oil production, monthly",
       mOil: "bbl/d of oil", mGas: "MMm³/d of gas", mBlocks: "blocks producing",
@@ -176,7 +176,7 @@
       notReady: "Sign-ups open soon. Try again in a few days.", fail: "The subscription didn't go through. Try again in a minute.",
       footSources: "All figures come from public, official sources cited on each page.",
       fAbout: "Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.",
-      fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining", fAgro: "Agriculture (in development)", fFinance: "Finance and banking (in development)", fIndustry: "Industry (in development)",
+      fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining", fAgro: "Agriculture", fFinance: "Finance and banking (in development)", fIndustry: "Industry (in development)",
       fResources: "Resources", fMethod: "Methodology and sources", fCsv: "Download Vaca Muerta data (CSV)", fNewsletter: "Weekly newsletter",
       disclaimer: "For information only. Not investment advice.",
       topicNames: { Hidrocarburos: "Hydrocarbons", "Gas natural": "Natural gas", "Petróleo": "Oil", Biocombustibles: "Biofuels" },
@@ -191,7 +191,7 @@
       kWells: "Pozos en producción", kWellsS: m => `en Vaca Muerta, ${m}`,
       kRigi: "Última aprobación RIGI", kRigiS: d => `Boletín Oficial, ${d}`,
       soonTitle: "Próximos sectores", mYoy: "petróleo vs. un año atrás",
-      sparkMin: m => `exportaciones mineras, 12 meses hasta ${m}`, mYoy12: "vs. los 12 meses anteriores", mProj: "proyectos en el mapa", mJobs: "empleos mineros",
+      sparkMin: m => `exportaciones mineras, 12 meses hasta ${m}`, sparkAgro: c => `granos y oleaginosas cosechados, campaña ${c}`, mCba: "sale de Córdoba", mFxAgro: "liquidados por la agroexportación, 12 meses", mYoy12: "vs. los 12 meses anteriores", mProj: "proyectos en el mapa", mJobs: "empleos mineros",
       kMin: "Exportaciones mineras", kMinS: m => `millones de USD, 12 meses hasta ${m}`,
       sparkLab: m => `barriles de petróleo por día, ${m}`, sparkRange: y => `desde ${y}`, sparkAria: "Producción de petróleo de Vaca Muerta, mensual",
       mOil: "bbl/d de petróleo", mGas: "MMm³/d de gas", mBlocks: "bloques produciendo",
@@ -203,7 +203,7 @@
       notReady: "Las suscripciones abren pronto. Probá de nuevo en unos días.", fail: "No se pudo completar la suscripción. Probá de nuevo en un minuto.",
       footSources: "Todas las cifras provienen de fuentes públicas y oficiales, citadas en cada página.",
       fAbout: "Los datos públicos oficiales de la Argentina sobre energía, minería, agro, finanzas e industria, organizados para inversores y actualizados en forma automática.",
-      fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería", fAgro: "Agro (en desarrollo)", fFinance: "Finanzas y bancos (en desarrollo)", fIndustry: "Industria (en desarrollo)",
+      fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería", fAgro: "Agro", fFinance: "Finanzas y bancos (en desarrollo)", fIndustry: "Industria (en desarrollo)",
       fResources: "Recursos", fMethod: "Metodología y fuentes", fCsv: "Descargar datos de Vaca Muerta (CSV)", fNewsletter: "Newsletter semanal",
       disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.",
       topicNames: {},
@@ -214,7 +214,7 @@
   try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
   let lang = saved || ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en");
   if (!T[lang]) lang = "en";
-  let VM = null, EX = null, MN = null;
+  let VM = null, EX = null, MN = null, AG = null;
 
   const $ = s => document.querySelector(s);
   const locale = () => (lang === "es" ? "es-AR" : "en-US");
@@ -238,7 +238,7 @@
     const x = i => pad.l + (i / (vals.length - 1)) * (W - pad.l - pad.r), y = v => pad.t + (1 - v / max) * (H - pad.t - pad.b);
     const d = vals.map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("");
     const area = `${d}L${x(vals.length - 1).toFixed(1)},${H - pad.b}L${pad.l},${H - pad.b}Z`;
-    const years = periods.map((p, i) => [p, i]).filter(([p, i]) => p.endsWith("-01") && +p.slice(0, 4) % 2 === 0 && i > 8 && i < periods.length - 4);
+    const years = periods.map((p, i) => [p, i]).filter(([p, i]) => periods.length < 40 ? (periods.length - 1 - i) % 4 === 0 && i > 0 : p.endsWith("-01") && +p.slice(0, 4) % 2 === 0 && i > 8 && i < periods.length - 4);
     const labs = years.map(([p, i]) => `<text x="${x(i).toFixed(1)}" y="${H - 4}" text-anchor="middle">${p.slice(0, 4)}</text>`).join("");
     const lx = x(vals.length - 1), ly = y(vals[vals.length - 1]);
     return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(T[lang].sparkAria)}"><line x1="${pad.l}" x2="${W - pad.r}" y1="${H - pad.b}" y2="${H - pad.b}" stroke="var(--rule)"/><path d="${area}" fill="${color}" fill-opacity=".1"/><path d="${d}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round"/><circle cx="${lx}" cy="${ly}" r="3.5" fill="${color}"/>${labs}</svg>`;
@@ -281,6 +281,12 @@
         const e = MN.exports, rr = e.rolling_12m, pj = MN.projects;
         spark = `<div class="spark-head"><div><strong>USD ${fmt(e.last_12m)} M</strong>${esc(t.sparkMin(monthName(e.latest_period)))}</div><span>${esc(t.sparkRange(rr[0].period.slice(0, 4)))}</span></div><div class="spark">${sparkline(rr.map(r => r.v), rr.map(r => r.period), "var(--min)")}</div>`;
         metrics = `<ul class="metrics"><li><strong>${pct((e.last_12m / e.prev_12m - 1) * 100)}</strong>${esc(t.mYoy12)}</li>${pj ? `<li><strong>${fmt(pj.items.length)}</strong>${esc(t.mProj)}</li>` : ""}${MN.employment ? `<li><strong>${fmt(MN.employment.total)}</strong>${esc(t.mJobs)}</li>` : ""}</ul>`;
+      }
+      if (sec.id === "agro" && AG && AG.crops) {
+        const k = AG.crops, camps = k.national.soy.map(x => x.campaign).slice(-20);
+        const tot = camps.map(cp => Object.values(k.national).reduce((a, s) => a + ((s.find(x => x.campaign === cp) || {}).production_t || 0), 0) / 1e6);
+        spark = `<div class="spark-head"><div><strong>${fmt(k.total_t / 1e6, 1)} Mt</strong>${esc(t.sparkAgro(k.campaign))}</div><span>${esc(t.sparkRange(camps[0].slice(0, 4)))}</span></div><div class="spark">${sparkline(tot, camps.map(c => c.slice(0, 4) + "-01"), "var(--agro)")}</div>`;
+        metrics = `<ul class="metrics">${k.cordoba ? `<li><strong>${fmt(k.cordoba.share_pct, 1)}%</strong>${esc(t.mCba)}</li>` : ""}${AG.fx_settlements ? `<li><strong>USD ${fmt(AG.fx_settlements.last_12m)} M</strong>${esc(t.mFxAgro)}</li>` : ""}</ul>`;
       }
       cards.push(card(sec, spark, metrics));
     });
@@ -326,7 +332,7 @@
 
   render();
   const get = u => fetch(u, { cache: "no-cache" }).then(r => (r.ok ? r.json() : null)).catch(() => null);
-  Promise.all([get("/data/vm.json"), get("/data/extras.json"), get("/data/mining.json")]).then(([v, x, m]) => { VM = v; EX = x; MN = m; render(); });
+  Promise.all([get("/data/vm.json"), get("/data/extras.json"), get("/data/mining.json"), get("/data/agro.json")]).then(([v, x, m, a]) => { VM = v; EX = x; MN = m; AG = a; render(); });
 })();
 </script>
 </body>

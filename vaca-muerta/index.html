@@ -421,7 +421,7 @@
         <ul>
           <li><a href="/vaca-muerta/" data-i18n="fEnergy">Energy: Vaca Muerta</a></li>
           <li><a href="/mineria/" data-i18n="fMining">Mining</a></li>
-          <li class="soon" data-i18n="fAgro">Agriculture (in development)</li>
+          <li><a href="/agro/" data-i18n="fAgro">Agriculture</a></li>
           <li class="soon" data-i18n="fFinance">Finance and banking (in development)</li>
           <li class="soon" data-i18n="fIndustry">Industry (in development)</li>
         </ul>
@@ -465,7 +465,7 @@
       source: (s, d) => `Source: <a href="${s.url}" rel="noopener">${s.name}</a>, ${s.license}. Data through ${d}.`,
       empty: "Production data is being loaded for the first time. Check back in a few minutes.",
       fAbout: "Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.",
-      fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining", fAgro: "Agriculture (in development)", fFinance: "Finance and banking (in development)", fIndustry: "Industry (in development)",
+      fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining", fAgro: "Agriculture", fFinance: "Finance and banking (in development)", fIndustry: "Industry (in development)",
       fResources: "Resources", fMethod: "Methodology and sources", fCsv: "Download Vaca Muerta data (CSV)", fNewsletter: "Weekly newsletter",
       disclaimer: "For information only. Not investment advice.",
       fWells: "wells producing",
@@ -585,7 +585,7 @@
       source: (s, d) => `Fuente: <a href="${s.url}" rel="noopener">${s.name}</a>, ${s.license}. Datos hasta ${d}.`,
       empty: "Los datos de producción se están cargando por primera vez. Volvé en unos minutos.",
       fAbout: "Los datos públicos oficiales de la Argentina sobre energía, minería, agro, finanzas e industria, organizados para inversores y actualizados en forma automática.",
-      fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería", fAgro: "Agro (en desarrollo)", fFinance: "Finanzas y bancos (en desarrollo)", fIndustry: "Industria (en desarrollo)",
+      fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería", fAgro: "Agro", fFinance: "Finanzas y bancos (en desarrollo)", fIndustry: "Industria (en desarrollo)",
       fResources: "Recursos", fMethod: "Metodología y fuentes", fCsv: "Descargar datos de Vaca Muerta (CSV)", fNewsletter: "Newsletter semanal",
       disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.",
       fWells: "pozos en producción",
@@ -960,7 +960,7 @@
         acc += v;
       });
       const every = Math.ceil(34 / step);
-      if (i % every === 0 || i === labels.length - 1) { const xl = svgEl("text", { x: cx, y: H - 8, "text-anchor": "middle" }); xl.textContent = step < 34 && lb.length === 4 ? "’" + lb.slice(2) : lb; svg.append(xl); }
+      if ((labels.length - 1 - i) % every === 0) { const xl = svgEl("text", { x: cx, y: H - 8, "text-anchor": "middle" }); xl.textContent = step < 34 && lb.length === 4 ? "’" + lb.slice(2) : lb; svg.append(xl); }
       if (tots[i] && step >= 38) { const tl = svgEl("text", { x: cx, y: y(tots[i]) - 5, "text-anchor": "middle", style: "fill:var(--ink-2);font-size:11px" }); tl.textContent = fmt(tots[i]); g.append(tl); }
       const show = () => {
         tip.innerHTML = "";

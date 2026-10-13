@@ -132,7 +132,7 @@ window.AIMCharts = function (getLang, getT) {
     const tip = document.createElement("div"); tip.className = "tip";
     rows.forEach((r, i) => {
       const x0 = m.l + i * step + 1, v = r[key], top = y(v), h = y(0) - top;
-      if (r.period.endsWith("-01") || r.period.length === 4) {
+      if (r.period.endsWith("-01") || (r.period.length === 4 && (rows.length - 1 - i) % Math.ceil(30 / step) === 0)) {
         const lab = svgEl("text", { x: x0, y: H - 8 }); lab.textContent = r.period.slice(0, 4); svg.append(lab);
       }
       const g = svgEl("g", { tabindex: 0 });
@@ -225,7 +225,7 @@ window.AIMCharts = function (getLang, getT) {
         acc += v;
       });
       const every = Math.ceil(34 / step);
-      if (i % every === 0 || i === labels.length - 1) { const xl = svgEl("text", { x: cx, y: H - 8, "text-anchor": "middle" }); xl.textContent = step < 34 && lb.length === 4 ? "’" + lb.slice(2) : lb; svg.append(xl); }
+      if ((labels.length - 1 - i) % every === 0) { const xl = svgEl("text", { x: cx, y: H - 8, "text-anchor": "middle" }); xl.textContent = step < 34 && lb.length === 4 ? "’" + lb.slice(2) : lb; svg.append(xl); }
       if (tots[i] && step >= 38) { const tl = svgEl("text", { x: cx, y: y(tots[i]) - 5, "text-anchor": "middle", style: "fill:var(--ink-2);font-size:11px" }); tl.textContent = fmt(tots[i]); g.append(tl); }
       const show = () => {
         tip.innerHTML = "";

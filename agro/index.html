@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agriculture · Argentina Invest Monitor</title>
+<meta name="description" content="Argentina's grain and oilseed harvest for investors: production by crop, province and department on a map, Córdoba, export dollar inflows and international prices, from official public data.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d4a57'/%3E%3Cpath d='M5 10.5h22M5 25.5h22' stroke='%23fff' stroke-opacity='.4' stroke-width='1.6' stroke-linecap='round'/%3E%3Crect x='5' y='15.5' width='22' height='5.4' rx='1.4' fill='%23d9a441'/%3E%3Cpath d='M10 5.5v10.2q0 2.5 2.5 2.5H25' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Literata:opsz,wght@7..72,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="mark" href="/">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Argentina Invest Monitor
+      </a>
+      <span class="crumb-sep" aria-hidden="true">/</span>
+      <span class="crumb-here" data-i18n="crumbHere">Agriculture</span>
+    </nav>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+  </header>
+  <nav class="secnav" aria-label="Sections">
+    <ol>
+      <li><a href="#top" data-i18n="navHarvest">Harvest</a></li>
+      <li><a href="#mapSection" data-i18n="navMap">Map</a></li>
+      <li><a href="#cropSection" data-i18n="navCrops">Crops</a></li>
+      <li><a href="#provSection" data-i18n="navProv">Provinces and Córdoba</a></li>
+      <li><a href="#fxSection" data-i18n="navFx">Export dollars</a></li>
+      <li><a href="#priceSection" data-i18n="navPrices">Prices</a></li>
+    </ol>
+  </nav>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <h1 id="headline" data-i18n="loading">Loading harvest data…</h1>
+      <p class="lede" data-i18n="lede">Planted area, harvest and yields by crop, province and department, the dollars the grain trade brings in and the international prices that set them, from official open data, updated automatically.</p>
+      <ul class="facts" id="facts"></ul>
+      <div class="chart-block">
+        <div class="chart-head">
+          <h2 data-i18n="histTitle">Grain and oilseed harvest by season, million tonnes</h2>
+          <p id="histRange"></p>
+        </div>
+        <ul class="legend" id="histLegend"></ul>
+        <div class="chart" id="histChart"></div>
+        <p class="note" id="histNote"></p>
+      </div>
+    </section>
+
+    <section class="section chapter" id="mapSection" aria-labelledby="mapTitle">
+      <h2 id="mapTitle" data-i18n="mapTitle">Where the harvest comes from</h2>
+      <p class="section-lede" id="mapLede"></p>
+      <div class="map-tools">
+        <div class="seg" role="group" aria-label="Crop" id="cropSeg"></div>
+      </div>
+      <div class="map-wrap"><div id="map" role="region" aria-label="Map"></div><div class="map-empty" id="mapEmpty" data-i18n="mapLoading">Loading map…</div></div>
+      <div class="map-legend" id="mapLegend"></div>
+      <p class="note" id="mapNote"></p>
+    </section>
+
+    <section class="section chapter" id="cropSection" hidden aria-labelledby="cropTitle">
+      <h2 id="cropTitle" data-i18n="cropTitle">Crop by crop</h2>
+      <p class="section-lede" id="cropLede"></p>
+      <div class="table-wrap">
+        <table id="cropTable">
+          <thead><tr>
+            <th scope="col" data-i18n="thCrop">Crop</th>
+            <th scope="col" data-i18n="thPlanted">Planted, million ha</th>
+            <th scope="col" data-i18n="thProd">Harvest, million t</th>
+            <th scope="col" data-i18n="thYield">Yield, kg/ha</th>
+            <th scope="col" data-i18n="thVsPrev">Harvest vs previous season</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="small-multiples" id="cropGrid"></div>
+    </section>
+
+    <section class="section chapter" id="provSection" hidden aria-labelledby="provTitle">
+      <h2 id="provTitle" data-i18n="provTitle">Provinces, and Córdoba up close</h2>
+      <p class="section-lede" id="provLede"></p>
+      <div class="two" style="margin-top:18px">
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="provChartTitle">Share of the national harvest by province</h2></div>
+          <div class="chart" id="provChart" style="margin-top:12px"></div>
+        </div>
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="cbaTitle">Córdoba's largest producing departments</h2></div>
+          <div class="table-wrap"><table class="ops-mini" id="cbaTable">
+            <thead><tr><th scope="col" data-i18n="thDept">Department</th><th scope="col" data-i18n="thSoy">Soy, kt</th><th scope="col" data-i18n="thCorn">Corn, kt</th><th scope="col" data-i18n="thWheat">Wheat, kt</th><th scope="col" data-i18n="thTotal">Total, kt</th></tr></thead>
+            <tbody></tbody></table></div>
+        </div>
+      </div>
+      <div style="margin-top:30px">
+        <div class="chart-head"><h2 style="font-size:17px" data-i18n="topDeptTitle">The 15 largest producing departments in the country</h2></div>
+        <div class="chart" id="deptChart" style="margin-top:12px"></div>
+      </div>
+      <p class="note" id="provNote"></p>
+    </section>
+
+    <section class="section chapter" id="fxSection" hidden aria-labelledby="fxTitle">
+      <h2 id="fxTitle" data-i18n="fxTitle">Dollars from grain exports</h2>
+      <p class="section-lede" id="fxLede"></p>
+      <ul class="facts" id="fxFacts"></ul>
+      <div class="chart-head" style="margin-top:24px"><h2 style="font-size:17px" data-i18n="fxChartTitle">Foreign currency sold by grain and oilseed exporters, USD million per month</h2></div>
+      <div class="chart" id="fxChart"></div>
+      <p class="note" id="fxNote"></p>
+    </section>
+
+    <section class="section chapter" id="priceSection" hidden aria-labelledby="priceTitle">
+      <h2 id="priceTitle" data-i18n="priceTitle">International prices of what Argentina sells</h2>
+      <p class="section-lede" data-i18n="priceLede">Monthly prices in US dollars per tonne. Argentina is the world's largest exporter of soybean meal and soybean oil, so these prices drive farm income and export taxes.</p>
+      <div class="small-multiples" id="priceGrid"></div>
+      <p class="note" id="priceNote"></p>
+    </section>
+
+    <section class="signup" aria-labelledby="signupTitle">
+      <div>
+        <h2 id="signupTitle" data-i18n="signupTitle">The week in Argentine investment, in five minutes</h2>
+        <p data-i18n="signupText">A short weekly email with the numbers that moved, new RIGI approvals and the regulations that matter for investors.</p>
+      </div>
+      <form id="signupForm" novalidate>
+        <label class="sr" for="email" data-i18n="emailLabel">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com">
+        <button type="submit" data-i18n="subscribe">Subscribe</button>
+        <p class="msg" id="signupMsg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="cols">
+      <div class="about">
+        <a class="mark" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Argentina Invest Monitor
+        </a>
+        <p data-i18n="fAbout">Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.</p>
+      </div>
+      <div>
+        <h2 data-i18n="fSectors">Sectors</h2>
+        <ul>
+          <li><a href="/vaca-muerta/" data-i18n="fEnergy">Energy: Vaca Muerta</a></li>
+          <li><a href="/mineria/" data-i18n="fMining">Mining</a></li>
+          <li><a href="/agro/" data-i18n="fAgro">Agriculture</a></li>
+          <li class="soon" data-i18n="fFinance">Finance and banking (in development)</li>
+          <li class="soon" data-i18n="fIndustry">Industry (in development)</li>
+        </ul>
+      </div>
+      <div>
+        <h2 data-i18n="fResources">Resources</h2>
+        <ul>
+          <li><a href="/metodologia/" data-i18n="fMethod">Methodology and sources</a></li>
+          <li><a href="/data/vm_monthly.csv" download data-i18n="fCsv">Download Vaca Muerta data (CSV)</a></li>
+          <li><a href="#signupTitle" data-i18n="fNewsletter">Weekly newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p data-i18n="footSources">All figures come from public, official sources cited on each page.</p>
+      <p data-i18n="disclaimer">For information only. Not investment advice.</p>
+    </div>
+  </footer>
+</div>
+
+<script src="/assets/charts.js"></script>
+<script>
+(() => {
+  const T = {
+    en: {
+      crumbHere: "Agriculture", loading: "Loading harvest data…",
+      lede: "Planted area, harvest and yields by crop, province and department, the dollars the grain trade brings in and the international prices that set them, from official open data, updated automatically.",
+      headline: (v, c) => `Argentina harvested ${v} million tonnes of grains and oilseeds in the ${c} season.`,
+      fCba: "of the harvest comes from Córdoba", fSoy: "million tonnes of soy", fCorn: "million tonnes of corn", fWheat: "million tonnes of wheat", fFx: "USD million sold by grain exporters, last 12 months",
+      navHarvest: "Harvest", navMap: "Map", navCrops: "Crops", navProv: "Provinces and Córdoba", navFx: "Export dollars", navPrices: "Prices",
+      histTitle: "Grain and oilseed harvest by season, million tonnes", range: (a, b) => `${a} to ${b}`,
+      histNote: (src) => `Source: ${src}. Soy, corn, wheat, sunflower, barley, sorghum and peanut. Final estimates by season; the current season is added when the Secretariat closes it.`,
+      crops: { soy: "Soy", corn: "Corn", wheat: "Wheat", sunflower: "Sunflower", barley: "Barley", sorghum: "Sorghum", peanut: "Peanut" },
+      all: "All crops",
+      mapTitle: "Where the harvest comes from", mapLede: (n, c) => `Each circle is one of the ${n} departments that harvested grains or oilseeds in ${c}, sized by tonnes. Tap one for its harvest by crop.`,
+      mapLoading: "Loading map…", mapFail: "The map could not be loaded. The tables below have the same figures.",
+      mapNote: (src) => `Source: ${src}; department centroids from the Georef API (Argentina's official geographic service). Basemap © OpenFreeMap, OpenStreetMap contributors.`,
+      lgSize: "Circle size: tonnes harvested", lgColor: "Colour: main crop in the department",
+      cropTitle: "Crop by crop", cropLede: (c) => `Planted area, harvest and yield in the ${c} season, and how each crop moved against the previous one.`,
+      thCrop: "Crop", thPlanted: "Planted, million ha", thProd: "Harvest, million t", thYield: "Yield, kg/ha", thVsPrev: "Harvest vs previous season",
+      smTitle: (c) => `${c}: harvest by season, million tonnes`,
+      provTitle: "Provinces, and Córdoba up close",
+      provLede: (p1, s1, s2, leads, topDept) => `${p1} and Córdoba produce ${s1}% and ${s2}% of the national harvest.` + (leads ? ` Córdoba is the largest producer of ${leads}.` : "") + (topDept ? ` The country's largest producing department, ${topDept}, is in Córdoba.` : ""),
+      and: "and",
+      provChartTitle: "Share of the national harvest by province", cbaTitle: "Córdoba's largest producing departments",
+      thDept: "Department", thSoy: "Soy, kt", thCorn: "Corn, kt", thWheat: "Wheat, kt", thTotal: "Total, kt",
+      topDeptTitle: "The 15 largest producing departments in the country",
+      provNote: (src) => `Source: ${src}. kt: thousand tonnes.`,
+      fxTitle: "Dollars from grain exports",
+      fxLede: (v, d) => `Grain and oilseed exporters sold USD ${v} million in foreign currency over the last 12 months, ${d} the previous 12. It is the largest single source of dollars in the economy.`,
+      more: (p) => `${p} more than`, less: (p) => `${p} less than`,
+      fx1: (m) => `USD million, ${m}`, fx2: "USD million, last 12 months", fx3: "vs the previous 12 months",
+      fxChartTitle: "Foreign currency sold by grain and oilseed exporters, USD million per month",
+      fxNote: (src) => `Source: ${src}. Reported by the chambers of oilseed crushers and grain exporters (CIARA-CEC).`,
+      priceTitle: "International prices of what Argentina sells",
+      priceLede: "Monthly prices in US dollars per tonne. Argentina is the world's largest exporter of soybean meal and soybean oil, so these prices drive farm income and export taxes.",
+      pNames: { soybeans: "Soybeans", soybean_meal: "Soybean meal", soybean_oil: "Soybean oil", maize: "Corn (maize)", wheat: "Wheat (US hard red winter)", sunflower_oil: "Sunflower oil" },
+      priceNote: (src) => `Source: ${src}. USD per tonne, monthly averages of international reference markets.`,
+      signupTitle: "The week in Argentine investment, in five minutes", signupText: "A short weekly email with the numbers that moved, new RIGI approvals and the regulations that matter for investors.",
+      emailLabel: "Email address", subscribe: "Subscribe", ok: "Done. The first issue arrives next week.", badEmail: "That email address does not look right.", notReady: "Sign-ups are not open yet.", fail: "Something went wrong. Try again in a minute.",
+      fAbout: "Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.", fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining", fAgro: "Agriculture", fFinance: "Finance and banking (in development)", fIndustry: "Industry (in development)", fResources: "Resources", fMethod: "Methodology and sources", fCsv: "Download Vaca Muerta data (CSV)", fNewsletter: "Weekly newsletter", disclaimer: "For information only. Not investment advice.", footSources: "All figures come from public, official sources cited on each page."
+    },
+    es: {
+      crumbHere: "Agro", loading: "Cargando datos de la cosecha…",
+      lede: "Superficie sembrada, cosecha y rindes por cultivo, provincia y departamento, los dólares que trae el comercio de granos y los precios internacionales que los definen, con datos abiertos oficiales, actualizados en forma automática.",
+      headline: (v, c) => `La Argentina cosechó ${v} millones de toneladas de granos y oleaginosas en la campaña ${c}.`,
+      fCba: "de la cosecha sale de Córdoba", fSoy: "millones de toneladas de soja", fCorn: "millones de toneladas de maíz", fWheat: "millones de toneladas de trigo", fFx: "millones de USD liquidados por la agroexportación, últimos 12 meses",
+      navHarvest: "Cosecha", navMap: "Mapa", navCrops: "Cultivos", navProv: "Provincias y Córdoba", navFx: "Dólares del agro", navPrices: "Precios",
+      histTitle: "Cosecha de granos y oleaginosas por campaña, millones de toneladas", range: (a, b) => `${a} a ${b}`,
+      histNote: (src) => `Fuente: ${src}. Soja, maíz, trigo, girasol, cebada, sorgo y maní. Estimaciones finales por campaña; la campaña en curso se suma cuando la Secretaría la cierra.`,
+      crops: { soy: "Soja", corn: "Maíz", wheat: "Trigo", sunflower: "Girasol", barley: "Cebada", sorghum: "Sorgo", peanut: "Maní" },
+      all: "Todos los cultivos",
+      mapTitle: "De dónde sale la cosecha", mapLede: (n, c) => `Cada círculo es uno de los ${n} departamentos que cosecharon granos u oleaginosas en ${c}, con tamaño según las toneladas. Tocá uno para ver su cosecha por cultivo.`,
+      mapLoading: "Cargando mapa…", mapFail: "No se pudo cargar el mapa. Las tablas de abajo tienen las mismas cifras.",
+      mapNote: (src) => `Fuente: ${src}; centroides de los departamentos de la API Georef (servicio oficial de normalización geográfica). Mapa base © OpenFreeMap, colaboradores de OpenStreetMap.`,
+      lgSize: "Tamaño: toneladas cosechadas", lgColor: "Color: cultivo principal del departamento",
+      cropTitle: "Cultivo por cultivo", cropLede: (c) => `Superficie sembrada, cosecha y rinde en la campaña ${c}, y cómo se movió cada cultivo frente a la anterior.`,
+      thCrop: "Cultivo", thPlanted: "Sembrado, millones de ha", thProd: "Cosecha, millones de t", thYield: "Rinde, kg/ha", thVsPrev: "Cosecha vs. campaña anterior",
+      smTitle: (c) => `${c}: cosecha por campaña, millones de toneladas`,
+      provTitle: "Provincias, y Córdoba de cerca",
+      provLede: (p1, s1, s2, leads, topDept) => `${p1} y Córdoba producen el ${s1}% y el ${s2}% de la cosecha nacional.` + (leads ? ` Córdoba es la principal productora de ${leads}.` : "") + (topDept ? ` El departamento más productivo del país, ${topDept}, está en Córdoba.` : ""),
+      and: "y",
+      provChartTitle: "Participación en la cosecha nacional por provincia", cbaTitle: "Los departamentos más productivos de Córdoba",
+      thDept: "Departamento", thSoy: "Soja, kt", thCorn: "Maíz, kt", thWheat: "Trigo, kt", thTotal: "Total, kt",
+      topDeptTitle: "Los 15 departamentos más productivos del país",
+      provNote: (src) => `Fuente: ${src}. kt: miles de toneladas.`,
+      fxTitle: "Los dólares de la agroexportación",
+      fxLede: (v, d) => `Las exportadoras de granos y oleaginosas liquidaron USD ${v} millones en los últimos 12 meses, ${d} los 12 anteriores. Es la principal fuente de dólares de la economía.`,
+      more: (p) => `${p} más que`, less: (p) => `${p} menos que`,
+      fx1: (m) => `millones de USD, ${m}`, fx2: "millones de USD, últimos 12 meses", fx3: "vs. los 12 meses anteriores",
+      fxChartTitle: "Divisas liquidadas por las exportadoras de granos y oleaginosas, millones de USD por mes",
+      fxNote: (src) => `Fuente: ${src}. Informado por las cámaras de la industria aceitera y exportadoras de cereales (CIARA-CEC).`,
+      priceTitle: "Precios internacionales de lo que vende la Argentina",
+      priceLede: "Precios mensuales en dólares por tonelada. La Argentina es el principal exportador mundial de harina y aceite de soja, así que estos precios mueven el ingreso del campo y la recaudación por retenciones.",
+      pNames: { soybeans: "Soja", soybean_meal: "Harina de soja", soybean_oil: "Aceite de soja", maize: "Maíz", wheat: "Trigo (duro rojo de invierno, EE. UU.)", sunflower_oil: "Aceite de girasol" },
+      priceNote: (src) => `Fuente: ${src}. USD por tonelada, promedios mensuales de los mercados internacionales de referencia.`,
+      signupTitle: "La semana de las inversiones en Argentina, en cinco minutos", signupText: "Un email corto por semana con los números que se movieron, las nuevas aprobaciones RIGI y las normas que importan a los inversores.",
+      emailLabel: "Email", subscribe: "Suscribirme", ok: "Listo, quedaste suscripto. El primer envío llega la semana que viene.", badEmail: "Ese email no parece correcto.", notReady: "Las suscripciones todavía no están abiertas.", fail: "Algo salió mal. Probá de nuevo en un minuto.",
+      fAbout: "Los datos públicos oficiales de la Argentina sobre energía, minería, agro, finanzas e industria, organizados para inversores y actualizados en forma automática.", fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería", fAgro: "Agro", fFinance: "Finanzas y bancos (en desarrollo)", fIndustry: "Industria (en desarrollo)", fResources: "Recursos", fMethod: "Metodología y fuentes", fCsv: "Descargar datos de Vaca Muerta (CSV)", fNewsletter: "Newsletter semanal", disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.", footSources: "Todas las cifras provienen de fuentes públicas y oficiales, citadas en cada página."
+    },
+  };
+  const CROPS = ["soy", "corn", "wheat", "sunflower", "barley", "sorghum", "peanut"];
+  const CVAR = { soy: "var(--soy)", corn: "var(--corn)", wheat: "var(--wheat)", sunflower: "var(--sunflower)", barley: "var(--barley)", sorghum: "var(--sorghum)", peanut: "var(--peanut)" };
+  const CHEX = { light: { soy: "#6f8a1c", corn: "#c99a0e", wheat: "#a8743f", sunflower: "#d0611f", barley: "#8c7a5b", sorghum: "#8e3b2e", peanut: "#b08d63" },
+                 dark: { soy: "#a3c24a", corn: "#e6bd3c", wheat: "#d29b62", sunflower: "#f08a4b", barley: "#b8a688", sorghum: "#d2735f", peanut: "#d4b48b" } };
+  let saved = null;
+  try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
+  let lang = saved || ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en");
+  let D = null, mapState = "idle", map = null, crop = "all";
+  const C = AIMCharts(() => lang, () => T[lang]);
+  const { fmt, pct, monthName, esc } = C;
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const srcLink = s => `<a href="${esc(s.url)}" rel="noopener">${esc(s.name)}</a>${s.license ? ", " + esc(s.license) : ""}`;
+  const isDark = () => matchMedia("(prefers-color-scheme: dark)").matches;
+  const mt = t => t / 1e6;
+
+  function render() {
+    const t = T[lang];
+    document.documentElement.lang = lang;
+    document.title = (lang === "es" ? "Agro" : "Agriculture") + " · Argentina Invest Monitor";
+    $$("[data-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    $$("[data-i18n]").forEach(el => { const v = t[el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
+    $("#email").placeholder = lang === "es" ? "vos@empresa.com" : "you@company.com";
+    $("#cropSeg").innerHTML = ["all", "soy", "corn", "wheat", "sunflower"].map(c => `<button type="button" data-crop="${c}" aria-pressed="${c === crop}">${esc(c === "all" ? t.all : t.crops[c])}</button>`).join("");
+    $$("[data-crop]").forEach(b => b.addEventListener("click", () => { crop = b.dataset.crop; $$("[data-crop]").forEach(x => x.setAttribute("aria-pressed", String(x === b))); if (mapState === "ready") { map.getSource("deps").setData(geo()); mapLegend(); } }));
+    if (!D) return;
+    const K = D.crops, FX = D.fx_settlements, PR = D.prices && D.prices.prices;
+
+    if (K) {
+      const last = c => K.national[c][K.national[c].length - 1];
+      $("#headline").textContent = t.headline(fmt(mt(K.total_t), 1), K.campaign);
+      const f = [];
+      if (K.cordoba) f.push([fmt(K.cordoba.share_pct, 1) + "%", t.fCba]);
+      f.push([fmt(mt(last("soy").production_t), 1), t.fSoy], [fmt(mt(last("corn").production_t), 1), t.fCorn], [fmt(mt(last("wheat").production_t), 1), t.fWheat]);
+      if (FX) f.push([fmt(FX.last_12m), t.fFx]);
+      $("#facts").innerHTML = f.map(([v, l]) => `<li><strong>${esc(v)}</strong>${esc(l)}</li>`).join("");
+      // Cosecha por campaña, apilada por cultivo
+      const camps = K.national.soy.map(x => x.campaign).slice(-20);
+      const ser = CROPS.map(c => ({ name: t.crops[c], color: CVAR[c], values: camps.map(cp => { const x = K.national[c].find(y => y.campaign === cp); return x ? +(mt(x.production_t)).toFixed(2) : 0; }) }));
+      $("#histLegend").innerHTML = ser.map(x => `<li><i style="background:${x.color}"></i>${esc(x.name)}</li>`).join("");
+      $("#histRange").textContent = t.range(camps[0], camps[camps.length - 1]);
+      C.stackedColumns($("#histChart"), camps.map(c => innerWidth < 600 ? "’" + c.slice(7) : c.slice(0, 4) + "/" + c.slice(7)), ser, lang === "es" ? "Mt" : "Mt", t.histTitle);
+      $("#histNote").innerHTML = t.histNote(srcLink(K.source));
+      $("#mapLede").textContent = t.mapLede(fmt(K.departments.length), K.campaign);
+      $("#mapNote").innerHTML = t.mapNote(srcLink(K.source));
+
+      // Cultivos
+      $("#cropSection").hidden = false;
+      $("#cropLede").textContent = t.cropLede(K.campaign);
+      $("#cropTable tbody").innerHTML = CROPS.map(c => {
+        const s = K.national[c], a = s[s.length - 1], b = s[s.length - 2];
+        const d = b && b.production_t ? (a.production_t / b.production_t - 1) * 100 : null;
+        return `<tr><td><span class="dot" style="background:${CVAR[c]}"></span>${esc(t.crops[c])}</td><td>${fmt(a.planted_ha / 1e6, 2)}</td><td>${fmt(mt(a.production_t), 1)}</td><td>${fmt(a.yield_kg_ha)}</td><td class="${d > 0 ? "delta-up" : d < 0 ? "delta-down" : ""}">${pct(d)}</td></tr>`;
+      }).join("");
+      const big = ["soy", "corn", "wheat", "sunflower"];
+      $("#cropGrid").innerHTML = big.map(c => `<div><div class="chart-head"><h2 style="font-size:17px">${esc(t.smTitle(t.crops[c]))}</h2></div><div class="chart" id="sm_${c}"></div></div>`).join("");
+      big.forEach(c => C.columnChart($("#sm_" + c), K.national[c].slice(-20).map(x => ({ period: x.campaign.slice(0, 4), v: +(mt(x.production_t)).toFixed(2), label: x.campaign })), "v", "Mt", t.smTitle(t.crops[c])));
+      big.forEach(c => $$(`#sm_${c} path`).forEach(p => p.setAttribute("fill", CVAR[c])));
+
+      // Provincias y Córdoba
+      $("#provSection").hidden = false;
+      const P = K.provinces, p1 = P[0];
+      const leads = CROPS.filter(c => { const top = P.slice().sort((a, b) => (b.by_crop[c] || 0) - (a.by_crop[c] || 0))[0]; return top && top.name === "Córdoba"; }).map(c => t.crops[c].toLowerCase());
+      const leadsTxt = leads.length > 1 ? leads.slice(0, -1).join(", ") + " " + t.and + " " + leads[leads.length - 1] : leads[0] || "";
+      const td = K.departments[0];
+      $("#provLede").textContent = t.provLede(p1.name, fmt(p1.share_pct, 1), fmt(K.cordoba ? K.cordoba.share_pct : 0, 1), leadsTxt, td && td.province === "Córdoba" ? td.name : "");
+      C.hbar($("#provChart"), P.slice(0, 10).map(p => ({ name: p.name, v: p.share_pct, color: p.name === "Córdoba" ? "var(--agro)" : "var(--ink-3)", sub: `${fmt(mt(p.production_t), 1)} Mt` })), { unit: "%", digits: 1, labelWidth: 140, valueLabel: o => fmt(o.v, 1) + "%" });
+      const kt = v => fmt((v || 0) / 1000);
+      $("#cbaTable tbody").innerHTML = K.departments.filter(d => d.province === "Córdoba").slice(0, 12).map(d =>
+        `<tr><td>${esc(d.name)}</td><td>${kt(d.by_crop.soy)}</td><td>${kt(d.by_crop.corn)}</td><td>${kt(d.by_crop.wheat)}</td><td><strong>${kt(d.total_t)}</strong></td></tr>`).join("");
+      C.hbar($("#deptChart"), K.departments.slice(0, 15).map(d => ({ name: `${d.name} (${d.province === "Buenos Aires" ? "BA" : d.province})`, v: d.total_t / 1000, color: d.province === "Córdoba" ? "var(--agro)" : "var(--ink-3)" })), { unit: "kt", labelWidth: innerWidth < 600 ? 170 : 230 });
+      $("#provNote").innerHTML = t.provNote(srcLink(K.source));
+    }
+
+    if (FX) {
+      $("#fxSection").hidden = false;
+      const d = (FX.last_12m / FX.prev_12m - 1) * 100;
+      $("#fxLede").textContent = t.fxLede(fmt(FX.last_12m), d >= 0 ? t.more(pct(d).replace("+", "")) : t.less(pct(d).replace("−", "")));
+      const lm = FX.monthly[FX.monthly.length - 1];
+      $("#fxFacts").innerHTML = [[fmt(lm.usd_m), t.fx1(monthName(lm.period))], [fmt(FX.last_12m), t.fx2], [pct(d), t.fx3, d]].map(([a, b, x]) => `<li><strong class="${x > 0 ? "delta-up" : x < 0 ? "delta-down" : ""}">${esc(a)}</strong>${esc(b)}</li>`).join("");
+      C.columnChart($("#fxChart"), FX.monthly.slice(-48).map(x => ({ period: x.period, v: x.usd_m })), "v", "USD M", t.fxChartTitle);
+      $$("#fxChart path").forEach(p => p.setAttribute("fill", "var(--agro)"));
+      $("#fxNote").innerHTML = t.fxNote(srcLink(FX.source));
+    }
+
+    if (PR) {
+      $("#priceSection").hidden = false;
+      const keys = ["soybeans", "soybean_meal", "soybean_oil", "maize", "wheat", "sunflower_oil"].filter(k => PR[k]);
+      const cols = { soybeans: "var(--soy)", soybean_meal: "var(--soy)", soybean_oil: "var(--soy)", maize: "var(--corn)", wheat: "var(--wheat)", sunflower_oil: "var(--sunflower)" };
+      $("#priceGrid").innerHTML = keys.map(k => `<div><div class="chart-head"><h2 style="font-size:17px">${esc(t.pNames[k])}</h2><p>${esc(monthName(PR[k].monthly[PR[k].monthly.length - 1].period, false))}</p></div><div class="chart" id="pc_${k}"></div></div>`).join("");
+      keys.forEach(k => C.lineChart($("#pc_" + k), PR[k].monthly.filter(x => x.period >= "2015-01"), "v", cols[k], "USD/t", 0, 220));
+      $("#priceNote").innerHTML = t.priceNote(srcLink(D.prices.source));
+    }
+    syncNav(); spy();
+    if (mapState === "ready") mapLegend();
+  }
+
+  // Mapa por departamento
+  function loadScript(src) { return new Promise((ok, ko) => { const s = document.createElement("script"); s.src = src; s.onload = ok; s.onerror = ko; document.head.append(s); }); }
+  function loadCss(href) { const l = document.createElement("link"); l.rel = "stylesheet"; l.href = href; document.head.append(l); }
+  function geo() {
+    const deps = D.crops.departments.filter(d => d.lat != null);
+    return { type: "FeatureCollection", features: deps.map((d, i) => {
+      const v = crop === "all" ? d.total_t : (d.by_crop[crop] || 0);
+      const main = Object.entries(d.by_crop).sort((a, b) => b[1] - a[1])[0][0];
+      return { type: "Feature", geometry: { type: "Point", coordinates: [d.lon, d.lat] }, properties: { i: D.crops.departments.indexOf(d), v, c: crop === "all" ? main : crop } };
+    }).filter(f => f.properties.v > 0) };
+  }
+  function mapLegend() {
+    const t = T[lang], pal = CHEX[isDark() ? "dark" : "light"];
+    const cs = crop === "all" ? ["soy", "corn", "wheat", "sunflower", "peanut"] : [crop];
+    $("#mapLegend").innerHTML = (crop === "all" ? `<span>${esc(t.lgColor)}:</span>` : "") + cs.map(c => `<span><b style="background:${pal[c]};border-radius:50%;width:11px"></b>${esc(t.crops[c])}</span>`).join("") + `<span>${esc(t.lgSize)}</span>`;
+  }
+  async function initMap() {
+    if (mapState !== "idle" || !D || !D.crops) return;
+    mapState = "loading";
+    try {
+      loadCss("https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css");
+      await loadScript("https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js");
+      map = new maplibregl.Map({ container: "map", style: "https://tiles.openfreemap.org/styles/positron",
+        bounds: [[-68.5, -40.5], [-57.0, -25.0]], fitBoundsOptions: { padding: 20 }, attributionControl: { compact: true }, cooperativeGestures: true });
+      map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+      map.on("load", () => {
+        $("#mapEmpty").hidden = true;
+        const pal = CHEX[isDark() ? "dark" : "light"];
+        map.addSource("deps", { type: "geojson", data: geo() });
+        map.addLayer({ id: "deps", type: "circle", source: "deps", paint: {
+          "circle-color": ["match", ["get", "c"], ...Object.entries(pal).flat(), "#999"],
+          "circle-radius": ["interpolate", ["linear"], ["sqrt", ["get", "v"]], 0, 1.5, 500, 7, 2400, 24],
+          "circle-opacity": 0.78, "circle-stroke-color": "#ffffff", "circle-stroke-width": 0.8 } });
+        map.on("click", "deps", e => {
+          const d = D.crops.departments[e.features[0].properties.i], t = T[lang];
+          const rows = Object.entries(d.by_crop).sort((a, b) => b[1] - a[1]).map(([c, v]) => `<div>${esc(t.crops[c] || c)}: <strong>${fmt(v / 1000)}</strong> kt</div>`).join("");
+          new maplibregl.Popup({ maxWidth: "260px" }).setLngLat([d.lon, d.lat]).setHTML(`<h4>${esc(d.name)}</h4><div class="muted">${esc(d.province)} · ${fmt(d.total_t / 1000)} kt</div><div style="margin-top:6px">${rows}</div>`).addTo(map);
+        });
+        map.on("mouseenter", "deps", () => { map.getCanvas().style.cursor = "pointer"; });
+        map.on("mouseleave", "deps", () => { map.getCanvas().style.cursor = ""; });
+        mapState = "ready"; mapLegend();
+      });
+    } catch (err) { mapState = "failed"; $("#mapEmpty").textContent = T[lang].mapFail; }
+  }
+
+  function syncNav() { $$(".secnav a").forEach(a => { const el = document.getElementById(a.getAttribute("href").slice(1)); a.parentElement.hidden = !el || el.hidden; }); }
+  let tick = false;
+  function spy() {
+    tick = false;
+    const links = $$(".secnav a").filter(a => !a.parentElement.hidden);
+    let cur = links[0];
+    for (const a of links) { const el = document.getElementById(a.getAttribute("href").slice(1)); if (el && el.getBoundingClientRect().top - 120 <= 0) cur = a; }
+    links.forEach(a => a.setAttribute("aria-current", a === cur ? "true" : "false"));
+    if (cur && innerWidth < 900) { const bar = $(".secnav ol"), r = cur.getBoundingClientRect(), br = bar.getBoundingClientRect(); if (r.left < br.left || r.right > br.right) bar.scrollTo({ left: cur.offsetLeft - 16 }); }
+  }
+  addEventListener("scroll", () => { if (!tick) { tick = true; requestAnimationFrame(spy); } }, { passive: true });
+  $$("[data-lang]").forEach(b => b.addEventListener("click", () => { lang = b.dataset.lang; try { localStorage.setItem("vm-lang", lang); } catch (e) {} render(); }));
+  let rz; addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(render, 200); });
+
+  $("#signupForm").addEventListener("submit", async e => {
+    e.preventDefault();
+    const t = T[lang], msg = $("#signupMsg"), btn = e.target.querySelector("button"), email = $("#email").value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { msg.textContent = t.badEmail; return; }
+    btn.disabled = true;
+    try {
+      const r = await fetch("/api/subscribe", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email, lang }) });
+      const j = await r.json().catch(() => ({}));
+      if (r.ok && j.ok) { msg.textContent = t.ok; e.target.reset(); }
+      else msg.textContent = j.error === "email" ? t.badEmail : j.error === "not_configured" ? t.notReady : t.fail;
+    } catch (err) { msg.textContent = t.fail; }
+    btn.disabled = false;
+  });
+
+  render();
+  fetch("/data/agro.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : null).catch(() => null)
+    .then(d => { D = d; try { render(); } catch (e) { console.error(e); } if (D) initMap(); });
+})();
+</script>
+</body>
+</html>
