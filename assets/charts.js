@@ -28,6 +28,16 @@ window.AIMCharts = function (getLang, getT) {
   // Year labels on a time axis: only at January (or the first point), at least 46px apart.
   function yearTicks(svg, periods, x, yPos) {
     let lastX = -Infinity;
+    if (periods[0] && periods[0].length === 10 && (new Date(periods[periods.length - 1]) - new Date(periods[0])) / 864e5 > 540) {   // varios años de datos diarios: un tick por año
+      periods.forEach((p, i) => {
+        if (!i || p.slice(0, 4) === periods[i - 1].slice(0, 4)) return;
+        const px = x(i);
+        if (px - lastX < 46) return;
+        const lab = svgEl("text", { x: px, y: yPos, "text-anchor": "middle" });
+        lab.textContent = p.slice(0, 4); svg.append(lab); lastX = px;
+      });
+      return;
+    }
     if (periods[0] && periods[0].length === 10) {   // daily dates: a tick at each new month
       periods.forEach((p, i) => {
         if (i && p.slice(0, 7) === periods[i - 1].slice(0, 7)) return;

@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finance · Argentina Invest Monitor</title>
+<meta name="description" content="Argentina's macro and banking numbers for investors: central bank reserves, inflation, interest rates, the dollar, deposits and credit, economic activity and listed banks, from official public data.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d4a57'/%3E%3Cpath d='M5 10.5h22M5 25.5h22' stroke='%23fff' stroke-opacity='.4' stroke-width='1.6' stroke-linecap='round'/%3E%3Crect x='5' y='15.5' width='22' height='5.4' rx='1.4' fill='%23d9a441'/%3E%3Cpath d='M10 5.5v10.2q0 2.5 2.5 2.5H25' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Literata:opsz,wght@7..72,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="mark" href="/">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Argentina Invest Monitor
+      </a>
+      <span class="crumb-sep" aria-hidden="true">/</span>
+      <span class="crumb-here" data-i18n="crumbHere">Finance</span>
+    </nav>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+  </header>
+  <nav class="secnav" aria-label="Sections">
+    <ol>
+      <li><a href="#top" data-i18n="navRes">Reserves</a></li>
+      <li><a href="#inflSection" data-i18n="navInfl">Inflation</a></li>
+      <li><a href="#rateSection" data-i18n="navRates">Interest rates</a></li>
+      <li><a href="#fxSection" data-i18n="navFx">Dollar</a></li>
+      <li><a href="#creditSection" data-i18n="navCredit">Deposits and credit</a></li>
+      <li><a href="#actSection" data-i18n="navAct">Activity</a></li>
+      <li><a href="#bankSection" data-i18n="navBanks">Listed banks</a></li>
+    </ol>
+  </nav>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <h1 id="headline" data-i18n="loading">Loading financial data…</h1>
+      <p class="lede" data-i18n="lede">Central bank reserves, inflation, interest rates, the dollar, deposits, credit and economic activity, straight from the Central Bank (BCRA) and INDEC, updated every day.</p>
+      <ul class="facts" id="facts"></ul>
+      <div class="chart-block">
+        <div class="chart-head"><h2 data-i18n="resTitle">Central bank international reserves, USD million</h2><p id="resRange"></p></div>
+        <div class="chart" id="resChart"></div>
+        <p class="note" id="resNote"></p>
+      </div>
+    </section>
+
+    <section class="section chapter" id="inflSection" hidden aria-labelledby="inflTitle">
+      <h2 id="inflTitle" data-i18n="inflTitle">Inflation</h2>
+      <p class="section-lede" id="inflLede"></p>
+      <div class="two" style="margin-top:18px">
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="inflMTitle">Monthly inflation, %</h2></div>
+          <div class="chart" id="inflMChart"></div>
+        </div>
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="realTitle">Fixed-term deposit rate vs inflation, % per month</h2></div>
+          <ul class="legend" id="realLegend"></ul>
+          <div class="chart" id="realChart"></div>
+        </div>
+      </div>
+      <p class="note" id="inflNote"></p>
+    </section>
+
+    <section class="section chapter" id="rateSection" hidden aria-labelledby="rateTitle">
+      <h2 id="rateTitle" data-i18n="rateTitle">Interest rates</h2>
+      <p class="section-lede" data-i18n="rateLede">Annual nominal rates published daily by the Central Bank, and where they were a month and a year ago.</p>
+      <div class="table-wrap">
+        <table id="rateTable">
+          <thead><tr><th scope="col" data-i18n="thRate">Rate</th><th scope="col" data-i18n="thNow">Latest, %</th><th scope="col" data-i18n="thM1">A month ago</th><th scope="col" data-i18n="thY1">A year ago</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="chart-head" style="margin-top:26px"><h2 style="font-size:17px" data-i18n="rateChartTitle">Deposit rates since 2024, % annual</h2></div>
+      <ul class="legend" id="rateLegend"></ul>
+      <div class="chart" id="rateChart"></div>
+      <p class="note" id="rateNote"></p>
+    </section>
+
+    <section class="section chapter" id="fxSection" hidden aria-labelledby="fxTitle">
+      <h2 id="fxTitle" data-i18n="fxTitle">The official dollar</h2>
+      <ul class="facts" id="fxFacts"></ul>
+      <div class="chart-head" style="margin-top:24px"><h2 style="font-size:17px" data-i18n="fxChartTitle">Wholesale and retail official dollar, pesos per dollar</h2></div>
+      <ul class="legend" id="fxLegend"></ul>
+      <div class="chart" id="fxChart"></div>
+      <p class="note" id="fxNote"></p>
+    </section>
+
+    <section class="section chapter" id="creditSection" hidden aria-labelledby="creditTitle">
+      <h2 id="creditTitle" data-i18n="creditTitle">Deposits and credit</h2>
+      <p class="section-lede" id="creditLede"></p>
+      <ul class="facts" id="creditFacts"></ul>
+      <div class="chart-head" style="margin-top:24px"><h2 style="font-size:17px" data-i18n="creditChartTitle">Private-sector deposits and loans, USD million (peso balances converted at the official rate)</h2></div>
+      <ul class="legend" id="creditLegend"></ul>
+      <div class="chart" id="creditChart"></div>
+      <p class="note" id="creditNote"></p>
+    </section>
+
+    <section class="section chapter" id="actSection" hidden aria-labelledby="actTitle">
+      <h2 id="actTitle" data-i18n="actTitle">Economic activity</h2>
+      <ul class="facts" id="actFacts"></ul>
+      <div class="chart-head" style="margin-top:24px"><h2 style="font-size:17px" data-i18n="actChartTitle">Monthly economic activity estimator (EMAE), seasonally adjusted, 2004 = 100</h2></div>
+      <div class="chart" id="actChart"></div>
+      <p class="note" id="actNote"></p>
+    </section>
+
+    <section class="section chapter" id="bankSection" aria-labelledby="bankTitle">
+      <h2 id="bankTitle" data-i18n="bankTitle">Listed Argentine banks</h2>
+      <p class="section-lede" data-i18n="bankLede">The largest private banks trade in New York and Buenos Aires, and are the most direct way to invest in the Argentine credit cycle through the stock market.</p>
+      <div class="table-wrap"><table id="bankTable">
+        <thead><tr><th scope="col" data-i18n="thBank">Bank</th><th scope="col" style="text-align:left" data-i18n="thTicker">Exchange and ticker</th></tr></thead>
+        <tbody></tbody></table></div>
+      <div class="quotes" id="quotes"></div>
+      <p class="note" data-i18n="bankNote">Share prices and the Merval index by TradingView, with each exchange's delay. Not a recommendation to buy or sell.</p>
+    </section>
+
+    <section class="signup" aria-labelledby="signupTitle">
+      <div>
+        <h2 id="signupTitle" data-i18n="signupTitle">The week in Argentine investment, in five minutes</h2>
+        <p data-i18n="signupText">A short weekly email with the numbers that moved, new RIGI approvals and the regulations that matter for investors.</p>
+      </div>
+      <form id="signupForm" novalidate>
+        <label class="sr" for="email" data-i18n="emailLabel">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com">
+        <button type="submit" data-i18n="subscribe">Subscribe</button>
+        <p class="msg" id="signupMsg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="cols">
+      <div class="about">
+        <a class="mark" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Argentina Invest Monitor
+        </a>
+        <p data-i18n="fAbout">Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.</p>
+      </div>
+      <div>
+        <h2 data-i18n="fSectors">Sectors</h2>
+        <ul>
+          <li><a href="/vaca-muerta/" data-i18n="fEnergy">Energy: Vaca Muerta</a></li>
+          <li><a href="/mineria/" data-i18n="fMining">Mining</a></li>
+          <li><a href="/agro/" data-i18n="fAgro">Agriculture</a></li>
+          <li><a href="/finanzas/" data-i18n="fFinance">Finance and banking</a></li>
+          <li class="soon" data-i18n="fIndustry">Industry (in development)</li>
+        </ul>
+      </div>
+      <div>
+        <h2 data-i18n="fResources">Resources</h2>
+        <ul>
+          <li><a href="/metodologia/" data-i18n="fMethod">Methodology and sources</a></li>
+          <li><a href="/data/vm_monthly.csv" download data-i18n="fCsv">Download Vaca Muerta data (CSV)</a></li>
+          <li><a href="#signupTitle" data-i18n="fNewsletter">Weekly newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p data-i18n="footSources">All figures come from public, official sources cited on each page.</p>
+      <p data-i18n="disclaimer">For information only. Not investment advice.</p>
+    </div>
+  </footer>
+</div>
+
+<script src="/assets/charts.js"></script>
+<script>
+(() => {
+  const T = {
+    en: {
+      crumbHere: "Finance", loading: "Loading financial data…",
+      lede: "Central bank reserves, inflation, interest rates, the dollar, deposits, credit and economic activity, straight from the Central Bank (BCRA) and INDEC, updated every day.",
+      headline: (v, d) => `The Central Bank holds USD ${v} million in international reserves, as of ${d}.`,
+      fResY: "change in reserves over 12 months, USD million", fInflM: m => `inflation in ${m}`, fInflY: "inflation over 12 months", fRem: "inflation expected for the next 12 months (BCRA survey)", fBadlar: "BADLAR deposit rate, annual",
+      navRes: "Reserves", navInfl: "Inflation", navRates: "Interest rates", navFx: "Dollar", navCredit: "Deposits and credit", navAct: "Activity", navBanks: "Listed banks",
+      resTitle: "Central bank international reserves, USD million", range: (a, b) => `${a} to ${b}`,
+      resNote: (src) => `Source: ${src}. Gross international reserves, daily.`,
+      inflTitle: "Inflation", inflLede: (m, v, y, e) => `Prices rose ${v}% in ${m} and ${y}% over twelve months. Analysts surveyed by the Central Bank expect ${e}% over the next twelve.`,
+      inflMTitle: "Monthly inflation, %", realTitle: "Fixed-term deposit rate vs inflation, % per month", lgDep: "Fixed-term deposit", lgInfl: "Inflation",
+      inflNote: (src) => `Source: ${src}, with INDEC's national consumer price index. The deposit rate is the annual nominal rate divided by twelve; when it is above inflation, savers earn a real return.`,
+      rateTitle: "Interest rates", rateLede: "Annual nominal rates published daily by the Central Bank, and where they were a month and a year ago.",
+      thRate: "Rate", thNow: "Latest, %", thM1: "A month ago", thY1: "A year ago",
+      rNames: { badlar: "BADLAR (large deposits, private banks)", tamar: "TAMAR (wholesale deposits, private banks)", term30: "30-day fixed-term deposits", overdraft: "Overdrafts to companies", personal: "Personal loans" },
+      rateChartTitle: "Deposit rates since 2024, % annual", rateNote: (src) => `Source: ${src}.`,
+      fxTitle: "The official dollar", fxW: d => `pesos per dollar, wholesale, ${d}`, fxR: "pesos per dollar, retail", fxY: "wholesale dollar vs a year earlier",
+      fxChartTitle: "Wholesale and retail official dollar, pesos per dollar", lgW: "Wholesale", lgR: "Retail",
+      fxNote: (src) => `Source: ${src}. Wholesale reference rate (Communication A 3500) and average retail selling rate.`,
+      creditTitle: "Deposits and credit",
+      creditLede: (d, l) => `Private savers keep the equivalent of USD ${d} million in banks, and companies and families owe them USD ${l} million. Both are shown in dollars so peso and dollar balances can be compared.`,
+      cDepA: "deposits in pesos, USD million equivalent", cDepU: "deposits in dollars, USD million", cLoanA: "loans in pesos, USD million equivalent", cLoanU: "loans in dollars, USD million",
+      creditChartTitle: "Private-sector deposits and loans, USD million (peso balances converted at the official rate)",
+      lDepA: "Deposits in pesos", lDepU: "Deposits in dollars", lLoanA: "Loans in pesos", lLoanU: "Loans in dollars",
+      creditNote: (src) => `Source: ${src}. Private non-financial sector, end of month; peso balances divided by the wholesale official dollar of that day.`,
+      actTitle: "Economic activity", aM: m => `activity vs the previous month, ${m}`, aY: "vs the same month a year earlier", aMax: "vs the highest level on record",
+      actChartTitle: "Monthly economic activity estimator (EMAE), seasonally adjusted, 2004 = 100",
+      actNote: (src) => `Source: ${src}.`,
+      bankTitle: "Listed Argentine banks", bankLede: "The largest private banks trade in New York and Buenos Aires, and are the most direct way to invest in the Argentine credit cycle through the stock market.",
+      thBank: "Bank", thTicker: "Exchange and ticker", bankNote: "Share prices and the Merval index by TradingView, with each exchange's delay. Not a recommendation to buy or sell.",
+      signupTitle: "The week in Argentine investment, in five minutes", signupText: "A short weekly email with the numbers that moved, new RIGI approvals and the regulations that matter for investors.",
+      emailLabel: "Email address", subscribe: "Subscribe", ok: "Done. The first issue arrives next week.", badEmail: "That email address does not look right.", notReady: "Sign-ups are not open yet.", fail: "Something went wrong. Try again in a minute.",
+      fAbout: "Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.", fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining", fAgro: "Agriculture", fFinance: "Finance and banking", fIndustry: "Industry (in development)", fResources: "Resources", fMethod: "Methodology and sources", fCsv: "Download Vaca Muerta data (CSV)", fNewsletter: "Weekly newsletter", disclaimer: "For information only. Not investment advice.", footSources: "All figures come from public, official sources cited on each page."
+    },
+    es: {
+      crumbHere: "Finanzas", loading: "Cargando datos financieros…",
+      lede: "Reservas del Banco Central, inflación, tasas de interés, el dólar, depósitos, crédito y actividad económica, directo del BCRA y del INDEC, actualizados todos los días.",
+      headline: (v, d) => `El Banco Central tiene USD ${v} millones de reservas internacionales, al ${d}.`,
+      fResY: "variación de las reservas en 12 meses, millones de USD", fInflM: m => `inflación de ${m}`, fInflY: "inflación de 12 meses", fRem: "inflación esperada para los próximos 12 meses (encuesta del BCRA)", fBadlar: "tasa BADLAR, anual",
+      navRes: "Reservas", navInfl: "Inflación", navRates: "Tasas", navFx: "Dólar", navCredit: "Depósitos y crédito", navAct: "Actividad", navBanks: "Bancos que cotizan",
+      resTitle: "Reservas internacionales del Banco Central, millones de USD", range: (a, b) => `${a} a ${b}`,
+      resNote: (src) => `Fuente: ${src}. Reservas internacionales brutas, diarias.`,
+      inflTitle: "Inflación", inflLede: (m, v, y, e) => `Los precios subieron ${v}% en ${m} y ${y}% en doce meses. Los analistas que encuesta el Banco Central esperan ${e}% para los próximos doce.`,
+      inflMTitle: "Inflación mensual, %", realTitle: "Tasa de plazo fijo vs. inflación, % mensual", lgDep: "Plazo fijo", lgInfl: "Inflación",
+      inflNote: (src) => `Fuente: ${src}, con el índice de precios al consumidor nacional del INDEC. La tasa de plazo fijo es la tasa nominal anual dividida por doce; cuando está por encima de la inflación, el ahorrista gana en términos reales.`,
+      rateTitle: "Tasas de interés", rateLede: "Tasas nominales anuales que publica el Banco Central todos los días, y dónde estaban hace un mes y hace un año.",
+      thRate: "Tasa", thNow: "Última, %", thM1: "Hace un mes", thY1: "Hace un año",
+      rNames: { badlar: "BADLAR (depósitos grandes, bancos privados)", tamar: "TAMAR (depósitos mayoristas, bancos privados)", term30: "Plazo fijo a 30 días", overdraft: "Adelantos en cuenta a empresas", personal: "Préstamos personales" },
+      rateChartTitle: "Tasas de depósitos desde 2024, % anual", rateNote: (src) => `Fuente: ${src}.`,
+      fxTitle: "El dólar oficial", fxW: d => `pesos por dólar, mayorista, ${d}`, fxR: "pesos por dólar, minorista", fxY: "dólar mayorista vs. un año antes",
+      fxChartTitle: "Dólar oficial mayorista y minorista, pesos por dólar", lgW: "Mayorista", lgR: "Minorista",
+      fxNote: (src) => `Fuente: ${src}. Tipo de cambio de referencia mayorista (Comunicación A 3500) y promedio vendedor minorista.`,
+      creditTitle: "Depósitos y crédito",
+      creditLede: (d, l) => `Los ahorristas privados tienen el equivalente a USD ${d} millones en los bancos, y empresas y familias les deben USD ${l} millones. Todo se muestra en dólares para poder comparar los saldos en pesos y en dólares.`,
+      cDepA: "depósitos en pesos, millones de USD equivalentes", cDepU: "depósitos en dólares, millones de USD", cLoanA: "préstamos en pesos, millones de USD equivalentes", cLoanU: "préstamos en dólares, millones de USD",
+      creditChartTitle: "Depósitos y préstamos del sector privado, millones de USD (saldos en pesos convertidos al dólar oficial)",
+      lDepA: "Depósitos en pesos", lDepU: "Depósitos en dólares", lLoanA: "Préstamos en pesos", lLoanU: "Préstamos en dólares",
+      creditNote: (src) => `Fuente: ${src}. Sector privado no financiero, fin de mes; los saldos en pesos se dividen por el dólar oficial mayorista de ese día.`,
+      actTitle: "Actividad económica", aM: m => `actividad vs. el mes anterior, ${m}`, aY: "vs. el mismo mes un año antes", aMax: "vs. el máximo histórico",
+      actChartTitle: "Estimador mensual de actividad económica (EMAE), desestacionalizado, 2004 = 100",
+      actNote: (src) => `Fuente: ${src}.`,
+      bankTitle: "Bancos argentinos que cotizan", bankLede: "Los principales bancos privados cotizan en Nueva York y en Buenos Aires, y son la forma más directa de invertir en el ciclo del crédito argentino a través de la bolsa.",
+      thBank: "Banco", thTicker: "Bolsa y ticker", bankNote: "Cotizaciones y el índice Merval de TradingView, con la demora de cada bolsa. No es una recomendación de compra o venta.",
+      signupTitle: "La semana de las inversiones en Argentina, en cinco minutos", signupText: "Un email corto por semana con los números que se movieron, las nuevas aprobaciones RIGI y las normas que importan a los inversores.",
+      emailLabel: "Email", subscribe: "Suscribirme", ok: "Listo, quedaste suscripto. El primer envío llega la semana que viene.", badEmail: "Ese email no parece correcto.", notReady: "Las suscripciones todavía no están abiertas.", fail: "Algo salió mal. Probá de nuevo en un minuto.",
+      fAbout: "Los datos públicos oficiales de la Argentina sobre energía, minería, agro, finanzas e industria, organizados para inversores y actualizados en forma automática.", fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería", fAgro: "Agro", fFinance: "Finanzas y bancos", fIndustry: "Industria (en desarrollo)", fResources: "Recursos", fMethod: "Metodología y fuentes", fCsv: "Descargar datos de Vaca Muerta (CSV)", fNewsletter: "Newsletter semanal", disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.", footSources: "Todas las cifras provienen de fuentes públicas y oficiales, citadas en cada página."
+    },
+  };
+  const BANKS = [
+    { name: "Grupo Financiero Galicia", tickers: "NASDAQ: GGAL · BYMA: GGAL", tv: "NASDAQ:GGAL" },
+    { name: "Banco Macro", tickers: "NYSE: BMA · BYMA: BMA", tv: "NYSE:BMA" },
+    { name: "BBVA Argentina", tickers: "NYSE: BBAR · BYMA: BBAR", tv: "NYSE:BBAR" },
+    { name: "Grupo Supervielle", tickers: "NYSE: SUPV · BYMA: SUPV", tv: "NYSE:SUPV" },
+    { name: "Banco Patagonia", tickers: "BYMA: BPAT" },
+    { name: "Banco Hipotecario", tickers: "BYMA: BHIP" },
+    { name: "Bolsas y Mercados Argentinos (BYMA)", tickers: "BYMA: BYMA" },
+  ];
+  let saved = null;
+  try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
+  let lang = saved || ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en");
+  let D = null;
+  const C = AIMCharts(() => lang, () => T[lang]);
+  const { fmt, pct, monthName, esc } = C;
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const srcLink = s => `<a href="${esc(s.url)}" rel="noopener">${esc(s.name)}</a>${s.license && s.license !== "Datos públicos" ? ", " + esc(s.license) : ""}`;
+  const isDark = () => matchMedia("(prefers-color-scheme: dark)").matches;
+  const day = d => C.periodLabel(d);
+  const facts = (host, f) => { $(host).innerHTML = f.map(([v, l, d]) => `<li><strong class="${d > 0 ? "delta-up" : d < 0 ? "delta-down" : ""}">${esc(v)}</strong>${esc(l)}</li>`).join(""); };
+  const legend = (host, names, colors) => { $(host).innerHTML = names.map((n, k) => `<li><i style="background:${colors[k]}"></i>${esc(n)}</li>`).join(""); };
+
+  function render() {
+    const t = T[lang];
+    document.documentElement.lang = lang;
+    document.title = (lang === "es" ? "Finanzas" : "Finance") + " · Argentina Invest Monitor";
+    $$("[data-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    $$("[data-i18n]").forEach(el => { const v = t[el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
+    $("#email").placeholder = lang === "es" ? "vos@empresa.com" : "you@company.com";
+    $("#bankTable tbody").innerHTML = BANKS.map(b => `<tr><td><strong>${esc(b.name)}</strong></td><td style="text-align:left">${esc(b.tickers)}</td></tr>`).join("");
+    mountQuotes();
+    if (!D || !D.bcra) { syncNav(); return; }
+    const B = D.bcra, src = srcLink(B.source);
+
+    // Reservas
+    const r = B.reserves, inf = B.inflation.monthly, li = inf[inf.length - 1];
+    $("#headline").textContent = t.headline(fmt(r.latest.v), day(r.latest.date));
+    const f = [];
+    if (r.y1) f.push([(r.latest.v >= r.y1 ? "+" : "−") + fmt(Math.abs(r.latest.v - r.y1)), t.fResY, r.latest.v - r.y1]);
+    if (li) f.push([fmt(li.m, 1) + "%", t.fInflM(monthName(li.period))], [fmt(li.y, 1) + "%", t.fInflY]);
+    if (B.inflation.expected_12m) f.push([fmt(B.inflation.expected_12m.v, 1) + "%", t.fRem]);
+    if (B.rates.badlar) f.push([fmt(B.rates.badlar.latest.v, 1) + "%", t.fBadlar]);
+    facts("#facts", f);
+    $("#resRange").textContent = t.range(monthName(r.weekly[0].date.slice(0, 7), false), monthName(r.weekly[r.weekly.length - 1].date.slice(0, 7), false));
+    C.lineChart($("#resChart"), r.weekly.map(x => ({ period: x.date, v: x.v })), "v", "var(--fin)", "USD M", 0, innerWidth > 700 ? 320 : 240);
+    $("#resNote").innerHTML = t.resNote(src);
+
+    // Inflación
+    if (inf.length) {
+      $("#inflSection").hidden = false;
+      $("#inflLede").textContent = t.inflLede(monthName(li.period), fmt(li.m, 1), fmt(li.y, 1), B.inflation.expected_12m ? fmt(B.inflation.expected_12m.v, 1) : "–");
+      C.columnChart($("#inflMChart"), inf.filter(x => x.period >= "2021-01").map(x => ({ period: x.period, v: x.m })), "v", "%", t.inflMTitle);
+      $$("#inflMChart path").forEach(p => p.setAttribute("fill", "var(--fin)"));
+      const tw = B.rates_weekly.term30 || [], byM = {};
+      tw.forEach(x => { byM[x.date.slice(0, 7)] = x.v / 12; });
+      const ps = inf.map(x => x.period).filter(p => byM[p] != null && p >= "2024-01");
+      if (ps.length > 6) {
+        const names = [t.lgDep, t.lgInfl], cols = ["var(--fin)", "var(--down)"];
+        legend("#realLegend", names, cols);
+        const ser = { [names[0]]: ps.map(p => +byM[p].toFixed(2)), [names[1]]: ps.map(p => inf.find(x => x.period === p).m) };
+        C.multiLine($("#realChart"), ps, names, ser, cols);
+      }
+      $("#inflNote").innerHTML = t.inflNote(src);
+    }
+
+    // Tasas
+    if (Object.keys(B.rates).length) {
+      $("#rateSection").hidden = false;
+      $("#rateTable tbody").innerHTML = ["badlar", "tamar", "term30", "overdraft", "personal"].filter(k => B.rates[k]).map(k => {
+        const x = B.rates[k];
+        return `<tr><td>${esc(t.rNames[k])}</td><td><strong>${fmt(x.latest.v, 2)}</strong></td><td>${x.m1 != null ? fmt(x.m1, 2) : "–"}</td><td>${x.y1 != null ? fmt(x.y1, 2) : "–"}</td></tr>`;
+      }).join("");
+      const ks = ["badlar", "tamar", "term30"].filter(k => (B.rates_weekly[k] || []).length);
+      const base = B.rates_weekly[ks[0]].map(x => x.date);
+      const maps = ks.map(k => Object.fromEntries(B.rates_weekly[k].map(x => [x.date, x.v])));
+      const dates = base.filter(d => maps.every(m => m[d] != null));
+      const names = ks.map(k => ({ badlar: "BADLAR", tamar: "TAMAR", term30: lang === "es" ? "Plazo fijo 30 días" : "30-day deposits" }[k]));
+      const cols = ["var(--fin)", "var(--fin2)", "var(--fin3)"];
+      legend("#rateLegend", names, cols);
+      const ser = {}; names.forEach((n, i) => { ser[n] = dates.map(d => maps[i][d]); });
+      C.multiLine($("#rateChart"), dates, names, ser, cols);
+      $("#rateNote").innerHTML = t.rateNote(src);
+    }
+
+    // Dólar
+    if (B.fx && B.fx.wholesale) {
+      $("#fxSection").hidden = false;
+      const w = B.fx.wholesale, ff = [[fmt(w.v, 2), t.fxW(day(w.date))]];
+      if (B.fx.retail) ff.push([fmt(B.fx.retail.v, 2), t.fxR]);
+      if (B.fx.wholesale_y1) ff.push([pct((w.v / B.fx.wholesale_y1 - 1) * 100), t.fxY]);
+      facts("#fxFacts", ff);
+      const mw = Object.fromEntries(B.fx.weekly_wholesale.map(x => [x.date, x.v])), mr = Object.fromEntries(B.fx.weekly_retail.map(x => [x.date, x.v]));
+      const ds = Object.keys(mw).filter(d => mr[d] != null).sort();
+      const names = [t.lgW, t.lgR], cols = ["var(--fin)", "var(--ink-3)"];
+      legend("#fxLegend", names, cols);
+      C.multiLine($("#fxChart"), ds, names, { [names[0]]: ds.map(d => mw[d]), [names[1]]: ds.map(d => mr[d]) }, cols);
+      $("#fxNote").innerHTML = t.fxNote(src);
+    }
+
+    // Depósitos y crédito
+    const CR = B.credit_usd_equiv;
+    if (CR && CR.dep_ars && CR.dep_ars.length) {
+      $("#creditSection").hidden = false;
+      const lastOf = k => CR[k][CR[k].length - 1].v;
+      $("#creditLede").textContent = t.creditLede(fmt(lastOf("dep_ars") + lastOf("dep_usd")), fmt(lastOf("loan_ars") + lastOf("loan_usd")));
+      facts("#creditFacts", [[fmt(lastOf("dep_ars")), t.cDepA], [fmt(lastOf("dep_usd")), t.cDepU], [fmt(lastOf("loan_ars")), t.cLoanA], [fmt(lastOf("loan_usd")), t.cLoanU]]);
+      const ks = ["dep_ars", "dep_usd", "loan_ars", "loan_usd"], maps = ks.map(k => Object.fromEntries(CR[k].map(x => [x.period, x.v])));
+      const ps = Object.keys(maps[0]).filter(p => maps.every(m => m[p] != null)).sort();
+      const names = [t.lDepA, t.lDepU, t.lLoanA, t.lLoanU], cols = ["var(--fin)", "var(--fin3)", "var(--fin2)", "var(--s4)"];
+      legend("#creditLegend", names, cols);
+      const ser = {}; names.forEach((n, i) => { ser[n] = ps.map(p => maps[i][p]); });
+      C.multiLine($("#creditChart"), ps, names, ser, cols);
+      $("#creditNote").innerHTML = t.creditNote(src);
+    }
+
+    // Actividad
+    const A = D.activity;
+    if (A && A.monthly && A.monthly.length > 13) {
+      $("#actSection").hidden = false;
+      const m = A.monthly, a = m[m.length - 1], b = m[m.length - 2], y = m.find(x => x.period === `${+a.period.slice(0, 4) - 1}${a.period.slice(4)}`);
+      const mx = Math.max(...m.map(x => x.v));
+      const ff = [[pct((a.v / b.v - 1) * 100), t.aM(monthName(a.period)), a.v - b.v]];
+      if (y) ff.push([pct((a.v / y.v - 1) * 100), t.aY, a.v - y.v]);
+      ff.push([pct((a.v / mx - 1) * 100), t.aMax]);
+      facts("#actFacts", ff);
+      C.lineChart($("#actChart"), m, "v", "var(--fin)", lang === "es" ? "índice" : "index", 1, 260);
+      $("#actNote").innerHTML = t.actNote(srcLink(A.source));
+    }
+    syncNav(); spy();
+  }
+
+  let quotesKey = "";
+  function mountQuotes() {
+    const host = $("#quotes"), dark = isDark(), key = lang + (dark ? "d" : "l");
+    if (key === quotesKey) return;
+    quotesKey = key; host.innerHTML = "";
+    const box = document.createElement("div"); box.className = "tradingview-widget-container";
+    const inner = document.createElement("div"); inner.className = "tradingview-widget-container__widget";
+    const s = document.createElement("script");
+    s.src = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js"; s.async = true; s.type = "text/javascript";
+    s.text = JSON.stringify({
+      symbols: [["Merval", "BCBA:IMV|12M"], ...BANKS.filter(b => b.tv).map(b => [b.name, b.tv + "|12M"])],
+      chartOnly: false, width: "100%", height: 420, locale: lang === "es" ? "es" : "en", colorTheme: dark ? "dark" : "light",
+      autosize: false, showVolume: false, showMA: false, hideDateRanges: false, hideMarketStatus: false, hideSymbolLogo: false,
+      scalePosition: "right", scaleMode: "Normal", fontFamily: "Archivo, system-ui, sans-serif", fontSize: "11", noTimeScale: false,
+      valuesTracking: "1", changeMode: "price-and-percent", chartType: "area", lineWidth: 2, lineType: 0,
+      dateRanges: ["1m|30", "3m|60", "12m|1D", "60m|1W", "all|1M"],
+      lineColor: dark ? "#8f9cf0" : "#3f4fa3", topColor: dark ? "rgba(143,156,240,.18)" : "rgba(63,79,163,.12)",
+      bottomColor: "rgba(63,79,163,0)", backgroundColor: dark ? "#172026" : "#ffffff",
+      gridLineColor: dark ? "rgba(255,255,255,.06)" : "rgba(23,33,43,.06)",
+    });
+    box.append(inner, s); host.append(box);
+  }
+
+  function syncNav() { $$(".secnav a").forEach(a => { const el = document.getElementById(a.getAttribute("href").slice(1)); a.parentElement.hidden = !el || el.hidden; }); }
+  let tick = false;
+  function spy() {
+    tick = false;
+    const links = $$(".secnav a").filter(a => !a.parentElement.hidden);
+    let cur = links[0];
+    for (const a of links) { const el = document.getElementById(a.getAttribute("href").slice(1)); if (el && el.getBoundingClientRect().top - 120 <= 0) cur = a; }
+    links.forEach(a => a.setAttribute("aria-current", a === cur ? "true" : "false"));
+    if (cur && innerWidth < 900) { const bar = $(".secnav ol"), r = cur.getBoundingClientRect(), br = bar.getBoundingClientRect(); if (r.left < br.left || r.right > br.right) bar.scrollTo({ left: cur.offsetLeft - 16 }); }
+  }
+  addEventListener("scroll", () => { if (!tick) { tick = true; requestAnimationFrame(spy); } }, { passive: true });
+  $$("[data-lang]").forEach(b => b.addEventListener("click", () => { lang = b.dataset.lang; try { localStorage.setItem("vm-lang", lang); } catch (e) {} render(); }));
+  let rz; addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(render, 200); });
+
+  $("#signupForm").addEventListener("submit", async e => {
+    e.preventDefault();
+    const t = T[lang], msg = $("#signupMsg"), btn = e.target.querySelector("button"), email = $("#email").value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { msg.textContent = t.badEmail; return; }
+    btn.disabled = true;
+    try {
+      const r = await fetch("/api/subscribe", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email, lang }) });
+      const j = await r.json().catch(() => ({}));
+      if (r.ok && j.ok) { msg.textContent = t.ok; e.target.reset(); }
+      else msg.textContent = j.error === "email" ? t.badEmail : j.error === "not_configured" ? t.notReady : t.fail;
+    } catch (err) { msg.textContent = t.fail; }
+    btn.disabled = false;
+  });
+
+  render();
+  fetch("/data/finance.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : null).catch(() => null)
+    .then(d => { D = d; try { render(); } catch (e) { console.error(e); } });
+})();
+</script>
+</body>
+</html>

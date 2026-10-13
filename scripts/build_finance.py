@@ -187,7 +187,7 @@ def main() -> None:
             salida = json.loads(destino.read_text(encoding="utf-8"))
         except Exception:
             salida = {}
-    for nombre, fn in [("bcra", bcra_datos), ("fiscal", fiscal), ("activity", actividad)]:
+    for nombre, fn in [("bcra", bcra_datos), ("activity", actividad)]:
         diag: dict = {}
         try:
             salida[nombre] = fn(diag)

@@ -261,3 +261,8 @@ td .meta { font-size: 13px; color: var(--ink-3); }
 :root { --agro: #5f7d1d; --soy: #6f8a1c; --corn: #c99a0e; --wheat: #a8743f; --sunflower: #d0611f; --barley: #8c7a5b; --sorghum: #8e3b2e; --peanut: #b08d63; }
 @media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) { --agro: #9cc04a; --soy: #a3c24a; --corn: #e6bd3c; --wheat: #d29b62; --sunflower: #f08a4b; --barley: #b8a688; --sorghum: #d2735f; --peanut: #d4b48b; } }
 :root[data-theme="dark"] { --agro: #9cc04a; --soy: #a3c24a; --corn: #e6bd3c; --wheat: #d29b62; --sunflower: #f08a4b; --barley: #b8a688; --sorghum: #d2735f; --peanut: #d4b48b; }
+
+/* Sector finanzas */
+:root { --fin: #3f4fa3; --fin2: #8a5bb5; --fin3: #2d8fa6; }
+@media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) { --fin: #8f9cf0; --fin2: #b38ae0; --fin3: #4fb6cc; } }
+:root[data-theme="dark"] { --fin: #8f9cf0; --fin2: #b38ae0; --fin3: #4fb6cc; }

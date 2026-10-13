@@ -62,6 +62,8 @@ html[lang="es"] .doc > div[lang="en"], html[lang="en"] .doc > div[lang="es"] { d
 <tr><td><a href="https://datos.gob.ar/series" rel="noopener">Foreign currency sold by grain exporters</a><div class="meta">CIARA-CEC, via the Time Series API</div></td><td style="text-align:left">Dollars sold by grain and oilseed exporters.</td><td>Monthly</td></tr>
 <tr><td><a href="https://www.worldbank.org/en/research/commodity-markets" rel="noopener">International commodity prices</a><div class="meta">World Bank (Pink Sheet)</div></td><td style="text-align:left">Soybeans, soybean meal and oil, corn, wheat and sunflower oil.</td><td>Monthly</td></tr>
 <tr><td><a href="https://datosgobar.github.io/georef-ar-api/" rel="noopener">Georef</a><div class="meta">National Geographic Institute and datos.gob.ar</div></td><td style="text-align:left">Location of each department for the agriculture map.</td><td>Stable</td></tr>
+<tr><td><a href="https://www.bcra.gob.ar/en/central-bank-api-catalog/" rel="noopener">Central Bank monetary statistics</a><div class="meta">Central Bank of Argentina</div></td><td style="text-align:left">Reserves, interest rates, wholesale and retail exchange rates, monetary base, private deposits and loans, inflation and expectations.</td><td>Daily</td></tr>
+<tr><td><a href="https://datos.gob.ar/series" rel="noopener">Monthly Economic Activity Estimator (EMAE)</a><div class="meta">INDEC, via the Time Series API</div></td><td style="text-align:left">Seasonally adjusted activity level.</td><td>Monthly</td></tr>
 <tr><td><a href="https://www.bcra.gob.ar/" rel="noopener">Exchange rate</a><div class="meta">Central Bank, Communication A 3500</div></td><td style="text-align:left">Official wholesale dollar rate.</td><td>Daily</td></tr>
 <tr><td><a href="https://www.eia.gov/opendata/" rel="noopener">Brent and WTI</a><div class="meta">US Energy Information Administration</div></td><td style="text-align:left">International spot crude price.</td><td>Daily</td></tr>
 </tbody></table></div>
@@ -76,6 +78,7 @@ html[lang="es"] .doc > div[lang="en"], html[lang="en"] .doc > div[lang="es"] { d
 <dt>Wellhead price</dt><dd>The price producers declare to pay royalties, published by province. Oil is converted from USD per m³ to USD per barrel; gas is published in pesos per thousand m³ and converted to USD per million BTU with the monthly official exchange rate and 9,300 kcal per m³.</dd>
 <dt>Mining</dt><dd>Exports are added up by month and shown as a rolling 12-month total to remove seasonality. Lithium is counted among non-metallic minerals, as the Secretariat classifies it. Each project's stage is the one the Secretariat reports in its portfolio.</dd>
 <dt>Agriculture</dt><dd>The harvest adds up soy, corn, wheat, sunflower, barley, sorghum and peanut, from the final estimates for each season. Each department is placed at its centroid; circle size is proportional to tonnes harvested.</dd>
+<dt>Finance</dt><dd>Peso deposits and loans are converted to dollars at the wholesale official rate of the last day of each month, so they can be compared with dollar balances. The monthly deposit rate is the annual nominal rate divided by twelve.</dd>
 <dt>Regulation and the RIGI</dt><dd>Official Gazette notices are read and classified by topic from their operative part. Each RIGI approval is read for company, project, sub-sector and amount. The reading is automatic: the official text, linked on every row, always prevails.</dd>
 </dl>
 <h2>Limits</h2>
@@ -104,6 +107,8 @@ html[lang="es"] .doc > div[lang="en"], html[lang="en"] .doc > div[lang="es"] { d
 <tr><td><a href="https://datos.gob.ar/series" rel="noopener">Liquidación de divisas de la agroexportación</a><div class="meta">CIARA-CEC, vía API de Series de Tiempo</div></td><td style="text-align:left">Dólares que liquidan las exportadoras de granos y oleaginosas.</td><td>Mensual</td></tr>
 <tr><td><a href="https://www.worldbank.org/en/research/commodity-markets" rel="noopener">Precios internacionales de materias primas</a><div class="meta">Banco Mundial (Pink Sheet)</div></td><td style="text-align:left">Soja, harina y aceite de soja, maíz, trigo y aceite de girasol.</td><td>Mensual</td></tr>
 <tr><td><a href="https://datosgobar.github.io/georef-ar-api/" rel="noopener">Georef</a><div class="meta">Instituto Geográfico Nacional y datos.gob.ar</div></td><td style="text-align:left">Ubicación de cada departamento para el mapa del agro.</td><td>Estable</td></tr>
+<tr><td><a href="https://www.bcra.gob.ar/en/central-bank-api-catalog/" rel="noopener">Estadísticas monetarias del BCRA</a><div class="meta">Banco Central de la República Argentina</div></td><td style="text-align:left">Reservas, tasas de interés, tipo de cambio mayorista y minorista, base monetaria, depósitos y préstamos privados, inflación y expectativas.</td><td>Diaria</td></tr>
+<tr><td><a href="https://datos.gob.ar/series" rel="noopener">Estimador Mensual de Actividad Económica (EMAE)</a><div class="meta">INDEC, vía API de Series de Tiempo</div></td><td style="text-align:left">Nivel de actividad desestacionalizado.</td><td>Mensual</td></tr>
 <tr><td><a href="https://www.bcra.gob.ar/" rel="noopener">Cotización del dólar</a><div class="meta">BCRA, Comunicación A 3500</div></td><td style="text-align:left">Dólar mayorista oficial.</td><td>Diaria</td></tr>
 <tr><td><a href="https://www.eia.gov/opendata/" rel="noopener">Brent y WTI</a><div class="meta">EIA de los Estados Unidos</div></td><td style="text-align:left">Precio spot internacional del crudo.</td><td>Diaria</td></tr>
 </tbody></table></div>
@@ -118,6 +123,7 @@ html[lang="es"] .doc > div[lang="en"], html[lang="en"] .doc > div[lang="es"] { d
 <dt>Precio en boca de pozo</dt><dd>Es el precio que las productoras declaran para pagar regalías, publicado por provincia. El del petróleo se convierte de USD por m³ a USD por barril; el del gas se publica en pesos por mil m³ y se pasa a USD por millón de BTU con el tipo de cambio oficial mensual y 9.300 kcal por m³.</dd>
 <dt>Minería</dt><dd>Las exportaciones se suman por mes y se muestran como acumulado de 12 meses para quitar la estacionalidad. El litio figura entre los minerales no metalíferos, como lo clasifica la Secretaría. La etapa de cada proyecto es la que informa la Secretaría en su cartera.</dd>
 <dt>Agro</dt><dd>La cosecha suma soja, maíz, trigo, girasol, cebada, sorgo y maní según las estimaciones finales de cada campaña. Cada departamento se ubica en su centroide; el tamaño del círculo es proporcional a las toneladas cosechadas.</dd>
+<dt>Finanzas</dt><dd>Los depósitos y préstamos en pesos se convierten a dólares con el tipo de cambio oficial mayorista del último día de cada mes, para compararlos con los saldos en dólares. La tasa mensual del plazo fijo es la tasa nominal anual dividida por doce.</dd>
 <dt>Normativa y RIGI</dt><dd>Se leen los avisos del Boletín Oficial y se clasifican por tema a partir de su parte resolutiva. De cada aprobación RIGI se extraen la empresa, el proyecto, el subsector y el monto. La lectura es automática: ante cualquier duda vale el texto oficial, enlazado en cada fila.</dd>
 </dl>
 <h2>Límites</h2>
@@ -140,7 +146,7 @@ html[lang="es"] .doc > div[lang="en"], html[lang="en"] .doc > div[lang="es"] { d
           <li><a href="/vaca-muerta/" data-i18n="fEnergy">Energy: Vaca Muerta</a></li>
           <li><a href="/mineria/" data-i18n="fMining">Mining</a></li>
           <li><a href="/agro/" data-i18n="fAgro">Agriculture</a></li>
-          <li class="soon" data-i18n="fFinance">Finance and banking (in development)</li>
+          <li><a href="/finanzas/" data-i18n="fFinance">Finance and banking</a></li>
           <li class="soon" data-i18n="fIndustry">Industry (in development)</li>
         </ul>
       </div>
@@ -161,8 +167,8 @@ html[lang="es"] .doc > div[lang="en"], html[lang="en"] .doc > div[lang="es"] { d
 <script>
 (() => {
   const T = {
-    en: { fAbout: "Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.", fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining", fAgro: "Agriculture", fFinance: "Finance and banking (in development)", fIndustry: "Industry (in development)", fResources: "Resources", fMethod: "Methodology and sources", fCsv: "Download Vaca Muerta data (CSV)", fNewsletter: "Weekly newsletter", disclaimer: "For information only. Not investment advice.", crumbHere: "Methodology" },
-    es: { fAbout: "Los datos públicos oficiales de la Argentina sobre energía, minería, agro, finanzas e industria, organizados para inversores y actualizados en forma automática.", fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería", fAgro: "Agro", fFinance: "Finanzas y bancos (en desarrollo)", fIndustry: "Industria (en desarrollo)", fResources: "Recursos", fMethod: "Metodología y fuentes", fCsv: "Descargar datos de Vaca Muerta (CSV)", fNewsletter: "Newsletter semanal", disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.", crumbHere: "Metodología" },
+    en: { fAbout: "Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.", fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining", fAgro: "Agriculture", fFinance: "Finance and banking", fIndustry: "Industry (in development)", fResources: "Resources", fMethod: "Methodology and sources", fCsv: "Download Vaca Muerta data (CSV)", fNewsletter: "Weekly newsletter", disclaimer: "For information only. Not investment advice.", crumbHere: "Methodology" },
+    es: { fAbout: "Los datos públicos oficiales de la Argentina sobre energía, minería, agro, finanzas e industria, organizados para inversores y actualizados en forma automática.", fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería", fAgro: "Agro", fFinance: "Finanzas y bancos", fIndustry: "Industria (en desarrollo)", fResources: "Recursos", fMethod: "Metodología y fuentes", fCsv: "Descargar datos de Vaca Muerta (CSV)", fNewsletter: "Newsletter semanal", disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.", crumbHere: "Metodología" },
   };
   let saved = null;
   try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
