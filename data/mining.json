@@ -4878,8 +4878,11 @@
    "https://sigam.segemar.gov.ar/geoserver/ows"
   ]
  },
- "generated_at": "2026-10-13T11:26Z",
+ "generated_at": "2026-10-13T11:29Z",
  "catalog": {
   "n": 24
+ },
+ "structure": {
+  "n": 13
  }
 }
