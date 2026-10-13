@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mining · Argentina Invest Monitor</title>
+<meta name="description" content="Argentina's mining sector for investors: mineral exports, the project portfolio on a map, lithium, metal prices, output, employment and RIGI investment, from official public data.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d4a57'/%3E%3Cpath d='M5 10.5h22M5 25.5h22' stroke='%23fff' stroke-opacity='.4' stroke-width='1.6' stroke-linecap='round'/%3E%3Crect x='5' y='15.5' width='22' height='5.4' rx='1.4' fill='%23d9a441'/%3E%3Cpath d='M10 5.5v10.2q0 2.5 2.5 2.5H25' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Literata:opsz,wght@7..72,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="mark" href="/">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Argentina Invest Monitor
+      </a>
+      <span class="crumb-sep" aria-hidden="true">/</span>
+      <span class="crumb-here" data-i18n="crumbHere">Mining</span>
+    </nav>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+  </header>
+  <nav class="secnav" aria-label="Sections">
+    <ol>
+      <li><a href="#top" data-i18n="navExports">Exports</a></li>
+      <li><a href="#mapSection" data-i18n="navMap">Project map</a></li>
+      <li><a href="#projSection" data-i18n="navProjects">Portfolio</a></li>
+      <li><a href="#lithSection" data-i18n="navLithium">Lithium</a></li>
+      <li><a href="#priceSection" data-i18n="navPrices">Prices</a></li>
+      <li><a href="#jobsSection" data-i18n="navJobs">Output and jobs</a></li>
+      <li><a href="#invSection" data-i18n="navInvest">Investment</a></li>
+    </ol>
+  </nav>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <h1 id="headline" data-i18n="loading">Loading mining data…</h1>
+      <p class="lede" data-i18n="lede">Exports, projects, lithium, metal prices, output and jobs in Argentine mining, from the Mining Secretariat's open data (SIACAM), updated automatically.</p>
+      <ul class="facts" id="facts"></ul>
+      <div class="chart-block">
+        <div class="chart-head">
+          <h2 data-i18n="rollTitle">Mineral exports, rolling 12 months, USD million</h2>
+          <p id="rollRange"></p>
+        </div>
+        <div class="chart" id="rollChart"></div>
+      </div>
+    </section>
+
+    <section class="section two" id="expSection" hidden>
+      <div>
+        <div class="chart-head"><h2 data-i18n="groupsTitle">What Argentina exports, last 12 months</h2></div>
+        <p class="note" data-i18n="groupsNote">USD million, by mineral. Gold dominates; lithium is the fastest-growing.</p>
+        <div class="chart" id="groupsChart" style="margin-top:14px"></div>
+      </div>
+      <div>
+        <div class="chart-head"><h2 data-i18n="provTitle">Exports by province</h2><p id="provYear"></p></div>
+        <p class="note" data-i18n="provNote">USD million. Each province's mines, by where the exporter is based.</p>
+        <div class="chart" id="provChart" style="margin-top:14px"></div>
+      </div>
+    </section>
+    <section class="section" id="sectorSection" hidden>
+      <div class="chart-head"><h2 style="font-size:17px" data-i18n="sectorTitle">Mineral exports by year and type, USD million</h2></div>
+      <ul class="legend" id="sectorLegend"></ul>
+      <div class="chart" id="sectorChart"></div>
+      <p class="note" id="expNote"></p>
+    </section>
+
+    <section class="section chapter" id="mapSection" aria-labelledby="mapTitle">
+      <h2 id="mapTitle" data-i18n="mapTitle">Map of mining projects</h2>
+      <p class="section-lede" data-i18n="mapLede">Every metal and lithium project the Mining Secretariat tracks, from early prospecting to production. Tap a project for its owners and their country of origin.</p>
+      <div class="map-tools">
+        <div class="seg" role="group" aria-label="Stage">
+          <button type="button" data-stage="all" aria-pressed="true" data-i18n="stAll">All</button>
+          <button type="button" data-stage="prod" aria-pressed="false" data-i18n="stProd">Producing or building</button>
+          <button type="button" data-stage="adv" aria-pressed="false" data-i18n="stAdv">Advanced</button>
+          <button type="button" data-stage="early" aria-pressed="false" data-i18n="stEarly">Early</button>
+        </div>
+      </div>
+      <div class="map-wrap"><div id="map" role="region" aria-label="Map"></div><div class="map-empty" id="mapEmpty" data-i18n="mapLoading">Loading map…</div></div>
+      <div class="map-legend" id="mapLegend"></div>
+      <p class="note" id="mapNote"></p>
+    </section>
+
+    <section class="section chapter" id="projSection" hidden aria-labelledby="projTitle">
+      <h2 id="projTitle" data-i18n="projTitle">The project portfolio</h2>
+      <p class="section-lede" id="projLede"></p>
+      <div class="table-wrap">
+        <table class="matrix" id="matrix"><thead></thead><tbody></tbody></table>
+      </div>
+      <div class="filters">
+        <label><span data-i18n="fMineral">Mineral</span> <select id="fMin"></select></label>
+        <label><span data-i18n="fStage">Stage</span> <select id="fStage"></select></label>
+        <span id="projCount"></span>
+      </div>
+      <div class="table-wrap scroll-table" style="max-height:520px">
+        <table id="projTable">
+          <thead><tr>
+            <th scope="col" data-i18n="thProject">Project</th>
+            <th scope="col" style="text-align:left" data-i18n="thMineral">Mineral</th>
+            <th scope="col" style="text-align:left" data-i18n="thProvince">Province</th>
+            <th scope="col" style="text-align:left" data-i18n="thStage">Stage</th>
+            <th scope="col" style="text-align:left" data-i18n="thOwner">Main owner</th>
+            <th scope="col" style="text-align:left" class="hide-sm" data-i18n="thOrigin">Origin</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="note" id="projNote"></p>
+    </section>
+
+    <section class="section chapter" id="lithSection" hidden aria-labelledby="lithTitle">
+      <h2 id="lithTitle" data-i18n="lithTitle">Lithium</h2>
+      <p class="section-lede" id="lithLede"></p>
+      <ul class="facts" id="lithFacts"></ul>
+      <div class="two" style="margin-top:24px">
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="lithProdTitle">Lithium carbonate production, tonnes per month</h2></div>
+          <div class="chart" id="lithProdChart"></div>
+        </div>
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="lithExpTitle">Lithium exports by year, USD million</h2></div>
+          <div class="chart" id="lithExpChart"></div>
+        </div>
+      </div>
+      <div style="margin-top:28px">
+        <div class="chart-head"><h2 style="font-size:17px" id="lithDestTitle"></h2></div>
+        <div class="chart" id="lithDestChart" style="margin-top:12px"></div>
+      </div>
+      <p class="note" id="lithNote"></p>
+    </section>
+
+    <section class="section chapter" id="priceSection" hidden aria-labelledby="priceTitle">
+      <h2 id="priceTitle" data-i18n="priceTitle">Prices of Argentina's main minerals</h2>
+      <p class="section-lede" data-i18n="priceLede">Monthly international prices in US dollars. They set how much each project earns and how much the provinces collect in royalties.</p>
+      <div class="small-multiples" id="priceGrid"></div>
+      <p class="note" id="priceNote"></p>
+    </section>
+
+    <section class="section chapter" id="jobsSection" hidden aria-labelledby="jobsTitle">
+      <h2 id="jobsTitle" data-i18n="jobsTitle">Output and jobs</h2>
+      <ul class="facts" id="jobsFacts"></ul>
+      <div class="two" style="margin-top:24px">
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="ipiTitle">Mining output index, seasonally adjusted</h2></div>
+          <div class="chart" id="ipiChart"></div>
+          <div class="table-wrap"><table class="ops-mini" id="ipiTable">
+            <thead><tr><th scope="col" data-i18n="thBranch">Branch</th><th scope="col" data-i18n="thYoy">vs a year ago</th></tr></thead><tbody></tbody></table></div>
+        </div>
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="empTitle">Registered mining jobs</h2></div>
+          <div class="chart" id="empChart"></div>
+          <div class="table-wrap"><table class="ops-mini" id="empTable">
+            <thead><tr><th scope="col" data-i18n="thBranch">Branch</th><th scope="col" data-i18n="thJobs">Jobs</th><th scope="col" data-i18n="thYoy">vs a year ago</th></tr></thead><tbody></tbody></table></div>
+        </div>
+      </div>
+      <p class="note" id="jobsNote"></p>
+    </section>
+
+    <section class="section chapter" id="invSection" hidden aria-labelledby="invTitle">
+      <h2 id="invTitle" data-i18n="invTitle">Investment under the RIGI</h2>
+      <p class="section-lede" id="invLede"></p>
+      <div id="invPlan" hidden>
+        <div class="chart-head" style="margin-top:18px"><h2 style="font-size:17px" data-i18n="invPlanTitle">Committed mining investment by year, USD million</h2></div>
+        <ul class="legend" id="invLegend"></ul>
+        <div class="chart" id="invChart"></div>
+      </div>
+      <div id="invApprovals" hidden style="margin-top:28px">
+        <h2 style="font-size:17px" data-i18n="invApprTitle">Mining projects approved, from the Official Gazette</h2>
+        <div class="table-wrap"><table id="invTable">
+          <thead><tr><th scope="col" data-i18n="thDate">Date</th><th scope="col" style="text-align:left" data-i18n="thProject">Project</th><th scope="col" style="text-align:left" data-i18n="thCompany">Company</th><th scope="col" data-i18n="thUsdM">USD million</th></tr></thead>
+          <tbody></tbody></table></div>
+      </div>
+      <p class="note" id="invNote"></p>
+    </section>
+
+    <section class="signup" aria-labelledby="signupTitle">
+      <div>
+        <h2 id="signupTitle" data-i18n="signupTitle">The week in Argentine investment, in five minutes</h2>
+        <p data-i18n="signupText">A short weekly email with the numbers that moved, new RIGI approvals and the regulations that matter for investors.</p>
+      </div>
+      <form id="signupForm" novalidate>
+        <label class="sr" for="email" data-i18n="emailLabel">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com">
+        <button type="submit" data-i18n="subscribe">Subscribe</button>
+        <p class="msg" id="signupMsg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="cols">
+      <div class="about">
+        <a class="mark" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Argentina Invest Monitor
+        </a>
+        <p data-i18n="fAbout">Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.</p>
+      </div>
+      <div>
+        <h2 data-i18n="fSectors">Sectors</h2>
+        <ul>
+          <li><a href="/vaca-muerta/" data-i18n="fEnergy">Energy: Vaca Muerta</a></li>
+          <li><a href="/mineria/" data-i18n="fMining">Mining</a></li>
+          <li class="soon" data-i18n="fAgro">Agriculture (in development)</li>
+          <li class="soon" data-i18n="fFinance">Finance and banking (in development)</li>
+          <li class="soon" data-i18n="fIndustry">Industry (in development)</li>
+        </ul>
+      </div>
+      <div>
+        <h2 data-i18n="fResources">Resources</h2>
+        <ul>
+          <li><a href="/metodologia/" data-i18n="fMethod">Methodology and sources</a></li>
+          <li><a href="/data/vm_monthly.csv" download data-i18n="fCsv">Download Vaca Muerta data (CSV)</a></li>
+          <li><a href="#signupTitle" data-i18n="fNewsletter">Weekly newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p data-i18n="footSources">All figures come from public, official sources cited on each page.</p>
+      <p data-i18n="disclaimer">For information only. Not investment advice.</p>
+    </div>
+  </footer>
+</div>
+
+<script src="/assets/charts.js"></script>
+<script>
+(() => {
+  const T = {
+    en: {
+      crumbHere: "Mining", loading: "Loading mining data…",
+      lede: "Exports, projects, lithium, metal prices, output and jobs in Argentine mining, from the Mining Secretariat's open data (SIACAM), updated automatically.",
+      headline: (v, m) => `Argentina exported USD ${v} million in minerals in the 12 months to ${m}.`,
+      fYoy: "vs the previous 12 months", fGold: "of exports are gold", fLith: "lithium exports, last 12 months, USD million",
+      fJobs: m => `registered mining jobs, ${m}`, fProj: "projects in production or construction",
+      navExports: "Exports", navMap: "Project map", navProjects: "Portfolio", navLithium: "Lithium", navPrices: "Prices", navJobs: "Output and jobs", navInvest: "Investment",
+      rollTitle: "Mineral exports, rolling 12 months, USD million", range: (a, b) => `${a} to ${b}`,
+      groupsTitle: "What Argentina exports, last 12 months", groupsNote: "USD million, by mineral. Gold dominates; lithium is the fastest-growing.",
+      groupsSub: p => `a year earlier: ${p}`,
+      provTitle: "Exports by province", provNote: "USD million. Each province's mines, by where the exporter is based.",
+      sectorTitle: "Mineral exports by year and type, USD million", partial: (n) => `(${n} months)`,
+      expNote: (src, m) => `Source: ${src}. Exports in current US dollars (FOB). Lithium is counted among non-metallic minerals. Latest month: ${m}.`,
+      secNames: { "Metaliferos": "Metals", "No metaliferos": "Non-metallic, incl. lithium", "Rocas de aplicación": "Construction rocks", "Piedras preciosas y/o semipreciosas": "Precious stones", "Combustibles": "Mineral fuels" },
+      mapTitle: "Map of mining projects", mapLede: "Every metal and lithium project the Mining Secretariat tracks, from early prospecting to production. Tap a project for its owners and their country of origin.",
+      stAll: "All", stProd: "Producing or building", stAdv: "Advanced", stEarly: "Early", mapLoading: "Loading map…", mapFail: "The map could not be loaded. The portfolio table below has the same projects.",
+      mapNote: (src) => `Source: ${src}. Locations as published by the Secretariat. Basemap © OpenFreeMap, OpenStreetMap contributors.`,
+      owners: "Owners", projTitle: "The project portfolio",
+      projLede: (n, p, c) => `${n} metal and lithium projects: ${p} producing and ${c} under construction. Most are still in exploration, which is where the next decade of output will come from.`,
+      fMineral: "Mineral", fStage: "Stage", any: "All", projCount: n => `${n} projects`,
+      thProject: "Project", thMineral: "Mineral", thProvince: "Province", thStage: "Stage", thOwner: "Main owner", thOrigin: "Origin", thTotal: "Total",
+      projNote: (src) => `Source: ${src}. Ownership shows the controlling company and its share, as reported by the Secretariat.`,
+      lithTitle: "Lithium", lithLede: (y, v, s) => `Lithium exports reached USD ${v} million in ${y}, ${s}% of Argentina's mineral exports. Production of lithium carbonate is published monthly.`,
+      lithF1: m => `tonnes of lithium carbonate produced, ${m}`, lithF2: "tonnes, last 12 months", lithF3: y => `exports in ${y}, USD million`, lithF4: "lithium carbonate price, USD per tonne, latest month",
+      lithProdTitle: "Lithium carbonate production, tonnes per month", lithExpTitle: "Lithium exports by year, USD million",
+      lithDestTitle: y => `Where Argentine lithium goes, ${y}, USD million`,
+      lithNote: (src) => `Source: ${src}. Production from the mining output index (IPI minero); exports and destinations from the lithium dashboard.`,
+      priceTitle: "Prices of Argentina's main minerals", priceLede: "Monthly international prices in US dollars. They set how much each project earns and how much the provinces collect in royalties.",
+      pNames: { gold: "Gold, USD per troy ounce", silver: "Silver, USD per troy ounce", copper: "Copper, USD per tonne", lithium_carbonate: "Lithium carbonate, USD per tonne (CIF Asia)" },
+      priceNote: (src) => `Source: ${src}, compiled from international market references.`,
+      jobsTitle: "Output and jobs", ipiTitle: "Mining output index, seasonally adjusted", empTitle: "Registered mining jobs",
+      jF1: m => `mining output vs a year earlier, ${m}`, jF2: m => `registered mining jobs, ${m}`, jF3: "more jobs than a year earlier",
+      thBranch: "Branch", thYoy: "vs a year ago", thJobs: "Jobs",
+      branches: { "Plata y oro y sus concentrados": "Gold and silver", "Carbonato de litio y otros minerales de litio": "Lithium", "Extracción de minerales metalíferos": "All metals", "Extracción de minerales no metalíferos y rocas de aplicación": "Non-metallic and construction rocks", "Resto (incluye hierro, cobre, plomo, cinc, molibdeno y otros minerales metalíferos no ferrosos y sus concentrados)": "Copper, lead, zinc and other metals" },
+      rubros: { "Metalíferos": "Metals", "Litio": "Lithium", "Rocas de aplicación": "Construction rocks", "No metaliferos": "Non-metallic", "Servicios mineros y actividades relacionadas": "Mining services", "Combustibles-Producción": "Mineral fuels", "Minerales no clasificados previamente": "Other minerals" },
+      jobsNote: (src) => `Source: ${src}. The output index covers mining only, without oil and gas; jobs are registered private-sector positions.`,
+      invTitle: "Investment under the RIGI", invLede: (v) => `Mining projects approved under the RIGI regime commit USD ${v} million, according to the official portal's yearly plan.`,
+      invPlanTitle: "Committed mining investment by year, USD million", invApprTitle: "Mining projects approved, from the Official Gazette",
+      cuNames: { Cobre: "Copper", Litio: "Lithium", "Oro y Plata": "Gold and silver" },
+      thDate: "Date", thCompany: "Company", thUsdM: "USD million",
+      invNote: (src) => `Source: ${src}. Approvals are read automatically from each resolution; the official text, linked on every row, prevails.`,
+      minNames: { Oro: "Gold", Plata: "Silver", Cobre: "Copper", Litio: "Lithium", Uranio: "Uranium", Plomo: "Lead", Hierro: "Iron", Manganeso: "Manganese", Cesio: "Caesium", "Estaño": "Tin", Boratos: "Borates", Otros: "Other" },
+      stageNames: {},
+      signupTitle: "The week in Argentine investment, in five minutes", signupText: "A short weekly email with the numbers that moved, new RIGI approvals and the regulations that matter for investors.",
+      emailLabel: "Email address", subscribe: "Subscribe", ok: "Done. The first issue arrives next week.", badEmail: "That email address does not look right.", notReady: "Sign-ups are not open yet.", fail: "Something went wrong. Try again in a minute.",
+      fAbout: "Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.", fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining", fAgro: "Agriculture (in development)", fFinance: "Finance and banking (in development)", fIndustry: "Industry (in development)", fResources: "Resources", fMethod: "Methodology and sources", fCsv: "Download Vaca Muerta data (CSV)", fNewsletter: "Weekly newsletter", disclaimer: "For information only. Not investment advice.", footSources: "All figures come from public, official sources cited on each page."
+    },
+    es: {
+      crumbHere: "Minería", loading: "Cargando datos de minería…",
+      lede: "Exportaciones, proyectos, litio, precios de los metales, producción y empleo de la minería argentina, con los datos abiertos de la Secretaría de Minería (SIACAM), actualizados en forma automática.",
+      headline: (v, m) => `La Argentina exportó USD ${v} millones en minerales en los 12 meses hasta ${m}.`,
+      fYoy: "vs. los 12 meses anteriores", fGold: "de las exportaciones es oro", fLith: "exportaciones de litio, últimos 12 meses, millones de USD",
+      fJobs: m => `empleos mineros registrados, ${m}`, fProj: "proyectos en producción o construcción",
+      navExports: "Exportaciones", navMap: "Mapa de proyectos", navProjects: "Cartera", navLithium: "Litio", navPrices: "Precios", navJobs: "Producción y empleo", navInvest: "Inversión",
+      rollTitle: "Exportaciones mineras, acumulado de 12 meses, millones de USD", range: (a, b) => `${a} a ${b}`,
+      groupsTitle: "Qué exporta la Argentina, últimos 12 meses", groupsNote: "Millones de USD, por mineral. Domina el oro; el litio es el que más crece.",
+      groupsSub: p => `un año antes: ${p}`,
+      provTitle: "Exportaciones por provincia", provNote: "Millones de USD. Las minas de cada provincia, según dónde está el exportador.",
+      sectorTitle: "Exportaciones mineras por año y tipo, millones de USD", partial: (n) => `(${n} meses)`,
+      expNote: (src, m) => `Fuente: ${src}. Exportaciones en dólares corrientes (FOB). El litio se cuenta entre los minerales no metalíferos. Último mes: ${m}.`,
+      secNames: { "Metaliferos": "Metalíferos", "No metaliferos": "No metalíferos, incluye litio", "Rocas de aplicación": "Rocas de aplicación", "Piedras preciosas y/o semipreciosas": "Piedras preciosas", "Combustibles": "Combustibles minerales" },
+      mapTitle: "Mapa de proyectos mineros", mapLede: "Todos los proyectos metalíferos y de litio que sigue la Secretaría de Minería, desde la prospección hasta la producción. Tocá un proyecto para ver sus dueños y su país de origen.",
+      stAll: "Todos", stProd: "En producción o construcción", stAdv: "Avanzados", stEarly: "Iniciales", mapLoading: "Cargando mapa…", mapFail: "No se pudo cargar el mapa. La tabla de la cartera tiene los mismos proyectos.",
+      mapNote: (src) => `Fuente: ${src}. Ubicaciones según la Secretaría. Mapa base © OpenFreeMap, colaboradores de OpenStreetMap.`,
+      owners: "Dueños", projTitle: "La cartera de proyectos",
+      projLede: (n, p, c) => `${n} proyectos metalíferos y de litio: ${p} en producción y ${c} en construcción. La mayoría todavía está en exploración, y de ahí saldrá la producción de la próxima década.`,
+      fMineral: "Mineral", fStage: "Etapa", any: "Todos", projCount: n => `${n} proyectos`,
+      thProject: "Proyecto", thMineral: "Mineral", thProvince: "Provincia", thStage: "Etapa", thOwner: "Controlante", thOrigin: "Origen", thTotal: "Total",
+      projNote: (src) => `Fuente: ${src}. La titularidad muestra la empresa controlante y su participación, según la Secretaría.`,
+      lithTitle: "Litio", lithLede: (y, v, s) => `Las exportaciones de litio llegaron a USD ${v} millones en ${y}, el ${s}% de las exportaciones mineras del país. La producción de carbonato de litio se publica todos los meses.`,
+      lithF1: m => `toneladas de carbonato de litio producidas, ${m}`, lithF2: "toneladas, últimos 12 meses", lithF3: y => `exportaciones en ${y}, millones de USD`, lithF4: "precio del carbonato de litio, USD por tonelada, último mes",
+      lithProdTitle: "Producción de carbonato de litio, toneladas por mes", lithExpTitle: "Exportaciones de litio por año, millones de USD",
+      lithDestTitle: y => `Adónde va el litio argentino, ${y}, millones de USD`,
+      lithNote: (src) => `Fuente: ${src}. Producción según el índice de producción minera (IPI minero); exportaciones y destinos según el tablero del litio.`,
+      priceTitle: "Precios de los principales minerales del país", priceLede: "Precios internacionales mensuales en dólares. Definen cuánto gana cada proyecto y cuánto cobran las provincias de regalías.",
+      pNames: { gold: "Oro, USD por onza troy", silver: "Plata, USD por onza troy", copper: "Cobre, USD por tonelada", lithium_carbonate: "Carbonato de litio, USD por tonelada (CIF Asia)" },
+      priceNote: (src) => `Fuente: ${src}, a partir de referencias de los mercados internacionales.`,
+      jobsTitle: "Producción y empleo", ipiTitle: "Índice de producción minera, desestacionalizado", empTitle: "Empleo minero registrado",
+      jF1: m => `producción minera vs. un año antes, ${m}`, jF2: m => `empleos mineros registrados, ${m}`, jF3: "empleos más que un año antes",
+      thBranch: "Rama", thYoy: "vs. un año atrás", thJobs: "Empleos",
+      branches: { "Plata y oro y sus concentrados": "Oro y plata", "Carbonato de litio y otros minerales de litio": "Litio", "Extracción de minerales metalíferos": "Metalíferos en total", "Extracción de minerales no metalíferos y rocas de aplicación": "No metalíferos y rocas de aplicación", "Resto (incluye hierro, cobre, plomo, cinc, molibdeno y otros minerales metalíferos no ferrosos y sus concentrados)": "Cobre, plomo, cinc y otros metales" },
+      rubros: { "Metalíferos": "Metalíferos", "Litio": "Litio", "Rocas de aplicación": "Rocas de aplicación", "No metaliferos": "No metalíferos", "Servicios mineros y actividades relacionadas": "Servicios mineros", "Combustibles-Producción": "Combustibles minerales", "Minerales no clasificados previamente": "Otros minerales" },
+      jobsNote: (src) => `Fuente: ${src}. El índice de producción cubre solo minería, sin petróleo ni gas; el empleo son puestos registrados del sector privado.`,
+      invTitle: "Inversión en el RIGI", invLede: (v) => `Los proyectos mineros aprobados en el RIGI comprometen USD ${v} millones, según el plan anual del portal oficial.`,
+      invPlanTitle: "Inversión minera comprometida por año, millones de USD", invApprTitle: "Proyectos mineros aprobados, según el Boletín Oficial",
+      cuNames: { Cobre: "Cobre", Litio: "Litio", "Oro y Plata": "Oro y plata" },
+      thDate: "Fecha", thCompany: "Empresa", thUsdM: "Millones de USD",
+      invNote: (src) => `Fuente: ${src}. Las aprobaciones se leen en forma automática de cada resolución; vale el texto oficial, enlazado en cada fila.`,
+      minNames: { Oro: "Oro", Plata: "Plata", Cobre: "Cobre", Litio: "Litio", Uranio: "Uranio", Plomo: "Plomo", Hierro: "Hierro", Manganeso: "Manganeso", Cesio: "Cesio", "Estaño": "Estaño", Boratos: "Boratos", Otros: "Otros" },
+      stageNames: {},
+      signupTitle: "La semana de las inversiones en Argentina, en cinco minutos", signupText: "Un email corto por semana con los números que se movieron, las nuevas aprobaciones RIGI y las normas que importan a los inversores.",
+      emailLabel: "Email", subscribe: "Suscribirme", ok: "Listo, quedaste suscripto. El primer envío llega la semana que viene.", badEmail: "Ese email no parece correcto.", notReady: "Las suscripciones todavía no están abiertas.", fail: "Algo salió mal. Probá de nuevo en un minuto.",
+      fAbout: "Los datos públicos oficiales de la Argentina sobre energía, minería, agro, finanzas e industria, organizados para inversores y actualizados en forma automática.", fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería", fAgro: "Agro (en desarrollo)", fFinance: "Finanzas y bancos (en desarrollo)", fIndustry: "Industria (en desarrollo)", fResources: "Recursos", fMethod: "Metodología y fuentes", fCsv: "Descargar datos de Vaca Muerta (CSV)", fNewsletter: "Newsletter semanal", disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.", footSources: "Todas las cifras provienen de fuentes públicas y oficiales, citadas en cada página."
+    },
+  };
+  // Etapas en inglés (en español se muestran tal como las publica la Secretaría).
+  T.en.stageNames = { "Producción": "Production", "Construcción": "Construction", "Factibilidad": "Feasibility", "Prefactibilidad": "Pre-feasibility",
+    "Evaluación Económica Preliminar": "Preliminary economic assessment", "Exploración avanzada": "Advanced exploration", "Exploración inicial": "Early exploration",
+    "Prospección": "Prospecting", "Reingeniería": "Re-engineering", "Cese de operaciones": "Ceased operations" };
+  const STAGE_ORDER = ["Producción", "Construcción", "Reingeniería", "Factibilidad", "Prefactibilidad", "Evaluación Económica Preliminar", "Exploración avanzada", "Exploración inicial", "Prospección", "Cese de operaciones"];
+  const STAGE_GROUP = { prod: ["Producción", "Construcción", "Reingeniería"], adv: ["Factibilidad", "Prefactibilidad", "Evaluación Económica Preliminar", "Exploración avanzada"], early: ["Exploración inicial", "Prospección"] };
+  const MIN_COLOR = { Oro: "var(--gold)", Plata: "var(--silver)", Cobre: "var(--copper)", Litio: "var(--lithium)", Uranio: "var(--uranium)" };
+  const MIN_HEX = { light: { Oro: "#b8860f", Plata: "#7d8a96", Cobre: "#a65a2a", Litio: "#2b5fc2", Uranio: "#6c8f2f", Otros: "#8a7a6a" },
+                    dark: { Oro: "#e3b04a", Plata: "#a9b4be", Cobre: "#e08a52", Litio: "#74a0f2", Uranio: "#9cc25a", Otros: "#b3a595" } };
+  const minColor = m => MIN_COLOR[m] || "var(--other-min)";
+
+  let saved = null;
+  try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
+  let lang = saved || ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en");
+  let D = null, EX = null, mapState = "idle", map = null, stage = "all";
+  const C = AIMCharts(() => lang, () => T[lang]);
+  const { fmt, pct, monthName, esc } = C;
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const minName = m => T[lang].minNames[m] || m;
+  const stageName = s => T[lang].stageNames[s] || s;
+  const srcLink = s => `<a href="${esc(s.url)}" rel="noopener">${esc(s.name)}</a>${s.license ? ", " + esc(s.license) : ""}`;
+  const isDark = () => matchMedia("(prefers-color-scheme: dark)").matches;
+
+  function render() {
+    const t = T[lang];
+    document.documentElement.lang = lang;
+    document.title = (lang === "es" ? "Minería" : "Mining") + " · Argentina Invest Monitor";
+    $$("[data-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    $$("[data-i18n]").forEach(el => { const v = t[el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
+    $("#email").placeholder = lang === "es" ? "vos@empresa.com" : "you@company.com";
+    if (!D) return;
+    const E = D.exports, P = D.projects, L = D.lithium, J = D.employment, I = D.ipi, PR = D.prices && D.prices.prices;
+
+    // Portada del sector
+    if (E) {
+      $("#headline").textContent = t.headline(fmt(E.last_12m), monthName(E.latest_period));
+      const gold = (E.groups_12m || []).find(g => g.name === "Oro"), lith = (E.groups_12m || []).find(g => g.name === "Litio");
+      const f = [[pct((E.last_12m / E.prev_12m - 1) * 100), t.fYoy, E.last_12m - E.prev_12m]];
+      if (gold) f.push([fmt(gold.v / E.last_12m * 100, 0) + "%", t.fGold]);
+      if (lith) f.push([fmt(lith.v), t.fLith]);
+      if (J) f.push([fmt(J.total), t.fJobs(monthName(J.latest_period))]);
+      if (P) f.push([fmt((P.by_stage["Producción"] || 0) + (P.by_stage["Construcción"] || 0)), t.fProj]);
+      $("#facts").innerHTML = f.map(([v, l, d]) => `<li><strong class="${d > 0 ? "delta-up" : d < 0 ? "delta-down" : ""}">${esc(v)}</strong>${esc(l)}</li>`).join("");
+      const rr = E.rolling_12m;
+      $("#rollRange").textContent = t.range(monthName(rr[0].period, false), monthName(rr[rr.length - 1].period, false));
+      C.lineChart($("#rollChart"), rr, "v", "var(--min)", "USD M", 0, innerWidth > 700 ? 320 : 240);
+
+      $("#expSection").hidden = false; $("#sectorSection").hidden = false;
+      C.hbar($("#groupsChart"), E.groups_12m.slice(0, 10).map(g => ({ name: minName(g.name), v: g.v, color: minColor(g.name), sub: t.groupsSub(fmt(g.prev)) })), { unit: "USD M", labelWidth: 110 });
+      const G = D.geo;
+      if (G) {
+        $("#provYear").textContent = G.year;
+        C.hbar($("#provChart"), G.provinces.slice(0, 10).map(p => ({ name: p.name === "Indeterminado" ? (lang === "es" ? "Sin provincia" : "Unassigned") : p.name, v: p.v, muted: p.name === "Indeterminado" })), { unit: "USD M", labelWidth: 120, color: "var(--min)" });
+      }
+      const ys = E.yearly_by_sector, order = ["Metaliferos", "No metaliferos", "Rocas de aplicación", "Combustibles", "Piedras preciosas y/o semipreciosas"];
+      const cols = { "Metaliferos": "var(--gold)", "No metaliferos": "var(--lithium)", "Rocas de aplicación": "var(--ink-3)", "Combustibles": "var(--other-min)", "Piedras preciosas y/o semipreciosas": "var(--s5)" };
+      const sel = ys.years.map((y, i) => [y, i]).filter(([y]) => y >= "2006");
+      const labs = sel.map(([y]) => y + (ys.partial_last && y === ys.years[ys.years.length - 1] ? "*" : ""));
+      const ser = order.filter(k => ys.sectors[k]).map(k => ({ name: t.secNames[k] || k, color: cols[k], values: sel.map(([, i]) => ys.sectors[k][i]) }));
+      $("#sectorLegend").innerHTML = ser.map(x => `<li><i style="background:${x.color}"></i>${esc(x.name)}</li>`).join("");
+      C.stackedColumns($("#sectorChart"), labs, ser, "USD M", t.sectorTitle);
+      $("#expNote").innerHTML = t.expNote(srcLink(E.source), esc(monthName(E.latest_period))) + (ys.partial_last ? ` * ${esc(t.partial(ys.months_last))}` : "");
+    }
+
+    // Cartera
+    if (P && P.items) {
+      $("#projSection").hidden = false;
+      $("#projLede").textContent = t.projLede(fmt(P.items.length), fmt(P.by_stage["Producción"] || 0), fmt(P.by_stage["Construcción"] || 0));
+      const mins = Object.keys(P.by_mineral).filter(m => P.by_mineral[m] >= 3);
+      const stages = STAGE_ORDER.filter(s => P.by_stage[s]);
+      const cnt = (s, m) => P.items.filter(p => p.stage === s && (m ? p.mineral === m : !mins.includes(p.mineral))).length;
+      $("#matrix thead").innerHTML = `<tr><th scope="col">${esc(t.thStage)}</th>${mins.map(m => `<th scope="col"><span class="dot" style="background:${minColor(m)}"></span>${esc(minName(m))}</th>`).join("")}<th scope="col">${esc(minName("Otros"))}</th><th scope="col">${esc(t.thTotal)}</th></tr>`;
+      $("#matrix tbody").innerHTML = stages.map(s => {
+        const vals = mins.map(m => cnt(s, m)), o = cnt(s, null);
+        return `<tr><td>${esc(stageName(s))}</td>${vals.map(v => `<td class="${v ? "" : "zero"}">${v || "–"}</td>`).join("")}<td class="${o ? "" : "zero"}">${o || "–"}</td><td><strong>${P.by_stage[s]}</strong></td></tr>`;
+      }).join("");
+      const fm = $("#fMin"), fs = $("#fStage"), vm = fm.value, vs = fs.value;
+      fm.innerHTML = `<option value="">${esc(t.any)}</option>` + Object.keys(P.by_mineral).map(m => `<option value="${esc(m)}">${esc(minName(m))}</option>`).join("");
+      fs.innerHTML = `<option value="">${esc(t.any)}</option>` + stages.map(s => `<option value="${esc(s)}">${esc(stageName(s))}</option>`).join("");
+      fm.value = vm; fs.value = vs;
+      renderProjTable();
+      $("#projNote").innerHTML = t.projNote(srcLink(P.source));
+      $("#mapNote").innerHTML = t.mapNote(srcLink(P.source));
+      if (mapState === "ready") mapLegend();
+    }
+
+    // Litio
+    if (L) {
+      $("#lithSection").hidden = false;
+      const ly = L.exports_yearly[L.exports_yearly.length - 1];
+      $("#lithLede").textContent = t.lithLede(ly.year, fmt(ly.v), fmt(ly.share_pct, 0));
+      const pm = L.carbonate_t_monthly, lastP = pm[pm.length - 1];
+      const f = [[fmt(lastP.t), t.lithF1(monthName(lastP.period))], [fmt(pm.slice(-12).reduce((a, x) => a + x.t, 0)), t.lithF2], [fmt(ly.v), t.lithF3(ly.year)]];
+      const lc = PR && PR.lithium_carbonate;
+      if (lc) f.push([fmt(lc.monthly[lc.monthly.length - 1].v), t.lithF4]);
+      $("#lithFacts").innerHTML = f.map(([a, b]) => `<li><strong>${esc(a)}</strong>${esc(b)}</li>`).join("");
+      C.columnChart($("#lithProdChart"), pm.map(x => ({ period: x.period, t: x.t })), "t", lang === "es" ? "t" : "t", t.lithProdTitle);
+      $$("#lithProdChart path").forEach(p => p.setAttribute("fill", "var(--lithium)"));
+      C.columnChart($("#lithExpChart"), L.exports_yearly.filter(x => x.year >= 2010).map(x => ({ period: String(x.year), v: x.v })), "v", "USD M", t.lithExpTitle);
+      $$("#lithExpChart path").forEach(p => p.setAttribute("fill", "var(--lithium)"));
+      $("#lithDestTitle").textContent = t.lithDestTitle(L.destinations_year);
+      const dest = L.destinations.filter(d => d.name !== "Resto").concat(L.destinations.filter(d => d.name === "Resto"));
+      C.hbar($("#lithDestChart"), dest.map(d => ({ name: d.name === "Resto" ? (lang === "es" ? "Resto" : "Rest") : d.name, v: d.v, muted: d.name === "Resto" })), { unit: "USD M", labelWidth: 130, color: "var(--lithium)", digits: 1 });
+      $("#lithNote").innerHTML = t.lithNote(srcLink(D.exports.source));
+    }
+
+    // Precios
+    if (PR) {
+      $("#priceSection").hidden = false;
+      const keys = ["gold", "silver", "copper", "lithium_carbonate"].filter(k => PR[k]);
+      const cols = { gold: "var(--gold)", silver: "var(--silver)", copper: "var(--copper)", lithium_carbonate: "var(--lithium)" };
+      $("#priceGrid").innerHTML = keys.map(k => `<div><div class="chart-head"><h2 style="font-size:17px">${esc(t.pNames[k])}</h2><p>${esc(monthName(PR[k].monthly[PR[k].monthly.length - 1].period, false))}</p></div><div class="chart" id="pc_${k}"></div></div>`).join("");
+      keys.forEach(k => C.lineChart($("#pc_" + k), PR[k].monthly, "v", cols[k], "USD", k === "silver" ? 2 : 0, 220));
+      $("#priceNote").innerHTML = t.priceNote(srcLink(D.prices.source));
+    }
+
+    // Producción y empleo
+    if (I || J) {
+      $("#jobsSection").hidden = false;
+      const f = [];
+      if (I && I.yoy_pct != null) f.push([pct(I.yoy_pct), t.jF1(monthName(I.latest_period)), I.yoy_pct]);
+      if (J) { f.push([fmt(J.total), t.jF2(monthName(J.latest_period))]); if (J.total_prev_year) f.push([(J.total >= J.total_prev_year ? "+" : "−") + fmt(Math.abs(J.total - J.total_prev_year)), t.jF3, J.total - J.total_prev_year]); }
+      $("#jobsFacts").innerHTML = f.map(([v, l, d]) => `<li><strong class="${d > 0 ? "delta-up" : d < 0 ? "delta-down" : ""}">${esc(v)}</strong>${esc(l)}</li>`).join("");
+      if (I) {
+        C.lineChart($("#ipiChart"), I.series.sa.filter(x => x.period >= "2017-01"), "v", "var(--min)", lang === "es" ? "índice" : "index", 1, 240);
+        $("#ipiTable tbody").innerHTML = Object.entries(t.branches).filter(([k]) => I.branches_yoy[k] != null).map(([k, n]) =>
+          `<tr><td>${esc(n)}</td><td class="${I.branches_yoy[k] > 0 ? "delta-up" : "delta-down"}">${pct(I.branches_yoy[k])}</td></tr>`).join("");
+      }
+      if (J) {
+        C.lineChart($("#empChart"), J.monthly_total.filter(x => x.period >= "2012-01"), "v", "var(--min)", lang === "es" ? "empleos" : "jobs", 0, 240);
+        $("#empTable tbody").innerHTML = J.by_branch.map(b => `<tr><td>${esc(t.rubros[b.name] || b.name)}</td><td>${fmt(b.v)}</td><td class="${b.prev && b.v > b.prev ? "delta-up" : b.prev && b.v < b.prev ? "delta-down" : ""}">${b.prev ? pct((b.v / b.prev - 1) * 100) : "–"}</td></tr>`).join("");
+      }
+      $("#jobsNote").innerHTML = t.jobsNote(srcLink((J || I).source));
+    }
+
+    // Inversión RIGI (datos del monitor de energía, mismo origen oficial)
+    const rp = EX && EX.rigi_portal && EX.rigi_portal.plan_by_year;
+    const appr = EX && (EX.rigi_approvals || []).filter(a => /miner/i.test((a.sector || "") + " " + (a.subsector || "")));
+    if ((rp && rp.length) || (appr && appr.length)) {
+      $("#invSection").hidden = false;
+      if (rp && rp.length) {
+        $("#invPlan").hidden = false;
+        const subs = ["Cobre", "Litio", "Oro y Plata"], colors = ["var(--copper)", "var(--lithium)", "var(--gold)"];
+        const total = rp.reduce((a, r) => a + (+r.mineria || 0), 0);
+        $("#invLede").textContent = t.invLede(fmt(total));
+        const corte = 2035, cab = rp.filter(r => r.year <= corte), cola = rp.filter(r => r.year > corte);
+        const labs = cab.map(r => String(r.year)).concat(cola.length ? [innerWidth < 600 ? `’${String(corte + 1).slice(2)}+` : `${corte + 1}–${String(cola[cola.length - 1].year).slice(2)}`] : []);
+        const ser = subs.map((s, i) => ({ name: t.cuNames[s], color: colors[i], values: cab.map(r => +r["mineria:" + s] || 0).concat(cola.length ? [cola.reduce((a, r) => a + (+r["mineria:" + s] || 0), 0)] : []) }));
+        $("#invLegend").innerHTML = ser.map(x => `<li><i style="background:${x.color}"></i>${esc(x.name)}</li>`).join("");
+        C.stackedColumns($("#invChart"), labs, ser, "USD M", t.invPlanTitle);
+      }
+      if (appr && appr.length) {
+        $("#invApprovals").hidden = false;
+        $("#invTable tbody").innerHTML = appr.map(a => `<tr><td>${esc(C.monthName(a.date.slice(0, 7)))}</td><td style="text-align:left"><a href="${esc(a.url)}" rel="noopener" target="_blank">${esc(a.project || a.title)}</a></td><td style="text-align:left">${esc(a.company || "–")}</td><td>${a.usd_million ? fmt(a.usd_million) : "–"}</td></tr>`).join("");
+      }
+      $("#invNote").innerHTML = t.invNote(`<a href="https://www.argentina.gob.ar/economia/rigi" rel="noopener">${lang === "es" ? "Ministerio de Economía, portal del RIGI; Boletín Oficial" : "Ministry of Economy, RIGI portal; Official Gazette"}</a>`);
+    }
+    syncNav(); spy();
+  }
+
+  function renderProjTable() {
+    const t = T[lang], P = D.projects, m = $("#fMin").value, s = $("#fStage").value;
+    const rows = P.items.filter(p => (!m || p.mineral === m) && (!s || p.stage === s))
+      .sort((a, b) => STAGE_ORDER.indexOf(a.stage) - STAGE_ORDER.indexOf(b.stage) || a.name.localeCompare(b.name));
+    $("#projCount").textContent = t.projCount(fmt(rows.length));
+    $("#projTable tbody").innerHTML = rows.map(p => {
+      const o = p.owners[0] || {};
+      return `<tr><td>${esc(p.name)}</td><td style="text-align:left"><span class="dot" style="background:${minColor(p.mineral)}"></span>${esc(minName(p.mineral))}</td><td style="text-align:left">${esc(p.province || "–")}</td><td style="text-align:left">${esc(stageName(p.stage))}</td><td style="text-align:left">${esc(o.name || "–")}${o.pct && o.pct < 100 ? ` <span class="meta">${o.pct}%</span>` : ""}</td><td style="text-align:left" class="hide-sm">${esc(o.origin || "–")}</td></tr>`;
+    }).join("");
+  }
+
+  // Mapa de proyectos
+  function loadScript(src) { return new Promise((ok, ko) => { const s = document.createElement("script"); s.src = src; s.onload = ok; s.onerror = ko; document.head.append(s); }); }
+  function loadCss(href) { const l = document.createElement("link"); l.rel = "stylesheet"; l.href = href; document.head.append(l); }
+  function geo() {
+    return { type: "FeatureCollection", features: D.projects.items.map((p, i) => ({ type: "Feature", id: i, geometry: { type: "Point", coordinates: [p.lon, p.lat] },
+      properties: { i, mineral: MIN_HEX.light[p.mineral] ? p.mineral : "Otros", stage: p.stage, big: STAGE_GROUP.prod.includes(p.stage) ? 1 : 0 } })) };
+  }
+  function stageFilter() {
+    return stage === "all" ? null : ["in", ["get", "stage"], ["literal", STAGE_GROUP[stage]]];
+  }
+  function mapLegend() {
+    const t = T[lang], P = D.projects, pal = MIN_HEX[isDark() ? "dark" : "light"];
+    const ms = Object.keys(pal).filter(m => m === "Otros" || P.by_mineral[m]);
+    $("#mapLegend").innerHTML = ms.map(m => `<span><b style="background:${pal[m]};border-radius:50%;width:11px"></b>${esc(minName(m))}</span>`).join("") +
+      `<span>${lang === "es" ? "Círculo grande: en producción o construcción" : "Large circle: producing or under construction"}</span>`;
+  }
+  async function initMap() {
+    if (mapState !== "idle" || !D || !D.projects) return;
+    mapState = "loading";
+    try {
+      loadCss("https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css");
+      await loadScript("https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js");
+      map = new maplibregl.Map({ container: "map", style: "https://tiles.openfreemap.org/styles/positron",
+        bounds: [[-73.5, -52.5], [-63.0, -21.5]], fitBoundsOptions: { padding: 20 }, attributionControl: { compact: true }, cooperativeGestures: true });
+      map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+      map.on("load", () => {
+        $("#mapEmpty").hidden = true;
+        const pal = MIN_HEX[isDark() ? "dark" : "light"];
+        map.addSource("proj", { type: "geojson", data: geo() });
+        map.addLayer({ id: "proj", type: "circle", source: "proj", paint: {
+          "circle-color": ["match", ["get", "mineral"], ...Object.entries(pal).flat(), pal.Otros],
+          "circle-radius": ["interpolate", ["linear"], ["zoom"], 4, ["case", ["==", ["get", "big"], 1], 6, 3.5], 9, ["case", ["==", ["get", "big"], 1], 11, 6.5]],
+          "circle-stroke-color": "#ffffff", "circle-stroke-width": 1, "circle-opacity": 0.92 } });
+        map.on("click", "proj", e => {
+          const p = D.projects.items[e.features[0].properties.i], t = T[lang];
+          const ow = p.owners.map(o => `<div>${esc(o.name)}${o.pct != null ? ` ${o.pct}%` : ""}${o.origin ? ` <span class="muted">(${esc(o.origin)})</span>` : ""}</div>`).join("");
+          new maplibregl.Popup({ maxWidth: "280px" }).setLngLat([p.lon, p.lat]).setHTML(`<h4>${esc(p.name)}</h4><div class="muted">${esc(minName(p.mineral))} · ${esc(p.province || "")}</div><div class="muted">${esc(stageName(p.stage))}</div>${ow ? `<div style="margin-top:6px"><strong>${esc(t.owners)}</strong>${ow}</div>` : ""}`).addTo(map);
+        });
+        map.on("mouseenter", "proj", () => { map.getCanvas().style.cursor = "pointer"; });
+        map.on("mouseleave", "proj", () => { map.getCanvas().style.cursor = ""; });
+        mapState = "ready"; mapLegend();
+      });
+    } catch (err) { mapState = "failed"; $("#mapEmpty").textContent = T[lang].mapFail; }
+  }
+  $$("[data-stage]").forEach(b => b.addEventListener("click", () => {
+    stage = b.dataset.stage;
+    $$("[data-stage]").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    if (mapState === "ready") map.setFilter("proj", stageFilter());
+  }));
+  new IntersectionObserver((es, ob) => { if (es.some(e => e.isIntersecting)) { initMap(); if (mapState !== "idle") ob.disconnect(); } }, { rootMargin: "300px" }).observe($("#mapSection"));
+
+  // Barra de secciones
+  function syncNav() { $$(".secnav a").forEach(a => { const el = document.getElementById(a.getAttribute("href").slice(1)); a.parentElement.hidden = !el || el.hidden; }); }
+  let tick = false;
+  function spy() {
+    tick = false;
+    const links = $$(".secnav a").filter(a => !a.parentElement.hidden);
+    let cur = links[0];
+    for (const a of links) { const el = document.getElementById(a.getAttribute("href").slice(1)); if (el && el.getBoundingClientRect().top - 120 <= 0) cur = a; }
+    links.forEach(a => a.setAttribute("aria-current", a === cur ? "true" : "false"));
+    if (cur && innerWidth < 900) { const bar = $(".secnav ol"), r = cur.getBoundingClientRect(), br = bar.getBoundingClientRect(); if (r.left < br.left || r.right > br.right) bar.scrollTo({ left: cur.offsetLeft - 16 }); }
+  }
+  addEventListener("scroll", () => { if (!tick) { tick = true; requestAnimationFrame(spy); } }, { passive: true });
+
+  $("#fMin").addEventListener("change", renderProjTable);
+  $("#fStage").addEventListener("change", renderProjTable);
+  $$("[data-lang]").forEach(b => b.addEventListener("click", () => { lang = b.dataset.lang; try { localStorage.setItem("vm-lang", lang); } catch (e) {} render(); if (mapState === "ready") mapLegend(); }));
+  let rz; addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(render, 200); });
+
+  $("#signupForm").addEventListener("submit", async e => {
+    e.preventDefault();
+    const t = T[lang], msg = $("#signupMsg"), btn = e.target.querySelector("button"), email = $("#email").value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { msg.textContent = t.badEmail; return; }
+    btn.disabled = true;
+    try {
+      const r = await fetch("/api/subscribe", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email, lang }) });
+      const j = await r.json().catch(() => ({}));
+      if (r.ok && j.ok) { msg.textContent = t.ok; e.target.reset(); }
+      else msg.textContent = j.error === "email" ? t.badEmail : j.error === "not_configured" ? t.notReady : t.fail;
+    } catch (err) { msg.textContent = t.fail; }
+    btn.disabled = false;
+  });
+
+  render();
+  Promise.all([
+    fetch("/data/mining.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : null).catch(() => null),
+    fetch("/data/extras.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : null).catch(() => null),
+  ]).then(([d, ex]) => { D = d; EX = ex; try { render(); } catch (e) { console.error(e); } if (D) initMap(); });
+})();
+</script>
+</body>
+</html>

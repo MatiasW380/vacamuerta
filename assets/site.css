@@ -239,3 +239,17 @@ footer:not(.site-foot) { margin: 64px 0 0; padding: 28px 0 40px; border-top: 1px
 .live-dot::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent); }
 @media (max-width: 900px) { .secnav ol { -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); padding-right: 32px; } }
 .ops-mini th:first-child, .ops-mini td:first-child { padding-left: 0; }
+
+/* Sector minería: color de sector y de cada mineral (iguales en mapa, gráficos y tablas) */
+:root { --min: #a65a2a; --gold: #b8860f; --silver: #7d8a96; --copper: #a65a2a; --lithium: #2b5fc2; --uranium: #6c8f2f; --other-min: #8a7a6a; }
+@media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) { --min: #e08a52; --gold: #e3b04a; --silver: #a9b4be; --copper: #e08a52; --lithium: #74a0f2; --uranium: #9cc25a; --other-min: #b3a595; } }
+:root[data-theme="dark"] { --min: #e08a52; --gold: #e3b04a; --silver: #a9b4be; --copper: #e08a52; --lithium: #74a0f2; --uranium: #9cc25a; --other-min: #b3a595; }
+.small-multiples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 48px; margin-top: 18px; }
+@media (max-width: 860px) { .small-multiples { grid-template-columns: 1fr; } }
+.matrix td, .matrix th { text-align: right; }
+.matrix td:first-child, .matrix th:first-child { text-align: left; }
+.matrix td.zero { color: var(--ink-3); }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 7px; vertical-align: 0; }
+.filters { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin-top: 14px; font-size: 14px; color: var(--ink-2); }
+.filters select { font: inherit; font-size: 14px; padding: 5px 8px; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); color: var(--ink); }
+.feature + .feature { margin-top: 16px; }

@@ -33,7 +33,7 @@
 @media (max-width: 860px) { .feature { grid-template-columns: 1fr; gap: 26px; padding: 22px 18px; } }
 
 .soon-title { font-family: var(--sans) !important; font-size: 15px !important; font-weight: 620 !important; color: var(--ink-2); margin: 36px 0 0 !important; }
-.soon-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 12px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--rule); }
+.soon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0; margin: 12px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--rule); }
 .soon-grid li { padding: 16px 20px 4px; border-left: 1px solid var(--rule); }
 .soon-grid li:first-child { border-left: 0; padding-left: 0; }
 .soon-grid h3 { font-family: var(--serif); font-weight: 550; font-size: 19px; margin: 0 0 6px; color: var(--ink); }
@@ -110,7 +110,7 @@
         <h2 data-i18n="fSectors">Sectors</h2>
         <ul>
           <li><a href="/vaca-muerta/" data-i18n="fEnergy">Energy: Vaca Muerta</a></li>
-          <li class="soon" data-i18n="fMining">Mining (in development)</li>
+          <li><a href="/mineria/" data-i18n="fMining">Mining</a></li>
           <li class="soon" data-i18n="fAgro">Agriculture (in development)</li>
           <li class="soon" data-i18n="fFinance">Finance and banking (in development)</li>
           <li class="soon" data-i18n="fIndustry">Industry (in development)</li>
@@ -140,9 +140,9 @@
             src: "Energy Secretariat, Neuquén Province, BCRA, EIA" },
       es: { name: "Energía: Vaca Muerta", text: "Producción de petróleo y gas por bloque y operadora, actividad de perforación y fractura, ductos, concesiones y sus vencimientos, empresas que cotizan y proyectos RIGI.",
             src: "Secretaría de Energía, Provincia de Neuquén, BCRA, EIA" } },
-    { id: "mining",
-      en: { name: "Mining", text: "Lithium, copper and gold projects by stage and province, exports, and the projects entering the RIGI regime.", src: "Mining Secretariat, INDEC, Ministry of Economy" },
-      es: { name: "Minería", text: "Proyectos de litio, cobre y oro por etapa y provincia, exportaciones y proyectos que ingresan al RIGI.", src: "Secretaría de Minería, INDEC, Ministerio de Economía" } },
+    { id: "mining", live: true, href: "/mineria/",
+      en: { name: "Mining", text: "Mineral exports, the map of every metal and lithium project with its owners, lithium output, metal prices, jobs and RIGI investment.", src: "Mining Secretariat (SIACAM), Ministry of Economy" },
+      es: { name: "Minería", text: "Exportaciones mineras, el mapa de todos los proyectos metalíferos y de litio con sus dueños, producción de litio, precios de los metales, empleo e inversión RIGI.", src: "Secretaría de Minería (SIACAM), Ministerio de Economía" } },
     { id: "agro",
       en: { name: "Agriculture", text: "Planting and harvest estimates by crop and district, export sales declarations, prices and weather.", src: "Agriculture Secretariat (MAGyP), National Weather Service" },
       es: { name: "Agro", text: "Estimaciones de siembra y cosecha por cultivo y departamento, declaraciones de exportación, precios y clima.", src: "Secretaría de Agricultura (MAGyP), Servicio Meteorológico Nacional" } },
@@ -164,6 +164,8 @@
       kWells: "Wells producing", kWellsS: m => `in Vaca Muerta, ${m}`,
       kRigi: "Latest RIGI approval", kRigiS: d => `Official Gazette, ${d}`,
       soonTitle: "Next sectors", mYoy: "oil vs a year ago",
+      sparkMin: m => `mineral exports, 12 months to ${m}`, mYoy12: "vs the previous 12 months", mProj: "projects on the map", mJobs: "mining jobs",
+      kMin: "Mineral exports", kMinS: m => `USD million, 12 months to ${m}`,
       sparkLab: m => `barrels of oil a day, ${m}`, sparkRange: y => `since ${y}`, sparkAria: "Vaca Muerta oil production, monthly",
       mOil: "bbl/d of oil", mGas: "MMm³/d of gas", mBlocks: "blocks producing",
       regTitle: "Latest regulations", regAll: "All recent notices", newsTitle: "Sector news",
@@ -174,7 +176,7 @@
       notReady: "Sign-ups open soon. Try again in a few days.", fail: "The subscription didn't go through. Try again in a minute.",
       footSources: "All figures come from public, official sources cited on each page.",
       fAbout: "Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.",
-      fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining (in development)", fAgro: "Agriculture (in development)", fFinance: "Finance and banking (in development)", fIndustry: "Industry (in development)",
+      fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining", fAgro: "Agriculture (in development)", fFinance: "Finance and banking (in development)", fIndustry: "Industry (in development)",
       fResources: "Resources", fMethod: "Methodology and sources", fCsv: "Download Vaca Muerta data (CSV)", fNewsletter: "Weekly newsletter",
       disclaimer: "For information only. Not investment advice.",
       topicNames: { Hidrocarburos: "Hydrocarbons", "Gas natural": "Natural gas", "Petróleo": "Oil", Biocombustibles: "Biofuels" },
@@ -189,6 +191,8 @@
       kWells: "Pozos en producción", kWellsS: m => `en Vaca Muerta, ${m}`,
       kRigi: "Última aprobación RIGI", kRigiS: d => `Boletín Oficial, ${d}`,
       soonTitle: "Próximos sectores", mYoy: "petróleo vs. un año atrás",
+      sparkMin: m => `exportaciones mineras, 12 meses hasta ${m}`, mYoy12: "vs. los 12 meses anteriores", mProj: "proyectos en el mapa", mJobs: "empleos mineros",
+      kMin: "Exportaciones mineras", kMinS: m => `millones de USD, 12 meses hasta ${m}`,
       sparkLab: m => `barriles de petróleo por día, ${m}`, sparkRange: y => `desde ${y}`, sparkAria: "Producción de petróleo de Vaca Muerta, mensual",
       mOil: "bbl/d de petróleo", mGas: "MMm³/d de gas", mBlocks: "bloques produciendo",
       regTitle: "Normativa reciente", regAll: "Todos los avisos recientes", newsTitle: "Noticias del sector",
@@ -199,7 +203,7 @@
       notReady: "Las suscripciones abren pronto. Probá de nuevo en unos días.", fail: "No se pudo completar la suscripción. Probá de nuevo en un minuto.",
       footSources: "Todas las cifras provienen de fuentes públicas y oficiales, citadas en cada página.",
       fAbout: "Los datos públicos oficiales de la Argentina sobre energía, minería, agro, finanzas e industria, organizados para inversores y actualizados en forma automática.",
-      fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería (en desarrollo)", fAgro: "Agro (en desarrollo)", fFinance: "Finanzas y bancos (en desarrollo)", fIndustry: "Industria (en desarrollo)",
+      fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería", fAgro: "Agro (en desarrollo)", fFinance: "Finanzas y bancos (en desarrollo)", fIndustry: "Industria (en desarrollo)",
       fResources: "Recursos", fMethod: "Metodología y fuentes", fCsv: "Descargar datos de Vaca Muerta (CSV)", fNewsletter: "Newsletter semanal",
       disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.",
       topicNames: {},
@@ -210,7 +214,7 @@
   try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
   let lang = saved || ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en");
   if (!T[lang]) lang = "en";
-  let VM = null, EX = null;
+  let VM = null, EX = null, MN = null;
 
   const $ = s => document.querySelector(s);
   const locale = () => (lang === "es" ? "es-AR" : "en-US");
@@ -229,15 +233,15 @@
     return li;
   }
 
-  function sparkline(vals, periods) {
+  function sparkline(vals, periods, color = "var(--oil)") {
     const W = 560, H = 150, pad = { t: 6, r: 4, b: 18, l: 4 }, max = Math.max(...vals) * 1.05;
     const x = i => pad.l + (i / (vals.length - 1)) * (W - pad.l - pad.r), y = v => pad.t + (1 - v / max) * (H - pad.t - pad.b);
     const d = vals.map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("");
     const area = `${d}L${x(vals.length - 1).toFixed(1)},${H - pad.b}L${pad.l},${H - pad.b}Z`;
-    const years = periods.map((p, i) => [p, i]).filter(([p]) => p.endsWith("-01") && +p.slice(0, 4) % 2 === 0);
+    const years = periods.map((p, i) => [p, i]).filter(([p, i]) => p.endsWith("-01") && +p.slice(0, 4) % 2 === 0 && i > 8 && i < periods.length - 4);
     const labs = years.map(([p, i]) => `<text x="${x(i).toFixed(1)}" y="${H - 4}" text-anchor="middle">${p.slice(0, 4)}</text>`).join("");
     const lx = x(vals.length - 1), ly = y(vals[vals.length - 1]);
-    return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(T[lang].sparkAria)}"><line x1="${pad.l}" x2="${W - pad.r}" y1="${H - pad.b}" y2="${H - pad.b}" stroke="var(--rule)"/><path d="${area}" fill="var(--oil)" fill-opacity=".1"/><path d="${d}" fill="none" stroke="var(--oil)" stroke-width="2" stroke-linejoin="round"/><circle cx="${lx}" cy="${ly}" r="3.5" fill="var(--oil)"/>${labs}</svg>`;
+    return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(T[lang].sparkAria)}"><line x1="${pad.l}" x2="${W - pad.r}" y1="${H - pad.b}" y2="${H - pad.b}" stroke="var(--rule)"/><path d="${area}" fill="${color}" fill-opacity=".1"/><path d="${d}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round"/><circle cx="${lx}" cy="${ly}" r="3.5" fill="${color}"/>${labs}</svg>`;
   }
 
   function render() {
@@ -250,6 +254,7 @@
     // Pulse: the numbers of the day.
     const pulse = [];
     if (VM && VM.kpis) pulse.push({ k: t.kOil, v: fmt(VM.kpis.oil_bbl_d), s: t.kOilS(pct(VM.kpis.oil_yoy_pct), monthName(VM.latest_period)), href: "/vaca-muerta/" });
+    if (MN && MN.exports) pulse.push({ k: t.kMin, v: fmt(MN.exports.last_12m), s: t.kMinS(monthName(MN.exports.latest_period)), href: "/mineria/" });
     if (EX && EX.oil_price && EX.oil_price.brent) pulse.push({ k: t.kBrent, v: fmt(EX.oil_price.brent.usd_bbl, 2), s: t.kBrentS(shortDate(EX.oil_price.brent.date)), href: "/vaca-muerta/#priceSection" });
     if (EX && EX.fx && EX.fx.latest) pulse.push({ k: t.kFx, v: fmt(EX.fx.latest.ars_per_usd, 2), s: t.kFxS(shortDate(EX.fx.latest.date)), href: "/vaca-muerta/#priceSection" });
     if (VM && VM.kpis && VM.kpis.active_wells && pulse.length < 4) pulse.push({ k: t.kWells, v: fmt(VM.kpis.active_wells), s: t.kWellsS(monthName(VM.latest_period)), href: "/vaca-muerta/#wellsLede" });
@@ -257,20 +262,29 @@
     if (rigi && pulse.length < 4) pulse.push({ k: t.kRigi, v: shortDate(rigi.date), s: t.kRigiS(rigi.title.split(" ").slice(0, 2).join(" ")), href: rigi.url, ext: true });
     $("#pulse").innerHTML = pulse.slice(0, 4).map(p => `<li><a href="${esc(p.href)}"${p.ext ? ' rel="noopener" target="_blank"' : ""}><span class="k">${esc(p.k)}</span><strong>${esc(p.v)}</strong><span class="s">${esc(p.s)}</span></a></li>`).join("");
 
-    // Sector en vivo, con su curva de producción.
-    const live = SECTORS.find(x => x.live), lc = live[lang];
-    let spark = "", metrics = "";
-    if (VM && VM.kpis && VM.monthly) {
-      const blocks = (VM.areas_all || []).length;
-      spark = `<div class="spark-head"><div><strong>${fmt(VM.kpis.oil_bbl_d)}</strong>${esc(t.sparkLab(monthName(VM.latest_period)))}</div><span>${esc(t.sparkRange(VM.monthly[0].period.slice(0, 4)))}</span></div><div class="spark">${sparkline(VM.monthly.map(r => r.oil_bbl_d), VM.monthly.map(r => r.period))}</div>`;
-      metrics = `<ul class="metrics"><li><strong>${pct(VM.kpis.oil_yoy_pct)}</strong>${esc(t.mYoy)}</li><li><strong>${fmt(VM.kpis.gas_mmm3_d, 1)}</strong>${esc(t.mGas)}</li>${blocks ? `<li><strong>${fmt(blocks)}</strong>${esc(t.mBlocks)}</li>` : ""}</ul>`;
-    }
-    $("#feature").innerHTML = `<article class="feature">
+    // Sectores en vivo, cada uno con su curva.
+    const card = (sec, spark, metrics) => { const c = sec[lang]; return `<article class="feature">
       <div><span class="live-dot">${esc(t.live)}</span>
-        <h3><a href="${live.href}">${esc(lc.name)}</a></h3>
-        <p>${esc(lc.text)}</p><div class="src">${esc(t.sources)}: ${esc(lc.src)}</div>
-        <a class="btn" href="${live.href}">${esc(t.open)}</a></div>
-      <div>${spark}${metrics}</div></article>`;
+        <h3><a href="${sec.href}">${esc(c.name)}</a></h3>
+        <p>${esc(c.text)}</p><div class="src">${esc(t.sources)}: ${esc(c.src)}</div>
+        <a class="btn" href="${sec.href}">${esc(t.open)}</a></div>
+      <div>${spark}${metrics}</div></article>`; };
+    const cards = [];
+    SECTORS.filter(x => x.live).forEach(sec => {
+      let spark = "", metrics = "";
+      if (sec.id === "energy" && VM && VM.kpis && VM.monthly) {
+        const blocks = (VM.areas_all || []).length;
+        spark = `<div class="spark-head"><div><strong>${fmt(VM.kpis.oil_bbl_d)}</strong>${esc(t.sparkLab(monthName(VM.latest_period)))}</div><span>${esc(t.sparkRange(VM.monthly[0].period.slice(0, 4)))}</span></div><div class="spark">${sparkline(VM.monthly.map(r => r.oil_bbl_d), VM.monthly.map(r => r.period))}</div>`;
+        metrics = `<ul class="metrics"><li><strong>${pct(VM.kpis.oil_yoy_pct)}</strong>${esc(t.mYoy)}</li><li><strong>${fmt(VM.kpis.gas_mmm3_d, 1)}</strong>${esc(t.mGas)}</li>${blocks ? `<li><strong>${fmt(blocks)}</strong>${esc(t.mBlocks)}</li>` : ""}</ul>`;
+      }
+      if (sec.id === "mining" && MN && MN.exports) {
+        const e = MN.exports, rr = e.rolling_12m, pj = MN.projects;
+        spark = `<div class="spark-head"><div><strong>USD ${fmt(e.last_12m)} M</strong>${esc(t.sparkMin(monthName(e.latest_period)))}</div><span>${esc(t.sparkRange(rr[0].period.slice(0, 4)))}</span></div><div class="spark">${sparkline(rr.map(r => r.v), rr.map(r => r.period), "var(--min)")}</div>`;
+        metrics = `<ul class="metrics"><li><strong>${pct((e.last_12m / e.prev_12m - 1) * 100)}</strong>${esc(t.mYoy12)}</li>${pj ? `<li><strong>${fmt(pj.items.length)}</strong>${esc(t.mProj)}</li>` : ""}${MN.employment ? `<li><strong>${fmt(MN.employment.total)}</strong>${esc(t.mJobs)}</li>` : ""}</ul>`;
+      }
+      cards.push(card(sec, spark, metrics));
+    });
+    $("#feature").innerHTML = cards.join("");
     $("#soonGrid").innerHTML = SECTORS.filter(x => !x.live).map(sec => { const c = sec[lang];
       return `<li><h3>${esc(c.name)}</h3><p>${esc(c.text)}</p><div class="src">${esc(t.plannedSources)}: ${esc(c.src)}</div></li>`; }).join("");
 
@@ -312,7 +326,7 @@
 
   render();
   const get = u => fetch(u, { cache: "no-cache" }).then(r => (r.ok ? r.json() : null)).catch(() => null);
-  Promise.all([get("/data/vm.json"), get("/data/extras.json")]).then(([v, x]) => { VM = v; EX = x; render(); });
+  Promise.all([get("/data/vm.json"), get("/data/extras.json"), get("/data/mining.json")]).then(([v, x, m]) => { VM = v; EX = x; MN = m; render(); });
 })();
 </script>
 </body>
