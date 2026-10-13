@@ -3,14 +3,7 @@
   "ok": true,
   "diag": {
    "cand": {
-    "sa": [
-     {
-      "id": "453.1_SERIE_DESEADA_0_0_24_58",
-      "desc": "IPI Nivel General Serie Desestacionalizada",
-      "end": "2026-08-01",
-      "units": "Índice 2004 = 100"
-     }
-    ],
+    "sa": [],
     "orig": [
      {
       "id": "453.1_SERIE_ORIGNAL_0_0_14_46",
@@ -75,23 +68,23 @@
       "desc": "IPI Divisiones y Subclases Madera, papel, edición e impresión",
       "end": "2026-08-01",
       "units": "Índice 2004 = 100"
+     }
+    ],
+    "refining": [
+     {
+      "id": "453.2_OTROS_PRODION_0_0_26_12",
+      "desc": "IPI Divisiones y Subclases Otros productos de la refinación del petróleo, coque y combustible nuclear",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
      },
      {
-      "id": "453.2_PRODUCTOS_CHO_0_0_23_95",
-      "desc": "IPI Divisiones y Subclases Madera y productos de madera y corcho, excepto muebles",
+      "id": "453.2_REFINACIONEAR_0_0_45_82",
+      "desc": "IPI Divisiones y Subclases Refinación del petróleo, coque y combustible nuclear",
       "end": "2026-08-01",
       "units": "Índice 2004 = 100"
      }
     ],
-    "refining": [],
-    "chemicals": [
-     {
-      "id": "453.2_SUSTANCIASCOS_0_0_29_82",
-      "desc": "IPI Divisiones y Subclases Sustancias y productos químicos",
-      "end": "2026-08-01",
-      "units": "Índice 2004 = 100"
-     }
-    ],
+    "chemicals": [],
     "plastics": [
      {
       "id": "453.2_PRODUCTOS_ICO_0_0_25_26",
@@ -197,13 +190,6 @@
       119.29064776379852
      ]
     ],
-    "sa": [
-     128,
-     [
-      "2026-08-01",
-      114.286133053828
-     ]
-    ],
     "food": [
      44,
      [
@@ -216,11 +202,8 @@
      null
     ],
     "textiles": [
-     44,
-     [
-      "2026-08-01",
-      53.587224336568745
-     ]
+     0,
+     null
     ],
     "apparel": [
      44,
@@ -233,11 +216,11 @@
      0,
      null
     ],
-    "chemicals": [
-     44,
+    "refining": [
+     23,
      [
       "2026-08-01",
-      147.24508671553895
+      123.926936528635
      ]
     ],
     "plastics": [
@@ -252,11 +235,8 @@
      ]
     ],
     "basic_metals": [
-     44,
-     [
-      "2026-08-01",
-      93.19976102718572
-     ]
+     0,
+     null
     ],
     "metal_products": [
      44,
@@ -277,14 +257,14 @@
      null
     ],
     "autos": [
-     27,
+     44,
      [
-      "2026-07-01",
-      127.62973719303164
+      "2026-08-01",
+      140.28749654072612
      ]
     ],
     "transport": [
-     44,
+     30,
      [
       "2026-08-01",
       139.35987368838514
@@ -309,14 +289,14 @@
      ]
     ],
     "isac_orig": [
-     128,
+     76,
      [
-      "2026-08-01",
-      146.8626017285303
+      "2026-06-01",
+      146.14043903626123
      ]
     ],
     "steel": [
-     104,
+     61,
      [
       "2026-08-01",
       80.53385013224572
@@ -337,34 +317,27 @@
      ]
     ],
     "pharma": [
-     0,
-     null
-    ],
-    "agrochem": [
      104,
      [
       "2026-08-01",
-      133.43141016805717
+      222.1347673071456
+     ]
+    ],
+    "agrochem": [
+     60,
+     [
+      "2026-07-01",
+      118.1122210102456
      ]
     ],
     "machinery": [
-     42,
+     62,
      [
-      "2021-06-01",
-      85.14121495805685
+      "2026-03-01",
+      84.22734981428722
      ]
     ]
-   },
-   "stale": [
-    [
-     "pharma",
-     null
-    ],
-    [
-     "machinery",
-     "2021-06"
-    ]
-   ]
+   }
   }
  },
  "parks": {
