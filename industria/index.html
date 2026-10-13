@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d4a57'/%3E%3Cpath d='M5 10.5h22M5 25.5h22' stroke='%23fff' stroke-opacity='.4' stroke-width='1.6' stroke-linecap='round'/%3E%3Crect x='5' y='15.5' width='22' height='5.4' rx='1.4' fill='%23d9a441'/%3E%3Cpath d='M10 5.5v10.2q0 2.5 2.5 2.5H25' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Literata:opsz,wght@7..72,400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Literata:opsz,wght@7..72,400..700&family=Noto+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
@@ -25,6 +25,8 @@
     <div class="lang" role="group" aria-label="Language / Idioma">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+      <button type="button" data-lang="el" aria-pressed="false">EL</button>
     </div>
   </header>
   <nav class="secnav" aria-label="Sections">
@@ -160,6 +162,8 @@
 </div>
 
 <script src="/assets/charts.js"></script>
+<script src="/assets/i18n/common.js"></script>
+<script src="/assets/i18n/industria.js"></script>
 <script>
 (() => {
   const T = {
@@ -239,9 +243,10 @@
     { name: "Molinos Río de la Plata", act: "food", tickers: "BYMA: MOLI" },
   ];
   const TYPE_HEX = { light: { "PÚBLICO": "#4b6f86", "PRIVADO": "#a0662e", "MIXTO": "#6c8f2f" }, dark: { "PÚBLICO": "#7fa8c2", "PRIVADO": "#d79a5c", "MIXTO": "#9cc25a" } };
+  AIM_EXTEND(T, "industria");
   let saved = null;
   try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
-  let lang = saved || ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en");
+  let lang = AIM_PICK_LANG(saved);
   let D = null, mapState = "idle", map = null, ptype = "all";
   const C = AIMCharts(() => lang, () => T[lang]);
   const { fmt, pct, monthName, esc } = C;
@@ -255,10 +260,10 @@
   function render() {
     const t = T[lang];
     document.documentElement.lang = lang;
-    document.title = (lang === "es" ? "Industria" : "Industry") + " · Argentina Invest Monitor";
+    document.title = T[lang].crumbHere + " · Argentina Invest Monitor";
     $$("[data-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
     $$("[data-i18n]").forEach(el => { const v = t[el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
-    $("#email").placeholder = lang === "es" ? "vos@empresa.com" : "you@company.com";
+    $("#email").placeholder = ({ es: "vos@empresa.com", en: "you@company.com" })[lang] || T[lang].emailPh;
     $("#coTable tbody").innerHTML = COS.map(c => `<tr><td><strong>${esc(c.name)}</strong></td><td style="text-align:left">${esc(t.acts[c.act])}</td><td style="text-align:left;white-space:nowrap">${esc(c.tickers)}</td></tr>`).join("");
     mountQuotes();
     $("#parkSeg").innerHTML = ["all", "PÚBLICO", "PRIVADO", "MIXTO"].map(k => `<button type="button" data-ptype="${k}" aria-pressed="${k === ptype}">${esc(t.types[k])}</button>`).join("");
@@ -277,7 +282,7 @@
     facts("#facts", f);
     const sa = I.sa.length ? I.sa : I.original;
     $("#ipiRange").textContent = t.range(monthName(sa[0].period, false), monthName(sa[sa.length - 1].period, false));
-    C.lineChart($("#ipiChart"), sa, "v", "var(--ind)", lang === "es" ? "índice" : "index", 1, innerWidth > 700 ? 320 : 240);
+    C.lineChart($("#ipiChart"), sa, "v", "var(--ind)", ({ es: "índice", en: "index", pt: "índice", el: "δείκτης" })[lang], 1, innerWidth > 700 ? 320 : 240);
     $("#ipiNote").innerHTML = t.ipiNote(src);
 
     // Ramas
@@ -288,7 +293,7 @@
       $("#branchTable tbody").innerHTML = dv.map(d => `<tr><td>${esc(d.name)}</td><td class="${cls(d.yoy)}">${pct(d.yoy)}</td><td class="${cls(d.ytd)}">${d.ytd != null ? pct(d.ytd) : "–"}</td><td class="hide-sm">${esc(monthName(d.latest, false))}</td></tr>`).join("");
       const ks = ["steel", "cement", "autoparts", "agrochem", "machinery", "pharma"].filter(k => O[k] && O[k].monthly && O[k].monthly.length).slice(0, 4);
       $("#branchGrid").innerHTML = ks.map(k => `<div><div class="chart-head"><h2 style="font-size:17px">${esc(t.smTitle(t.bNames[k]))}</h2><p class="${cls(O[k].yoy)}">${pct(O[k].yoy)}</p></div><div class="chart" id="sm_${k}"></div></div>`).join("");
-      ks.forEach(k => C.lineChart($("#sm_" + k), O[k].monthly, "v", "var(--ind)", lang === "es" ? "índice" : "index", 1, 200));
+      ks.forEach(k => C.lineChart($("#sm_" + k), O[k].monthly, "v", "var(--ind)", ({ es: "índice", en: "index", pt: "índice", el: "δείκτης" })[lang], 1, 200));
       $("#branchNote").innerHTML = t.branchNote(src);
     }
 
@@ -301,8 +306,8 @@
       const J = O.jobs_quarterly;
       if (J && J.length) ff.push([fmt(J[J.length - 1].v), t.bJobs(t.qLabel(J[J.length - 1].period))]);
       facts("#buildFacts", ff);
-      C.lineChart($("#isacChart"), O.construction.monthly, "v", "var(--ind2)", lang === "es" ? "índice" : "index", 1, 240);
-      if (J && J.length) C.lineChart($("#jobsChart"), J, "v", "var(--ind)", lang === "es" ? "empleos" : "jobs", 0, 240);
+      C.lineChart($("#isacChart"), O.construction.monthly, "v", "var(--ind2)", ({ es: "índice", en: "index", pt: "índice", el: "δείκτης" })[lang], 1, 240);
+      if (J && J.length) C.lineChart($("#jobsChart"), J, "v", "var(--ind)", ({ es: "empleos", en: "jobs", pt: "empregos", el: "θέσεις" })[lang], 0, 240);
       $("#buildNote").innerHTML = t.buildNote(srcLink(O.source || I.source));
     }
 
@@ -311,7 +316,7 @@
       $("#parkSection").hidden = false;
       const bp = Object.entries(P.by_province).sort((a, b) => b[1] - a[1]);
       $("#parkLede").textContent = t.parkLede(fmt(P.items.length), bp[0][0], fmt(P.by_province["Córdoba"] || 0));
-      C.hbar($("#parkProvChart"), bp.slice(0, 12).map(([n, v]) => ({ name: n, v, color: n === "Córdoba" ? "var(--ind2)" : "var(--ind)" })), { unit: lang === "es" ? "parques" : "parks", labelWidth: 150 });
+      C.hbar($("#parkProvChart"), bp.slice(0, 12).map(([n, v]) => ({ name: n, v, color: n === "Córdoba" ? "var(--ind2)" : "var(--ind)" })), { unit: ({ es: "parques", en: "parks", pt: "parques", el: "πάρκα" })[lang], labelWidth: 150 });
       $("#parkCba tbody").innerHTML = P.items.filter(i => i.province === "Córdoba").sort((a, b) => a.locality.localeCompare(b.locality)).map(i =>
         `<tr><td>${esc(i.name)}</td><td style="text-align:left">${esc(loc(i.locality))}</td><td style="text-align:left">${esc(t.type1[i.type] || i.type)}</td></tr>`).join("");
       $("#parkNote").innerHTML = t.parkNote(srcLink(P.source));
@@ -364,7 +369,7 @@
     s.src = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js"; s.async = true; s.type = "text/javascript";
     s.text = JSON.stringify({
       symbols: COS.filter(c => c.tv).map(c => [c.name, c.tv + "|12M"]),
-      chartOnly: false, width: "100%", height: 420, locale: lang === "es" ? "es" : "en", colorTheme: dark ? "dark" : "light",
+      chartOnly: false, width: "100%", height: 420, locale: AIM_TV_LOCALE[lang], colorTheme: dark ? "dark" : "light",
       autosize: false, showVolume: false, showMA: false, hideDateRanges: false, hideMarketStatus: false, hideSymbolLogo: false,
       scalePosition: "right", scaleMode: "Normal", fontFamily: "Archivo, system-ui, sans-serif", fontSize: "11", noTimeScale: false,
       valuesTracking: "1", changeMode: "price-and-percent", chartType: "area", lineWidth: 2, lineType: 0,

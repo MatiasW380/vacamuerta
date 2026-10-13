@@ -281,3 +281,16 @@ tbody tr:hover td { background: #f6f8fa; }
 .site-foot { border-top: 1px solid var(--ink); background: #fff; }
 .feed .topic { color: var(--brand); }
 .tip { border-radius: 4px; box-shadow: 0 6px 20px rgba(14, 26, 43, .12); }
+
+/* Griego: Archivo no tiene letras griegas; Noto Sans sí (Literata cubre el griego en los títulos) */
+html[lang="el"] { --sans: "Noto Sans", "Archivo", system-ui, sans-serif; }
+html[lang="el"] .mark { font-family: "Archivo", system-ui, sans-serif; }
+
+/* Selector de cuatro idiomas en pantallas chicas */
+.lang { flex: none; }
+@media (max-width: 480px) {
+  .mark { font-size: 15px; gap: 8px; }
+  .mark svg { width: 26px; height: 26px; }
+  .lang button { padding: 4px 6px; font-size: 12px; }
+}
+@media (max-width: 370px) { .top { flex-wrap: wrap; } }

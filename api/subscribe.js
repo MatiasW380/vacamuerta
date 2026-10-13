@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     try { body = JSON.parse(body); } catch { body = {}; }
   }
   const email = String(body?.email || "").trim().toLowerCase();
-  const lang = body?.lang === "es" ? "es" : "en";
+  const lang = ["es", "en", "pt", "el"].includes(body?.lang) ? body.lang : "en";
   if (!EMAIL.test(email) || email.length > 254) {
     return res.status(400).json({ ok: false, error: "email" });
   }

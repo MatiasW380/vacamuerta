@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d4a57'/%3E%3Cpath d='M5 10.5h22M5 25.5h22' stroke='%23fff' stroke-opacity='.4' stroke-width='1.6' stroke-linecap='round'/%3E%3Crect x='5' y='15.5' width='22' height='5.4' rx='1.4' fill='%23d9a441'/%3E%3Cpath d='M10 5.5v10.2q0 2.5 2.5 2.5H25' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Literata:opsz,wght@7..72,400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Literata:opsz,wght@7..72,400..700&family=Noto+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
@@ -25,6 +25,8 @@
     <div class="lang" role="group" aria-label="Language / Idioma">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+      <button type="button" data-lang="el" aria-pressed="false">EL</button>
     </div>
   </header>
   <nav class="secnav" aria-label="Sections">
@@ -245,6 +247,8 @@
 </div>
 
 <script src="/assets/charts.js"></script>
+<script src="/assets/i18n/common.js"></script>
+<script src="/assets/i18n/mineria.js"></script>
 <script>
 (() => {
   const T = {
@@ -366,9 +370,10 @@
                     dark: { Oro: "#e3b04a", Plata: "#a9b4be", Cobre: "#e08a52", Litio: "#74a0f2", Uranio: "#9cc25a", Otros: "#b3a595" } };
   const minColor = m => MIN_COLOR[m] || "var(--other-min)";
 
+  AIM_EXTEND(T, "mineria");
   let saved = null;
   try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
-  let lang = saved || ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en");
+  let lang = AIM_PICK_LANG(saved);
   let D = null, EX = null, mapState = "idle", map = null, stage = "all";
   const C = AIMCharts(() => lang, () => T[lang]);
   const { fmt, pct, monthName, esc } = C;
@@ -381,10 +386,10 @@
   function render() {
     const t = T[lang];
     document.documentElement.lang = lang;
-    document.title = (lang === "es" ? "Minería" : "Mining") + " · Argentina Invest Monitor";
+    document.title = T[lang].crumbHere + " · Argentina Invest Monitor";
     $$("[data-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
     $$("[data-i18n]").forEach(el => { const v = t[el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
-    $("#email").placeholder = lang === "es" ? "vos@empresa.com" : "you@company.com";
+    $("#email").placeholder = ({ es: "vos@empresa.com", en: "you@company.com" })[lang] || T[lang].emailPh;
     if (!D) return;
     const E = D.exports, P = D.projects, L = D.lithium, J = D.employment, I = D.ipi, PR = D.prices && D.prices.prices;
 
@@ -407,7 +412,7 @@
       const G = D.geo;
       if (G) {
         $("#provYear").textContent = G.year;
-        C.hbar($("#provChart"), G.provinces.slice(0, 10).map(p => ({ name: p.name === "Indeterminado" ? (lang === "es" ? "Sin provincia" : "Unassigned") : p.name, v: p.v, muted: p.name === "Indeterminado" })), { unit: "USD M", labelWidth: 120, color: "var(--min)" });
+        C.hbar($("#provChart"), G.provinces.slice(0, 10).map(p => ({ name: p.name === "Indeterminado" ? (({ es: "Sin provincia", en: "Unassigned", pt: "Sem província", el: "Χωρίς επαρχία" })[lang]) : p.name, v: p.v, muted: p.name === "Indeterminado" })), { unit: "USD M", labelWidth: 120, color: "var(--min)" });
       }
       const ys = E.yearly_by_sector, order = ["Metaliferos", "No metaliferos", "Rocas de aplicación", "Combustibles", "Piedras preciosas y/o semipreciosas"];
       const cols = { "Metaliferos": "var(--gold)", "No metaliferos": "var(--lithium)", "Rocas de aplicación": "var(--ink-3)", "Combustibles": "var(--other-min)", "Piedras preciosas y/o semipreciosas": "var(--s5)" };
@@ -451,13 +456,13 @@
       const lc = PR && PR.lithium_carbonate;
       if (lc) f.push([fmt(lc.monthly[lc.monthly.length - 1].v), t.lithF4]);
       $("#lithFacts").innerHTML = f.map(([a, b]) => `<li><strong>${esc(a)}</strong>${esc(b)}</li>`).join("");
-      C.columnChart($("#lithProdChart"), pm.map(x => ({ period: x.period, t: x.t })), "t", lang === "es" ? "t" : "t", t.lithProdTitle);
+      C.columnChart($("#lithProdChart"), pm.map(x => ({ period: x.period, t: x.t })), "t", ({ es: "t", en: "t", pt: "t", el: "t" })[lang], t.lithProdTitle);
       $$("#lithProdChart path").forEach(p => p.setAttribute("fill", "var(--lithium)"));
       C.columnChart($("#lithExpChart"), L.exports_yearly.filter(x => x.year >= 2010).map(x => ({ period: String(x.year), v: x.v })), "v", "USD M", t.lithExpTitle);
       $$("#lithExpChart path").forEach(p => p.setAttribute("fill", "var(--lithium)"));
       $("#lithDestTitle").textContent = t.lithDestTitle(L.destinations_year);
       const dest = L.destinations.filter(d => d.name !== "Resto").concat(L.destinations.filter(d => d.name === "Resto"));
-      C.hbar($("#lithDestChart"), dest.map(d => ({ name: d.name === "Resto" ? (lang === "es" ? "Resto" : "Rest") : d.name, v: d.v, muted: d.name === "Resto" })), { unit: "USD M", labelWidth: 130, color: "var(--lithium)", digits: 1 });
+      C.hbar($("#lithDestChart"), dest.map(d => ({ name: d.name === "Resto" ? (({ es: "Resto", en: "Rest", pt: "Restante", el: "Λοιπά" })[lang]) : d.name, v: d.v, muted: d.name === "Resto" })), { unit: "USD M", labelWidth: 130, color: "var(--lithium)", digits: 1 });
       $("#lithNote").innerHTML = t.lithNote(srcLink(D.exports.source));
     }
 
@@ -479,12 +484,12 @@
       if (J) { f.push([fmt(J.total), t.jF2(monthName(J.latest_period))]); if (J.total_prev_year) f.push([(J.total >= J.total_prev_year ? "+" : "−") + fmt(Math.abs(J.total - J.total_prev_year)), t.jF3, J.total - J.total_prev_year]); }
       $("#jobsFacts").innerHTML = f.map(([v, l, d]) => `<li><strong class="${d > 0 ? "delta-up" : d < 0 ? "delta-down" : ""}">${esc(v)}</strong>${esc(l)}</li>`).join("");
       if (I) {
-        C.lineChart($("#ipiChart"), I.series.sa.filter(x => x.period >= "2017-01"), "v", "var(--min)", lang === "es" ? "índice" : "index", 1, 240);
+        C.lineChart($("#ipiChart"), I.series.sa.filter(x => x.period >= "2017-01"), "v", "var(--min)", ({ es: "índice", en: "index", pt: "índice", el: "δείκτης" })[lang], 1, 240);
         $("#ipiTable tbody").innerHTML = Object.entries(t.branches).filter(([k]) => I.branches_yoy[k] != null).map(([k, n]) =>
           `<tr><td>${esc(n)}</td><td class="${I.branches_yoy[k] > 0 ? "delta-up" : "delta-down"}">${pct(I.branches_yoy[k])}</td></tr>`).join("");
       }
       if (J) {
-        C.lineChart($("#empChart"), J.monthly_total.filter(x => x.period >= "2012-01"), "v", "var(--min)", lang === "es" ? "empleos" : "jobs", 0, 240);
+        C.lineChart($("#empChart"), J.monthly_total.filter(x => x.period >= "2012-01"), "v", "var(--min)", ({ es: "empleos", en: "jobs", pt: "empregos", el: "θέσεις" })[lang], 0, 240);
         $("#empTable tbody").innerHTML = J.by_branch.map(b => `<tr><td>${esc(t.rubros[b.name] || b.name)}</td><td>${fmt(b.v)}</td><td class="${b.prev && b.v > b.prev ? "delta-up" : b.prev && b.v < b.prev ? "delta-down" : ""}">${b.prev ? pct((b.v / b.prev - 1) * 100) : "–"}</td></tr>`).join("");
       }
       $("#jobsNote").innerHTML = t.jobsNote(srcLink((J || I).source));
@@ -510,7 +515,7 @@
         $("#invApprovals").hidden = false;
         $("#invTable tbody").innerHTML = appr.map(a => `<tr><td>${esc(C.monthName(a.date.slice(0, 7)))}</td><td style="text-align:left"><a href="${esc(a.url)}" rel="noopener" target="_blank">${esc(a.project || a.title)}</a></td><td style="text-align:left">${esc(a.company || "–")}</td><td>${a.usd_million ? fmt(a.usd_million) : "–"}</td></tr>`).join("");
       }
-      $("#invNote").innerHTML = t.invNote(`<a href="https://www.argentina.gob.ar/economia/rigi" rel="noopener">${lang === "es" ? "Ministerio de Economía, portal del RIGI; Boletín Oficial" : "Ministry of Economy, RIGI portal; Official Gazette"}</a>`);
+      $("#invNote").innerHTML = t.invNote(`<a href="https://www.argentina.gob.ar/economia/rigi" rel="noopener">${({ es: "Ministerio de Economía, portal del RIGI; Boletín Oficial", en: "Ministry of Economy, RIGI portal; Official Gazette", pt: "Ministério da Economia, portal do RIGI; Boletim Oficial", el: "Υπουργείο Οικονομίας, πύλη RIGI· Επίσημη Εφημερίδα" })[lang]}</a>`);
     }
     renderCompanies();
     syncNav(); spy();
@@ -575,7 +580,7 @@
     s.src = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js"; s.async = true; s.type = "text/javascript";
     s.text = JSON.stringify({
       symbols: LISTED_FOCUS.slice(0, 6).map(c => [c.name, c.tv + "|12M"]),
-      chartOnly: false, width: "100%", height: 420, locale: lang === "es" ? "es" : "en", colorTheme: dark ? "dark" : "light",
+      chartOnly: false, width: "100%", height: 420, locale: AIM_TV_LOCALE[lang], colorTheme: dark ? "dark" : "light",
       autosize: false, showVolume: false, showMA: false, hideDateRanges: false, hideMarketStatus: false, hideSymbolLogo: false,
       scalePosition: "right", scaleMode: "Normal", fontFamily: "Archivo, system-ui, sans-serif", fontSize: "11", noTimeScale: false,
       valuesTracking: "1", changeMode: "price-and-percent", chartType: "area", lineWidth: 2, lineType: 0,
@@ -612,7 +617,7 @@
     const t = T[lang], P = D.projects, pal = MIN_HEX[isDark() ? "dark" : "light"];
     const ms = Object.keys(pal).filter(m => m === "Otros" || P.by_mineral[m]);
     $("#mapLegend").innerHTML = ms.map(m => `<span><b style="background:${pal[m]};border-radius:50%;width:11px"></b>${esc(minName(m))}</span>`).join("") +
-      `<span>${lang === "es" ? "Círculo grande: en producción o construcción" : "Large circle: producing or under construction"}</span>`;
+      `<span>${({ es: "Círculo grande: en producción o construcción", en: "Large circle: producing or under construction", pt: "Círculo grande: em produção ou construção", el: "Μεγάλος κύκλος: σε παραγωγή ή κατασκευή" })[lang]}</span>`;
   }
   async function initMap() {
     if (mapState !== "idle" || !D || !D.projects) return;

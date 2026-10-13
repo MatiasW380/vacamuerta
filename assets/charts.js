@@ -1,7 +1,7 @@
 /* Argentina Invest Monitor — gráficos compartidos (SVG a mano, sin dependencias).
    Uso: const C = AIMCharts(() => lang, () => T[lang]);  C.lineChart(host, rows, key, color, unit, digits, height) */
 window.AIMCharts = function (getLang, getT) {
-  const locale = () => (getLang() === "es" ? "es-AR" : "en-US");
+  const locale = () => (window.AIM_LOCALE || {})[getLang()] || "en-US";
   const fmt = (n, d = 0) => n == null ? "–" : new Intl.NumberFormat(locale(), { minimumFractionDigits: d, maximumFractionDigits: d }).format(n);
   // Variaciones interanuales extremas: casi siempre parten de una base chica; se marcan con una nota.
   const OUTLIER = 200;

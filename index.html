@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d4a57'/%3E%3Cpath d='M5 10.5h22M5 25.5h22' stroke='%23fff' stroke-opacity='.4' stroke-width='1.6' stroke-linecap='round'/%3E%3Crect x='5' y='15.5' width='22' height='5.4' rx='1.4' fill='%23d9a441'/%3E%3Cpath d='M10 5.5v10.2q0 2.5 2.5 2.5H25' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Literata:opsz,wght@7..72,400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Literata:opsz,wght@7..72,400..700&family=Noto+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <style>
 .home-hero { padding: 52px 0 8px; }
@@ -55,6 +55,8 @@
     <div class="lang" role="group" aria-label="Language / Idioma">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+      <button type="button" data-lang="el" aria-pressed="false">EL</button>
     </div>
   </header>
 
@@ -132,6 +134,8 @@
   </footer>
 </div>
 
+<script src="/assets/i18n/common.js"></script>
+<script src="/assets/i18n/home.js"></script>
 <script>
 (() => {
   const SECTORS = [
@@ -210,14 +214,15 @@
     },
   };
 
+  AIM_EXTEND(T, "home");
   let saved = null;
   try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
-  let lang = saved || ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en");
+  let lang = AIM_PICK_LANG(saved);
   if (!T[lang]) lang = "en";
   let VM = null, EX = null, MN = null, AG = null, FN = null, IN = null;
 
   const $ = s => document.querySelector(s);
-  const locale = () => (lang === "es" ? "es-AR" : "en-US");
+  const locale = () => AIM_LOCALE[lang];
   const fmt = (n, d = 0) => n == null ? "–" : new Intl.NumberFormat(locale(), { minimumFractionDigits: d, maximumFractionDigits: d }).format(n);
   const pct = n => n == null ? "–" : (n > 0 ? "+" : n < 0 ? "−" : "") + fmt(Math.abs(n), 1) + "%";
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -249,7 +254,7 @@
     document.documentElement.lang = lang;
     document.querySelectorAll("[data-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
     document.querySelectorAll("[data-i18n]").forEach(el => { const v = t[el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
-    $("#email").placeholder = lang === "es" ? "vos@empresa.com" : "you@company.com";
+    $("#email").placeholder = ({ es: "vos@empresa.com", en: "you@company.com" })[lang] || T[lang].emailPh;
 
     // Pulse: the numbers of the day.
     const pulse = [];
@@ -263,7 +268,7 @@
     $("#pulse").innerHTML = pulse.slice(0, 4).map(p => `<li><a href="${esc(p.href)}"${p.ext ? ' rel="noopener" target="_blank"' : ""}><span class="k">${esc(p.k)}</span><strong>${esc(p.v)}</strong><span class="s">${esc(p.s)}</span></a></li>`).join("");
 
     // Sectores en vivo, cada uno con su curva.
-    const card = (sec, spark, metrics) => { const c = sec[lang]; return `<article class="feature">
+    const card = (sec, spark, metrics) => { const c = sec[lang] || AIM_TR.home[lang].sectors[sec.id]; return `<article class="feature">
       <div><span class="live-dot">${esc(t.live)}</span>
         <h3><a href="${sec.href}">${esc(c.name)}</a></h3>
         <p>${esc(c.text)}</p><div class="src">${esc(t.sources)}: ${esc(c.src)}</div>
@@ -302,7 +307,7 @@
     });
     $("#feature").innerHTML = cards.join("");
     $(".soon-title").hidden = $("#soonGrid").hidden = !SECTORS.some(x => !x.live);
-    $("#soonGrid").innerHTML = SECTORS.filter(x => !x.live).map(sec => { const c = sec[lang];
+    $("#soonGrid").innerHTML = SECTORS.filter(x => !x.live).map(sec => { const c = sec[lang] || AIM_TR.home[lang].sectors[sec.id];
       return `<li><h3>${esc(c.name)}</h3><p>${esc(c.text)}</p><div class="src">${esc(t.plannedSources)}: ${esc(c.src)}</div></li>`; }).join("");
 
     // Regulations and news.

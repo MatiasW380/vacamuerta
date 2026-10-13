@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d4a57'/%3E%3Cpath d='M5 10.5h22M5 25.5h22' stroke='%23fff' stroke-opacity='.4' stroke-width='1.6' stroke-linecap='round'/%3E%3Crect x='5' y='15.5' width='22' height='5.4' rx='1.4' fill='%23d9a441'/%3E%3Cpath d='M10 5.5v10.2q0 2.5 2.5 2.5H25' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Literata:opsz,wght@7..72,400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Literata:opsz,wght@7..72,400..700&family=Noto+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <style>
 .doc { max-width: 760px; padding: 36px 0 0; }
@@ -21,7 +21,8 @@
 .doc td .meta { font-size: 13px; color: var(--ink-3); }
 .doc td { vertical-align: top; font-size: 14.5px; }
 .doc td:nth-child(2) { color: var(--ink-2); }
-html[lang="es"] .doc > div[lang="en"], html[lang="en"] .doc > div[lang="es"] { display: none; }
+.doc > div[lang] { display: none; }
+html[lang="en"] .doc > div[lang="en"], html[lang="es"] .doc > div[lang="es"], html[lang="pt"] .doc > div[lang="pt"], html[lang="el"] .doc > div[lang="el"] { display: block; }
 </style>
 </head>
 <body>
@@ -38,6 +39,8 @@ html[lang="es"] .doc > div[lang="en"], html[lang="en"] .doc > div[lang="es"] { d
     <div class="lang" role="group" aria-label="Language / Idioma">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+      <button type="button" data-lang="el" aria-pressed="false">EL</button>
     </div>
   </header>
   <main id="main" class="doc">
@@ -141,6 +144,106 @@ html[lang="es"] .doc > div[lang="en"], html[lang="en"] .doc > div[lang="es"] { d
 <h2>Licencia</h2>
 <p>Los datos de la Secretaría de Energía se publican con licencia Creative Commons Atribución 4.0; el resto, según los términos de cada organismo citado. La serie mensual de Vaca Muerta se puede <a href="/data/vm_monthly.csv" download>descargar en CSV</a>.</p>
 </div>
+<div lang="pt">
+<h1>Metodologia e fontes</h1>
+<p class="lede">Tudo o que o monitor mostra vem de fontes públicas e oficiais. Não produzimos dados: nós os baixamos, limpamos, cruzamos entre si e mostramos com sua fonte. Esta página explica como.</p>
+<h2>Como é atualizado</h2>
+<p>Um processo automático baixa cada fonte em seu próprio ritmo: a produção por poço uma vez por semana e o restante todos os dias. Se uma fonte não responde ou muda de formato, o último dado válido é mantido e a seção indica sua data. Cada número na tela traz sua fonte e sua data.</p>
+<h2>Fontes</h2>
+<div class="table-wrap"><table><thead><tr><th scope="col">Fonte</th><th scope="col" style="text-align:left">O que se usa</th><th scope="col">Frequência</th></tr></thead><tbody>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/produccion-de-petroleo-y-gas-por-pozo" rel="noopener">Capítulo IV: produção por poço</a><div class="meta">Secretaria de Energia</div></td><td style="text-align:left">Petróleo, gás e água de cada poço: base da produção, operadoras, blocos, curvas tipo e corte de água.</td><td>Mensal</td></tr>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/datos-de-fractura-de-pozos-adjunto-iv" rel="noopener">Anexo IV: fraturamento hidráulico</a><div class="meta">Secretaria de Energia</div></td><td style="text-align:left">Etapas de fraturamento, areia e água por poço, e comprimento do ramal lateral.</td><td>Mensal</td></tr>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/reservas-de-petroleo-y-gas" rel="noopener">Reservas de petróleo e gás</a><div class="meta">Secretaria de Energia</div></td><td style="text-align:left">Reservas provadas, prováveis e possíveis e recursos contingentes, por operadora, bacia e campo.</td><td>Anual</td></tr>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado" rel="noopener">Royalties de petróleo e gás</a><div class="meta">Secretaria de Energia</div></td><td style="text-align:left">Preço declarado na boca do poço, volume e royalties pagos, por província, para petróleo e gás.</td><td>Mensal</td></tr>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/precios-en-surtidor" rel="noopener">Preços nos postos</a><div class="meta">Secretaria de Energia</div></td><td style="text-align:left">Preços vigentes informados por cada posto de combustível.</td><td>Diária</td></tr>
+<tr><td><a href="https://hidrocarburos.energianeuquen.gob.ar/gis" rel="noopener">Áreas, poços, dutos e janelas de fluidos</a><div class="meta">Província de Neuquén</div></td><td style="text-align:left">Limites dos blocos, titulares, operadora, norma de outorga e vencimento da concessão; localização de cada poço de Vaca Muerta.</td><td>Semanal</td></tr>
+<tr><td><a href="https://www.boletinoficial.gob.ar/" rel="noopener">Boletim Oficial, primeira seção</a><div class="meta">Boletim Oficial da República Argentina</div></td><td style="text-align:left">Normas sobre hidrocarbonetos, gás e RIGI; de cada aprovação RIGI são lidos empresa, projeto e investimento.</td><td>Diária</td></tr>
+<tr><td><a href="https://www.argentina.gob.ar/economia/rigi" rel="noopener">Portal do RIGI</a><div class="meta">Ministério da Economia</div></td><td style="text-align:left">Plano de investimento anual dos projetos aprovados, por setor.</td><td>Diária</td></tr>
+<tr><td><a href="https://datos.gob.ar/series" rel="noopener">Comércio exterior argentino</a><div class="meta">INDEC, via API de Séries de Tempo</div></td><td style="text-align:left">Exportações de combustíveis e energia e importações de combustíveis e lubrificantes, em dólares.</td><td>Trimestral</td></tr>
+<tr><td><a href="https://www.argentina.gob.ar/economia/mineria/siacam" rel="noopener">SIACAM: comércio, carteira de projetos, emprego, produção e preços</a><div class="meta">Secretaria de Mineração</div></td><td style="text-align:left">Exportações por mineral e província, projetos metalíferos e de lítio com localização e donos, emprego registrado, índice de produção mineira, produção de carbonato de lítio e preços internacionais.</td><td>Mensal</td></tr>
+<tr><td><a href="https://datos.magyp.gob.ar/dataset/estimaciones-agricolas" rel="noopener">Estimativas agrícolas</a><div class="meta">Secretaria de Agricultura, Pecuária e Pesca</div></td><td style="text-align:left">Área plantada e colhida, produção e produtividade por cultura, província e departamento.</td><td>Por safra</td></tr>
+<tr><td><a href="https://datos.gob.ar/series" rel="noopener">Liquidação de divisas do agroexportador</a><div class="meta">CIARA-CEC, via API de Séries de Tempo</div></td><td style="text-align:left">Dólares liquidados pelos exportadores de grãos e oleaginosas.</td><td>Mensal</td></tr>
+<tr><td><a href="https://www.worldbank.org/en/research/commodity-markets" rel="noopener">Preços internacionais de commodities</a><div class="meta">Banco Mundial (Pink Sheet)</div></td><td style="text-align:left">Soja, farelo e óleo de soja, milho, trigo e óleo de girassol.</td><td>Mensal</td></tr>
+<tr><td><a href="https://datosgobar.github.io/georef-ar-api/" rel="noopener">Georef</a><div class="meta">Instituto Geográfico Nacional e datos.gob.ar</div></td><td style="text-align:left">Localização de cada departamento e localidade para os mapas do agro e da indústria.</td><td>Estável</td></tr>
+<tr><td><a href="https://www.bcra.gob.ar/en/central-bank-api-catalog/" rel="noopener">Estatísticas monetárias do BCRA</a><div class="meta">Banco Central da República Argentina</div></td><td style="text-align:left">Reservas, juros, câmbio de atacado e varejo, base monetária, depósitos e empréstimos privados, inflação e expectativas.</td><td>Diária</td></tr>
+<tr><td><a href="https://datos.gob.ar/series" rel="noopener">Estimador Mensal de Atividade Econômica (EMAE)</a><div class="meta">INDEC, via API de Séries de Tempo</div></td><td style="text-align:left">Nível de atividade dessazonalizado.</td><td>Mensal</td></tr>
+<tr><td><a href="https://datos.gob.ar/series" rel="noopener">Índice de produção industrial manufatureira (IPI)</a><div class="meta">INDEC, via API de Séries de Tempo</div></td><td style="text-align:left">Nível geral, dessazonalizado e por ramo, e alguns ramos em detalhe (siderurgia, cimento, autopeças, agroquímicos).</td><td>Mensal</td></tr>
+<tr><td><a href="https://datos.gob.ar/series" rel="noopener">Utilização da capacidade instalada e ISAC</a><div class="meta">INDEC, via API de Séries de Tempo</div></td><td style="text-align:left">Uso da capacidade da indústria e nível de atividade da construção.</td><td>Trimestral e mensal</td></tr>
+<tr><td><a href="https://datos.gob.ar/series" rel="noopener">Emprego registrado na indústria</a><div class="meta">API de Séries de Tempo (datos.gob.ar)</div></td><td style="text-align:left">Postos de trabalho privados registrados na indústria de transformação.</td><td>Trimestral</td></tr>
+<tr><td><a href="https://datos.gob.ar/dataset/registro-nacional-de-parques-industriales-renpi" rel="noopener">Registro Nacional de Parques Industriais (RENPI)</a><div class="meta">Ministério da Economia</div></td><td style="text-align:left">Nome, província, localidade e tipo (público, privado ou misto) de cada parque inscrito.</td><td>Mensal</td></tr>
+<tr><td><a href="https://www.bcra.gob.ar/" rel="noopener">Cotação do dólar</a><div class="meta">BCRA, Comunicação A 3500</div></td><td style="text-align:left">Dólar oficial de atacado.</td><td>Diária</td></tr>
+<tr><td><a href="https://www.eia.gov/opendata/" rel="noopener">Brent e WTI</a><div class="meta">EIA dos Estados Unidos</div></td><td style="text-align:left">Preço spot internacional do petróleo.</td><td>Diária</td></tr>
+</tbody></table></div>
+<h2>Como é processado</h2>
+<dl>
+<dt>O que é Vaca Muerta</dt><dd>Poços cuja formação declarada é Vaca Muerta e cujo recurso é não convencional, em qualquer província.</dd>
+<dt>Barris por dia</dt><dd>O volume mensal em metros cúbicos é convertido em barris (1 m³ = 6,2898 barris) e dividido pelos dias do mês.</dd>
+<dt>Operadoras</dt><dd>As razões sociais são agrupadas por empresa (por exemplo, Petrolera El Trébol dentro de Phoenix Global). A operadora de um bloco é a empresa com mais produção nesse bloco no último mês.</dd>
+<dt>Curvas tipo</dt><dd>Para cada poço, soma-se o petróleo dos seis primeiros meses de produção e calcula-se a média por ano de início. Só entram poços com seis meses completos.</dd>
+<dt>Corte de água</dt><dd>Água produzida sobre água mais petróleo, em volume, para o conjunto dos poços.</dd>
+<dt>Reservas e anos de reserva</dt><dd>Usam-se as reservas até o fim da concessão certificadas por cada empresa em 31 de dezembro. Os anos de reserva dividem as reservas provadas pela produção atual: são uma referência, não uma previsão.</dd>
+<dt>Preço na boca do poço</dt><dd>É o preço que as produtoras declaram para pagar royalties, publicado por província. O do petróleo é convertido de USD por m³ para USD por barril; o do gás é publicado em pesos por mil m³ e convertido em USD por milhão de BTU com o câmbio oficial mensal e 9.300 kcal por m³.</dd>
+<dt>Mineração</dt><dd>As exportações são somadas por mês e mostradas como acumulado de 12 meses para eliminar a sazonalidade. O lítio figura entre os minerais não metálicos, como a Secretaria o classifica. A etapa de cada projeto é a informada pela Secretaria em sua carteira.</dd>
+<dt>Agro</dt><dd>A colheita soma soja, milho, trigo, girassol, cevada, sorgo e amendoim segundo as estimativas finais de cada safra. Cada departamento é localizado em seu centroide; o tamanho do círculo é proporcional às toneladas colhidas.</dd>
+<dt>Finanças</dt><dd>Os depósitos e empréstimos em pesos são convertidos em dólares com o câmbio oficial de atacado do último dia de cada mês, para compará-los com os saldos em dólares. A taxa mensal do depósito a prazo é a taxa nominal anual dividida por doze.</dd>
+<dt>Indústria</dt><dd>A variação contra um ano antes compara o índice original do último mês com o mesmo mês do ano anterior; a do ano compara a soma dos meses publicados com os mesmos meses do ano anterior. Cada parque industrial é localizado no centro de sua localidade com a API Georef.</dd>
+<dt>Normas e RIGI</dt><dd>Os avisos do Boletim Oficial são lidos e classificados por tema a partir de sua parte dispositiva. De cada aprovação RIGI extraem-se empresa, projeto, subsetor e valor. A leitura é automática: em caso de dúvida, vale o texto oficial, com link em cada linha.</dd>
+</dl>
+<h2>Limites</h2>
+<p>As fontes oficiais são publicadas com atraso (a produção, um ou dois meses) e às vezes revisadas retroativamente; quando isso acontece, o monitor se corrige sozinho na atualização seguinte. As cotações de bolsa vêm da TradingView, com o atraso de cada mercado. Nada do que é mostrado é recomendação de investimento.</p>
+<h2>Licença</h2>
+<p>Os dados da Secretaria de Energia são publicados sob licença Creative Commons Atribuição 4.0; o restante, segundo os termos de cada órgão citado. A série mensal de Vaca Muerta pode ser <a href="/data/vm_monthly.csv" download>baixada em CSV</a>.</p>
+</div>
+<div lang="el">
+<h1>Μεθοδολογία και πηγές</h1>
+<p class="lede">Ό,τι δείχνει το monitor προέρχεται από δημόσιες, επίσημες πηγές. Δεν παράγουμε δεδομένα: τα κατεβάζουμε, τα καθαρίζουμε, τα διασταυρώνουμε και τα παρουσιάζουμε με την πηγή τους. Αυτή η σελίδα εξηγεί πώς.</p>
+<h2>Πώς ενημερώνεται</h2>
+<p>Μια αυτόματη διαδικασία κατεβάζει κάθε πηγή με τον δικό της ρυθμό: την παραγωγή ανά γεώτρηση μία φορά την εβδομάδα και τα υπόλοιπα καθημερινά. Αν μια πηγή δεν αποκρίνεται ή αλλάζει μορφή, διατηρείται το τελευταίο έγκυρο στοιχείο και η ενότητα δείχνει την ημερομηνία του. Κάθε αριθμός στην οθόνη συνοδεύεται από την πηγή και την ημερομηνία του.</p>
+<h2>Πηγές</h2>
+<div class="table-wrap"><table><thead><tr><th scope="col">Πηγή</th><th scope="col" style="text-align:left">Τι λαμβάνεται</th><th scope="col">Συχνότητα</th></tr></thead><tbody>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/produccion-de-petroleo-y-gas-por-pozo" rel="noopener">Κεφάλαιο IV: παραγωγή ανά γεώτρηση</a><div class="meta">Γραμματεία Ενέργειας</div></td><td style="text-align:left">Πετρέλαιο, αέριο και νερό κάθε γεώτρησης: βάση για την παραγωγή, τις εταιρείες, τα οικόπεδα, τις καμπύλες τύπου και το ποσοστό νερού.</td><td>Μηνιαία</td></tr>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/datos-de-fractura-de-pozos-adjunto-iv" rel="noopener">Παράρτημα IV: υδραυλική ρωγμάτωση</a><div class="meta">Γραμματεία Ενέργειας</div></td><td style="text-align:left">Στάδια ρωγμάτωσης, άμμος και νερό ανά γεώτρηση, και μήκος οριζόντιου τμήματος.</td><td>Μηνιαία</td></tr>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/reservas-de-petroleo-y-gas" rel="noopener">Αποθέματα πετρελαίου και αερίου</a><div class="meta">Γραμματεία Ενέργειας</div></td><td style="text-align:left">Βεβαιωμένα, πιθανά και ενδεχόμενα αποθέματα και ενδεχόμενοι πόροι, ανά εταιρεία, λεκάνη και κοίτασμα.</td><td>Ετήσια</td></tr>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado" rel="noopener">Δικαιώματα πετρελαίου και αερίου</a><div class="meta">Γραμματεία Ενέργειας</div></td><td style="text-align:left">Δηλωμένη τιμή στην κεφαλή της γεώτρησης, όγκος και καταβληθέντα δικαιώματα, ανά επαρχία, για πετρέλαιο και αέριο.</td><td>Μηνιαία</td></tr>
+<tr><td><a href="http://datos.energia.gob.ar/dataset/precios-en-surtidor" rel="noopener">Τιμές στην αντλία</a><div class="meta">Γραμματεία Ενέργειας</div></td><td style="text-align:left">Ισχύουσες τιμές που δηλώνει κάθε πρατήριο καυσίμων.</td><td>Ημερήσια</td></tr>
+<tr><td><a href="https://hidrocarburos.energianeuquen.gob.ar/gis" rel="noopener">Οικόπεδα, γεωτρήσεις, αγωγοί και ζώνες ρευστών</a><div class="meta">Επαρχία Neuquén</div></td><td style="text-align:left">Όρια οικοπέδων, δικαιούχοι, εταιρεία λειτουργίας, πράξη παραχώρησης και λήξη· θέση κάθε γεώτρησης του Vaca Muerta.</td><td>Εβδομαδιαία</td></tr>
+<tr><td><a href="https://www.boletinoficial.gob.ar/" rel="noopener">Επίσημη Εφημερίδα, πρώτο τμήμα</a><div class="meta">Επίσημη Εφημερίδα της Δημοκρατίας της Αργεντινής</div></td><td style="text-align:left">Κανονισμοί για υδρογονάνθρακες, αέριο και RIGI· από κάθε έγκριση RIGI διαβάζονται εταιρεία, έργο και επένδυση.</td><td>Ημερήσια</td></tr>
+<tr><td><a href="https://www.argentina.gob.ar/economia/rigi" rel="noopener">Πύλη του RIGI</a><div class="meta">Υπουργείο Οικονομίας</div></td><td style="text-align:left">Ετήσιο επενδυτικό πλάνο των εγκεκριμένων έργων, ανά τομέα.</td><td>Ημερήσια</td></tr>
+<tr><td><a href="https://datos.gob.ar/series" rel="noopener">Εξωτερικό εμπόριο της Αργεντινής</a><div class="meta">INDEC, μέσω της API Χρονοσειρών</div></td><td style="text-align:left">Εξαγωγές καυσίμων και ενέργειας και εισαγωγές καυσίμων και λιπαντικών, σε δολάρια.</td><td>Τριμηνιαία</td></tr>
+<tr><td><a href="https://www.argentina.gob.ar/economia/mineria/siacam" rel="noopener">SIACAM: εμπόριο, χαρτοφυλάκιο έργων, απασχόληση, παραγωγή και τιμές</a><div class="meta">Γραμματεία Ορυχείων</div></td><td style="text-align:left">Εξαγωγές ανά ορυκτό και επαρχία, έργα μετάλλων και λιθίου με θέση και ιδιοκτήτες, καταγεγραμμένη απασχόληση, δείκτης μεταλλευτικής παραγωγής, παραγωγή ανθρακικού λιθίου και διεθνείς τιμές.</td><td>Μηνιαία</td></tr>
+<tr><td><a href="https://datos.magyp.gob.ar/dataset/estimaciones-agricolas" rel="noopener">Γεωργικές εκτιμήσεις</a><div class="meta">Γραμματεία Γεωργίας, Κτηνοτροφίας και Αλιείας</div></td><td style="text-align:left">Σπαρμένη και συγκομισμένη έκταση, παραγωγή και απόδοση ανά καλλιέργεια, επαρχία και διαμέρισμα.</td><td>Ανά περίοδο</td></tr>
+<tr><td><a href="https://datos.gob.ar/series" rel="noopener">Συνάλλαγμα από τις εξαγωγές σιτηρών</a><div class="meta">CIARA-CEC, μέσω της API Χρονοσειρών</div></td><td style="text-align:left">Δολάρια που πωλούν οι εξαγωγείς σιτηρών και ελαιούχων.</td><td>Μηνιαία</td></tr>
+<tr><td><a href="https://www.worldbank.org/en/research/commodity-markets" rel="noopener">Διεθνείς τιμές βασικών εμπορευμάτων</a><div class="meta">Παγκόσμια Τράπεζα (Pink Sheet)</div></td><td style="text-align:left">Σόγια, σογιάλευρο και σογιέλαιο, καλαμπόκι, σιτάρι και ηλιέλαιο.</td><td>Μηνιαία</td></tr>
+<tr><td><a href="https://datosgobar.github.io/georef-ar-api/" rel="noopener">Georef</a><div class="meta">Εθνικό Γεωγραφικό Ινστιτούτο και datos.gob.ar</div></td><td style="text-align:left">Θέση κάθε διαμερίσματος και τοποθεσίας για τους χάρτες της γεωργίας και της βιομηχανίας.</td><td>Σταθερή</td></tr>
+<tr><td><a href="https://www.bcra.gob.ar/en/central-bank-api-catalog/" rel="noopener">Νομισματικά στατιστικά της BCRA</a><div class="meta">Κεντρική Τράπεζα της Αργεντινής</div></td><td style="text-align:left">Αποθεματικά, επιτόκια, ισοτιμίες χονδρικής και λιανικής, νομισματική βάση, ιδιωτικές καταθέσεις και δάνεια, πληθωρισμός και προσδοκίες.</td><td>Ημερήσια</td></tr>
+<tr><td><a href="https://datos.gob.ar/series" rel="noopener">Μηνιαίος εκτιμητής οικονομικής δραστηριότητας (EMAE)</a><div class="meta">INDEC, μέσω της API Χρονοσειρών</div></td><td style="text-align:left">Εποχικά προσαρμοσμένο επίπεδο δραστηριότητας.</td><td>Μηνιαία</td></tr>
+<tr><td><a href="https://datos.gob.ar/series" rel="noopener">Δείκτης μεταποιητικής παραγωγής (IPI)</a><div class="meta">INDEC, μέσω της API Χρονοσειρών</div></td><td style="text-align:left">Γενικός δείκτης, εποχικά προσαρμοσμένος και ανά κλάδο, και επιλεγμένοι κλάδοι αναλυτικά (χαλυβουργία, τσιμέντο, ανταλλακτικά, αγροχημικά).</td><td>Μηνιαία</td></tr>
+<tr><td><a href="https://datos.gob.ar/series" rel="noopener">Χρήση δυναμικότητας και ISAC</a><div class="meta">INDEC, μέσω της API Χρονοσειρών</div></td><td style="text-align:left">Ποσοστό της βιομηχανικής δυναμικότητας σε χρήση και επίπεδο δραστηριότητας των κατασκευών.</td><td>Τριμηνιαία και μηνιαία</td></tr>
+<tr><td><a href="https://datos.gob.ar/series" rel="noopener">Καταγεγραμμένη απασχόληση στη βιομηχανία</a><div class="meta">API Χρονοσειρών (datos.gob.ar)</div></td><td style="text-align:left">Καταγεγραμμένες θέσεις εργασίας του ιδιωτικού τομέα στη μεταποίηση.</td><td>Τριμηνιαία</td></tr>
+<tr><td><a href="https://datos.gob.ar/dataset/registro-nacional-de-parques-industriales-renpi" rel="noopener">Εθνικό Μητρώο Βιομηχανικών Πάρκων (RENPI)</a><div class="meta">Υπουργείο Οικονομίας</div></td><td style="text-align:left">Όνομα, επαρχία, τοποθεσία και τύπος (δημόσιο, ιδιωτικό ή μικτό) κάθε καταχωρισμένου πάρκου.</td><td>Μηνιαία</td></tr>
+<tr><td><a href="https://www.bcra.gob.ar/" rel="noopener">Ισοτιμία του δολαρίου</a><div class="meta">BCRA, Ανακοίνωση A 3500</div></td><td style="text-align:left">Επίσημο δολάριο χονδρικής.</td><td>Ημερήσια</td></tr>
+<tr><td><a href="https://www.eia.gov/opendata/" rel="noopener">Brent και WTI</a><div class="meta">EIA των Ηνωμένων Πολιτειών</div></td><td style="text-align:left">Διεθνής τιμή spot του αργού.</td><td>Ημερήσια</td></tr>
+</tbody></table></div>
+<h2>Πώς επεξεργάζεται</h2>
+<dl>
+<dt>Τι θεωρείται Vaca Muerta</dt><dd>Γεωτρήσεις των οποίων ο δηλωμένος σχηματισμός είναι το Vaca Muerta και ο πόρος μη συμβατικός, σε οποιαδήποτε επαρχία.</dd>
+<dt>Βαρέλια την ημέρα</dt><dd>Ο μηνιαίος όγκος σε κυβικά μέτρα μετατρέπεται σε βαρέλια (1 m³ = 6,2898 βαρέλια) και διαιρείται με τις ημέρες του μήνα.</dd>
+<dt>Εταιρείες λειτουργίας</dt><dd>Οι νομικές οντότητες ομαδοποιούνται ανά εταιρεία (π.χ. η Petrolera El Trébol στη Phoenix Global). Εταιρεία λειτουργίας ενός οικοπέδου είναι εκείνη με τη μεγαλύτερη παραγωγή σε αυτό τον τελευταίο μήνα.</dd>
+<dt>Καμπύλες τύπου</dt><dd>Για κάθε γεώτρηση αθροίζεται το πετρέλαιο των πρώτων έξι μηνών παραγωγής και υπολογίζεται ο μέσος όρος ανά έτος έναρξης. Περιλαμβάνονται μόνο γεωτρήσεις με έξι πλήρεις μήνες.</dd>
+<dt>Ποσοστό νερού</dt><dd>Παραγόμενο νερό προς νερό και πετρέλαιο, σε όγκο, για το σύνολο των γεωτρήσεων.</dd>
+<dt>Αποθέματα και έτη αποθεμάτων</dt><dd>Χρησιμοποιούνται τα αποθέματα έως τη λήξη της παραχώρησης που πιστοποιεί κάθε εταιρεία στις 31 Δεκεμβρίου. Τα έτη αποθεμάτων διαιρούν τα βεβαιωμένα αποθέματα με την τρέχουσα παραγωγή: είναι ένδειξη, όχι πρόβλεψη.</dd>
+<dt>Τιμή στην κεφαλή της γεώτρησης</dt><dd>Η τιμή που δηλώνουν οι παραγωγοί για την καταβολή δικαιωμάτων, ανά επαρχία. Του πετρελαίου μετατρέπεται από USD ανά m³ σε USD ανά βαρέλι· του αερίου δημοσιεύεται σε πέσος ανά χίλια m³ και μετατρέπεται σε USD ανά εκατ. BTU με τη μηνιαία επίσημη ισοτιμία και 9.300 kcal ανά m³.</dd>
+<dt>Εξόρυξη</dt><dd>Οι εξαγωγές αθροίζονται ανά μήνα και εμφανίζονται ως κυλιόμενο 12μηνο για να αφαιρεθεί η εποχικότητα. Το λίθιο υπολογίζεται στα μη μεταλλικά ορυκτά, όπως το ταξινομεί η Γραμματεία. Το στάδιο κάθε έργου είναι αυτό που αναφέρει η Γραμματεία στο χαρτοφυλάκιό της.</dd>
+<dt>Γεωργία</dt><dd>Η συγκομιδή αθροίζει σόγια, καλαμπόκι, σιτάρι, ηλίανθο, κριθάρι, σόργο και αραχίδα, από τις τελικές εκτιμήσεις κάθε περιόδου. Κάθε διαμέρισμα τοποθετείται στο κέντρο του· το μέγεθος του κύκλου είναι ανάλογο των τόνων.</dd>
+<dt>Χρηματοοικονομικά</dt><dd>Οι καταθέσεις και τα δάνεια σε πέσος μετατρέπονται σε δολάρια με την επίσημη ισοτιμία χονδρικής της τελευταίας ημέρας κάθε μήνα, ώστε να συγκρίνονται με τα υπόλοιπα σε δολάρια. Το μηνιαίο επιτόκιο προθεσμιακής είναι το ετήσιο ονομαστικό διαιρεμένο με το δώδεκα.</dd>
+<dt>Βιομηχανία</dt><dd>Η ετήσια μεταβολή συγκρίνει τον μη προσαρμοσμένο δείκτη του τελευταίου μήνα με τον ίδιο μήνα του προηγούμενου έτους· η μεταβολή από την αρχή του έτους συγκρίνει το άθροισμα των δημοσιευμένων μηνών με τους ίδιους μήνες του προηγούμενου έτους. Κάθε βιομηχανικό πάρκο τοποθετείται στο κέντρο της τοποθεσίας του με την API Georef.</dd>
+<dt>Κανονισμοί και RIGI</dt><dd>Οι ανακοινώσεις της Επίσημης Εφημερίδας διαβάζονται και ταξινομούνται ανά θέμα από το διατακτικό τους. Από κάθε έγκριση RIGI εξάγονται εταιρεία, έργο, υποτομέας και ποσό. Η ανάγνωση είναι αυτόματη: σε κάθε αμφιβολία ισχύει το επίσημο κείμενο, με σύνδεσμο σε κάθε γραμμή.</dd>
+</dl>
+<h2>Όρια</h2>
+<p>Οι επίσημες πηγές δημοσιεύονται με καθυστέρηση (η παραγωγή, ένας ή δύο μήνες) και μερικές φορές αναθεωρούνται αναδρομικά· όταν συμβαίνει αυτό, το monitor διορθώνεται στην επόμενη ενημέρωση. Οι τιμές μετοχών προέρχονται από το TradingView, με την καθυστέρηση κάθε αγοράς. Τίποτα από όσα εμφανίζονται δεν αποτελεί επενδυτική συμβουλή.</p>
+<h2>Άδεια</h2>
+<p>Τα δεδομένα της Γραμματείας Ενέργειας δημοσιεύονται με άδεια Creative Commons Αναφορά 4.0· τα υπόλοιπα, σύμφωνα με τους όρους κάθε φορέα. Η μηνιαία σειρά του Vaca Muerta διατίθεται για <a href="/data/vm_monthly.csv" download>λήψη σε CSV</a>.</p>
+</div>
   </main>
   <footer class="site-foot">
     <div class="cols">
@@ -174,18 +277,21 @@ html[lang="es"] .doc > div[lang="en"], html[lang="en"] .doc > div[lang="es"] { d
     </div>
   </footer>
 </div>
+<script src="/assets/i18n/common.js"></script>
 <script>
 (() => {
   const T = {
     en: { fAbout: "Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.", fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining", fAgro: "Agriculture", fFinance: "Finance and banking", fIndustry: "Industry", fResources: "Resources", fMethod: "Methodology and sources", fCsv: "Download Vaca Muerta data (CSV)", fNewsletter: "Weekly newsletter", disclaimer: "For information only. Not investment advice.", crumbHere: "Methodology" },
     es: { fAbout: "Los datos públicos oficiales de la Argentina sobre energía, minería, agro, finanzas e industria, organizados para inversores y actualizados en forma automática.", fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería", fAgro: "Agro", fFinance: "Finanzas y bancos", fIndustry: "Industria", fResources: "Recursos", fMethod: "Metodología y fuentes", fCsv: "Descargar datos de Vaca Muerta (CSV)", fNewsletter: "Newsletter semanal", disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.", crumbHere: "Metodología" },
   };
+  T.pt = Object.assign({}, T.en, AIM_TR.common.pt, { crumbHere: "Metodologia" });
+  T.el = Object.assign({}, T.en, AIM_TR.common.el, { crumbHere: "Μεθοδολογία" });
   let saved = null;
   try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
-  let lang = saved || ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en");
+  let lang = AIM_PICK_LANG(saved);
   function render() {
     document.documentElement.lang = lang;
-    document.title = (lang === "es" ? "Metodología" : "Methodology") + " · Argentina Invest Monitor";
+    document.title = T[lang].crumbHere + " · Argentina Invest Monitor";
     document.querySelectorAll("[data-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
     document.querySelectorAll("[data-i18n]").forEach(el => { const v = T[lang][el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
   }
