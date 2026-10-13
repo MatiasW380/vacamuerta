@@ -113,7 +113,7 @@
           <li><a href="/mineria/" data-i18n="fMining">Mining</a></li>
           <li><a href="/agro/" data-i18n="fAgro">Agriculture</a></li>
           <li><a href="/finanzas/" data-i18n="fFinance">Finance and banking</a></li>
-          <li class="soon" data-i18n="fIndustry">Industry (in development)</li>
+          <li><a href="/industria/" data-i18n="fIndustry">Industry</a></li>
         </ul>
       </div>
       <div>
@@ -149,9 +149,9 @@
     { id: "finance", live: true, href: "/finanzas/",
       en: { name: "Finance and banking", text: "Central bank reserves, inflation, interest rates, the official dollar, deposits and credit, economic activity and the listed banks.", src: "Central Bank (BCRA), INDEC" },
       es: { name: "Finanzas y bancos", text: "Reservas del Banco Central, inflación, tasas de interés, el dólar oficial, depósitos y crédito, actividad económica y los bancos que cotizan.", src: "Banco Central (BCRA), INDEC" } },
-    { id: "industry",
-      en: { name: "Industry", text: "Manufacturing output by branch, industrial electricity demand and the investment regimes for each sector.", src: "INDEC, CAMMESA, Time Series API" },
-      es: { name: "Industria", text: "Producción manufacturera por rama, demanda eléctrica industrial y los regímenes de inversión de cada sector.", src: "INDEC, CAMMESA, API de Series de Tiempo" } },
+    { id: "industry", live: true, href: "/industria/",
+      en: { name: "Industry", text: "Manufacturing output by branch, capacity use, construction, industrial jobs, the map of industrial parks and the listed industrial companies.", src: "INDEC, Ministry of Economy (RENPI)" },
+      es: { name: "Industria", text: "Producción manufacturera por rama, uso de la capacidad, construcción, empleo industrial, el mapa de parques industriales y las industriales que cotizan.", src: "INDEC, Ministerio de Economía (RENPI)" } },
   ];
   const T = {
     en: {
@@ -163,7 +163,7 @@
       kBrent: "Brent crude", kBrentS: d => `USD per barrel, EIA, ${d}`,
       kWells: "Wells producing", kWellsS: m => `in Vaca Muerta, ${m}`,
       kRigi: "Latest RIGI approval", kRigiS: d => `Official Gazette, ${d}`,
-      soonTitle: "Next sectors", mYoy: "oil vs a year ago",
+      soonTitle: "Next sectors", sparkInd: m => `manufacturing output vs a year earlier, ${m}`, mCap: "of industrial capacity in use", mParks: "industrial parks registered", mYoy: "oil vs a year ago",
       sparkMin: m => `mineral exports, 12 months to ${m}`, sparkFin: "central bank international reserves", mInfl: m => `inflation, ${m}`, sparkAgro: c => `grains and oilseeds harvested, ${c} season`, mCba: "from Córdoba", mFxAgro: "from grain exporters, last 12 months", mYoy12: "vs the previous 12 months", mProj: "projects on the map", mJobs: "mining jobs",
       kMin: "Mineral exports", kMinS: m => `USD million, 12 months to ${m}`,
       sparkLab: m => `barrels of oil a day, ${m}`, sparkRange: y => `since ${y}`, sparkAria: "Vaca Muerta oil production, monthly",
@@ -176,7 +176,7 @@
       notReady: "Sign-ups open soon. Try again in a few days.", fail: "The subscription didn't go through. Try again in a minute.",
       footSources: "All figures come from public, official sources cited on each page.",
       fAbout: "Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.",
-      fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining", fAgro: "Agriculture", fFinance: "Finance and banking", fIndustry: "Industry (in development)",
+      fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining", fAgro: "Agriculture", fFinance: "Finance and banking", fIndustry: "Industry",
       fResources: "Resources", fMethod: "Methodology and sources", fCsv: "Download Vaca Muerta data (CSV)", fNewsletter: "Weekly newsletter",
       disclaimer: "For information only. Not investment advice.",
       topicNames: { Hidrocarburos: "Hydrocarbons", "Gas natural": "Natural gas", "Petróleo": "Oil", Biocombustibles: "Biofuels" },
@@ -190,7 +190,7 @@
       kBrent: "Petróleo Brent", kBrentS: d => `USD por barril, EIA, ${d}`,
       kWells: "Pozos en producción", kWellsS: m => `en Vaca Muerta, ${m}`,
       kRigi: "Última aprobación RIGI", kRigiS: d => `Boletín Oficial, ${d}`,
-      soonTitle: "Próximos sectores", mYoy: "petróleo vs. un año atrás",
+      soonTitle: "Próximos sectores", sparkInd: m => `producción manufacturera vs. un año antes, ${m}`, mCap: "de la capacidad industrial en uso", mParks: "parques industriales registrados", mYoy: "petróleo vs. un año atrás",
       sparkMin: m => `exportaciones mineras, 12 meses hasta ${m}`, sparkFin: "reservas internacionales del Banco Central", mInfl: m => `inflación, ${m}`, sparkAgro: c => `granos y oleaginosas cosechados, campaña ${c}`, mCba: "sale de Córdoba", mFxAgro: "liquidados por la agroexportación, 12 meses", mYoy12: "vs. los 12 meses anteriores", mProj: "proyectos en el mapa", mJobs: "empleos mineros",
       kMin: "Exportaciones mineras", kMinS: m => `millones de USD, 12 meses hasta ${m}`,
       sparkLab: m => `barriles de petróleo por día, ${m}`, sparkRange: y => `desde ${y}`, sparkAria: "Producción de petróleo de Vaca Muerta, mensual",
@@ -203,7 +203,7 @@
       notReady: "Las suscripciones abren pronto. Probá de nuevo en unos días.", fail: "No se pudo completar la suscripción. Probá de nuevo en un minuto.",
       footSources: "Todas las cifras provienen de fuentes públicas y oficiales, citadas en cada página.",
       fAbout: "Los datos públicos oficiales de la Argentina sobre energía, minería, agro, finanzas e industria, organizados para inversores y actualizados en forma automática.",
-      fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería", fAgro: "Agro", fFinance: "Finanzas y bancos", fIndustry: "Industria (en desarrollo)",
+      fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería", fAgro: "Agro", fFinance: "Finanzas y bancos", fIndustry: "Industria",
       fResources: "Recursos", fMethod: "Metodología y fuentes", fCsv: "Descargar datos de Vaca Muerta (CSV)", fNewsletter: "Newsletter semanal",
       disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.",
       topicNames: {},
@@ -214,7 +214,7 @@
   try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
   let lang = saved || ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en");
   if (!T[lang]) lang = "en";
-  let VM = null, EX = null, MN = null, AG = null, FN = null;
+  let VM = null, EX = null, MN = null, AG = null, FN = null, IN = null;
 
   const $ = s => document.querySelector(s);
   const locale = () => (lang === "es" ? "es-AR" : "en-US");
@@ -293,9 +293,15 @@
         spark = `<div class="spark-head"><div><strong>USD ${fmt(b.reserves.latest.v)} M</strong>${esc(t.sparkFin)}</div><span>${esc(t.sparkRange(w[0].date.slice(0, 4)))}</span></div><div class="spark">${sparkline(w.map(x => x.v), w.map(x => x.date.slice(0, 7)), "var(--fin)")}</div>`;
         metrics = `<ul class="metrics">${li ? `<li><strong>${fmt(li.m, 1)}%</strong>${esc(t.mInfl(monthName(li.period)))}</li>` : ""}${b.rates.badlar ? `<li><strong>${fmt(b.rates.badlar.latest.v, 1)}%</strong>BADLAR</li>` : ""}</ul>`;
       }
+      if (sec.id === "industry" && IN && IN.ipi) {
+        const I = IN.ipi, sa = (I.sa.length ? I.sa : I.original).filter(x => x.period >= "2016"), lo = I.original[I.original.length - 1], cap = IN.other && IN.other.capacity && IN.other.capacity.quarterly;
+        spark = `<div class="spark-head"><div><strong>${pct(I.yoy)}</strong>${esc(t.sparkInd(monthName(lo.period)))}</div><span>${esc(t.sparkRange(sa[0].period.slice(0, 4)))}</span></div><div class="spark">${sparkline(sa.map(x => x.v), sa.map(x => x.period), "var(--ind)")}</div>`;
+        metrics = `<ul class="metrics">${cap && cap.length ? `<li><strong>${fmt(cap[cap.length - 1].v, 1)}%</strong>${esc(t.mCap)}</li>` : ""}${IN.parks ? `<li><strong>${fmt(IN.parks.items.length)}</strong>${esc(t.mParks)}</li>` : ""}</ul>`;
+      }
       cards.push(card(sec, spark, metrics));
     });
     $("#feature").innerHTML = cards.join("");
+    $(".soon-title").hidden = $("#soonGrid").hidden = !SECTORS.some(x => !x.live);
     $("#soonGrid").innerHTML = SECTORS.filter(x => !x.live).map(sec => { const c = sec[lang];
       return `<li><h3>${esc(c.name)}</h3><p>${esc(c.text)}</p><div class="src">${esc(t.plannedSources)}: ${esc(c.src)}</div></li>`; }).join("");
 
@@ -337,7 +343,7 @@
 
   render();
   const get = u => fetch(u, { cache: "no-cache" }).then(r => (r.ok ? r.json() : null)).catch(() => null);
-  Promise.all([get("/data/vm.json"), get("/data/extras.json"), get("/data/mining.json"), get("/data/agro.json"), get("/data/finance.json")]).then(([v, x, m, a, f]) => { VM = v; EX = x; MN = m; AG = a; FN = f; render(); });
+  Promise.all([get("/data/vm.json"), get("/data/extras.json"), get("/data/mining.json"), get("/data/agro.json"), get("/data/finance.json"), get("/data/industry.json")]).then(([v, x, m, a, f, n]) => { VM = v; EX = x; MN = m; AG = a; FN = f; IN = n; render(); });
 })();
 </script>
 </body>

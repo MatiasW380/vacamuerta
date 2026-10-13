@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Industry · Argentina Invest Monitor</title>
+<meta name="description" content="Argentine manufacturing for investors: industrial output by branch, capacity use, construction, industrial jobs, the map of industrial parks and listed industrial companies, from official public data.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d4a57'/%3E%3Cpath d='M5 10.5h22M5 25.5h22' stroke='%23fff' stroke-opacity='.4' stroke-width='1.6' stroke-linecap='round'/%3E%3Crect x='5' y='15.5' width='22' height='5.4' rx='1.4' fill='%23d9a441'/%3E%3Cpath d='M10 5.5v10.2q0 2.5 2.5 2.5H25' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Literata:opsz,wght@7..72,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="mark" href="/">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Argentina Invest Monitor
+      </a>
+      <span class="crumb-sep" aria-hidden="true">/</span>
+      <span class="crumb-here" data-i18n="crumbHere">Industry</span>
+    </nav>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+  </header>
+  <nav class="secnav" aria-label="Sections">
+    <ol>
+      <li><a href="#top" data-i18n="navOutput">Output</a></li>
+      <li><a href="#branchSection" data-i18n="navBranches">Branches</a></li>
+      <li><a href="#buildSection" data-i18n="navBuild">Construction and jobs</a></li>
+      <li><a href="#parkSection" data-i18n="navParks">Industrial parks</a></li>
+      <li><a href="#coSection" data-i18n="navCos">Listed companies</a></li>
+    </ol>
+  </nav>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <h1 id="headline" data-i18n="loading">Loading industry data…</h1>
+      <p class="lede" data-i18n="lede">Manufacturing output by branch, capacity use, construction, industrial jobs and the industrial parks registered with the national government, from INDEC and the Ministry of Economy, updated automatically.</p>
+      <ul class="facts" id="facts"></ul>
+      <div class="chart-block">
+        <div class="chart-head"><h2 data-i18n="ipiTitle">Manufacturing output index (IPI), seasonally adjusted, 2004 = 100</h2><p id="ipiRange"></p></div>
+        <div class="chart" id="ipiChart"></div>
+        <p class="note" id="ipiNote"></p>
+      </div>
+    </section>
+
+    <section class="section chapter" id="branchSection" hidden aria-labelledby="branchTitle">
+      <h2 id="branchTitle" data-i18n="branchTitle">Which branches grow and which shrink</h2>
+      <p class="section-lede" id="branchLede"></p>
+      <div class="table-wrap">
+        <table id="branchTable">
+          <thead><tr><th scope="col" data-i18n="thBranch">Branch</th><th scope="col" data-i18n="thYoy">vs a year ago</th><th scope="col" data-i18n="thYtd">So far this year</th><th scope="col" class="hide-sm" data-i18n="thMonth">Latest month</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="small-multiples" id="branchGrid"></div>
+      <p class="note" id="branchNote"></p>
+    </section>
+
+    <section class="section chapter" id="buildSection" hidden aria-labelledby="buildTitle">
+      <h2 id="buildTitle" data-i18n="buildTitle">Construction, capacity and jobs</h2>
+      <ul class="facts" id="buildFacts"></ul>
+      <div class="two" style="margin-top:24px">
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="isacTitle">Construction activity (ISAC), seasonally adjusted, 2004 = 100</h2></div>
+          <div class="chart" id="isacChart"></div>
+        </div>
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="jobsTitle">Registered private jobs in manufacturing</h2></div>
+          <div class="chart" id="jobsChart"></div>
+        </div>
+      </div>
+      <p class="note" id="buildNote"></p>
+    </section>
+
+    <section class="section chapter" id="parkSection" hidden aria-labelledby="parkTitle">
+      <h2 id="parkTitle" data-i18n="parkTitle">Industrial parks</h2>
+      <p class="section-lede" id="parkLede"></p>
+      <div class="map-tools">
+        <div class="seg" role="group" aria-label="Type" id="parkSeg"></div>
+      </div>
+      <div class="map-wrap"><div id="map" role="region" aria-label="Map"></div><div class="map-empty" id="mapEmpty" data-i18n="mapLoading">Loading map…</div></div>
+      <div class="map-legend" id="mapLegend"></div>
+      <div class="two" style="margin-top:26px">
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="parkProvTitle">Registered parks by province</h2></div>
+          <div class="chart" id="parkProvChart" style="margin-top:12px"></div>
+        </div>
+        <div>
+          <div class="chart-head"><h2 style="font-size:17px" data-i18n="parkCbaTitle">Córdoba's registered parks</h2></div>
+          <div class="table-wrap scroll-table" style="max-height:420px"><table class="ops-mini" id="parkCba">
+            <thead><tr><th scope="col" data-i18n="thPark">Park</th><th scope="col" style="text-align:left" data-i18n="thLocality">Locality</th><th scope="col" style="text-align:left" data-i18n="thType">Type</th></tr></thead>
+            <tbody></tbody></table></div>
+        </div>
+      </div>
+      <p class="note" id="parkNote"></p>
+    </section>
+
+    <section class="section chapter" id="coSection" aria-labelledby="coTitle">
+      <h2 id="coTitle" data-i18n="coTitle">Listed industrial companies</h2>
+      <p class="section-lede" data-i18n="coLede">Steel, aluminium, cement, electronics and food companies listed in Buenos Aires and New York, with most of their production in Argentina.</p>
+      <div class="table-wrap"><table id="coTable">
+        <thead><tr><th scope="col" data-i18n="thCompany">Company</th><th scope="col" style="text-align:left" data-i18n="thActivity">Activity</th><th scope="col" style="text-align:left" data-i18n="thTicker">Exchange and ticker</th></tr></thead>
+        <tbody></tbody></table></div>
+      <div class="quotes" id="quotes"></div>
+      <p class="note" data-i18n="coNote">Share prices by TradingView, with each exchange's delay. Not a recommendation to buy or sell.</p>
+    </section>
+
+    <section class="signup" aria-labelledby="signupTitle">
+      <div>
+        <h2 id="signupTitle" data-i18n="signupTitle">The week in Argentine investment, in five minutes</h2>
+        <p data-i18n="signupText">A short weekly email with the numbers that moved, new RIGI approvals and the regulations that matter for investors.</p>
+      </div>
+      <form id="signupForm" novalidate>
+        <label class="sr" for="email" data-i18n="emailLabel">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com">
+        <button type="submit" data-i18n="subscribe">Subscribe</button>
+        <p class="msg" id="signupMsg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="cols">
+      <div class="about">
+        <a class="mark" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Argentina Invest Monitor
+        </a>
+        <p data-i18n="fAbout">Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.</p>
+      </div>
+      <div>
+        <h2 data-i18n="fSectors">Sectors</h2>
+        <ul>
+          <li><a href="/vaca-muerta/" data-i18n="fEnergy">Energy: Vaca Muerta</a></li>
+          <li><a href="/mineria/" data-i18n="fMining">Mining</a></li>
+          <li><a href="/agro/" data-i18n="fAgro">Agriculture</a></li>
+          <li><a href="/finanzas/" data-i18n="fFinance">Finance and banking</a></li>
+          <li><a href="/industria/" data-i18n="fIndustry">Industry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 data-i18n="fResources">Resources</h2>
+        <ul>
+          <li><a href="/metodologia/" data-i18n="fMethod">Methodology and sources</a></li>
+          <li><a href="/data/vm_monthly.csv" download data-i18n="fCsv">Download Vaca Muerta data (CSV)</a></li>
+          <li><a href="#signupTitle" data-i18n="fNewsletter">Weekly newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p data-i18n="footSources">All figures come from public, official sources cited on each page.</p>
+      <p data-i18n="disclaimer">For information only. Not investment advice.</p>
+    </div>
+  </footer>
+</div>
+
+<script src="/assets/charts.js"></script>
+<script>
+(() => {
+  const T = {
+    en: {
+      crumbHere: "Industry", loading: "Loading industry data…",
+      lede: "Manufacturing output by branch, capacity use, construction, industrial jobs and the industrial parks registered with the national government, from INDEC and the Ministry of Economy, updated automatically.",
+      headline: (v, m, up) => `Manufacturing output was ${v}% ${up ? "higher" : "lower"} in ${m} than a year earlier.`,
+      divs: { transport: "Other transport equipment", chemicals: "Chemicals", basic_metals: "Basic metals", food: "Food and beverages", autos: "Motor vehicles and auto parts", metal_products: "Metal products", minerals: "Non-metallic minerals (cement, glass)", textiles: "Textiles", apparel: "Apparel, leather and footwear", machinery: "Machinery and equipment", tobacco: "Tobacco", paper: "Paper and printing", refining: "Oil refining", rubber: "Rubber and plastics", wood: "Wood", furniture: "Furniture and other" },
+      fYoy: m => `output vs a year earlier, ${m}`,
+      fYtd: "manufacturing output so far this year vs last year", fCap: q => `of installed capacity in use, ${q}`, fIsac: "construction vs a year earlier", fParks: "industrial parks registered",
+      navOutput: "Output", navBranches: "Branches", navBuild: "Construction and jobs", navParks: "Industrial parks", navCos: "Listed companies",
+      ipiTitle: "Manufacturing output index (IPI), seasonally adjusted, 2004 = 100", range: (a, b) => `${a} to ${b}`,
+      ipiNote: (src) => `Source: ${src}. Manufacturing output index (IPI manufacturero).`,
+      branchTitle: "Which branches grow and which shrink",
+      branchLede: (up, dn) => `${up} grew most against a year earlier; ${dn} fell most.`,
+      thBranch: "Branch", thYoy: "vs a year ago", thYtd: "So far this year", thMonth: "Latest month",
+      bNames: { steel: "Steel", cement: "Cement", autoparts: "Auto parts", machinery: "General-purpose machinery", pharma: "Pharmaceuticals", agrochem: "Agrochemicals" },
+      smTitle: n => `${n}, output index`,
+      branchNote: (src) => `Source: ${src}. Each branch compared with the same month a year earlier; "so far this year" adds up the months published this year against the same months last year.`,
+      buildTitle: "Construction, capacity and jobs", isacTitle: "Construction activity (ISAC), seasonally adjusted, 2004 = 100", jobsTitle: "Registered private jobs in manufacturing",
+      bCap: q => `of installed capacity in use, ${q}`, bCapY: "a year earlier", bJobs: q => `registered industrial jobs, ${q}`,
+      qLabel: p => `Q${(+p.slice(5, 7) + 2) / 3} ${p.slice(0, 4)}`,
+      buildNote: (src) => `Source: ${src}. Capacity use is published quarterly; jobs are registered private-sector positions in manufacturing.`,
+      parkTitle: "Industrial parks", parkLede: (n, p, c) => `${n} industrial parks are registered with the national registry (RENPI). ${p} has the most, and Córdoba has ${c}.`,
+      types: { all: "All", "PÚBLICO": "Public", "PRIVADO": "Private", "MIXTO": "Mixed" }, type1: { "PÚBLICO": "Public", "PRIVADO": "Private", "MIXTO": "Mixed" },
+      mapLoading: "Loading map…", mapFail: "The map could not be loaded. The tables below list the same parks.",
+      parkProvTitle: "Registered parks by province", parkCbaTitle: "Córdoba's registered parks", thPark: "Park", thLocality: "Locality", thType: "Type",
+      parkNote: (src) => `Source: ${src}. Parks are placed at the centre of their locality with the Georef API; a few could not be located. Basemap © OpenFreeMap, OpenStreetMap contributors.`,
+      coTitle: "Listed industrial companies", coLede: "Steel, aluminium, cement, electronics and food companies listed in Buenos Aires and New York, with most of their production in Argentina.",
+      thCompany: "Company", thActivity: "Activity", thTicker: "Exchange and ticker", coNote: "Share prices by TradingView, with each exchange's delay. Not a recommendation to buy or sell.",
+      acts: { steel: "Flat steel", tubes: "Seamless steel pipes for oil and gas", alu: "Primary aluminium", cement: "Cement", elec: "Electronics and appliances", sugar: "Sugar, paper and food", food: "Food" },
+      signupTitle: "The week in Argentine investment, in five minutes", signupText: "A short weekly email with the numbers that moved, new RIGI approvals and the regulations that matter for investors.",
+      emailLabel: "Email address", subscribe: "Subscribe", ok: "Done. The first issue arrives next week.", badEmail: "That email address does not look right.", notReady: "Sign-ups are not open yet.", fail: "Something went wrong. Try again in a minute.",
+      fAbout: "Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.", fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining", fAgro: "Agriculture", fFinance: "Finance and banking", fIndustry: "Industry", fResources: "Resources", fMethod: "Methodology and sources", fCsv: "Download Vaca Muerta data (CSV)", fNewsletter: "Weekly newsletter", disclaimer: "For information only. Not investment advice.", footSources: "All figures come from public, official sources cited on each page."
+    },
+    es: {
+      crumbHere: "Industria", loading: "Cargando datos de la industria…",
+      lede: "Producción manufacturera por rama, uso de la capacidad, construcción, empleo industrial y los parques industriales registrados en el Estado nacional, con datos del INDEC y del Ministerio de Economía, actualizados en forma automática.",
+      headline: (v, m, up) => `La industria manufacturera produjo ${v}% ${up ? "más" : "menos"} en ${m} que un año antes.`,
+      divs: {},
+      fYoy: m => `producción vs. un año antes, ${m}`,
+      fYtd: "producción manufacturera en lo que va del año vs. el año pasado", fCap: q => `de la capacidad instalada en uso, ${q}`, fIsac: "construcción vs. un año antes", fParks: "parques industriales registrados",
+      navOutput: "Producción", navBranches: "Ramas", navBuild: "Construcción y empleo", navParks: "Parques industriales", navCos: "Empresas que cotizan",
+      ipiTitle: "Índice de producción industrial manufacturero (IPI), desestacionalizado, 2004 = 100", range: (a, b) => `${a} a ${b}`,
+      ipiNote: (src) => `Fuente: ${src}. Índice de producción industrial manufacturero (IPI manufacturero).`,
+      branchTitle: "Qué ramas crecen y cuáles caen",
+      branchLede: (up, dn) => `${up} fue la que más creció frente a un año antes; ${dn}, la que más cayó.`,
+      thBranch: "Rama", thYoy: "vs. un año atrás", thYtd: "En lo que va del año", thMonth: "Último mes",
+      bNames: { steel: "Siderurgia", cement: "Cemento", autoparts: "Autopartes", machinery: "Maquinaria de uso general", pharma: "Productos farmacéuticos", agrochem: "Agroquímicos" },
+      smTitle: n => `${n}, índice de producción`,
+      branchNote: (src) => `Fuente: ${src}. Cada rama contra el mismo mes de un año antes; "en lo que va del año" suma los meses publicados este año contra los mismos meses del anterior.`,
+      buildTitle: "Construcción, capacidad y empleo", isacTitle: "Actividad de la construcción (ISAC), desestacionalizada, 2004 = 100", jobsTitle: "Empleo privado registrado en la industria",
+      bCap: q => `de la capacidad instalada en uso, ${q}`, bCapY: "un año antes", bJobs: q => `empleos industriales registrados, ${q}`,
+      qLabel: p => `${(+p.slice(5, 7) + 2) / 3}.º trimestre de ${p.slice(0, 4)}`,
+      buildNote: (src) => `Fuente: ${src}. El uso de la capacidad se publica por trimestre; el empleo son puestos registrados del sector privado en la industria manufacturera.`,
+      parkTitle: "Parques industriales", parkLede: (n, p, c) => `Hay ${n} parques industriales inscriptos en el registro nacional (RENPI). ${p} es la provincia con más, y Córdoba tiene ${c}.`,
+      types: { all: "Todos", "PÚBLICO": "Públicos", "PRIVADO": "Privados", "MIXTO": "Mixtos" }, type1: { "PÚBLICO": "Público", "PRIVADO": "Privado", "MIXTO": "Mixto" },
+      mapLoading: "Cargando mapa…", mapFail: "No se pudo cargar el mapa. Las tablas de abajo tienen los mismos parques.",
+      parkProvTitle: "Parques registrados por provincia", parkCbaTitle: "Los parques registrados de Córdoba", thPark: "Parque", thLocality: "Localidad", thType: "Carácter",
+      parkNote: (src) => `Fuente: ${src}. Cada parque se ubica en el centro de su localidad con la API Georef; algunos no se pudieron ubicar. Mapa base © OpenFreeMap, colaboradores de OpenStreetMap.`,
+      coTitle: "Industriales que cotizan en bolsa", coLede: "Empresas de acero, aluminio, cemento, electrónica y alimentos que cotizan en Buenos Aires y Nueva York, con la mayor parte de su producción en la Argentina.",
+      thCompany: "Empresa", thActivity: "Actividad", thTicker: "Bolsa y ticker", coNote: "Cotizaciones de TradingView, con la demora de cada bolsa. No es una recomendación de compra o venta.",
+      acts: { steel: "Acero plano", tubes: "Tubos de acero sin costura para petróleo y gas", alu: "Aluminio primario", cement: "Cemento", elec: "Electrónica y electrodomésticos", sugar: "Azúcar, papel y alimentos", food: "Alimentos" },
+      signupTitle: "La semana de las inversiones en Argentina, en cinco minutos", signupText: "Un email corto por semana con los números que se movieron, las nuevas aprobaciones RIGI y las normas que importan a los inversores.",
+      emailLabel: "Email", subscribe: "Suscribirme", ok: "Listo, quedaste suscripto. El primer envío llega la semana que viene.", badEmail: "Ese email no parece correcto.", notReady: "Las suscripciones todavía no están abiertas.", fail: "Algo salió mal. Probá de nuevo en un minuto.",
+      fAbout: "Los datos públicos oficiales de la Argentina sobre energía, minería, agro, finanzas e industria, organizados para inversores y actualizados en forma automática.", fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería", fAgro: "Agro", fFinance: "Finanzas y bancos", fIndustry: "Industria", fResources: "Recursos", fMethod: "Metodología y fuentes", fCsv: "Descargar datos de Vaca Muerta (CSV)", fNewsletter: "Newsletter semanal", disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.", footSources: "Todas las cifras provienen de fuentes públicas y oficiales, citadas en cada página."
+    },
+  };
+  const COS = [
+    { name: "Ternium Argentina", act: "steel", tickers: "BYMA: TXAR", tv: "BCBA:TXAR" },
+    { name: "Tenaris", act: "tubes", tickers: "NYSE: TS · BYMA: TS", tv: "NYSE:TS" },
+    { name: "Aluar Aluminio Argentino", act: "alu", tickers: "BYMA: ALUA", tv: "BCBA:ALUA" },
+    { name: "Loma Negra", act: "cement", tickers: "NYSE: LOMA · BYMA: LOMA", tv: "NYSE:LOMA" },
+    { name: "Holcim Argentina", act: "cement", tickers: "BYMA: HARG", tv: "BCBA:HARG" },
+    { name: "Mirgor", act: "elec", tickers: "BYMA: MIRG", tv: "BCBA:MIRG" },
+    { name: "Ledesma", act: "sugar", tickers: "BYMA: LEDE" },
+    { name: "Molinos Río de la Plata", act: "food", tickers: "BYMA: MOLI" },
+  ];
+  const TYPE_HEX = { light: { "PÚBLICO": "#4b6f86", "PRIVADO": "#a0662e", "MIXTO": "#6c8f2f" }, dark: { "PÚBLICO": "#7fa8c2", "PRIVADO": "#d79a5c", "MIXTO": "#9cc25a" } };
+  let saved = null;
+  try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
+  let lang = saved || ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en");
+  let D = null, mapState = "idle", map = null, ptype = "all";
+  const C = AIMCharts(() => lang, () => T[lang]);
+  const { fmt, pct, monthName, esc } = C;
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const srcLink = s => `<a href="${esc(s.url)}" rel="noopener">${esc(s.name)}</a>${s.license ? ", " + esc(s.license) : ""}`;
+  const isDark = () => matchMedia("(prefers-color-scheme: dark)").matches;
+  const facts = (host, f) => { $(host).innerHTML = f.map(([v, l, d]) => `<li><strong class="${d > 0 ? "delta-up" : d < 0 ? "delta-down" : ""}">${esc(v)}</strong>${esc(l)}</li>`).join(""); };
+  const loc = s => String(s || "").toLowerCase().replace(/(^|[\s\-(])(\p{L})/gu, (m, a, b) => a + b.toUpperCase()).replace(/\b(De|Del|La|Las|Los|Y|El)\b/g, w => w.toLowerCase()).replace(/^./, c => c.toUpperCase());
+  const cls = v => v > 0 ? "delta-up" : v < 0 ? "delta-down" : "";
+
+  function render() {
+    const t = T[lang];
+    document.documentElement.lang = lang;
+    document.title = (lang === "es" ? "Industria" : "Industry") + " · Argentina Invest Monitor";
+    $$("[data-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    $$("[data-i18n]").forEach(el => { const v = t[el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
+    $("#email").placeholder = lang === "es" ? "vos@empresa.com" : "you@company.com";
+    $("#coTable tbody").innerHTML = COS.map(c => `<tr><td><strong>${esc(c.name)}</strong></td><td style="text-align:left">${esc(t.acts[c.act])}</td><td style="text-align:left;white-space:nowrap">${esc(c.tickers)}</td></tr>`).join("");
+    mountQuotes();
+    $("#parkSeg").innerHTML = ["all", "PÚBLICO", "PRIVADO", "MIXTO"].map(k => `<button type="button" data-ptype="${k}" aria-pressed="${k === ptype}">${esc(t.types[k])}</button>`).join("");
+    $$("[data-ptype]").forEach(b => b.addEventListener("click", () => { ptype = b.dataset.ptype; $$("[data-ptype]").forEach(x => x.setAttribute("aria-pressed", String(x === b))); if (mapState === "ready") map.setFilter("parks", ptype === "all" ? null : ["==", ["get", "type"], ptype]); }));
+    if (!D || !D.ipi) { syncNav(); return; }
+    const I = D.ipi, O = D.other || {}, P = D.parks, src = srcLink(I.source);
+
+    const lo = I.original[I.original.length - 1];
+    $("#headline").textContent = t.headline(fmt(Math.abs(I.yoy), 1), monthName(lo.period), I.yoy >= 0);
+    const f = [[pct(I.yoy), t.fYoy(monthName(lo.period)), I.yoy]];
+    if (I.ytd != null) f.push([pct(I.ytd), t.fYtd, I.ytd]);
+    const cap = O.capacity && O.capacity.quarterly, lc = cap && cap[cap.length - 1];
+    if (lc) f.push([fmt(lc.v, 1) + "%", t.fCap(t.qLabel(lc.period))]);
+    if (O.construction && O.construction.yoy != null) f.push([pct(O.construction.yoy), t.fIsac, O.construction.yoy]);
+    if (P && P.items) f.push([fmt(P.items.length), t.fParks]);
+    facts("#facts", f);
+    const sa = I.sa.length ? I.sa : I.original;
+    $("#ipiRange").textContent = t.range(monthName(sa[0].period, false), monthName(sa[sa.length - 1].period, false));
+    C.lineChart($("#ipiChart"), sa, "v", "var(--ind)", lang === "es" ? "índice" : "index", 1, innerWidth > 700 ? 320 : 240);
+    $("#ipiNote").innerHTML = t.ipiNote(src);
+
+    // Ramas
+    const dv = I.divisions.filter(d => d.yoy != null).map(d => ({ ...d, name: t.divs[d.key] || d.name }));
+    if (dv.length) {
+      $("#branchSection").hidden = false;
+      $("#branchLede").textContent = t.branchLede(dv[0].name, dv[dv.length - 1].name.toLowerCase());
+      $("#branchTable tbody").innerHTML = dv.map(d => `<tr><td>${esc(d.name)}</td><td class="${cls(d.yoy)}">${pct(d.yoy)}</td><td class="${cls(d.ytd)}">${d.ytd != null ? pct(d.ytd) : "–"}</td><td class="hide-sm">${esc(monthName(d.latest, false))}</td></tr>`).join("");
+      const ks = ["steel", "cement", "autoparts", "agrochem", "machinery", "pharma"].filter(k => O[k] && O[k].monthly && O[k].monthly.length).slice(0, 4);
+      $("#branchGrid").innerHTML = ks.map(k => `<div><div class="chart-head"><h2 style="font-size:17px">${esc(t.smTitle(t.bNames[k]))}</h2><p class="${cls(O[k].yoy)}">${pct(O[k].yoy)}</p></div><div class="chart" id="sm_${k}"></div></div>`).join("");
+      ks.forEach(k => C.lineChart($("#sm_" + k), O[k].monthly, "v", "var(--ind)", lang === "es" ? "índice" : "index", 1, 200));
+      $("#branchNote").innerHTML = t.branchNote(src);
+    }
+
+    // Construcción, capacidad y empleo
+    if (O.construction && O.construction.monthly.length) {
+      $("#buildSection").hidden = false;
+      const ff = [];
+      if (lc) { ff.push([fmt(lc.v, 1) + "%", t.bCap(t.qLabel(lc.period))]); const py = cap.find(x => x.period === `${+lc.period.slice(0, 4) - 1}${lc.period.slice(4)}`); if (py) ff.push([fmt(py.v, 1) + "%", t.bCapY]); }
+      if (O.construction.yoy != null) ff.push([pct(O.construction.yoy), t.fIsac, O.construction.yoy]);
+      const J = O.jobs_quarterly;
+      if (J && J.length) ff.push([fmt(J[J.length - 1].v), t.bJobs(t.qLabel(J[J.length - 1].period))]);
+      facts("#buildFacts", ff);
+      C.lineChart($("#isacChart"), O.construction.monthly, "v", "var(--ind2)", lang === "es" ? "índice" : "index", 1, 240);
+      if (J && J.length) C.lineChart($("#jobsChart"), J, "v", "var(--ind)", lang === "es" ? "empleos" : "jobs", 0, 240);
+      $("#buildNote").innerHTML = t.buildNote(srcLink(O.source || I.source));
+    }
+
+    // Parques
+    if (P && P.items && P.items.length) {
+      $("#parkSection").hidden = false;
+      const bp = Object.entries(P.by_province).sort((a, b) => b[1] - a[1]);
+      $("#parkLede").textContent = t.parkLede(fmt(P.items.length), bp[0][0], fmt(P.by_province["Córdoba"] || 0));
+      C.hbar($("#parkProvChart"), bp.slice(0, 12).map(([n, v]) => ({ name: n, v, color: n === "Córdoba" ? "var(--ind2)" : "var(--ind)" })), { unit: lang === "es" ? "parques" : "parks", labelWidth: 150 });
+      $("#parkCba tbody").innerHTML = P.items.filter(i => i.province === "Córdoba").sort((a, b) => a.locality.localeCompare(b.locality)).map(i =>
+        `<tr><td>${esc(i.name)}</td><td style="text-align:left">${esc(loc(i.locality))}</td><td style="text-align:left">${esc(t.type1[i.type] || i.type)}</td></tr>`).join("");
+      $("#parkNote").innerHTML = t.parkNote(srcLink(P.source));
+      if (mapState === "ready") mapLegend();
+    }
+    syncNav(); spy();
+  }
+
+  function loadScript(src) { return new Promise((ok, ko) => { const s = document.createElement("script"); s.src = src; s.onload = ok; s.onerror = ko; document.head.append(s); }); }
+  function loadCss(href) { const l = document.createElement("link"); l.rel = "stylesheet"; l.href = href; document.head.append(l); }
+  function mapLegend() {
+    const t = T[lang], pal = TYPE_HEX[isDark() ? "dark" : "light"];
+    $("#mapLegend").innerHTML = Object.keys(pal).map(k => `<span><b style="background:${pal[k]};border-radius:50%;width:11px"></b>${esc(t.types[k])}</span>`).join("");
+  }
+  async function initMap() {
+    if (mapState !== "idle" || !D || !D.parks) return;
+    mapState = "loading";
+    try {
+      loadCss("https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css");
+      await loadScript("https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js");
+      map = new maplibregl.Map({ container: "map", style: "https://tiles.openfreemap.org/styles/positron",
+        bounds: [[-73.5, -52.5], [-53.5, -21.5]], fitBoundsOptions: { padding: 20 }, attributionControl: { compact: true }, cooperativeGestures: true });
+      map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+      map.on("load", () => {
+        $("#mapEmpty").hidden = true;
+        const pal = TYPE_HEX[isDark() ? "dark" : "light"];
+        const items = D.parks.items;
+        map.addSource("parks", { type: "geojson", data: { type: "FeatureCollection", features: items.map((p, i) => p.lat == null ? null : { type: "Feature", geometry: { type: "Point", coordinates: [p.lon, p.lat] }, properties: { i, type: p.type } }).filter(Boolean) } });
+        map.addLayer({ id: "parks", type: "circle", source: "parks", paint: { "circle-color": ["match", ["get", "type"], ...Object.entries(pal).flat(), "#999"],
+          "circle-radius": ["interpolate", ["linear"], ["zoom"], 4, 4, 9, 8], "circle-opacity": 0.85, "circle-stroke-color": "#ffffff", "circle-stroke-width": 1 } });
+        map.on("click", "parks", e => {
+          const p = D.parks.items[e.features[0].properties.i], t = T[lang];
+          new maplibregl.Popup({ maxWidth: "260px" }).setLngLat([p.lon, p.lat]).setHTML(`<h4>${esc(p.name)}</h4><div class="muted">${esc(loc(p.locality))}, ${esc(p.province)}</div><div class="muted">${esc(t.type1[p.type] || p.type)}</div>`).addTo(map);
+        });
+        map.on("mouseenter", "parks", () => { map.getCanvas().style.cursor = "pointer"; });
+        map.on("mouseleave", "parks", () => { map.getCanvas().style.cursor = ""; });
+        mapState = "ready"; mapLegend();
+      });
+    } catch (err) { mapState = "failed"; $("#mapEmpty").textContent = T[lang].mapFail; }
+  }
+
+  let quotesKey = "";
+  function mountQuotes() {
+    const host = $("#quotes"), dark = isDark(), key = lang + (dark ? "d" : "l");
+    if (key === quotesKey) return;
+    quotesKey = key; host.innerHTML = "";
+    const box = document.createElement("div"); box.className = "tradingview-widget-container";
+    const inner = document.createElement("div"); inner.className = "tradingview-widget-container__widget";
+    const s = document.createElement("script");
+    s.src = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js"; s.async = true; s.type = "text/javascript";
+    s.text = JSON.stringify({
+      symbols: COS.filter(c => c.tv).map(c => [c.name, c.tv + "|12M"]),
+      chartOnly: false, width: "100%", height: 420, locale: lang === "es" ? "es" : "en", colorTheme: dark ? "dark" : "light",
+      autosize: false, showVolume: false, showMA: false, hideDateRanges: false, hideMarketStatus: false, hideSymbolLogo: false,
+      scalePosition: "right", scaleMode: "Normal", fontFamily: "Archivo, system-ui, sans-serif", fontSize: "11", noTimeScale: false,
+      valuesTracking: "1", changeMode: "price-and-percent", chartType: "area", lineWidth: 2, lineType: 0,
+      dateRanges: ["1m|30", "3m|60", "12m|1D", "60m|1W", "all|1M"],
+      lineColor: dark ? "#7fa8c2" : "#4b6f86", topColor: dark ? "rgba(127,168,194,.18)" : "rgba(75,111,134,.12)",
+      bottomColor: "rgba(75,111,134,0)", backgroundColor: dark ? "#172026" : "#ffffff",
+      gridLineColor: dark ? "rgba(255,255,255,.06)" : "rgba(23,33,43,.06)",
+    });
+    box.append(inner, s); host.append(box);
+  }
+
+  function syncNav() { $$(".secnav a").forEach(a => { const el = document.getElementById(a.getAttribute("href").slice(1)); a.parentElement.hidden = !el || el.hidden; }); }
+  let tick = false;
+  function spy() {
+    tick = false;
+    const links = $$(".secnav a").filter(a => !a.parentElement.hidden);
+    let cur = links[0];
+    for (const a of links) { const el = document.getElementById(a.getAttribute("href").slice(1)); if (el && el.getBoundingClientRect().top - 120 <= 0) cur = a; }
+    links.forEach(a => a.setAttribute("aria-current", a === cur ? "true" : "false"));
+    if (cur && innerWidth < 900) { const bar = $(".secnav ol"), r = cur.getBoundingClientRect(), br = bar.getBoundingClientRect(); if (r.left < br.left || r.right > br.right) bar.scrollTo({ left: cur.offsetLeft - 16 }); }
+  }
+  addEventListener("scroll", () => { if (!tick) { tick = true; requestAnimationFrame(spy); } }, { passive: true });
+  $$("[data-lang]").forEach(b => b.addEventListener("click", () => { lang = b.dataset.lang; try { localStorage.setItem("vm-lang", lang); } catch (e) {} render(); }));
+  let rz; addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(render, 200); });
+
+  $("#signupForm").addEventListener("submit", async e => {
+    e.preventDefault();
+    const t = T[lang], msg = $("#signupMsg"), btn = e.target.querySelector("button"), email = $("#email").value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { msg.textContent = t.badEmail; return; }
+    btn.disabled = true;
+    try {
+      const r = await fetch("/api/subscribe", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email, lang }) });
+      const j = await r.json().catch(() => ({}));
+      if (r.ok && j.ok) { msg.textContent = t.ok; e.target.reset(); }
+      else msg.textContent = j.error === "email" ? t.badEmail : j.error === "not_configured" ? t.notReady : t.fail;
+    } catch (err) { msg.textContent = t.fail; }
+    btn.disabled = false;
+  });
+
+  render();
+  fetch("/data/industry.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : null).catch(() => null)
+    .then(d => { D = d; try { render(); } catch (e) { console.error(e); } if (D) initMap(); });
+})();
+</script>
+</body>
+</html>

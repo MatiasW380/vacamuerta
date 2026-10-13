@@ -12,7 +12,7 @@ import sys
 import time
 import traceback
 import unicodedata
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -182,6 +182,10 @@ def otras(diag: dict) -> dict:
                      ("pharma", "453.2_PRODUCTOS_COS_0_0_23_90"), ("agrochem", "453.2_AGROQUIMICCOS_0_0_12_6"), ("machinery", "453.2_MAQUINARIARAL_0_0_22_43")):
         try:
             sr = mensual(i, diag, clave, "2018-01-01")
+            # Una serie que dejó de publicarse no se muestra: su variación sería de otra época
+            if not sr or sr[-1]["period"] < f"{date.today().year - 1}-{date.today().month:02d}":
+                diag.setdefault("stale", []).append([clave, sr[-1]["period"] if sr else None])
+                continue
             out[clave] = {"monthly": sr, "yoy": yoy(sr), "ytd": acumulado(sr)}
         except Exception as e:
             diag.setdefault("errors", []).append(f"{clave}: {e}"[:150])

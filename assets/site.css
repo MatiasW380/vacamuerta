@@ -266,3 +266,8 @@ td .meta { font-size: 13px; color: var(--ink-3); }
 :root { --fin: #3f4fa3; --fin2: #8a5bb5; --fin3: #2d8fa6; }
 @media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) { --fin: #8f9cf0; --fin2: #b38ae0; --fin3: #4fb6cc; } }
 :root[data-theme="dark"] { --fin: #8f9cf0; --fin2: #b38ae0; --fin3: #4fb6cc; }
+
+/* Sector industria */
+:root { --ind: #4b6f86; --ind2: #a0662e; }
+@media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) { --ind: #7fa8c2; --ind2: #d79a5c; } }
+:root[data-theme="dark"] { --ind: #7fa8c2; --ind2: #d79a5c; }
