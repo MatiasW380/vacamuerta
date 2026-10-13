@@ -9,6 +9,7 @@ on:
     paths:
       - "scripts/build_extras.py"
       - "scripts/build_mining.py"
+      - "scripts/build_agro.py"
       - ".github/workflows/update-extras.yml"
 
 permissions:
@@ -44,6 +45,10 @@ jobs:
       - name: Minería
         continue-on-error: true
         run: python scripts/build_mining.py
+
+      - name: Agro
+        continue-on-error: true
+        run: python scripts/build_agro.py
 
       - name: Guardar cambios
         run: |
