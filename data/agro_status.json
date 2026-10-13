@@ -1,0 +1,2606 @@
+{
+ "catalog": {
+  "ok": true,
+  "diag": {
+   "errors": [],
+   "datasets": [
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "estimaciones-agricolas",
+     "title": "Agricultura - Estimaciones agrícolas",
+     "modified": "2026-03-05",
+     "resources": [
+      {
+       "name": "Estimaciones agrícolas",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/9e1e77ba-267e-4eaa-a59f-3296e86b5f36/resource/95d066e6-8a0f-4a80-b59d-6f28f88eacd5/download/estimaciones-agricolas-2026-03.csv",
+       "modified": "2026-03-05"
+      },
+      {
+       "name": "Visualización Avanzada",
+       "format": "url",
+       "url": "http://datosestimaciones.magyp.gob.ar/reportes.php?reporte=Estimaciones",
+       "modified": "2019-03-18"
+      },
+      {
+       "name": "Visor de cultivos",
+       "format": "url",
+       "url": "https://geoportal.magyp.gob.ar/tematizador/agricola/",
+       "modified": "2019-12-17"
+      },
+      {
+       "name": "Serie de Tiempo Estimación de Trigo Pan",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/9e1e77ba-267e-4eaa-a59f-3296e86b5f36/resource/ca5e31b5-a51f-4738-bae0-773838b5dd1e/download/serie-de-tiempo-trigo.csv",
+       "modified": "2019-07-02"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "centeno-con-destino-industria",
+     "title": "Centeno - Destino industrial",
+     "modified": "2019-10-24",
+     "resources": [
+      {
+       "name": "Ingreso de Centeno para su industrialización",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/2394b066-b1b9-49e0-ae4f-30863a8290b2/resource/263767b3-3696-4ca1-8117-8d10ac51e760/download/centeno-con-destino-a-la-industria.csv",
+       "modified": "2019-04-08"
+      },
+      {
+       "name": "Serie de tiempo",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/2394b066-b1b9-49e0-ae4f-30863a8290b2/resource/aa7aefc2-1bd8-4a9f-88a0-c0c6b76629d5/download/serie_tiempo_centeno_con_destino_a_la_industria.csv",
+       "modified": "2019-09-17"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "cebada-con-destino-industria",
+     "title": "Cebada - Destino industrial",
+     "modified": "2019-10-24",
+     "resources": [
+      {
+       "name": "Ingreso de Cebada destinada a industrialización",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/bb67aa17-c522-4ce3-ae79-c8fad2da2218/resource/b0c3a76b-1111-4841-977f-174ecbb8d62c/download/cebada-con-destino-a-la-industria-.csv",
+       "modified": "2019-01-24"
+      },
+      {
+       "name": "Serie de tiempo",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/bb67aa17-c522-4ce3-ae79-c8fad2da2218/resource/1ec33f3e-86b6-4802-a87d-91af91e26bb5/download/serie-de-tiempo-cebada-a-industria.csv",
+       "modified": "2019-09-27"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "avena-con-destino-industria",
+     "title": "Avena - Destino industrial",
+     "modified": "2019-10-24",
+     "resources": [
+      {
+       "name": "Ingreso avena para su industrialización",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/ae22dbcb-9e30-434f-b9c3-bf4c021320e2/resource/670ec3c6-8f65-4ce6-b877-e4d1ebbb2595/download/avena-con-destino-a-la-industria-.csv",
+       "modified": "2019-01-22"
+      },
+      {
+       "name": "Serie de tiempo",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/ae22dbcb-9e30-434f-b9c3-bf4c021320e2/resource/ff0bf38f-a245-4173-882a-4ef3d61a06bc/download/serie-de-tiempo-avena.csv",
+       "modified": "2019-05-02"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "olivo",
+     "title": "Olivo",
+     "modified": "2021-03-22",
+     "resources": [
+      {
+       "name": "Olivo - superficie plantada",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/5bed7fcc-7015-4820-a4db-39a669851f73/resource/782dde03-ffa9-4438-a798-1f30178442fa/download/olivo-larioja-catamarca-2020.csv",
+       "modified": "2021-03-22"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "girasol-siembra-cosecha-produccion-rendimiento",
+     "title": "Girasol - siembra, cosecha, producción, rendimiento",
+     "modified": "2026-08-10",
+     "resources": [
+      {
+       "name": "Serie de tiempo de girasol",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/e080ceb1-c369-4d11-8eaf-ed5e2a21bdf2/resource/a201f477-7021-4ba6-bbae-f218c100688c/download/girasol-serie-1969-2024-anual.csv",
+       "modified": "2026-08-10"
+      },
+      {
+       "name": "Girasol - serie siembra, cosecha, producción, rendimiento",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/e080ceb1-c369-4d11-8eaf-ed5e2a21bdf2/resource/3ce17c66-ebee-4c30-89e5-b1966df367d5/download/girasol-serie-1969-2024.csv",
+       "modified": "2026-05-07"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "mani-siembra-cosecha-produccion-rendimiento",
+     "title": "Maní - siembra, cosecha, producción, rendimiento",
+     "modified": "2026-08-10",
+     "resources": [
+      {
+       "name": "Serie de tiempo de maní",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/954221e4-1d58-4103-bb09-88fa0868be34/resource/08d54f4f-44ee-4349-a86f-2a9c763bdc65/download/mani-serie-1927-2024-anual.csv",
+       "modified": "2026-08-10"
+      },
+      {
+       "name": "Maní - serie siembra, cosecha, producción, rendimiento",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/954221e4-1d58-4103-bb09-88fa0868be34/resource/e315eec7-1121-4449-acff-48bb2da2a33b/download/mani-serie-1927-2024.csv",
+       "modified": "2026-04-13"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "centeno-siembra-cosecha-produccion-rendimiento",
+     "title": "Centeno - siembra, cosecha, producción, rendimiento",
+     "modified": "2026-08-13",
+     "resources": [
+      {
+       "name": "Serie de tiempo de centeno",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/7085900f-db65-45a7-92a1-136373c1e8cf/resource/0e4724a8-2850-4842-946c-0a00f9a83cad/download/centeno-serie-1923-2025-anual.csv",
+       "modified": "2026-08-13"
+      },
+      {
+       "name": "Centeno - serie siembra, cosecha, producción, rendimiento",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/7085900f-db65-45a7-92a1-136373c1e8cf/resource/7b45068c-5737-40ac-92e1-2bdbd219d35f/download/centeno-serie-1923-2025.csv",
+       "modified": "2026-05-07"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "avena-siembra-cosecha-produccion-rendimiento",
+     "title": "Avena - siembra, cosecha, producción, rendimiento",
+     "modified": "2026-08-13",
+     "resources": [
+      {
+       "name": "Serie de tiempo de avena",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/ba016ebb-7b1c-413f-92de-62fe7ca9deab/resource/1fe54125-9200-4d3a-ae05-e9537c7d759d/download/avena-serie-1923-2025-anual.csv",
+       "modified": "2026-08-13"
+      },
+      {
+       "name": "Avena - serie siembra, cosecha, producción, rendimiento",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/ba016ebb-7b1c-413f-92de-62fe7ca9deab/resource/df671710-6a2b-4a9a-a657-c40a6e5a9aa5/download/avena-serie-1923-2025.csv",
+       "modified": "2026-05-04"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "sorgo-siembra-cosecha-produccion-rendimiento",
+     "title": "Sorgo - siembra, cosecha, producción, rendimiento",
+     "modified": "2026-08-10",
+     "resources": [
+      {
+       "name": "Serie de tiempo de sorgo",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/d996be66-fd46-42d5-aca9-018853d54e3a/resource/2e9788fa-ca36-40c1-8f26-768de5a95dfa/download/sorgo-1969-2024-anual.csv",
+       "modified": "2026-08-10"
+      },
+      {
+       "name": "Sorgo - serie siembra, cosecha, producción, rendimiento",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/d996be66-fd46-42d5-aca9-018853d54e3a/resource/2a1fe06a-e711-48a9-8b82-fae3b38bae20/download/sorgo-1969-2024.csv",
+       "modified": "2025-12-23"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "mijo-siembra-cosecha-produccion-rendimiento",
+     "title": "Mijo - siembra, cosecha, producción, rendimiento",
+     "modified": "2026-05-07",
+     "resources": [
+      {
+       "name": "Serie de tiempo de mijo",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/60a9e1ed-071e-4a65-80a7-b1dc63827ab4/resource/cb737197-9d24-4a7e-88ae-a8c8b3f5e358/download/mijo-serie-1935-2025-anual.csv",
+       "modified": "2026-05-07"
+      },
+      {
+       "name": "Mijo - serie siembra, cosecha, producción, rendimiento",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/60a9e1ed-071e-4a65-80a7-b1dc63827ab4/resource/121041ab-2dca-4087-bead-07fa149ad180/download/mijo-serie-1935-2025.csv",
+       "modified": "2026-05-07"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "arroz-siembra-cosecha-produccion-rendimiento",
+     "title": "Arroz - siembra, cosecha, producción, rendimiento",
+     "modified": "2026-03-16",
+     "resources": [
+      {
+       "name": "Serie de tiempo de arroz",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/1efdadba-d9b9-4437-9306-1dcf322b7bc1/resource/9c53f8c5-886a-43b7-a929-8939161138b4/download/arroz-serie-1924-2024-anual.csv",
+       "modified": "2025-12-16"
+      },
+      {
+       "name": "Arroz - serie siembra, cosecha, producción, rendimiento",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/1efdadba-d9b9-4437-9306-1dcf322b7bc1/resource/b113402b-35fe-4dcd-9ee4-9cbfd356d03c/download/arroz-serie-1924-2024.csv",
+       "modified": "2026-03-16"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "lino-siembra-cosecha-produccion-rendimiento",
+     "title": "Lino - siembra, cosecha, producción, rendimiento",
+     "modified": "2026-02-02",
+     "resources": [
+      {
+       "name": "Serie de tiempo de lino",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/40c1ddf3-95b7-4721-8ccb-ac3e4ee10fe0/resource/adf416f1-9f5a-4b24-94c2-4aa183bee19b/download/lino-serie-1895-2024-anual.csv",
+       "modified": "2025-05-07"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "yerba-mate-siembra-cosecha-produccion-rendimiento",
+     "title": "Yerba mate - siembra, cosecha, producción, rendimiento",
+     "modified": "2026-01-28",
+     "resources": [
+      {
+       "name": "Serie de tiempo de yerba mate",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/4160ff65-f619-4408-a85f-6751d951cdc5/resource/758ed945-1a0d-4157-80a0-d26c6bf17cee/download/yerba-mate-1970-2024-anual.csv",
+       "modified": "2026-01-28"
+      },
+      {
+       "name": "Yerba mate - serie siembra, cosecha, producción, rendimiento",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/4160ff65-f619-4408-a85f-6751d951cdc5/resource/9ebafa60-476d-4190-92cc-86acf39406a8/download/yerba-mate-1970-2024.csv",
+       "modified": "2026-01-28"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "te-siembra-cosecha-produccion-rendimiento",
+     "title": "Té - siembra, cosecha, producción, rendimiento",
+     "modified": "2026-01-28",
+     "resources": [
+      {
+       "name": "Serie de tiempo de té",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/7fa2c4f5-5403-4604-9810-67f5a5b494bb/resource/73280451-9c74-4b56-bf22-1f1e1505633e/download/te-1970-2024-anual.csv",
+       "modified": "2026-01-28"
+      },
+      {
+       "name": "Té - serie siembra, cosecha, producción, rendimiento",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/7fa2c4f5-5403-4604-9810-67f5a5b494bb/resource/d2768e1a-cb60-4977-aa03-bab86f564ae6/download/te-1970-2024.csv",
+       "modified": "2026-01-28"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "inv-actividad-vitivinicola",
+     "title": "INV - Actividad vitivinícola",
+     "modified": "2025-12-16",
+     "resources": [
+      {
+       "name": "Establecimientos vinculados a la actividad vitivinícola",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/94cd4864-1739-4e5e-b65f-034486afa407/resource/16e20ac2-e396-4a30-ba71-45e1cb10c284/download/establecimientos-nivel-departamental-vinculados-actividad-vitivinicola-acuerdo-al-inv.csv",
+       "modified": "2019-02-05"
+      },
+      {
+       "name": "Mercado interno 2024",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/94cd4864-1739-4e5e-b65f-034486afa407/resource/90f42554-1305-4c2e-9a2d-ea12b07b82e9/download/inv-mercado-interno-2024.csv",
+       "modified": "2025-07-18"
+      },
+      {
+       "name": "Mercado Externo 2024",
+       "format": "pdf",
+       "url": "https://datos.magyp.gob.ar/dataset/94cd4864-1739-4e5e-b65f-034486afa407/resource/a71c4540-8b98-48c1-88e6-728b371a69f3/download/inv-mercado-externo-2025-04abr.pdf",
+       "modified": "2025-12-16"
+      },
+      {
+       "name": "Exportaciones 2025 - Enero a Abril",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/94cd4864-1739-4e5e-b65f-034486afa407/resource/be779a10-42a3-4e0a-9d1a-7df1486b69c3/download/inv-exportanciones-2025-ene-abr.csv",
+       "modified": "2025-12-15"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "exportacion-productos-equinos",
+     "title": "Ganadería - Exportación de equinos",
+     "modified": "2019-10-24",
+     "resources": [
+      {
+       "name": "Exportaciones de equinos vivos entre los años 2010-2017",
+       "format": "csv",
+       "url": "https://datos.agroindustria.gob.ar/dataset/dd869135-da85-4739-a0dc-e1351e1ca2cd/resource/a5e5a6ab-d24f-4e8e-9e84-bf0947d50e57/download/animales-vivos-.csv",
+       "modified": "2019-01-25"
+      },
+      {
+       "name": "Exportaciones de productos derivados de equinos entre los años 2010-2015",
+       "format": "csv",
+       "url": "https://datos.agroindustria.gob.ar/dataset/dd869135-da85-4739-a0dc-e1351e1ca2cd/resource/c71f81f9-e862-4a4c-a713-809bd9d7d528/download/otros-productos-derivados-2010-2015.csv",
+       "modified": "2019-01-29"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "existencias-equinas",
+     "title": "Ganadería - Existencias equinas",
+     "modified": "2019-10-02",
+     "resources": [
+      {
+       "name": "Existencias equinas",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/a73732e3-8d07-4ae8-aaa4-5b063c262ace/resource/c8be94de-51e2-4795-beeb-77c608b82271/download/copia-de-base-sigsa-por-categorias-y-localidades-2008-2017-.csv",
+       "modified": "2019-01-25"
+      },
+      {
+       "name": "Serie de tiempo",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/a73732e3-8d07-4ae8-aaa4-5b063c262ace/resource/faaaa7c9-c7f5-4842-9f0c-e289a0c4ba0f/download/existencias_equinas_anual.csv",
+       "modified": "2019-09-23"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "existencias-bovinas-en-tambos",
+     "title": "SENASA - Existencias Bovinas en Tambos",
+     "modified": "2019-10-24",
+     "resources": [
+      {
+       "name": "Existencias Bovinas en Tambos",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/f68d3d04-2fc1-495c-a22a-8b3eb3a0cf51/resource/97fda4bb-cbbb-40c3-95fa-e9ad8057a66f/download/existencias_bovinos_tambo.csv",
+       "modified": "2019-09-11"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "molienda-granos",
+     "title": "Granos - Molienda",
+     "modified": "2019-10-24",
+     "resources": [
+      {
+       "name": "Molienda de granos",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/c0d9a055-7c21-4616-840b-f70410996489/resource/b3d4cfd1-97bd-4590-9797-a347f863c23c/download/molienda-de-granos-a-diciembre-2017.csv",
+       "modified": "2019-01-22"
+      },
+      {
+       "name": "Serie de tiempo",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/c0d9a055-7c21-4616-840b-f70410996489/resource/1c3fb8f1-065c-4b2b-8b25-c32b1a14a241/download/molienda_granos.csv",
+       "modified": "2019-01-23"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "warrants---evolucion-certificados-vigentes-desagregados-por-productos",
+     "title": "Warrants - Evolución de certificados vigentes desagregados por productos",
+     "modified": "2019-07-05",
+     "resources": [
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Alcohol",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/ef3007d3-4930-43c9-8104-0303e2b36f95/download/warrants-vigentes-alcohol-2017.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Arroz",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/da492202-7574-4632-965a-bf92b21dd9ec/download/warrants-vigentes-arroz-2017.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Cebada",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/ae1aeb06-4e67-42cc-bd51-c8562b4d81e2/download/warrants-vigentes-cebada-2017-.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Girasol",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/1a590a02-e49c-4d0b-a3b6-55ef3d3d4986/download/warrants-vigentes-girasol-2017.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Leche",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/da46c4ae-2e1f-44bf-89ca-6b178f346899/download/warrants-vigentes-leche-2017.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Maíz",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/883325e9-ab9a-4e35-839c-0f6b5f77362c/download/warrants-vigentes-maiz-2017.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Soja",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/81d6cfae-27c7-4345-b27a-d71e4efea4e9/download/warrants-vigentes-soja-2017-.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Tabaco",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/427c7506-d73b-4d25-9763-ab3601dfcb0a/download/warrants-vigentes-tabaco-2017-.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Trigo",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/91c180f9-fe6a-498e-9800-8573c1065abc/download/warrants-vigentes-trigo-2017-.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Yerba Mate",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/da546898-bc88-4d5e-a4f7-d3424b59be90/download/warrants-vigentes-yerbamate-2017-.csv",
+       "modified": "2019-01-30"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "produccion-nacional-fiscalizada-por-especies-registrada-inase",
+     "title": "INASE- Producción nacional de semilla fiscalizada",
+     "modified": "2019-10-24",
+     "resources": [
+      {
+       "name": "Producción nacional fiscalizada por especies registrada en el INASE entre el período 2017 y 2018",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/56656007-f444-48bf-a6da-d3e1ff13468a/resource/046e77e1-930e-4ec4-815f-0799f3ad6a13/download/produccionnacionalporespecie2018-09-28.csv",
+       "modified": "2019-01-22"
+      },
+      {
+       "name": "Producción nacional fiscalizada por especies registrada en el INASE entre el período 2016 y 2017",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/56656007-f444-48bf-a6da-d3e1ff13468a/resource/73d0ad28-3698-404d-a3dc-886c68894bad/download/produccionnacionalfiscalizadaporespecie.csv",
+       "modified": "2019-01-22"
+      },
+      {
+       "name": "Producción nacional fiscalizada por especies registrada en el INASE entre el período 2014 y 2015",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/56656007-f444-48bf-a6da-d3e1ff13468a/resource/0abffd7b-b18b-441e-a5af-b3a064632ce1/download/33-produccion-nacional-fiscalizada-por-especies-14-15-1.csv",
+       "modified": "2019-01-22"
+      },
+      {
+       "name": "Referencias de producción nacional fiscalizada por especies",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/56656007-f444-48bf-a6da-d3e1ff13468a/resource/cebc77ec-dbc1-4ccc-a95b-dbc79f8e3b2a/download/produccion-nacional-fiscalizada-por-especies-referencias.csv",
+       "modified": "2019-01-23"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "produccion-nacional-fiscalizada-por-especies-ubicacion-registrada-inase",
+     "title": "INASE - Producción de semillas por especies y ubicación",
+     "modified": "2019-10-24",
+     "resources": [
+      {
+       "name": "Producion Nacional Fiscalizada por Especies y Ubicación Registrada en el INASE entre el período 2017 y 2018",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/022957c0-60a0-4c1a-8160-e601bbbf8012/resource/03863ce1-cc80-481b-b3dc-0c5abaf90724/download/produccion-nacional-especie-provincia-y-localidad-2017-2018-.csv",
+       "modified": "2019-01-14"
+      },
+      {
+       "name": "Producion Nacional Fiscalizada por Especies y Ubicación Registrada en el INASE entre el período 2016 y 2017",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/022957c0-60a0-4c1a-8160-e601bbbf8012/resource/d4d4498e-f685-43ed-b95a-979b967ae63c/download/produccion-nacional-fiscalizada-por-especie-y-ubicacion-16-17-.csv",
+       "modified": "2019-01-14"
+      },
+      {
+       "name": "Producion Nacional Fiscalizada por Especies y Ubicación Registrada en el INASE entre el período 2014 y 2015",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/022957c0-60a0-4c1a-8160-e601bbbf8012/resource/91bb839c-e97a-4da2-94df-e7ba62b2881a/download/34-produccion-nacional-fiscalizada-por-especie-y-ubicacion-14-15.csv",
+       "modified": "2019-01-14"
+      }
+     ]
+    },
+    {
+     "base": "datos.magyp.gob.ar",
+     "name": "warrants---evolucion-certificados-emitidos-desagregados-por-principales-productos",
+     "title": "Warrants - Evolución de certificados emitidos desagregados por productos",
+     "modified": "2019-10-24",
+     "resources": [
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Alcohol",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/4baf8f3b-b29a-499c-abb2-677a0f2351bb/download/warrants-evolucion-de-principales-productos-emitidos-alcohol-.csv",
+       "modified": "2019-01-29"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Arroz",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/75718821-91ce-4df6-a769-511f9dec6ba3/download/warrants-evolucion-de-principales-productos-emitidos-arroz-.csv",
+       "modified": "2019-01-29"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Cebada",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/c54b65c4-5e05-42d2-a3e5-06cf57dab9cd/download/warrants-evolucion-de-certificados-emitidos-x-cebada-.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Girasol",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/eeec7cc0-e8a8-4e48-8601-1adc5dc9cfad/download/warrants-evolucion-de-certificados-emitidos-x-girasol-.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Leche",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/f4dc92fd-3ff4-4f16-af38-96f620830df3/download/warrants-evolucion-de-certificados-emitidos-x-leche-.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Maíz",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/bbf93d92-225d-468e-b006-26c0aad8d681/download/warrants-evolucion-de-certificados-emitidos-x-maiz-.csv",
+       "modified": "2019-02-07"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Soja",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/42f64007-7cab-4e92-b380-a6fa7aa21007/download/warrants-evolucion-de-certificados-emitidos-x-soja-.csv",
+       "modified": "2019-01-29"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Tabaco",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/e9f11911-2f3a-4eda-8a47-f54835be651b/download/warrants-evolucion-de-certificados-emitidos-x-tabaco.csv",
+       "modified": "2019-02-05"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Trigo",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/1795f038-495a-48bc-8429-f49d01bd9f2e/download/warrants-evolucion-de-certificados-emitidos-x-trigo-.csv",
+       "modified": "2019-01-29"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Yerba",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/ab2d97ff-cdb1-43dc-8fdd-689928df61ea/download/warrants-evolucion-de-certificados-emitidos-x-yerba-.csv",
+       "modified": "2019-01-29"
+      }
+     ]
+    },
+    {
+     "base": "datos.gob.ar",
+     "name": "maiz-siembra-cosecha-rendimiento-produccion",
+     "title": "Maíz - siembra, cosecha, producción, rendimiento",
+     "modified": "2026-08-10",
+     "resources": [
+      {
+       "name": "Serie de tiempo de maíz",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/514853fc-0a78-4b6f-a42f-8e89eab784c8/resource/c4696e28-4e54-464b-bc3b-19c608371231/download/maiz-serie-1923-2024-anual.csv",
+       "modified": "2026-08-10"
+      },
+      {
+       "name": "Maíz - serie siembra, cosecha, producción, rendimiento",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/514853fc-0a78-4b6f-a42f-8e89eab784c8/resource/9a6a02f8-ef58-4250-87c2-f639fec502f1/download/maiz-serie-1923-2024.csv",
+       "modified": "2026-03-13"
+      }
+     ]
+    },
+    {
+     "base": "datos.gob.ar",
+     "name": "trigo-siembra-cosecha-produccion-rendimiento",
+     "title": "Trigo - siembra, cosecha, producción, rendimiento",
+     "modified": "2026-08-10",
+     "resources": [
+      {
+       "name": "Serie de tiempo de trigo",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/10105e94-c560-4b02-b15f-ef3ef764b833/resource/dc3ae069-af81-4bdd-82cb-2f57f2c296dd/download/trigo-serie-1923-2025-anual.csv",
+       "modified": "2026-08-10"
+      },
+      {
+       "name": "Trigo - serie siembra, cosecha, producción, rendimiento",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/10105e94-c560-4b02-b15f-ef3ef764b833/resource/50f0edcc-4dfc-4afb-b78a-b164601d36ae/download/trigo-serie-1927-2025.csv",
+       "modified": "2026-05-07"
+      }
+     ]
+    },
+    {
+     "base": "datos.gob.ar",
+     "name": "poroto-siembra-cosecha-produccion-rendimiento",
+     "title": "Poroto - siembra, cosecha, producción, rendimiento",
+     "modified": "2026-08-03",
+     "resources": [
+      {
+       "name": "Serie de tiempo de poroto",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/eb301092-4c01-470d-8b2c-8c0e35285084/resource/d2e7e4eb-4a5e-4010-85b0-abf3e484d67b/download/poroto-1969-2024-anual.csv",
+       "modified": "2025-12-18"
+      },
+      {
+       "name": "Poroto - serie siembra, cosecha, producción, rendimiento",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/eb301092-4c01-470d-8b2c-8c0e35285084/resource/16aae8ef-c543-4f31-a8a6-a2bfadfd58ee/download/poroto-1969-2024.csv",
+       "modified": "2025-12-29"
+      }
+     ]
+    },
+    {
+     "base": "datos.gob.ar",
+     "name": "precios-fob-oficiales",
+     "title": "Precios FOB oficiales",
+     "modified": "2026-08-06",
+     "resources": [
+      {
+       "name": "Precios FOB oficiales. Valores diarios",
+       "format": "csv",
+       "url": "https://infra.datos.gob.ar/catalog/sspm/dataset/358/distribution/358.1/download/precios-fob-oficiales-valores-diarios.csv",
+       "modified": "2017-12-11"
+      }
+     ]
+    },
+    {
+     "base": "datos.gob.ar",
+     "name": "exportaciones-de-bienes-valores-y-cantidad-de-empresas-por-sector-de-actividad",
+     "title": "Exportaciones de bienes (valores y cantidad de empresas), por sector de actividad",
+     "modified": "2026-08-03",
+     "resources": [
+      {
+       "name": "Cantidad de empresas exportadoras en el sector privado (CLAE a 6 dígitos)",
+       "format": "csv",
+       "url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/expo/empresas-expo/empresas_expo_privada_por_clae6.csv",
+       "modified": "2022-04-06"
+      },
+      {
+       "name": "Cantidad de empresas exportadoras en el sector privado (CLAE a 3 dígitos)",
+       "format": "csv",
+       "url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/expo/empresas-expo/empresas_expo_privada_por_clae3.csv",
+       "modified": "2022-04-06"
+      },
+      {
+       "name": "Cantidad de empresas exportadoras en el sector privado (CLAE a 2 dígitos)",
+       "format": "csv",
+       "url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/expo/empresas-expo/empresas_expo_privada_por_clae2.csv",
+       "modified": "2022-04-06"
+      },
+      {
+       "name": "Cantidad de empresas exportadoras en el sector privado (por letra)",
+       "format": "csv",
+       "url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/expo/empresas-expo/empresas_expo_privada_por_letra.csv",
+       "modified": "2022-04-06"
+      },
+      {
+       "name": "Cantidad de empresas exportadoras en el sector privado (total)",
+       "format": "csv",
+       "url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/expo/empresas-expo/empresas_expo_privada_total.csv",
+       "modified": "2022-04-06"
+      },
+      {
+       "name": "Cantidad de empresas exportadoras del total empresas (CLAE a 6 dígitos)",
+       "format": "csv",
+       "url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/expo/empresas-expo/empresas_expo_total_empresas_por_clae6.csv",
+       "modified": "2022-04-06"
+      },
+      {
+       "name": "Cantidad de empresas exportadoras del total empresas (CLAE a 3 dígitos)",
+       "format": "csv",
+       "url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/expo/empresas-expo/empresas_expo_total_empresas_por_clae3.csv",
+       "modified": "2022-04-06"
+      },
+      {
+       "name": "Cantidad de empresas exportadoras del total empresas (CLAE a 2 dígitos)",
+       "format": "csv",
+       "url": "https://datos.produccion.gob.ar/dataset/48b5f28a-a2da-4ce8-b7e5-b003c6836c2f/resource/2ddfad32-6c5e-498b-bdda-6d5a935a7ac1/download/empresas_expo_total_empresas_por_clae2_15122021.rar",
+       "modified": "2021-12-15"
+      },
+      {
+       "name": "Cantidad de empresas exportadoras del total empresas (letra)",
+       "format": "csv",
+       "url": "https://datos.produccion.gob.ar/dataset/48b5f28a-a2da-4ce8-b7e5-b003c6836c2f/resource/33c31ab5-9a98-4c47-a06f-fab5cf198b38/download/empresas_expo_total_empresas_por_letra_15122021.rar",
+       "modified": "2021-12-15"
+      },
+      {
+       "name": "Cantidad de empresas exportadoras del total empresas (total)",
+       "format": "csv",
+       "url": "https://datos.produccion.gob.ar/dataset/48b5f28a-a2da-4ce8-b7e5-b003c6836c2f/resource/ce8c7d69-a0b7-416d-aaf5-b528a8f82048/download/empresas_expo_total_empresas_total_15122021.rar",
+       "modified": "2021-12-15"
+      }
+     ]
+    },
+    {
+     "base": "datos.gob.ar",
+     "name": "actividad-ganadera",
+     "title": "Actividad ganadera",
+     "modified": "2026-08-03",
+     "resources": [
+      {
+       "name": "Existencias bovinas",
+       "format": "csv",
+       "url": "https://ciam.ambiente.gob.ar/dt_csv.php?dt_id=565",
+       "modified": "2022-11-11"
+      },
+      {
+       "name": "Evolución del ganado bovino",
+       "format": "csv",
+       "url": "https://ciam.ambiente.gob.ar/dt_csv.php?dt_id=570",
+       "modified": "2023-08-06"
+      },
+      {
+       "name": "Existencias ganaderas",
+       "format": "csv",
+       "url": "https://ciam.ambiente.gob.ar/dt_csv.php?dt_id=571",
+       "modified": "2023-12-31"
+      },
+      {
+       "name": "Superficie orgánica destinada a ganadería",
+       "format": "csv",
+       "url": "https://ciam.ambiente.gob.ar/dt_csv.php?dt_id=604",
+       "modified": "2024-12-31"
+      }
+     ]
+    },
+    {
+     "base": "datos.gob.ar",
+     "name": "warrants-evolucion-certificados-vigentes-desagregados-por-productos",
+     "title": "Warrants - Evolución de certificados vigentes desagregados por productos",
+     "modified": "2026-08-03",
+     "resources": [
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Alcohol",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/ef3007d3-4930-43c9-8104-0303e2b36f95/download/warrants-vigentes-alcohol-2017.csv",
+       "modified": "2019-01-29"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Arroz",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/da492202-7574-4632-965a-bf92b21dd9ec/download/warrants-vigentes-arroz-2017.csv",
+       "modified": "2019-01-29"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Cebada",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/ae1aeb06-4e67-42cc-bd51-c8562b4d81e2/download/warrants-vigentes-cebada-2017-.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Girasol",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/1a590a02-e49c-4d0b-a3b6-55ef3d3d4986/download/warrants-vigentes-girasol-2017.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Leche",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/da46c4ae-2e1f-44bf-89ca-6b178f346899/download/warrants-vigentes-leche-2017.csv",
+       "modified": "2019-01-23"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Maíz",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/883325e9-ab9a-4e35-839c-0f6b5f77362c/download/warrants-vigentes-maiz-2017.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Soja",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/81d6cfae-27c7-4345-b27a-d71e4efea4e9/download/warrants-vigentes-soja-2017-.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Tabaco",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/427c7506-d73b-4d25-9763-ab3601dfcb0a/download/warrants-vigentes-tabaco-2017-.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Trigo",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/91c180f9-fe6a-498e-9800-8573c1065abc/download/warrants-vigentes-trigo-2017-.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados vigentes por Yerba Mate",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/92e7f3b2-5837-46b0-a215-f12298811b31/resource/da546898-bc88-4d5e-a4f7-d3424b59be90/download/warrants-vigentes-yerbamate-2017-.csv",
+       "modified": "2019-01-30"
+      }
+     ]
+    },
+    {
+     "base": "datos.gob.ar",
+     "name": "warrants-evolucion-certificados-emitidos-desagregados-por-principales-productos",
+     "title": "Warrants - Evolución de certificados emitidos desagregados por productos",
+     "modified": "2026-08-03",
+     "resources": [
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Alcohol",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/4baf8f3b-b29a-499c-abb2-677a0f2351bb/download/warrants-evolucion-de-principales-productos-emitidos-alcohol-.csv",
+       "modified": "2019-01-29"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Arroz",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/75718821-91ce-4df6-a769-511f9dec6ba3/download/warrants-evolucion-de-principales-productos-emitidos-arroz-.csv",
+       "modified": "2019-01-29"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Cebada",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/c54b65c4-5e05-42d2-a3e5-06cf57dab9cd/download/warrants-evolucion-de-certificados-emitidos-x-cebada-.csv",
+       "modified": "2019-01-29"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Girasol",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/eeec7cc0-e8a8-4e48-8601-1adc5dc9cfad/download/warrants-evolucion-de-certificados-emitidos-x-girasol-.csv",
+       "modified": "2019-01-29"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Leche",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/f4dc92fd-3ff4-4f16-af38-96f620830df3/download/warrants-evolucion-de-certificados-emitidos-x-leche-.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Maíz",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/bbf93d92-225d-468e-b006-26c0aad8d681/download/warrants-evolucion-de-certificados-emitidos-x-maiz-.csv",
+       "modified": "2019-01-30"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Soja",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/42f64007-7cab-4e92-b380-a6fa7aa21007/download/warrants-evolucion-de-certificados-emitidos-x-soja-.csv",
+       "modified": "2019-01-29"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Tabaco",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/e9f11911-2f3a-4eda-8a47-f54835be651b/download/warrants-evolucion-de-certificados-emitidos-x-tabaco.csv",
+       "modified": "2019-01-29"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Trigo",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/1795f038-495a-48bc-8429-f49d01bd9f2e/download/warrants-evolucion-de-certificados-emitidos-x-trigo-.csv",
+       "modified": "2019-01-29"
+      },
+      {
+       "name": "Warrants - Evolución de los certificados emitidos por Yerba",
+       "format": "csv",
+       "url": "https://datos.magyp.gob.ar/dataset/63ecd152-b710-42e7-a845-b51722198483/resource/ab2d97ff-cdb1-43dc-8fdd-689928df61ea/download/warrants-evolucion-de-certificados-emitidos-x-yerba-.csv",
+       "modified": "2019-01-29"
+      }
+     ]
+    },
+    {
+     "base": "datos.gob.ar",
+     "name": "indicadores-sectoriales-y-provinciales",
+     "title": "Indicadores Sectoriales y Provinciales",
+     "modified": "2026-08-03",
+     "resources": [
+      {
+       "name": "Indicadores de Algodonera - textil en valores anuales, trimestrales y mensuales",
+       "format": "csv",
+       "url": "https://www.economia.gob.ar/catalogo-sspmi/nuevo_dataset/algodonera-textil.csv",
+       "modified": "2026-06-08"
+      },
+      {
+       "name": "Indicadores de Apícola en valores anuales, trimestrales y mensuales",
+       "format": "csv",
+       "url": "https://www.economia.gob.ar/catalogo-sspmi/nuevo_dataset/apicola.csv",
+       "modified": "2026-06-08"
+      },
+      {
+       "name": "Indicadores de Arroz en valores anuales, trimestrales y mensuales",
+       "format": "csv",
+       "url": "https://www.economia.gob.ar/catalogo-sspmi/nuevo_dataset/arroz.csv",
+       "modified": "2026-06-08"
+      },
+      {
+       "name": "Indicadores de Automotriz y Autopartista en valores anuales, trimestrales y mensuales",
+       "format": "csv",
+       "url": "https://www.economia.gob.ar/catalogo-sspmi/nuevo_dataset/automotriz-y-autopartista.csv",
+       "modified": "2026-06-08"
+      },
+      {
+       "name": "Indicadores de Azúcar en valores anuales, trimestrales y mensuales",
+       "format": "csv",
+       "url": "https://www.economia.gob.ar/catalogo-sspmi/nuevo_dataset/azucar.csv",
+       "modified": "2026-06-08"
+      },
+      {
+       "name": "Indicadores de Cárnica - Aviar en valores anuales, trimestrales y mensuales",
+       "format": "csv",
+       "url": "https://www.economia.gob.ar/catalogo-sspmi/nuevo_dataset/carnica-aviar.csv",
+       "modified": "2026-06-08"
+      },
+      {
+       "name": "Indicadores de Cárnica - Porcina en valores anuales, trimestrales y mensuales",
+       "format": "csv",
+       "url": "https://www.economia.gob.ar/catalogo-sspmi/nuevo_dataset/carnica-porcina.csv",
+       "modified": "2026-06-08"
+      },
+      {
+       "name": "Indicadores de Cárnica - Vacuna en valores anuales, trimestrales y mensuales",
+       "format": "csv",
+       "url": "https://www.economia.gob.ar/catalogo-sspmi/nuevo_dataset/carnica-vacuna.csv",
+       "modified": "2026-06-08"
+      },
+      {
+       "name": "Indicadores de Comercio interno en valores anuales, trimestrales y mensuales",
+       "format": "csv",
+       "url": "https://www.economia.gob.ar/catalogo-sspmi/nuevo_dataset/comercio-interno.csv",
+       "modified": "2026-06-08"
+      },
+      {
+       "name": "Indicadores de Construcción en valores anuales, trimestrales y mensuales",
+       "format": "csv",
+       "url": "https://www.economia.gob.ar/catalogo-sspmi/nuevo_dataset/construccion.csv",
+       "modified": "2026-06-08"
+      }
+     ]
+    },
+    {
+     "base": "datos.gob.ar",
+     "name": "grandes-proyectos-de-inversion-res-256-2000",
+     "title": "Grandes Proyectos de Inversión (Res 256/2000)",
+     "modified": "2026-08-03",
+     "resources": [
+      {
+       "name": "Proyectos aprobados",
+       "format": "xls",
+       "url": "https://datos.produccion.gob.ar/dataset/c7e38c13-2227-4577-8831-2744ef10450d/resource/cb73667c-fb3c-43fe-9dcd-6a0b54fdc74b/download/grandes-proyectos-de-inversion-res-256-2000.xlsx",
+       "modified": "2022-07-28"
+      }
+     ]
+    },
+    {
+     "base": "datos.gob.ar",
+     "name": "precios-de-biodiesel",
+     "title": "Precios de biodiesel",
+     "modified": "2026-09-03",
+     "resources": [
+      {
+       "name": "Biocombustibles - Precios de biodiesel ",
+       "format": "php",
+       "url": "https://glp.se.gob.ar/biocombustible/reporte_precios.php",
+       "modified": "2018-01-02"
+      },
+      {
+       "name": "Biocombustibles - Precios de biodiesel",
+       "format": "csv",
+       "url": "http://datos.energia.gob.ar/dataset/30fcb906-5374-4790-aa89-368c0d3ef314/resource/b68507ca-f6ff-406f-85cf-2d706a2b993f/download/biocombustible-precios-de-biodiesel.csv",
+       "modified": "2026-09-02"
+      },
+      {
+       "name": "Insumo para fórmula de cálculo de Biodiesel Res 83/18",
+       "format": "xls",
+       "url": "http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/biocombustibles/insumos_formula_biodiesel.xlsx",
+       "modified": "2023-02-07"
+      }
+     ]
+    }
+   ],
+   "samples": {
+    "estimaciones-agricolas | Estimaciones agrícolas": {
+     "url": "https://datos.magyp.gob.ar/dataset/9e1e77ba-267e-4eaa-a59f-3296e86b5f36/resource/95d066e6-8a0f-4a80-b59d-6f28f88eacd5/download/estimaciones-agricolas-2026-03.csv",
+     "rows": 62992,
+     "columns": [
+      "cultivo",
+      "anio",
+      "campania",
+      "provincia",
+      "provincia_id",
+      "departamento",
+      "departamento_id",
+      "superficie_sembrada_ha",
+      "superficie_cosechada_ha",
+      "produccion_tm",
+      "rendimiento_kgxha"
+     ],
+     "tail": [
+      {
+       "cultivo": "limón",
+       "anio": "1972",
+       "campania": "1972/1973",
+       "provincia": "Tucumán",
+       "provincia_id": "90",
+       "departamento": "Chicligasta",
+       "departamento_id": "90021",
+       "superficie_sembrada_ha": "0",
+       "superficie_cosechada_ha": "0",
+       "produccion_tm": "2500",
+       "rendimiento_kgxha": "0"
+      },
+      {
+       "cultivo": "limón",
+       "anio": NaN,
+       "campania": NaN,
+       "provincia": NaN,
+       "provincia_id": NaN,
+       "departamento": NaN,
+       "departamento_id": NaN,
+       "superficie_sembrada_ha": NaN,
+       "superficie_cosechada_ha": NaN,
+       "produccion_tm": NaN,
+       "rendimiento_kgxha": NaN
+      }
+     ]
+    },
+    "estimaciones-agricolas | Serie de Tiempo Estimación de Trigo Pan": {
+     "url": "https://datos.magyp.gob.ar/dataset/9e1e77ba-267e-4eaa-a59f-3296e86b5f36/resource/ca5e31b5-a51f-4738-bae0-773838b5dd1e/download/serie-de-tiempo-trigo.csv",
+     "rows": 50,
+     "columns": [
+      "indice_tiempo",
+      "superficie_sembrada_trigo_pan",
+      "superficie_cosechada_trigo_pan",
+      "produccion_trigo_pan",
+      "rendimiento_trigo_pan"
+     ],
+     "tail": [
+      {
+       "indice_tiempo": "2017",
+       "superficie_sembrada_trigo_pan": "5927610",
+       "superficie_cosechada_trigo_pan": "5822173",
+       "produccion_trigo_pan": "18518045",
+       "rendimiento_trigo_pan": "3181"
+      },
+      {
+       "indice_tiempo": "2018",
+       "superficie_sembrada_trigo_pan": "6287149",
+       "superficie_cosechada_trigo_pan": "6050953",
+       "produccion_trigo_pan": "19459727",
+       "rendimiento_trigo_pan": "3216"
+      }
+     ]
+    },
+    "exportacion-productos-equinos | Exportaciones de equinos vivos entre los años 2010-2017": {
+     "url": "https://datos.agroindustria.gob.ar/dataset/dd869135-da85-4739-a0dc-e1351e1ca2cd/resource/a5e5a6ab-d24f-4e8e-9e84-bf0947d50e57/download/animales-vivos-.csv",
+     "error": "ConnectionError: HTTPSConnectionPool(host='datos.agroindustria.gob.ar', port=443): Max retries exceeded with url: /dataset/dd869135-da85-"
+    },
+    "exportacion-productos-equinos | Exportaciones de productos derivados de equinos entre los años 2010-2015": {
+     "url": "https://datos.agroindustria.gob.ar/dataset/dd869135-da85-4739-a0dc-e1351e1ca2cd/resource/c71f81f9-e862-4a4c-a713-809bd9d7d528/download/otros-productos-derivados-2010-2015.csv",
+     "error": "ConnectionError: HTTPSConnectionPool(host='datos.agroindustria.gob.ar', port=443): Max retries exceeded with url: /dataset/dd869135-da85-"
+    },
+    "existencias-equinas | Existencias equinas": {
+     "url": "https://datos.magyp.gob.ar/dataset/a73732e3-8d07-4ae8-aaa4-5b063c262ace/resource/c8be94de-51e2-4795-beeb-77c608b82271/download/copia-de-base-sigsa-por-categorias-y-localidades-2008-2017-.csv",
+     "rows": 35574,
+     "columns": [
+      "pais_id",
+      "pais",
+      "provincia_id",
+      "provincia",
+      "departamento_id",
+      "departamento",
+      "año",
+      "categoria",
+      "cantidad",
+      "Unnamed: 9"
+     ],
+     "tail": [
+      {
+       "pais_id": "32",
+       "pais": "Argentina",
+       "provincia_id": "90",
+       "provincia": "Tucuman",
+       "departamento_id": "112",
+       "departamento": "Trancas",
+       "año": "2008",
+       "categoria": "asno",
+       "cantidad": NaN,
+       "Unnamed: 9": NaN
+      },
+      {
+       "pais_id": "32",
+       "pais": "Argentina",
+       "provincia_id": "90",
+       "provincia": "Tucuman",
+       "departamento_id": "119",
+       "departamento": "Yerba Buena",
+       "año": "2008",
+       "categoria": "asno",
+       "cantidad": NaN,
+       "Unnamed: 9": NaN
+      }
+     ]
+    },
+    "existencias-equinas | Serie de tiempo": {
+     "url": "https://datos.magyp.gob.ar/dataset/a73732e3-8d07-4ae8-aaa4-5b063c262ace/resource/faaaa7c9-c7f5-4842-9f0c-e289a0c4ba0f/download/existencias_equinas_anual.csv",
+     "rows": 12,
+     "columns": [
+      "indice_tiempo",
+      "padrillos",
+      "caballos",
+      "yeguas",
+      "potrillos_potrillas",
+      "mulas",
+      "burros_burras"
+     ],
+     "tail": [
+      {
+       "indice_tiempo": "2018",
+       "padrillos": "84153",
+       "caballos": "931240",
+       "yeguas": "952360",
+       "potrillos_potrillas": "333848",
+       "mulas": "45648",
+       "burros_burras": "60321"
+      },
+      {
+       "indice_tiempo": "2019",
+       "padrillos": "90701",
+       "caballos": "955408",
+       "yeguas": "994494",
+       "potrillos_potrillas": "336364",
+       "mulas": "46593",
+       "burros_burras": "61541"
+      }
+     ]
+    },
+    "existencias-bovinas-en-tambos | Existencias Bovinas en Tambos": {
+     "url": "https://datos.magyp.gob.ar/dataset/f68d3d04-2fc1-495c-a22a-8b3eb3a0cf51/resource/97fda4bb-cbbb-40c3-95fa-e9ad8057a66f/download/existencias_bovinos_tambo.csv",
+     "rows": 2692,
+     "columns": [
+      "anio",
+      "provincia",
+      "provincia_id",
+      "partido_departamento",
+      "departamento_id",
+      "vacas",
+      "vaquillonas",
+      "novillos",
+      "novillitos",
+      "terneros",
+      "terneras",
+      "toros",
+      "bueyes",
+      "toritos",
+      "total_bovinos_tambo"
+     ],
+     "tail": [
+      {
+       "anio": "2018",
+       "provincia": "Tucuman",
+       "provincia_id": "90",
+       "partido_departamento": "Trancas",
+       "departamento_id": "112",
+       "vacas": "3842",
+       "vaquillonas": "1804",
+       "novillos": "40",
+       "novillitos": "101",
+       "terneros": "373",
+       "terneras": "119",
+       "toros": "78",
+       "bueyes": "27",
+       "toritos": " ",
+       "total_bovinos_tambo": "7455"
+      },
+      {
+       "anio": "2019",
+       "provincia": "Tucuman",
+       "provincia_id": "90",
+       "partido_departamento": "Trancas",
+       "departamento_id": "112",
+       "vacas": "4141",
+       "vaquillonas": "1765",
+       "novillos": "20",
+       "novillitos": "66",
+       "terneros": "511",
+       "terneras": "769",
+       "toros": "63",
+       "bueyes": "1",
+       "toritos": "37",
+       "total_bovinos_tambo": "7373"
+      }
+     ]
+    },
+    "molienda-granos | Molienda de granos": {
+     "url": "https://datos.magyp.gob.ar/dataset/c0d9a055-7c21-4616-840b-f70410996489/resource/b3d4cfd1-97bd-4590-9797-a347f863c23c/download/molienda-de-granos-a-diciembre-2017.csv",
+     "rows": 68,
+     "columns": [
+      "pais_id",
+      "nom_pais",
+      "año",
+      "uni_med_id",
+      "nom_unimed",
+      "lino",
+      "girasol",
+      "maní",
+      "trigo candeal",
+      "trigo pan",
+      "maiz",
+      "sorgo granifero",
+      "soja",
+      "arroz"
+     ],
+     "tail": [
+      {
+       "pais_id": "32",
+       "nom_pais": "Argentina",
+       "año": "2016",
+       "uni_med_id": "t",
+       "nom_unimed": "tonelada",
+       "lino": "3480",
+       "girasol": "2745570",
+       "maní": "194338",
+       "trigo candeal": "275172",
+       "trigo pan": "5447197",
+       "maiz": "5228332",
+       "sorgo granifero": "81497",
+       "soja": "8670493",
+       "arroz": "1087554"
+      },
+      {
+       "pais_id": "32",
+       "nom_pais": "Argentina",
+       "año": "2017",
+       "uni_med_id": "t",
+       "nom_unimed": "tonelada",
+       "lino": "7201",
+       "girasol": "3155237",
+       "maní": "209151",
+       "trigo candeal": "285620",
+       "trigo pan": "5634055",
+       "maiz": "5617646",
+       "sorgo granifero": "126291",
+       "soja": "8065602",
+       "arroz": "931169"
+      }
+     ]
+    },
+    "molienda-granos | Serie de tiempo": {
+     "url": "https://datos.magyp.gob.ar/dataset/c0d9a055-7c21-4616-840b-f70410996489/resource/1c3fb8f1-065c-4b2b-8b25-c32b1a14a241/download/molienda_granos.csv",
+     "rows": 68,
+     "columns": [
+      "indice_tiempo",
+      "molienda_lino",
+      "molienda_sorgo_granifero",
+      "molienda_girasol",
+      "molienda_mani",
+      "molienda_trigo_pan",
+      "molienda_arroz",
+      "molienda_maiz",
+      "molienda_soja",
+      "molienda_trigo_candeal"
+     ],
+     "tail": [
+      {
+       "indice_tiempo": "2016",
+       "molienda_lino": "3480",
+       "molienda_sorgo_granifero": "81497",
+       "molienda_girasol": "2745570",
+       "molienda_mani": "194338",
+       "molienda_trigo_pan": "5447197",
+       "molienda_arroz": "1087554",
+       "molienda_maiz": "5228332",
+       "molienda_soja": "8670493",
+       "molienda_trigo_candeal": "275172"
+      },
+      {
+       "indice_tiempo": "2017",
+       "molienda_lino": "7201",
+       "molienda_sorgo_granifero": "126291",
+       "molienda_girasol": "3155237",
+       "molienda_mani": "209151",
+       "molienda_trigo_pan": "5634055",
+       "molienda_arroz": "931169",
+       "molienda_maiz": "5617646",
+       "molienda_soja": "8065602",
+       "molienda_trigo_candeal": "285620"
+      }
+     ]
+    },
+    "precios-fob-oficiales | Precios FOB oficiales. Valores diarios": {
+     "url": "https://infra.datos.gob.ar/catalog/sspm/dataset/358/distribution/358.1/download/precios-fob-oficiales-valores-diarios.csv",
+     "rows": 11706,
+     "columns": [
+      "indice_tiempo",
+      "tortas_expellers_pellets_harina_soja_pellets_harina_extr",
+      "tortas_expellers_pellets_harina_soja_pellets_harinas_tortas",
+      "habas_soja_demas_granel_hasta_15_porciento_embolsado",
+      "habas_soja_demas_mas_15_porciento_embolsado",
+      "aceite_soja_granel",
+      "maiz_demas_grano_granel_hasta_15_porciento_embolsado",
+      "maiz_demas_grano_mas_15_porciento_embolsado",
+      "maiz_maiz_pisingallo_granel_hasta_15_porciento_embolsado",
+      "maiz_maiz_pisingallo_mas_15_porciento_embolsado",
+      "maiz_flint_plata_granel_hasta_15_porciento_embolsado",
+      "maiz_flint_plata_mas_15_porciento_embolsado",
+      "trigo_granel_hasta_15_porciento_embolsado",
+      "trigo_pan_mas_15_porciento_embolsado",
+      "aceite_girasol_granel",
+      "malta_cervecera_malta_cebada_cervecera",
+      "cebada_cervecera_granel_hasta_15_porciento_embolsado",
+      "cebada_cervecera_mas_15_porciento_embolsado",
+      "cacahuate_mani_confiteria_tostadero",
+      "cacahuate_mani_demas_granel_hasta_15_porciento_embolsado",
+      "cacahuate_mani_demas_mas_15_porciento_embolsado",
+      "cacahuate_mani_mani_partido",
+      "cebada_cervecera_detalle_granel_hasta_15_porciento_embol",
+      "cebada_cervecera_granel_mas_15_porciento_embolsado",
+      "arroz_no_parbolizado_cont_grano_quebrado_men_igual_10porc",
+      "arroz_puli_glas_no_parbo_cont_grano_quebrado_may_10porc",
+      "arroz_pulido_glasaseado_cont_gra_quebr_men_igual_10porc",
+      "arroz_pulido_glaseado_contenido_grano_quebrado_may_10porc",
+      "harina_trigo",
+      "sorgo_granifero_demas_granel_hasta_15_porciento_embolsado"
+     ],
+     "tail": [
+      {
+       "indice_tiempo": "2025-01-20",
+       "tortas_expellers_pellets_harina_soja_pellets_harina_extr": "322.0",
+       "tortas_expellers_pellets_harina_soja_pellets_harinas_tortas": NaN,
+       "habas_soja_demas_granel_hasta_15_porciento_embolsado": "412.0",
+       "habas_soja_demas_mas_15_porciento_embolsado": "432.0",
+       "aceite_soja_granel": "1044.0",
+       "maiz_demas_grano_granel_hasta_15_porciento_embolsado": "229.0",
+       "maiz_demas_grano_mas_15_porciento_embolsado": "249.0",
+       "maiz_maiz_pisingallo_granel_hasta_15_porciento_embolsado": NaN,
+       "maiz_maiz_pisingallo_mas_15_porciento_embolsado": NaN,
+       "maiz_flint_plata_granel_hasta_15_porciento_embolsado": "238.0",
+       "maiz_flint_plata_mas_15_porciento_embolsado": "258.0",
+       "trigo_granel_hasta_15_porciento_embolsado": "229.0",
+       "trigo_pan_mas_15_porciento_embolsado": "249.0",
+       "aceite_girasol_granel": "1080.0",
+       "malta_cervecera_malta_cebada_cervecera": "570.0",
+       "cebada_cervecera_granel_hasta_15_porciento_embolsado": "213.0",
+       "cebada_cervecera_mas_15_porciento_embolsado": "238.0",
+       "cacahuate_mani_confiteria_tostadero": NaN,
+       "cacahuate_mani_demas_granel_hasta_15_porciento_embolsado": NaN,
+       "cacahuate_mani_demas_mas_15_porciento_embolsado": NaN,
+       "cacahuate_mani_mani_partido": NaN,
+       "cebada_cervecera_detalle_granel_hasta_15_porciento_embol": "230.0",
+       "cebada_cervecera_granel_mas_15_porciento_embolsado": "255.0",
+       "arroz_no_parbolizado_cont_grano_quebrado_men_igual_10porc": NaN,
+       "arroz_puli_glas_no_parbo_cont_grano_quebrado_may_10porc": NaN,
+       "arroz_pulido_glasaseado_cont_gra_quebr_men_igual_10porc": NaN,
+       "arroz_pulido_glaseado_contenido_grano_quebrado_may_10porc": NaN,
+       "harina_trigo": "355.0",
+       "sorgo_granifero_demas_granel_hasta_15_porciento_embolsado": "205.0",
+       "sorgo_granifero_demas_mas_15_porciento_embolsado": "225.0",
+       "poro_blanc_alubias_ovales_envases_may_20_kg": NaN,
+       "poro_blanc_alubias_env_may_20_kg_dsd_191_hta_220_gr_c_100_gr": NaN,
+       "poro_blanc_alubias_env_may_20_kg_dsd_221_gr_cada_100_gr": NaN,
+       "poro_blanc_alubias_env_may_20_kg_hta_190_gr_cada_100_gr": NaN,
+       "poro_negros_envases_may_20_kg": NaN,
+       "tortas_expellers_pellets_harinas_girasol_tortas": "225.0",
+       "tortas_expellers_pellets_harinas_girasol_harinas_tortas": "221.0",
+       "tortas_expellers_pellets_harinas_girasol_pellets_integral": "165.0",
+       "tortas_expellers_pellets_harinas_girasol_pellets_extr": "223.0",
+       "semilla_girasol_unica_ind_demas_granel_hta_15_porc_embol": "445.0",
+       "semilla_girasol_unica_ind_demas_girasol_tipo_confiteria": "690.0",
+       "semilla_girasol_unica_ind_demas_mas_15_por_embolsado": "465.0",
+       "aceite_cacahuete_mani_granel": NaN,
+       "s_cardar_peinar_desmo_algo_grado_b": NaN,
+       "algo_s_cardar_peinar_desmo_grado_c": NaN,
+       "s_cardar_peinar_desmo_grado_c_1_2": NaN,
+       "s_cardar_peinar_desmo_grado_d_1_2_long_27_mm_1_1_16": NaN,
+       "s_cardar_peinar_desmo_grado_d_long_27_mm_1_1_16": NaN,
+       "s_cardar_peinar_desmotado_grado_long_26_mm_1_1_32": NaN,
+       "sin_cardar_peinar_desmotado_grado_f_long_26_mm_1_1_32": NaN,
+       "garbanzos_enteros": NaN,
+       "garbanzos_partidos": NaN,
+       "porotos_colorados_envases_mayores_20_kg": NaN,
+       "arvejas_enteras": NaN,
+       "arvejas_partidas": NaN,
+       "aceite_girasol_demas_refinado_granel": "1252.8",
+       "aceite_girasol_demas_refinado_tambores_mas_200_litros": "1600.0",
+       "arroz_descascarillado_arroz_cargo_arroz_pardo_demas_no_parbo": NaN
+      },
+      {
+       "indice_tiempo": "2025-01-21",
+       "tortas_expellers_pellets_harina_soja_pellets_harina_extr": "335.0",
+       "tortas_expellers_pellets_harina_soja_pellets_harinas_tortas": NaN,
+       "habas_soja_demas_granel_hasta_15_porciento_embolsado": "420.0",
+       "habas_soja_demas_mas_15_porciento_embolsado": "440.0",
+       "aceite_soja_granel": "1042.0",
+       "maiz_demas_grano_granel_hasta_15_porciento_embolsado": "232.0",
+       "maiz_demas_grano_mas_15_porciento_embolsado": "252.0",
+       "maiz_maiz_pisingallo_granel_hasta_15_porciento_embolsado": NaN,
+       "maiz_maiz_pisingallo_mas_15_porciento_embolsado": NaN,
+       "maiz_flint_plata_granel_hasta_15_porciento_embolsado": "241.0",
+       "maiz_flint_plata_mas_15_porciento_embolsado": "261.0",
+       "trigo_granel_hasta_15_porciento_embolsado": "229.0",
+       "trigo_pan_mas_15_porciento_embolsado": "249.0",
+       "aceite_girasol_granel": "1080.0",
+       "malta_cervecera_malta_cebada_cervecera": "570.0",
+       "cebada_cervecera_granel_hasta_15_porciento_embolsado": "213.0",
+       "cebada_cervecera_mas_15_porciento_embolsado": "238.0",
+       "cacahuate_mani_confiteria_tostadero": NaN,
+       "cacahuate_mani_demas_granel_hasta_15_porciento_embolsado": NaN,
+       "cacahuate_mani_demas_mas_15_porciento_embolsado": NaN,
+       "cacahuate_mani_mani_partido": NaN,
+       "cebada_cervecera_detalle_granel_hasta_15_porciento_embol": "230.0",
+       "cebada_cervecera_granel_mas_15_porciento_embolsado": "255.0",
+       "arroz_no_parbolizado_cont_grano_quebrado_men_igual_10porc": NaN,
+       "arroz_puli_glas_no_parbo_cont_grano_quebrado_may_10porc": NaN,
+       "arroz_pulido_glasaseado_cont_gra_quebr_men_igual_10porc": NaN,
+       "arroz_pulido_glaseado_contenido_grano_quebrado_may_10porc": NaN,
+       "harina_trigo": "355.0",
+       "sorgo_granifero_demas_granel_hasta_15_porciento_embolsado": "205.0",
+       "sorgo_granifero_demas_mas_15_porciento_embolsado": "225.0",
+       "poro_blanc_alubias_ovales_envases_may_20_kg": NaN,
+       "poro_blanc_alubias_env_may_20_kg_dsd_191_hta_220_gr_c_100_gr": NaN,
+       "poro_blanc_alubias_env_may_20_kg_dsd_221_gr_cada_100_gr": NaN,
+       "poro_blanc_alubias_env_may_20_kg_hta_190_gr_cada_100_gr": NaN,
+       "poro_negros_envases_may_20_kg": NaN,
+       "tortas_expellers_pellets_harinas_girasol_tortas": "225.0",
+       "tortas_expellers_pellets_harinas_girasol_harinas_tortas": "221.0",
+       "tortas_expellers_pellets_harinas_girasol_pellets_integral": "165.0",
+       "tortas_expellers_pellets_harinas_girasol_pellets_extr": "223.0",
+       "semilla_girasol_unica_ind_demas_granel_hta_15_porc_embol": "445.0",
+       "semilla_girasol_unica_ind_demas_girasol_tipo_confiteria": "690.0",
+       "semilla_girasol_unica_ind_demas_mas_15_por_embolsado": "465.0",
+       "aceite_cacahuete_mani_granel": NaN,
+       "s_cardar_peinar_desmo_algo_grado_b": NaN,
+       "algo_s_cardar_peinar_desmo_grado_c": NaN,
+       "s_cardar_peinar_desmo_grado_c_1_2": NaN,
+       "s_cardar_peinar_desmo_grado_d_1_2_long_27_mm_1_1_16": NaN,
+       "s_cardar_peinar_desmo_grado_d_long_27_mm_1_1_16": NaN,
+       "s_cardar_peinar_desmotado_grado_long_26_mm_1_1_32": NaN,
+       "sin_cardar_peinar_desmotado_grado_f_long_26_mm_1_1_32": NaN,
+       "garbanzos_enteros": NaN,
+       "garbanzos_partidos": NaN,
+       "porotos_colorados_envases_mayores_20_kg": NaN,
+       "arvejas_enteras": NaN,
+       "arvejas_partidas": NaN,
+       "aceite_girasol_demas_refinado_granel": "1252.8",
+       "aceite_girasol_demas_refinado_tambores_mas_200_litros": "1600.0",
+       "arroz_descascarillado_arroz_cargo_arroz_pardo_demas_no_parbo": NaN
+      }
+     ]
+    },
+    "exportaciones-de-bienes-valores-y-cantidad-de-empresas-por-sector-de-actividad | Cantidad de empresas exportadoras en el": {
+     "url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/expo/empresas-expo/empresas_expo_privada_por_clae2.csv",
+     "rows": 14177,
+     "columns": [
+      "fecha",
+      "clae2",
+      "empresas"
+     ],
+     "tail": [
+      {
+       "fecha": "2023-11-01",
+       "clae2": "96",
+       "empresas": "5"
+      },
+      {
+       "fecha": "2023-11-01",
+       "clae2": "999",
+       "empresas": "-99"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "series": {
+  "ok": true,
+  "diag": {
+   "series": [
+    [
+     "bienes cobros oleaginosas cereales",
+     "125.1_CO_1993_0_20",
+     "Cereales y oleaginosas índice anual",
+     "R/P1Y",
+     "2014-01-01",
+     "Índice de Precios Internos Básicos al por Mayor. SERIE DISCO"
+    ],
+    [
+     "bienes cobros oleaginosas cereales",
+     "126.1_CO_1993_0_20",
+     "Cereales y oleaginosas índice anual IPIB",
+     "R/P1Y",
+     "2014-01-01",
+     "Índice de Precios Internos al por Mayor (IPIM). SERIE DISCON"
+    ],
+    [
+     "bienes cobros oleaginosas cereales",
+     "125.2_CO_1993_0_22",
+     "Cereales y oleaginosas índice mensual IPIB",
+     "R/P1M",
+     "2015-10-01",
+     "Índice de Precios Internos Básicos al por Mayor. SERIE DISCO"
+    ],
+    [
+     "bienes cobros oleaginosas cereales",
+     "184.1_BIENES_COBICO_0_M_28",
+     "Bienes Cobros Sector Público",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes sectorial - Balance Cambiario"
+    ],
+    [
+     "bienes cobros oleaginosas cereales",
+     "184.1_BIENES_COBRIZ_0_M_34",
+     "Bienes Cobros Industria Automotriz",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes sectorial - Balance Cambiario"
+    ],
+    [
+     "bienes cobros oleaginosas cereales",
+     "184.1_BIENES_COBLEO_0_M_22",
+     "Bienes Cobros Petróleo",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes sectorial - Balance Cambiario"
+    ],
+    [
+     "bienes cobros oleaginosas cereales",
+     "184.1_BIENES_COBGUA_0_M_18",
+     "Bienes Cobros Agua",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes sectorial - Balance Cambiario"
+    ],
+    [
+     "bienes cobros oleaginosas cereales",
+     "183.1_BIENES_COBNES_0_M_27",
+     "Bienes Cobros de exportaciones",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes por modalidad de pago - Balance Ca"
+    ],
+    [
+     "bienes cobros oleaginosas cereales",
+     "184.1_BIENES_COBNTO_0_M_29",
+     "Bienes Cobros Entretenimiento",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes sectorial - Balance Cambiario"
+    ],
+    [
+     "bienes cobros oleaginosas cereales",
+     "184.1_BIENES_COBNES_0_M_28",
+     "Bienes Cobros Comunicaciones",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes sectorial - Balance Cambiario"
+    ],
+    [
+     "bienes cobros oleaginosas cereales",
+     "184.1_BIENES_COBRIA_0_M_31",
+     "Bienes Cobros Turismo y Hotelería",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes sectorial - Balance Cambiario"
+    ],
+    [
+     "bienes cobros oleaginosas cereales",
+     "184.1_BIENES_COBRTE_0_M_24",
+     "Bienes Cobros Transporte",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes sectorial - Balance Cambiario"
+    ],
+    [
+     "bienes cobros oleaginosas cereales",
+     "184.1_BIENES_COBION_0_M_26",
+     "Bienes Cobros Construcción",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes sectorial - Balance Cambiario"
+    ],
+    [
+     "bienes cobros oleaginosas cereales",
+     "184.1_BIENES_COBRIA_0_M_21",
+     "Bienes Cobros Mineria",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes sectorial - Balance Cambiario"
+    ],
+    [
+     "bienes cobros oleaginosas cereales",
+     "184.1_BIENES_COBROS_0_M_21",
+     "Bienes Cobros Seguros",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes sectorial - Balance Cambiario"
+    ],
+    [
+     "cobros exportaciones agro",
+     "80.1_IIPNA_0_A_28",
+     "Índice de precio de exportaciones. Agro",
+     "R/P1Y",
+     "2025-01-01",
+     "Índices de valor, precio y cantidad de las exportaciones de "
+    ],
+    [
+     "cobros exportaciones agro",
+     "80.1_IICNA_0_A_30",
+     "Índice de cantidad de exportaciones. Agro",
+     "R/P1Y",
+     "2025-01-01",
+     "Índices de valor, precio y cantidad de las exportaciones de "
+    ],
+    [
+     "cobros exportaciones agro",
+     "183.1_BIENES_COBNES_0_M_27",
+     "Bienes Cobros de exportaciones",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes por modalidad de pago - Balance Ca"
+    ],
+    [
+     "cobros exportaciones agro",
+     "80.2_IIVENA_0_T_41",
+     "Índice de valor de exportaciones. Agro",
+     "R/P3M",
+     "2026-04-01",
+     "Índices de valor, precio y cantidad de las exportaciones de "
+    ],
+    [
+     "cobros exportaciones agro",
+     "80.2_IICENA_0_T_44",
+     "Índice de cantidad de exportaciones. Agro",
+     "R/P3M",
+     "2026-04-01",
+     "Índices de valor, precio y cantidad de las exportaciones de "
+    ],
+    [
+     "cobros exportaciones agro",
+     "80.2_IIPENA_0_T_42",
+     "Índice de precio de exportaciones. Agro",
+     "R/P3M",
+     "2026-04-01",
+     "Índices de valor, precio y cantidad de las exportaciones de "
+    ],
+    [
+     "cobros exportaciones agro",
+     "80.1_IIVNA_0_A_27",
+     "Índice de valor de exportaciones. Agro",
+     "R/P1Y",
+     "2025-01-01",
+     "Índices de valor, precio y cantidad de las exportaciones de "
+    ],
+    [
+     "cobros exportaciones agro",
+     "183.1_BIENES_COBNES_0_M_39",
+     "Bienes Cobros anticipados de exportaciones",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes por modalidad de pago - Balance Ca"
+    ],
+    [
+     "cobros exportaciones agro",
+     "184.1_BIENES_COBNES_0_M_35",
+     "Bienes Cobros totales de exportaciones",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes sectorial - Balance Cambiario"
+    ],
+    [
+     "cobros exportaciones agro",
+     "183.1_COBROS_EXPNES_0_M_27",
+     "Cobros de exportaciones de bienes",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes por modalidad de pago - Balance Ca"
+    ],
+    [
+     "cobros exportaciones agro",
+     "183.1_BIENES_COBNES_0_M_51",
+     "Bienes Cobros Financiamientos locales de exportaciones",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes por modalidad de pago - Balance Ca"
+    ],
+    [
+     "cobros exportaciones agro",
+     "183.1_BIENES_COBIOR_0_M_50",
+     "Bienes Cobros Prefinanciaciones de exportaciones del exterrior",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes por modalidad de pago - Balance Ca"
+    ],
+    [
+     "cobros exportaciones agro",
+     "182.1_C_CORRIENTNES_0_M_30",
+     "Cuenta Corriente Cambiaria Cobros de exportaciones de bienes",
+     "R/P1M",
+     "2026-08-01",
+     "Balance Cambiario"
+    ],
+    [
+     "cobros exportaciones agro",
+     "181.1_LALL_EXPO_GRO_0_A_52",
+     "Lall Exportaciones Manufacturas basadas en recursos naturales Basadas en el agro",
+     "R/P1Y",
+     "2016-01-01",
+     "Exportaciones e importaciones por Intensidad tecnológica"
+    ],
+    [
+     "cobros exportaciones agro",
+     "184.1_BIENES_COBICA_0_M_25",
+     "Bienes Cobros Informática",
+     "R/P1M",
+     "2026-08-01",
+     "Cobros y pagos por bienes sectorial - Balance Cambiario"
+    ],
+    [
+     "exportaciones productos primarios",
+     "80.2_IIVENPP_0_T_56",
+     "Índice de valor de exportaciones. Productos primarios",
+     "R/P3M",
+     "2026-04-01",
+     "Índices de valor, precio y cantidad de las exportaciones de "
+    ],
+    [
+     "exportaciones productos primarios",
+     "80.2_IIPENPP_0_T_57",
+     "Índice de precio de exportaciones. Productos primarios",
+     "R/P3M",
+     "2026-04-01",
+     "Índices de valor, precio y cantidad de las exportaciones de "
+    ],
+    [
+     "exportaciones productos primarios",
+     "80.2_IICENPP_0_T_59",
+     "Índice de cantidad de exportaciones. Productos primarios",
+     "R/P3M",
+     "2026-04-01",
+     "Índices de valor, precio y cantidad de las exportaciones de "
+    ],
+    [
+     "exportaciones productos primarios",
+     "80.1_IIPNPP_0_A_43",
+     "Índice de precio de exportaciones. Productos primarios",
+     "R/P1Y",
+     "2025-01-01",
+     "Índices de valor, precio y cantidad de las exportaciones de "
+    ],
+    [
+     "exportaciones productos primarios",
+     "80.1_IIVNPP_0_A_42",
+     "Índice de valor de exportaciones. Productos primarios",
+     "R/P1Y",
+     "2025-01-01",
+     "Índices de valor, precio y cantidad de las exportaciones de "
+    ],
+    [
+     "exportaciones productos primarios",
+     "80.1_IICNPP_0_A_45",
+     "Índice de cantidad de exportaciones. Productos primarios",
+     "R/P1Y",
+     "2025-01-01",
+     "Índices de valor, precio y cantidad de las exportaciones de "
+    ],
+    [
+     "exportaciones productos primarios",
+     "75.1_IETPP_0_A_43",
+     "Exportaciones totales de productos primarios. En millones de dólares FOB",
+     "R/P1Y",
+     "2025-01-01",
+     "Exportaciones FOB por rubro"
+    ],
+    [
+     "exportaciones productos primarios",
+     "75.2_IETPP_0_T_43",
+     "Exportaciones totales de productos primarios. En millones de dólares FOB",
+     "R/P3M",
+     "2026-04-01",
+     "Exportaciones FOB por rubro"
+    ],
+    [
+     "exportaciones productos primarios",
+     "74.3_IEPP_0_M_35",
+     "Exportaciones de productos primarios. En millones de dólares.",
+     "R/P1M",
+     "2026-08-01",
+     "Intercambio Comercial Argentino"
+    ],
+    [
+     "exportaciones productos primarios",
+     "74.1_IEPP_0_A_35",
+     "Exportaciones de productos primarios. En millones de dólares.",
+     "R/P1Y",
+     "2025-01-01",
+     "Intercambio Comercial Argentino"
+    ],
+    [
+     "exportaciones productos primarios",
+     "75.3_IETPP_0_M_43",
+     "Exportaciones totales de productos primarios. En millones de dólares FOB",
+     "R/P1M",
+     "2026-08-01",
+     "Exportaciones FOB por rubro"
+    ],
+    [
+     "exportaciones productos primarios",
+     "108.1_I1PNP_1993_A_39",
+     "IPP. Productos nacionales primarios. Base 1993. Anual",
+     "R/P1Y",
+     "2014-01-01",
+     "Índice de Precios Internos Básicos del Productor. SERIE DISC"
+    ],
+    [
+     "exportaciones productos primarios",
+     "108.3_I1PPVM_1993_M_46",
+     "IPP. Productos primarios. Variación % mensual. Base 1993",
+     "R/P1M",
+     "2015-10-01",
+     "Índice de Precios Internos Básicos del Productor. SERIE DISC"
+    ],
+    [
+     "exportaciones productos primarios",
+     "107.3_I1PNP_1993_M_40",
+     "IPIB. Productos nacionales primarios. Base 1993. Mensual",
+     "R/P1M",
+     "2015-10-01",
+     "Índice de Precios Internos Básicos al por Mayor. SERIE DISCO"
+    ],
+    [
+     "exportaciones productos primarios",
+     "106.1_I1PNP_1993_A_40",
+     "IPIM. Productos nacionales primarios. Base 1993. Anual",
+     "R/P1Y",
+     "2014-01-01",
+     "Índice de Precios Internos al por Mayor (IPIM). SERIE DISCON"
+    ],
+    [
+     "exportaciones manufacturas origen agropecuario",
+     "74.3_IEMOA_0_M_48",
+     "Exportaciones de manufacturas de origen agropecuario. En millone.s de dólares",
+     "R/P1M",
+     "2026-08-01",
+     "Intercambio Comercial Argentino"
+    ],
+    [
+     "exportaciones manufacturas origen agropecuario",
+     "74.2_IEMOA_0_T_48",
+     "Exportaciones de manufacturas de origen agropecuario. En millone.s de dólares",
+     "R/P3M",
+     "2026-04-01",
+     "Intercambio Comercial Argentino"
+    ],
+    [
+     "exportaciones manufacturas origen agropecuario",
+     "74.1_IEMOA_0_A_48",
+     "Exportaciones de manufacturas de origen agropecuario. En millone.s de dólares",
+     "R/P1Y",
+     "2025-01-01",
+     "Intercambio Comercial Argentino"
+    ],
+    [
+     "exportaciones manufacturas origen agropecuario",
+     "170.1_MFACTURRIO_0_0_32",
+     "Emisión de obligaciones negociables de manufacturas origen agropecuario",
+     "R/P1M",
+     "2022-06-01",
+     "Financiamiento privado en mercado de capitales"
+    ],
+    [
+     "exportaciones manufacturas origen agropecuario",
+     "75.1_IRM_0_A_13",
+     "Exportaciones resto de manufacturas de origen agropecuario. En millones de dólares FOB",
+     "R/P1Y",
+     "2025-01-01",
+     "Exportaciones FOB por rubro"
+    ],
+    [
+     "exportaciones manufacturas origen agropecuario",
+     "75.3_IRMOA_0_M_13",
+     "Exportaciones resto de manufacturas de origen agropecuario. En millones de dólares FOB",
+     "R/P1M",
+     "2026-08-01",
+     "Exportaciones FOB por rubro"
+    ],
+    [
+     "exportaciones manufacturas origen agropecuario",
+     "75.2_IRM_0_T_13",
+     "Exportaciones resto de manufacturas de origen agropecuario. En millones de dólares FOB",
+     "R/P3M",
+     "2026-04-01",
+     "Exportaciones FOB por rubro"
+    ],
+    [
+     "exportaciones manufacturas origen agropecuario",
+     "74.1_IEMOI_0_A_46",
+     "Exportaciones de manufacturas de origen industrial. En millones d.e dólares",
+     "R/P1Y",
+     "2025-01-01",
+     "Intercambio Comercial Argentino"
+    ],
+    [
+     "exportaciones manufacturas origen agropecuario",
+     "74.3_IEMOI_0_M_46",
+     "Exportaciones de manufacturas de origen industrial. En millones d.e dólares",
+     "R/P1M",
+     "2026-08-01",
+     "Intercambio Comercial Argentino"
+    ],
+    [
+     "exportaciones manufacturas origen agropecuario",
+     "74.2_IEMOI_0_T_46",
+     "Exportaciones de manufacturas de origen industrial. En millones d.e dólares",
+     "R/P3M",
+     "2026-04-01",
+     "Intercambio Comercial Argentino"
+    ],
+    [
+     "exportaciones manufacturas origen agropecuario",
+     "75.1_ITMOA_0_A_13",
+     "Exportaciones totales de manufacturas de origen industrial (MOA). En millones de dólares FOB",
+     "R/P1Y",
+     "2025-01-01",
+     "Exportaciones FOB por rubro"
+    ],
+    [
+     "exportaciones manufacturas origen agropecuario",
+     "75.3_ITMOA_0_M_13",
+     "Exportaciones totales de manufacturas de origen industrial (MOA). En millones de dólares FOB",
+     "R/P1M",
+     "2026-08-01",
+     "Exportaciones FOB por rubro"
+    ],
+    [
+     "exportaciones manufacturas origen agropecuario",
+     "75.1_ITM_0_A_13",
+     "Exportaciones totales de manufacturas de origen industrial. En millones de dólares FOB",
+     "R/P1Y",
+     "2025-01-01",
+     "Exportaciones FOB por rubro"
+    ],
+    [
+     "exportaciones manufacturas origen agropecuario",
+     "75.2_ITMOA_0_T_13",
+     "Exportaciones totales de manufacturas de origen industrial (MOA). En millones de dólares FOB",
+     "R/P3M",
+     "2026-04-01",
+     "Exportaciones FOB por rubro"
+    ],
+    [
+     "exportaciones manufacturas origen agropecuario",
+     "75.2_ITM_0_T_13",
+     "Exportaciones totales de manufacturas de origen industrial. En millones de dólares FOB",
+     "R/P3M",
+     "2026-04-01",
+     "Exportaciones FOB por rubro"
+    ],
+    [
+     "liquidacion divisas agroexportadoras",
+     "349.2_PROMEDIO_DIO__16",
+     "Monto liquidación de divisasa promedio diario",
+     "R/P1M",
+     "2026-09-01",
+     "Liquidación de divisas por Exportaciones de Oleaginosas y Ce"
+    ],
+    [
+     "liquidacion divisas agroexportadoras",
+     "349.2_ACUM_MENSUAL__13",
+     "Monto liquidación de divisasa acumulado mensual",
+     "R/P1M",
+     "2026-09-01",
+     "Liquidación de divisas por Exportaciones de Oleaginosas y Ce"
+    ],
+    [
+     "liquidacion divisas agroexportadoras",
+     "349.1_ACUM_MENSUAL__13",
+     "Monto liquidación de divisasa acumulado mensual",
+     "R/P1Y",
+     "2025-01-01",
+     "Liquidación de divisas por Exportaciones de Oleaginosas y Ce"
+    ],
+    [
+     "liquidacion divisas agroexportadoras",
+     "331.1_COMPRAS_NEROS__40",
+     "Compras netas de divisas: Al Sector Privado",
+     "R/P1M",
+     "2026-05-01",
+     "Factores de explicación de Base Monetaria"
+    ],
+    [
+     "liquidacion divisas agroexportadoras",
+     "331.2_COMPRAS_NETAL__45",
+     "Compras netas de divisas: Total",
+     "R/P1D",
+     "2026-06-12",
+     "Factores de explicación de Base Monetaria"
+    ],
+    [
+     "liquidacion divisas agroexportadoras",
+     "331.1_COMPRAS_NENAL__39",
+     "Compras netas de divisas: Al Tesoro Nacional",
+     "R/P1M",
+     "2026-05-01",
+     "Factores de explicación de Base Monetaria"
+    ],
+    [
+     "liquidacion divisas agroexportadoras",
+     "300.1_AP_ACT_RESSAS_0_M_29",
+     "Apertura activo. Apertura de reservas internacionales, divisas.",
+     "R/P1M",
+     "2025-10-01",
+     "Activos y pasivos del Banco Central de la Republica Argentin"
+    ],
+    [
+     "liquidacion divisas agroexportadoras",
+     "331.1_COMPRAS_NETAL__45",
+     "Compras netas de divisas: Total",
+     "R/P1M",
+     "2026-05-01",
+     "Factores de explicación de Base Monetaria"
+    ],
+    [
+     "liquidacion divisas agroexportadoras",
+     "300.1_AP_ACT_RESSAS_0_M_54",
+     "Apertura activo. Apertura de reservas internacionales. Colocaciones realizables en divisas .",
+     "R/P1M",
+     "2025-10-01",
+     "Activos y pasivos del Banco Central de la Republica Argentin"
+    ],
+    [
+     "liquidacion divisas agroexportadoras",
+     "331.2_COMPRAS_NEROS__40",
+     "Compras netas de divisas: Al Sector Privado",
+     "R/P1D",
+     "2026-06-12",
+     "Factores de explicación de Base Monetaria"
+    ],
+    [
+     "liquidacion divisas agroexportadoras",
+     "331.2_COMPRAS_NENAL__39",
+     "Compras netas de divisas: Al Tesoro Nacional",
+     "R/P1D",
+     "2026-06-12",
+     "Factores de explicación de Base Monetaria"
+    ],
+    [
+     "liquidacion divisas agroexportadoras",
+     "300.2_AP_ACT_RESSAS_0_A_29",
+     "Apertura activo. Apertura de reservas internacionales, divisas.",
+     "R/P1Y",
+     "2024-01-01",
+     "Activos y pasivos del Banco Central de la Republica Argentin"
+    ],
+    [
+     "liquidacion divisas agroexportadoras",
+     "9.2_GC_2004_T_11",
+     "Tipo de cambio nominal entre el peso y el dólar \"Contado con Liquidación\" (CCL Galicia)",
+     "R/P3M",
+     "2018-10-01",
+     "Producto Interno Bruto en dólares, Producto Interno Bruto pe"
+    ],
+    [
+     "liquidacion divisas agroexportadoras",
+     "9.1_CGAL_2004_A_11",
+     "Tipo de cambio nominal entre el peso y el dólar \"Contado con Liquidación\" (CCL Galicia)",
+     "R/P1Y",
+     "2018-01-01",
+     "Producto Interno Bruto en dólares, Producto Interno Bruto pe"
+    ],
+    [
+     "liquidacion divisas agroexportadoras",
+     "300.1_AP_ACT_RESIOR_0_M_51",
+     "Apertura activo. Apertura de reservas internacionales. Divisas Pase Pasivo en Dólares Estadounidense",
+     "R/P1M",
+     "2016-11-01",
+     "Activos y pasivos del Banco Central de la Republica Argentin"
+    ],
+    [
+     "faena bovina",
+     "41.2_FA_0_T_10",
+     "Faena Aves en Millones",
+     "R/P3M",
+     "2026-04-01",
+     "Indicadores de producción de la Industria manufacturera"
+    ],
+    [
+     "faena bovina",
+     "40.2_OC_0_T_14",
+     "Faena de cabezas ovinos, Anual",
+     "R/P3M",
+     "2026-04-01",
+     "Faena pecuaria"
+    ],
+    [
+     "faena bovina",
+     "41.2_FO_0_T_12",
+     "Faena Ovinos en Miles Cabezas",
+     "R/P3M",
+     "2026-04-01",
+     "Indicadores de producción de la Industria manufacturera"
+    ],
+    [
+     "faena bovina",
+     "40.1_OC_0_A_14",
+     "Faena de cabezas ovinos, Anual",
+     "R/P1Y",
+     "2025-01-01",
+     "Faena pecuaria"
+    ],
+    [
+     "faena bovina",
+     "40.1_PC_0_A_16",
+     "Faena de cabezas porcinas, Anual",
+     "R/P1Y",
+     "2025-01-01",
+     "Faena pecuaria"
+    ],
+    [
+     "faena bovina",
+     "AGRO_0221",
+     "Faena: Total en cabezas",
+     "R/P1M",
+     "2019-08-01",
+     "Ganadería - Indicadores bovinos mensuales"
+    ],
+    [
+     "faena bovina",
+     "41.3_FA_0_A_10",
+     "Faena Aves en Millones",
+     "R/P1M",
+     "2026-08-01",
+     "Indicadores de producción de la Industria manufacturera"
+    ],
+    [
+     "faena bovina",
+     "41.1_FA_0_M_10",
+     "Faena Aves en Millones",
+     "R/P1Y",
+     "2025-01-01",
+     "Indicadores de producción de la Industria manufacturera"
+    ],
+    [
+     "faena bovina",
+     "121.3_CB_0_0_12",
+     "Carne Bovina. Centavos de US$ por libra. Mensual",
+     "R/P1M",
+     "2017-06-01",
+     "Índices de precios internacionales de productos básicos"
+    ],
+    [
+     "faena bovina",
+     "121.2_CB_0_0_12",
+     "Carne Bovina. Centavos de US$ por libra. Trimestral",
+     "R/P3M",
+     "2017-04-01",
+     "Índices de precios internacionales de productos básicos"
+    ],
+    [
+     "faena bovina",
+     "121.1_CB_0_0_12",
+     "Carne Bovina. Centavos de US$ por libra. Anual",
+     "R/P1Y",
+     "2016-01-01",
+     "Índices de precios internacionales de productos básicos"
+    ],
+    [
+     "faena bovina",
+     "41.3_FO_0_A_12",
+     "Faena Ovinos en Miles Cabezas",
+     "R/P1M",
+     "2026-08-01",
+     "Indicadores de producción de la Industria manufacturera"
+    ],
+    [
+     "faena bovina",
+     "41.1_FP_0_M_14",
+     "Faena Porcinos en Miles Cabezas",
+     "R/P1Y",
+     "2025-01-01",
+     "Indicadores de producción de la Industria manufacturera"
+    ],
+    [
+     "faena bovina",
+     "40.2_PC_0_T_16",
+     "Faena de cabezas porcinas, Anual",
+     "R/P3M",
+     "2026-04-01",
+     "Faena pecuaria"
+    ],
+    [
+     "faena bovina",
+     "40.2_VC_0_T_15",
+     "Faena de cabezas vacunas, Anual",
+     "R/P3M",
+     "2026-04-01",
+     "Faena pecuaria"
+    ],
+    [
+     "precio novillo",
+     "AGRO_0227",
+     "Peso de novillo por kilo vivo",
+     "R/P1M",
+     "2019-08-01",
+     "Ganadería - Indicadores bovinos mensuales"
+    ],
+    [
+     "precio novillo",
+     "198.1_OTROSROS_2014_0_5",
+     "Nivel de precio otros",
+     "R/P1M",
+     "2026-07-01",
+     "Índice de Precios al Consumidor de la Provincia de Santa Fe."
+    ],
+    [
+     "precio novillo",
+     "399.1_PRECIO_INFIOR_M_PAQU_0_15_18",
+     "Precio inferior",
+     "R/P1M",
+     "2025-07-01",
+     "Precios de paquetes de cigarrillos vendidos equivalentes a v"
+    ],
+    [
+     "precio novillo",
+     "399.1_PRECIO_SUPIOR_M_PAQU_0_15_54",
+     "Precio superior",
+     "R/P1M",
+     "2025-07-01",
+     "Precios de paquetes de cigarrillos vendidos equivalentes a v"
+    ],
+    [
+     "precio novillo",
+     "198.1_TRANSPORTERTE_2014_0_10",
+     "Nivel de precio transporte",
+     "R/P1M",
+     "2026-07-01",
+     "Índice de Precios al Consumidor de la Provincia de Santa Fe."
+    ],
+    [
+     "precio novillo",
+     "198.1_EDUCACIONION_2014_0_9",
+     "Nivel de precio educacion",
+     "R/P1M",
+     "2026-07-01",
+     "Índice de Precios al Consumidor de la Provincia de Santa Fe."
+    ],
+    [
+     "precio novillo",
+     "198.1_SALUDLUD_2014_0_5",
+     "Nivel de precio salud",
+     "R/P1M",
+     "2026-07-01",
+     "Índice de Precios al Consumidor de la Provincia de Santa Fe."
+    ],
+    [
+     "precio novillo",
+     "198.1_ESPARCIMIENTO_2014_0_13",
+     "Nivel de precio esparcimiento",
+     "R/P1M",
+     "2026-07-01",
+     "Índice de Precios al Consumidor de la Provincia de Santa Fe."
+    ],
+    [
+     "precio novillo",
+     "198.1_INDUMENTARRIA_2014_0_12",
+     "Nivel de precio indumentaria",
+     "R/P1M",
+     "2026-07-01",
+     "Índice de Precios al Consumidor de la Provincia de Santa Fe."
+    ],
+    [
+     "precio novillo",
+     "198.1_VIVIENDANDA_2014_0_8",
+     "Nivel de precio vivienda",
+     "R/P1M",
+     "2026-07-01",
+     "Índice de Precios al Consumidor de la Provincia de Santa Fe."
+    ],
+    [
+     "precio novillo",
+     "81.2_IIPIBI_0_T_50",
+     "Índice de precio de importaciones. Bienes intermedios",
+     "R/P3M",
+     "2026-04-01",
+     "Índices de valor, precio y cantidad de las importaciones de "
+    ],
+    [
+     "precio novillo",
+     "198.1_NIVEL_GENERAL_2014_0_13",
+     "Nivel de precio nivel general",
+     "R/P1M",
+     "2026-07-01",
+     "Índice de Precios al Consumidor de la Provincia de Santa Fe."
+    ],
+    [
+     "precio novillo",
+     "AGRO_0010",
+     "Promedio del precio por kg.",
+     "R/P1M",
+     "2017-02-01",
+     "Lácteos - Precio promedio del litro de leche"
+    ],
+    [
+     "precio novillo",
+     "199.2_NIVEL_GENERAL_DICI_0_13_51",
+     "Nivel de precio nivel general",
+     "R/P1M",
+     "2026-01-01",
+     "Índice de Precios al Consumidor de la Provincia de Tucumán."
+    ],
+    [
+     "precio novillo",
+     "198.1_EQUIPAMIENGAR_2014_0_18",
+     "Nivel de precio equipamiento hogar",
+     "R/P1M",
+     "2026-07-01",
+     "Índice de Precios al Consumidor de la Provincia de Santa Fe."
+    ],
+    [
+     "produccion soja",
+     "AGRO_0039",
+     "Producción de pellets de soja.",
+     "R/P1M",
+     "2018-09-01",
+     "Soja - destino industrial"
+    ],
+    [
+     "produccion soja",
+     "AGRO_0038",
+     "Producción de expellers de soja.",
+     "R/P1M",
+     "2018-09-01",
+     "Soja - destino industrial"
+    ],
+    [
+     "produccion soja",
+     "AGRO_0037",
+     "Producción de aceite de soja.",
+     "R/P1M",
+     "2018-09-01",
+     "Soja - destino industrial"
+    ],
+    [
+     "produccion soja",
+     "AGRO_A_Soja_0003",
+     "Producción anual de soja en toneladas.",
+     "R/P1Y",
+     "2024-01-01",
+     "Soja - siembra, cosecha, producción, rendimiento"
+    ],
+    [
+     "produccion soja",
+     "AGRO_0098",
+     "Estimación de la producción  de soja en toneladas",
+     "R/P1Y",
+     "2017-01-01",
+     "Agricultura - Estimaciones agrícolas"
+    ],
+    [
+     "produccion soja",
+     "AGRO_A_Soja_0004",
+     "Rendimiento en kilogramos por hectárea de soja.",
+     "R/P1Y",
+     "2024-01-01",
+     "Soja - siembra, cosecha, producción, rendimiento"
+    ],
+    [
+     "produccion soja",
+     "AGRO_A_Soja_0001",
+     "Hectáreas sembradas de soja.",
+     "R/P1Y",
+     "2024-01-01",
+     "Soja - siembra, cosecha, producción, rendimiento"
+    ],
+    [
+     "produccion soja",
+     "34.2_STSOJ_0_P_16",
+     "Indicadores de evolución del sector agropecuario. Producción de soja en toneladas",
+     "R/P1Y",
+     "2025-01-01",
+     "Indicadores de evolución del sector agropecuario"
+    ],
+    [
+     "produccion soja",
+     "369.2_POROTO_SOJOJA__11",
+     "Embarques de Poroto de Soja",
+     "R/P3M",
+     "2024-01-01",
+     "Embarques de Oleaginosas y Cereales"
+    ],
+    [
+     "produccion soja",
+     "AGRO_A_Soja_0002",
+     "Hectáreas cosechadas de soja.",
+     "R/P1Y",
+     "2024-01-01",
+     "Soja - siembra, cosecha, producción, rendimiento"
+    ],
+    [
+     "produccion soja",
+     "121.2_HS_0_0_11",
+     "Harina de soja. US$ por tonelada. Trimestral",
+     "R/P3M",
+     "2017-04-01",
+     "Índices de precios internacionales de productos básicos"
+    ],
+    [
+     "produccion soja",
+     "121.3_PS_0_0_11",
+     "Poroto de soja. US$ por tonelada. Mensual",
+     "R/P1M",
+     "2017-06-01",
+     "Índices de precios internacionales de productos básicos"
+    ],
+    [
+     "produccion soja",
+     "121.1_AS_0_0_11",
+     "Aceite de soja. US$ por tonelada. Anual",
+     "R/P1Y",
+     "2016-01-01",
+     "Índices de precios internacionales de productos básicos"
+    ],
+    [
+     "produccion soja",
+     "121.2_AS_0_0_11",
+     "Aceite de soja. US$ por tonelada. Trimestral",
+     "R/P3M",
+     "2017-04-01",
+     "Índices de precios internacionales de productos básicos"
+    ],
+    [
+     "produccion soja",
+     "121.3_HS_0_0_11",
+     "Harina de soja. US$ por tonelada. Mensual",
+     "R/P1M",
+     "2017-06-01",
+     "Índices de precios internacionales de productos básicos"
+    ],
+    [
+     "exportaciones cereales",
+     "162.2_XREALESLES_0_0_10",
+     "Exportaciones. Cereales. Millones de USD. Trimestral.",
+     "R/P3M",
+     "2024-10-01",
+     "Exportaciones según el Nomenclador Común del Mercosur (NCM)"
+    ],
+    [
+     "exportaciones cereales",
+     "162.1_XREALESLES_0_0_10",
+     "Exportaciones. Cereales. Millones de USD. Anual.",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones según el Nomenclador Común del Mercosur (NCM)"
+    ],
+    [
+     "exportaciones cereales",
+     "75.1_IEC_0_A_26",
+     "Exportaciones de cereales. En millones de dólares FOB",
+     "R/P1Y",
+     "2025-01-01",
+     "Exportaciones FOB por rubro"
+    ],
+    [
+     "exportaciones cereales",
+     "75.2_IEC_0_T_26",
+     "Exportaciones de cereales. En millones de dólares FOB",
+     "R/P3M",
+     "2026-04-01",
+     "Exportaciones FOB por rubro"
+    ],
+    [
+     "exportaciones cereales",
+     "75.3_IEC_0_M_26",
+     "Exportaciones de cereales. En millones de dólares FOB",
+     "R/P1M",
+     "2026-08-01",
+     "Exportaciones FOB por rubro"
+    ],
+    [
+     "exportaciones cereales",
+     "192.1_CEREALES_6_60_0_0_11",
+     "PIB Subtotal Agrícola. Cereales",
+     "R/P3M",
+     "1980-10-01",
+     "PIB Subtotal Agrícola en millones de pesos de 1960"
+    ],
+    [
+     "exportaciones cereales",
+     "122.1_OC_1999_0_14",
+     "Otros cereales índice anual",
+     "R/P1Y",
+     "2007-01-01",
+     "Índice de Precios al Consumidor GBA (IPC-GBA), por principal"
+    ],
+    [
+     "exportaciones cereales",
+     "253.1_CALESLES_0_0_8",
+     "PIB Subtotal Agrícola. Cereales",
+     "R/P3M",
+     "1980-10-01",
+     "Cuentas Nacionales 1970-1980. Base 1970"
+    ],
+    [
+     "exportaciones cereales",
+     "226.1_PAGRIC_LES_1970_0_18",
+     "PIB Agrícola. Cereales",
+     "R/P3M",
+     "1990-10-01",
+     "Producto Interno Bruto Sectorial 1980-1990"
+    ],
+    [
+     "exportaciones cereales",
+     "176.1_CALES_DDOS_1988_0_18",
+     "Cereales Y Derivados",
+     "R/P1M",
+     "2000-10-01",
+     "Índice de Precios al Consumidor GBA - Base 1988. SERIE DISCO"
+    ],
+    [
+     "exportaciones cereales",
+     "162.2_XEPARACCHE_0_0_50",
+     "Exportaciones. Preparaciones a base de almidón, cereales, harina. Millones de USD. Trimestral.",
+     "R/P3M",
+     "2024-10-01",
+     "Exportaciones según el Nomenclador Común del Mercosur (NCM)"
+    ],
+    [
+     "exportaciones cereales",
+     "122.2_OC_1999_0_14",
+     "Otros cereales índice mensual",
+     "R/P1M",
+     "2008-04-01",
+     "Índice de Precios al Consumidor GBA (IPC-GBA), por principal"
+    ],
+    [
+     "exportaciones cereales",
+     "162.3_XEPARACCHE_0_0_50",
+     "Exportaciones. Preparaciones a base de almidón, cereales, harina. Millones de USD. Mensual.",
+     "R/P1M",
+     "2025-02-01",
+     "Exportaciones según el Nomenclador Común del Mercosur (NCM)"
+    ],
+    [
+     "exportaciones cereales",
+     "162.1_XEPARACRIA_0_0_56",
+     "Exportaciones. Preparaciones a base de almidón, cereales, harina. Millones de USD. Anual.",
+     "R/P1Y",
+     "2024-01-01",
+     "Exportaciones según el Nomenclador Común del Mercosur (NCM)"
+    ],
+    [
+     "exportaciones cereales",
+     "349.2_PROMEDIO_DIO__16",
+     "Monto liquidación de divisasa promedio diario",
+     "R/P1M",
+     "2026-09-01",
+     "Liquidación de divisas por Exportaciones de Oleaginosas y Ce"
+    ]
+   ]
+  }
+ }
+}
