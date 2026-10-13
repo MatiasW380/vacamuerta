@@ -48,10 +48,11 @@
 <body>
 <div class="wrap">
   <header class="top">
-    <a class="mark" href="/">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Argentina Invest Monitor
-    </a>
+    <div class="brand">
+      <a class="mark" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Argentina Invest Monitor</span></a>
+      <a class="by" href="/estudio/">by <strong>Onassis &amp; Baronetto</strong> Lawyers</a>
+    </div>
+    <a class="top-legal" href="/estudio/" data-i18n="fLegalH">Legal services</a>
     <div class="lang" role="group" aria-label="Language / Idioma">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" data-lang="es" aria-pressed="false">ES</button>
@@ -66,6 +67,15 @@
       <p class="lede" data-i18n="lede">Production, prices, permits and regulations from official sources, cleaned, cross-checked and shown in maps and charts. Updated automatically, sector by sector.</p>
       <ul class="pulse" id="pulse"></ul>
     </section>
+
+    <aside class="legal-cta legal-top" aria-labelledby="legalTitle">
+      <div>
+        <span class="kicker" data-i18n="legalKicker">Legal services</span>
+        <h2 id="legalTitle" data-i18n="legalTitle">Investing in Argentina? Legal counsel for companies and investors.</h2>
+        <p data-i18n="legalText">Onassis &amp; Baronetto advises companies and investors on setting up and running their business in Argentina: corporate structure, contracts, RIGI applications and the regulation of each sector.</p>
+      </div>
+      <a class="btn" href="/estudio/" data-i18n="legalBtn">Meet the firm</a>
+    </aside>
 
     <section class="section" aria-labelledby="sectorsTitle">
       <h2 id="sectorsTitle" data-i18n="sectorsTitle">Sectors</h2>
@@ -85,15 +95,6 @@
         <ul class="feed news" id="newsList"></ul>
       </div>
     </section>
-
-    <aside class="legal-cta" aria-labelledby="legalTitle">
-      <div>
-        <span class="kicker" data-i18n="legalKicker">Legal services</span>
-        <h2 id="legalTitle" data-i18n="legalTitle">Investing in Argentina? Legal counsel for companies and investors.</h2>
-        <p data-i18n="legalText">Onassis &amp; Baronetto advises companies and investors on setting up and running their business in Argentina: corporate structure, contracts, RIGI applications and the regulation of each sector.</p>
-      </div>
-      <a class="btn" href="/estudio/" data-i18n="legalBtn">Meet the firm</a>
-    </aside>
 
     <section class="signup" aria-labelledby="signupTitle">
       <div>
