@@ -12478,11 +12478,11 @@
    "balance": 1630.8
   }
  },
- "generated_at": "2026-10-13T13:26Z",
+ "generated_at": "2026-10-13T13:36Z",
  "status": {
   "fracking": {
    "ok": true,
-   "at": "2026-10-13T13:23Z",
+   "at": "2026-10-13T13:33Z",
    "diag": {
     "resources": [
      "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
@@ -12543,19 +12543,19 @@
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-13T13:25Z",
+   "at": "2026-10-13T13:34Z",
    "diag": {
     "pages": 1
    }
   },
   "oil_price": {
    "ok": true,
-   "at": "2026-10-13T13:25Z",
+   "at": "2026-10-13T13:34Z",
    "diag": {}
   },
   "regulations": {
    "ok": true,
-   "at": "2026-10-13T13:25Z",
+   "at": "2026-10-13T13:35Z",
    "diag": {
     "pages": 6,
     "page_errors": 0,
@@ -12567,7 +12567,7 @@
   },
   "news": {
    "ok": true,
-   "at": "2026-10-13T13:25Z",
+   "at": "2026-10-13T13:35Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
@@ -12578,7 +12578,7 @@
   },
   "reserves": {
    "ok": true,
-   "at": "2026-10-13T13:25Z",
+   "at": "2026-10-13T13:35Z",
    "diag": {
     "package": "http://datos.energia.gob.ar reservas-de-petroleo-y-gas",
     "zip_files": [
@@ -12785,7 +12785,7 @@
   },
   "export_price": {
    "ok": true,
-   "at": "2026-10-13T13:26Z",
+   "at": "2026-10-13T13:36Z",
    "diag": {
     "package": "https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo",
     "resources": [
@@ -12939,9 +12939,156 @@
         ""
        ]
       ]
+     },
+     {
+      "base": "https://datos.gob.ar",
+      "name": "precio-de-exportacion-de-petroleo-crudo",
+      "title": "Precio de exportación de petróleo crudo",
+      "modified": "2026-08-03",
+      "resources": [
+       [
+        "Precio de exportación de petróleo crudo",
+        "2019-07-16"
+       ]
+      ]
+     },
+     {
+      "base": "https://datos.gob.ar",
+      "name": "precio-internacional-pi-del-petroleo-crudo",
+      "title": "Precio Internacional (PI)  del petróleo crudo",
+      "modified": "2026-10-02",
+      "resources": [
+       [
+        "Precio Internacional (PI) del petróleo crudo  (Decreto 488/2020)",
+        "2020-11-03"
+       ],
+       [
+        "Precio Internacional (PI) del petróleo crudo (Res. MEyFP 1077/2014)",
+        "2020-11-03"
+       ]
+      ]
+     },
+     {
+      "base": "https://datos.gob.ar",
+      "name": "regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
+      "title": "Regalías de Petróleo Crudo, Gas Natural, GLP, Gasolina y de Condensado",
+      "modified": "2026-10-07",
+      "resources": [
+       [
+        "Regalías de Petróleo Crudo ",
+        "2026-10-06"
+       ],
+       [
+        "Regalías de Gas Natural",
+        "2026-10-06"
+       ],
+       [
+        "Regalías de GLP ",
+        "2026-10-06"
+       ],
+       [
+        "Regalías de Gasolina y Condensado",
+        "2026-10-06"
+       ]
+      ]
+     },
+     {
+      "base": "https://datos.gob.ar",
+      "name": "precios-de-escalante",
+      "title": "Precios de Venta al Mercado Interno de Petróleo Escalante",
+      "modified": "2026-08-03",
+      "resources": [
+       [
+        "Precios de Venta al Mercado Interno de petróleo escalante",
+        "2019-06-06"
+       ]
+      ]
+     },
+     {
+      "base": "https://datos.gob.ar",
+      "name": "refinacion-y-comercializacion-de-petroleo-gas-y-derivados-tablas-dinamicas",
+      "title": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "modified": "2026-10-05",
+      "resources": [
+       [
+        "TD Ventas a empresas del sector, Compras, Comercio exterior",
+        "2021-09-29"
+       ],
+       [
+        "TD Consumo propio, existencias y otras operaciones",
+        "2021-09-29"
+       ],
+       [
+        "TD Comercio exterior",
+        "2021-09-29"
+       ],
+       [
+        "TD Productos procesados y Subproductos obtenidos",
+        "2021-09-29"
+       ],
+       [
+        "TD Ventas (Excluye ventas al sector)",
+        "2021-09-29"
+       ],
+       [
+        "TD Ventas a empresas del sector, Compras, Comercio exterior 2010-2019",
+        "2023-09-18"
+       ]
+      ]
+     },
+     {
+      "base": "https://datos.gob.ar",
+      "name": "elaboracion-de-combustibles",
+      "title": "Elaboración de combustibles",
+      "modified": "2026-08-03",
+      "resources": [
+       [
+        "Procesamiento de Petróleo Crudo y Otras Cargas",
+        "2018-03-22"
+       ],
+       [
+        "Subproductos procesados por refineria ant. 2009",
+        "2018-03-22"
+       ],
+       [
+        "Petróleo procesado por refineria anterior al 2009",
+        "2018-03-22"
+       ]
+      ]
+     },
+     {
+      "base": "https://datos.gob.ar",
+      "name": "anuarios-de-combustibles-1950-1999",
+      "title": "Anuarios de Combustibles 1950-1999 - Discontinuado",
+      "modified": "2026-08-03",
+      "resources": [
+       [
+        "Anuario de Combustibles 1970-1975",
+        ""
+       ],
+       [
+        "Anuario de Combustibles 1966-1970",
+        ""
+       ],
+       [
+        "Anuario de Combustibles 1960-1965",
+        ""
+       ],
+       [
+        "Anuario de Combustibles 1950-1959",
+        ""
+       ],
+       [
+        "Anuario de Combustibles 1960",
+        ""
+       ],
+       [
+        "Anuario de Combustibles 1961",
+        ""
+       ]
+      ]
      }
     ],
-    "alternatives_error": "502 Server Error: Bad Gateway for url: https://datos.gob.ar/api/3/action/package_search?q=precio+petroleo+crudo&rows=15",
     "series": [
      "brent|Ice Brent",
      "fob|Escalante",
@@ -12969,7 +13116,7 @@
   },
   "fuel_prices": {
    "ok": true,
-   "at": "2026-10-13T13:26Z",
+   "at": "2026-10-13T13:36Z",
    "diag": {
     "package": "http://datos.energia.gob.ar precios-en-surtidor",
     "resources": [
@@ -13012,7 +13159,7 @@
   },
   "rigi_portal": {
    "ok": true,
-   "at": "2026-10-13T13:26Z",
+   "at": "2026-10-13T13:36Z",
    "diag": {
     "html_len": 76399,
     "context": "-thin\">&nbsp;</span><span class=\"fw-semibold fs-1\">M</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Empleos <span class=\"fw-medium br-sm br-xs\">(directos e indirectos)</span></dt><dd class=\"fs-1 fw-bold text-arg-verdin js-total-puestos-trabajo\">0</dd></div></dl></div><div class=\"col-md-12 m-y-2\"><h3 class=\"h4 font-sans-serif p-b-1 border-bottom\">Sectores</h3><dl class=\"dl-proyectos-sector\"><div class=\"d-grid\"><dt class=\"last\">Energía eléctrica</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-torre-electrica m-r-05\"></i> <span class=\"m-t-1 js-total-energia-electrica\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Petróleo y gas</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-petroleo-y-gas m-r-05\"></i> <span class=\"m-t-1 js-total-petroleo-y-gas\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Minería</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-mineria m-r-05\"></i> <span class=\"m-t-1 js-total-mineria\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Siderurgia</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-siderurgia m-r-05\"></i> <span class=\"m-t-1 js-total-siderurgia\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Infraestructura</dt><",
@@ -13067,7 +13214,7 @@
   },
   "royalties": {
    "ok": true,
-   "at": "2026-10-13T13:26Z",
+   "at": "2026-10-13T13:36Z",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
@@ -13477,7 +13624,7 @@
   },
   "royalties_gas": {
    "ok": true,
-   "at": "2026-10-13T13:26Z",
+   "at": "2026-10-13T13:36Z",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
@@ -13983,7 +14130,7 @@
   },
   "trade_balance": {
    "ok": true,
-   "at": "2026-10-13T13:26Z",
+   "at": "2026-10-13T13:36Z",
    "diag": {
     "tried": {
      "74.2_IECE_0_T_35": [
