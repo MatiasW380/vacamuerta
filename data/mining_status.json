@@ -1,9 +1,1300 @@
 {
  "catalog": {
-  "ok": false,
-  "error": "HTTPError: 502 Server Error: Bad Gateway for url: https://datos.gob.ar/api/3/action/package_search?q=siacam&rows=60",
-  "diag": {},
-  "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_mining.py\", line 179, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_mining.py\", line 66, in catalogo\n    res = get(f\"{CKAN}/package_search\", params={\"q\": q, \"rows\": 60}).json()[\"result\"][\"results\"]\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_mining.py\", line 41, in get\n    r.raise_for_status()\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/models.py\", line 1167, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://datos.gob.ar/api/3/action/package_search?q=siacam&rows=60\n"
+  "ok": true,
+  "diag": {
+   "search_errors": [],
+   "datasets": [
+    {
+     "name": "mineria-comparada-siacam",
+     "title": "Minería Comparada (SIACAM)",
+     "org": "Secretaría de Minería",
+     "modified": "2026-10-11",
+     "resources": [
+      {
+       "name": "Tasa de pobreza en los trabajadores por rama (en %), promedio 2016-2021",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/MineriaComparada/MineriaComparadaPobreza.csv",
+       "modified": "2022-12-07"
+      },
+      {
+       "name": "Categorías ocupacionales por rama (en %), promedio 2016-2021",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/MineriaComparada/MineriaComparaCategoriasOcupacionales.csv",
+       "modified": "2022-12-07"
+      },
+      {
+       "name": "Calificación del puesto de trabajo por rama (en %), promedio 2016-2021",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/MineriaComparada/MineriaComparadaCalificaciones.csv",
+       "modified": "2022-12-07"
+      },
+      {
+       "name": "Lugar de nacimiento de los ocupados según rama, promedio 2016-2021",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/MineriaComparada/MineriaComparadaLugarDeNacimiento.csv",
+       "modified": "2022-12-07"
+      },
+      {
+       "name": "Horas trabajadas semanalmente por sector de la economía",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/MineriaComparada/MineriaComparadaHorasTrabajadas.csv",
+       "modified": "2022-12-07"
+      },
+      {
+       "name": "Nivel educativo de ocupados por rama de la economía, promedio 2016-2021",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/MineriaComparada/MineriaComparadaNivelEducativo.csv",
+       "modified": "2022-12-07"
+      },
+      {
+       "name": "Composición etaria de los ocupados por rama, promedio 2016-2021",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/MineriaComparada/MineriaComparadaComposicionEtaria.csv",
+       "modified": "2022-12-07"
+      },
+      {
+       "name": "Tamaño del hogar por rama de la economía, promedio 2016-2021",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/MineriaComparada/MineriaComparadaTamanioHogares.csv",
+       "modified": "2022-12-07"
+      },
+      {
+       "name": "Estado civil de los ocupados por rama, promedio 2016-2021",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/MineriaComparada/MineriaComparadaEstadoCivil.csv",
+       "modified": "2022-12-07"
+      }
+     ]
+    },
+    {
+     "name": "balance-cambiario-del-siacam",
+     "title": "Balance Cambiario del SIACAM",
+     "org": "Secretaría de Minería",
+     "modified": "2026-10-13",
+     "resources": [
+      {
+       "name": "Balance cambiario del SIACAM",
+       "format": "xlsx",
+       "url": "https://www.mecon.gob.ar/dataset/Balance_cambiario_argentina.xlsx",
+       "modified": "2026-06-18"
+      },
+      {
+       "name": "Metodología del Balance Cambiario del SIACAM",
+       "format": "pdf",
+       "url": "https://www.mecon.gob.ar/dataset/Metodologia-balance-cambiario.pdf",
+       "modified": "2026-06-18"
+      }
+     ]
+    },
+    {
+     "name": "cantidad-de-empresas-mineras-siacam",
+     "title": "Cantidad de empresas mineras (SIACAM)",
+     "org": "Secretaría de Minería",
+     "modified": "2026-10-13",
+     "resources": [
+      {
+       "name": "Cantidad de empresas mineras en Argentina",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/empresas_cantidad_mineras.csv",
+       "modified": "2026-06-09"
+      },
+      {
+       "name": "Metodología para la medición del empleo y empresas del SIACAM",
+       "format": "pdf",
+       "url": "https://www.mecon.gob.ar/dataset/Metodologia-Empleo.pdf",
+       "modified": "2026-06-09"
+      }
+     ]
+    },
+    {
+     "name": "empleo-del-sector-minero-siacam",
+     "title": "Empleo del Sector Minero (SIACAM)",
+     "org": "Secretaría de Minería",
+     "modified": "2026-10-13",
+     "resources": [
+      {
+       "name": "Cantidad de trabajadores del sector minero, por rubro y género",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Empleo-rubro-genero-prov.csv",
+       "modified": "2026-06-09"
+      },
+      {
+       "name": "Metodología para la medición del empleo y empresas del SIACAM",
+       "format": "pdf",
+       "url": "https://www.mecon.gob.ar/dataset/Metodologia-Empleo.pdf",
+       "modified": "2026-06-09"
+      },
+      {
+       "name": "Empleo minero por rubro de la actividad",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Empleo-rubro-prov.csv",
+       "modified": "2026-06-09"
+      }
+     ]
+    },
+    {
+     "name": "exportaciones-argentinas-de-litio-siacam",
+     "title": "Exportaciones argentinas de litio (SIACAM)",
+     "org": "Secretaría de Minería",
+     "modified": "2026-10-13",
+     "resources": [
+      {
+       "name": "Exportaciones argentinas de litio",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Tablero-Litio/Exportaciones-litio.csv",
+       "modified": "2026-06-05"
+      },
+      {
+       "name": "Exportaciones argentinas de litio por destino",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Tablero-Litio/Exportaciones-por-destino-litio.csv",
+       "modified": "2026-06-05"
+      }
+     ]
+    },
+    {
+     "name": "indicadores-de-sustentabilidad-del-siacam",
+     "title": "Indicadores de sustentabilidad del SIACAM",
+     "org": "Secretaría de Minería",
+     "modified": "2026-09-07",
+     "resources": [
+      {
+       "name": "Consumo anual de energía de proyectos mineros",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Sustentabilidad/SustentabilidadEnergia.csv",
+       "modified": "2022-12-07"
+      },
+      {
+       "name": "Emisiones anuales de Gases de Efecto Invernadero (GEI) de proyectos mineros",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Sustentabilidad/SustentabilidadEmisiones.csv",
+       "modified": "2022-12-07"
+      },
+      {
+       "name": "Consumo anual de agua de proyectos mineros",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Sustentabilidad/SustentabilidadAgua.csv",
+       "modified": "2022-12-07"
+      },
+      {
+       "name": "Otros indicadores de sustentabilidad de proyectos mineros",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Sustentabilidad/SustentabilidadOtrosIndicadores.csv",
+       "modified": "2022-12-07"
+      }
+     ]
+    },
+    {
+     "name": "tablero-global-del-cobre-siacam",
+     "title": "Tablero global del cobre (SIACAM)",
+     "org": "Secretaría de Minería",
+     "modified": "2026-08-11",
+     "resources": [
+      {
+       "name": "Demanda y balance del mercado de cobre",
+       "format": "xlsx",
+       "url": "https://www.mecon.gob.ar/dataset/tablero-global-cobre/tablero-cobre-demanda-balance.xlsx",
+       "modified": "2026-07-25"
+      },
+      {
+       "name": "Oferta del cobre por tipo",
+       "format": "xlsx",
+       "url": "https://www.mecon.gob.ar/dataset/tablero-global-cobre/tablero-cobre-oferta-tipo.xlsx",
+       "modified": "2026-07-25"
+      },
+      {
+       "name": "Producción de cobre de los principales proyectos a nivel mundial",
+       "format": "xlsx",
+       "url": "https://www.mecon.gob.ar/dataset/tablero-global-cobre/tablero-cobre-produccion-principales-proyectos.xlsx",
+       "modified": "2026-07-25"
+      },
+      {
+       "name": "Reservas de cobre totales de los principales países productores a nivel mundial",
+       "format": "xlsx",
+       "url": "https://www.mecon.gob.ar/dataset/tablero-global-cobre/tablero-cobre-reservas-pais.xlsx",
+       "modified": "2026-07-25"
+      }
+     ]
+    },
+    {
+     "name": "compras-realizadas-por-empresas-mineras-siacam",
+     "title": "Compras Realizadas por Empresas Mineras (SIACAM)",
+     "org": "Secretaría de Minería",
+     "modified": "2026-10-11",
+     "resources": [
+      {
+       "name": "Compras por rama vendedora agrupada, 2019",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Proveedores/Compras-por-rama-vendedora-agrupada.csv",
+       "modified": "2022-12-07"
+      },
+      {
+       "name": "Compras por rama minera compradora, 2019",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Proveedores/Compras-por-rama-minera-compradora.csv",
+       "modified": "2022-12-07"
+      }
+     ]
+    },
+    {
+     "name": "comercio-de-minerales-de-argentina-siacam",
+     "title": "Comercio de Minerales de Argentina (SIACAM)",
+     "org": "Secretaría de Minería",
+     "modified": "2026-10-13",
+     "resources": [
+      {
+       "name": "Metodología del comercio exterior de minerales del SIACAM",
+       "format": "pdf",
+       "url": "https://www.mecon.gob.ar/dataset/Comercio/Metodologia-comercio-minerales.pdf",
+       "modified": "2026-06-05"
+      },
+      {
+       "name": "Importaciones de minerales de Argentina",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Comercio/impominerales-siacam.csv",
+       "modified": "2026-06-05"
+      },
+      {
+       "name": "Exportaciones de minerales de Argentina",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Comercio/expominerales-siacam.csv",
+       "modified": "2026-06-05"
+      },
+      {
+       "name": "Exportaciones mineras de Argentina por sector",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Comercio/expo-mineria-por-sector.csv",
+       "modified": "2026-06-05"
+      },
+      {
+       "name": "Exportaciones mineras de Argentina por provincia",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Comercio/expo-mineria-por-provincia.csv",
+       "modified": "2026-06-05"
+      },
+      {
+       "name": "Principales productos mineros exportados de Argentina",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Comercio/principales-productos-mineros-exportados.csv",
+       "modified": "2026-06-05"
+      },
+      {
+       "name": "Balanza comercial minera de Argentina",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Comercio/balanza-comercial-mineria.csv",
+       "modified": "2026-06-05"
+      },
+      {
+       "name": "Importaciones mineras de Argentina por sector",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Comercio/impo-mineria-por-sector.csv",
+       "modified": "2026-06-05"
+      },
+      {
+       "name": "Participación por sector en las importaciones mineras totales",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Comercio/impo-mineras-participacion.csv",
+       "modified": "2026-06-05"
+      }
+     ]
+    },
+    {
+     "name": "precios-internacionales-de-minerales-del-siacam",
+     "title": "Precios Internacionales de Minerales del SIACAM",
+     "org": "Secretaría de Minería",
+     "modified": "2026-10-13",
+     "resources": [
+      {
+       "name": "Precios Internacionales de Minerales",
+       "format": "xlsx",
+       "url": "https://www.mecon.gob.ar/dataset/precios-internacionales-minerales.xlsx",
+       "modified": "2026-06-04"
+      }
+     ]
+    },
+    {
+     "name": "empleos-generados-en-proyectos-de-litio-siacam",
+     "title": "Empleos generados en proyectos de litio (SIACAM)",
+     "org": "Secretaría de Minería",
+     "modified": "2026-09-30",
+     "resources": [
+      {
+       "name": "Empleos generados en proyectos de litio, por provincia y género",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Tablero-Litio/Empleo-litio.csv",
+       "modified": "2026-06-09"
+      }
+     ]
+    },
+    {
+     "name": "cartera-de-proyectos-mineros-en-argentina-del-siacam",
+     "title": "Cartera de Proyectos Mineros en Argentina del SIACAM",
+     "org": "Secretaría de Minería",
+     "modified": "2026-10-13",
+     "resources": [
+      {
+       "name": "Proyectos mineros metalíferos y de litio en Argentina",
+       "format": "xlsx",
+       "url": "https://www.mecon.gob.ar/dataset/Cartera-de-Proyectos-Mineros-Metaliferos-y-Litio-del-SIACAM.xlsx",
+       "modified": "2026-06-24"
+      },
+      {
+       "name": "Proyectos mineros no metalíferos y rocas de aplicación",
+       "format": "xlsx",
+       "url": "https://www.mecon.gob.ar/dataset/Cartera-de-Proyectos-Mineros-No-Metaliferos-y-Roca-de-Aplicacion-del-SIACAM.xlsx",
+       "modified": "2026-06-24"
+      }
+     ]
+    },
+    {
+     "name": "produccion-mundial-de-litio-tablero-global-del-litio-siacam",
+     "title": "Producción mundial de litio (Tablero global del litio - SIACAM)",
+     "org": "Secretaría de Minería",
+     "modified": "2026-10-11",
+     "resources": [
+      {
+       "name": "Producción mundial de litio por país",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Tablero-Litio/Produccion-mundial-litio.csv",
+       "modified": "2025-09-02"
+      }
+     ]
+    },
+    {
+     "name": "pago-de-impuestos-nacionales-de-grandes-empresas-mineras-siacam",
+     "title": "Pago de Impuestos Nacionales de Grandes Empresas Mineras (SIACAM)",
+     "org": "Secretaría de Minería",
+     "modified": "2026-10-11",
+     "resources": [
+      {
+       "name": "Pago de impuestos de las grandes empresas nacionales, 2019-2023 (en millones de pesos)",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Impuestos/Impuestos-ImpuestosPesos.csv",
+       "modified": "2025-04-11"
+      },
+      {
+       "name": "Pago de impuestos de grandes empresas nacionales, 2019-2023 (en millones de dólares)",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Impuestos/Impuestos-ImpuestosDolares.csv",
+       "modified": "2025-04-11"
+      }
+     ]
+    },
+    {
+     "name": "demanda-mundial-de-litio-tablero-global-del-litio-siacam",
+     "title": "Demanda mundial de litio (Tablero global del litio - SIACAM)",
+     "org": "Secretaría de Minería",
+     "modified": "2026-10-11",
+     "resources": [
+      {
+       "name": "Demanda mundial de litio en vehículos eléctricos de pasajeros por jurisdicción.",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Tablero-Litio/Demanda-litio-jurisdiccion.csv",
+       "modified": "2025-09-02"
+      },
+      {
+       "name": "Demanda mundial de litio",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Tablero-Litio/Demanda-mundial-litio-por-tipo.csv",
+       "modified": "2025-09-02"
+      },
+      {
+       "name": "Demanda de litio por uso final",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Tablero-Litio/Demanda-litio-uso-final.csv",
+       "modified": "2025-09-02"
+      }
+     ]
+    },
+    {
+     "name": "recursos-y-reservas-de-litio-tablero-global-del-litio-siacam",
+     "title": "Recursos y reservas de litio (Tablero global del litio - SIACAM)",
+     "org": "Secretaría de Minería",
+     "modified": "2026-10-11",
+     "resources": [
+      {
+       "name": "Recursos y reservas mundiales de litio",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Tablero-Litio/Recursos-reservas.csv",
+       "modified": "2025-09-02"
+      }
+     ]
+    },
+    {
+     "name": "proyectos-de-litio-en-el-mundo-tablero-global-del-litio-siacam",
+     "title": "Proyectos de litio en el mundo (Tablero global del litio - SIACAM)",
+     "org": "Secretaría de Minería",
+     "modified": "2026-10-11",
+     "resources": [
+      {
+       "name": "Proyectos en producción de litio en el mundo (2024)",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Tablero-Litio/Proyectos-de-litio-en-el-mundo.csv",
+       "modified": "2025-09-02"
+      }
+     ]
+    },
+    {
+     "name": "anuncios-de-inversion-en-el-sector-minero-de-argentina-del-siacam",
+     "title": "Anuncios de Inversión en el Sector Minero de Argentina del SIACAM",
+     "org": "Secretaría de Minería",
+     "modified": "2026-09-30",
+     "resources": [
+      {
+       "name": "Anuncios de Inversión en el Sector Minero",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Anuncios-de-inversion.csv",
+       "modified": "2025-11-11"
+      }
+     ]
+    },
+    {
+     "name": "produccion-minera-de-argentina-y-participacion-en-el-total-de-la-economia-siacam",
+     "title": "Producción minera de Argentina y participación en el total de la economía (SIACAM)",
+     "org": "Secretaría de Minería",
+     "modified": "2026-10-13",
+     "resources": [
+      {
+       "name": "Producción minera en el Sistema de Cuentas Nacionales",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/VBP-VAP-Mineria.csv",
+       "modified": "2026-04-08"
+      }
+     ]
+    },
+    {
+     "name": "proyeccion-de-la-demanda-y-oferta-global-de-litio-tablero-global-del-litio-siacam",
+     "title": "Proyección de la demanda y oferta global de litio (Tablero global del litio - SIACAM)",
+     "org": "Secretaría de Minería",
+     "modified": "2026-10-11",
+     "resources": [
+      {
+       "name": "Proyección de oferta mundial de litio",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Tablero-Litio/Proyeccion-oferta-mundial-litio.csv",
+       "modified": "2025-09-02"
+      },
+      {
+       "name": "Proyección de demanda mundial de litio",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Tablero-Litio/Proyeccion-demanda-mundial-litio.csv",
+       "modified": "2025-09-02"
+      },
+      {
+       "name": "Balance neto de la oferta y demanda mundial de litio proyectadas",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Tablero-Litio/Balance-neto-oferta-demanda-mundial-litio.csv",
+       "modified": "2025-09-02"
+      }
+     ]
+    },
+    {
+     "name": "indice-de-produccion-minero-ipim1",
+     "title": "Indice de producción minero (IPIM)",
+     "org": "Secretaría de Minería",
+     "modified": "2026-09-11",
+     "resources": [
+      {
+       "name": "Ipi minero series",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/ipi-minero/ipi-minero-series.csv",
+       "modified": "2026-09-10"
+      },
+      {
+       "name": "Ipi minero variaciones",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/ipi-minero/ipi-minero-variaciones.csv",
+       "modified": "2026-09-10"
+      },
+      {
+       "name": "Ipi minero ramas de actividad",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/ipi-minero/ipi-minero-ramas-actividad.csv",
+       "modified": "2026-09-10"
+      },
+      {
+       "name": "Ipi minero litio",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/ipi-minero/ipi-minero-produccion-litio.csv",
+       "modified": "2026-09-10"
+      }
+     ]
+    },
+    {
+     "name": "comercio-mundial-de-mineria1",
+     "title": "Comercio mundial de minería",
+     "org": "Secretaría de Minería",
+     "modified": "2026-08-11",
+     "resources": [
+      {
+       "name": "Comercio mundial de metales",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Comercio-mundial/comex_CEPII_BACI_mineras_mundiales_metales.csv",
+       "modified": "2026-04-22"
+      },
+      {
+       "name": "Exportaciones mineras mundiales por país",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Comercio-mundial/expo_CEPII_BACI_mineras_mundiales_pais.csv",
+       "modified": "2026-04-22"
+      },
+      {
+       "name": "Participación por país exportador en las exportaciones mineras mundiales",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Comercio-mundial/expo_CEPII_BACI_mineras_mundiales_porcentajes_pais.csv",
+       "modified": "2026-04-22"
+      },
+      {
+       "name": "Comercio minero mundial por sector y grupo",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Comercio-mundial/comex_CEPII_BACI_mineras_mundiales_sector_grupo.csv",
+       "modified": "2026-04-22"
+      },
+      {
+       "name": "Importaciones mineras mundiales por país",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Comercio-mundial/impo_CEPII_BACI_mineras_mundiales_pais.csv",
+       "modified": "2026-04-22"
+      },
+      {
+       "name": "Participación por país importador en las importaciones mineras mundiales",
+       "format": "csv",
+       "url": "https://www.mecon.gob.ar/dataset/Comercio-mundial/impo_CEPII_BACI_mineras_mundiales_porcentajes_pais.csv",
+       "modified": "2026-04-22"
+      }
+     ]
+    },
+    {
+     "name": "importaciones-en-el-marco-del-regimen-de-inversiones-mineras",
+     "title": "Importaciones en el marco del régimen de inversiones mineras",
+     "org": "Secretaría de Energía",
+     "modified": "2026-08-03",
+     "resources": [
+      {
+       "name": "Importaciones en el marco del régimen de inversiones mineras",
+       "format": "csv",
+       "url": "http://datos.energia.gob.ar/dataset/0b2c26b8-7919-4ac6-8ffe-7f911b26fe58/resource/70f019bd-db28-48a4-936e-bfe2e44e1c37/download/impo-bs-capital-insumos-mineria.csv",
+       "modified": "2017-08-10"
+      }
+     ]
+    },
+    {
+     "name": "certificados-de-importacion-segun-regimen-de-inversiones-mineras",
+     "title": "Certificados de importación según régimen de inversiones mineras",
+     "org": "Secretaría de Energía",
+     "modified": "2026-08-03",
+     "resources": [
+      {
+       "name": "Certificados de importación según régimen de inversiones mineras",
+       "format": "csv",
+       "url": "http://datos.energia.gob.ar/dataset/022eb3e3-e2ff-47e9-a770-7d54f6bcbefa/resource/50a81ccc-62c6-45cc-941f-297c1cad25fe/download/certificados-impo-mineria.csv",
+       "modified": "2017-08-10"
+      }
+     ]
+    }
+   ],
+   "samples": {
+    "mineria-comparada-siacam": {
+     "resource": "Tasa de pobreza en los trabajadores por rama (en %), promedio 2016-2021",
+     "rows": 24,
+     "columns": [
+      "rama",
+      "Tasa_de_pobreza_2016-2021"
+     ],
+     "sample": [
+      {
+       "rama": "Finanzas",
+       "Tasa_de_pobreza_2016-2021": "2.86"
+      },
+      {
+       "rama": "Act. profesionales, científicas y técnicas",
+       "Tasa_de_pobreza_2016-2021": "6.69"
+      }
+     ]
+    },
+    "balance-cambiario-del-siacam": {
+     "resource": "Balance cambiario del SIACAM",
+     "rows": 8490,
+     "columns": [
+      "sector",
+      "Año",
+      "Mes",
+      "Fecha",
+      "Cuenta Corriente",
+      "Balance Comercial",
+      "Bienes",
+      "Servicios",
+      "Ingreso primario",
+      "Intereses",
+      "Utilidades y Dividendos",
+      "Ingreso secundario",
+      "Capital",
+      "Cuenta Financiera",
+      "IED (neto)",
+      "Préstamos financieros, títulos de deuda y líneas de crédito",
+      "FAE",
+      "Resultado Cambiario Sector",
+      "Sumatoria: CuCo + CK + CF",
+      "Sumatoria + Conceptos no informado ",
+      "Conceptos no informados x el cliente"
+     ],
+     "sample": [
+      {
+       "sector": "Agricultura, Ganadería y Otras Actividades Primarias",
+       "Año": "2003",
+       "Mes": "1",
+       "Fecha": "200301",
+       "Cuenta Corriente": "78.095673",
+       "Balance Comercial": "79.603215",
+       "Bienes": "80.171495",
+       "Servicios": "-0.56828",
+       "Ingreso primario": "-1.555827",
+       "Intereses": "-1.691281",
+       "Utilidades y Dividendos": "0.135454",
+       "Ingreso secundario": "0.048285",
+       "Capital": "0",
+       "Cuenta Financiera": "6.565425",
+       "IED (neto)": "6.201005",
+       "Préstamos financieros, títulos de deuda y líneas de crédito": "0.686731",
+       "FAE": "-0.409004000000001",
+       "Resultado Cambiario Sector": "84.661098",
+       "Sumatoria: CuCo + CK + CF": "84.661098",
+       "Sumatoria + Conceptos no informado ": "84.661098",
+       "Conceptos no informados x el cliente": "0"
+      },
+      {
+       "sector": "Agua",
+       "Año": "2003",
+       "Mes": "1",
+       "Fecha": "200301",
+       "Cuenta Corriente": "-2.968549",
+       "Balance Comercial": "-0.617444",
+       "Bienes": "-0.036838",
+       "Servicios": "-0.580606",
+       "Ingreso primario": "-2.351105",
+       "Intereses": "-2.351105",
+       "Utilidades y Dividendos": "0",
+       "Ingreso secundario": "0",
+       "Capital": "0",
+       "Cuenta Financiera": "-0.13646",
+       "IED (neto)": "0.020458",
+       "Préstamos financieros, títulos de deuda y líneas de crédito": "-0.01",
+       "FAE": "-0.146918",
+       "Resultado Cambiario Sector": "-3.105009",
+       "Sumatoria: CuCo + CK + CF": "-3.105009",
+       "Sumatoria + Conceptos no informado ": "-3.105009",
+       "Conceptos no informados x el cliente": "0"
+      }
+     ]
+    },
+    "cantidad-de-empresas-mineras-siacam": {
+     "resource": "Cantidad de empresas mineras en Argentina",
+     "rows": 1610,
+     "columns": [
+      "año_mes",
+      "rubro",
+      "Cantidad"
+     ],
+     "sample": [
+      {
+       "año_mes": "2007-01-01",
+       "rubro": "Combustibles-Producción",
+       "Cantidad": "10"
+      },
+      {
+       "año_mes": "2007-01-01",
+       "rubro": "Litio",
+       "Cantidad": "2"
+      }
+     ]
+    },
+    "empleo-del-sector-minero-siacam": {
+     "resource": "Cantidad de trabajadores del sector minero, por rubro y género",
+     "rows": 46576,
+     "columns": [
+      "año_mes",
+      "provincia_zona",
+      "genero",
+      "rubro",
+      "Cantidad"
+     ],
+     "sample": [
+      {
+       "año_mes": "2007-01-01",
+       "provincia_zona": "Buenos Aires",
+       "genero": "Femenino",
+       "rubro": "Combustibles-Producción",
+       "Cantidad": "7"
+      },
+      {
+       "año_mes": "2007-01-01",
+       "provincia_zona": "Buenos Aires",
+       "genero": "Femenino",
+       "rubro": "Metalíferos",
+       "Cantidad": "1"
+      }
+     ]
+    },
+    "exportaciones-argentinas-de-litio-siacam": {
+     "resource": "Exportaciones argentinas de litio",
+     "rows": 26,
+     "columns": [
+      "Año",
+      "Exportaciones_FOB",
+      "Variación_interanual_eje_derecho",
+      "Participación_sobre_total_exportado"
+     ],
+     "sample": [
+      {
+       "Año": "2000",
+       "Exportaciones_FOB": "27.79955547",
+       "Variación_interanual_eje_derecho": "0.677734345348975",
+       "Participación_sobre_total_exportado": "0.0404006094465444"
+      },
+      {
+       "Año": "2001",
+       "Exportaciones_FOB": "27.21336894",
+       "Variación_interanual_eje_derecho": "-0.021086183577021",
+       "Participación_sobre_total_exportado": "0.0356065072886026"
+      }
+     ]
+    },
+    "indicadores-de-sustentabilidad-del-siacam": {
+     "error": "HTTPError: 404 Client Error: Not Found for url: https://www.mecon.gob.ar/dataset/Sustentabilidad/SustentabilidadEnergia.csv"
+    },
+    "tablero-global-del-cobre-siacam": {
+     "resource": "Demanda y balance del mercado de cobre",
+     "rows": 84,
+     "columns": [
+      "Tipo_Demanda",
+      "Fecha",
+      "Producto ",
+      "Total"
+     ],
+     "sample": [
+      {
+       "Tipo_Demanda": "Demanda ",
+       "Fecha": "2015",
+       "Producto ": "Concentrados de cobre",
+       "Total": "15391.991152951214"
+      },
+      {
+       "Tipo_Demanda": "Demanda ",
+       "Fecha": "2016",
+       "Producto ": "Concentrados de cobre",
+       "Total": "16024.99246966503"
+      }
+     ]
+    },
+    "compras-realizadas-por-empresas-mineras-siacam": {
+     "resource": "Compras por rama vendedora agrupada, 2019",
+     "rows": 15,
+     "columns": [
+      "Rama vendedora agrupada",
+      "Indicador (%)"
+     ],
+     "sample": [
+      {
+       "Rama vendedora agrupada": "Industria",
+       "Indicador (%)": "0.24"
+      },
+      {
+       "Rama vendedora agrupada": "Construcción",
+       "Indicador (%)": "0.176"
+      }
+     ]
+    },
+    "comercio-de-minerales-de-argentina-siacam": {
+     "resource": "Importaciones de minerales de Argentina",
+     "rows": 101983,
+     "columns": [
+      "ANYO",
+      "ORIGEN",
+      "PPRO",
+      "PROCEDENC",
+      "MES",
+      "GRUPO",
+      "SECTOR",
+      "CIF"
+     ],
+     "sample": [
+      {
+       "ANYO": "1994",
+       "ORIGEN": "Alemania",
+       "PPRO": "406",
+       "PROCEDENC": "Belgica",
+       "MES": "1",
+       "GRUPO": "Demas minerales n.c.p",
+       "SECTOR": "No metaliferos",
+       "CIF": "20944"
+      },
+      {
+       "ANYO": "1994",
+       "ORIGEN": "Alemania",
+       "PPRO": "423",
+       "PROCEDENC": "Paises Bajos",
+       "MES": "1",
+       "GRUPO": "Magnesio",
+       "SECTOR": "No metaliferos",
+       "CIF": "8925"
+      }
+     ]
+    },
+    "precios-internacionales-de-minerales-del-siacam": {
+     "resource": "Precios Internacionales de Minerales",
+     "rows": 4934,
+     "columns": [
+      "Año",
+      "Mes",
+      "Fecha",
+      "Precio",
+      "Mineral",
+      "Unidad de medida",
+      "Numero Índice"
+     ],
+     "sample": [
+      {
+       "Año": "1990",
+       "Mes": "1",
+       "Fecha": "1990M01",
+       "Precio": "1528",
+       "Mineral": "Aluminio (Al)",
+       "Unidad de medida": "Dólar por Tonelada Métrica (USD/t)",
+       "Numero Índice": "82.41639697950379"
+      },
+      {
+       "Año": "1990",
+       "Mes": "2",
+       "Fecha": "1990M02",
+       "Precio": "1454",
+       "Mineral": "Aluminio (Al)",
+       "Unidad de medida": "Dólar por Tonelada Métrica (USD/t)",
+       "Numero Índice": "78.4250269687163"
+      }
+     ]
+    },
+    "empleos-generados-en-proyectos-de-litio-siacam": {
+     "resource": "Empleos generados en proyectos de litio, por provincia y género",
+     "rows": 2005,
+     "columns": [
+      "año_mes",
+      "provincia_zona",
+      "genero",
+      "rubro",
+      "Cantidad"
+     ],
+     "sample": [
+      {
+       "año_mes": "2007-01-01",
+       "provincia_zona": "Catamarca",
+       "genero": "Femenino",
+       "rubro": "Litio",
+       "Cantidad": "6"
+      },
+      {
+       "año_mes": "2007-01-01",
+       "provincia_zona": "Catamarca",
+       "genero": "Masculino",
+       "rubro": "Litio",
+       "Cantidad": "128"
+      }
+     ]
+    },
+    "cartera-de-proyectos-mineros-en-argentina-del-siacam": {
+     "resource": "Proyectos mineros metalíferos y de litio en Argentina",
+     "rows": 235,
+     "columns": [
+      "N°",
+      "NOMBRE",
+      "LATITUD",
+      "LONGITUD",
+      "MINERAL PRINCIPAL",
+      "PROVINCIA",
+      "ESTADO",
+      "CONTROLANTE (1°)",
+      "PORCENTAJE (1°)",
+      "ORIGEN (1°)",
+      "CONTROLANTE (2°)",
+      "ORIGEN (2°)",
+      "PORCENTAJE (2°)",
+      "CONTROLANTE (3°)",
+      "PORCENTAJE (3°)",
+      "ORIGEN (3°)"
+     ],
+     "sample": [
+      {
+       "N°": "1",
+       "NOMBRE": "Adamo",
+       "LATITUD": "-41.162",
+       "LONGITUD": "-68.505",
+       "MINERAL PRINCIPAL": "Oro",
+       "PROVINCIA": "Río Negro",
+       "ESTADO": "Prospección",
+       "CONTROLANTE (1°)": "Valcheta Exploraciones",
+       "PORCENTAJE (1°)": "1",
+       "ORIGEN (1°)": "Argentina",
+       "CONTROLANTE (2°)": NaN,
+       "ORIGEN (2°)": NaN,
+       "PORCENTAJE (2°)": NaN,
+       "CONTROLANTE (3°)": NaN,
+       "PORCENTAJE (3°)": NaN,
+       "ORIGEN (3°)": NaN
+      },
+      {
+       "N°": "2",
+       "NOMBRE": "Aguilar",
+       "LATITUD": "-23.20575",
+       "LONGITUD": "-65.71747",
+       "MINERAL PRINCIPAL": "Plomo",
+       "PROVINCIA": "Jujuy",
+       "ESTADO": "Producción",
+       "CONTROLANTE (1°)": "Grupo Integra",
+       "PORCENTAJE (1°)": "1",
+       "ORIGEN (1°)": "Argentina",
+       "CONTROLANTE (2°)": NaN,
+       "ORIGEN (2°)": NaN,
+       "PORCENTAJE (2°)": NaN,
+       "CONTROLANTE (3°)": NaN,
+       "PORCENTAJE (3°)": NaN,
+       "ORIGEN (3°)": NaN
+      }
+     ]
+    },
+    "produccion-mundial-de-litio-tablero-global-del-litio-siacam": {
+     "resource": "Producción mundial de litio por país",
+     "rows": 270,
+     "columns": [
+      "País",
+      "Año",
+      "Miles de tns LCE"
+     ],
+     "sample": [
+      {
+       "País": "Argentina",
+       "Año": "1995",
+       "Miles de tns LCE": "0.042584"
+      },
+      {
+       "País": "Argentina",
+       "Año": "1996",
+       "Miles de tns LCE": "0.042584"
+      }
+     ]
+    },
+    "pago-de-impuestos-nacionales-de-grandes-empresas-mineras-siacam": {
+     "resource": "Pago de impuestos de las grandes empresas nacionales, 2019-2023 (en millones de pesos)",
+     "rows": 80,
+     "columns": [
+      "Año",
+      "Empresa",
+      "Impuesto a las Ganancias Sociedades",
+      "Derechos de Exportación",
+      "Seguridad Social",
+      "Impuesto a los Créditos y Débitos Bancarios",
+      "Regalías y Canon",
+      "Tasa Ambiental Anual",
+      "Total Empresa",
+      "Unnamed: 9",
+      "Unnamed: 10",
+      "Unnamed: 11"
+     ],
+     "sample": [
+      {
+       "Año": "2019",
+       "Empresa": "MINERA ANDINA DEL SOL S.R.L.",
+       "Impuesto a las Ganancias Sociedades": "1865.3000",
+       "Derechos de Exportación": "3346.8000",
+       "Seguridad Social": "924.4000",
+       "Impuesto a los Créditos y Débitos Bancarios": "189.3000",
+       "Regalías y Canon": "0.0000",
+       "Tasa Ambiental Anual": "0.0544",
+       "Total Empresa": "6325.9000",
+       "Unnamed: 9": NaN,
+       "Unnamed: 10": NaN,
+       "Unnamed: 11": NaN
+      },
+      {
+       "Año": "2019",
+       "Empresa": "CERRO VANGUARDIA S.A.",
+       "Impuesto a las Ganancias Sociedades": "1927.1000",
+       "Derechos de Exportación": "1582.5000",
+       "Seguridad Social": "707.1000",
+       "Impuesto a los Créditos y Débitos Bancarios": "0.0000",
+       "Regalías y Canon": "0.0000",
+       "Tasa Ambiental Anual": "0.0825",
+       "Total Empresa": "4216.8000",
+       "Unnamed: 9": NaN,
+       "Unnamed: 10": NaN,
+       "Unnamed: 11": NaN
+      }
+     ]
+    },
+    "demanda-mundial-de-litio-tablero-global-del-litio-siacam": {
+     "resource": "Demanda mundial de litio en vehículos eléctricos de pasajeros por jurisdicción.",
+     "rows": 5,
+     "columns": [
+      "Jurisdicción",
+      "Porcentaje  de consumo de litio",
+      "Miles tn LCE"
+     ],
+     "sample": [
+      {
+       "Jurisdicción": "China",
+       "Porcentaje  de consumo de litio": "0.54",
+       "Miles tn LCE": "330,5"
+      },
+      {
+       "Jurisdicción": "Norteamérica",
+       "Porcentaje  de consumo de litio": "0.17",
+       "Miles tn LCE": "102,9"
+      }
+     ]
+    },
+    "recursos-y-reservas-de-litio-tablero-global-del-litio-siacam": {
+     "resource": "Recursos y reservas mundiales de litio",
+     "rows": 286,
+     "columns": [
+      "País",
+      "Año",
+      "Recursos (Mill. Tns LCE)",
+      "Reservas (Miles Tns LCE)"
+     ],
+     "sample": [
+      {
+       "País": "Argentina",
+       "Año": "1995",
+       "Recursos (Mill. Tns LCE)": NaN,
+       "Reservas (Miles Tns LCE)": NaN
+      },
+      {
+       "País": "Argentina",
+       "Año": "1996",
+       "Recursos (Mill. Tns LCE)": NaN,
+       "Reservas (Miles Tns LCE)": NaN
+      }
+     ]
+    },
+    "proyectos-de-litio-en-el-mundo-tablero-global-del-litio-siacam": {
+     "resource": "Proyectos en producción de litio en el mundo (2024)",
+     "rows": 20,
+     "columns": [
+      "Proyecto",
+      "Pais",
+      "Produccion_tns_LCE",
+      "Latitud",
+      "Longitud",
+      "Tipo",
+      "Inicio"
+     ],
+     "sample": [
+      {
+       "Proyecto": "Greenbushes",
+       "Pais": "Australia",
+       "Produccion_tns_LCE": "210000",
+       "Latitud": "-33.85434",
+       "Longitud": "116.06094",
+       "Tipo": "Espodumeno",
+       "Inicio": "1983"
+      },
+      {
+       "Proyecto": "Salar de Atacama",
+       "Pais": "Chile",
+       "Produccion_tns_LCE": "179600",
+       "Latitud": "-23.55",
+       "Longitud": " -68.3850",
+       "Tipo": "Salmuera",
+       "Inicio": "1996"
+      }
+     ]
+    },
+    "anuncios-de-inversion-en-el-sector-minero-de-argentina-del-siacam": {
+     "resource": "Anuncios de Inversión en el Sector Minero",
+     "rows": 55,
+     "columns": [
+      "Empresa",
+      "Año",
+      "Fecha ",
+      "Dólares",
+      "Mineral",
+      "Provincia",
+      "Concepto",
+      "Proyecto",
+      "Inversiones anunciadas desde dic-19. Acumulado"
+     ],
+     "sample": [
+      {
+       "Empresa": "Orocobre - Toyota",
+       "Año": "2020",
+       "Fecha ": "11/20",
+       "Dólares": "400000000",
+       "Mineral": "Litio",
+       "Provincia": "Jujuy",
+       "Concepto": "Ampliación",
+       "Proyecto": "Olaroz",
+       "Inversiones anunciadas desde dic-19. Acumulado": "400000000"
+      },
+      {
+       "Empresa": "Barrick Gold-Shandong Gold ",
+       "Año": "2020",
+       "Fecha ": "03/20",
+       "Dólares": "225000000",
+       "Mineral": "Oro",
+       "Provincia": "San Juan",
+       "Concepto": "Extensión vida útil",
+       "Proyecto": "Veladero",
+       "Inversiones anunciadas desde dic-19. Acumulado": "625000000"
+      }
+     ]
+    },
+    "produccion-minera-de-argentina-y-participacion-en-el-total-de-la-economia-siacam": {
+     "resource": "Producción minera en el Sistema de Cuentas Nacionales",
+     "rows": 88,
+     "columns": [
+      "Año",
+      "Variable",
+      "Rama",
+      "Valor",
+      "% del total de la economía",
+      "Unidad",
+      "A precios",
+      "Medición"
+     ],
+     "sample": [
+      {
+       "Año": "2004",
+       "Variable": "Valor bruto de la producción",
+       "Rama": "Minería",
+       "Valor": "4462.924902",
+       "% del total de la economía": "0.5%",
+       "Unidad": "Millones de pesos de 2004",
+       "A precios": "Constantes",
+       "Medición": "En pesos constantes de 2004"
+      },
+      {
+       "Año": "2005",
+       "Variable": "Valor bruto de la producción",
+       "Rama": "Minería",
+       "Valor": "5144.106128",
+       "% del total de la economía": "0.6%",
+       "Unidad": "Millones de pesos de 2004",
+       "A precios": "Constantes",
+       "Medición": "En pesos constantes de 2004"
+      }
+     ]
+    },
+    "proyeccion-de-la-demanda-y-oferta-global-de-litio-tablero-global-del-litio-siacam": {
+     "resource": "Proyección de oferta mundial de litio",
+     "rows": 32,
+     "columns": [
+      "Año",
+      "Tipo",
+      "Miles de Tn LCE"
+     ],
+     "sample": [
+      {
+       "Año": "2020",
+       "Tipo": "Carbonato",
+       "Miles de Tn LCE": "282"
+      },
+      {
+       "Año": "2021",
+       "Tipo": "Carbonato",
+       "Miles de Tn LCE": "364"
+      }
+     ]
+    },
+    "indice-de-produccion-minero-ipim1": {
+     "resource": "Ipi minero series",
+     "rows": 345,
+     "columns": [
+      "Fecha",
+      "Serie",
+      "Indice"
+     ],
+     "sample": [
+      {
+       "Fecha": "1/1/2017",
+       "Serie": "Serie Original",
+       "Indice": "97.1087961"
+      },
+      {
+       "Fecha": "1/2/2017",
+       "Serie": "Serie Original",
+       "Indice": "87.1292087"
+      }
+     ]
+    },
+    "comercio-mundial-de-mineria1": {
+     "resource": "Comercio mundial de metales",
+     "rows": 960,
+     "columns": [
+      "year",
+      "grupo",
+      "value"
+     ],
+     "sample": [
+      {
+       "year": "1995",
+       "grupo": "Aluminio",
+       "value": "4784.659353"
+      },
+      {
+       "year": "1995",
+       "grupo": "Aluminio y bauxita",
+       "value": "1153.078911"
+      }
+     ]
+    },
+    "importaciones-en-el-marco-del-regimen-de-inversiones-mineras": {
+     "resource": "Importaciones en el marco del régimen de inversiones mineras",
+     "rows": 23,
+     "columns": [
+      "anio",
+      "monto_total_usd_equipos",
+      "monto_total_usd_insumos",
+      "monto_total_usd"
+     ],
+     "sample": [
+      {
+       "anio": "1993-01-01",
+       "monto_total_usd_equipos": "530344",
+       "monto_total_usd_insumos": "95981",
+       "monto_total_usd": "626325"
+      },
+      {
+       "anio": "1994-01-01",
+       "monto_total_usd_equipos": "7971424",
+       "monto_total_usd_insumos": "3551050",
+       "monto_total_usd": "11522474"
+      }
+     ]
+    },
+    "certificados-de-importacion-segun-regimen-de-inversiones-mineras": {
+     "resource": "Certificados de importación según régimen de inversiones mineras",
+     "rows": 23,
+     "columns": [
+      "anio",
+      "total",
+      "cantidad_de_certificados_equipos",
+      "cantidad_de_certificados_insumos"
+     ],
+     "sample": [
+      {
+       "anio": "1993-01-01",
+       "total": "24",
+       "cantidad_de_certificados_equipos": "16",
+       "cantidad_de_certificados_insumos": "8"
+      },
+      {
+       "anio": "1994-01-01",
+       "total": "546",
+       "cantidad_de_certificados_equipos": "297",
+       "cantidad_de_certificados_insumos": "249"
+      }
+     ]
+    }
+   }
+  }
  },
  "series": {
   "ok": true,
