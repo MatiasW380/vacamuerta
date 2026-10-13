@@ -11,8 +11,9 @@ window.AIM_PICK_LANG = function (saved) {
 };
 window.AIM_EXTEND = function (T, page) {
   const tr = window.AIM_TR;
+  ["en", "es"].forEach(l => { T[l] = Object.assign({}, tr.legal[l], T[l]); });
   ["pt", "el"].forEach(l => {
-    T[l] = Object.assign({}, T.en, (tr.common || {})[l], ((tr[page] || {})[l]) || {});
+    T[l] = Object.assign({}, T.en, tr.legal[l], (tr.common || {})[l], ((tr[page] || {})[l]) || {});
   });
   return T;
 };
@@ -49,4 +50,20 @@ window.AIM_TR.common = {
     disclaimer: "Μόνο για ενημέρωση. Δεν αποτελεί επενδυτική συμβουλή.",
     topicNames: { Hidrocarburos: "Υδρογονάνθρακες", "Gas natural": "Φυσικό αέριο", "Petróleo": "Πετρέλαιο", Biocombustibles: "Βιοκαύσιμα" },
   },
+};
+
+/* Recuadro del estudio jurídico, igual en todas las páginas de sector */
+window.AIM_TR.legal = {
+  en: { legalKicker: "Legal services", legalTitle: "Investing in Argentina? Legal counsel for companies and investors.",
+        legalText: "Onassis & Baronetto advises companies and investors on setting up and running their business in Argentina: corporate structure, contracts, RIGI applications and the regulation of each sector.",
+        legalBtn: "Meet the firm", fLegalH: "Legal services", fLegal: "Onassis & Baronetto, lawyers", fContact: "Contact the firm" },
+  es: { legalKicker: "Servicios legales", legalTitle: "¿Va a invertir en la Argentina? Asesoramiento legal para empresas e inversores.",
+        legalText: "Onassis & Baronetto asesora a empresas e inversores para instalarse y operar en la Argentina: estructura societaria, contratos, adhesión al RIGI y la regulación de cada sector.",
+        legalBtn: "Conocer el estudio", fLegalH: "Servicios legales", fLegal: "Onassis & Baronetto, abogados", fContact: "Contactar al estudio" },
+  pt: { legalKicker: "Serviços jurídicos", legalTitle: "Vai investir na Argentina? Assessoria jurídica para empresas e investidores.",
+        legalText: "Onassis & Baronetto assessora empresas e investidores para se instalar e operar na Argentina: estrutura societária, contratos, adesão ao RIGI e a regulação de cada setor.",
+        legalBtn: "Conhecer o escritório", fLegalH: "Serviços jurídicos", fLegal: "Onassis & Baronetto, advogados", fContact: "Falar com o escritório" },
+  el: { legalKicker: "Νομικές υπηρεσίες", legalTitle: "Επενδύετε στην Αργεντινή; Νομική υποστήριξη για εταιρείες και επενδυτές.",
+        legalText: "Η Onassis & Baronetto συμβουλεύει εταιρείες και επενδυτές για την εγκατάσταση και τη λειτουργία τους στην Αργεντινή: εταιρική δομή, συμβάσεις, αιτήσεις ένταξης στο RIGI και το ρυθμιστικό πλαίσιο κάθε τομέα.",
+        legalBtn: "Γνωρίστε το γραφείο", fLegalH: "Νομικές υπηρεσίες", fLegal: "Onassis & Baronetto, δικηγόροι", fContact: "Επικοινωνία με το γραφείο" },
 };

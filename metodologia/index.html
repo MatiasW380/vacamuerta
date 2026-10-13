@@ -271,6 +271,13 @@ html[lang="en"] .doc > div[lang="en"], html[lang="es"] .doc > div[lang="es"], ht
           <li><a href="/#signupTitle" data-i18n="fNewsletter">Weekly newsletter</a></li>
         </ul>
       </div>
+      <div>
+        <h2 data-i18n="fLegalH">Legal services</h2>
+        <ul>
+          <li><a href="/estudio/" data-i18n="fLegal">Onassis &amp; Baronetto, lawyers</a></li>
+          <li><a href="mailto:onassisbaronettolawyers@gmail.com" data-i18n="fContact">Contact the firm</a></li>
+        </ul>
+      </div>
     </div>
     <div class="legal">
       <p data-i18n="disclaimer">For information only. Not investment advice.</p>
@@ -284,8 +291,9 @@ html[lang="en"] .doc > div[lang="en"], html[lang="es"] .doc > div[lang="es"], ht
     en: { fAbout: "Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.", fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining", fAgro: "Agriculture", fFinance: "Finance and banking", fIndustry: "Industry", fResources: "Resources", fMethod: "Methodology and sources", fCsv: "Download Vaca Muerta data (CSV)", fNewsletter: "Weekly newsletter", disclaimer: "For information only. Not investment advice.", crumbHere: "Methodology" },
     es: { fAbout: "Los datos públicos oficiales de la Argentina sobre energía, minería, agro, finanzas e industria, organizados para inversores y actualizados en forma automática.", fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería", fAgro: "Agro", fFinance: "Finanzas y bancos", fIndustry: "Industria", fResources: "Recursos", fMethod: "Metodología y fuentes", fCsv: "Descargar datos de Vaca Muerta (CSV)", fNewsletter: "Newsletter semanal", disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.", crumbHere: "Metodología" },
   };
-  T.pt = Object.assign({}, T.en, AIM_TR.common.pt, { crumbHere: "Metodologia" });
-  T.el = Object.assign({}, T.en, AIM_TR.common.el, { crumbHere: "Μεθοδολογία" });
+  T.en = Object.assign({}, AIM_TR.legal.en, T.en); T.es = Object.assign({}, AIM_TR.legal.es, T.es);
+  T.pt = Object.assign({}, T.en, AIM_TR.legal.pt, AIM_TR.common.pt, { crumbHere: "Metodologia" });
+  T.el = Object.assign({}, T.en, AIM_TR.legal.el, AIM_TR.common.el, { crumbHere: "Μεθοδολογία" });
   let saved = null;
   try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
   let lang = AIM_PICK_LANG(saved);

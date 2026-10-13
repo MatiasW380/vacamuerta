@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onassis &amp; Baronetto · Argentina Invest Monitor</title>
+<meta name="description" content="Onassis & Baronetto: legal counsel for companies and investors in Argentina. Foreign investment and the RIGI, companies, contracts, energy and mining, agriculture and FX regulation.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d4a57'/%3E%3Cpath d='M5 10.5h22M5 25.5h22' stroke='%23fff' stroke-opacity='.4' stroke-width='1.6' stroke-linecap='round'/%3E%3Crect x='5' y='15.5' width='22' height='5.4' rx='1.4' fill='%23d9a441'/%3E%3Cpath d='M10 5.5v10.2q0 2.5 2.5 2.5H25' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Literata:opsz,wght@7..72,400..700&family=Noto+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+.firm-hero { padding: 56px 0 8px; }
+.firm-hero .kicker { display: block; font-size: 13px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin: 0 0 14px; }
+.firm-hero h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(32px, 4.6vw, 52px); line-height: 1.1; letter-spacing: -0.016em; margin: 0; max-width: 20ch; text-wrap: balance; }
+.firm-hero .lede { font-size: 19px; max-width: 60ch; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn-line { display: inline-block; padding: 10px 19px; border-radius: 3px; border: 1px solid var(--brand); color: var(--brand); font-weight: 620; text-decoration: none; }
+.btn-line:hover { background: var(--brand-soft); }
+.areas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin: 22px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--ink); }
+.areas li { padding: 22px 24px 24px 0; border-bottom: 1px solid var(--rule); }
+.areas li:not(:nth-child(3n+1)) { padding-left: 24px; border-left: 1px solid var(--rule); }
+.areas .n { display: block; font-size: 13px; font-weight: 650; color: var(--accent); margin-bottom: 8px; font-variant-numeric: tabular-nums; }
+.areas h3 { font-family: var(--serif); font-weight: 550; font-size: 20px; line-height: 1.25; margin: 0 0 8px; color: var(--ink); }
+.areas p { margin: 0; color: var(--ink-2); font-size: 15.5px; }
+@media (max-width: 900px) { .areas { grid-template-columns: 1fr 1fr; } .areas li, .areas li:not(:nth-child(3n+1)) { padding: 20px 18px 20px 0; border-left: 0; } .areas li:nth-child(even) { padding-left: 18px; border-left: 1px solid var(--rule); } }
+@media (max-width: 600px) { .areas { grid-template-columns: 1fr; } .areas li:nth-child(even) { padding-left: 0; border-left: 0; } }
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; margin: 22px 0 0; padding: 0; list-style: none; counter-reset: s; }
+.steps li { counter-increment: s; border-top: 2px solid var(--brand); padding-top: 16px; }
+.steps li::before { content: counter(s, decimal-leading-zero); display: block; font-size: 13px; font-weight: 650; color: var(--brand); margin-bottom: 8px; }
+.steps h3 { font-family: var(--sans); font-weight: 650; font-size: 17px; margin: 0 0 6px; }
+.steps p { margin: 0; color: var(--ink-2); font-size: 15.5px; }
+@media (max-width: 760px) { .steps { grid-template-columns: 1fr; gap: 24px; } }
+.monitor-note { margin: 0; padding: 26px 0 0; color: var(--ink-2); max-width: 70ch; }
+.contact { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; margin-top: 22px; }
+@media (max-width: 860px) { .contact { grid-template-columns: 1fr; gap: 28px; } }
+.contact .direct { font-size: 15.5px; color: var(--ink-2); }
+.contact .direct a { font-weight: 620; font-size: 17px; word-break: break-all; }
+.contact form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.contact label { display: grid; gap: 6px; font-size: 13.5px; font-weight: 600; color: var(--ink-2); }
+.contact label.full { grid-column: 1 / -1; }
+.contact input, .contact textarea { font: inherit; font-size: 15.5px; padding: 11px 12px; border: 1px solid var(--rule); border-radius: 3px; background: #fff; color: var(--ink); width: 100%; }
+.contact textarea { min-height: 140px; resize: vertical; }
+.contact input:focus, .contact textarea:focus { outline: 2px solid var(--focus); outline-offset: 0; border-color: transparent; }
+.contact .row { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; }
+.contact button { font: inherit; font-weight: 620; padding: 11px 20px; border-radius: 3px; border: 0; background: var(--brand); color: #fff; cursor: pointer; }
+.contact .hint { font-size: 13.5px; color: var(--ink-3); margin: 0; }
+.contact .msg { grid-column: 1 / -1; min-height: 1.3em; margin: 0; font-size: 14.5px; color: var(--down); }
+@media (max-width: 520px) { .contact form { grid-template-columns: 1fr; } }
+.fine { margin: 40px 0 0; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--ink-3); font-size: 13.5px; max-width: 80ch; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="mark" href="/">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Argentina Invest Monitor
+      </a>
+      <span class="crumb-sep" aria-hidden="true">/</span>
+      <span class="crumb-here" data-i18n="crumbHere">Legal services</span>
+    </nav>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+      <button type="button" data-lang="el" aria-pressed="false">EL</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="firm-hero">
+      <span class="kicker" data-i18n="kicker">Law firm · Córdoba, Argentina</span>
+      <h1 data-i18n="h1">Onassis &amp; Baronetto. Lawyers for companies and investors in Argentina.</h1>
+      <p class="lede" data-i18n="lede">We work with companies and investors, local and from abroad, at every step of an investment in Argentina: from the structure they enter the country with to their contracts, permits and the regulation of their sector.</p>
+      <div class="actions">
+        <a class="btn-brand" href="#contact" data-i18n="ctaWrite">Write to the firm</a>
+        <a class="btn-line" href="#areas" data-i18n="ctaAreas">Practice areas</a>
+      </div>
+    </section>
+
+    <section class="section chapter" id="areas" aria-labelledby="areasTitle">
+      <h2 id="areasTitle" data-i18n="areasTitle">Practice areas</h2>
+      <ul class="areas" id="areaList"></ul>
+    </section>
+
+    <section class="section chapter" aria-labelledby="howTitle">
+      <h2 id="howTitle" data-i18n="howTitle">How we work</h2>
+      <ol class="steps" id="stepList"></ol>
+      <p class="monitor-note" data-i18n="monitorNote">Argentina Invest Monitor is the firm's public tool: it brings together the official data we follow to advise our clients, sector by sector.</p>
+    </section>
+
+    <section class="section chapter" id="contact" aria-labelledby="contactTitle">
+      <h2 id="contactTitle" data-i18n="contactTitle">Contact</h2>
+      <div class="contact">
+        <div class="direct">
+          <p data-i18n="contactText">Tell us briefly about your project and we will get back to you.</p>
+          <p><span data-i18n="contactMail">Email</span><br><a href="mailto:onassisbaronettolawyers@gmail.com">onassisbaronettolawyers@gmail.com</a></p>
+        </div>
+        <form id="contactForm" novalidate>
+          <label><span data-i18n="fName">Name</span><input name="name" autocomplete="name" required></label>
+          <label><span data-i18n="fCompany">Company</span><input name="company" autocomplete="organization"></label>
+          <label class="full"><span data-i18n="fEmail">Email</span><input name="email" type="email" autocomplete="email" required></label>
+          <label class="full"><span data-i18n="fMsg">Your project</span><textarea name="message" required></textarea></label>
+          <div class="row"><button type="submit" data-i18n="fSend">Prepare the email</button><p class="hint" data-i18n="fHint">Your email program opens with the message ready to send.</p></div>
+          <p class="msg" id="contactMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+      <p class="fine" data-i18n="fine">The information on this site is general and is not legal advice for a specific case. A professional relationship begins only when the firm accepts an engagement in writing.</p>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="cols">
+      <div class="about">
+        <a class="mark" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--brand)"/><path d="M5 10.5h22M5 25.5h22" stroke="var(--brand-ink)" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="15.5" width="22" height="5.4" rx="1.4" fill="var(--accent)"/><path d="M10 5.5v10.2q0 2.5 2.5 2.5H25" fill="none" stroke="var(--brand-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Argentina Invest Monitor
+        </a>
+        <p data-i18n="fAbout">Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.</p>
+      </div>
+      <div>
+        <h2 data-i18n="fSectors">Sectors</h2>
+        <ul>
+          <li><a href="/vaca-muerta/" data-i18n="fEnergy">Energy: Vaca Muerta</a></li>
+          <li><a href="/mineria/" data-i18n="fMining">Mining</a></li>
+          <li><a href="/agro/" data-i18n="fAgro">Agriculture</a></li>
+          <li><a href="/finanzas/" data-i18n="fFinance">Finance and banking</a></li>
+          <li><a href="/industria/" data-i18n="fIndustry">Industry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 data-i18n="fResources">Resources</h2>
+        <ul>
+          <li><a href="/metodologia/" data-i18n="fMethod">Methodology and sources</a></li>
+          <li><a href="/data/vm_monthly.csv" download data-i18n="fCsv">Download Vaca Muerta data (CSV)</a></li>
+          <li><a href="/#signupTitle" data-i18n="fNewsletter">Weekly newsletter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 data-i18n="fLegalH">Legal services</h2>
+        <ul>
+          <li><a href="/estudio/" data-i18n="fLegal">Onassis &amp; Baronetto, lawyers</a></li>
+          <li><a href="mailto:onassisbaronettolawyers@gmail.com" data-i18n="fContact">Contact the firm</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p data-i18n="footSources">All figures come from public, official sources cited on each page.</p>
+      <p data-i18n="disclaimer">For information only. Not investment advice.</p>
+    </div>
+  </footer>
+</div>
+
+<script src="/assets/i18n/common.js"></script>
+<script src="/assets/i18n/estudio.js"></script>
+<script>
+(() => {
+  const MAIL = "onassisbaronettolawyers@gmail.com";
+  const T = {
+    en: {
+      crumbHere: "Legal services", kicker: "Law firm · Córdoba, Argentina",
+      h1: "Onassis & Baronetto. Lawyers for companies and investors in Argentina.",
+      lede: "We work with companies and investors, local and from abroad, at every step of an investment in Argentina: from the structure they enter the country with to their contracts, permits and the regulation of their sector.",
+      ctaWrite: "Write to the firm", ctaAreas: "Practice areas", areasTitle: "Practice areas",
+      areas: [
+        ["Foreign investment and the RIGI", "Structuring investments, assessing the available incentive regimes and preparing applications to the Large Investment Incentive Regime (RIGI)."],
+        ["Companies and market entry", "Incorporating companies, registering foreign companies and branches, corporate governance and shareholder agreements."],
+        ["Commercial contracts", "Supply, distribution, joint venture and consortium agreements, and legal due diligence on companies and assets before an acquisition."],
+        ["Energy and mining", "Concessions, permits and compliance before the national and provincial hydrocarbon and mining authorities."],
+        ["Agriculture and real estate", "Buying and leasing farmland, agricultural contracts and real estate transactions linked to productive projects."],
+        ["FX and regulation", "Central Bank foreign exchange rules, inflows and repatriation of capital, and dealings with regulators."],
+      ],
+      howTitle: "How we work",
+      steps: [
+        ["First conversation", "You tell us about the project and where it stands. We tell you what is needed and in what order."],
+        ["Written proposal", "Before we start, we send you the scope of the work and its timeline in writing."],
+        ["End-to-end support", "We follow the project from start to finish, with the monitor's data as a reference for each sector."],
+      ],
+      monitorNote: "Argentina Invest Monitor is the firm's public tool: it brings together the official data we follow to advise our clients, sector by sector.",
+      contactTitle: "Contact", contactText: "Tell us briefly about your project and we will get back to you.", contactMail: "Email",
+      fName: "Name", fCompany: "Company", fEmail: "Email", fMsg: "Your project", fSend: "Prepare the email", fHint: "Your email program opens with the message ready to send.",
+      errName: "Please write your name.", errEmail: "Please enter a valid email address.", errMsg: "Please tell us a little about your project.",
+      subject: (n, c) => `Inquiry from Argentina Invest Monitor: ${n}${c ? " (" + c + ")" : ""}`,
+      body: (n, c, e, m) => `Name: ${n}\nCompany: ${c || "-"}\nEmail: ${e}\n\n${m}`,
+      fine: "The information on this site is general and is not legal advice for a specific case. A professional relationship begins only when the firm accepts an engagement in writing.",
+      fAbout: "Argentina's official public data on energy, mining, agriculture, finance and industry, organized for investors and updated automatically.", fSectors: "Sectors", fEnergy: "Energy: Vaca Muerta", fMining: "Mining", fAgro: "Agriculture", fFinance: "Finance and banking", fIndustry: "Industry", fResources: "Resources", fMethod: "Methodology and sources", fCsv: "Download Vaca Muerta data (CSV)", fNewsletter: "Weekly newsletter", disclaimer: "For information only. Not investment advice.", footSources: "All figures come from public, official sources cited on each page."
+    },
+    es: {
+      crumbHere: "Servicios legales", kicker: "Estudio jurídico · Córdoba, Argentina",
+      h1: "Onassis & Baronetto. Abogados para empresas e inversores en la Argentina.",
+      lede: "Acompañamos a empresas e inversores, locales y del exterior, en cada paso de una inversión en la Argentina: desde la estructura con la que llegan al país hasta sus contratos, sus permisos y la regulación de su sector.",
+      ctaWrite: "Escribir al estudio", ctaAreas: "Áreas de práctica", areasTitle: "Áreas de práctica",
+      areas: [
+        ["Inversión extranjera y RIGI", "Estructuración de inversiones, análisis de los regímenes de promoción disponibles y preparación de la solicitud de adhesión al Régimen de Incentivo para Grandes Inversiones (RIGI)."],
+        ["Sociedades y radicación", "Constitución de sociedades, inscripción de sociedades extranjeras y sucursales, gobierno societario y acuerdos de accionistas."],
+        ["Contratos comerciales", "Contratos de suministro, distribución, joint ventures y uniones transitorias, y revisión legal (due diligence) de empresas y activos antes de una compra."],
+        ["Energía y minería", "Concesiones, permisos y cumplimiento ante las autoridades nacionales y provinciales de hidrocarburos y minería."],
+        ["Agro e inmuebles", "Compra y arrendamiento de campos, contratos agrarios y operaciones inmobiliarias vinculadas a proyectos productivos."],
+        ["Cambios y regulación", "Normativa cambiaria del Banco Central, ingreso y repatriación de capitales, y relación con los organismos de control."],
+      ],
+      howTitle: "Cómo trabajamos",
+      steps: [
+        ["Primera conversación", "Nos cuenta el proyecto y en qué etapa está. Le decimos qué hace falta y en qué orden."],
+        ["Propuesta por escrito", "Antes de empezar, le enviamos por escrito el alcance del trabajo y sus plazos."],
+        ["Acompañamiento completo", "Seguimos el proyecto de punta a punta, con los datos del monitor como referencia para cada sector."],
+      ],
+      monitorNote: "Argentina Invest Monitor es la herramienta pública del estudio: reúne los datos oficiales que seguimos para asesorar a nuestros clientes, sector por sector.",
+      contactTitle: "Contacto", contactText: "Cuéntenos brevemente su proyecto y le responderemos.", contactMail: "Email",
+      fName: "Nombre", fCompany: "Empresa", fEmail: "Email", fMsg: "Su proyecto", fSend: "Preparar el email", fHint: "Se abre su programa de correo con el mensaje listo para enviar.",
+      errName: "Escriba su nombre.", errEmail: "Ingrese un email válido.", errMsg: "Cuéntenos brevemente su proyecto.",
+      subject: (n, c) => `Consulta desde Argentina Invest Monitor: ${n}${c ? " (" + c + ")" : ""}`,
+      body: (n, c, e, m) => `Nombre: ${n}\nEmpresa: ${c || "-"}\nEmail: ${e}\n\n${m}`,
+      fine: "La información de este sitio es general y no constituye asesoramiento legal para un caso concreto. La relación profesional comienza recién cuando el estudio acepta el encargo por escrito.",
+      fAbout: "Los datos públicos oficiales de la Argentina sobre energía, minería, agro, finanzas e industria, organizados para inversores y actualizados en forma automática.", fSectors: "Sectores", fEnergy: "Energía: Vaca Muerta", fMining: "Minería", fAgro: "Agro", fFinance: "Finanzas y bancos", fIndustry: "Industria", fResources: "Recursos", fMethod: "Metodología y fuentes", fCsv: "Descargar datos de Vaca Muerta (CSV)", fNewsletter: "Newsletter semanal", disclaimer: "Información con fines informativos. No constituye asesoramiento de inversión.", footSources: "Todas las cifras provienen de fuentes públicas y oficiales, citadas en cada página."
+    },
+  };
+  AIM_EXTEND(T, "estudio");
+  let saved = null;
+  try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
+  let lang = AIM_PICK_LANG(saved);
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  function render() {
+    const t = T[lang];
+    document.documentElement.lang = lang;
+    document.title = "Onassis & Baronetto · " + t.crumbHere;
+    $$("[data-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    $$("[data-i18n]").forEach(el => { const v = t[el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
+    $("#areaList").innerHTML = t.areas.map(([h, p], i) => `<li><span class="n">${String(i + 1).padStart(2, "0")}</span><h3>${esc(h)}</h3><p>${esc(p)}</p></li>`).join("");
+    $("#stepList").innerHTML = t.steps.map(([h, p]) => `<li><h3>${esc(h)}</h3><p>${esc(p)}</p></li>`).join("");
+    $("#contactMsg").textContent = "";
+  }
+  $$("[data-lang]").forEach(b => b.addEventListener("click", () => { lang = b.dataset.lang; try { localStorage.setItem("vm-lang", lang); } catch (e) {} render(); }));
+
+  $("#contactForm").addEventListener("submit", e => {
+    e.preventDefault();
+    const t = T[lang], f = e.target, msg = $("#contactMsg");
+    const n = f.name.value.trim(), c = f.company.value.trim(), em = f.email.value.trim(), m = f.message.value.trim();
+    if (!n) { msg.textContent = t.errName; f.name.focus(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)) { msg.textContent = t.errEmail; f.email.focus(); return; }
+    if (m.length < 10) { msg.textContent = t.errMsg; f.message.focus(); return; }
+    msg.textContent = "";
+    location.href = `mailto:${MAIL}?subject=${encodeURIComponent(t.subject(n, c))}&body=${encodeURIComponent(t.body(n, c, em, m))}`;
+  });
+  render();
+})();
+</script>
+</body>
+</html>
