@@ -11,6 +11,7 @@ on:
       - "scripts/build_mining.py"
       - "scripts/build_agro.py"
       - "scripts/build_finance.py"
+      - "scripts/build_industry.py"
       - ".github/workflows/update-extras.yml"
 
 permissions:
@@ -54,6 +55,10 @@ jobs:
       - name: Finanzas
         continue-on-error: true
         run: python scripts/build_finance.py
+
+      - name: Industria
+        continue-on-error: true
+        run: python scripts/build_industry.py
 
       - name: Guardar cambios
         run: |
