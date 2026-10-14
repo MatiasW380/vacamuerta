@@ -1,4 +1,4 @@
-# Argentina Invest Monitor · Semana de 14 out 2026
+# Argentina Invest Monitor · Semana de 12 out 2026
 
 Os dados públicos que marcaram a semana, organizados para investidores. Todos os números vêm de fontes oficiais e se atualizam sozinhos no portal.
 

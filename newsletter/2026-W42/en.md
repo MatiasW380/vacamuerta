@@ -1,4 +1,4 @@
-# Argentina Invest Monitor · Week of Oct 14, 2026
+# Argentina Invest Monitor · Week of Oct 12, 2026
 
 The public data that moved this week, organized for investors. Every figure comes from official sources and updates automatically on the portal.
 

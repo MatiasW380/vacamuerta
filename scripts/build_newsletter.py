@@ -358,7 +358,8 @@ def render(D, lang, today):
 
     out += ["---", "", f"## {t['h_firm']}", "", t["firm"].format(url=f"{SITE}/estudio/{q}"), "",
             "---", "", f"_{t['foot']}_", ""]
-    subject = t["subject"].format(d=day(today.isoformat(), lang))
+    monday = today - timedelta(days=today.weekday())
+    subject = t["subject"].format(d=day(monday.isoformat(), lang))
     return subject, "\n".join(out)
 
 
