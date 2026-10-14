@@ -55,6 +55,8 @@ Los datos públicos que movieron la semana, ordenados para inversores. Todas las
 
 ## Asesoramiento legal para invertir en Argentina
 
+Con raíces en Grecia y en Córdoba, el estudio une una tradición vinculada a los negocios internacionales con el conocimiento del derecho argentino. Tradición y actualidad unidas para sumar valor a nuestros clientes y seguridad jurídica a sus inversiones.
+
 Onassis & Baronetto acompaña a empresas e inversores en RIGI, energía, minería, agro y estructuración de inversiones. Escribinos a [onassisbaronettolawyers@gmail.com](mailto:onassisbaronettolawyers@gmail.com) o conocé el estudio en [el portal](https://argentinainvestmonitor-gamma.vercel.app/estudio/?lang=es).
 
 ---

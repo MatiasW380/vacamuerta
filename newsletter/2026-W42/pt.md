@@ -55,6 +55,8 @@ _Manchetes em espanhol, como publicadas por cada veículo._
 
 ## Assessoria jurídica para investir na Argentina
 
+Com raízes na Grécia e em Córdoba, o escritório une uma tradição ligada aos negócios internacionais ao conhecimento do direito argentino. Tradição e atualidade unidas para agregar valor aos nossos clientes e segurança jurídica aos seus investimentos.
+
 Onassis & Baronetto assessora empresas e investidores em RIGI, energia, mineração, agronegócio e estruturação de investimentos. Escreva para [onassisbaronettolawyers@gmail.com](mailto:onassisbaronettolawyers@gmail.com) ou conheça o escritório [no portal](https://argentinainvestmonitor-gamma.vercel.app/estudio/?lang=pt).
 
 ---

@@ -55,6 +55,8 @@ _Headlines in Spanish, as published by each outlet._
 
 ## Legal advice for investing in Argentina
 
+With roots in Greece and in Córdoba, the firm brings together a tradition tied to international business and a deep knowledge of Argentine law. Tradition and the present, joined to add value for our clients and legal certainty to their investments.
+
 Onassis & Baronetto advises companies and investors on RIGI, energy, mining, agribusiness and investment structuring. Write to [onassisbaronettolawyers@gmail.com](mailto:onassisbaronettolawyers@gmail.com) or meet the firm [on the portal](https://argentinainvestmonitor-gamma.vercel.app/estudio/?lang=en).
 
 ---

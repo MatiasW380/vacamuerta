@@ -4,6 +4,7 @@ window.AIM_TR.estudio = {
   pt: {
     crumbHere: "Serviços jurídicos", kicker: "Escritório de advocacia · Córdoba, Argentina",
     h1: "Onassis & Baronetto. Advogados para empresas e investidores na Argentina.",
+    heritage: "Com raízes na Grécia e em Córdoba, o escritório une uma tradição ligada aos negócios internacionais ao conhecimento do direito argentino. Tradição e atualidade unidas para agregar valor aos nossos clientes e segurança jurídica aos seus investimentos.",
     lede: "Acompanhamos empresas e investidores, locais e estrangeiros, em cada etapa de um investimento na Argentina: da estrutura com que chegam ao país aos seus contratos, licenças e à regulação do seu setor.",
     ctaWrite: "Escrever ao escritório", ctaAreas: "Áreas de atuação", areasTitle: "Áreas de atuação",
     areas: [
@@ -31,6 +32,7 @@ window.AIM_TR.estudio = {
   el: {
     crumbHere: "Νομικές υπηρεσίες", kicker: "Δικηγορικό γραφείο · Córdoba, Αργεντινή",
     h1: "Onassis & Baronetto. Δικηγόροι για εταιρείες και επενδυτές στην Αργεντινή.",
+    heritage: "Με ρίζες στην Ελλάδα και στην Κόρδοβα, το γραφείο συνδυάζει μια παράδοση συνδεδεμένη με τις διεθνείς επιχειρήσεις με τη γνώση του αργεντίνικου δικαίου. Παράδοση και σύγχρονη πραγματικότητα μαζί, για να προσθέτουμε αξία στους πελάτες μας και ασφάλεια δικαίου στις επενδύσεις τους.",
     lede: "Συνοδεύουμε εταιρείες και επενδυτές, εγχώριους και από το εξωτερικό, σε κάθε βήμα μιας επένδυσης στην Αργεντινή: από τη δομή με την οποία εισέρχονται στη χώρα έως τις συμβάσεις, τις άδειες και το ρυθμιστικό πλαίσιο του τομέα τους.",
     ctaWrite: "Γράψτε στο γραφείο", ctaAreas: "Τομείς πρακτικής", areasTitle: "Τομείς πρακτικής",
     areas: [
