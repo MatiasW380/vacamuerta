@@ -316,7 +316,7 @@ def render(D, lang, today):
         rl = [line(t["rigi_line"], proj=r.get("project") or r.get("title"), co=r.get("company") or "—",
                    usd=num(r.get("usd_million"), lang), d=day(r.get("date"), lang), url=r.get("url"))
               for r in D["rigi_new"]]
-        section(t["h_rigi"], rl)
+        section(t["h_rigi"], rl, "/rigi/")
 
     if D["regs"]:
         rl = []

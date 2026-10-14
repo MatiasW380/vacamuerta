@@ -27,6 +27,8 @@ Los datos públicos que movieron la semana, ordenados para inversores. Todas las
 
 - **UT RIGI LOS TOLDOS** · Tecpetrol S.A. Gas y Petróleo del Neuquén S.A. UT RIGI Los Toldos U.T.E. (UTLT) · USD 3.529 millones · aprobado el 9 oct 2026. [Boletín Oficial](https://www.boletinoficial.gob.ar/detalleAviso/primera/348768/20261009)
 
+[Ver el tablero completo →](https://argentinainvestmonitor-gamma.vercel.app/rigi/?lang=es)
+
 ## Boletín Oficial: normas de la semana
 
 - **9 oct 2026** · [Resolución 1771/2026 RESOL-2026-1771-APN-MEC](https://www.boletinoficial.gob.ar/detalleAviso/primera/348768/20261009) · Ministerio de Economía  
