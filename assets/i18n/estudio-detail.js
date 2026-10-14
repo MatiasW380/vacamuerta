@@ -1,0 +1,228 @@
+/* Página del estudio: servicios detallados por área, perfiles de cliente y preguntas frecuentes, en los cuatro idiomas.
+   Cada área: [título, descripción, [servicios]]. */
+window.AIM_ESTUDIO_DETAIL = {
+  es: {
+    ctaAreas: "Servicios",
+    whoTitle: "Para quién trabajamos",
+    profiles: [
+      ["Inversores y empresas del exterior", "Que llegan a la Argentina y necesitan una estructura local, un asesor legal en el país y alguien que conozca cómo funcionan los organismos."],
+      ["Proveedores de energía y minería", "Empresas de servicios, equipos e ingeniería que quieren trabajar en Vaca Muerta o en proyectos mineros, y necesitan sus contratos y habilitaciones en regla."],
+      ["Empresas argentinas que buscan capital", "Que necesitan ordenar su estructura societaria y sus contratos para recibir inversores, financiamiento o un socio estratégico."],
+      ["Inversores en agro e inmuebles", "Que compran, arriendan o desarrollan campos y proyectos productivos, y quieren revisar títulos y contratos antes de firmar."],
+    ],
+    areasTitle: "Servicios",
+    areas: [
+      ["Inversión extranjera y RIGI", "Desde la primera estructura hasta los regímenes de promoción.", [
+        "Diagnóstico del proyecto y elección del vehículo de inversión",
+        "Análisis de elegibilidad y armado de la solicitud de adhesión al RIGI (Ley 27.742)",
+        "Constitución del vehículo de proyecto único (VPU) y cumplimiento posterior",
+        "Regímenes de promoción sectoriales y provinciales, como Economía del Conocimiento (Ley 27.506)",
+      ]],
+      ["Sociedades y radicación", "Todo lo necesario para operar legalmente en el país.", [
+        "Constitución de sociedades anónimas, SRL y SAS",
+        "Inscripción de sociedades extranjeras (arts. 118 y 123 de la Ley General de Sociedades) ante la IGJ o la Inspección de Personas Jurídicas de Córdoba",
+        "Alta de la sociedad ante ARCA y obtención de la CUIT",
+        "Estatutos, acuerdos de accionistas y gobierno societario",
+      ]],
+      ["Contratos y adquisiciones", "Revisión y negociación antes de comprometer capital.", [
+        "Due diligence legal de empresas, áreas y activos",
+        "Compraventa de acciones y de activos",
+        "Joint ventures, uniones transitorias (UT) y otros contratos asociativos",
+        "Contratos de suministro, servicios y distribución",
+      ]],
+      ["Energía y minería", "Trámites y contratos ante las autoridades nacionales y provinciales.", [
+        "Concesiones de exploración y explotación de hidrocarburos",
+        "Cesiones de participación en áreas y acuerdos de operación conjunta (JOA)",
+        "Derechos mineros y beneficios de la Ley de Inversiones Mineras (Ley 24.196)",
+        "Permisos ambientales y cumplimiento regulatorio",
+      ]],
+      ["Agro e inmuebles", "Operaciones sobre campos y proyectos productivos.", [
+        "Compraventa y arrendamiento de campos",
+        "Contratos agrarios: arrendamiento, aparcería y contratos accidentales (Ley 13.246)",
+        "Estudio de títulos y situación dominial",
+        "Proyectos agroindustriales y radicación en parques industriales",
+      ]],
+      ["Cambios y regulación", "La relación con el Banco Central y los organismos de control.", [
+        "Ingreso de capitales y su declaración ante el BCRA (Relevamiento de Activos y Pasivos Externos)",
+        "Acceso al mercado de cambios para pagos al exterior, utilidades y dividendos",
+        "Financiamiento externo y préstamos entre empresas del mismo grupo",
+        "Presentaciones ante el BCRA, la CNV y ARCA",
+      ]],
+    ],
+    faqTitle: "Preguntas frecuentes",
+    faq: [
+      ["¿Cómo opera en la Argentina una empresa del exterior?", "Tiene dos caminos principales: abrir una sucursal, que se inscribe según el artículo 118 de la Ley General de Sociedades, o constituir una sociedad local o participar en una, para lo que se inscribe según el artículo 123. La inscripción se hace ante la Inspección General de Justicia o, si el domicilio está en Córdoba, ante la Inspección de Personas Jurídicas de la provincia. La elección depende del tipo de negocio, de la responsabilidad que se quiera asumir y de los impuestos en cada país."],
+      ["¿Qué es el RIGI y qué proyectos pueden adherir?", "Es el Régimen de Incentivo para Grandes Inversiones, creado por la Ley 27.742. Ofrece estabilidad fiscal, aduanera y cambiaria por 30 años, además de beneficios impositivos y cambiarios. Exige montos mínimos de inversión, que parten de USD 200 millones y varían según el sector, y se canaliza a través de un vehículo de proyecto único. En el monitor seguimos las aprobaciones que publica el Boletín Oficial."],
+      ["¿Puedo girar utilidades al exterior?", "Depende de la normativa cambiaria del Banco Central vigente al momento del giro, que cambió muchas veces en los últimos años, y del régimen del proyecto: el RIGI, por ejemplo, prevé beneficios cambiarios propios. Conviene revisarlo antes de que ingrese el capital, porque la forma en que se registra el ingreso influye en cómo se puede salir."],
+      ["¿Quién otorga las concesiones en Vaca Muerta?", "Los recursos naturales pertenecen a las provincias (artículo 124 de la Constitución Nacional). En Vaca Muerta, la mayoría de las áreas están en Neuquén, que otorga las concesiones bajo la Ley de Hidrocarburos 17.319 y sus reformas. Las áreas en Río Negro, Mendoza y La Pampa dependen de cada provincia."],
+    ],
+  },
+  en: {
+    ctaAreas: "Services",
+    whoTitle: "Who we work for",
+    profiles: [
+      ["Foreign investors and companies", "Arriving in Argentina and needing a local structure, legal counsel in the country and someone who knows how the agencies work."],
+      ["Energy and mining suppliers", "Service, equipment and engineering companies that want to work in Vaca Muerta or on mining projects and need their contracts and permits in order."],
+      ["Argentine companies raising capital", "That need to put their corporate structure and contracts in order to bring in investors, financing or a strategic partner."],
+      ["Agriculture and real estate investors", "Buying, leasing or developing farmland and productive projects, who want titles and contracts reviewed before signing."],
+    ],
+    areasTitle: "Services",
+    areas: [
+      ["Foreign investment and the RIGI", "From the first structure to incentive regimes.", [
+        "Project assessment and choice of investment vehicle",
+        "Eligibility analysis and preparation of the RIGI application (Law 27,742)",
+        "Setting up the single-project vehicle (VPU) and ongoing compliance",
+        "Sector and provincial incentive regimes, such as the Knowledge Economy regime (Law 27,506)",
+      ]],
+      ["Companies and market entry", "Everything needed to operate legally in the country.", [
+        "Incorporation of corporations (S.A.), LLCs (S.R.L.) and simplified companies (S.A.S.)",
+        "Registration of foreign companies (sections 118 and 123 of the General Companies Law) with the IGJ or Córdoba's Legal Entities Inspectorate",
+        "Registration with the tax agency (ARCA) and tax ID (CUIT)",
+        "Bylaws, shareholder agreements and corporate governance",
+      ]],
+      ["Contracts and acquisitions", "Review and negotiation before committing capital.", [
+        "Legal due diligence on companies, blocks and assets",
+        "Share and asset purchase agreements",
+        "Joint ventures, temporary unions (UT) and other associative contracts",
+        "Supply, services and distribution agreements",
+      ]],
+      ["Energy and mining", "Filings and contracts before national and provincial authorities.", [
+        "Hydrocarbon exploration and production concessions",
+        "Farm-ins, transfers of working interests and joint operating agreements (JOA)",
+        "Mining rights and the benefits of the Mining Investment Law (Law 24,196)",
+        "Environmental permits and regulatory compliance",
+      ]],
+      ["Agriculture and real estate", "Transactions involving farmland and productive projects.", [
+        "Purchase and lease of farmland",
+        "Agricultural contracts: leases, sharecropping and seasonal contracts (Law 13,246)",
+        "Title searches and ownership review",
+        "Agro-industrial projects and set-up in industrial parks",
+      ]],
+      ["FX and regulation", "Dealings with the Central Bank and regulators.", [
+        "Capital inflows and their reporting to the Central Bank (survey of external assets and liabilities)",
+        "Access to the FX market for foreign payments, profits and dividends",
+        "Foreign financing and intra-group loans",
+        "Filings with the Central Bank, the CNV and the tax agency (ARCA)",
+      ]],
+    ],
+    faqTitle: "Frequently asked questions",
+    faq: [
+      ["How does a foreign company operate in Argentina?", "There are two main routes: opening a branch, registered under section 118 of the General Companies Law, or incorporating or investing in a local company, registered under section 123. Registration is with the Inspección General de Justicia or, for companies domiciled in Córdoba, the province's Legal Entities Inspectorate. The choice depends on the business, the liability the investor is willing to take on and the tax position in each country."],
+      ["What is the RIGI and which projects can apply?", "The Large Investment Incentive Regime, created by Law 27,742. It grants 30 years of tax, customs and FX stability, plus tax and FX benefits. It requires minimum investments that start at USD 200 million and vary by sector, channeled through a single-project vehicle. The monitor tracks the approvals published in the Official Gazette."],
+      ["Can I send profits abroad?", "It depends on the Central Bank's FX rules in force when the payment is made, which have changed many times in recent years, and on the project's regime: the RIGI, for example, includes its own FX benefits. It is worth reviewing before the capital comes in, because how the inflow is registered affects how it can leave."],
+      ["Who grants concessions in Vaca Muerta?", "Natural resources belong to the provinces (section 124 of the National Constitution). Most Vaca Muerta blocks are in Neuquén, which grants concessions under Hydrocarbons Law 17,319 and its amendments. Blocks in Río Negro, Mendoza and La Pampa fall under each of those provinces."],
+    ],
+  },
+  pt: {
+    ctaAreas: "Serviços",
+    whoTitle: "Para quem trabalhamos",
+    profiles: [
+      ["Investidores e empresas estrangeiras", "Que chegam à Argentina e precisam de uma estrutura local, de assessoria jurídica no país e de alguém que conheça o funcionamento dos órgãos públicos."],
+      ["Fornecedores de energia e mineração", "Empresas de serviços, equipamentos e engenharia que querem trabalhar em Vaca Muerta ou em projetos de mineração e precisam de contratos e licenças em ordem."],
+      ["Empresas argentinas em busca de capital", "Que precisam organizar sua estrutura societária e seus contratos para receber investidores, financiamento ou um sócio estratégico."],
+      ["Investidores em agro e imóveis", "Que compram, arrendam ou desenvolvem terras e projetos produtivos e querem revisar títulos e contratos antes de assinar."],
+    ],
+    areasTitle: "Serviços",
+    areas: [
+      ["Investimento estrangeiro e RIGI", "Da primeira estrutura aos regimes de incentivo.", [
+        "Diagnóstico do projeto e escolha do veículo de investimento",
+        "Análise de elegibilidade e preparação do pedido de adesão ao RIGI (Lei 27.742)",
+        "Constituição do veículo de projeto único (VPU) e conformidade posterior",
+        "Regimes de incentivo setoriais e provinciais, como o da Economia do Conhecimento (Lei 27.506)",
+      ]],
+      ["Sociedades e instalação no país", "Tudo o que é necessário para operar legalmente no país.", [
+        "Constituição de sociedades anônimas, SRL e SAS",
+        "Registro de sociedades estrangeiras (arts. 118 e 123 da Lei Geral de Sociedades) na IGJ ou na Inspeção de Pessoas Jurídicas de Córdoba",
+        "Inscrição da sociedade na ARCA e obtenção do CUIT",
+        "Estatutos, acordos de acionistas e governança societária",
+      ]],
+      ["Contratos e aquisições", "Revisão e negociação antes de comprometer capital.", [
+        "Due diligence jurídica de empresas, áreas e ativos",
+        "Compra e venda de ações e de ativos",
+        "Joint ventures, uniões transitórias (UT) e outros contratos associativos",
+        "Contratos de fornecimento, serviços e distribuição",
+      ]],
+      ["Energia e mineração", "Trâmites e contratos perante as autoridades nacionais e provinciais.", [
+        "Concessões de exploração e produção de hidrocarbonetos",
+        "Cessões de participação em áreas e acordos de operação conjunta (JOA)",
+        "Direitos minerários e benefícios da Lei de Investimentos Mineiros (Lei 24.196)",
+        "Licenças ambientais e conformidade regulatória",
+      ]],
+      ["Agro e imóveis", "Operações com terras e projetos produtivos.", [
+        "Compra e venda e arrendamento de terras agrícolas",
+        "Contratos agrários: arrendamento, parceria e contratos acidentais (Lei 13.246)",
+        "Análise de títulos e situação dominial",
+        "Projetos agroindustriais e instalação em parques industriais",
+      ]],
+      ["Câmbio e regulação", "A relação com o Banco Central e os órgãos reguladores.", [
+        "Ingresso de capitais e sua declaração ao BCRA (Levantamento de Ativos e Passivos Externos)",
+        "Acesso ao mercado de câmbio para pagamentos ao exterior, lucros e dividendos",
+        "Financiamento externo e empréstimos entre empresas do mesmo grupo",
+        "Apresentações ao BCRA, à CNV e à ARCA",
+      ]],
+    ],
+    faqTitle: "Perguntas frequentes",
+    faq: [
+      ["Como uma empresa estrangeira opera na Argentina?", "Há dois caminhos principais: abrir uma filial, registrada segundo o artigo 118 da Lei Geral de Sociedades, ou constituir uma sociedade local ou participar de uma, registrando-se segundo o artigo 123. O registro é feito na Inspeção Geral de Justiça ou, se o domicílio for em Córdoba, na Inspeção de Pessoas Jurídicas da província. A escolha depende do tipo de negócio, da responsabilidade que se quer assumir e da tributação em cada país."],
+      ["O que é o RIGI e quais projetos podem aderir?", "É o Regime de Incentivo para Grandes Investimentos, criado pela Lei 27.742. Oferece estabilidade fiscal, aduaneira e cambial por 30 anos, além de benefícios tributários e cambiais. Exige investimentos mínimos, que partem de USD 200 milhões e variam segundo o setor, canalizados por meio de um veículo de projeto único. No monitor acompanhamos as aprovações publicadas no Boletim Oficial."],
+      ["Posso remeter lucros ao exterior?", "Depende das normas cambiais do Banco Central vigentes no momento da remessa, que mudaram muitas vezes nos últimos anos, e do regime do projeto: o RIGI, por exemplo, prevê benefícios cambiais próprios. Convém revisar isso antes do ingresso do capital, porque a forma como o ingresso é registrado influencia como ele pode sair."],
+      ["Quem concede as áreas em Vaca Muerta?", "Os recursos naturais pertencem às províncias (artigo 124 da Constituição Nacional). A maior parte das áreas de Vaca Muerta fica em Neuquén, que concede as áreas segundo a Lei de Hidrocarbonetos 17.319 e suas reformas. As áreas em Río Negro, Mendoza e La Pampa dependem de cada província."],
+    ],
+  },
+  el: {
+    ctaAreas: "Υπηρεσίες",
+    whoTitle: "Για ποιους εργαζόμαστε",
+    profiles: [
+      ["Ξένοι επενδυτές και εταιρείες", "Που έρχονται στην Αργεντινή και χρειάζονται τοπική δομή, νομικό σύμβουλο στη χώρα και κάποιον που γνωρίζει πώς λειτουργούν οι δημόσιοι φορείς."],
+      ["Προμηθευτές ενέργειας και εξόρυξης", "Εταιρείες υπηρεσιών, εξοπλισμού και μηχανικής που θέλουν να εργαστούν στη Vaca Muerta ή σε μεταλλευτικά έργα και χρειάζονται τις συμβάσεις και τις άδειές τους σε τάξη."],
+      ["Αργεντίνικες εταιρείες που αναζητούν κεφάλαια", "Που πρέπει να οργανώσουν την εταιρική τους δομή και τις συμβάσεις τους για να δεχθούν επενδυτές, χρηματοδότηση ή στρατηγικό εταίρο."],
+      ["Επενδυτές σε γεωργία και ακίνητα", "Που αγοράζουν, μισθώνουν ή αναπτύσσουν αγροτική γη και παραγωγικά έργα και θέλουν έλεγχο τίτλων και συμβάσεων πριν υπογράψουν."],
+    ],
+    areasTitle: "Υπηρεσίες",
+    areas: [
+      ["Ξένες επενδύσεις και RIGI", "Από την πρώτη δομή έως τα καθεστώτα κινήτρων.", [
+        "Αξιολόγηση του έργου και επιλογή επενδυτικού οχήματος",
+        "Ανάλυση επιλεξιμότητας και προετοιμασία της αίτησης ένταξης στο RIGI (Νόμος 27.742)",
+        "Σύσταση του οχήματος μοναδικού έργου (VPU) και μεταγενέστερη συμμόρφωση",
+        "Τομεακά και επαρχιακά καθεστώτα κινήτρων, όπως της Οικονομίας της Γνώσης (Νόμος 27.506)",
+      ]],
+      ["Εταιρείες και εγκατάσταση", "Ό,τι χρειάζεται για νόμιμη δραστηριότητα στη χώρα.", [
+        "Σύσταση ανωνύμων εταιρειών, ΕΠΕ (SRL) και SAS",
+        "Καταχώριση αλλοδαπών εταιρειών (άρθρα 118 και 123 του Γενικού Νόμου περί Εταιρειών) στην IGJ ή στην Επιθεώρηση Νομικών Προσώπων της Κόρδοβα",
+        "Εγγραφή στη φορολογική αρχή (ARCA) και απόκτηση φορολογικού αριθμού (CUIT)",
+        "Καταστατικά, συμφωνίες μετόχων και εταιρική διακυβέρνηση",
+      ]],
+      ["Συμβάσεις και εξαγορές", "Έλεγχος και διαπραγμάτευση πριν από τη δέσμευση κεφαλαίων.", [
+        "Νομικός έλεγχος (due diligence) εταιρειών, περιοχών και περιουσιακών στοιχείων",
+        "Αγοραπωλησία μετοχών και περιουσιακών στοιχείων",
+        "Κοινοπραξίες, προσωρινές ενώσεις (UT) και άλλες συνεταιριστικές συμβάσεις",
+        "Συμβάσεις προμήθειας, υπηρεσιών και διανομής",
+      ]],
+      ["Ενέργεια και εξόρυξη", "Διαδικασίες και συμβάσεις ενώπιον εθνικών και επαρχιακών αρχών.", [
+        "Παραχωρήσεις έρευνας και εκμετάλλευσης υδρογονανθράκων",
+        "Μεταβιβάσεις συμμετοχών σε περιοχές και συμφωνίες κοινής εκμετάλλευσης (JOA)",
+        "Μεταλλευτικά δικαιώματα και οφέλη του Νόμου για τις Μεταλλευτικές Επενδύσεις (Νόμος 24.196)",
+        "Περιβαλλοντικές άδειες και κανονιστική συμμόρφωση",
+      ]],
+      ["Γεωργία και ακίνητα", "Συναλλαγές σε αγροτική γη και παραγωγικά έργα.", [
+        "Αγοραπωλησία και μίσθωση αγροτικής γης",
+        "Αγροτικές συμβάσεις: μίσθωση, επιμορτή καλλιέργεια και περιστασιακές συμβάσεις (Νόμος 13.246)",
+        "Έλεγχος τίτλων και ιδιοκτησιακού καθεστώτος",
+        "Αγροβιομηχανικά έργα και εγκατάσταση σε βιομηχανικά πάρκα",
+      ]],
+      ["Συνάλλαγμα και ρυθμιστικό πλαίσιο", "Η σχέση με την Κεντρική Τράπεζα και τις εποπτικές αρχές.", [
+        "Εισροή κεφαλαίων και δήλωσή τους στην Κεντρική Τράπεζα (απογραφή εξωτερικών απαιτήσεων και υποχρεώσεων)",
+        "Πρόσβαση στην αγορά συναλλάγματος για πληρωμές στο εξωτερικό, κέρδη και μερίσματα",
+        "Εξωτερική χρηματοδότηση και ενδοομιλικά δάνεια",
+        "Υποβολές στην Κεντρική Τράπεζα, στην CNV και στην ARCA",
+      ]],
+    ],
+    faqTitle: "Συχνές ερωτήσεις",
+    faq: [
+      ["Πώς δραστηριοποιείται στην Αργεντινή μια αλλοδαπή εταιρεία;", "Υπάρχουν δύο βασικοί δρόμοι: η ίδρυση υποκαταστήματος, που καταχωρίζεται σύμφωνα με το άρθρο 118 του Γενικού Νόμου περί Εταιρειών, ή η σύσταση τοπικής εταιρείας ή η συμμετοχή σε αυτήν, με καταχώριση σύμφωνα με το άρθρο 123. Η καταχώριση γίνεται στην Inspección General de Justicia ή, αν η έδρα είναι στην Κόρδοβα, στην Επιθεώρηση Νομικών Προσώπων της επαρχίας. Η επιλογή εξαρτάται από το είδος της επιχείρησης, την ευθύνη που θέλει να αναλάβει ο επενδυτής και τη φορολογία σε κάθε χώρα."],
+      ["Τι είναι το RIGI και ποια έργα μπορούν να ενταχθούν;", "Είναι το Καθεστώς Κινήτρων για Μεγάλες Επενδύσεις, που θεσπίστηκε με τον Νόμο 27.742. Προσφέρει φορολογική, τελωνειακή και συναλλαγματική σταθερότητα για 30 χρόνια, καθώς και φορολογικά και συναλλαγματικά οφέλη. Απαιτεί ελάχιστες επενδύσεις που ξεκινούν από USD 200 εκατ. και διαφέρουν ανά τομέα, μέσω ενός οχήματος μοναδικού έργου. Στο monitor παρακολουθούμε τις εγκρίσεις που δημοσιεύει η Επίσημη Εφημερίδα."],
+      ["Μπορώ να μεταφέρω κέρδη στο εξωτερικό;", "Εξαρτάται από τους κανόνες συναλλάγματος της Κεντρικής Τράπεζας που ισχύουν τη στιγμή της μεταφοράς, οι οποίοι άλλαξαν πολλές φορές τα τελευταία χρόνια, και από το καθεστώς του έργου: το RIGI, για παράδειγμα, προβλέπει δικά του συναλλαγματικά οφέλη. Αξίζει να εξεταστεί πριν από την εισροή του κεφαλαίου, γιατί ο τρόπος καταχώρισης της εισροής επηρεάζει τον τρόπο εξόδου."],
+      ["Ποιος χορηγεί τις παραχωρήσεις στη Vaca Muerta;", "Οι φυσικοί πόροι ανήκουν στις επαρχίες (άρθρο 124 του Εθνικού Συντάγματος). Οι περισσότερες περιοχές της Vaca Muerta βρίσκονται στο Neuquén, που χορηγεί τις παραχωρήσεις βάσει του Νόμου για τους Υδρογονάνθρακες 17.319 και των τροποποιήσεών του. Οι περιοχές στο Río Negro, τη Mendoza και τη La Pampa υπάγονται σε κάθε επαρχία."],
+    ],
+  },
+};

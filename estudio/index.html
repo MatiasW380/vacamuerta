@@ -50,6 +50,23 @@
 @media (max-width: 520px) { .contact form { grid-template-columns: 1fr; } }
 .fine { margin: 40px 0 0; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--ink-3); font-size: 13.5px; max-width: 80ch; }
 .firm-hero .heritage { font-family: var(--serif); font-style: italic; font-size: 19px; line-height: 1.55; color: var(--ink); max-width: 60ch; margin: 22px 0 0; padding-left: 18px; border-left: 2px solid var(--brand); }
+.areas .svc { margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.areas .svc li { position: relative; padding: 0 0 0 16px; border: 0; font-size: 14.5px; line-height: 1.45; color: var(--ink); }
+.areas .svc li::before { content: ""; position: absolute; left: 0; top: .62em; width: 7px; height: 1.5px; background: var(--accent); }
+.who { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin: 22px 0 0; padding: 0; list-style: none; }
+.who li { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 20px; }
+.who h3 { font-family: var(--serif); font-weight: 550; font-size: 18px; line-height: 1.25; margin: 0 0 8px; color: var(--ink); }
+.who p { margin: 0; color: var(--ink-2); font-size: 15px; }
+@media (max-width: 980px) { .who { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .who { grid-template-columns: 1fr; } }
+.faq { margin: 22px 0 0; border-top: 1px solid var(--ink); max-width: 78ch; }
+.faq details { border-bottom: 1px solid var(--rule); }
+.faq summary { cursor: pointer; list-style: none; padding: 18px 32px 18px 0; position: relative; font-family: var(--serif); font-weight: 550; font-size: 19px; line-height: 1.3; color: var(--ink); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 4px; top: 16px; font-family: var(--sans); font-size: 22px; color: var(--brand); }
+.faq details[open] summary::after { content: "−"; }
+.faq summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.faq details p { margin: 0 0 20px; color: var(--ink-2); font-size: 16px; line-height: 1.6; }
 </style>
 </head>
 <body>
@@ -84,6 +101,11 @@
       </div>
     </section>
 
+    <section class="section chapter" aria-labelledby="whoTitle">
+      <h2 id="whoTitle" data-i18n="whoTitle">Who we work for</h2>
+      <ul class="who" id="whoList"></ul>
+    </section>
+
     <section class="section chapter" id="areas" aria-labelledby="areasTitle">
       <h2 id="areasTitle" data-i18n="areasTitle">Practice areas</h2>
       <ul class="areas" id="areaList"></ul>
@@ -93,6 +115,11 @@
       <h2 id="howTitle" data-i18n="howTitle">How we work</h2>
       <ol class="steps" id="stepList"></ol>
       <p class="monitor-note" data-i18n="monitorNote">Argentina Invest Monitor is the firm's public tool: it brings together the official data we follow to advise our clients, sector by sector.</p>
+    </section>
+
+    <section class="section chapter" id="faq" aria-labelledby="faqTitle">
+      <h2 id="faqTitle" data-i18n="faqTitle">Frequently asked questions</h2>
+      <div class="faq" id="faqList"></div>
     </section>
 
     <section class="section chapter" id="contact" aria-labelledby="contactTitle">
@@ -158,6 +185,7 @@
 
 <script src="/assets/i18n/common.js"></script>
 <script src="/assets/i18n/estudio.js"></script>
+<script src="/assets/i18n/estudio-detail.js"></script>
 <script>
 (() => {
   const MAIL = "onassisbaronettolawyers@gmail.com";
@@ -168,14 +196,6 @@
       heritage: "With roots in Greece and in Córdoba, the firm brings together a tradition tied to international business and a deep knowledge of Argentine law. Tradition and the present, joined to add value for our clients and legal certainty to their investments.",
       lede: "We work with companies and investors, local and from abroad, at every step of an investment in Argentina: from the structure they enter the country with to their contracts, permits and the regulation of their sector.",
       ctaWrite: "Write to the firm", ctaAreas: "Practice areas", areasTitle: "Practice areas",
-      areas: [
-        ["Foreign investment and the RIGI", "Structuring investments, assessing the available incentive regimes and preparing applications to the Large Investment Incentive Regime (RIGI)."],
-        ["Companies and market entry", "Incorporating companies, registering foreign companies and branches, corporate governance and shareholder agreements."],
-        ["Commercial contracts", "Supply, distribution, joint venture and consortium agreements, and legal due diligence on companies and assets before an acquisition."],
-        ["Energy and mining", "Concessions, permits and compliance before the national and provincial hydrocarbon and mining authorities."],
-        ["Agriculture and real estate", "Buying and leasing farmland, agricultural contracts and real estate transactions linked to productive projects."],
-        ["FX and regulation", "Central Bank foreign exchange rules, inflows and repatriation of capital, and dealings with regulators."],
-      ],
       howTitle: "How we work",
       steps: [
         ["First conversation", "You tell us about the project and where it stands. We tell you what is needed and in what order."],
@@ -197,14 +217,6 @@
       heritage: "Con raíces en Grecia y en Córdoba, el estudio une una tradición vinculada a los negocios internacionales con el conocimiento del derecho argentino. Tradición y actualidad unidas para sumar valor a nuestros clientes y seguridad jurídica a sus inversiones.",
       lede: "Acompañamos a empresas e inversores, locales y del exterior, en cada paso de una inversión en la Argentina: desde la estructura con la que llegan al país hasta sus contratos, sus permisos y la regulación de su sector.",
       ctaWrite: "Escribir al estudio", ctaAreas: "Áreas de práctica", areasTitle: "Áreas de práctica",
-      areas: [
-        ["Inversión extranjera y RIGI", "Estructuración de inversiones, análisis de los regímenes de promoción disponibles y preparación de la solicitud de adhesión al Régimen de Incentivo para Grandes Inversiones (RIGI)."],
-        ["Sociedades y radicación", "Constitución de sociedades, inscripción de sociedades extranjeras y sucursales, gobierno societario y acuerdos de accionistas."],
-        ["Contratos comerciales", "Contratos de suministro, distribución, joint ventures y uniones transitorias, y revisión legal (due diligence) de empresas y activos antes de una compra."],
-        ["Energía y minería", "Concesiones, permisos y cumplimiento ante las autoridades nacionales y provinciales de hidrocarburos y minería."],
-        ["Agro e inmuebles", "Compra y arrendamiento de campos, contratos agrarios y operaciones inmobiliarias vinculadas a proyectos productivos."],
-        ["Cambios y regulación", "Normativa cambiaria del Banco Central, ingreso y repatriación de capitales, y relación con los organismos de control."],
-      ],
       howTitle: "Cómo trabajamos",
       steps: [
         ["Primera conversación", "Nos cuenta el proyecto y en qué etapa está. Le decimos qué hace falta y en qué orden."],
@@ -222,6 +234,7 @@
     },
   };
   AIM_EXTEND(T, "estudio");
+  Object.keys(T).forEach(l => Object.assign(T[l], (window.AIM_ESTUDIO_DETAIL || {})[l] || {}));
   let saved = null;
   try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
   try { const q = new URLSearchParams(location.search).get("lang"); if (q) saved = q; } catch (e) {}
@@ -235,7 +248,9 @@
     document.title = "Onassis & Baronetto · " + t.crumbHere;
     $$("[data-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
     $$("[data-i18n]").forEach(el => { const v = t[el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
-    $("#areaList").innerHTML = t.areas.map(([h, p], i) => `<li><span class="n">${String(i + 1).padStart(2, "0")}</span><h3>${esc(h)}</h3><p>${esc(p)}</p></li>`).join("");
+    $("#whoList").innerHTML = t.profiles.map(([h, p]) => `<li><h3>${esc(h)}</h3><p>${esc(p)}</p></li>`).join("");
+    $("#areaList").innerHTML = t.areas.map(([h, p, items], i) => `<li><span class="n">${String(i + 1).padStart(2, "0")}</span><h3>${esc(h)}</h3><p>${esc(p)}</p><ul class="svc">${(items || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul></li>`).join("");
+    $("#faqList").innerHTML = t.faq.map(([q, a], i) => `<details${i === 0 ? " open" : ""}><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("");
     $("#stepList").innerHTML = t.steps.map(([h, p]) => `<li><h3>${esc(h)}</h3><p>${esc(p)}</p></li>`).join("");
     $("#contactMsg").textContent = "";
   }

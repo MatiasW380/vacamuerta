@@ -7,14 +7,6 @@ window.AIM_TR.estudio = {
     heritage: "Com raízes na Grécia e em Córdoba, o escritório une uma tradição ligada aos negócios internacionais ao conhecimento do direito argentino. Tradição e atualidade unidas para agregar valor aos nossos clientes e segurança jurídica aos seus investimentos.",
     lede: "Acompanhamos empresas e investidores, locais e estrangeiros, em cada etapa de um investimento na Argentina: da estrutura com que chegam ao país aos seus contratos, licenças e à regulação do seu setor.",
     ctaWrite: "Escrever ao escritório", ctaAreas: "Áreas de atuação", areasTitle: "Áreas de atuação",
-    areas: [
-      ["Investimento estrangeiro e RIGI", "Estruturação de investimentos, análise dos regimes de incentivo disponíveis e preparação do pedido de adesão ao Regime de Incentivo para Grandes Investimentos (RIGI)."],
-      ["Sociedades e instalação no país", "Constituição de sociedades, registro de sociedades estrangeiras e filiais, governança societária e acordos de acionistas."],
-      ["Contratos comerciais", "Contratos de fornecimento, distribuição, joint ventures e consórcios, e auditoria jurídica (due diligence) de empresas e ativos antes de uma aquisição."],
-      ["Energia e mineração", "Concessões, licenças e conformidade perante as autoridades nacionais e provinciais de hidrocarbonetos e mineração."],
-      ["Agro e imóveis", "Compra e arrendamento de terras agrícolas, contratos agrários e operações imobiliárias ligadas a projetos produtivos."],
-      ["Câmbio e regulação", "Normas cambiais do Banco Central, ingresso e repatriação de capitais e relacionamento com os órgãos reguladores."],
-    ],
     howTitle: "Como trabalhamos",
     steps: [
       ["Primeira conversa", "Você nos conta o projeto e em que etapa está. Dizemos o que é necessário e em que ordem."],
@@ -35,14 +27,6 @@ window.AIM_TR.estudio = {
     heritage: "Με ρίζες στην Ελλάδα και στην Κόρδοβα, το γραφείο συνδυάζει μια παράδοση συνδεδεμένη με τις διεθνείς επιχειρήσεις με τη γνώση του αργεντίνικου δικαίου. Παράδοση και σύγχρονη πραγματικότητα μαζί, για να προσθέτουμε αξία στους πελάτες μας και ασφάλεια δικαίου στις επενδύσεις τους.",
     lede: "Συνοδεύουμε εταιρείες και επενδυτές, εγχώριους και από το εξωτερικό, σε κάθε βήμα μιας επένδυσης στην Αργεντινή: από τη δομή με την οποία εισέρχονται στη χώρα έως τις συμβάσεις, τις άδειες και το ρυθμιστικό πλαίσιο του τομέα τους.",
     ctaWrite: "Γράψτε στο γραφείο", ctaAreas: "Τομείς πρακτικής", areasTitle: "Τομείς πρακτικής",
-    areas: [
-      ["Ξένες επενδύσεις και RIGI", "Διάρθρωση επενδύσεων, αξιολόγηση των διαθέσιμων καθεστώτων κινήτρων και προετοιμασία της αίτησης ένταξης στο Καθεστώς Κινήτρων για Μεγάλες Επενδύσεις (RIGI)."],
-      ["Εταιρείες και εγκατάσταση", "Σύσταση εταιρειών, καταχώριση αλλοδαπών εταιρειών και υποκαταστημάτων, εταιρική διακυβέρνηση και συμφωνίες μετόχων."],
-      ["Εμπορικές συμβάσεις", "Συμβάσεις προμήθειας, διανομής, κοινοπραξίας, και νομικός έλεγχος (due diligence) εταιρειών και περιουσιακών στοιχείων πριν από μια εξαγορά."],
-      ["Ενέργεια και εξόρυξη", "Παραχωρήσεις, άδειες και συμμόρφωση ενώπιον των εθνικών και επαρχιακών αρχών υδρογονανθράκων και ορυχείων."],
-      ["Γεωργία και ακίνητα", "Αγορά και μίσθωση αγροτικής γης, αγροτικές συμβάσεις και συναλλαγές ακινήτων που συνδέονται με παραγωγικά έργα."],
-      ["Συνάλλαγμα και ρυθμιστικό πλαίσιο", "Κανόνες συναλλάγματος της Κεντρικής Τράπεζας, εισροή και επαναπατρισμός κεφαλαίων, και σχέσεις με τις εποπτικές αρχές."],
-    ],
     howTitle: "Πώς εργαζόμαστε",
     steps: [
       ["Πρώτη συζήτηση", "Μας περιγράφετε το έργο και σε ποιο στάδιο βρίσκεται. Σας λέμε τι χρειάζεται και με ποια σειρά."],
