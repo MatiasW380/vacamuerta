@@ -170,6 +170,7 @@
       sectorsTitle: "Sectors", live: "Live", soon: "In development", sources: "Sources", plannedSources: "Planned sources", open: "Open the dashboard",
       kOil: "Vaca Muerta oil", kOilS: (y, m) => `barrels a day in ${m}, ${y} year on year`,
       kFx: "Official dollar", kFxS: d => `pesos per dollar, BCRA, ${d}`,
+      kMed: "Neuquén crude (Medanito)", kMedS: p => `USD per barrel, realized price, ${p}`,
       kBrent: "Brent crude", kBrentS: d => `USD per barrel, EIA, ${d}`,
       kWells: "Wells producing", kWellsS: m => `in Vaca Muerta, ${m}`,
       kRigi: "Latest RIGI approval", kRigiS: d => `Official Gazette, ${d}`,
@@ -197,6 +198,7 @@
       sectorsTitle: "Sectores", live: "En vivo", soon: "En desarrollo", sources: "Fuentes", plannedSources: "Fuentes previstas", open: "Abrir el tablero",
       kOil: "Petróleo de Vaca Muerta", kOilS: (y, m) => `barriles por día en ${m}, ${y} interanual`,
       kFx: "Dólar oficial", kFxS: d => `pesos por dólar, BCRA, ${d}`,
+      kMed: "Petróleo de Neuquén (Medanito)", kMedS: p => `USD por barril, precio de venta, ${p}`,
       kBrent: "Petróleo Brent", kBrentS: d => `USD por barril, EIA, ${d}`,
       kWells: "Pozos en producción", kWellsS: m => `en Vaca Muerta, ${m}`,
       kRigi: "Última aprobación RIGI", kRigiS: d => `Boletín Oficial, ${d}`,
@@ -267,7 +269,9 @@
     const pulse = [];
     if (VM && VM.kpis) pulse.push({ k: t.kOil, v: fmt(VM.kpis.oil_bbl_d), s: t.kOilS(pct(VM.kpis.oil_yoy_pct), monthName(VM.latest_period)), href: "/vaca-muerta/" });
     if (MN && MN.exports) pulse.push({ k: t.kMin, v: fmt(MN.exports.last_12m), s: t.kMinS(monthName(MN.exports.latest_period)), href: "/mineria/" });
-    if (EX && EX.oil_price && EX.oil_price.brent) pulse.push({ k: t.kBrent, v: fmt(EX.oil_price.brent.usd_bbl, 2), s: t.kBrentS(shortDate(EX.oil_price.brent.date)), href: "/vaca-muerta/#priceSection" });
+    const neu = EX && EX.royalties && EX.royalties.price_usd_bbl && (EX.royalties.price_usd_bbl["Neuquén"] || []).slice(-1)[0];
+    if (neu) pulse.push({ k: t.kMed, v: fmt(neu.usd_bbl, 2), s: t.kMedS(monthName(neu.period)), href: "/vaca-muerta/#priceSection" });
+    else if (EX && EX.oil_price && EX.oil_price.brent) pulse.push({ k: t.kBrent, v: fmt(EX.oil_price.brent.usd_bbl, 2), s: t.kBrentS(shortDate(EX.oil_price.brent.date)), href: "/vaca-muerta/#priceSection" });
     if (EX && EX.fx && EX.fx.latest) pulse.push({ k: t.kFx, v: fmt(EX.fx.latest.ars_per_usd, 2), s: t.kFxS(shortDate(EX.fx.latest.date)), href: "/vaca-muerta/#priceSection" });
     if (VM && VM.kpis && VM.kpis.active_wells && pulse.length < 4) pulse.push({ k: t.kWells, v: fmt(VM.kpis.active_wells), s: t.kWellsS(monthName(VM.latest_period)), href: "/vaca-muerta/#wellsLede" });
     const rigi = EX && EX.regulations && (EX.regulations.items || []).find(i => (i.topics || []).includes("RIGI"));
