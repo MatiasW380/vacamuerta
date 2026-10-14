@@ -263,6 +263,7 @@
   AIM_EXTEND(T, "industria");
   let saved = null;
   try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
+  try { const q = new URLSearchParams(location.search).get("lang"); if (q) saved = q; } catch (e) {}
   let lang = AIM_PICK_LANG(saved);
   let D = null, mapState = "idle", map = null, ptype = "all";
   const C = AIMCharts(() => lang, () => T[lang]);

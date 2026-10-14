@@ -390,6 +390,7 @@
   AIM_EXTEND(T, "mineria");
   let saved = null;
   try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
+  try { const q = new URLSearchParams(location.search).get("lang"); if (q) saved = q; } catch (e) {}
   let lang = AIM_PICK_LANG(saved);
   let D = null, EX = null, mapState = "idle", map = null, stage = "all";
   const C = AIMCharts(() => lang, () => T[lang]);

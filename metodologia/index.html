@@ -297,6 +297,7 @@ html[lang="en"] .doc > div[lang="en"], html[lang="es"] .doc > div[lang="es"], ht
   T.el = Object.assign({}, T.en, AIM_TR.legal.el, AIM_TR.common.el, { crumbHere: "Μεθοδολογία" });
   let saved = null;
   try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
+  try { const q = new URLSearchParams(location.search).get("lang"); if (q) saved = q; } catch (e) {}
   let lang = AIM_PICK_LANG(saved);
   function render() {
     document.documentElement.lang = lang;

@@ -19,7 +19,14 @@ Estilos compartidos en `assets/site.css`. Todos los datos viven en `data/` y se 
 
 ## Newsletter
 
-El alta usa [Buttondown](https://buttondown.com). Creá una cuenta, copiá la API key y cargala en Vercel como variable de entorno `BUTTONDOWN_API_KEY` (Settings, Environment Variables). Sin esa variable el formulario avisa que las suscripciones abren pronto.
+**Alta.** `api/subscribe.js` suma cada suscriptor a [Buttondown](https://buttondown.com) con la etiqueta de su idioma (`lang-es`, `lang-en`, `lang-pt`, `lang-el`). Necesita la API key en Vercel como variable de entorno `BUTTONDOWN_API_KEY`.
+
+**Edición semanal.** `scripts/build_newsletter.py` arma cada lunes una edición en los cuatro idiomas con los datos de `data/`: Vaca Muerta, mercados y macro, aprobaciones RIGI del último mes, normas del Boletín Oficial de la semana, otros sectores, noticias y el bloque del estudio. La guarda en `newsletter/<año>-W<semana>/<idioma>.md` y la sube a Buttondown como **borrador**, una por idioma, dirigida solo a los suscriptores de esa etiqueta. No duplica una edición que ya existe.
+
+- Lo corre `.github/workflows/newsletter.yml` los lunes a las 10:41 (hora argentina), después de la actualización de datos.
+- Necesita la misma API key como secreto del repositorio: GitHub → Settings → Secrets and variables → Actions → `BUTTONDOWN_API_KEY`. Sin ella solo guarda los archivos.
+- Revisás cada borrador en Buttondown y lo enviás. Desde la pestaña Actions se puede correr a mano y marcar "Enviar directamente".
+- Si un idioma todavía no tiene suscriptores, ese borrador no se crea.
 
 ## Correr localmente
 

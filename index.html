@@ -234,6 +234,7 @@
   AIM_EXTEND(T, "home");
   let saved = null;
   try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
+  try { const q = new URLSearchParams(location.search).get("lang"); if (q) saved = q; } catch (e) {}
   let lang = AIM_PICK_LANG(saved);
   if (!T[lang]) lang = "en";
   let VM = null, EX = null, MN = null, AG = null, FN = null, IN = null;

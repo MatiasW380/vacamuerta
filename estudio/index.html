@@ -220,6 +220,7 @@
   AIM_EXTEND(T, "estudio");
   let saved = null;
   try { saved = localStorage.getItem("vm-lang"); } catch (e) {}
+  try { const q = new URLSearchParams(location.search).get("lang"); if (q) saved = q; } catch (e) {}
   let lang = AIM_PICK_LANG(saved);
   const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
