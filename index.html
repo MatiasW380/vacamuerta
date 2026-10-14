@@ -84,18 +84,6 @@
       <ul class="soon-grid" id="soonGrid"></ul>
     </section>
 
-    <section class="section two compact">
-      <div id="regBlock" hidden>
-        <h2 data-i18n="regTitle">Latest regulations</h2>
-        <ul class="feed" id="regList"></ul>
-        <a class="download" href="/vaca-muerta/#regTitle" data-i18n="regAll">All recent notices</a>
-      </div>
-      <div id="newsBlock" hidden>
-        <h2 data-i18n="newsTitle">Sector news</h2>
-        <ul class="feed news" id="newsList"></ul>
-      </div>
-    </section>
-
     <section class="signup" aria-labelledby="signupTitle">
       <div>
         <h2 id="signupTitle" data-i18n="signupTitle">The week in Argentine investment, in five minutes</h2>
@@ -328,21 +316,6 @@
     $(".soon-title").hidden = $("#soonGrid").hidden = !SECTORS.some(x => !x.live);
     $("#soonGrid").innerHTML = SECTORS.filter(x => !x.live).map(sec => { const c = sec[lang] || AIM_TR.home[lang].sectors[sec.id];
       return `<li><h3>${esc(c.name)}</h3><p>${esc(c.text)}</p><div class="src">${esc(t.plannedSources)}: ${esc(c.src)}</div></li>`; }).join("");
-
-    // Regulations and news.
-    const regs = EX && EX.regulations && EX.regulations.items;
-    if (regs && regs.length) {
-      $("#regBlock").hidden = false;
-      const ul = $("#regList"); ul.innerHTML = "";
-      const brief = i => { const s = (i.summary || "").replace(/^[^\p{L}\d(]+/u, ""); return s ? (s.length > 150 ? s.slice(0, 147).replace(/\s+\S*$/, "") + "…" : s) : i.title; };
-      regs.slice(0, 5).forEach(i => ul.append(feedItem(i.url, brief(i), [[shortDate(i.date)], [(i.topics || []).map(x => t.topicNames[x] || x).join(", "), "topic"], [i.title.split(" ").slice(0, 2).join(" ")]])));
-    }
-    const news = EX && EX.news && EX.news.items;
-    if (news && news.length) {
-      $("#newsBlock").hidden = false;
-      const ul = $("#newsList"); ul.innerHTML = "";
-      news.slice(0, 6).forEach(n => ul.append(feedItem(n.url, n.title, [[n.source, "topic"], [n.published ? shortDate(n.published) : ""]])));
-    }
   }
 
   document.querySelectorAll("[data-lang]").forEach(b => b.addEventListener("click", () => {
