@@ -650,12 +650,8 @@
    "date": "2026-10-13",
    "ars_per_usd": 1512.5
   },
-  "yoy_pct": 12.1,
+  "yoy_pct": 11.2,
   "daily": [
-   {
-    "date": "2025-10-13",
-    "ars_per_usd": 1349.0
-   },
    {
     "date": "2025-10-14",
     "ars_per_usd": 1360.0
@@ -2527,11 +2523,30 @@
    "348775",
    "348811",
    "348840",
-   "348853"
+   "348853",
+   "348914",
+   "348917",
+   "348918",
+   "348919",
+   "348929",
+   "348930",
+   "348946"
   ]
  },
  "news": {
   "items": [
+   {
+    "source": "EconoJournal",
+    "title": "La Libertad Avanza prepara en Neuquén un encuentro de militantes y se entusiasma con un segundo triunfo en la capital",
+    "url": "https://econojournal.com.ar/enclave/la-libertad-avanza-prepara-en-neuquen-a-un-encuentro-de-militantes-y-se-entusiasma-con-un-segundo-triunfo-en-la-capital/",
+    "published": "2026-10-13T23:19Z"
+   },
+   {
+    "source": "EconoJournal",
+    "title": "Yacyretá prevé que la crecida siga y alerta por el ascenso del Paraná aguas abajo de la represa",
+    "url": "https://econojournal.com.ar/energia/yacyreta-preve-que-la-crecida-siga-y-alerta-por-el-ascenso-del-parana/",
+    "published": "2026-10-13T22:20Z"
+   },
    {
     "source": "Ámbito",
     "title": "AOG Patagonia 2026: Milei, comitiva de Texas, lanzamientos y una agenda cargada de negocios para Vaca Muerta",
@@ -2545,22 +2560,10 @@
     "published": "2026-10-13T17:44Z"
    },
    {
-    "source": "Infobae",
-    "title": "Qué pasó con las acciones de las petroleras que operan en Malvinas tras la denuncia del Gobierno argentino",
-    "url": "https://www.infobae.com/economia/2026/10/13/que-paso-con-las-acciones-de-las-petroleras-que-operan-en-malvinas-tras-la-denuncia-del-gobierno-argentino/",
-    "published": "2026-10-13T16:57Z"
-   },
-   {
     "source": "EconoJournal",
     "title": "Vaca Muerta: Impronta IT suma IA conversacional a su software de diseño de desarrollos no convencionales",
     "url": "https://econojournal.com.ar/oilgas/vaca-muerta-impronta-it-suma-ia-conversacional-a-su-software-de-diseno-de-desarrollos-no-convencionales/",
     "published": "2026-10-13T15:29Z"
-   },
-   {
-    "source": "Infobae",
-    "title": "Crece la volatilidad del petróleo: revirtió sus pérdidas y superó los USD 107 en medio de ataques de Irán, los rebeldes hutíes y Rusia",
-    "url": "https://www.infobae.com/america/mundo/2026/10/12/crece-la-volatilidad-del-petroleo-revirtio-sus-perdidas-y-supero-los-usd-106-en-medio-de-ataques-de-iran-los-rebeldes-huties-y-rusia/",
-    "published": "2026-10-12T16:30Z"
    },
    {
     "source": "EconoJournal",
@@ -2603,18 +2606,6 @@
     "title": "El Gobierno aprobó el ingreso al RIGI del proyecto de Tecpetrol y GyP por u$s6.400 millones",
     "url": "https://www.ambito.com/energia/el-gobierno-aprobo-el-ingreso-al-rigi-del-proyecto-tecpetrol-y-gyp-us6400-millones-n6331891",
     "published": "2026-10-09T11:58Z"
-   },
-   {
-    "source": "EconoJournal",
-    "title": "Milei visitará Neuquén para encabezar la apertura de la AOG Patagonia 2026",
-    "url": "https://econojournal.com.ar/oilgas/milei-visitara-neuquen-para-encabezar-la-apertura-de-la-aog-patagonia-2026/",
-    "published": "2026-10-09T11:00Z"
-   },
-   {
-    "source": "EconoJournal",
-    "title": "Genneia inaugura el parque solar más grande de San Juan con una inversión de US$ 110 millones",
-    "url": "https://econojournal.com.ar/renovables-te/genneia-inaugura-el-parque-solar-mas-grande-de-san-juan/",
-    "published": "2026-10-08T20:33Z"
    },
    {
     "source": "Ámbito",
@@ -2660,7 +2651,7 @@
    "url": "http://datos.energia.gob.ar/dataset/precios-en-surtidor",
    "license": "CC BY 4.0"
   },
-  "as_of": "2026-10-13",
+  "as_of": "2026-10-14",
   "by_province": [
    {
     "name": "Jujuy",
@@ -2678,9 +2669,9 @@
    },
    {
     "name": "Tucuman",
-    "diesel": 2530,
-    "diesel_premium": 2829,
-    "premium": 2554,
+    "diesel": 2536,
+    "diesel_premium": 2839,
+    "premium": 2559,
     "super": 2309
    },
    {
@@ -2692,9 +2683,9 @@
    },
    {
     "name": "Entre Rios",
-    "diesel": 2504,
-    "diesel_premium": 2729,
-    "premium": 2526,
+    "diesel": 2507,
+    "diesel_premium": 2759,
+    "premium": 2532,
     "super": 2281
    },
    {
@@ -2708,7 +2699,7 @@
     "name": "Cordoba",
     "diesel": 2499,
     "diesel_premium": 2719,
-    "premium": 2504,
+    "premium": 2509,
     "super": 2249
    },
    {
@@ -2729,13 +2720,13 @@
     "name": "Buenos Aires",
     "diesel": 2409,
     "diesel_premium": 2679,
-    "premium": 2499,
+    "premium": 2502,
     "super": 2229
    },
    {
     "name": "Salta",
-    "diesel": 2491,
-    "diesel_premium": 2810,
+    "diesel": 2495,
+    "diesel_premium": 2816,
     "premium": 2547,
     "super": 2227
    },
@@ -2755,8 +2746,8 @@
    },
    {
     "name": "Mendoza",
-    "diesel": 2425,
-    "diesel_premium": 2619,
+    "diesel": 2442,
+    "diesel_premium": 2655,
     "premium": 2509,
     "super": 2210
    },
@@ -2803,18 +2794,18 @@
     "super": 1959
    },
    {
+    "name": "La Pampa",
+    "diesel": 2380,
+    "diesel_premium": 2621,
+    "premium": 2218,
+    "super": 1876
+   },
+   {
     "name": "Rio Negro",
     "diesel": 2313,
     "diesel_premium": 2650,
     "premium": 2178,
     "super": 1868
-   },
-   {
-    "name": "La Pampa",
-    "diesel": 2379,
-    "diesel_premium": 2621,
-    "premium": 2198,
-    "super": 1867
    },
    {
     "name": "Neuquen",
@@ -2828,7 +2819,7 @@
     "diesel": 2249,
     "diesel_premium": 2359,
     "premium": 2079,
-    "super": 1803
+    "super": 1798
    }
   ],
   "by_brand": [
@@ -2842,20 +2833,20 @@
    {
     "name": "Otras",
     "diesel": 2415,
-    "diesel_premium": 2624,
-    "premium": 2400,
+    "diesel_premium": 2625,
+    "premium": 2401,
     "super": 2190
    },
    {
     "name": "Puma",
-    "diesel": 2379,
-    "diesel_premium": 2620,
-    "premium": 2448,
-    "super": 2184
+    "diesel": 2387,
+    "diesel_premium": 2633,
+    "premium": 2451,
+    "super": 2185
    },
    {
     "name": "Shell",
-    "diesel": 2447,
+    "diesel": 2449,
     "diesel_premium": 2729,
     "premium": 2520,
     "super": 2249
@@ -2869,7 +2860,7 @@
    }
   ],
   "stations_by_brand": {
-   "Axion": 846,
+   "Axion": 842,
    "Otras": 580,
    "Puma": 408,
    "Shell": 1274,
@@ -2879,7 +2870,7 @@
    "diesel": 2447,
    "diesel_premium": 2699,
    "premium": 2499,
-   "super": 2221
+   "super": 2223
   }
  },
  "rigi_approvals": [
@@ -12476,11 +12467,11 @@
    "balance": 1630.8
   }
  },
- "generated_at": "2026-10-13T19:12Z",
+ "generated_at": "2026-10-14T17:00Z",
  "status": {
   "fracking": {
    "ok": true,
-   "at": "2026-10-13T19:10Z",
+   "at": "2026-10-14T16:59Z",
    "diag": {
     "resources": [
      "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria"
@@ -12541,42 +12532,42 @@
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-13T19:10Z",
+   "at": "2026-10-14T16:59Z",
    "diag": {
     "pages": 1
    }
   },
   "oil_price": {
    "ok": true,
-   "at": "2026-10-13T19:10Z",
+   "at": "2026-10-14T16:59Z",
    "diag": {}
   },
   "regulations": {
    "ok": true,
-   "at": "2026-10-13T19:11Z",
+   "at": "2026-10-14T16:59Z",
    "diag": {
     "pages": 6,
     "page_errors": 0,
-    "links": 499,
-    "candidates": 0,
+    "links": 507,
+    "candidates": 7,
     "kept": 0,
     "details_failed": 0
    }
   },
   "news": {
    "ok": true,
-   "at": "2026-10-13T19:11Z",
+   "at": "2026-10-14T16:59Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
-     "Infobae": "ok 2 de https://www.infobae.com/arc/outboundfeeds/rss/category/economia/",
+     "Infobae": "ok 0 de https://www.infobae.com/arc/outboundfeeds/rss/category/economia/",
      "Ámbito": "ok 8 de https://www.ambito.com/rss/pages/energia.xml"
     }
    }
   },
   "reserves": {
    "ok": true,
-   "at": "2026-10-13T19:11Z",
+   "at": "2026-10-14T16:59Z",
    "diag": {
     "package": "http://datos.energia.gob.ar reservas-de-petroleo-y-gas",
     "zip_files": [
@@ -12783,9 +12774,9 @@
   },
   "export_price": {
    "ok": true,
-   "at": "2026-10-13T19:11Z",
+   "at": "2026-10-14T17:00Z",
    "diag": {
-    "package": "https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo",
+    "package": "http://datos.energia.gob.ar precio-de-exportacion-de-petroleo-crudo",
     "resources": [
      "Precio de exportación de petróleo crudo"
     ],
@@ -12858,7 +12849,7 @@
       "base": "http://datos.energia.gob.ar",
       "name": "producciones",
       "title": "Mediciones de Petróleo y Gas",
-      "modified": "2026-10-13",
+      "modified": "2026-10-14",
       "resources": [
        [
         "Política de Publicación y Utilización de Datos Operacionales de Petróleo y Gas",
@@ -12866,15 +12857,15 @@
        ],
        [
         "Exportaciones de Crudo",
-        "2026-10-13"
+        "2026-10-14"
        ],
        [
         "Exportaciones de Gas",
-        "2026-10-13"
+        "2026-10-14"
        ],
        [
         "Importaciones de Gas",
-        "2026-10-13"
+        "2026-10-14"
        ]
       ]
      },
@@ -13138,7 +13129,7 @@
   },
   "fuel_prices": {
    "ok": true,
-   "at": "2026-10-13T19:11Z",
+   "at": "2026-10-14T17:00Z",
    "diag": {
     "package": "http://datos.energia.gob.ar precios-en-surtidor",
     "resources": [
@@ -13176,17 +13167,17 @@
      "horario": "tipohorario",
      "fecha": "fecha_vigencia"
     },
-    "rows_used": 3207
+    "rows_used": 3203
    }
   },
   "rigi_portal": {
    "ok": true,
-   "at": "2026-10-13T19:11Z",
+   "at": "2026-10-14T17:00Z",
    "diag": {
     "html_len": 76399,
     "context": "-thin\">&nbsp;</span><span class=\"fw-semibold fs-1\">M</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Empleos <span class=\"fw-medium br-sm br-xs\">(directos e indirectos)</span></dt><dd class=\"fs-1 fw-bold text-arg-verdin js-total-puestos-trabajo\">0</dd></div></dl></div><div class=\"col-md-12 m-y-2\"><h3 class=\"h4 font-sans-serif p-b-1 border-bottom\">Sectores</h3><dl class=\"dl-proyectos-sector\"><div class=\"d-grid\"><dt class=\"last\">Energía eléctrica</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-torre-electrica m-r-05\"></i> <span class=\"m-t-1 js-total-energia-electrica\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Petróleo y gas</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-petroleo-y-gas m-r-05\"></i> <span class=\"m-t-1 js-total-petroleo-y-gas\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Minería</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-mineria m-r-05\"></i> <span class=\"m-t-1 js-total-mineria\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Siderurgia</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-siderurgia m-r-05\"></i> <span class=\"m-t-1 js-total-siderurgia\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Infraestructura</dt><",
     "inline_scripts": [
-     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"24ZLpDgH-zU7pOknGiS4oo8f2Qq98ZpYGgbC-D7HmhM\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
+     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"ixsXCYGcWmcd6n4JevNOyu_biB4ViJwy8jlx5udV0XQ\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
      "const jsonContainer = document.getElementById('raw-data-json');\n  const jsonText = (jsonContainer.textContent || jsonContainer.innerText).trim();\n  const rawData = JSON.parse(jsonText);\n\n  const extractVal = (val) => (typeof val === 'object' && val !== null) ? (val.total || 0) : (val || 0);\n  const formatNum = (num) => Number(num || 0).toLocaleString('es-AR');\n\n  const getSeriesData = (key) => rawData.map(d => ({ \n    x: new Date(d.year).getTime(), \n    y: extractVal(d[key]) \n  }));\n\n  const seriesData = [\n    { key: 'energia', name: 'Energía Eléctrica', data: getSeriesData('energia') },\n    { key: 'petroleo', name: 'Petróleo y Gas', data: getSeriesData('petroleo') },\n    { key: 'mineria', name: 'Minería', data: getSeriesData('mineria') },\n    { key: 'siderurgia', name: 'Siderurgia', data: getSeriesData('siderurgia') },\n    { key: 'infra', name: 'Infraestructura', data: getSeriesData('infra') }\n  ];\n\n  var optionsMain = {\n    series: seriesData,\n    colors: ['#C2185B', '#B9CE39', '#6A1B99', '#4FBB73', '#F79D00'],\n    chart: {\n      id: 'chartBarMain',\n      type: 'bar',\n      height: 450,\n      stacked: true,\n      toolbar: { show: false }\n    },\n    grid: {\n      padding: {\n        right: 35,\n        left: 15\n      }\n    },\n    dataLabels: { enabled: false },\n    plotOptions: {\n      bar: {\n        dataLabels: {\n          total: {\n            enabled: true,\n            style: {\n              fontSize: '13px',\n              fontWeight: 900\n            },\n            formatter: function (val, opts) {\n              if (!val) return '';\n\n              // Validar si la columna está dentro del rango visible actual del zoom/brush\n              if (opts && opts.w && opts.w.globals) {\n                const timestamp = opts.w.globals.seriesX[0][opts.dataPointIndex];\n            ",
      "headStyle(\"rigi-cms-fix\", `.container:has(#mapa-portal){padding-left:0 !important;padding-right:0 !important;width:100% !important;}`);\nheadStyle('rigi__999d6df5647d2df27fe7', `.poncho-map{--pm-color-primary: var(--arg-escarapela);--pm-color-base: #eaeaea;--pm-slider-background: var(--arg-azul);--pm-slider-border-color: color-mix(in srgb, #626161 40%, white);--pm-slider-border-width: 2px;--pm-scrollbar-handle: #eaeaea;--pm-scrollbar-background: rgb(0, 0, 0, 0.15);--pm-hover-background: var(--arg-secundario);--pm-hover-color: white;--pm-active-color: #343232;--pm-active-visited-color: violet;--pm-active-background: var(--pm-color-primary);--color: var(--arg-escarapela);--pm-loader-spinner-background: var(--arg-amarillo);--pm-loader-background: var(--arg-azul);--pm-loader-spinner-color: var(--arg-primary-700)}details{--details-border-color: var(--arg-primary-300)}.details-container{--container-border-color: var(--arg-primary-500)}.poncho-map .marker--active:focus,.poncho-map .marker--active{fill:#000 !important;fill-opacity:0 !important}.color-primary{color:var(--color)}.poncho-map .pm-content a{color:var(--arg-escarapela)}.totals-overview{display:grid;gap:15px 15px;grid-template-areas:\"area-a area-b area-c\";grid-template-columns:27% 1fr 27%}.a,.b,.c{display:flex;flex-direction:column-reverse;align-self:self-start}.a{grid-area:area-a}.b{grid-area:area-b}.c{grid-area:area-c}.a .key,.b .key,.c .key,.a .value,.b .value,.c .value{margin:0}.a .key,.b .key,.c .key{font-size:.95rem}.value{grid-area:value}.a .value,.b .value,.c .value{font-size:1.35rem;line-height:2rem;display:flex;align-items:baseline}.c .value .small,.b .value .small,.c .value .small{font-size:1rem}.details-data dt{float:left;margin-right:.25rem}.details-data dt::after{content:\":\";font-weight:400}.details-data "
     ],
@@ -13236,7 +13227,7 @@
   },
   "royalties": {
    "ok": true,
-   "at": "2026-10-13T19:11Z",
+   "at": "2026-10-14T17:00Z",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
@@ -13646,7 +13637,7 @@
   },
   "royalties_gas": {
    "ok": true,
-   "at": "2026-10-13T19:12Z",
+   "at": "2026-10-14T17:00Z",
    "diag": {
     "package": "http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
     "resources": [
@@ -13977,16 +13968,6 @@
       "ok": true
      },
      {
-      "id": "175.1_DR_FINAPRA_0_0_23",
-      "title": "dolar_financiero_compra",
-      "desc": "Dólar Financiero. Compra",
-      "freq": "R/P1D",
-      "end": "1983-01-02",
-      "units": "Pesos",
-      "dataset": "Tipos de Cambio Históricos",
-      "ok": false
-     },
-     {
       "id": "175.1_DR_ESTANSE_0_0_20",
       "title": "dolar_estadounidense",
       "desc": "Dólar Estadounidense",
@@ -14025,26 +14006,6 @@
       "units": "Pesos",
       "dataset": "Tipos de Cambio Históricos",
       "ok": false
-     },
-     {
-      "id": "bcra_sml_006",
-      "title": "tipo_cambio_ptax",
-      "desc": "Tipo de cambio PTAX diario.",
-      "freq": "R/P1D",
-      "end": "2021-08-02",
-      "units": "Unidades monetarias",
-      "dataset": "Tipo de Cambio SML",
-      "ok": true
-     },
-     {
-      "id": "430.1_MEDIANA_IPT_5_M_0_0_31_0",
-      "title": "rem_tcn_var_mensual_t_5",
-      "desc": "REM: Mediana Tipo de Cambio Nominal var mensual t 5",
-      "freq": "R/P1M",
-      "end": "2025-08-01",
-      "units": "Variación Porcentual",
-      "dataset": "Relevamiento de Expectativas de Mercado (REM)",
-      "ok": true
      },
      {
       "id": "168.1_T_CAMBI500_D_0_0_17",
@@ -14105,6 +14066,36 @@
       "units": "Pesos",
       "dataset": "Tipos de Cambio Históricos",
       "ok": false
+     },
+     {
+      "id": "175.1_DR_TIPOICO_0_0_16",
+      "title": "dolar_tipo_unico",
+      "desc": "Tipo de cambio único",
+      "freq": "R/P1D",
+      "end": "1982-07-05",
+      "units": "Pesos",
+      "dataset": "Tipos de Cambio Históricos",
+      "ok": true
+     },
+     {
+      "id": "175.1_DR_OFICPRA_0_0_20",
+      "title": "dolar_oficial_compra",
+      "desc": "Dólar Oficial. Compra",
+      "freq": "R/P1D",
+      "end": "1989-12-19",
+      "units": "Pesos",
+      "dataset": "Tipos de Cambio Históricos",
+      "ok": false
+     },
+     {
+      "id": "175.1_DR_LIBRNTA_0_0_17",
+      "title": "dolar_libre_venta",
+      "desc": "Dólar Libre. Venta",
+      "freq": "R/P1D",
+      "end": "1992-01-01",
+      "units": "Pesos",
+      "dataset": "Tipos de Cambio Históricos",
+      "ok": false
      }
     ],
     "fx_series": {
@@ -14152,7 +14143,7 @@
   },
   "trade_balance": {
    "ok": true,
-   "at": "2026-10-13T19:12Z",
+   "at": "2026-10-14T17:00Z",
    "diag": {
     "tried": {
      "74.2_IECE_0_T_35": [
@@ -14168,15 +14159,15 @@
       "2025"
      ],
      "75.1_TCE_0_A_26": [
-      11,
+      21,
       "2025"
      ],
      "74.2_IICL_0_T_42": [
-      86,
+      52,
       "2026-04"
      ],
      "74.1_IICL_0_A_42": [
-      13,
+      21,
       "2025"
      ]
     },
