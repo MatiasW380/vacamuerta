@@ -83,8 +83,28 @@
       "units": "Índice 2004 = 100"
      }
     ],
-    "refining": [],
-    "chemicals": [],
+    "refining": [
+     {
+      "id": "453.2_OTROS_PRODION_0_0_26_12",
+      "desc": "IPI Divisiones y Subclases Otros productos de la refinación del petróleo, coque y combustible nuclear",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     },
+     {
+      "id": "453.2_REFINACIONEAR_0_0_45_82",
+      "desc": "IPI Divisiones y Subclases Refinación del petróleo, coque y combustible nuclear",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
+    "chemicals": [
+     {
+      "id": "453.2_SUSTANCIASCOS_0_0_29_82",
+      "desc": "IPI Divisiones y Subclases Sustancias y productos químicos",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     }
+    ],
     "plastics": [
      {
       "id": "453.2_PRODUCTOS_ICO_0_0_25_26",
@@ -191,25 +211,22 @@
      ]
     ],
     "sa": [
-     73,
+     128,
      [
       "2026-08-01",
       114.286133053828
      ]
     ],
     "food": [
-     44,
+     24,
      [
-      "2026-08-01",
-      151.57953373674502
+      "2026-06-01",
+      151.38957617963695
      ]
     ],
     "tobacco": [
-     33,
-     [
-      "2026-08-01",
-      47.231378824280526
-     ]
+     0,
+     null
     ],
     "textiles": [
      44,
@@ -226,24 +243,32 @@
      ]
     ],
     "paper": [
+     0,
+     null
+    ],
+    "refining": [
+     23,
+     [
+      "2026-08-01",
+      123.926936528635
+     ]
+    ],
+    "chemicals": [
      44,
      [
       "2026-08-01",
-      103.74640986540469
+      147.24508671553895
      ]
     ],
     "plastics": [
-     22,
-     [
-      "2026-08-01",
-      94.7233488210691
-     ]
+     0,
+     null
     ],
     "minerals": [
-     22,
+     44,
      [
-      "2026-07-01",
-      126.94423973220516
+      "2026-08-01",
+      131.60642195792582
      ]
     ],
     "basic_metals": [
@@ -297,21 +322,21 @@
   "diag": {
    "points": {
     "isac": [
-     128,
+     79,
      [
-      "2026-08-01",
-      140.737938979259
+      "2026-07-01",
+      140.140145830099
      ]
     ],
     "isac_orig": [
-     76,
+     128,
      [
-      "2026-06-01",
-      146.14043903626123
+      "2026-08-01",
+      146.8626017285303
      ]
     ],
     "steel": [
-     104,
+     61,
      [
       "2026-08-01",
       80.53385013224572
