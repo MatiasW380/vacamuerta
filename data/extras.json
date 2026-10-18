@@ -650,12 +650,8 @@
    "date": "2026-10-16",
    "ars_per_usd": 1518.0
   },
-  "yoy_pct": 4.7,
+  "yoy_pct": 2.9,
   "daily": [
-   {
-    "date": "2025-10-17",
-    "ars_per_usd": 1450.0
-   },
    {
     "date": "2025-10-20",
     "ars_per_usd": 1475.0
@@ -2574,6 +2570,30 @@
  "news": {
   "items": [
    {
+    "source": "EconoJournal",
+    "title": "Preparados, listos: se aceleran los tiempos electorales en Neuquén",
+    "url": "https://econojournal.com.ar/enclave/preparados-listos-se-aceleran-los-tiempos-electorales-en-neuquen/",
+    "published": "2026-10-18T11:00Z"
+   },
+   {
+    "source": "Infobae",
+    "title": "A más de USD 100 el barril, impulsó la inflación mayorista, pero un banco de Wall Street y un economista global prevén una importante baja del precio del petróleo",
+    "url": "https://www.infobae.com/economia/2026/10/17/a-mas-de-usd-100-el-barril-impulso-la-inflacion-mayorista-pero-un-banco-de-wall-street-y-un-economista-global-preven-una-importante-baja-del-precio-del-petroleo/",
+    "published": "2026-10-17T22:25Z"
+   },
+   {
+    "source": "Infobae",
+    "title": "Una delegación argentina viajó al Reino Unido en medio de la tensión por la soberanía y el petróleo de Malvinas",
+    "url": "https://www.infobae.com/politica/2026/10/17/una-delegacion-argentina-viajo-al-reino-unido-en-medio-de-la-tension-por-la-soberania-y-el-petroleo-de-malvinas/",
+    "published": "2026-10-17T18:51Z"
+   },
+   {
+    "source": "Ámbito",
+    "title": "Vaca Muerta, bajo control digital: cómo Siemens busca mejorar la eficiencia y reducir costos",
+    "url": "https://www.ambito.com/energia/vaca-muerta-control-digital-como-siemens-busca-mejorar-la-eficiencia-y-reducir-costos-n6334898",
+    "published": "2026-10-17T17:58Z"
+   },
+   {
     "source": "Infobae",
     "title": "Por la fuerte suba del petróleo, la inflación mayorista se aceleró a 3,2% en septiembre",
     "url": "https://www.infobae.com/economia/2026/10/16/por-la-fuerte-suba-del-petroleo-la-inflacion-mayorista-se-acelero-a-32-en-septiembre/",
@@ -2602,12 +2622,6 @@
     "title": "Grupo Albanesi designó a Alberto Laverán como gerente general de Generación Mediterránea",
     "url": "https://econojournal.com.ar/energia/grupo-albanesi-designa-a-alberto-laveran-como-gerente-general-de-generacion-mediterranea/",
     "published": "2026-10-16T17:43Z"
-   },
-   {
-    "source": "Infobae",
-    "title": "El embajador de la Unión Europea analizó el escenario económico argentino y destacó el RIGI: “Crea cierta previsibilidad a largo plazo”",
-    "url": "https://www.infobae.com/economia/2026/10/16/el-embajador-de-la-union-europea-analizo-el-escenario-economico-argentino-y-destaco-el-rigi-crea-cierta-previsibilidad-a-largo-plazo/",
-    "published": "2026-10-16T13:43Z"
    },
    {
     "source": "EconoJournal",
@@ -2650,12 +2664,6 @@
     "title": "Del campo a Vaca Muerta: la alianza que busca bajar costos y cambiar el negocio del shale",
     "url": "https://www.ambito.com/energia/del-campo-vaca-muerta-la-alianza-que-busca-bajar-costos-y-cambiar-el-negocio-del-shale-n6334286",
     "published": "2026-10-15T19:29Z"
-   },
-   {
-    "source": "EconoJournal",
-    "title": "Argentina Oil & Gas Patagonia: Italia presentará su pabellón con diez empresas y más de 1000 reuniones de negocios programadas",
-    "url": "https://econojournal.com.ar/actualidad-mineria-energia/argentina-oil-gas-patagonia-italia-presentara-su-pabellon-con-diez-empresas-y-mas-de-1000-reuniones-de-negocios-programadas/",
-    "published": "2026-10-15T18:09Z"
    },
    {
     "source": "Ámbito",
@@ -12529,30 +12537,29 @@
    "balance": 1630.8
   }
  },
- "generated_at": "2026-10-17T15:37Z",
+ "generated_at": "2026-10-18T15:56Z",
  "status": {
   "fracking": {
    "ok": false,
-   "error": "ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /api/3/action/package_show?id=datos-de-fractura-de-pozos-adjunto-iv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x7fbbbb602240>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=90)'))",
+   "error": "ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /api/3/action/package_show?id=datos-de-fractura-de-pozos-adjunto-iv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x7f4c574ccb00>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=90)'))",
    "diag": {},
-   "trace": "^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /api/3/action/package_show?id=datos-de-fractura-de-pozos-adjunto-iv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x7fbbbb602240>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=90)'))\n"
+   "trace": "^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /api/3/action/package_show?id=datos-de-fractura-de-pozos-adjunto-iv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x7f4c574ccb00>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=90)'))\n"
   },
   "fx": {
    "ok": true,
-   "at": "2026-10-17T15:25Z",
+   "at": "2026-10-18T15:46Z",
    "diag": {
     "pages": 1
    }
   },
   "oil_price": {
-   "ok": false,
-   "error": "ReadTimeout: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=90)",
-   "diag": {},
-   "trace": "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/api.py\", line 87, in get\n    return request(\"get\", url, params=params, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py\", line 742, in send\n    raise ReadTimeout(e, request=request)\nrequests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=90)\n"
+   "ok": true,
+   "at": "2026-10-18T15:47Z",
+   "diag": {}
   },
   "regulations": {
    "ok": true,
-   "at": "2026-10-17T15:26Z",
+   "at": "2026-10-18T15:47Z",
    "diag": {
     "pages": 6,
     "page_errors": 0,
@@ -12564,276 +12571,41 @@
   },
   "news": {
    "ok": true,
-   "at": "2026-10-17T15:26Z",
+   "at": "2026-10-18T15:47Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
-     "Infobae": "ok 2 de https://www.infobae.com/arc/outboundfeeds/rss/category/economia/",
-     "Ámbito": "ok 10 de https://www.ambito.com/rss/pages/energia.xml"
+     "Infobae": "ok 3 de https://www.infobae.com/arc/outboundfeeds/rss/category/economia/",
+     "Ámbito": "ok 11 de https://www.ambito.com/rss/pages/energia.xml"
     }
    }
   },
   "reserves": {
-   "ok": true,
-   "at": "2026-10-17T15:29Z",
-   "diag": {
-    "package": "https://datos.gob.ar reservas-de-petroleo-y-gas",
-    "zip_files": [
-     [
-      "reservas al 31-12-2025.xlsx",
-      308389
-     ]
-    ],
-    "sheets": [
-     "fin de concesión",
-     "fin de vida util"
-    ],
-    "sheet_used": "fin de concesión",
-    "header_row": 6,
-    "head_rows": [
-     [
-      "RESERVAS Y RECURSOS  AL 31/12/2025 - HAS"
-     ],
-     [],
-     [
-      "CONVENCIONAL",
-      "NO CONVENCIONAL",
-      "CONVENCIONAL + NO CONVENCIONAL"
-     ],
-     [
-      "RESERVAS",
-      "RECURSOS CONTINGENTES",
-      "RESERVAS",
-      "RECURSOS CONTINGENTES",
-      "RESERVAS",
-      "RECURSOS CONTINGENTES"
-     ],
-     [
-      "COMPROBADAS",
-      "PROBABLES",
-      "POSIBLES",
-      "COMPROBADAS",
-      "PROBABLES",
-      "POSIBLES",
-      "COMPROBADAS",
-      "PROBABLES",
-      "POSIBLES"
-     ],
-     [
-      "PET",
-      "GAS",
-      "PET",
-      "GAS",
-      "PET",
-      "GAS",
-      "PET",
-      "GAS",
-      "PET",
-      "GAS",
-      "PET",
-      "GAS",
-      "PET",
-      "GAS",
-      "PET",
-      "GAS",
-      "PET",
-      "GAS",
-      "PET",
-      "GAS",
-      "PET",
-      "GAS",
-      "PET",
-      "GAS"
-     ],
-     [
-      "OPERADOR",
-      "CUENCA",
-      "PROVINCIA",
-      "CONCESIÓN O PERMISO",
-      "YACIMIENTO",
-      "(Mm3)",
-      "(MMm3)",
-      "(Mm3)",
-      "(MMm3)",
-      "(Mm3)",
-      "(MMm3)",
-      "(Mm3)",
-      "(MMm3)",
-      "(Mm3)",
-      "(MMm3)",
-      "(Mm3)",
-      "(MMm3)",
-      "(Mm3)",
-      "(MMm3)",
-      "(Mm3)",
-      "(MMm3)",
-      "(Mm3)",
-      "(MMm3)",
-      "(Mm3)",
-      "(MMm3)",
-      "(Mm3)",
-      "(MMm3)",
-      "(Mm3)",
-      "(MMm3)"
-     ],
-     [
-      "PETROQUIMICA COMODORO RIVADAVIA S.A.",
-      "NEUQUINA",
-      "La Pampa",
-      "25 DE MAYO - MEDANITO SUD ESTE LP",
-      "25 DE MAYO - MEDANITO SUDESTE LP"
-     ],
-     [
-      "Petrolera Aconcagua Energia S.A.",
-      "NEUQUINA",
-      "Rio Negro",
-      "25 DE MAYO - MEDANITO SUD ESTE RN",
-      "25 DE MAYO - MEDANITO SUDESTE RN"
-     ],
-     [
-      "PAN AMERICAN ENERGY SL",
-      "NOROESTE",
-      "Salta",
-      "ACAMBUCO",
-      "AGUARAY"
-     ],
-     [
-      "PAN AMERICAN ENERGY SL",
-      "NOROESTE",
-      "Salta",
-      "ACAMBUCO",
-      "CAPIAZUTI"
-     ],
-     [
-      "PAN AMERICAN ENERGY SL",
-      "NOROESTE",
-      "Salta",
-      "ACAMBUCO",
-      "CERRO TUYUNTI                           "
-     ]
-    ],
-    "columns": [
-     "operador",
-     "cuenca",
-     "provincia",
-     "concesion o permiso",
-     "yacimiento",
-     "convencional | reservas | comprobadas | pet | (mm3)",
-     "convencional | reservas | comprobadas | gas | (mmm3)",
-     "convencional | reservas | probables | pet | (mm3)",
-     "convencional | reservas | probables | gas | (mmm3)",
-     "convencional | reservas | posibles | pet | (mm3)",
-     "convencional | reservas | posibles | gas | (mmm3)",
-     "convencional | recursos contingentes | posibles | pet | (mm3)",
-     "convencional | recursos contingentes | posibles | gas | (mmm3)",
-     "no convencional | reservas | comprobadas | pet | (mm3)",
-     "no convencional | reservas | comprobadas | gas | (mmm3)",
-     "no convencional | reservas | probables | pet | (mm3)",
-     "no convencional | reservas | probables | gas | (mmm3)",
-     "no convencional | reservas | posibles | pet | (mm3)",
-     "no convencional | reservas | posibles | gas | (mmm3)",
-     "no convencional | recursos contingentes | posibles | pet | (mm3)",
-     "no convencional | recursos contingentes | posibles | gas | (mmm3)",
-     "convencional + no convencional | reservas | comprobadas | pet | (mm3)",
-     "convencional + no convencional | reservas | comprobadas | gas | (mmm3)",
-     "convencional + no convencional | reservas | probables | pet | (mm3)",
-     "convencional + no convencional | reservas | probables | gas | (mmm3)",
-     "convencional + no convencional | reservas | posibles | pet | (mm3)",
-     "convencional + no convencional | reservas | posibles | gas | (mmm3)",
-     "convencional + no convencional | recursos contingentes | posibles | pet | (mm3)",
-     "convencional + no convencional | recursos contingentes | posibles | gas | (mmm3)"
-    ],
-    "mapped": {
-     "empresa": "operador",
-     "cuenca": "cuenca",
-     "area": "concesion o permiso",
-     "provincia": "provincia",
-     "values": {
-      "conv_oil_proved": "convencional | reservas | comprobadas | pet | (mm3)",
-      "conv_gas_proved": "convencional | reservas | comprobadas | gas | (mmm3)",
-      "conv_oil_probable": "convencional | reservas | probables | pet | (mm3)",
-      "conv_gas_probable": "convencional | reservas | probables | gas | (mmm3)",
-      "conv_oil_possible": "convencional | reservas | posibles | pet | (mm3)",
-      "conv_gas_possible": "convencional | reservas | posibles | gas | (mmm3)",
-      "conv_oil_resources": "convencional | recursos contingentes | posibles | pet | (mm3)",
-      "conv_gas_resources": "convencional | recursos contingentes | posibles | gas | (mmm3)",
-      "nc_oil_proved": "no convencional | reservas | comprobadas | pet | (mm3)",
-      "nc_gas_proved": "no convencional | reservas | comprobadas | gas | (mmm3)",
-      "nc_oil_probable": "no convencional | reservas | probables | pet | (mm3)",
-      "nc_gas_probable": "no convencional | reservas | probables | gas | (mmm3)",
-      "nc_oil_possible": "no convencional | reservas | posibles | pet | (mm3)",
-      "nc_gas_possible": "no convencional | reservas | posibles | gas | (mmm3)",
-      "nc_oil_resources": "no convencional | recursos contingentes | posibles | pet | (mm3)",
-      "nc_gas_resources": "no convencional | recursos contingentes | posibles | gas | (mmm3)",
-      "all_oil_proved": "convencional + no convencional | reservas | comprobadas | pet | (mm3)",
-      "all_gas_proved": "convencional + no convencional | reservas | comprobadas | gas | (mmm3)",
-      "all_oil_probable": "convencional + no convencional | reservas | probables | pet | (mm3)",
-      "all_gas_probable": "convencional + no convencional | reservas | probables | gas | (mmm3)",
-      "all_oil_possible": "convencional + no convencional | reservas | posibles | pet | (mm3)",
-      "all_gas_possible": "convencional + no convencional | reservas | posibles | gas | (mmm3)",
-      "all_oil_resources": "convencional + no convencional | recursos contingentes | posibles | pet | (mm3)",
-      "all_gas_resources": "convencional + no convencional | recursos contingentes | posibles | gas | (mmm3)"
-     }
-    },
-    "duplicates_dropped": 4,
-    "rows": 1138,
-    "rows_neuquina": 641
-   }
+   "ok": false,
+   "error": "RuntimeError: No se encontró el dataset: ['http://datos.energia.gob.ar reservas-de-petroleo-y-gas: ConnectTimeout', 'http://datos.energia.gob.ar energia-reservas-petroleo-gas: ConnectTimeout', 'https://datos.gob.ar reservas-de-petroleo-y-gas: HTTPError', 'https://datos.gob.ar energia-reservas-petroleo-gas: HTTPError']",
+   "diag": {},
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1172, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1158, in <lambda>\n    (\"reserves\", lambda d: reserves(d)),\n                           ^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 534, in reserves\n    paq, base = ckan_paquete([\"http://datos.energia.gob.ar\", \"https://datos.gob.ar\"],\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 444, in ckan_paquete\n    raise RuntimeError(f\"No se encontró el dataset: {errores}\")\nRuntimeError: No se encontró el dataset: ['http://datos.energia.gob.ar reservas-de-petroleo-y-gas: ConnectTimeout', 'http://datos.energia.gob.ar energia-reservas-petroleo-gas: ConnectTimeout', 'https://datos.gob.ar reservas-de-petroleo-y-gas: HTTPError', 'https://datos.gob.ar energia-reservas-petroleo-gas: HTTPError']\n"
   },
   "export_price": {
-   "ok": true,
-   "at": "2026-10-17T15:30Z",
-   "diag": {
-    "package": "https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo",
-    "resources": [
-     "Precio de exportación de petróleo crudo"
-    ],
-    "alternatives_error": "HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /api/3/action/package_search?q=precio+petroleo+crudo&rows=15 (Caused by ConnectTimeoutError(<HTTPConnection(hos",
-    "series": [
-     "brent|Ice Brent",
-     "fob|Escalante",
-     "fob|Cañadon Seco",
-     "fob|Maria Ines",
-     "fob|San Sebastian",
-     "fob|Medanito",
-     "domestic|Escalante",
-     "domestic|Cañadon Seco",
-     "domestic|Maria Ines",
-     "domestic|San Sebastian",
-     "domestic|Medanito",
-     "fob_vs_brent|Escalante",
-     "fob_vs_brent|Cañadon Seco",
-     "fob_vs_brent|Maria Ines",
-     "fob_vs_brent|San Sebastian",
-     "fob_vs_brent|Medanito",
-     "domestic_vs_brent|Escalante",
-     "domestic_vs_brent|Cañadon Seco",
-     "domestic_vs_brent|Maria Ines",
-     "domestic_vs_brent|San Sebastian",
-     "domestic_vs_brent|Medanito"
-    ]
-   }
+   "ok": false,
+   "error": "RuntimeError: No se encontró el dataset: ['https://datos.gob.ar energia-precio-exportacion-petroleo-crudo: HTTPError', 'https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo: HTTPError', 'https://datos.gob.ar precio-exportacion-petroleo-crudo: HTTPError', 'http://datos.energia.gob.ar energia-precio-exportacion-petroleo-crudo: ConnectTimeout', 'http://datos.energia.gob.ar precio-de-exportacion-de-petroleo-crudo: ConnectTimeout', 'http://datos.energia.gob.ar precio-exportacion-petroleo-crudo: ConnectTime",
+   "diag": {},
+   "trace": "a[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1159, in <lambda>\n    (\"export_price\", lambda d: export_price(d)),\n                               ^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 614, in export_price\n    paq, base = ckan_paquete([\"https://datos.gob.ar\", \"http://datos.energia.gob.ar\"],\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 444, in ckan_paquete\n    raise RuntimeError(f\"No se encontró el dataset: {errores}\")\nRuntimeError: No se encontró el dataset: ['https://datos.gob.ar energia-precio-exportacion-petroleo-crudo: HTTPError', 'https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo: HTTPError', 'https://datos.gob.ar precio-exportacion-petroleo-crudo: HTTPError', 'http://datos.energia.gob.ar energia-precio-exportacion-petroleo-crudo: ConnectTimeout', 'http://datos.energia.gob.ar precio-de-exportacion-de-petroleo-crudo: ConnectTimeout', 'http://datos.energia.gob.ar precio-exportacion-petroleo-crudo: ConnectTimeout']\n"
   },
   "fuel_prices": {
    "ok": false,
-   "error": "ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /dataset/1c181390-5045-475e-94dc-410429be4b17/resource/80ac25de-a44a-4445-9215-090cf55cfda5/download/precios-en-surtidor-resolucin-3142016.csv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x7fbbba6f29c0>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=600)'))",
-   "diag": {
-    "package": "https://datos.gob.ar precios-en-surtidor",
-    "resources": [
-     "Precios vigentes en surtidor - Resolución 314/2016",
-     "Precios históricos"
-    ]
-   },
-   "trace": "lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /dataset/1c181390-5045-475e-94dc-410429be4b17/resource/80ac25de-a44a-4445-9215-090cf55cfda5/download/precios-en-surtidor-resolucin-3142016.csv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x7fbbba6f29c0>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=600)'))\n"
+   "error": "RuntimeError: No se encontró el dataset: ['http://datos.energia.gob.ar precios-en-surtidor: ConnectTimeout', 'http://datos.energia.gob.ar energia-precios-surtidor---resolucion-3142016: ConnectTimeout', 'https://datos.gob.ar precios-en-surtidor: HTTPError', 'https://datos.gob.ar energia-precios-surtidor---resolucion-3142016: HTTPError']",
+   "diag": {},
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1172, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1160, in <lambda>\n    (\"fuel_prices\", lambda d: fuel_prices(d)),\n                              ^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 691, in fuel_prices\n    paq, base = ckan_paquete([\"http://datos.energia.gob.ar\", \"https://datos.gob.ar\"],\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 444, in ckan_paquete\n    raise RuntimeError(f\"No se encontró el dataset: {errores}\")\nRuntimeError: No se encontró el dataset: ['http://datos.energia.gob.ar precios-en-surtidor: ConnectTimeout', 'http://datos.energia.gob.ar energia-precios-surtidor---resolucion-3142016: ConnectTimeout', 'https://datos.gob.ar precios-en-surtidor: HTTPError', 'https://datos.gob.ar energia-precios-surtidor---resolucion-3142016: HTTPError']\n"
   },
   "rigi_portal": {
    "ok": true,
-   "at": "2026-10-17T15:34Z",
+   "at": "2026-10-18T15:54Z",
    "diag": {
     "html_len": 76399,
     "context": "-thin\">&nbsp;</span><span class=\"fw-semibold fs-1\">M</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Empleos <span class=\"fw-medium br-sm br-xs\">(directos e indirectos)</span></dt><dd class=\"fs-1 fw-bold text-arg-verdin js-total-puestos-trabajo\">0</dd></div></dl></div><div class=\"col-md-12 m-y-2\"><h3 class=\"h4 font-sans-serif p-b-1 border-bottom\">Sectores</h3><dl class=\"dl-proyectos-sector\"><div class=\"d-grid\"><dt class=\"last\">Energía eléctrica</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-torre-electrica m-r-05\"></i> <span class=\"m-t-1 js-total-energia-electrica\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Petróleo y gas</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-petroleo-y-gas m-r-05\"></i> <span class=\"m-t-1 js-total-petroleo-y-gas\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Minería</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-mineria m-r-05\"></i> <span class=\"m-t-1 js-total-mineria\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Siderurgia</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-siderurgia m-r-05\"></i> <span class=\"m-t-1 js-total-siderurgia\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Infraestructura</dt><",
     "inline_scripts": [
-     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"tJJZDKBPu0s9PbqtECgmWoKwKLCtyZOn0UcE6AcMdm0\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
+     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"sYBu5bUaGcyjeXGfWdTjMsmo7jIl60qUJHnFvKaKAgA\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
      "const jsonContainer = document.getElementById('raw-data-json');\n  const jsonText = (jsonContainer.textContent || jsonContainer.innerText).trim();\n  const rawData = JSON.parse(jsonText);\n\n  const extractVal = (val) => (typeof val === 'object' && val !== null) ? (val.total || 0) : (val || 0);\n  const formatNum = (num) => Number(num || 0).toLocaleString('es-AR');\n\n  const getSeriesData = (key) => rawData.map(d => ({ \n    x: new Date(d.year).getTime(), \n    y: extractVal(d[key]) \n  }));\n\n  const seriesData = [\n    { key: 'energia', name: 'Energía Eléctrica', data: getSeriesData('energia') },\n    { key: 'petroleo', name: 'Petróleo y Gas', data: getSeriesData('petroleo') },\n    { key: 'mineria', name: 'Minería', data: getSeriesData('mineria') },\n    { key: 'siderurgia', name: 'Siderurgia', data: getSeriesData('siderurgia') },\n    { key: 'infra', name: 'Infraestructura', data: getSeriesData('infra') }\n  ];\n\n  var optionsMain = {\n    series: seriesData,\n    colors: ['#C2185B', '#B9CE39', '#6A1B99', '#4FBB73', '#F79D00'],\n    chart: {\n      id: 'chartBarMain',\n      type: 'bar',\n      height: 450,\n      stacked: true,\n      toolbar: { show: false }\n    },\n    grid: {\n      padding: {\n        right: 35,\n        left: 15\n      }\n    },\n    dataLabels: { enabled: false },\n    plotOptions: {\n      bar: {\n        dataLabels: {\n          total: {\n            enabled: true,\n            style: {\n              fontSize: '13px',\n              fontWeight: 900\n            },\n            formatter: function (val, opts) {\n              if (!val) return '';\n\n              // Validar si la columna está dentro del rango visible actual del zoom/brush\n              if (opts && opts.w && opts.w.globals) {\n                const timestamp = opts.w.globals.seriesX[0][opts.dataPointIndex];\n            ",
      "headStyle(\"rigi-cms-fix\", `.container:has(#mapa-portal){padding-left:0 !important;padding-right:0 !important;width:100% !important;}`);\nheadStyle('rigi__999d6df5647d2df27fe7', `.poncho-map{--pm-color-primary: var(--arg-escarapela);--pm-color-base: #eaeaea;--pm-slider-background: var(--arg-azul);--pm-slider-border-color: color-mix(in srgb, #626161 40%, white);--pm-slider-border-width: 2px;--pm-scrollbar-handle: #eaeaea;--pm-scrollbar-background: rgb(0, 0, 0, 0.15);--pm-hover-background: var(--arg-secundario);--pm-hover-color: white;--pm-active-color: #343232;--pm-active-visited-color: violet;--pm-active-background: var(--pm-color-primary);--color: var(--arg-escarapela);--pm-loader-spinner-background: var(--arg-amarillo);--pm-loader-background: var(--arg-azul);--pm-loader-spinner-color: var(--arg-primary-700)}details{--details-border-color: var(--arg-primary-300)}.details-container{--container-border-color: var(--arg-primary-500)}.poncho-map .marker--active:focus,.poncho-map .marker--active{fill:#000 !important;fill-opacity:0 !important}.color-primary{color:var(--color)}.poncho-map .pm-content a{color:var(--arg-escarapela)}.totals-overview{display:grid;gap:15px 15px;grid-template-areas:\"area-a area-b area-c\";grid-template-columns:27% 1fr 27%}.a,.b,.c{display:flex;flex-direction:column-reverse;align-self:self-start}.a{grid-area:area-a}.b{grid-area:area-b}.c{grid-area:area-c}.a .key,.b .key,.c .key,.a .value,.b .value,.c .value{margin:0}.a .key,.b .key,.c .key{font-size:.95rem}.value{grid-area:value}.a .value,.b .value,.c .value{font-size:1.35rem;line-height:2rem;display:flex;align-items:baseline}.c .value .small,.b .value .small,.c .value .small{font-size:1rem}.details-data dt{float:left;margin-right:.25rem}.details-data dt::after{content:\":\";font-weight:400}.details-data "
     ],
@@ -12882,924 +12654,20 @@
    }
   },
   "royalties": {
-   "ok": true,
-   "at": "2026-10-17T15:35Z",
-   "diag": {
-    "package": "https://datos.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
-    "resources": [
-     [
-      "Regalías de Petróleo Crudo ",
-      "zip",
-      "ercado/mercado_hidrocarburos/informacion_estadistica/regalias/Regalias_CRUDO.zip"
-     ],
-     [
-      "Regalías de Gas Natural",
-      "zip",
-      "_mercado/mercado_hidrocarburos/informacion_estadistica/regalias/Regalias_GAS.zip"
-     ],
-     [
-      "Regalías de GLP ",
-      "zip",
-      "_mercado/mercado_hidrocarburos/informacion_estadistica/regalias/Regalias_GLP.zip"
-     ],
-     [
-      "Regalías de Gasolina y Condensado",
-      "zip",
-      "ado/mercado_hidrocarburos/informacion_estadistica/regalias/Regalias_GASOLINA.zip"
-     ]
-    ],
-    "zip_files": [
-     [
-      "Informe Regalias CRUDO.xlsx",
-      1261309
-     ]
-    ],
-    "sheets": {
-     "Tabla precios": [
-      445,
-      14
-     ],
-     "Tabla producción": [
-      443,
-      14
-     ],
-     "Tabla regalías": [
-      442,
-      14
-     ],
-     "detalle de tipos de crudo": [
-      17,
-      4
-     ]
-    },
-    "sheet_heads": {
-     "Tabla precios": [
-      [
-       "PETRÓLEO CRUDO",
-       "Fecha de realización:",
-       "2026-10-06 00:00:00"
-      ],
-      [
-       "  Nota: La información c",
-       "Fecha próxima actualizac",
-       "2026-11-06 00:00:00"
-      ],
-      [
-       "           Los tipos de "
-      ],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [
-       "Suma de USD/m3",
-       "CUENCA/PROVINCIA/TIPO DE"
-      ],
-      [
-       "AÑO",
-       "MES",
-       "CHUBUT",
-       "ESTADO NACIONAL",
-       "FORMOSA",
-       "JUJUY",
-       "LA PAMPA",
-       "MENDOZA",
-       "NEUQUEN",
-       "RIO NEGRO",
-       "SALTA",
-       "SANTA CRUZ",
-       "TIERRA DEL FUEGO",
-       "TOTAL PROVINCIA"
-      ],
-      [
-       "1991",
-       "1",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0"
-      ]
-     ],
-     "Tabla producción": [
-      [
-       "PETRÓLEO CRUDO",
-       "Fecha de realización:",
-       "2026-10-06 00:00:00"
-      ],
-      [
-       "  Nota: La información c",
-       "Fecha próxima actualizac",
-       "2026-11-06 00:00:00"
-      ],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [
-       "Suma de m3",
-       "CUENCA/PROVINCIA"
-      ],
-      [
-       "AÑO",
-       "MES",
-       "CHUBUT",
-       "ESTADO NACIONAL",
-       "FORMOSA",
-       "JUJUY",
-       "LA PAMPA",
-       "MENDOZA",
-       "NEUQUEN",
-       "RIO NEGRO",
-       "SALTA",
-       "SANTA CRUZ",
-       "TIERRA DEL FUEGO",
-       "TOTAL PROVINCIA"
-      ],
-      [
-       "1991",
-       "1",
-       "412991.019",
-       "0",
-       "46519.837",
-       "3621.278",
-       "43646.182",
-       "357581.806",
-       "477517.57300000003",
-       "194210.543",
-       "33795.731",
-       "467029.43799999997",
-       "199763.752",
-       "2236677.159"
-      ],
-      [
-       "2",
-       "362687.94",
-       "0",
-       "42309.530999999995",
-       "2981.633",
-       "39699.033",
-       "331037.783",
-       "412141.864",
-       "133775.571",
-       "27197.137",
-       "396058.116",
-       "179845.7",
-       "1927734.308"
-      ],
-      [
-       "3",
-       "347226.749",
-       "0",
-       "18340.514",
-       "3323.643",
-       "42234.778",
-       "367289.08900000004",
-       "548246.691",
-       "201173.339",
-       "41420.354999999996",
-       "499171.181",
-       "210295.119",
-       "2278721.458"
-      ]
-     ],
-     "Tabla regalías": [
-      [
-       "PETRÓLEO CRUDO",
-       "Fecha de realización:",
-       "2026-10-06 00:00:00"
-      ],
-      [
-       "  Nota: La información c",
-       "Fecha próxima actualizac",
-       "2026-11-06 00:00:00"
-      ],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [
-       "Suma de USD",
-       "CUENCA/PROVINCIA"
-      ],
-      [
-       "AÑO",
-       "MES",
-       "CHUBUT",
-       "ESTADO NACIONAL",
-       "FORMOSA",
-       "JUJUY",
-       "LA PAMPA",
-       "MENDOZA",
-       "NEUQUEN",
-       "RIO NEGRO",
-       "SALTA",
-       "SANTA CRUZ",
-       "TIERRA DEL FUEGO",
-       "TOTAL PROVINCIA"
-      ],
-      [
-       "1991",
-       "1",
-       "5840361.509544267",
-       "0",
-       "631541.2849916557",
-       "48803.32452387385",
-       "610089.5810588729",
-       "4914918.358868016",
-       "6623689.077334236",
-       "2712411.714816508",
-       "412250.1016148229",
-       "6692109.524778634",
-       "3264605.2330325814",
-       "31750779.710563466"
-      ],
-      [
-       "2",
-       "4086888.986400623",
-       "0",
-       "484662.93918680184",
-       "34523.58353329081",
-       "453030.86068539735",
-       "3902497.8728396995",
-       "4650199.748729086",
-       "1527892.4533459656",
-       "279942.3876366427",
-       "4823290.336609741",
-       "2265273.586797577",
-       "22508202.755764823"
-      ],
-      [
-       "3",
-       "3709793.2683548774",
-       "0",
-       "197048.05732517815",
-       "35816.85257355474",
-       "468805.6660959228",
-       "4017436.253931209",
-       "5873388.24696192",
-       "2261848.465390086",
-       "293353.7534702291",
-       "5430099.800896893",
-       "2486989.6286555785",
-       "24774579.99365545"
-      ],
-      [
-       "4",
-       "4759505.00506008",
-       "0",
-       "447396.9222190703",
-       "35463.33446103539",
-       "468946.0440863308",
-       "4090014.621661552",
-       "6098303.011184503",
-       "1882276.9602918809",
-       "338335.1523171197",
-       "4950318.346108574",
-       "2555040.539692112",
-       "25625599.937082257"
-      ]
-     ],
-     "detalle de tipos de crudo": [
-      [],
-      [
-       "INFORME MENSUAL DE REGAL"
-      ],
-      [],
-      [
-       "Detalle de Tipos de Crud"
-      ],
-      [],
-      [
-       "TIPO DE CRUDO",
-       "CUENCA",
-       "PROVINCIA"
-      ],
-      [
-       "MAGALLANES",
-       "CUENCA AUSTRAL OFF-SHORE",
-       "SANTA CRUZ"
-      ],
-      [
-       "HIDRA (1)",
-       "CUENCA AUSTRAL OFF-SHORE",
-       "TIERRA DEL FUEGO + ESTAD"
-      ],
-      [
-       "SAN SEBASTIÁN",
-       "CUENCA AUSTRAL ON-SHORE",
-       "TIERRA DEL FUEGO"
-      ],
-      [
-       "MARÍA INÉS",
-       "CUENCA AUSTRAL ON-SHORE",
-       "SANTA CRUZ"
-      ],
-      [
-       "CAÑADÓN SECO",
-       "CUENCA GOLFO SAN JORGE",
-       "SANTA CRUZ"
-      ],
-      [
-       "ESCALANTE",
-       "CUENCA GOLFO SAN JORGE",
-       "CHUBUT"
-      ],
-      [
-       "MEDANITO",
-       "CUENCA NEUQUINA",
-       "LA PAMPA +  MENDOZA + NE"
-      ],
-      [
-       "MENDOZA NORTE",
-       "CUENCA CUYANA",
-       "MENDOZA"
-      ]
-     ]
-    },
-    "tables": {
-     "price": [
-      "Suma de USD/m3",
-      [
-       "chubut",
-       "estado nacional",
-       "formosa",
-       "jujuy",
-       "la pampa",
-       "mendoza",
-       "neuquen",
-       "rio negro",
-       "salta",
-       "santa cruz",
-       "tierra del fuego",
-       "total provincia"
-      ],
-      "2026-12"
-     ],
-     "volume": [
-      "Suma de m3",
-      [
-       "chubut",
-       "estado nacional",
-       "formosa",
-       "jujuy",
-       "la pampa",
-       "mendoza",
-       "neuquen",
-       "rio negro",
-       "salta",
-       "santa cruz",
-       "tierra del fuego",
-       "total provincia"
-      ],
-      "2026-12"
-     ],
-     "royalties": [
-      "Suma de USD",
-      [
-       "chubut",
-       "estado nacional",
-       "formosa",
-       "jujuy",
-       "la pampa",
-       "mendoza",
-       "neuquen",
-       "rio negro",
-       "salta",
-       "santa cruz",
-       "tierra del fuego",
-       "total provincia"
-      ],
-      "2026-12"
-     ]
-    }
-   }
+   "ok": false,
+   "error": "RuntimeError: No se encontró el dataset: ['http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado: ConnectTimeout', 'https://datos.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado: HTTPError']",
+   "diag": {},
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1172, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1162, in <lambda>\n    (\"royalties\", lambda d: royalties(d)),\n                            ^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 878, in royalties\n    paq, base = ckan_paquete([\"http://datos.energia.gob.ar\", \"https://datos.gob.ar\"],\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 444, in ckan_paquete\n    raise RuntimeError(f\"No se encontró el dataset: {errores}\")\nRuntimeError: No se encontró el dataset: ['http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado: ConnectTimeout', 'https://datos.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado: HTTPError']\n"
   },
   "royalties_gas": {
-   "ok": true,
-   "at": "2026-10-17T15:36Z",
-   "diag": {
-    "package": "https://datos.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado",
-    "resources": [
-     [
-      "Regalías de Petróleo Crudo ",
-      "zip",
-      "ercado/mercado_hidrocarburos/informacion_estadistica/regalias/Regalias_CRUDO.zip"
-     ],
-     [
-      "Regalías de Gas Natural",
-      "zip",
-      "_mercado/mercado_hidrocarburos/informacion_estadistica/regalias/Regalias_GAS.zip"
-     ],
-     [
-      "Regalías de GLP ",
-      "zip",
-      "_mercado/mercado_hidrocarburos/informacion_estadistica/regalias/Regalias_GLP.zip"
-     ],
-     [
-      "Regalías de Gasolina y Condensado",
-      "zip",
-      "ado/mercado_hidrocarburos/informacion_estadistica/regalias/Regalias_GASOLINA.zip"
-     ]
-    ],
-    "zip_files": [
-     [
-      "Informe Regalias GAS.xlsx",
-      1467943
-     ]
-    ],
-    "sheets": {
-     "Tabla precios": [
-      421,
-      13
-     ],
-     "Tabla producción": [
-      419,
-      13
-     ],
-     "Tabla regalías": [
-      420,
-      13
-     ]
-    },
-    "sheet_heads": {
-     "Tabla precios": [
-      [
-       "GAS NATURAL",
-       "Fecha de realización:",
-       "2026-10-06 00:00:00"
-      ],
-      [
-       "  Nota: Se utiliza el ti",
-       "Fecha próxima actualizac",
-       "2026-11-06 00:00:00"
-      ],
-      [
-       "           La informació"
-      ],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [
-       "Suma de ARS/Mm3",
-       "CUENCA/PROVINCIA"
-      ],
-      [
-       "AÑO",
-       "MES",
-       "CHUBUT",
-       "ESTADO NACIONAL",
-       "JUJUY",
-       "LA PAMPA",
-       "MENDOZA",
-       "NEUQUEN",
-       "RIO NEGRO",
-       "SALTA",
-       "SANTA CRUZ",
-       "TIERRA DEL FUEGO",
-       "TOTAL PROVINCIA"
-      ],
-      [
-       "1993",
-       "1",
-       "35.8",
-       "0",
-       "0",
-       "0",
-       "30.18",
-       "35.71",
-       "32.91",
-       "35.8",
-       "35.54",
-       "35.74",
-       "35.42503650052226"
-      ]
-     ],
-     "Tabla producción": [
-      [
-       "GAS NATURAL",
-       "Fecha de realización:",
-       "2026-10-06 00:00:00"
-      ],
-      [
-       "  Nota: La información c",
-       "Fecha próxima actualizac",
-       "2026-11-06 00:00:00"
-      ],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [
-       "Suma de Mm3",
-       "CUENCA/PROVINCIA"
-      ],
-      [
-       "AÑO",
-       "MES",
-       "CHUBUT",
-       "ESTADO NACIONAL",
-       "JUJUY",
-       "LA PAMPA",
-       "MENDOZA",
-       "NEUQUEN",
-       "RIO NEGRO",
-       "SALTA",
-       "SANTA CRUZ",
-       "TIERRA DEL FUEGO",
-       "TOTAL PROVINCIA"
-      ],
-      [
-       "1993",
-       "1",
-       "176.703",
-       "0",
-       "0",
-       "5823.26",
-       "926.629",
-       "965037.119",
-       "79739.825",
-       "102256.827",
-       "256315.728",
-       "218507.316",
-       "1628783.407"
-      ],
-      [
-       "2",
-       "164.462",
-       "0",
-       "0",
-       "5054.51",
-       "845.161",
-       "934499.697",
-       "68753.631",
-       "82536.473",
-       "261540.872",
-       "204826.283",
-       "1558221.0890000002"
-      ],
-      [
-       "3",
-       "163.144",
-       "0",
-       "0",
-       "5424.275",
-       "891.906",
-       "1015623",
-       "74453",
-       "130150.451",
-       "283818.963",
-       "231509.507",
-       "1742034.246"
-      ]
-     ],
-     "Tabla regalías": [
-      [
-       "GAS NATURAL",
-       "Fecha de realización:",
-       "2026-10-06 00:00:00"
-      ],
-      [
-       "  Nota: Se utiliza el ti",
-       "Fecha próxima actualizac",
-       "2026-11-06 00:00:00"
-      ],
-      [
-       "           La informació"
-      ],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [
-       "Suma de ARS",
-       "CUENCA/PROVINCIA"
-      ],
-      [
-       "AÑO",
-       "MES",
-       "CHUBUT",
-       "ESTADO NACIONAL",
-       "JUJUY",
-       "LA PAMPA",
-       "MENDOZA",
-       "NEUQUEN",
-       "RIO NEGRO",
-       "SALTA",
-       "SANTA CRUZ",
-       "TIERRA DEL FUEGO",
-       "TOTAL PROVINCIA"
-      ],
-      [
-       "1993",
-       "1",
-       "725",
-       "0",
-       "0",
-       "500",
-       "3112",
-       "4071612",
-       "281350",
-       "438887",
-       "1017310",
-       "913210",
-       "6726706"
-      ],
-      [
-       "2",
-       "674",
-       "0",
-       "0",
-       "434",
-       "2903",
-       "3950971",
-       "247476",
-       "354219",
-       "1038058",
-       "856750",
-       "6451485"
-      ]
-     ]
-    },
-    "tables": {
-     "price": [
-      "Suma de ARS/Mm3",
-      [
-       "chubut",
-       "estado nacional",
-       "jujuy",
-       "la pampa",
-       "mendoza",
-       "neuquen",
-       "rio negro",
-       "salta",
-       "santa cruz",
-       "tierra del fuego",
-       "total provincia"
-      ],
-      "2026-12"
-     ],
-     "volume": [
-      "Suma de Mm3",
-      [
-       "chubut",
-       "estado nacional",
-       "jujuy",
-       "la pampa",
-       "mendoza",
-       "neuquen",
-       "rio negro",
-       "salta",
-       "santa cruz",
-       "tierra del fuego",
-       "total provincia"
-      ],
-      "2026-12"
-     ],
-     "royalties": [
-      "Suma de ARS",
-      [
-       "chubut",
-       "estado nacional",
-       "jujuy",
-       "la pampa",
-       "mendoza",
-       "neuquen",
-       "rio negro",
-       "salta",
-       "santa cruz",
-       "tierra del fuego",
-       "total provincia"
-      ],
-      "2026-12"
-     ]
-    },
-    "gas_unit": "suma de ars/mm3",
-    "candidates_fx": [
-     {
-      "id": "175.1_DR_REFE500_0_0_25",
-      "title": "dolar_referencia_com_3500",
-      "desc": "Dólar Referencia Comunicación \"A\" 3500 (Mayorista)",
-      "freq": "R/P1D",
-      "end": "2026-08-31",
-      "units": "Pesos",
-      "dataset": "Tipos de Cambio Históricos",
-      "ok": false
-     },
-     {
-      "id": "92.2_TIPO_CAMBIION_0_0_21_24",
-      "title": "tipo_cambio_valuacion",
-      "desc": "Tipo de cambio de valuación (peso por dólar)",
-      "freq": "R/P1D",
-      "end": "2026-08-31",
-      "units": "Pesos argentinos por dólar",
-      "dataset": "Reservas internacionales y pasivos del BCRA",
-      "ok": true
-     },
-     {
-      "id": "175.1_DR_FINAPRA_0_0_23",
-      "title": "dolar_financiero_compra",
-      "desc": "Dólar Financiero. Compra",
-      "freq": "R/P1D",
-      "end": "1983-01-02",
-      "units": "Pesos",
-      "dataset": "Tipos de Cambio Históricos",
-      "ok": false
-     },
-     {
-      "id": "175.1_DR_ESTANSE_0_0_20",
-      "title": "dolar_estadounidense",
-      "desc": "Dólar Estadounidense",
-      "freq": "R/P1D",
-      "end": "2026-08-31",
-      "units": "Pesos",
-      "dataset": "Tipos de Cambio Históricos",
-      "ok": false
-     },
-     {
-      "id": "92.1_TCV_0_0_21",
-      "title": "tipo_cambio_valuacion",
-      "desc": "Tipo de cambio de valuación (peso por dólar)",
-      "freq": "R/P1M",
-      "end": "2026-08-01",
-      "units": "Pesos argentinos por dólar",
-      "dataset": "Reservas internacionales y pasivos del BCRA",
-      "ok": true
-     },
-     {
-      "id": "168.1_T_CAMBIMAE_D_0_0_15",
-      "title": "tipo_cambio_mae",
-      "desc": "Tipo de Cambio MAE",
-      "freq": "R/P1D",
-      "end": "2026-08-31",
-      "units": "Pesos argentinos por dólar",
-      "dataset": "Tipo de Cambio $-USD - Futuro Dólar",
-      "ok": true
-     },
-     {
-      "id": "175.1_DR_LIBRPRA_0_0_18",
-      "title": "dolar_libre_compra",
-      "desc": "Dólar Libre. Compra",
-      "freq": "R/P1D",
-      "end": "1992-01-01",
-      "units": "Pesos",
-      "dataset": "Tipos de Cambio Históricos",
-      "ok": false
-     },
-     {
-      "id": "bcra_sml_006",
-      "title": "tipo_cambio_ptax",
-      "desc": "Tipo de cambio PTAX diario.",
-      "freq": "R/P1D",
-      "end": "2021-08-02",
-      "units": "Unidades monetarias",
-      "dataset": "Tipo de Cambio SML",
-      "ok": true
-     },
-     {
-      "id": "430.1_MEDIANA_IPT_5_M_0_0_31_0",
-      "title": "rem_tcn_var_mensual_t_5",
-      "desc": "REM: Mediana Tipo de Cambio Nominal var mensual t 5",
-      "freq": "R/P1M",
-      "end": "2025-08-01",
-      "units": "Variación Porcentual",
-      "dataset": "Relevamiento de Expectativas de Mercado (REM)",
-      "ok": true
-     },
-     {
-      "id": "168.1_T_CAMBI500_D_0_0_17",
-      "title": "tipo_cambio_a3500",
-      "desc": "Tipo de Cambio A3500",
-      "freq": "R/P1D",
-      "end": "2026-08-31",
-      "units": "Pesos argentinos por dólar",
-      "dataset": "Tipo de Cambio $-USD - Futuro Dólar",
-      "ok": true
-     },
-     {
-      "id": "175.1_DR_FINANTA_0_0_21",
-      "title": "dolar_finan_esp_venta",
-      "desc": "Dólar Financiero Esp. Venta",
-      "freq": "R/P1D",
-      "end": "1976-03-04",
-      "units": "Pesos",
-      "dataset": "Tipos de Cambio Históricos",
-      "ok": false
-     },
-     {
-      "id": "175.1_DR_FINANTA_0_0_22",
-      "title": "dolar_financiero_venta",
-      "desc": "Dólar Financiero. Venta",
-      "freq": "R/P1D",
-      "end": "1983-01-02",
-      "units": "Pesos",
-      "dataset": "Tipos de Cambio Históricos",
-      "ok": false
-     },
-     {
-      "id": "300.1_TIPO_CAMBIBIO_0_M_11",
-      "title": "tipo_cambio",
-      "desc": "Tipo de cambio",
-      "freq": "R/P1M",
-      "end": "2025-10-01",
-      "units": "Miles de pesos",
-      "dataset": "Activos y pasivos del Banco Central de la Republica Argentina",
-      "ok": true
-     },
-     {
-      "id": "175.1_DR_OFICNTA_0_0_19",
-      "title": "dolar_oficial_venta",
-      "desc": "Dólar Oficial. Venta",
-      "freq": "R/P1D",
-      "end": "1989-12-19",
-      "units": "Pesos",
-      "dataset": "Tipos de Cambio Históricos",
-      "ok": false
-     },
-     {
-      "id": "175.1_DR_FINAPRA_0_0_22",
-      "title": "dolar_finan_esp_compra",
-      "desc": "Dólar Financiero Esp. Compra",
-      "freq": "R/P1D",
-      "end": "1976-03-04",
-      "units": "Pesos",
-      "dataset": "Tipos de Cambio Históricos",
-      "ok": false
-     }
-    ],
-    "fx_series": {
-     "id": "92.1_TCV_0_0_21",
-     "title": "tipo_cambio_valuacion",
-     "desc": "Tipo de cambio de valuación (peso por dólar)",
-     "freq": "R/P1M",
-     "end": "2026-08-01",
-     "units": "Pesos argentinos por dólar",
-     "dataset": "Reservas internacionales y pasivos del BCRA",
-     "ok": true
-    },
-    "series_status": 200,
-    "series_head": {
-     "92.1_TCV_0_0_21": {
-      "count": 260,
-      "params": {
-       "ids": "92.1_TCV_0_0_21",
-       "format": "json",
-       "limit": "1000",
-       "start_date": "2005-01-01",
-       "identifiers": [
-        {
-         "id": "92.1_TCV_0_0_21",
-         "distribution": "92.1",
-         "dataset": "92"
-        }
-       ]
-      },
-      "n": 260,
-      "first": [
-       [
-        "2005-01-01",
-        2.9471225806451606
-       ],
-       [
-        "2005-02-01",
-        2.915917857142857
-       ]
-      ],
-      "meta": "[{'frequency': 'month', 'start_date': '2005-01-01', 'end_date': '2026-08-01'}, {'catalog': {'title': 'Datos Programación Macroeconómica'}, 'dataset': {'title': 'Reservas internacionales y pasivos del BCRA', 'description': 'Reservas internacionales y pasivos del BCRA. En millones de pesos (excepto la"
-     }
-    }
-   }
+   "ok": false,
+   "error": "RuntimeError: No se encontró el dataset: ['http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado: ConnectTimeout', 'https://datos.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado: HTTPError']",
+   "diag": {},
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1172, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1163, in <lambda>\n    (\"royalties_gas\", lambda d: royalties(d, \"gas\")),\n                                ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 878, in royalties\n    paq, base = ckan_paquete([\"http://datos.energia.gob.ar\", \"https://datos.gob.ar\"],\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 444, in ckan_paquete\n    raise RuntimeError(f\"No se encontró el dataset: {errores}\")\nRuntimeError: No se encontró el dataset: ['http://datos.energia.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado: ConnectTimeout', 'https://datos.gob.ar regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado: HTTPError']\n"
   },
   "trade_balance": {
    "ok": true,
-   "at": "2026-10-17T15:37Z",
+   "at": "2026-10-18T15:56Z",
    "diag": {
     "tried": {
      "74.2_IECE_0_T_35": [
@@ -13807,7 +12675,7 @@
       "2026-04"
      ],
      "75.2_TCE_0_T_26": [
-      86,
+      61,
       "2026-04"
      ],
      "74.1_IECE_0_A_35": [
@@ -13823,7 +12691,7 @@
       "2026-04"
      ],
      "74.1_IICL_0_A_42": [
-      13,
+      21,
       "2025"
      ]
     },
