@@ -1,9 +1,19 @@
 {
  "crops": {
-  "ok": false,
-  "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
-  "diag": {},
-  "trace": "ams=params, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py\", line 711, in send\n    raise ConnectionError(err, request=request)\nrequests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))\n"
+  "ok": true,
+  "diag": {
+   "resource": "https://datos.magyp.gob.ar/dataset/9e1e77ba-267e-4eaa-a59f-3296e86b5f36/resource/95d066e6-8a0f-4a80-b59d-6f28f88eacd5/download/estimaciones-agricolas-2026-03.csv",
+   "latest": {
+    "barley": "2024/2025",
+    "corn": "2024/2025",
+    "peanut": "2024/2025",
+    "sorghum": "2024/2025",
+    "soy": "2024/2025",
+    "sunflower": "2024/2025",
+    "wheat": "2024/2025"
+   },
+   "deps_with_coords": 312
+  }
  },
  "prices": {
   "ok": true,
@@ -64,8 +74,8 @@
     "2026-04"
    ],
    "moa": [
-    35,
-    "2026-01"
+    66,
+    "2026-04"
    ],
    "cereals": [
     0,

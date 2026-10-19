@@ -76,15 +76,21 @@
       "units": "Índice 2004 = 100"
      }
     ],
-    "refining": [],
-    "chemicals": [
+    "refining": [
      {
-      "id": "453.2_SUSTANCIASCOS_0_0_29_82",
-      "desc": "IPI Divisiones y Subclases Sustancias y productos químicos",
+      "id": "453.2_OTROS_PRODION_0_0_26_12",
+      "desc": "IPI Divisiones y Subclases Otros productos de la refinación del petróleo, coque y combustible nuclear",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     },
+     {
+      "id": "453.2_REFINACIONEAR_0_0_45_82",
+      "desc": "IPI Divisiones y Subclases Refinación del petróleo, coque y combustible nuclear",
       "end": "2026-08-01",
       "units": "Índice 2004 = 100"
      }
     ],
+    "chemicals": [],
     "plastics": [
      {
       "id": "453.2_PRODUCTOS_ICO_0_0_25_26",
@@ -121,6 +127,12 @@
       "desc": "IPI Divisiones y Subclases Productos de metal",
       "end": "2026-08-01",
       "units": "Índice 2004 = 100"
+     },
+     {
+      "id": "453.2_OTROS_PRODIOS_0_0_33_55",
+      "desc": "IPI Divisiones y Subclases Otros productos de metal y servicios de trabajo de metales",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
      }
     ],
     "machinery": [
@@ -140,6 +152,12 @@
      }
     ],
     "autos": [
+     {
+      "id": "453.2_VEHICULOS_TES_0_0_54_37",
+      "desc": "IPI Divisiones y Subclases Vehículos automotores, carrocerías, remolques y autopartes",
+      "end": "2026-08-01",
+      "units": "Índice 2004 = 100"
+     },
      {
       "id": "453.2_VEHICULOS_RES_0_0_21_54",
       "desc": "IPI Divisiones y Subclases Vehículos automotores",
@@ -200,11 +218,8 @@
      ]
     ],
     "apparel": [
-     44,
-     [
-      "2026-08-01",
-      71.42327207000798
-     ]
+     0,
+     null
     ],
     "paper": [
      44,
@@ -213,19 +228,22 @@
       103.74640986540469
      ]
     ],
-    "chemicals": [
-     0,
-     null
+    "refining": [
+     44,
+     [
+      "2026-08-01",
+      123.926936528635
+     ]
     ],
     "plastics": [
      0,
      null
     ],
     "minerals": [
-     22,
+     44,
      [
-      "2026-07-01",
-      126.94423973220516
+      "2026-08-01",
+      131.60642195792582
      ]
     ],
     "basic_metals": [
@@ -236,35 +254,32 @@
      ]
     ],
     "metal_products": [
-     44,
+     26,
      [
-      "2026-08-01",
-      81.49254811707966
+      "2026-07-01",
+      84.8623885550746
      ]
     ],
     "machinery": [
-     44,
+     31,
      [
       "2026-08-01",
       111.94430524538232
      ]
     ],
     "equipment": [
-     44,
-     [
-      "2026-08-01",
-      100.29520449831158
-     ]
+     0,
+     null
     ],
     "autos": [
      44,
      [
       "2026-08-01",
-      257.6964697060504
+      140.28749654072612
      ]
     ],
     "transport": [
-     30,
+     44,
      [
       "2026-08-01",
       139.35987368838514
@@ -282,10 +297,10 @@
   "diag": {
    "points": {
     "isac": [
-     128,
+     79,
      [
-      "2026-08-01",
-      140.737938979259
+      "2026-07-01",
+      140.140145830099
      ]
     ],
     "isac_orig": [
@@ -303,15 +318,18 @@
      ]
     ],
     "cement": [
-     70,
+     104,
      [
       "2026-08-01",
       156.67838437880005
      ]
     ],
     "autoparts": [
-     0,
-     null
+     104,
+     [
+      "2026-08-01",
+      82.6395920821475
+     ]
     ],
     "pharma": [
      104,
@@ -321,10 +339,10 @@
      ]
     ],
     "agrochem": [
-     104,
+     60,
      [
-      "2026-08-01",
-      133.43141016805717
+      "2026-07-01",
+      118.1122210102456
      ]
     ],
     "machinery": [
@@ -334,19 +352,73 @@
       84.22734981428722
      ]
     ]
-   },
-   "stale": [
-    [
-     "autoparts",
-     null
-    ]
-   ]
+   }
   }
  },
  "parks": {
-  "ok": false,
-  "error": "HTTPError: 502 Server Error: Bad Gateway for url: https://datos.gob.ar/api/3/action/package_show?id=registro-nacional-de-parques-industriales-renpi",
-  "diag": {},
-  "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_industry.py\", line 266, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_industry.py\", line 201, in parques\n    p = get(f\"{CKAN}/package_show\", params={\"id\": \"registro-nacional-de-parques-industriales-renpi\"}).json()[\"result\"]\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_industry.py\", line 39, in get\n    r.raise_for_status()\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/models.py\", line 1167, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://datos.gob.ar/api/3/action/package_show?id=registro-nacional-de-parques-industriales-renpi\n"
+  "ok": true,
+  "diag": {
+   "resource": [
+    "Parques Industriales inscriptos en el RENPI",
+    "https://cdn.produccion.gob.ar/cdn-secind/rempi-datos-abiertos/base-rempi-para-publicar.ods"
+   ],
+   "sheets": {
+    "PRINCIPALES_DATOS": [
+     362,
+     [
+      "REGISTRO N°",
+      "NOMBRE DEL AGRUPAMIENTO",
+      "PROVINCIA",
+      "LOCALIDAD",
+      "CARÁCTER",
+      "PÁGINA WEB",
+      "TELÉFONO",
+      "CORREO ELECTRÓNICO"
+     ]
+    ]
+   },
+   "sample": [
+    {
+     "REGISTRO N°": "RL-2019-101396766-APN-CPI#MPYT",
+     "NOMBRE DEL AGRUPAMIENTO": "SECTOR INDUSTRIAL PLANIFICADO DE SAN ANDRÉS DE GILES",
+     "PROVINCIA": "BUENOS AIRES",
+     "LOCALIDAD": "SAN ANDRÉS DE GILES",
+     "CARÁCTER": "PÚBLICO",
+     "PÁGINA WEB": NaN,
+     "TELÉFONO": "(02325) 442385",
+     "CORREO ELECTRÓNICO": "produccion.sagiles@gmail.com ; produccionymedioambiente.sag@gmail.com; sergio_udines@hotmail.com"
+    },
+    {
+     "REGISTRO N°": "RL-2019-101397554-APN-CPI#MPYT",
+     "NOMBRE DEL AGRUPAMIENTO": "PARQUE INDUSTRIAL DE LA CIUDAD DE PICHANAL",
+     "PROVINCIA": "SALTA",
+     "LOCALIDAD": "PICHANAL",
+     "CARÁCTER": "PÚBLICO",
+     "PÁGINA WEB": NaN,
+     "TELÉFONO": "(0387) 4953092 // 4953178",
+     "CORREO ELECTRÓNICO": "direcciondeindustria@gmail.com; ignacio.enteparques@gmail.com"
+    },
+    {
+     "REGISTRO N°": "RL-2019-101398392-APN-CPI#MPYT",
+     "NOMBRE DEL AGRUPAMIENTO": "ZONA DE ACTIVIDADES ECONÓMICAS GOYA",
+     "PROVINCIA": "CORRIENTES",
+     "LOCALIDAD": "GOYA",
+     "CARÁCTER": "PÚBLICO",
+     "PÁGINA WEB": NaN,
+     "TELÉFONO": "03777 420574//432798",
+     "CORREO ELECTRÓNICO": "gerencia@agenpro.org.ar; belengoetze@gmail.com"
+    }
+   ],
+   "mapped": {
+    "prov": "PROVINCIA",
+    "name": "NOMBRE DEL AGRUPAMIENTO",
+    "type": "CARÁCTER",
+    "lat": null,
+    "lon": null,
+    "loc": "LOCALIDAD",
+    "with_coords": 346,
+    "total": 362
+   }
+  }
  }
 }
