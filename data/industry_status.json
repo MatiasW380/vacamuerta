@@ -393,69 +393,9 @@
   }
  },
  "parks": {
-  "ok": true,
-  "diag": {
-   "resource": [
-    "Parques Industriales inscriptos en el RENPI",
-    "https://cdn.produccion.gob.ar/cdn-secind/rempi-datos-abiertos/base-rempi-para-publicar.ods"
-   ],
-   "sheets": {
-    "PRINCIPALES_DATOS": [
-     362,
-     [
-      "REGISTRO N°",
-      "NOMBRE DEL AGRUPAMIENTO",
-      "PROVINCIA",
-      "LOCALIDAD",
-      "CARÁCTER",
-      "PÁGINA WEB",
-      "TELÉFONO",
-      "CORREO ELECTRÓNICO"
-     ]
-    ]
-   },
-   "sample": [
-    {
-     "REGISTRO N°": "RL-2019-101396766-APN-CPI#MPYT",
-     "NOMBRE DEL AGRUPAMIENTO": "SECTOR INDUSTRIAL PLANIFICADO DE SAN ANDRÉS DE GILES",
-     "PROVINCIA": "BUENOS AIRES",
-     "LOCALIDAD": "SAN ANDRÉS DE GILES",
-     "CARÁCTER": "PÚBLICO",
-     "PÁGINA WEB": NaN,
-     "TELÉFONO": "(02325) 442385",
-     "CORREO ELECTRÓNICO": "produccion.sagiles@gmail.com ; produccionymedioambiente.sag@gmail.com; sergio_udines@hotmail.com"
-    },
-    {
-     "REGISTRO N°": "RL-2019-101397554-APN-CPI#MPYT",
-     "NOMBRE DEL AGRUPAMIENTO": "PARQUE INDUSTRIAL DE LA CIUDAD DE PICHANAL",
-     "PROVINCIA": "SALTA",
-     "LOCALIDAD": "PICHANAL",
-     "CARÁCTER": "PÚBLICO",
-     "PÁGINA WEB": NaN,
-     "TELÉFONO": "(0387) 4953092 // 4953178",
-     "CORREO ELECTRÓNICO": "direcciondeindustria@gmail.com; ignacio.enteparques@gmail.com"
-    },
-    {
-     "REGISTRO N°": "RL-2019-101398392-APN-CPI#MPYT",
-     "NOMBRE DEL AGRUPAMIENTO": "ZONA DE ACTIVIDADES ECONÓMICAS GOYA",
-     "PROVINCIA": "CORRIENTES",
-     "LOCALIDAD": "GOYA",
-     "CARÁCTER": "PÚBLICO",
-     "PÁGINA WEB": NaN,
-     "TELÉFONO": "03777 420574//432798",
-     "CORREO ELECTRÓNICO": "gerencia@agenpro.org.ar; belengoetze@gmail.com"
-    }
-   ],
-   "mapped": {
-    "prov": "PROVINCIA",
-    "name": "NOMBRE DEL AGRUPAMIENTO",
-    "type": "CARÁCTER",
-    "lat": null,
-    "lon": null,
-    "loc": "LOCALIDAD",
-    "with_coords": 346,
-    "total": 362
-   }
-  }
+  "ok": false,
+  "error": "HTTPError: 502 Server Error: Bad Gateway for url: https://datos.gob.ar/api/3/action/package_show?id=registro-nacional-de-parques-industriales-renpi",
+  "diag": {},
+  "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_industry.py\", line 266, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_industry.py\", line 201, in parques\n    p = get(f\"{CKAN}/package_show\", params={\"id\": \"registro-nacional-de-parques-industriales-renpi\"}).json()[\"result\"]\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_industry.py\", line 39, in get\n    r.raise_for_status()\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/models.py\", line 1167, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://datos.gob.ar/api/3/action/package_show?id=registro-nacional-de-parques-industriales-renpi\n"
  }
 }
