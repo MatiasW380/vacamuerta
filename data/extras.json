@@ -647,10 +647,10 @@
    "url": "https://www.bcra.gob.ar/en/central-bank-api-catalog/"
   },
   "latest": {
-   "date": "2026-11-02",
-   "ars_per_usd": 1545.5
+   "date": "2026-11-03",
+   "ars_per_usd": 1551.0
   },
-  "yoy_pct": 4.3,
+  "yoy_pct": 4.7,
   "daily": [
    {
     "date": "2025-11-03",
@@ -1615,6 +1615,10 @@
    {
     "date": "2026-11-02",
     "ars_per_usd": 1545.5
+   },
+   {
+    "date": "2026-11-03",
+    "ars_per_usd": 1551.0
    }
   ]
  },
@@ -2631,6 +2635,30 @@
  "news": {
   "items": [
    {
+    "source": "Infobae",
+    "title": "El petróleo revierte su alza tras el anuncio de Trump de que dejará de pagar a Israel",
+    "url": "https://www.infobae.com/america/mundo/2026/11/03/el-petroleo-sube-tras-el-ataque-de-eeuu-a-la-isla-de-qeshm-y-las-dudas-sobre-un-acuerdo-para-terminar-la-guerra/",
+    "published": "2026-11-03T16:35Z"
+   },
+   {
+    "source": "EconoJournal",
+    "title": "Portezuelo Grande: qué evalúa el gobierno de Javier Milei para financiar el canal aliviador de Vaca Muerta en la presa de Neuquén",
+    "url": "https://econojournal.com.ar/enclave/portezuelo-grande-financiar-javier-milei-canal-aliviador-neuquen/",
+    "published": "2026-11-03T16:07Z"
+   },
+   {
+    "source": "EconoJournal",
+    "title": "Prometheus: la innovación argentina que impulsó una solución integral de gas para fractura",
+    "url": "https://econojournal.com.ar/actualidad-mineria-energia/prometheus-la-innovacion-argentina-que-impulso-una-solucion-integral-de-gas-para-fractura/",
+    "published": "2026-11-02T22:56Z"
+   },
+   {
+    "source": "Infobae",
+    "title": "Juicio por YPF: quince estados de EEUU pidieron a la Corte Suprema revisar el fallo favorable a Argentina",
+    "url": "https://www.infobae.com/economia/2026/11/02/juicio-por-ypf-quince-estados-de-eeuu-pidieron-a-la-corte-suprema-revisar-el-fallo-favorable-a-argentina/",
+    "published": "2026-11-02T22:18Z"
+   },
+   {
     "source": "EconoJournal",
     "title": "El gobierno de Javier Milei cumplirá un fallo de la Corte y construirá un canal aliviador de Vaca Muerta en la presa Portezuelo Grande",
     "url": "https://econojournal.com.ar/enclave/el-gobierno-de-javier-milei-cumplira-un-fallo-de-la-corte-vaca-muerta-portezuelo-grande/",
@@ -2641,12 +2669,6 @@
     "title": "¿Puede la minería espejar en los próximos años el desarrollo de Vaca Muerta?",
     "url": "https://econojournal.com.ar/mineria/puede-la-mineria-espejar-en-los-proximos-anos-el-desarrollo-de-vaca-muerta/",
     "published": "2026-11-02T19:56Z"
-   },
-   {
-    "source": "Infobae",
-    "title": "Juicio por YPF: quince estados de EEUU pidieron a la Corte Suprema revisar el fallo favorable a Argentina",
-    "url": "https://www.infobae.com/economia/2026/11/02/juicio-por-ypf-quince-estados-de-eeuu-pidieron-a-la-corte-suprema-revisar-el-fallo-favorable-a-argentina/",
-    "published": "2026-11-02T18:37Z"
    },
    {
     "source": "EconoJournal",
@@ -2689,18 +2711,6 @@
     "title": "Ya organizan las Rondas de Negocios RIGI II en Córdoba: qué pedidos recibieron las mineras de los proveedores",
     "url": "https://www.ambito.com/energia/ya-organizan-las-rondas-negocios-rigi-ii-cordoba-que-pedidos-recibieron-las-mineras-los-proveedores-n6339836",
     "published": "2026-10-30T19:23Z"
-   },
-   {
-    "source": "EconoJournal",
-    "title": "Estados Unidos busca fortalecer la presencia de sus compañías en el sector energético local y apuesta por la continuidad de Milei para concretarlo",
-    "url": "https://econojournal.com.ar/oilgas/estados-unidos-busca-fortalecer-la-presencia-de-sus-companias-en-el-sector-energetico-local/",
-    "published": "2026-10-30T18:27Z"
-   },
-   {
-    "source": "EconoJournal",
-    "title": "Mercados de Carbono: el Senado dio media sanción al proyecto para comercializar proyectos verdes en el extranjero",
-    "url": "https://econojournal.com.ar/energia/mercados-de-carbono-el-senado-dio-media-sancion-al-proyecto/",
-    "published": "2026-10-30T17:00Z"
    },
    {
     "source": "Ámbito",
@@ -2767,12 +2777,6 @@
     "title": "AOG Patagonia 2026: CEOs petroleros ven una nueva escala para Vaca Muerta, pero advierten por temas pendientes",
     "url": "https://www.ambito.com/energia/aog-patagonia-2026-ceos-petroleros-ven-una-nueva-escala-vaca-muerta-pero-advierten-temas-pendientes-n6336963",
     "published": "2026-10-22T23:32Z"
-   },
-   {
-    "source": "Ámbito",
-    "title": "Vaca Muerta llevó la producción de petróleo a un nuevo récord y quedó a un paso del millón de barriles diarios",
-    "url": "https://www.ambito.com/energia/vaca-muerta-llevo-la-produccion-petroleo-un-nuevo-record-y-quedo-un-paso-del-millon-barriles-diarios-n6336216",
-    "published": "2026-10-21T13:13Z"
    }
   ]
  },
@@ -5047,7 +5051,7 @@
     "petroleo": 49,
     "petroleo:Midstream": 34,
     "petroleo:Upstream": 15,
-    "mineria": 527,
+    "mineria": 542,
     "mineria:Cobre": 124,
     "mineria:Litio": 374,
     "mineria:Oro y Plata": 44,
@@ -12649,24 +12653,24 @@
    "balance": 1630.8
   }
  },
- "generated_at": "2026-11-02T21:59Z",
+ "generated_at": "2026-11-03T19:43Z",
  "status": {
   "fracking": {
    "ok": false,
-   "error": "ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /api/3/action/package_show?id=datos-de-fractura-de-pozos-adjunto-iv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x7f42ea59f620>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=90)'))",
+   "error": "ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /api/3/action/package_show?id=datos-de-fractura-de-pozos-adjunto-iv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x7f3f04b68ad0>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=90)'))",
    "diag": {},
-   "trace": "^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /api/3/action/package_show?id=datos-de-fractura-de-pozos-adjunto-iv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x7f42ea59f620>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=90)'))\n"
+   "trace": "^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /api/3/action/package_show?id=datos-de-fractura-de-pozos-adjunto-iv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x7f3f04b68ad0>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=90)'))\n"
   },
   "fx": {
    "ok": true,
-   "at": "2026-11-02T21:39Z",
+   "at": "2026-11-03T19:24Z",
    "diag": {
     "pages": 1
    }
   },
   "oil_price": {
    "ok": true,
-   "at": "2026-11-02T21:39Z",
+   "at": "2026-11-03T19:24Z",
    "diag": {}
   },
   "regulations": {
@@ -12681,18 +12685,18 @@
   },
   "news": {
    "ok": true,
-   "at": "2026-11-02T21:48Z",
+   "at": "2026-11-03T19:32Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
-     "Infobae": "ok 1 de https://www.infobae.com/arc/outboundfeeds/rss/category/economia/",
+     "Infobae": "ok 2 de https://www.infobae.com/arc/outboundfeeds/rss/category/economia/",
      "Ámbito": "ok 14 de https://www.ambito.com/rss/pages/energia.xml"
     }
    }
   },
   "reserves": {
    "ok": true,
-   "at": "2026-11-02T21:50Z",
+   "at": "2026-11-03T19:34Z",
    "diag": {
     "package": "https://datos.gob.ar energia-reservas-petroleo-gas",
     "zip_files": [
@@ -12899,7 +12903,7 @@
   },
   "export_price": {
    "ok": true,
-   "at": "2026-11-02T21:52Z",
+   "at": "2026-11-03T19:35Z",
    "diag": {
     "package": "https://datos.gob.ar energia-precio-exportacion-petroleo-crudo",
     "resources": [
@@ -12933,7 +12937,7 @@
   },
   "fuel_prices": {
    "ok": false,
-   "error": "ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /dataset/1c181390-5045-475e-94dc-410429be4b17/resource/80ac25de-a44a-4445-9215-090cf55cfda5/download/precios-en-surtidor-resolucin-3142016.csv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x7f42e9694140>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=600)'))",
+   "error": "ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /dataset/1c181390-5045-475e-94dc-410429be4b17/resource/80ac25de-a44a-4445-9215-090cf55cfda5/download/precios-en-surtidor-resolucin-3142016.csv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x7f3f039f9850>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=600)'))",
    "diag": {
     "package": "https://datos.gob.ar energia-precios-surtidor---resolucion-3142016",
     "resources": [
@@ -12941,16 +12945,16 @@
      "Precios históricos"
     ]
    },
-   "trace": "lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /dataset/1c181390-5045-475e-94dc-410429be4b17/resource/80ac25de-a44a-4445-9215-090cf55cfda5/download/precios-en-surtidor-resolucin-3142016.csv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x7f42e9694140>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=600)'))\n"
+   "trace": "lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /dataset/1c181390-5045-475e-94dc-410429be4b17/resource/80ac25de-a44a-4445-9215-090cf55cfda5/download/precios-en-surtidor-resolucin-3142016.csv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x7f3f039f9850>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=600)'))\n"
   },
   "rigi_portal": {
    "ok": true,
-   "at": "2026-11-02T21:56Z",
+   "at": "2026-11-03T19:40Z",
    "diag": {
     "html_len": 88393,
     "context": "-thin\">&nbsp;</span><span class=\"fw-semibold fs-1\">M</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Empleos <span class=\"fw-medium br-sm br-xs\">(directos e indirectos)</span></dt><dd class=\"fs-1 fw-bold text-arg-verdin js-total-puestos-trabajo\">0</dd></div></dl></div><div class=\"col-md-12 m-y-2\"><h3 class=\"h4 font-sans-serif p-b-1 border-bottom\">Sectores</h3><dl class=\"dl-proyectos-sector\"><div class=\"d-grid\"><dt class=\"last\">Energía eléctrica</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-torre-electrica m-r-05\"></i> <span class=\"m-t-1 js-total-energia-electrica\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Petróleo y gas</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-petroleo-y-gas m-r-05\"></i> <span class=\"m-t-1 js-total-petroleo-y-gas\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Minería</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-mineria m-r-05\"></i> <span class=\"m-t-1 js-total-mineria\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Siderurgia</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-siderurgia m-r-05\"></i> <span class=\"m-t-1 js-total-siderurgia\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Infraestructura</dt><",
     "inline_scripts": [
-     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"j-7e46GeF71t-1Z2x1oDVR1WXjq7l-GOKhZcjNv5uVk\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
+     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"RfRkPGlgInB3Or6D_OqY65c8v_NMfYMW3bXfzlTGKJM\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
      "const jsonContainer = document.getElementById('raw-data-json');\n  const jsonText = (jsonContainer.textContent || jsonContainer.innerText).trim();\n  const rawData = JSON.parse(jsonText);\n\n  const extractVal = (val) => (typeof val === 'object' && val !== null) ? (val.total || 0) : (val || 0);\n  const formatNum = (num) => Number(num || 0).toLocaleString('es-AR');\n\n  const getSeriesData = (key) => rawData.map(d => ({ \n    x: new Date(d.year).getTime(), \n    y: extractVal(d[key]) \n  }));\n\n  const seriesData = [\n    { key: 'energia', name: 'Energía Eléctrica', data: getSeriesData('energia') },\n    { key: 'petroleo', name: 'Petróleo y Gas', data: getSeriesData('petroleo') },\n    { key: 'mineria', name: 'Minería', data: getSeriesData('mineria') },\n    { key: 'siderurgia', name: 'Siderurgia', data: getSeriesData('siderurgia') },\n    { key: 'infra', name: 'Infraestructura', data: getSeriesData('infra') },\n    { key: 'tecnologia', name: 'Tecnología', data: getSeriesData('tecnologia') }\n  ];\n\n  var optionsMain = {\n    series: seriesData,\n    colors: ['#C2185B', '#B9CE39', '#6A1B99', '#4FBB73', '#F79D00','#843511'],\n    chart: {\n      id: 'chartBarMain',\n      type: 'bar',\n      height: 450,\n      stacked: true,\n      toolbar: { show: false }\n    },\n    grid: {\n      padding: {\n        right: 35,\n        left: 15\n      }\n    },\n    dataLabels: { enabled: false },\n    plotOptions: {\n      bar: {\n        dataLabels: {\n          total: {\n            enabled: true,\n            style: {\n              fontSize: '13px',\n              fontWeight: 900\n            },\n            formatter: function (val, opts) {\n              if (!val) return '';\n\n              // Validar si la columna está dentro del rango visible actual del zoom/brush\n              if (opts && opts.w && opts.w.globals) {\n  ",
      "headStyle(\"rigi-cms-fix\", `.container:has(#mapa-portal){padding-left:0 !important;padding-right:0 !important;width:100% !important;}`);\nheadStyle('rigi__999d6df5647d2df27fe7', `.poncho-map{--pm-color-primary: var(--arg-escarapela);--pm-color-base: #eaeaea;--pm-slider-background: var(--arg-azul);--pm-slider-border-color: color-mix(in srgb, #626161 40%, white);--pm-slider-border-width: 2px;--pm-scrollbar-handle: #eaeaea;--pm-scrollbar-background: rgb(0, 0, 0, 0.15);--pm-hover-background: var(--arg-secundario);--pm-hover-color: white;--pm-active-color: #343232;--pm-active-visited-color: violet;--pm-active-background: var(--pm-color-primary);--color: var(--arg-escarapela);--pm-loader-spinner-background: var(--arg-amarillo);--pm-loader-background: var(--arg-azul);--pm-loader-spinner-color: var(--arg-primary-700)}details{--details-border-color: var(--arg-primary-300)}.details-container{--container-border-color: var(--arg-primary-500)}.poncho-map .marker--active:focus,.poncho-map .marker--active{fill:#000 !important;fill-opacity:0 !important}.color-primary{color:var(--color)}.poncho-map .pm-content a{color:var(--arg-escarapela)}.totals-overview{display:grid;gap:15px 15px;grid-template-areas:\"area-a area-b area-c\";grid-template-columns:27% 1fr 27%}.a,.b,.c{display:flex;flex-direction:column-reverse;align-self:self-start}.a{grid-area:area-a}.b{grid-area:area-b}.c{grid-area:area-c}.a .key,.b .key,.c .key,.a .value,.b .value,.c .value{margin:0}.a .key,.b .key,.c .key{font-size:.95rem}.value{grid-area:value}.a .value,.b .value,.c .value{font-size:1.35rem;line-height:2rem;display:flex;align-items:baseline}.c .value .small,.b .value .small,.c .value .small{font-size:1rem}.details-data dt{float:left;margin-right:.25rem}.details-data dt::after{content:\":\";font-weight:400}.details-data "
     ],
@@ -12976,7 +12980,7 @@
       }
      },
      "mineria": {
-      "total": 527,
+      "total": 542,
       "sub": {
        "Cobre": 124,
        "Litio": 374,
@@ -13012,7 +13016,7 @@
   },
   "trade_balance": {
    "ok": true,
-   "at": "2026-11-02T21:59Z",
+   "at": "2026-11-03T19:43Z",
    "diag": {
     "tried": {
      "74.2_IECE_0_T_35": [
