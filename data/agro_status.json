@@ -22,37 +22,37 @@
     "soybeans": [
      "Soybeans",
      "($/mt)",
-     201
+     202
     ],
     "soybean_oil": [
      "Soybean oil",
      "($/mt)",
-     201
+     202
     ],
     "soybean_meal": [
      "Soybean meal",
      "($/mt)",
-     201
+     202
     ],
     "maize": [
      "Maize",
      "($/mt)",
-     201
+     202
     ],
     "wheat": [
      "Wheat, US HRW",
      "($/mt)",
-     201
+     202
     ],
     "sunflower_oil": [
      "Sunflower oil",
      "($/mt)",
-     201
+     202
     ],
     "beef": [
      "Beef **",
      "($/kg)",
-     201
+     202
     ]
    }
   }
