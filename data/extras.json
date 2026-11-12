@@ -653,10 +653,6 @@
   "yoy_pct": 9.3,
   "daily": [
    {
-    "date": "2025-11-11",
-    "ars_per_usd": 1413.0
-   },
-   {
     "date": "2025-11-12",
     "ars_per_usd": 1412.0
    },
@@ -1622,6 +1618,17 @@
   },
   "items": [
    {
+    "id": "350127",
+    "date": "2026-11-06",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución Sintetizada 914/2026",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/350127/20261106",
+    "topics": [
+     "Vaca Muerta"
+    ],
+    "summary": "Resolución RESFC-2026-914-APN-DIRECTORIO#ENREGE Expediente EX-2025-113518884- -APN-SD#ENRE Buenos Aires, 4 de NOVIEMBRE de 2026 El Directorio del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD ha resuelto ha resuelto: 1 Dar a publicidad la solicitud de Acceso al Sistema de Transporte de Energía Eléctrica presentada…"
+   },
+   {
     "id": "349233",
     "date": "2026-10-19",
     "agency": "MINISTERIO DE ECONOMÍA",
@@ -1908,6 +1915,17 @@
    }
   ],
   "raw_items": [
+   {
+    "id": "350127",
+    "date": "2026-11-06",
+    "agency": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+    "title": "Resolución Sintetizada 914/2026",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/350127/20261106",
+    "topics": [
+     "Vaca Muerta"
+    ],
+    "summary": "Resolución RESFC-2026-914-APN-DIRECTORIO#ENREGE Expediente EX-2025-113518884- -APN-SD#ENRE Buenos Aires, 4 de NOVIEMBRE de 2026 El Directorio del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD ha resuelto ha resuelto: 1 Dar a publicidad la solicitud de Acceso al Sistema de Transporte de Energía Eléctrica presentada…"
+   },
    {
     "id": "349233",
     "date": "2026-10-19",
@@ -2621,11 +2639,65 @@
    "349270",
    "349330",
    "349363",
-   "349372"
+   "349372",
+   "350068",
+   "350081",
+   "350104",
+   "350109",
+   "350110",
+   "350111",
+   "350112",
+   "350113",
+   "350114",
+   "350115",
+   "350116",
+   "350117",
+   "350128",
+   "350138",
+   "350149",
+   "350150",
+   "350179",
+   "350184",
+   "350185",
+   "350220",
+   "350238",
+   "350239",
+   "350240",
+   "350246"
   ]
  },
  "news": {
   "items": [
+   {
+    "source": "Ámbito",
+    "title": "COP31 de Turquía: la crisis climática pone a prueba los compromisos globales y reabre el debate sobre energía, financiamiento y desarrollo",
+    "url": "https://www.ambito.com/energia/cop31-turquia-la-crisis-climatica-pone-prueba-los-compromisos-globales-y-reabre-el-debate-financiamiento-y-desarrollo-n6344512",
+    "published": "2026-11-12T18:14Z"
+   },
+   {
+    "source": "EconoJournal",
+    "title": "Daniel Gerold sobre el financiamiento para Vaca Muerta: “No estoy seguro de que el año que viene el mercado esté abierto para el sector”",
+    "url": "https://econojournal.com.ar/oilgas/gerold-financiamiento-vaca-muerta-no-estoy-seguro-de-que-el-ano-que-viene-el-mercado-este-abierto/",
+    "published": "2026-11-12T15:49Z"
+   },
+   {
+    "source": "Infobae",
+    "title": "La producción petrolera de Venezuela sigue el crecimiento: subió un 1,49% en octubre",
+    "url": "https://www.infobae.com/venezuela/2026/11/12/la-produccion-petrolera-de-venezuela-sigue-el-crecimiento-subio-un-149-en-octubre/",
+    "published": "2026-11-12T13:37Z"
+   },
+   {
+    "source": "EconoJournal",
+    "title": "Gas Andes adjudicó en Chile y la Argentina capacidad de transporte a través de su gasoducto por plazos de hasta 35 años",
+    "url": "https://econojournal.com.ar/oilgas/gas-andes-adjudico-en-chile-y-la-argentina-capacidad-de-transporte-a-traves-de-su-gasoducto-por-plazos-de-hasta-35-anos/",
+    "published": "2026-11-12T12:00Z"
+   },
+   {
+    "source": "EconoJournal",
+    "title": "Vaca Muerta: e-cLean, la plataforma argentina que gestiona integralmente los activos de fractura",
+    "url": "https://econojournal.com.ar/actualidad-mineria-energia/vaca-muerta-e-clean-la-plataforma-argentina-que-gestiona-integralmente-los-activos-de-fractura/",
+    "published": "2026-11-11T20:44Z"
+   },
    {
     "source": "Ámbito",
     "title": "RIGI: abren inscripción para la segunda ronda de negocios, con foco en petróleo, gas y energía",
@@ -2639,18 +2711,6 @@
     "published": "2026-11-11T16:43Z"
    },
    {
-    "source": "Infobae",
-    "title": "El precio del petróleo se desplomó casi 21% en menos de dos semanas: cuándo va a bajar la nafta en la Argentina",
-    "url": "https://www.infobae.com/economia/2026/11/11/el-precio-del-petroleo-se-desplomo-casi-21-en-menos-de-dos-semanas-cuando-va-a-bajar-la-nafta-en-la-argentina/",
-    "published": "2026-11-11T16:40Z"
-   },
-   {
-    "source": "Infobae",
-    "title": "La petrolera brasileña Petrobras elevó sus ganancias un 46% interanual hasta septiembre",
-    "url": "https://www.infobae.com/america/america-latina/2026/11/11/la-petrolera-brasilena-petrobras-elevo-sus-ganancias-un-46-interanual-hasta-septiembre/",
-    "published": "2026-11-11T16:13Z"
-   },
-   {
     "source": "EconoJournal",
     "title": "Vaca Muerta: GyP de Neuquén y PPSA explorarán oportunidades en la ventana de gas seco para abastecer al Brasil",
     "url": "https://econojournal.com.ar/oilgas/vaca-muerta-gyp-ppsa-gas-seco-brasil/",
@@ -2661,12 +2721,6 @@
     "title": "Una startup argentina desarrolla un reactor para convertir el metano de los yacimientos en hidrógeno y carbono sólido",
     "url": "https://econojournal.com.ar/energia/desarrollan-reactor-para-convertir-el-metano-en-hidrogeno-y-carbono-solido/",
     "published": "2026-11-11T12:00Z"
-   },
-   {
-    "source": "Infobae",
-    "title": "Baja del petróleo: cuánto costaba la nafta en la Argentina la última vez que el barril estuvo por debajo de los USD 90",
-    "url": "https://www.infobae.com/economia/2026/11/11/baja-del-petroleo-cuanto-costaba-la-nafta-en-la-argentina-la-ultima-vez-que-el-barril-estuvo-por-debajo-de-los-usd-90/",
-    "published": "2026-11-11T03:29Z"
    },
    {
     "source": "Ámbito",
@@ -2711,16 +2765,10 @@
     "published": "2026-11-10T12:12Z"
    },
    {
-    "source": "EconoJournal",
-    "title": "Confirmado: Rolando Figueroa adelanta las elecciones en Neuquén y fija fecha para el 14 de febrero",
-    "url": "https://econojournal.com.ar/enclave/confirmado-rolando-figueroa-adelanta-las-elecciones-en-neuquen-y-fija-fecha-para-el-14-de-febrero/",
-    "published": "2026-11-09T15:56Z"
-   },
-   {
-    "source": "EconoJournal",
-    "title": "El plan de Trump para reactivar las exportaciones de gas ruso a Europa con la participación de inversores estadounidenses",
-    "url": "https://econojournal.com.ar/internacionales/el-plan-de-trump-para-reactivar-las-exportaciones-de-gas-ruso-a-europa/",
-    "published": "2026-11-09T11:40Z"
+    "source": "Ámbito",
+    "title": "Aumentó la producción de petróleo de la OPEP: está al 90% del nivel anterior a la guerra",
+    "url": "https://www.ambito.com/finanzas/aumento-la-produccion-petroleo-la-opep-esta-al-90-del-nivel-anterior-la-guerra-n6343259",
+    "published": "2026-11-09T18:58Z"
    },
    {
     "source": "Ámbito",
@@ -2753,12 +2801,6 @@
     "published": "2026-11-07T21:41Z"
    },
    {
-    "source": "EconoJournal",
-    "title": "GNL: Se concretó la primera soldadura del gasoducto de exportación del proyecto de Southern Energy en Río Negro",
-    "url": "https://econojournal.com.ar/oilgas/gnl-se-concreto-la-primera-soldadura-del-gasoducto-de-exportacion-del-proyecto-de-southern-energy-en-rio-negro/",
-    "published": "2026-11-07T00:52Z"
-   },
-   {
     "source": "Ámbito",
     "title": "El Gobierno organiza en Buenos Aires una nueva Ronda de Negocios del RIGI, con foco en hidrocarburos",
     "url": "https://www.ambito.com/energia/el-gobierno-organiza-tecnopolis-una-nueva-ronda-negocios-del-rigi-foco-hidrocarburos-n6341943",
@@ -2766,9 +2808,9 @@
    },
    {
     "source": "Ámbito",
-    "title": "YPF pidió ingresar al RIGI con el proyecto petrolero Bajo del Toro por u$s8.729 millones",
-    "url": "https://www.ambito.com/energia/ypf-pidio-ingresar-al-rigi-el-proyecto-petrolero-del-toro-us8729-millones-n6339975",
-    "published": "2026-10-30T23:02Z"
+    "title": "Cuenta regresiva para una obra clave: el VMOS se prepara para llevar el petróleo de Vaca Muerta al mundo",
+    "url": "https://www.ambito.com/energia/cuenta-regresiva-una-obra-clave-el-vmos-se-prepara-llevar-el-petroleo-vaca-muerta-al-mundo-n6339221",
+    "published": "2026-10-29T14:17Z"
    }
   ]
  },
@@ -9055,44 +9097,14 @@
    "license": "Dominio público"
   },
   "brent": {
-   "date": "2026-11-03",
-   "usd_bbl": 107.03
+   "date": "2026-11-11",
+   "usd_bbl": 92.14
   },
   "wti": {
-   "date": "2026-11-03",
-   "usd_bbl": 99.64
+   "date": "2026-11-11",
+   "usd_bbl": 89.62
   },
   "daily": [
-   {
-    "date": "2025-10-30",
-    "brent": 65.11,
-    "wti": 61.36
-   },
-   {
-    "date": "2025-10-31",
-    "brent": 65.44,
-    "wti": 61.75
-   },
-   {
-    "date": "2025-11-03",
-    "brent": 65.79,
-    "wti": 61.79
-   },
-   {
-    "date": "2025-11-04",
-    "brent": 65.04,
-    "wti": 61.38
-   },
-   {
-    "date": "2025-11-05",
-    "brent": 63.54,
-    "wti": 60.4
-   },
-   {
-    "date": "2025-11-06",
-    "brent": 63.41,
-    "wti": 60.24
-   },
    {
     "date": "2025-11-07",
     "brent": 63.72,
@@ -10362,6 +10374,36 @@
     "date": "2026-11-03",
     "brent": 107.03,
     "wti": 99.64
+   },
+   {
+    "date": "2026-11-04",
+    "brent": 91.84,
+    "wti": 91.73
+   },
+   {
+    "date": "2026-11-05",
+    "brent": 97.96,
+    "wti": 94.05
+   },
+   {
+    "date": "2026-11-06",
+    "brent": 97.83,
+    "wti": 94.37
+   },
+   {
+    "date": "2026-11-09",
+    "brent": 91.03,
+    "wti": 90.4
+   },
+   {
+    "date": "2026-11-10",
+    "brent": 90.16,
+    "wti": 89.62
+   },
+   {
+    "date": "2026-11-11",
+    "brent": 92.14,
+    "wti": 89.62
    }
   ]
  },
@@ -12645,101 +12687,81 @@
    "balance": 1630.8
   }
  },
- "generated_at": "2026-11-11T19:49Z",
+ "generated_at": "2026-11-12T20:04Z",
  "status": {
   "fracking": {
    "ok": false,
-   "error": "ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /api/3/action/package_show?id=datos-de-fractura-de-pozos-adjunto-iv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x7f7776ca2780>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=90)'))",
+   "error": "ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /api/3/action/package_show?id=datos-de-fractura-de-pozos-adjunto-iv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x79c5825629c0>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=90)'))",
    "diag": {},
-   "trace": "^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /api/3/action/package_show?id=datos-de-fractura-de-pozos-adjunto-iv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x7f7776ca2780>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=90)'))\n"
+   "trace": "^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /api/3/action/package_show?id=datos-de-fractura-de-pozos-adjunto-iv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x79c5825629c0>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=90)'))\n"
   },
   "fx": {
    "ok": true,
-   "at": "2026-11-11T19:30Z",
+   "at": "2026-11-12T19:49Z",
    "diag": {
     "pages": 1
    }
   },
   "oil_price": {
    "ok": true,
-   "at": "2026-11-11T19:30Z",
+   "at": "2026-11-12T19:49Z",
    "diag": {}
   },
   "regulations": {
-   "ok": false,
-   "error": "RuntimeError: No se encontraron avisos en la primera sección",
+   "ok": true,
+   "at": "2026-11-12T19:50Z",
    "diag": {
     "pages": 6,
-    "page_errors": 6,
-    "links": 0
-   },
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1172, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1156, in <lambda>\n    (\"regulations\", lambda d: regulations(d, previo.get(\"regulations\"))),\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 355, in regulations\n    raise RuntimeError(\"No se encontraron avisos en la primera sección\")\nRuntimeError: No se encontraron avisos en la primera sección\n"
+    "page_errors": 0,
+    "links": 255,
+    "candidates": 25,
+    "kept": 1,
+    "details_failed": 0
+   }
   },
   "news": {
    "ok": true,
-   "at": "2026-11-11T19:38Z",
+   "at": "2026-11-12T19:50Z",
    "diag": {
     "feeds": {
      "EconoJournal": "ok 10 de https://econojournal.com.ar/feed/",
-     "Infobae": "ok 3 de https://www.infobae.com/arc/outboundfeeds/rss/category/economia/",
-     "Ámbito": "ok 15 de https://www.ambito.com/rss/pages/energia.xml"
+     "Infobae": "ok 1 de https://www.infobae.com/arc/outboundfeeds/rss/category/economia/",
+     "Ámbito": "ok 16 de https://www.ambito.com/rss/pages/energia.xml"
     }
    }
   },
   "reserves": {
    "ok": false,
-   "error": "RuntimeError: No se encontró el dataset: ['http://datos.energia.gob.ar reservas-de-petroleo-y-gas: ConnectTimeout', 'http://datos.energia.gob.ar energia-reservas-petroleo-gas: ConnectTimeout', 'https://datos.gob.ar reservas-de-petroleo-y-gas: HTTPError', 'https://datos.gob.ar energia-reservas-petroleo-gas: ReadTimeout']",
+   "error": "RuntimeError: No se encontró el dataset: ['http://datos.energia.gob.ar reservas-de-petroleo-y-gas: ConnectTimeout', 'http://datos.energia.gob.ar energia-reservas-petroleo-gas: ConnectTimeout', 'https://datos.gob.ar reservas-de-petroleo-y-gas: HTTPError', 'https://datos.gob.ar energia-reservas-petroleo-gas: HTTPError']",
    "diag": {},
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1172, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1158, in <lambda>\n    (\"reserves\", lambda d: reserves(d)),\n                           ^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 534, in reserves\n    paq, base = ckan_paquete([\"http://datos.energia.gob.ar\", \"https://datos.gob.ar\"],\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 444, in ckan_paquete\n    raise RuntimeError(f\"No se encontró el dataset: {errores}\")\nRuntimeError: No se encontró el dataset: ['http://datos.energia.gob.ar reservas-de-petroleo-y-gas: ConnectTimeout', 'http://datos.energia.gob.ar energia-reservas-petroleo-gas: ConnectTimeout', 'https://datos.gob.ar reservas-de-petroleo-y-gas: HTTPError', 'https://datos.gob.ar energia-reservas-petroleo-gas: ReadTimeout']\n"
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1172, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1158, in <lambda>\n    (\"reserves\", lambda d: reserves(d)),\n                           ^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 534, in reserves\n    paq, base = ckan_paquete([\"http://datos.energia.gob.ar\", \"https://datos.gob.ar\"],\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 444, in ckan_paquete\n    raise RuntimeError(f\"No se encontró el dataset: {errores}\")\nRuntimeError: No se encontró el dataset: ['http://datos.energia.gob.ar reservas-de-petroleo-y-gas: ConnectTimeout', 'http://datos.energia.gob.ar energia-reservas-petroleo-gas: ConnectTimeout', 'https://datos.gob.ar reservas-de-petroleo-y-gas: HTTPError', 'https://datos.gob.ar energia-reservas-petroleo-gas: HTTPError']\n"
   },
   "export_price": {
-   "ok": true,
-   "at": "2026-11-11T19:43Z",
-   "diag": {
-    "package": "https://datos.gob.ar energia-precio-exportacion-petroleo-crudo",
-    "resources": [
-     "Precio de exportación de petróleo crudo"
-    ],
-    "alternatives_error": "HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /api/3/action/package_search?q=precio+petroleo+crudo&rows=15 (Caused by ConnectTimeoutError(<HTTPConnection(hos",
-    "series": [
-     "brent|Ice Brent",
-     "fob|Escalante",
-     "fob|Cañadon Seco",
-     "fob|Maria Ines",
-     "fob|San Sebastian",
-     "fob|Medanito",
-     "domestic|Escalante",
-     "domestic|Cañadon Seco",
-     "domestic|Maria Ines",
-     "domestic|San Sebastian",
-     "domestic|Medanito",
-     "fob_vs_brent|Escalante",
-     "fob_vs_brent|Cañadon Seco",
-     "fob_vs_brent|Maria Ines",
-     "fob_vs_brent|San Sebastian",
-     "fob_vs_brent|Medanito",
-     "domestic_vs_brent|Escalante",
-     "domestic_vs_brent|Cañadon Seco",
-     "domestic_vs_brent|Maria Ines",
-     "domestic_vs_brent|San Sebastian",
-     "domestic_vs_brent|Medanito"
-    ]
-   }
+   "ok": false,
+   "error": "RuntimeError: No se encontró el dataset: ['https://datos.gob.ar energia-precio-exportacion-petroleo-crudo: HTTPError', 'https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo: HTTPError', 'https://datos.gob.ar precio-exportacion-petroleo-crudo: HTTPError', 'http://datos.energia.gob.ar energia-precio-exportacion-petroleo-crudo: ConnectTimeout', 'http://datos.energia.gob.ar precio-de-exportacion-de-petroleo-crudo: ConnectTimeout', 'http://datos.energia.gob.ar precio-exportacion-petroleo-crudo: ConnectTime",
+   "diag": {},
+   "trace": "a[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1159, in <lambda>\n    (\"export_price\", lambda d: export_price(d)),\n                               ^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 614, in export_price\n    paq, base = ckan_paquete([\"https://datos.gob.ar\", \"http://datos.energia.gob.ar\"],\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 444, in ckan_paquete\n    raise RuntimeError(f\"No se encontró el dataset: {errores}\")\nRuntimeError: No se encontró el dataset: ['https://datos.gob.ar energia-precio-exportacion-petroleo-crudo: HTTPError', 'https://datos.gob.ar precio-de-exportacion-de-petroleo-crudo: HTTPError', 'https://datos.gob.ar precio-exportacion-petroleo-crudo: HTTPError', 'http://datos.energia.gob.ar energia-precio-exportacion-petroleo-crudo: ConnectTimeout', 'http://datos.energia.gob.ar precio-de-exportacion-de-petroleo-crudo: ConnectTimeout', 'http://datos.energia.gob.ar precio-exportacion-petroleo-crudo: ConnectTimeout']\n"
   },
   "fuel_prices": {
    "ok": false,
-   "error": "RuntimeError: No se encontró el dataset: ['http://datos.energia.gob.ar precios-en-surtidor: ConnectTimeout', 'http://datos.energia.gob.ar energia-precios-surtidor---resolucion-3142016: ConnectTimeout', 'https://datos.gob.ar precios-en-surtidor: HTTPError', 'https://datos.gob.ar energia-precios-surtidor---resolucion-3142016: ReadTimeout']",
-   "diag": {},
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1172, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 1160, in <lambda>\n    (\"fuel_prices\", lambda d: fuel_prices(d)),\n                              ^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 691, in fuel_prices\n    paq, base = ckan_paquete([\"http://datos.energia.gob.ar\", \"https://datos.gob.ar\"],\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_extras.py\", line 444, in ckan_paquete\n    raise RuntimeError(f\"No se encontró el dataset: {errores}\")\nRuntimeError: No se encontró el dataset: ['http://datos.energia.gob.ar precios-en-surtidor: ConnectTimeout', 'http://datos.energia.gob.ar energia-precios-surtidor---resolucion-3142016: ConnectTimeout', 'https://datos.gob.ar precios-en-surtidor: HTTPError', 'https://datos.gob.ar energia-precios-surtidor---resolucion-3142016: ReadTimeout']\n"
+   "error": "ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /dataset/1c181390-5045-475e-94dc-410429be4b17/resource/80ac25de-a44a-4445-9215-090cf55cfda5/download/precios-en-surtidor-resolucin-3142016.csv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x79c580b93740>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=600)'))",
+   "diag": {
+    "package": "https://datos.gob.ar energia-precios-surtidor---resolucion-3142016",
+    "resources": [
+     "Precios vigentes en surtidor - Resolución 314/2016",
+     "Precios históricos"
+    ]
+   },
+   "trace": "lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='datos.energia.gob.ar', port=80): Max retries exceeded with url: /dataset/1c181390-5045-475e-94dc-410429be4b17/resource/80ac25de-a44a-4445-9215-090cf55cfda5/download/precios-en-surtidor-resolucin-3142016.csv (Caused by ConnectTimeoutError(<HTTPConnection(host='datos.energia.gob.ar', port=80) at 0x79c580b93740>, 'Connection to datos.energia.gob.ar timed out. (connect timeout=600)'))\n"
   },
   "rigi_portal": {
    "ok": true,
-   "at": "2026-11-11T19:46Z",
+   "at": "2026-11-12T20:01Z",
    "diag": {
     "html_len": 88393,
     "context": "-thin\">&nbsp;</span><span class=\"fw-semibold fs-1\">M</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Empleos <span class=\"fw-medium br-sm br-xs\">(directos e indirectos)</span></dt><dd class=\"fs-1 fw-bold text-arg-verdin js-total-puestos-trabajo\">0</dd></div></dl></div><div class=\"col-md-12 m-y-2\"><h3 class=\"h4 font-sans-serif p-b-1 border-bottom\">Sectores</h3><dl class=\"dl-proyectos-sector\"><div class=\"d-grid\"><dt class=\"last\">Energía eléctrica</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-torre-electrica m-r-05\"></i> <span class=\"m-t-1 js-total-energia-electrica\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Petróleo y gas</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-petroleo-y-gas m-r-05\"></i> <span class=\"m-t-1 js-total-petroleo-y-gas\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Minería</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-mineria m-r-05\"></i> <span class=\"m-t-1 js-total-mineria\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Siderurgia</dt><dd class=\"fs-1 fw-bold\"><i class=\"icono-arg-siderurgia m-r-05\"></i> <span class=\"m-t-1 js-total-siderurgia\">0</span></dd></div><div class=\"d-grid\"><dt class=\"last\">Infraestructura</dt><",
     "inline_scripts": [
-     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"qVkMQVUPZ4_qKlpRipvePorIdsFBtjbkqGQY-0oBQx0\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
+     "jQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"argentinagobar_theme\",\"theme_token\":\"SCxkRj8nJg_HYJdtARwrXAELuYp6CANjJBMieGwtBWw\",\"js\":{\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_search\\/js\\/solr_search.js\":1,\"profiles\\/argentinagobar\\/themes\\/contrib\\/bootstrap\\/js\\/bootstrap.js\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-371\\/jquery-3.7.1.min.js\":1,\"0\":1,\"\\/profiles\\/argentinagobar\\/libraries\\/jquery.jquery-migrate\\/jquery-migrate-3.5.2.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_browser.js\":1,\"misc\\/form-single-submit.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_areas\\/js\\/colorFondoGrupoAtajos.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_tramites\\/js\\/resize_media.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_usuarios\\/js\\/limpiarCampo.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/entityreference\\/js\\/entityreference.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_infoleg\\/js\\/infoleg_normativa.js\":1,\"public:\\/\\/languages\\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/mdBlank.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/galeria.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/drupar_filtros\\/js\\/jquery.touchSwipe.min.js\":1,\"profiles\\/argentinagobar\\/modules\\/contrib\\/jgm_subastas\\/js\\/aabe.js\":1,\"profiles\\/argentinagobar\\/modules\\/argentinagobar\\/argentinagobar_webform\\/js\\/button.js\":1,\"profiles\\/a",
      "const jsonContainer = document.getElementById('raw-data-json');\n  const jsonText = (jsonContainer.textContent || jsonContainer.innerText).trim();\n  const rawData = JSON.parse(jsonText);\n\n  const extractVal = (val) => (typeof val === 'object' && val !== null) ? (val.total || 0) : (val || 0);\n  const formatNum = (num) => Number(num || 0).toLocaleString('es-AR');\n\n  const getSeriesData = (key) => rawData.map(d => ({ \n    x: new Date(d.year).getTime(), \n    y: extractVal(d[key]) \n  }));\n\n  const seriesData = [\n    { key: 'energia', name: 'Energía Eléctrica', data: getSeriesData('energia') },\n    { key: 'petroleo', name: 'Petróleo y Gas', data: getSeriesData('petroleo') },\n    { key: 'mineria', name: 'Minería', data: getSeriesData('mineria') },\n    { key: 'siderurgia', name: 'Siderurgia', data: getSeriesData('siderurgia') },\n    { key: 'infra', name: 'Infraestructura', data: getSeriesData('infra') },\n    { key: 'tecnologia', name: 'Tecnología', data: getSeriesData('tecnologia') }\n  ];\n\n  var optionsMain = {\n    series: seriesData,\n    colors: ['#C2185B', '#B9CE39', '#6A1B99', '#4FBB73', '#F79D00','#843511'],\n    chart: {\n      id: 'chartBarMain',\n      type: 'bar',\n      height: 450,\n      stacked: true,\n      toolbar: { show: false }\n    },\n    grid: {\n      padding: {\n        right: 35,\n        left: 15\n      }\n    },\n    dataLabels: { enabled: false },\n    plotOptions: {\n      bar: {\n        dataLabels: {\n          total: {\n            enabled: true,\n            style: {\n              fontSize: '13px',\n              fontWeight: 900\n            },\n            formatter: function (val, opts) {\n              if (!val) return '';\n\n              // Validar si la columna está dentro del rango visible actual del zoom/brush\n              if (opts && opts.w && opts.w.globals) {\n  ",
      "headStyle(\"rigi-cms-fix\", `.container:has(#mapa-portal){padding-left:0 !important;padding-right:0 !important;width:100% !important;}`);\nheadStyle('rigi__999d6df5647d2df27fe7', `.poncho-map{--pm-color-primary: var(--arg-escarapela);--pm-color-base: #eaeaea;--pm-slider-background: var(--arg-azul);--pm-slider-border-color: color-mix(in srgb, #626161 40%, white);--pm-slider-border-width: 2px;--pm-scrollbar-handle: #eaeaea;--pm-scrollbar-background: rgb(0, 0, 0, 0.15);--pm-hover-background: var(--arg-secundario);--pm-hover-color: white;--pm-active-color: #343232;--pm-active-visited-color: violet;--pm-active-background: var(--pm-color-primary);--color: var(--arg-escarapela);--pm-loader-spinner-background: var(--arg-amarillo);--pm-loader-background: var(--arg-azul);--pm-loader-spinner-color: var(--arg-primary-700)}details{--details-border-color: var(--arg-primary-300)}.details-container{--container-border-color: var(--arg-primary-500)}.poncho-map .marker--active:focus,.poncho-map .marker--active{fill:#000 !important;fill-opacity:0 !important}.color-primary{color:var(--color)}.poncho-map .pm-content a{color:var(--arg-escarapela)}.totals-overview{display:grid;gap:15px 15px;grid-template-areas:\"area-a area-b area-c\";grid-template-columns:27% 1fr 27%}.a,.b,.c{display:flex;flex-direction:column-reverse;align-self:self-start}.a{grid-area:area-a}.b{grid-area:area-b}.c{grid-area:area-c}.a .key,.b .key,.c .key,.a .value,.b .value,.c .value{margin:0}.a .key,.b .key,.c .key{font-size:.95rem}.value{grid-area:value}.a .value,.b .value,.c .value{font-size:1.35rem;line-height:2rem;display:flex;align-items:baseline}.c .value .small,.b .value .small,.c .value .small{font-size:1rem}.details-data dt{float:left;margin-right:.25rem}.details-data dt::after{content:\":\";font-weight:400}.details-data "
     ],
@@ -12801,7 +12823,7 @@
   },
   "trade_balance": {
    "ok": true,
-   "at": "2026-11-11T19:49Z",
+   "at": "2026-11-12T20:04Z",
    "diag": {
     "tried": {
      "74.2_IECE_0_T_35": [
