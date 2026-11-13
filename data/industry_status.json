@@ -204,121 +204,130 @@
    },
    "points": {
     "orig": [
-     128,
+     129,
      [
-      "2026-08-01",
-      119.29064776379852
+      "2026-09-01",
+      122.43674110669237
      ]
     ],
     "sa": [
-     128,
+     129,
      [
-      "2026-08-01",
-      114.286133053828
+      "2026-09-01",
+      115.070504026556
      ]
     ],
     "food": [
-     44,
+     45,
      [
-      "2026-08-01",
-      151.57953373674502
+      "2026-09-01",
+      154.309557412104
      ]
     ],
     "tobacco": [
-     0,
-     null
+     45,
+     [
+      "2026-09-01",
+      53.25527201780263
+     ]
     ],
     "textiles": [
-     44,
+     45,
      [
-      "2026-08-01",
-      53.587224336568745
+      "2026-09-01",
+      52.29086970301468
      ]
     ],
     "apparel": [
-     44,
+     45,
      [
-      "2026-08-01",
-      71.42327207000798
+      "2026-09-01",
+      78.47813178766158
      ]
     ],
     "paper": [
-     44,
+     45,
      [
-      "2026-08-01",
-      103.74640986540469
+      "2026-09-01",
+      113.46337066046084
      ]
     ],
     "refining": [
-     44,
+     45,
      [
-      "2026-08-01",
-      123.926936528635
+      "2026-09-01",
+      109.74293831818936
      ]
     ],
     "chemicals": [
-     44,
+     45,
      [
-      "2026-08-01",
-      147.24508671553895
+      "2026-09-01",
+      145.52051945281556
      ]
     ],
     "plastics": [
-     0,
-     null
+     45,
+     [
+      "2026-09-01",
+      101.3244755546761
+     ]
     ],
     "minerals": [
-     44,
+     45,
      [
-      "2026-08-01",
-      131.60642195792582
+      "2026-09-01",
+      146.3113534554355
      ]
     ],
     "basic_metals": [
-     44,
+     45,
      [
-      "2026-08-01",
-      93.19976102718572
+      "2026-09-01",
+      88.57038624761847
      ]
     ],
     "metal_products": [
-     44,
+     45,
      [
-      "2026-08-01",
-      81.49254811707966
+      "2026-09-01",
+      86.76592997500126
      ]
     ],
     "machinery": [
-     44,
+     45,
      [
-      "2026-08-01",
-      111.94430524538232
+      "2026-09-01",
+      120.3795288418974
      ]
     ],
     "equipment": [
-     44,
+     45,
      [
-      "2026-08-01",
-      100.29520449831158
+      "2026-09-01",
+      102.0005910301076
      ]
     ],
     "autos": [
-     44,
+     45,
      [
-      "2026-08-01",
-      140.28749654072612
+      "2026-09-01",
+      153.39573375799677
      ]
     ],
     "transport": [
-     44,
+     45,
      [
-      "2026-08-01",
-      139.35987368838514
+      "2026-09-01",
+      150.4203657138204
      ]
     ],
     "furniture": [
-     0,
-     null
+     45,
+     [
+      "2026-09-01",
+      92.1585871227464
+     ]
     ]
    }
   }
@@ -328,74 +337,128 @@
   "diag": {
    "points": {
     "isac": [
-     128,
+     129,
      [
-      "2026-08-01",
-      140.737938979259
+      "2026-09-01",
+      152.963675373338
      ]
     ],
     "isac_orig": [
-     128,
+     129,
      [
-      "2026-08-01",
-      146.8626017285303
+      "2026-09-01",
+      168.6661743934657
      ]
     ],
     "steel": [
-     104,
+     105,
      [
-      "2026-08-01",
-      80.53385013224572
+      "2026-09-01",
+      74.49660963887284
      ]
     ],
     "cement": [
-     104,
+     105,
      [
-      "2026-08-01",
-      156.67838437880005
+      "2026-09-01",
+      185.55023013032323
      ]
     ],
     "autoparts": [
-     104,
+     105,
      [
-      "2026-08-01",
-      82.6395920821475
+      "2026-09-01",
+      96.26877435067944
      ]
     ],
     "pharma": [
-     104,
+     105,
      [
-      "2026-08-01",
-      222.1347673071456
+      "2026-09-01",
+      216.84508162104
      ]
     ],
     "agrochem": [
-     104,
+     105,
      [
-      "2026-08-01",
-      133.43141016805717
+      "2026-09-01",
+      130.72330342537018
      ]
     ],
     "machinery": [
-     42,
+     105,
      [
-      "2021-06-01",
-      85.14121495805685
+      "2026-09-01",
+      104.18059606000767
      ]
     ]
-   },
-   "stale": [
-    [
-     "machinery",
-     "2021-06"
-    ]
-   ]
+   }
   }
  },
  "parks": {
-  "ok": false,
-  "error": "HTTPError: 500 Server Error: Internal Server Error for url: https://datos.gob.ar/api/3/action/package_show?id=registro-nacional-de-parques-industriales-renpi",
-  "diag": {},
-  "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_industry.py\", line 266, in main\n    salida[nombre] = fn(diag)\n                     ^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_industry.py\", line 201, in parques\n    p = get(f\"{CKAN}/package_show\", params={\"id\": \"registro-nacional-de-parques-industriales-renpi\"}).json()[\"result\"]\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/vacamuerta/vacamuerta/scripts/build_industry.py\", line 39, in get\n    r.raise_for_status()\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/models.py\", line 1167, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://datos.gob.ar/api/3/action/package_show?id=registro-nacional-de-parques-industriales-renpi\n"
+  "ok": true,
+  "diag": {
+   "resource": [
+    "Parques Industriales inscriptos en el RENPI",
+    "https://cdn.produccion.gob.ar/cdn-secind/rempi-datos-abiertos/base-rempi-para-publicar.ods"
+   ],
+   "sheets": {
+    "PRINCIPALES_DATOS": [
+     362,
+     [
+      "REGISTRO N°",
+      "NOMBRE DEL AGRUPAMIENTO",
+      "PROVINCIA",
+      "LOCALIDAD",
+      "CARÁCTER",
+      "PÁGINA WEB",
+      "TELÉFONO",
+      "CORREO ELECTRÓNICO"
+     ]
+    ]
+   },
+   "sample": [
+    {
+     "REGISTRO N°": "RL-2019-101396766-APN-CPI#MPYT",
+     "NOMBRE DEL AGRUPAMIENTO": "SECTOR INDUSTRIAL PLANIFICADO DE SAN ANDRÉS DE GILES",
+     "PROVINCIA": "BUENOS AIRES",
+     "LOCALIDAD": "SAN ANDRÉS DE GILES",
+     "CARÁCTER": "PÚBLICO",
+     "PÁGINA WEB": NaN,
+     "TELÉFONO": "(02325) 442385",
+     "CORREO ELECTRÓNICO": "produccion.sagiles@gmail.com ; produccionymedioambiente.sag@gmail.com; sergio_udines@hotmail.com"
+    },
+    {
+     "REGISTRO N°": "RL-2019-101397554-APN-CPI#MPYT",
+     "NOMBRE DEL AGRUPAMIENTO": "PARQUE INDUSTRIAL DE LA CIUDAD DE PICHANAL",
+     "PROVINCIA": "SALTA",
+     "LOCALIDAD": "PICHANAL",
+     "CARÁCTER": "PÚBLICO",
+     "PÁGINA WEB": NaN,
+     "TELÉFONO": "(0387) 4953092 // 4953178",
+     "CORREO ELECTRÓNICO": "direcciondeindustria@gmail.com; ignacio.enteparques@gmail.com"
+    },
+    {
+     "REGISTRO N°": "RL-2019-101398392-APN-CPI#MPYT",
+     "NOMBRE DEL AGRUPAMIENTO": "ZONA DE ACTIVIDADES ECONÓMICAS GOYA",
+     "PROVINCIA": "CORRIENTES",
+     "LOCALIDAD": "GOYA",
+     "CARÁCTER": "PÚBLICO",
+     "PÁGINA WEB": NaN,
+     "TELÉFONO": "03777 420574//432798",
+     "CORREO ELECTRÓNICO": "gerencia@agenpro.org.ar; belengoetze@gmail.com"
+    }
+   ],
+   "mapped": {
+    "prov": "PROVINCIA",
+    "name": "NOMBRE DEL AGRUPAMIENTO",
+    "type": "CARÁCTER",
+    "lat": null,
+    "lon": null,
+    "loc": "LOCALIDAD",
+    "with_coords": 346,
+    "total": 362
+   }
+  }
  }
 }
