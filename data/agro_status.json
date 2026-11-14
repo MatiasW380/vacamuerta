@@ -1,9 +1,19 @@
 {
  "crops": {
-  "ok": false,
-  "error": "ConnectTimeout: HTTPSConnectionPool(host='datos.magyp.gob.ar', port=443): Max retries exceeded with url: /api/3/action/package_show?id=estimaciones-agricolas (Caused by ConnectTimeoutError(<HTTPSConnection(host='datos.magyp.gob.ar', port=443) at 0x782c94fa1550>, 'Connection to datos.magyp.gob.ar timed out. (connect",
-  "diag": {},
-  "trace": ", url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='datos.magyp.gob.ar', port=443): Max retries exceeded with url: /api/3/action/package_show?id=estimaciones-agricolas (Caused by ConnectTimeoutError(<HTTPSConnection(host='datos.magyp.gob.ar', port=443) at 0x782c94fa1550>, 'Connection to datos.magyp.gob.ar timed out. (connect timeout=90)'))\n"
+  "ok": true,
+  "diag": {
+   "resource": "https://datos.magyp.gob.ar/dataset/9e1e77ba-267e-4eaa-a59f-3296e86b5f36/resource/95d066e6-8a0f-4a80-b59d-6f28f88eacd5/download/estimaciones-agricolas-2026-03.csv",
+   "latest": {
+    "barley": "2024/2025",
+    "corn": "2024/2025",
+    "peanut": "2024/2025",
+    "sorghum": "2024/2025",
+    "soy": "2024/2025",
+    "sunflower": "2024/2025",
+    "wheat": "2024/2025"
+   },
+   "deps_with_coords": 312
+  }
  },
  "prices": {
   "ok": true,
