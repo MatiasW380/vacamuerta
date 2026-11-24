@@ -1,60 +1,44 @@
 {
  "exports": {
-  "ok": true,
-  "diag": {
-   "latest": "2026-10"
-  }
+  "ok": false,
+  "error": "ConnectionError: HTTPSConnectionPool(host='www.mecon.gob.ar', port=443): Max retries exceeded with url: /dataset/Comercio/expominerales-siacam.csv (Caused by NewConnectionError(\"HTTPSConnection(host='www.mecon.gob.ar', port=443): Failed to establish a new connection: [Errno 113] No route to host\"))",
+  "diag": {},
+  "trace": "s=params, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 729, in send\n    raise ConnectionError(e, request=request)\nrequests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.mecon.gob.ar', port=443): Max retries exceeded with url: /dataset/Comercio/expominerales-siacam.csv (Caused by NewConnectionError(\"HTTPSConnection(host='www.mecon.gob.ar', port=443): Failed to establish a new connection: [Errno 113] No route to host\"))\n"
  },
  "geo": {
-  "ok": true,
-  "diag": {}
+  "ok": false,
+  "error": "ConnectionError: HTTPSConnectionPool(host='www.mecon.gob.ar', port=443): Max retries exceeded with url: /dataset/Comercio/expo-mineria-por-provincia.csv (Caused by NewConnectionError(\"HTTPSConnection(host='www.mecon.gob.ar', port=443): Failed to establish a new connection: [Errno 113] No route to host\"))",
+  "diag": {},
+  "trace": "ms, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 729, in send\n    raise ConnectionError(e, request=request)\nrequests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.mecon.gob.ar', port=443): Max retries exceeded with url: /dataset/Comercio/expo-mineria-por-provincia.csv (Caused by NewConnectionError(\"HTTPSConnection(host='www.mecon.gob.ar', port=443): Failed to establish a new connection: [Errno 113] No route to host\"))\n"
  },
  "lithium": {
-  "ok": true,
-  "diag": {}
+  "ok": false,
+  "error": "ConnectionError: HTTPSConnectionPool(host='www.mecon.gob.ar', port=443): Max retries exceeded with url: /dataset/Tablero-Litio/Exportaciones-litio.csv (Caused by NewConnectionError(\"HTTPSConnection(host='www.mecon.gob.ar', port=443): Failed to establish a new connection: [Errno 113] No route to host\"))",
+  "diag": {},
+  "trace": "rams, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 729, in send\n    raise ConnectionError(e, request=request)\nrequests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.mecon.gob.ar', port=443): Max retries exceeded with url: /dataset/Tablero-Litio/Exportaciones-litio.csv (Caused by NewConnectionError(\"HTTPSConnection(host='www.mecon.gob.ar', port=443): Failed to establish a new connection: [Errno 113] No route to host\"))\n"
  },
  "ipi": {
-  "ok": true,
-  "diag": {}
+  "ok": false,
+  "error": "ConnectionError: HTTPSConnectionPool(host='www.mecon.gob.ar', port=443): Max retries exceeded with url: /dataset/ipi-minero/ipi-minero-series.csv (Caused by NewConnectionError(\"HTTPSConnection(host='www.mecon.gob.ar', port=443): Failed to establish a new connection: [Errno 113] No route to host\"))",
+  "diag": {},
+  "trace": "ms=params, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 729, in send\n    raise ConnectionError(e, request=request)\nrequests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.mecon.gob.ar', port=443): Max retries exceeded with url: /dataset/ipi-minero/ipi-minero-series.csv (Caused by NewConnectionError(\"HTTPSConnection(host='www.mecon.gob.ar', port=443): Failed to establish a new connection: [Errno 113] No route to host\"))\n"
  },
  "employment": {
-  "ok": true,
-  "diag": {}
+  "ok": false,
+  "error": "ConnectionError: HTTPSConnectionPool(host='www.mecon.gob.ar', port=443): Max retries exceeded with url: /dataset/Empleo-rubro-prov.csv (Caused by NewConnectionError(\"HTTPSConnection(host='www.mecon.gob.ar', port=443): Failed to establish a new connection: [Errno 113] No route to host\"))",
+  "diag": {},
+  "trace": ", url, params=params, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 729, in send\n    raise ConnectionError(e, request=request)\nrequests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.mecon.gob.ar', port=443): Max retries exceeded with url: /dataset/Empleo-rubro-prov.csv (Caused by NewConnectionError(\"HTTPSConnection(host='www.mecon.gob.ar', port=443): Failed to establish a new connection: [Errno 113] No route to host\"))\n"
  },
  "prices": {
-  "ok": true,
-  "diag": {
-   "minerals": [
-    "Aluminio (Al)",
-    "Carbonato de Litio 99,5% (Li2CO3)",
-    "Cobre (Cu)",
-    "Estaño (Sn)",
-    "Hierro (Fe)",
-    "Níquel",
-    "Oro (Au)",
-    "Plata (Ag)",
-    "Platino (Pt)",
-    "Plomo (Pb)",
-    "Uranio (U)",
-    "Zinc (Zn)"
-   ]
-  }
+  "ok": false,
+  "error": "ConnectionError: HTTPSConnectionPool(host='www.mecon.gob.ar', port=443): Max retries exceeded with url: /dataset/precios-internacionales-minerales.xlsx (Caused by NewConnectionError(\"HTTPSConnection(host='www.mecon.gob.ar', port=443): Failed to establish a new connection: [Errno 113] No route to host\"))",
+  "diag": {},
+  "trace": "ams, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 729, in send\n    raise ConnectionError(e, request=request)\nrequests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.mecon.gob.ar', port=443): Max retries exceeded with url: /dataset/precios-internacionales-minerales.xlsx (Caused by NewConnectionError(\"HTTPSConnection(host='www.mecon.gob.ar', port=443): Failed to establish a new connection: [Errno 113] No route to host\"))\n"
  },
  "projects": {
-  "ok": true,
-  "diag": {
-   "stages": {
-    "Exploración inicial": 68,
-    "Exploración avanzada": 65,
-    "Prospección": 35,
-    "Producción": 28,
-    "Evaluación Económica Preliminar": 14,
-    "Factibilidad": 10,
-    "Prefactibilidad": 6,
-    "Construcción": 5,
-    "Reingeniería": 3,
-    "Cese de operaciones": 1
-   }
-  }
+  "ok": false,
+  "error": "ConnectionError: HTTPSConnectionPool(host='www.mecon.gob.ar', port=443): Max retries exceeded with url: /dataset/Cartera-de-Proyectos-Mineros-Metaliferos-y-Litio-del-SIACAM.xlsx (Caused by NewConnectionError(\"HTTPSConnection(host='www.mecon.gob.ar', port=443): Failed to establish a new connection: [Errno 113] No route to host\"))",
+  "diag": {},
+  "trace": "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/api.py\", line 71, in request\n    return session.request(method=method, url=url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 729, in send\n    raise ConnectionError(e, request=request)\nrequests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.mecon.gob.ar', port=443): Max retries exceeded with url: /dataset/Cartera-de-Proyectos-Mineros-Metaliferos-y-Litio-del-SIACAM.xlsx (Caused by NewConnectionError(\"HTTPSConnection(host='www.mecon.gob.ar', port=443): Failed to establish a new connection: [Errno 113] No route to host\"))\n"
  }
 }
